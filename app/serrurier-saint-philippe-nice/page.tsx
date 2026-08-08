@@ -1,0 +1,83 @@
+import type { Metadata } from "next";
+import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-philippe-nice/" },
+  title: "Serrurier Saint-Philippe Nice – 24h/24 | VAF",
+  description:
+    "Serrurier au quartier Saint-Philippe, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+};
+
+const intro = [
+  "Saint-Philippe est un quartier résidentiel du centre de Nice, avec un bâti mêlant immeubles anciens et constructions plus récentes. C'est un secteur calme, essentiellement résidentiel.",
+  "J'y interviens pour du dépannage courant, des changements de serrure et des demandes de sécurisation, avec la même méthode de diagnostic partout à Nice.",
+];
+
+const blocks = [
+  {
+    heading: "Un quartier résidentiel calme",
+    paragraphs: [
+      "Les immeubles de Saint-Philippe demandent un entretien régulier des serrures pour rester fiables. Je diagnostique chaque situation avant de proposer une solution adaptée, réparation ou remplacement.",
+    ],
+  },
+  {
+    heading: "Sécurisation des logements",
+    paragraphs: [
+      "Après une perte de clés ou pour anticiper une usure avancée, je propose des solutions adaptées à l'état réel de votre porte, sans suréquipement inutile.",
+    ],
+  },
+  {
+    heading: "Interventions en copropriété",
+    paragraphs: [
+      "Pour les immeubles du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+    ],
+  },
+];
+
+const faq = [
+  {
+    question: "Intervenez-vous rapidement à Saint-Philippe en cas d'urgence ?",
+    answer:
+      "Oui, je me déplace 24h/24 et 7j/7 à Saint-Philippe comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
+  },
+  {
+    question: "Intervenez-vous sur les immeubles résidentiels du secteur ?",
+    answer:
+      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement de cylindre ou serrure complète.",
+  },
+  {
+    question: "Les tarifs sont-ils différents à Saint-Philippe par rapport au reste de Nice ?",
+    answer:
+      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Travaillez-vous avec les copropriétés du quartier ?",
+    answer:
+      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Proposez-vous un devis avant d'intervenir à Saint-Philippe ?",
+    answer:
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+  },
+];
+
+export default function SerrurierSaintPhilippeNicePage() {
+  return (
+    <QuartierPageTemplate
+      quartier="Saint-Philippe"
+      sector="centre"
+      intro={intro}
+      blocks={blocks}
+      travelEstimate="10 à 20 minutes selon la circulation"
+      faq={faq}
+      path="/serrurier-saint-philippe-nice/"
+      relatedServices={[
+        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+        { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
+        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+      ]}
+    />
+  );
+}

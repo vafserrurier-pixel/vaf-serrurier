@@ -1,0 +1,83 @@
+import type { Metadata } from "next";
+import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pessicart-nice/" },
+  title: "Serrurier Pessicart Nice – Dépannage 24h/24 | VAF",
+  description:
+    "Serrurier à Pessicart, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+};
+
+const intro = [
+  "Pessicart est un quartier résidentiel des hauteurs nord de Nice, avec un bâti mêlant villas individuelles et résidences collectives. C'est un secteur calme, apprécié pour sa vue sur la ville.",
+  "J'y interviens pour des propriétaires de maisons comme pour des appartements en résidence, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+];
+
+const blocks = [
+  {
+    heading: "Un bâti mêlant villas et résidences",
+    paragraphs: [
+      "Pessicart combine maisons individuelles et résidences collectives plus récentes. Le diagnostic reste systématique, qu'il s'agisse d'une serrure de villa ou d'un appartement en résidence.",
+    ],
+  },
+  {
+    heading: "Un secteur en hauteur, un déplacement à anticiper",
+    paragraphs: [
+      "Pessicart étant sur les hauteurs de Nice, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la distance et des routes d'accès.",
+    ],
+  },
+  {
+    heading: "Interventions en résidence",
+    paragraphs: [
+      "Pour les résidences collectives du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+    ],
+  },
+];
+
+const faq = [
+  {
+    question: "Intervenez-vous rapidement à Pessicart en cas d'urgence ?",
+    answer:
+      "Oui, je me déplace 24h/24 et 7j/7 à Pessicart comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
+  },
+  {
+    question: "Intervenez-vous sur les villas individuelles du secteur ?",
+    answer:
+      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Les tarifs sont-ils différents à Pessicart par rapport au reste de Nice ?",
+    answer:
+      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Travaillez-vous avec les résidences collectives de Pessicart ?",
+    answer:
+      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Proposez-vous un devis avant d'intervenir à Pessicart ?",
+    answer:
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+  },
+];
+
+export default function SerrurierPessicartNicePage() {
+  return (
+    <QuartierPageTemplate
+      quartier="Pessicart"
+      sector="nord"
+      intro={intro}
+      blocks={blocks}
+      travelEstimate="20 à 30 minutes selon la circulation"
+      faq={faq}
+      path="/serrurier-pessicart-nice/"
+      relatedServices={[
+        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+      ]}
+    />
+  );
+}

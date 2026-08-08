@@ -1,0 +1,83 @@
+import type { Metadata } from "next";
+import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-le-port-nice/" },
+  title: "Serrurier Le Port Nice – Dépannage 24h/24 | VAF",
+  description:
+    "Serrurier au quartier du Port, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+};
+
+const intro = [
+  "Le quartier du Port, à l'est du Vieux-Nice, s'organise autour du port historique de Nice. Le bâti y est ancien, avec des immeubles typiques du XIXe siècle, dans une ambiance à la fois résidentielle et animée par les bars et restaurants du secteur.",
+  "J'y interviens avec la même attention que dans le Vieux-Nice tout proche : diagnostic soigné, respect du bâti ancien, et devis annoncé avant intervention.",
+];
+
+const blocks = [
+  {
+    heading: "Un bâti ancien autour du port historique",
+    paragraphs: [
+      "Les immeubles du quartier du Port datent souvent du XIXe siècle, avec des portes et des serrures qui demandent une expertise particulière. Je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard.",
+    ],
+  },
+  {
+    heading: "Un secteur animé, jour et nuit",
+    paragraphs: [
+      "L'activité commerçante et festive du quartier du Port en fait un secteur où je peux être amené à intervenir à toute heure, notamment pour des sécurisations après effraction ou des dépannages tardifs.",
+    ],
+  },
+  {
+    heading: "Interventions en copropriété",
+    paragraphs: [
+      "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+    ],
+  },
+];
+
+const faq = [
+  {
+    question: "Intervenez-vous rapidement au quartier du Port en cas d'urgence ?",
+    answer:
+      "Oui, je me déplace 24h/24 et 7j/7 au quartier du Port comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
+  },
+  {
+    question: "Savez-vous intervenir sur les immeubles anciens du Port ?",
+    answer:
+      "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'époque.",
+  },
+  {
+    question: "Intervenez-vous aussi tard le soir dans ce quartier animé ?",
+    answer:
+      "Oui, je suis disponible 24h/24, y compris pour des dépannages tardifs ou des sécurisations après effraction.",
+  },
+  {
+    question: "Les tarifs sont-ils différents au quartier du Port par rapport au reste de Nice ?",
+    answer:
+      "Non, mes tarifs sont identiques sur l'ensemble de la ville, avec la même majoration de nuit et de week-end partout. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Proposez-vous un devis avant d'intervenir au quartier du Port ?",
+    answer:
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+  },
+];
+
+export default function SerrurierLePortNicePage() {
+  return (
+    <QuartierPageTemplate
+      quartier="Le Port"
+      sector="est"
+      intro={intro}
+      blocks={blocks}
+      travelEstimate="10 à 20 minutes selon la circulation"
+      faq={faq}
+      path="/serrurier-le-port-nice/"
+      relatedServices={[
+        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+        { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
+        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+      ]}
+    />
+  );
+}
