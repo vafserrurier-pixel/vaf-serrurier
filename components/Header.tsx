@@ -77,7 +77,7 @@ export default function Header() {
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
-              aria-controls="main-nav"
+              aria-controls="mobile-nav"
               aria-label="Ouvrir le menu"
               className="lg:hidden p-2 text-navy"
             >
@@ -103,6 +103,7 @@ export default function Header() {
         </div>
         {open && (
           <nav
+            id="mobile-nav"
             className="lg:hidden flex flex-col gap-1 px-4 pb-4 text-navy font-medium"
             aria-label="Menu principal"
           >

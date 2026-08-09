@@ -1,4 +1,5 @@
 import { business } from "@/lib/business";
+import { WhatsAppIcon } from "./Icons";
 
 export default function CtaBlock({
   title = "Besoin d'un serrurier maintenant ?",
@@ -13,12 +14,23 @@ export default function CtaBlock({
           {business.address.full} — disponible {business.hours}
         </p>
       </div>
-      <a
-        href={business.phone.href}
-        className="shrink-0 bg-urgent text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 font-tabular-nums"
-      >
-        {business.phone.display}
-      </a>
+      <div className="shrink-0 flex items-center gap-2">
+        <a
+          href={business.phone.href}
+          className="bg-urgent text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 font-tabular-nums"
+        >
+          {business.phone.display}
+        </a>
+        <a
+          href={business.whatsapp.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Écrire sur WhatsApp"
+          className="bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
+        >
+          <WhatsAppIcon className="w-5 h-5" />
+        </a>
+      </div>
     </div>
   );
 }

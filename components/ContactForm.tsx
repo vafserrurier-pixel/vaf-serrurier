@@ -42,7 +42,10 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
 
   if (status === "success") {
     return (
-      <p className="bg-steel/10 border border-steel/30 text-navy rounded-lg p-4 text-sm">
+      <p
+        role="status"
+        className="bg-steel/10 border border-steel/30 text-navy rounded-lg p-4 text-sm"
+      >
         Votre message a bien été transmis, réponse sous 24h.
       </p>
     );
@@ -67,8 +70,9 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
           id="name"
           name="name"
           type="text"
+          autoComplete="name"
           required
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel outline-none"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
         />
       </div>
       <div>
@@ -79,8 +83,9 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
           id="phone"
           name="phone"
           type="tel"
+          autoComplete="tel"
           required
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel outline-none"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
         />
       </div>
       <div>
@@ -93,15 +98,16 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
           required
           rows={compact ? 3 : 4}
           placeholder="Type de porte, urgence ou non..."
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel outline-none"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
         />
       </div>
-      {status === "error" && (
-        <p className="text-urgent text-sm">{errorMessage}</p>
-      )}
+      <div role="alert">
+        {status === "error" && <p className="text-urgent text-sm">{errorMessage}</p>}
+      </div>
       <button
         type="submit"
         disabled={status === "sending"}
+        aria-busy={status === "sending"}
         className="mt-1 bg-urgent text-white font-semibold rounded-md px-5 py-2.5 hover:opacity-90 disabled:opacity-60"
       >
         {status === "sending" ? "Envoi en cours..." : "Envoyer"}

@@ -27,6 +27,14 @@ export default function Footer() {
           >
             {business.phoneSecondary.display} (si injoignable)
           </a>
+          <a
+            href={business.whatsapp.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-sm mt-1 hover:underline"
+          >
+            Écrire sur WhatsApp
+          </a>
           <a href={`mailto:${business.email}`} className="block text-sm mt-1 hover:underline">
             Écrire par email
           </a>
