@@ -41,6 +41,7 @@ export default function SectorPageTemplate({
           name: title,
           description: intro[0],
           url,
+          areaServed: { type: "Place", name: sectorPages[sectorKey].label },
         })}
       />
       <JsonLd data={faqSchema(faq)} />

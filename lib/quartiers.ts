@@ -2,6 +2,8 @@
 // `builtQuartiers` liste les 46 quartiers, tous publiés — voir `lib/business.ts`
 // (export `zones`) pour la répartition par secteur.
 
+import { zones } from "./business";
+
 const DIACRITICS_RE = /[̀-ͯ]/g;
 
 export function slugifyQuartier(name: string): string {
@@ -86,6 +88,25 @@ export const featuredQuartiers = [
 
 export function isQuartierBuilt(name: string): boolean {
   return (builtQuartiers as readonly string[]).includes(name);
+}
+
+// Autres quartiers du même secteur à mettre en avant sur une page de quartier
+// donnée — favorise le maillage interne entre pages proches sans reproduire
+// un bloc de liens identique sur les 46 pages (chaque page pointe vers un
+// sous-ensemble différent, décalé selon sa position dans la liste du secteur).
+export function relatedQuartiers(
+  sector: keyof typeof zones,
+  current: string,
+  count = 4,
+): string[] {
+  const list = zones[sector] as readonly string[];
+  const currentIndex = list.indexOf(current);
+  const related: string[] = [];
+  for (let offset = 1; related.length < count && offset < list.length; offset++) {
+    const candidate = list[(currentIndex + offset + list.length) % list.length];
+    if (candidate !== current) related.push(candidate);
+  }
+  return related;
 }
 
 export const sectorPages = {

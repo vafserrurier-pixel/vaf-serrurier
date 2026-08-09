@@ -8,7 +8,7 @@ import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { sectorPages } from "@/lib/quartiers";
+import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
 
 export type ContentBlock = { heading: string; paragraphs: string[] };
 
@@ -33,6 +33,7 @@ export default function QuartierPageTemplate({
 }) {
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
+  const nearbyQuartiers = relatedQuartiers(sector, quartier);
 
   return (
     <>
@@ -41,6 +42,7 @@ export default function QuartierPageTemplate({
           name: `Serrurier à ${quartier}, Nice`,
           description: intro[0],
           url,
+          areaServed: { type: "Place", name: `${quartier}, Nice` },
         })}
       />
       <JsonLd data={faqSchema(faq)} />
@@ -131,6 +133,25 @@ export default function QuartierPageTemplate({
             .
           </p>
           <LazyMap />
+          {nearbyQuartiers.length > 0 && (
+            <div className="mt-6">
+              <p className="text-sm text-slate mb-2">
+                J&apos;interviens aussi dans ces quartiers du secteur {sectorInfo.label} :
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {nearbyQuartiers.map((name) => (
+                  <li key={name}>
+                    <Link
+                      href={quartierHref(name)}
+                      className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
+                    >
+                      {name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-4">

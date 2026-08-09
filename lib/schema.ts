@@ -63,6 +63,7 @@ export function serviceSchema(opts: {
   name: string;
   description: string;
   url: string;
+  areaServed?: { type: "City" | "Place"; name: string };
 }) {
   return {
     "@context": "https://schema.org",
@@ -77,8 +78,8 @@ export function serviceSchema(opts: {
       telephone: business.phone.href.replace("tel:", ""),
     },
     areaServed: {
-      "@type": "City",
-      name: "Nice",
+      "@type": opts.areaServed?.type ?? "City",
+      name: opts.areaServed?.name ?? "Nice",
     },
   };
 }
