@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-archet-nice/" },
-  title: "Serrurier L'Archet Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier L'Archet Nice – Près du CHU | VAF",
   description:
-    "Serrurier à L'Archet, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à L'Archet, Nice : dépannage près du pôle hospitalier universitaire, changement de serrure. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'hôpital de L'Archet, qui donne son nom au quartier, est né d'un projet porté dans les années 1970 par le Centre Hospitalier Régional de Nice, prévoyant un établissement de 380 lits. La première pierre est posée le 18 février 1975 en présence de la ministre de la Santé Simone Veil et du maire de Nice Jacques Médecin, avant l'inauguration de l'hôpital en 1979.",
-  "Une extension majeure, Archet 2, voit le jour en 1996 avec 506 lits supplémentaires et un parking de 720 places, suivie en 2015 par Archet 3, un bâtiment de bureaux et de services de santé. Autour de ce pôle hospitalier universitaire d'envergure, le quartier s'est développé comme un secteur résidentiel et institutionnel, entouré de zones résidentielles et de résidences plus récentes, proche des grands axes de circulation vers l'ouest du département.",
+  "Besoin d'un serrurier à L'Archet : j'interviens 24h/24 sur ce secteur résidentiel et institutionnel autour du pôle hospitalier universitaire, en vous donnant un délai réaliste dès l'appel compte tenu de la distance à l'ouest de la ville. Je diagnostique chaque situation avant de proposer un cylindre Picard ou Fichet adapté au bâti, immeuble collectif ou maison individuelle.",
+  "L'hôpital de L'Archet, qui donne son nom au quartier, est né d'un projet porté dans les années 1970, avec une première pierre posée en 1975 en présence de la ministre de la Santé Simone Veil, avant l'inauguration en 1979. Les extensions Archet 2 (1996) et Archet 3 (2015) en ont fait un pôle hospitalier universitaire d'envergure, autour duquel s'est développé ce secteur résidentiel mêlant immeubles collectifs et résidences plus récentes.",
 ];
 
 const blocks = [

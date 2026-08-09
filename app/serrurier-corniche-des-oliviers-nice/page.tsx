@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-des-oliviers-nice/" },
-  title: "Serrurier Corniche des Oliviers Nice – 24h/24 | VAF",
+  title: "Serrurier Corniche des Oliviers Nice – Blindage villas | VAF",
   description:
-    "Serrurier à la Corniche des Oliviers, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier à la Corniche des Oliviers, Nice : blindage et renforcement de villas sur les hauteurs. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "La Corniche des Oliviers, qui relie Saint-Pierre-de-Féric à Saint-Pancrace, a été inaugurée en 1931, sur les hauteurs situées entre Fabron et Nice Nord. Comme beaucoup de secteurs agricoles des collines niçoises, ses cultures ont été progressivement remplacées par des exploitations horticoles dédiées à l'œillet, avant que l'urbanisation massive des années 1960-1970 ne transforme définitivement le quartier en secteur résidentiel.",
-  "Ce secteur des hauteurs nord de Nice offre aujourd'hui plusieurs points de vue remarquables, sur la baie des Anges comme sur le massif du Mercantour depuis ses points les plus élevés. L'habitat y est principalement composé de villas et de propriétés individuelles entourées de jardins, dans un cadre verdoyant préservé.",
+  "Cylindre grippé, porte à sécuriser à la Corniche des Oliviers : j'interviens sur ce secteur de villas entre Saint-Pierre-de-Féric et Saint-Pancrace, en vous donnant un délai réaliste dès l'appel compte tenu de la distance. Je diagnostique la serrure en place et propose généralement un cylindre Cisa ou Fichet adapté, avec possibilité de blindage si la porte le permet.",
+  "La Corniche des Oliviers a été inaugurée en 1931, sur les hauteurs entre Fabron et Nice Nord. Comme beaucoup de secteurs agricoles des collines niçoises, ses cultures ont été remplacées par des exploitations horticoles dédiées à l'œillet, avant que l'urbanisation des années 1960-1970 ne transforme le quartier en secteur résidentiel offrant des vues remarquables sur la baie des Anges et le Mercantour.",
 ];
 
 const blocks = [

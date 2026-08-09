@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-bon-voyage-nice/" },
-  title: "Serrurier Bon Voyage Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Bon Voyage Nice – Changement entre locataires | VAF",
   description:
-    "Serrurier au quartier Bon Voyage, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier au quartier Bon Voyage, Nice : changement de serrure entre deux locataires, dépannage sur immeubles collectifs. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Bon Voyage est un quartier résidentiel de l'est de Nice, sur les hauteurs proches du port, développé pour l'essentiel au XXe siècle autour de sa cité de transition. Le bâti y mêle immeubles collectifs et quelques villas, dans un secteur qui compte aujourd'hui environ 3 900 habitants, avec un profil plutôt jeune (34 ans en moyenne) et majoritairement locataire.",
-  "J'y interviens pour des appartements comme pour des maisons individuelles, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+  "Serrurier à Bon Voyage : j'interviens 24h/24 dans ce quartier résidentiel sur les hauteurs proches du port, où le turnover locatif plus élevé que la moyenne génère des demandes fréquentes de changement de serrure entre deux locataires. Je pose généralement un cylindre Vak ou Picard neuf après un état des lieux, avec la même transparence sur le tarif que la demande vienne d'un propriétaire ou d'un locataire.",
+  "Développé pour l'essentiel au XXe siècle autour de sa cité de transition, Bon Voyage mêle aujourd'hui immeubles collectifs et quelques villas, avec environ 3 900 habitants au profil plutôt jeune (34 ans en moyenne) et majoritairement locataire. Ce profil démographique explique la fréquence des demandes liées aux changements de locataires, une configuration que je connais bien.",
 ];
 
 const blocks = [

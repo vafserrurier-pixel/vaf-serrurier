@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pasteur-nice/" },
-  title: "Serrurier Pasteur Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Pasteur Nice – Près du CHU | VAF",
   description:
-    "Serrurier au quartier Pasteur, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Pasteur, Nice : dépannage près du pôle hospitalier, changement de serrure sur bâti mêlant ancien et récent. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier Pasteur est dominé par l'ancienne abbaye de Saint-Pons, l'un des plus vieux monastères de la Côte d'Azur avec celle des îles de Lérins. Détruite au XVIe siècle par les Turcs alliés au roi François Ier, elle est reconstruite en 1724 dans un style baroque, en grande partie financée par Louis XIV — le monastère est aujourd'hui intégré au sein de l'hôpital Pasteur qui porte son nom.",
-  "En 1954, le relogement de populations venues de la vieille ville entraîne une transformation urbaine rapide du secteur. En 1973, la faculté de médecine est créée et l'hôpital Pasteur est regroupé avec d'autres établissements sous le nom de Centre Hospitalier Universitaire de Nice. Le projet Pasteur 2, un investissement de 550 millions d'euros portant la surface à 130 000 m², en a fait l'un des plus grands hôpitaux modernes construits en France. Le quartier reste aujourd'hui un secteur résidentiel dense, avec un bâti mêlant immeubles anciens et constructions plus récentes.",
+  "Clé cassée, porte claquée au quartier Pasteur : j'interviens 24h/24 dans ce secteur résidentiel dense, voisin du pôle hospitalier universitaire, où le passage important pousse parfois les résidents à renforcer leur porte d'entrée. Sur ce bâti varié entre immeubles anciens et constructions plus récentes, je pose le plus souvent un cylindre Picard ou Heraclès adapté au diagnostic effectué sur place.",
+  "Le quartier est dominé par l'ancienne abbaye de Saint-Pons, détruite au XVIe siècle puis reconstruite en 1724 dans un style baroque en grande partie financé par Louis XIV, aujourd'hui intégrée à l'hôpital Pasteur. Le relogement de populations de la vieille ville en 1954 a entraîné une transformation urbaine rapide, et le projet Pasteur 2, un investissement de 550 millions d'euros, en a fait l'un des plus grands hôpitaux modernes construits en France.",
 ];
 
 const blocks = [

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-fleurie-nice/" },
-  title: "Serrurier Corniche Fleurie Nice – 24h/24 | VAF",
+  title: "Serrurier Corniche Fleurie Nice – Villas & jardins | VAF",
   description:
-    "Serrurier à la Corniche Fleurie, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier à la Corniche Fleurie, Nice : sécurisation de villas près du jardin botanique, blindage. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'arrivée de l'eau sur les collines de Nice en 1895 a transformé l'agriculture locale de la Corniche Fleurie, permettant l'irrigation et l'essor de nouvelles cultures comme la floriculture, qui remplaça alors la prédominance ancienne de l'olivier. Autrefois parsemé de serres à fleurs et de jardins potagers florissants, le secteur a aussi attiré l'attention militaire pour sa position stratégique, avec l'installation de fortifications comme la batterie russe.",
-  "Le jardin botanique de Nice, ouvert au public en 1991 sur le site des anciennes pépinières municipales, occupe aujourd'hui près de 3,5 hectares et constitue la pièce maîtresse du quartier. La Corniche Fleurie s'est développée autour d'un urbanisme à taille humaine, avec des résidences arborées alternant avec des villas modernes et des copropriétés récentes, la plupart offrant une vue dégagée sur la Méditerranée.",
+  "Serrurier à la Corniche Fleurie : j'interviens sur ce secteur résidentiel verdoyant, où l'essentiel du bâti est constitué de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage de la porte principale selon l'état du bâti.",
+  "L'arrivée de l'eau sur les collines de Nice en 1895 a transformé l'agriculture locale, permettant l'essor de la floriculture qui a donné son nom au secteur, autrefois parsemé de serres à fleurs. Le jardin botanique de Nice, ouvert en 1991 sur le site des anciennes pépinières municipales, en constitue aujourd'hui la pièce maîtresse, entouré de résidences arborées, de villas modernes et de copropriétés récentes offrant une vue dégagée sur la Méditerranée.",
 ];
 
 const blocks = [

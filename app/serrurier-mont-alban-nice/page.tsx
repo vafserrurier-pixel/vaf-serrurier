@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-alban-nice/" },
-  title: "Serrurier Mont Alban Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Mont Alban Nice – Villas boisées | VAF",
   description:
-    "Serrurier au Mont Alban, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au Mont Alban, Nice : blindage et sécurisation de villas sur secteur boisé près du fort. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "Le fort du Mont-Alban, construit entre 1557 et 1560 après le siège de Nice de 1543 sous l'impulsion du duc de Savoie Emmanuel-Philibert, verrouillait les hauteurs entre Nice et Villefranche-sur-Mer, protégeait la route du col et surveillait les côtes face à la frontière française. Ce monument rectangulaire de 40 sur 46 mètres, situé à 220 mètres d'altitude, reste l'un des rares exemples d'architecture militaire du milieu du XVIe siècle en France dans un aussi bon état de conservation.",
-  "Occupé par diverses garnisons aux XVIIIe et XIXe siècles, puis utilisé comme poste de transmission militaire pendant la Seconde Guerre mondiale, le fort a été désaffecté et transféré à la ville de Nice en 2007, ouvert au public depuis pour des visites estivales. Le quartier du Mont Alban qui l'entoure est un secteur résidentiel boisé sur les hauteurs de l'est de Nice, voisin du Mont Boron, avec un habitat principalement composé de villas et de propriétés individuelles dans un cadre naturel préservé.",
+  "Serrure bloquée, porte qui ferme mal au Mont Alban : j'interviens 24h/24 sur ce secteur résidentiel boisé, où l'essentiel du bâti est constitué de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage complet de la porte principale selon l'état du bâti.",
+  "Le fort du Mont-Alban, construit entre 1557 et 1560 sous l'impulsion du duc de Savoie Emmanuel-Philibert, verrouillait les hauteurs entre Nice et Villefranche-sur-Mer. Ce monument rectangulaire de 40 sur 46 mètres, l'un des rares exemples d'architecture militaire du XVIe siècle aussi bien conservés en France, a été transféré à la ville de Nice en 2007 et ouvert au public. Le quartier qui l'entoure conserve ce cadre naturel préservé, avec un panorama exceptionnel qui explique l'attrait de ce secteur pour les propriétés de standing.",
 ];
 
 const blocks = [

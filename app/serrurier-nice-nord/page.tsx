@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le nord de Nice grimpe sur les collines qui prolongent Cimiez : Rimiez a suivi le même essor Belle Époque, le quartier des Poètes s'est développé dans les années 1920 sur l'ancien domaine horticole des Dames de l'Assomption, et le parc Chambrun conserve le souvenir d'un domaine de plaisance du XIXe siècle avec sa première patinoire de la ville. Plus au nord encore, la cascade de Gairaut, construite en 1883 pour marquer l'arrivée des eaux du canal de la Vésubie, domine un secteur longtemps agricole.",
+  "Serrurier dans le nord de Nice : j'interviens 24h/24 sur ce secteur qui grimpe sur les collines prolongeant Cimiez, avec généralement un cylindre Heraclès ou Fichet adapté aux villas comme aux grands ensembles. Rimiez a suivi le même essor Belle Époque que Cimiez, le quartier des Poètes s'est développé dans les années 1920 sur l'ancien domaine horticole des Dames de l'Assomption, et le parc Chambrun conserve le souvenir d'un domaine de plaisance du XIXe siècle. Plus au nord, la cascade de Gairaut, construite en 1883, domine un secteur longtemps agricole.",
   "Saint-Pancrace et sa chapelle du XVIIe siècle témoignent d'un passé rural de vignes et de cultures méditerranéennes, tandis que Pessicart, mentionné dès le cadastre napoléonien de 1812, est devenu un quartier résidentiel calme apprécié pour sa vue sur la ville. Le Brancolar, enfin, connaît depuis le départ d'Enedis de son ancien site en 2021 une transformation urbaine avec de nouveaux programmes résidentiels.",
   "C'est un secteur qui mêle grands ensembles d'habitat collectif, résidences familiales et villas sur les hauteurs, où le relief ne pose pas de difficulté particulière pour un déplacement rapide depuis mon point de départ. Comme partout à Nice, j'annonce un prix avant toute intervention, urgence de nuit ou projet programmé.",
 ];
 
 const blocks = [
   {
-    heading: "Un prolongement résidentiel de Cimiez",
+    heading: "Réparation de serrures dans le prolongement résidentiel de Cimiez",
     paragraphs: [
       "Rimiez et le quartier des Poètes partagent avec Cimiez tout proche une partie de leur histoire Belle Époque, avec des immeubles de standing et des villas dont les serrures méritent parfois plus d'attention qu'un simple remplacement standard. Je privilégie systématiquement la réparation quand elle est possible.",
     ],

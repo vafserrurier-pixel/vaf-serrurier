@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-lingostiere-nice/" },
-  title: "Serrurier Lingostière Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Lingostière Nice – Secteur excentré | VAF",
   description:
-    "Serrurier à Lingostière, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Lingostière, Nice : dépannage sur propriétés isolées, délai réaliste pour ce secteur éloigné. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Lingostière se situe à la lisière nord-ouest de Nice, dans la vallée du Var, un secteur au double visage : d'un côté, la plaine du Var traversée par des voies rapides et par la ligne du Train des Pignes ; de l'autre, un territoire de collines où subsistent des activités agricoles et un habitat dispersé. Le patrimoine architectural du secteur, marqué par des styles allant de l'époque romaine aux influences baroques, comprend notamment d'anciennes églises aux caractéristiques remarquables.",
-  "Aujourd'hui, Lingostière est un quartier vivant et rural qui compte environ 1 300 habitants, avec des ménages plus grands que la moyenne niçoise (3,5 personnes en moyenne) et un habitat mêlant zones résidentielles, activités commerciales, petite industrie et loisirs comme le tennis ou le golf. C'est le secteur le plus excentré que je couvre depuis mon point de départ.",
+  "Dépannage serrurier à Lingostière : j'interviens sur ce secteur le plus excentré que je couvre depuis mon point de départ, en vous donnant un délai réaliste dès l'appel plutôt qu'une estimation optimiste. Je m'adapte à chaque configuration, résidence proche des axes routiers ou maison plus isolée sur les hauteurs, avec généralement un cylindre Vak ou Cisa adapté au diagnostic effectué sur place.",
+  "Lingostière se situe à la lisière nord-ouest de Nice, dans la vallée du Var, un secteur au double visage : la plaine traversée par le Train des Pignes d'un côté, un territoire de collines agricoles de l'autre. Le quartier compte environ 1 300 habitants, avec des ménages plus grands que la moyenne niçoise et un habitat mêlant zones résidentielles, activités commerciales et loisirs comme le tennis ou le golf.",
 ];
 
 const blocks = [

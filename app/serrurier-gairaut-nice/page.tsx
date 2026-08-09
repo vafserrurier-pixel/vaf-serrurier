@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gairaut-nice/" },
-  title: "Serrurier Gairaut Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Gairaut Nice – Villas vue mer | VAF",
   description:
-    "Serrurier à Gairaut, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Gairaut, Nice : sécurisation de villas près de la cascade historique, renforcement de porte. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "La cascade de Gairaut, chute d'eau artificielle construite au XIXe siècle sur la colline du même nom, commémore l'arrivée des eaux du canal de la Vésubie en 1883 — un ouvrage d'ingénierie impressionnant qui répondait aux besoins croissants d'approvisionnement en eau d'une ville alors en pleine expansion. L'eau s'écoule dans plusieurs bassins surmontés d'un chalet alpin en bois travaillé, au milieu de grottes ornées de fausses stalactites et de rocaille en ciment armé imitant des branches.",
-  "Aujourd'hui encore, la cascade permet d'oxygéner l'eau arrivée par pompage avant sa distribution dans les quartiers niçois. Le secteur, autrefois à vocation agricole avec de nombreux oliviers, est devenu résidentiel, avec des villas offrant une vue exceptionnelle sur la mer et la ville de Nice.",
+  "Serrure à changer, porte qui bloque à Gairaut : j'interviens sur ce secteur résidentiel de villas, en tenant compte du délai réaliste lié à la distance depuis mon point de départ. L'essentiel du bâti est constitué de maisons avec porte d'entrée individuelle : je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Cisa adapté, de la simple réparation au renforcement complet.",
+  "La cascade de Gairaut, chute d'eau artificielle construite au XIXe siècle, commémore l'arrivée des eaux du canal de la Vésubie en 1883, un ouvrage qui répondait aux besoins d'une ville alors en pleine expansion. Le secteur, autrefois à vocation agricole avec de nombreux oliviers, est devenu résidentiel, avec des villas offrant une vue exceptionnelle sur la mer et la ville de Nice.",
 ];
 
 const blocks = [

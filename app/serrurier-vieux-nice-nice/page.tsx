@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-vieux-nice-nice/" },
-  title: "Serrurier Vieux-Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Vieux-Nice – Portes anciennes & locations | VAF",
   description:
-    "Serrurier dans le Vieux-Nice : ouverture de porte, dépannage, changement de serrure adapté au bâti ancien. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier dans le Vieux-Nice : réparation de portes anciennes non standards, dépannage pour locations saisonnières près du cours Saleya. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le Vieux-Nice est le cœur historique de la ville, avec ses ruelles étroites et souvent piétonnes, ses façades colorées et ses places animées. Le cours Saleya, son artère la plus célèbre, était connu dès le XVIIIe siècle sous le nom de « Palco » — la « scène » en italien — un lieu de promenade privilégié pour la haute société où, à partir de 1714, il fallait être vu.",
-  "Le grand tournant de son histoire survient en 1861, avec la création du marché aux fleurs, fruits et légumes qui ancre définitivement sa vocation commerçante et populaire, après avoir accueilli au XIXe siècle les défilés du carnaval de Nice avant leur déplacement vers la ville nouvelle. Aujourd'hui encore, les façades ocre et jaune du cours Saleya abritent l'un des plus beaux marchés de la région, cœur battant d'un quartier au bâti remontant parfois aux XVIIe et XVIIIe siècles.",
+  "Dépannage serrurier dans le Vieux-Nice : j'interviens 24h/24 en tenant compte des ruelles piétonnes pour organiser mon accès. Beaucoup de portes ici sont anciennes, parfois artisanales, avec des dimensions non standards : je privilégie systématiquement le diagnostic et la réparation avec un cylindre Picard ou Heraclès compatible, plutôt qu'un remplacement par un modèle générique qui dénaturerait le cachet de la porte.",
+  "Le cours Saleya, artère la plus célèbre du Vieux-Nice, était connu dès le XVIIIe siècle sous le nom de « Palco » — la « scène » en italien —, un lieu de promenade prisé de la haute société dès 1714. Le grand tournant survient en 1861 avec la création du marché aux fleurs, fruits et légumes, qui ancre sa vocation commerçante et populaire. Ce bâti remontant parfois aux XVIIe et XVIIIe siècles explique la densité de portes et serrures d'époque du quartier.",
 ];
 
 const blocks = [

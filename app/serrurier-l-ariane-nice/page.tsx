@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-ariane-nice/" },
-  title: "Serrurier l'Ariane Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier l'Ariane Nice – Grands ensembles | VAF",
   description:
-    "Serrurier à l'Ariane, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à l'Ariane, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'Ariane doit son nom à la plaine alluviale du Paillon : « arena » signifie le sable, en latin comme en niçois. Son éloignement du centre-ville, tout au nord des limites communales, a longtemps favorisé un habitat rural : un petit hameau s'est formé peu à peu autour de la chapelle Saint-Pierre, comptant environ 500 habitants en 1844, un chiffre qui double pour atteindre 1 000 habitants en 1936.",
-  "C'est durant les Trente Glorieuses que l'Ariane connaît sa métamorphose la plus spectaculaire : les premières constructions de grands ensembles apparaissent dans les années 1950, avec une accélération majeure dans les années 1960-1970, en remplacement des anciens hameaux ruraux. Le quartier accueille alors des rapatriés d'Algérie puis des travailleurs immigrés. Il compte aujourd'hui près de 12 000 habitants sur 35 hectares, et bénéficie depuis 2008 d'un programme de renouvellement urbain de 300 millions d'euros.",
+  "Clé cassée, porte claquée à l'Ariane : j'interviens 24h/24 dans ce grand quartier d'habitat collectif, où les portes palières et les cylindres de hall subissent un usage intensif. Après une perte de clés ou une tentative d'effraction, je pose généralement un cylindre Vak ou Cisa plus résistant, avec possibilité de blindage de la porte si le cadre le permet.",
+  "L'Ariane doit son nom à la plaine alluviale du Paillon : « arena » signifie le sable, en latin comme en niçois. Longtemps rural autour d'un petit hameau, le quartier connaît sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles dans les années 1950-1970. Il compte aujourd'hui près de 12 000 habitants et bénéficie depuis 2008 d'un programme de renouvellement urbain de 300 millions d'euros, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens.",
 ];
 
 const blocks = [

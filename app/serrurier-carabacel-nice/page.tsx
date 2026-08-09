@@ -3,31 +3,31 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carabacel-nice/" },
-  title: "Serrurier Carabacel Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Carabacel Nice – Villas & immeubles anciens | VAF",
   description:
-    "Serrurier au quartier Carabacel, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Carabacel, Nice : dépannage sur villas et immeubles anciens du boulevard planté, changement de serrure. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Carabacel, dont le nom viendrait du celte « car » (colline, mont, rocher), désigne un quartier situé juste au nord de la Vieille-Ville, au-delà du Paillon — ce torrent aujourd'hui recouvert par des jardins et des édifices publics dans sa partie centrale. Au Moyen Âge, le secteur portait le nom de faubourg Saint-Jean-Baptiste, et s'est développé très tôt autour du pont Saint-Antoine, devenu le « Pont Vieux » après la construction du pont neuf de la place Masséna en 1824.",
-  "Après le minage des remparts et de la citadelle en 1708, les couvents et belles demeures s'installent progressivement sur le secteur au XVIIIe siècle. Le plan régulateur du Consiglio d'Ornato met fin, dans les années 1850, à l'urbanisation anarchique du faubourg, et le boulevard Carabacel, planté de deux rangées d'arbres symétriques, est achevé fin 1865-début 1866. Aujourd'hui, ce quartier sur les hauteurs proches du centre-ville, entre la gare et Cimiez, mêle immeubles anciens, villas et résidences plus récentes.",
+  "Porte claquée, cylindre grippé à Carabacel : j'interviens 24h/24 sur ce secteur qui mêle immeubles anciens et villas sur les hauteurs proches du centre-ville. Le bâti du boulevard planté, construit dans la seconde moitié du XIXe siècle, a souvent conservé ses portes et cylindres d'origine : je pose le plus souvent un cylindre Fichet ou Heraclès compatible, plutôt qu'un remplacement complet qui dénaturerait ces façades.",
+  "Carabacel, dont le nom viendrait du celte « car » (colline, mont, rocher), désigne le secteur situé juste au nord de la Vieille-Ville, au-delà du Paillon. Développé autour du pont Saint-Antoine devenu le « Pont Vieux », puis structuré par le plan régulateur du Consiglio d'Ornato dans les années 1850, le boulevard Carabacel est achevé fin 1865. Ce quartier entre la gare et Cimiez conserve aujourd'hui ce mélange d'immeubles anciens, de villas et de résidences plus récentes.",
 ];
 
 const blocks = [
   {
-    heading: "Un bâti varié entre ancien et villas",
+    heading: "Dépannage sur villas et immeubles anciens",
     paragraphs: [
       "Carabacel mélange immeubles anciens du centre-ville étendu et villas individuelles sur les hauteurs. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ancienne ou d'une porte de villa plus récente.",
     ],
   },
   {
-    heading: "Un patrimoine hérité du boulevard planté",
+    heading: "Réparation de cylindre sur le boulevard planté",
     paragraphs: [
       "Les immeubles construits le long du boulevard Carabacel dans la seconde moitié du XIXe siècle ont souvent conservé des éléments d'origine. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui dénaturerait ces façades.",
     ],
   },
   {
-    heading: "Un secteur calme, proche du centre",
+    heading: "Changement de serrure et sécurisation programmée",
     paragraphs: [
       "La position de Carabacel, à la fois proche du centre-ville et plus tranquille, en fait un secteur où j'interviens régulièrement pour du dépannage courant comme pour des projets de sécurisation programmés.",
     ],

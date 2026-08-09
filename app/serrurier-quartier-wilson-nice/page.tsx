@@ -3,37 +3,37 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-wilson-nice/" },
-  title: "Serrurier Quartier Wilson Nice – 24h/24 | VAF",
+  title: "Serrurier Quartier Wilson Nice – Commerces & serrures anciennes | VAF",
   description:
-    "Serrurier au quartier Wilson, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier place Wilson, Nice : dépannage de commerce, serrures d'immeubles bourgeois Belle Époque, sécurisation de vitrine. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "La place Wilson, qui donne son nom au quartier, doit son nom actuel à un hommage rendu après la Première Guerre mondiale au président américain Thomas Woodrow Wilson. Avant cela, ce secteur abritait dès le Moyen Âge la Bourgade, un faubourg animé accessible par un unique pont de pierre franchissant le Paillon, puis un couvent d'Augustins sous l'Ancien Régime. L'église actuelle, achevée en 1850, a marqué le vrai point de départ de l'urbanisation du quartier.",
-  "Aujourd'hui, la place Wilson est dominée par l'ancien Hôtel des Postes de 1888, de style néoclassique, et le quartier mêle immeubles bourgeois Belle Époque, façades restaurées et commerces de caractère. C'est l'un des secteurs les plus recherchés du centre de Nice, à la fois chic et convivial, à quelques minutes à pied de mon point de départ au 2 Rue Antoine Gautier.",
+  "Besoin d'un serrurier place Wilson : je diagnostique par téléphone puis j'interviens 24h/24, aussi bien pour un appartement que pour l'un des nombreux commerces du secteur — rideau métallique bloqué, serrure de vitrine à sécuriser après une vitre cassée, porte de galerie qui ferme mal. Le passage important toute la journée use les cylindres plus vite que la moyenne, et je pose le plus souvent un cylindre Picard ou Cisa adapté au type de serrure déjà en place.",
+  "La place Wilson doit son nom actuel à un hommage rendu au président américain Woodrow Wilson après la Première Guerre mondiale, sur le site de l'ancienne Bourgade médiévale. L'ancien Hôtel des Postes de 1888 domine toujours la place, entouré d'immeubles bourgeois Belle Époque dont beaucoup ont conservé leurs portes et cylindres d'origine — un point d'attention à chaque intervention pour ne pas dénaturer ces façades soignées.",
 ];
 
 const blocks = [
   {
-    heading: "Un patrimoine architectural à préserver",
+    heading: "Dépannage des commerces et galeries de la place Wilson",
+    paragraphs: [
+      "Entre les immeubles d'habitation, les galeries et les commerces de quartier, la place Wilson connaît un passage important toute la journée. Rideau métallique, serrure de vitrine, porte de local : je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement complet.",
+    ],
+  },
+  {
+    heading: "Réparation des serrures d'immeubles bourgeois",
     paragraphs: [
       "Les immeubles bourgeois qui entourent la place Wilson datent pour beaucoup de la fin du XIXe et du début du XXe siècle, avec des portes d'entrée et des serrures d'époque qui méritent d'être traitées avec soin. Je privilégie autant que possible la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard qui abîmerait l'esthétique d'une porte ancienne.",
     ],
   },
   {
-    heading: "Un secteur résidentiel dense et actif",
-    paragraphs: [
-      "Entre les immeubles d'habitation, les galeries et les commerces de quartier, la place Wilson connaît un passage important toute la journée. Les cylindres de porte d'entrée s'usent plus vite que la moyenne, et je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement complet.",
-    ],
-  },
-  {
-    heading: "Sécurisation des logements et commerces",
+    heading: "Sécurisation après perte de clés ou usure",
     paragraphs: [
       "Après une perte de clés, une usure constatée ou pour anticiper une mise aux normes, je propose des solutions adaptées aussi bien pour les appartements que pour les locaux commerciaux du secteur : remplacement de cylindre, serrure multipoints, ou renforcement complet selon l'état de votre porte.",
     ],
   },
   {
-    heading: "Interventions en copropriété",
+    heading: "Digicodes et halls d'entrée en copropriété",
     paragraphs: [
       "Pour les immeubles bourgeois du quartier, souvent organisés en copropriété avec des halls d'entrée soignés, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté, avec la même attention portée à la cohérence esthétique du bâti ancien.",
     ],

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-californie-nice/" },
-  title: "Serrurier Californie Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Californie Nice – Villas familiales | VAF",
   description:
-    "Serrurier au quartier Californie, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier au quartier Californie, Nice : sécurisation de villas familiales, dépannage près de l'aéroport. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier Californie doit son nom à l'aéroport de Nice, dont l'histoire commence ici en 1910 avec un premier meeting aérien organisé sur les champs du lieu-dit « la Californie », devant environ 100 000 spectateurs. Avant-guerre, l'aérodrome de la Californie n'était encore qu'un modeste champ caillouteux équipé de deux hangars, avant d'être officiellement reconnu comme aérodrome par le ministre de l'Air en 1929.",
-  "Le nom du quartier garde aussi le souvenir de l'hippodrome de Californie, autrefois situé près de l'aérodrome, qui dut être déplacé lors de l'agrandissement de la piste. Aujourd'hui desservi par la ligne 2 du tramway qui relie le port de Nice à l'aéroport, ce quartier urbain populaire et décontracté, situé dans le bas de Fabron à proximité de la mer, est particulièrement apprécié des familles pour son bâti mêlant villas et résidences de standing.",
+  "Dépannage serrurier au quartier Californie : j'interviens 24h/24 sur ce secteur familial du bas de Fabron, avec de nombreuses villas et résidences de standing à proximité de la mer. Je diagnostique chaque configuration avant de proposer généralement un cylindre Fichet ou Cisa, avec possibilité de blindage de la porte principale si le bâti le permet.",
+  "Le quartier Californie doit son nom à l'aéroport de Nice, dont l'histoire commence ici en 1910 avec un premier meeting aérien devant 100 000 spectateurs, sur ce qui n'était alors qu'un champ caillouteux. Le nom garde aussi le souvenir de l'hippodrome de Californie, déplacé lors de l'agrandissement de la piste. Aujourd'hui desservi par la ligne 2 du tramway, ce quartier urbain décontracté reste particulièrement apprécié des familles pour son bâti mêlant villas et résidences.",
 ];
 
 const blocks = [

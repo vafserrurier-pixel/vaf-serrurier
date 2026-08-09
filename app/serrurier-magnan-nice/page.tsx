@@ -3,19 +3,19 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-magnan-nice/" },
-  title: "Serrurier Magnan Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Magnan Nice – Familles & serrures multipoints | VAF",
   description:
-    "Serrurier au quartier Magnan, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Magnan, Nice : remplacement de cylindre sur résidences des années 1960-1970, serrure multipoints pour familles. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier tire son nom du Magnan, un petit fleuve côtier qui prend sa source à Aspremont et se jette dans la mer à Nice. Ce nom viendrait de la culture des vers à soie autrefois pratiquée dans le pays niçois : l'ancien nom du bombyx du mûrier, le « magnan », se retrouve dans le mot magnanerie. Jusqu'au XIXe siècle, on parlait d'ailleurs plus souvent du « vallon Magnan » que de La Madeleine, le quartier voisin.",
-  "Souvent à sec mais capable de crues soudaines, le torrent du Magnan faisait autrefois tourner moulins, vanneries et ateliers de meubles, tout en irriguant les terres agricoles et maraîchères du secteur. En 1960, la décision est prise de couvrir son cours inférieur, de La Madeleine supérieure jusqu'au pont du Génie. Aujourd'hui, Magnan est un quartier résidentiel à l'ouest du centre-ville, à proximité de la partie occidentale de la Promenade des Anglais, qui mêle immeubles des années 1960-1970 et constructions plus récentes.",
+  "Magnan, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier familial à l'ouest du centre-ville, proche de la Promenade des Anglais. Beaucoup de résidences datent des années 1960-1970, avec des serrures d'origine parfois vieillissantes : un remplacement de cylindre Vak ou Picard suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",
+  "Le quartier tire son nom du Magnan, un petit fleuve côtier qui prend sa source à Aspremont, lui-même nommé d'après la culture des vers à soie autrefois pratiquée dans le pays niçois (le « magnan », d'où magnanerie). Le torrent faisait tourner moulins et ateliers avant que son cours inférieur ne soit couvert en 1960, laissant place à l'urbanisation résidentielle actuelle, entre La Madeleine supérieure et le bord de mer.",
 ];
 
 const blocks = [
   {
-    heading: "Immeubles résidentiels des années 1960-1970",
+    heading: "Remplacement de cylindre sur les résidences 1960-1970",
     paragraphs: [
       "Beaucoup de résidences de Magnan datent de cette période, construites après la couverture du torrent, avec des serrures d'origine parfois vieillissantes. Un remplacement de cylindre suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",
     ],

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-chambrun-nice/" },
-  title: "Serrurier Chambrun Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Chambrun Nice – Immeubles collectifs | VAF",
   description:
-    "Serrurier à Chambrun, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Chambrun, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le parc Chambrun, qui donne son nom au quartier, était à l'origine une propriété du comte Caïs de Pierlas, où se dressait un château du début du XIXe siècle. Le comte fit appel à l'architecte Philippe Randon pour en faire un parc de plaisance dédié à son amour de la musique. Le domaine devint ensuite, pendant une longue période, la propriété du comte de Chambrun, sociologue et homme politique français installé à Nice en 1879.",
-  "Ce domaine abritait autrefois la première patinoire de la ville, le Palais de Glace, et son célèbre kiosque à musique, surnommé le « temple de l'Amour », est toujours apprécié des promeneurs aujourd'hui. Le lotissement s'est organisé autour de quatre voies sinueuses — avenues Chateaubriand, Alfred-de-Musset, George-Sand et André-Chénier — en respectant par endroits les bouquets d'arbres de hautes futaies du parc d'origine. Aujourd'hui, Chambrun est un quartier résidentiel du nord de Nice, proche de l'Ariane, avec un bâti principalement composé de grands ensembles d'habitat collectif.",
+  "Clé cassée, porte claquée à Chambrun : j'interviens 24h/24 sur ce quartier résidentiel du nord de Nice, principalement composé de grands ensembles d'habitat collectif où les portes palières et cylindres de hall subissent un usage intensif. Je pose généralement un cylindre Fichet ou Vak plus résistant après une perte de clés ou une tentative d'effraction.",
+  "Le parc Chambrun, qui donne son nom au quartier, était à l'origine une propriété du comte Caïs de Pierlas dotée d'un château du début du XIXe siècle, devenue plus tard celle du comte de Chambrun, installé à Nice en 1879. Ce domaine abritait la première patinoire de la ville et son kiosque à musique, le « temple de l'Amour », toujours apprécié des promeneurs. Le lotissement s'est organisé autour de quatre voies sinueuses en respectant les bouquets d'arbres du parc d'origine.",
 ];
 
 const blocks = [

@@ -3,25 +3,25 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-philippe-nice/" },
-  title: "Serrurier Saint-Philippe Nice – 24h/24 | VAF",
+  title: "Serrurier Saint-Philippe Nice – Villas & jardins | VAF",
   description:
-    "Serrurier au quartier Saint-Philippe, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier à Saint-Philippe, Nice : sécurisation de villas et propriétés avec jardin, dépannage près du parc Estienne-d'Orves. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Saint-Philippe est un quartier vallonné qui s'étend d'est en ouest entre le Parc Impérial et La Madeleine, et du nord au sud entre la corniche de Magnan et la route Mathis. Son nom vient d'une ancienne chapelle du XVIIe siècle : la chapelle Saint-Philippe-Néri, plus vieille construction du quartier, achevée en 1612 pour le compte d'un riche Niçois, Ponce Ceva, et classée monument historique depuis 1964.",
-  "Au XIXe siècle, la noblesse européenne appréciait particulièrement ce secteur pour son climat méditerranéen idéal. Le peintre Joseph Fricéro et son épouse y vécurent de 1852 à 1870, recevant notamment l'impératrice douairière Alexandra Feodorovna, veuve de Nicolas Ier de Russie, dans leur propriété. Aujourd'hui, le parc départemental Estienne-d'Orves, 15 hectares plantés d'eucalyptus, de chênes centenaires et d'oliviers dont un millénaire, occupe la majeure partie de la colline.",
+  "Cylindre grippé, porte à sécuriser à Saint-Philippe : j'interviens 24h/24 sur ce quartier vallonné qui compte de nombreuses villas et propriétés avec jardin. Pour une porte principale, un portillon ou un accès secondaire, je diagnostique chaque situation avant de proposer une réparation ou un remplacement, avec le plus souvent un cylindre Heraclès ou Fichet adapté au bâti déjà en place.",
+  "Le quartier vallonné entre le Parc Impérial et La Madeleine tire son nom de la chapelle Saint-Philippe-Néri, achevée en 1612 et classée monument historique depuis 1964 — la plus vieille construction du secteur. Au XIXe siècle, la noblesse européenne appréciait ce climat méditerranéen idéal, comme le peintre Joseph Fricéro qui y reçut l'impératrice douairière de Russie. Le parc départemental Estienne-d'Orves, 15 hectares d'oliviers centenaires, occupe aujourd'hui la majeure partie de la colline autour de laquelle se sont bâties ces villas.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier résidentiel vallonné et arboré",
+    heading: "Sécurisation de villas et propriétés avec jardin",
     paragraphs: [
       "Entre le parc Estienne-d'Orves et les rues en pente du quartier, Saint-Philippe compte de nombreuses villas et propriétés avec jardin, aux côtés d'immeubles plus récents. Je diagnostique chaque situation avant de proposer une solution adaptée, réparation ou remplacement, qu'il s'agisse d'une porte de villa ou d'un appartement.",
     ],
   },
   {
-    heading: "Autour de la chapelle Saint-Philippe-Néri",
+    heading: "Dépannage près de la chapelle Saint-Philippe-Néri",
     paragraphs: [
       "Le secteur historique proche de la chapelle classée monument historique conserve un bâti ancien, où je privilégie la réparation d'une serrure existante plutôt qu'un remplacement systématique quand le mécanisme le permet.",
     ],

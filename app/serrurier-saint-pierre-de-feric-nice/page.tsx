@@ -3,19 +3,19 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-pierre-de-feric-nice/" },
-  title: "Serrurier Saint-Pierre-de-Féric Nice – 24h/24 | VAF",
+  title: "Serrurier Saint-Pierre-de-Féric Nice – Grandes propriétés | VAF",
   description:
-    "Serrurier à Saint-Pierre-de-Féric, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier à Saint-Pierre-de-Féric, Nice : sécurisation de villas avec portail et grand jardin, blindage de porte. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le nom de Saint-Pierre-de-Féric vient du niçois « San Peire dei Ferigoula », littéralement « Saint Pierre des Thyms », en référence aux plantations de thym qui couvraient autrefois ces hauteurs. Le quartier est bordé par la Costière et La Madeleine à l'ouest, Saint-Pancrace au nord, Pessicart à l'est, et Saint-Philippe et le Parc Impérial au sud.",
-  "Longtemps rural, le secteur est resté agricole jusqu'à la création d'un réseau de routes en 1922 pour faciliter l'accès aux fermes. Depuis, Saint-Pierre-de-Féric s'est fortement urbanisé tout en conservant un caractère calme et verdoyant, avec des villas individuelles entourées de jardins, parfois piscine ou court de tennis à l'appui — un profil résidentiel haut de gamme sur les hauteurs de Nice.",
+  "Besoin d'un serrurier à Saint-Pierre-de-Féric : j'interviens 24h/24 sur ce secteur résidentiel haut de gamme des hauteurs de Nice, où les propriétés sont souvent plus grandes qu'ailleurs, avec portails et accès secondaires à diagnostiquer en plus de la porte d'entrée. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, avec possibilité de blindage complet selon l'état du bâti.",
+  "Le nom du quartier vient du niçois « San Peire dei Ferigoula », littéralement « Saint Pierre des Thyms », en référence aux plantations de thym qui couvraient autrefois ces hauteurs. Longtemps rural, le secteur est resté agricole jusqu'à la création d'un réseau de routes en 1922, avant de s'urbaniser fortement tout en conservant son caractère calme et verdoyant, avec des villas entourées de jardins, parfois piscine ou court de tennis à l'appui.",
 ];
 
 const blocks = [
   {
-    heading: "Un ancien terroir agricole devenu résidentiel",
+    heading: "Sécurisation des portails et grandes propriétés",
     paragraphs: [
       "L'héritage rural de Saint-Pierre-de-Féric se lit encore dans le tracé des routes ouvertes en 1922 et dans la végétation abondante du quartier. Les propriétés y sont souvent plus grandes qu'ailleurs à Nice, avec des portails et des accès qui demandent parfois un diagnostic spécifique en plus de la porte d'entrée elle-même.",
     ],

@@ -3,31 +3,31 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gambetta-nice/" },
-  title: "Serrurier Gambetta Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Gambetta Nice – Immeubles Art déco | VAF",
   description:
-    "Serrurier au quartier Gambetta, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Gambetta, Nice : changement de serrure et dépannage sur immeubles du XXe siècle, sécurisation après cambriolage. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le boulevard Gambetta, qui donne son nom au quartier, rend hommage à Léon Gambetta (1838-1882), figure politique emblématique de la Troisième République française. En 1950, il n'y avait pratiquement rien à l'ouest de ce boulevard : le secteur s'est urbanisé pour l'essentiel dans l'après-guerre, prenant la suite du quartier du Piol qui occupait auparavant ces terrains.",
-  "Le quartier porte aussi la trace d'une forte présence italienne dans l'histoire de Nice : en 1926, les immigrants italiens représentaient environ 40 000 personnes, soit un quart de la population niçoise. On y trouve un patrimoine architectural varié, dont l'immeuble Art déco Le Palladium, avec son atrium décoré et sa statue d'Athéna à l'angle de l'avenue Tzarévitch et du boulevard Gambetta.",
+  "Porte claquée, cylindre grippé à Gambetta : j'interviens 24h/24 dans ce quartier résidentiel calme, pour une porte claquée, un cylindre grippé, ou pour renforcer une porte d'entrée après un cambriolage dans l'immeuble voisin. Le bâti de standing modeste à moyen, construit pour l'essentiel dans l'après-guerre, a souvent des serrures qui datent de plusieurs décennies : je pose généralement un cylindre Fichet ou Cisa compatible plutôt qu'un remplacement complet quand c'est possible.",
+  "Le boulevard Gambetta rend hommage à Léon Gambetta, figure de la Troisième République. En 1950, il n'y avait pratiquement rien à l'ouest de ce boulevard : le quartier s'est urbanisé après-guerre sur les terrains de l'ancien Piol, marqué aussi par la forte présence italienne de Nice au XXe siècle. L'immeuble Art déco Le Palladium, avec son atrium décoré et sa statue d'Athéna à l'angle de l'avenue Tzarévitch, en est le témoin architectural le plus marquant.",
 ];
 
 const blocks = [
   {
-    heading: "Immeubles résidentiels du début et du milieu du XXe siècle",
+    heading: "Réparation de serrures sur les immeubles du XXe siècle",
     paragraphs: [
       "Le bâti de Gambetta comprend beaucoup d'immeubles de standing modeste à moyen, avec des serrures qui ont parfois plusieurs décennies. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
     ],
   },
   {
-    heading: "Un secteur résidentiel calme",
+    heading: "Dépannage et sécurisation après effraction",
     paragraphs: [
       "Contrairement à des quartiers plus commerçants, Gambetta reste majoritairement résidentiel, ce qui n'empêche pas les mêmes besoins : porte claquée, cylindre grippé, ou volonté de renforcer une porte d'entrée après un cambriolage dans l'immeuble voisin.",
     ],
   },
   {
-    heading: "Autour de l'immeuble Le Palladium",
+    heading: "Serrures d'époque sur l'immeuble Le Palladium et ses voisins",
     paragraphs: [
       "Les immeubles Art déco du secteur, comme Le Palladium à l'angle de l'avenue Tzarévitch, méritent une attention particulière : je privilégie systématiquement une solution qui respecte l'esthétique de ces façades remarquables.",
     ],

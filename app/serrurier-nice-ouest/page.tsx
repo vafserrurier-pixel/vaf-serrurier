@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "L'ouest de Nice est le secteur le plus contrasté de la ville. Fabron, prisé dès le XIXe siècle par les grandes familles niçoises fortunées, conserve le souvenir du château mauresque du duc de Saxe-Cobourg-Gotha dans son parc Carol-de-Roumanie ; juste en contrebas, Carras était encore au XVIIIe siècle un modeste village de pêcheurs, et Californie doit son nom au tout premier meeting aérien de Nice, organisé en 1910 sur les champs qui allaient devenir l'aéroport.",
+  "Porte claquée, cylindre grippé dans l'ouest de Nice : j'interviens 24h/24 sur ce secteur le plus contrasté de la ville, avec généralement un cylindre Fichet ou Vak adapté selon la configuration. Fabron, prisé dès le XIXe siècle par les grandes familles niçoises fortunées, conserve le souvenir du château mauresque du duc de Saxe-Cobourg-Gotha dans son parc Carol-de-Roumanie ; juste en contrebas, Carras était encore au XVIIIe siècle un modeste village de pêcheurs, et Californie doit son nom au tout premier meeting aérien de Nice, organisé en 1910.",
   "Plus loin, l'Arénas, ancien lieu de corridas devenu premier centre d'affaires international des Alpes-Maritimes en 1989, côtoie le pôle hospitalier de L'Archet inauguré en 1979, tandis que les Moulins, construits entre 1965 et 1976, bénéficient depuis 2009 d'un programme de renouvellement urbain d'ampleur. Aux confins de la ville, Saint-Isidore garde la mémoire d'un ancien relais de diligences, Lingostière s'étend dans la vallée du Var, et le secteur de Bellet cultive depuis l'Antiquité la seule appellation viticole urbaine de France.",
   "Cette diversité se retrouve dans les besoins en serrurerie : portes de villas et de maisons individuelles, serrures multipoints de résidences plus récentes, mise en sécurité après effraction dans les zones plus isolées comme Lingostière ou Bellet. Je me déplace dans l'ensemble de ce secteur avec la même exigence de transparence que sur le reste de Nice : diagnostic par téléphone, prix annoncé avant intervention, et disponibilité 24h/24 pour les urgences.",
 ];
 
 const blocks = [
   {
-    heading: "Du château de Fabron au village de pêcheurs de Carras",
+    heading: "Sécurisation de villas, du château de Fabron au village de Carras",
     paragraphs: [
       "Les villas héritées des grandes propriétés du XIXe siècle à Fabron, les anciennes maisons de pêcheurs de Carras et le bâti né de l'essor aéronautique de Californie donnent à ce littoral ouest une grande variété de portes et de serrures à diagnostiquer. Je m'adapte à chaque configuration, de la villa de caractère à la résidence balnéaire plus récente.",
     ],

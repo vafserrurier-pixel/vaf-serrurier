@@ -3,39 +3,39 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-cimiez-nice/" },
-  title: "Serrurier Cimiez Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Cimiez Nice – Serrures anciennes, dépannage | VAF",
   description:
-    "Serrurier à Cimiez, Nice : ouverture de porte, dépannage, changement de serrure adapté aux immeubles anciens. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier à Cimiez, Nice : changement de serrure et dépannage adaptés aux portes anciennes des immeubles Belle Époque, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le nom de Cimiez viendrait de Cemenelum, l'ancienne cité romaine qui fut préfecture des Alpes-Maritimes à l'époque romaine — la légende veut aussi qu'il évoque les « cimes » des grands arbres qui peuplaient la colline. Les arènes romaines, construites au Ier siècle après J.-C. pour l'entraînement des légionnaires, témoignent encore de ce passé antique, aux côtés du monastère franciscain fondé au IXe siècle par les moines bénédictins de l'abbaye de Saint-Pons.",
-  "C'est à la Belle Époque, sous l'impulsion de l'architecte Sébastien-Marcel Biasini qui traça le boulevard de Cimiez, que le quartier prend son visage actuel : de somptueux hôtels-palais et villas de luxe y accueillirent des figures de la monarchie européenne comme la reine Victoria, Édouard VII ou Léopold II. Ce patrimoine architectural implique aujourd'hui des portes et des serrures souvent plus imposantes que la moyenne, avec des mécanismes qu'il faut savoir traiter avec soin plutôt que remplacer systématiquement.",
+  "Besoin d'un serrurier à Cimiez : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, avec le même délai que sur le reste de Nice. Ce quartier pose un défi particulier : les grands immeubles Belle Époque et les anciens palaces reconvertis en copropriétés ont souvent gardé leurs serrures et cylindres d'origine, parfois centenaires. Sur ce type de porte, je pose le plus souvent un cylindre récent (Picard ou Vak, entre autres) compatible avec le mécanisme existant, plutôt que de remplacer toute la serrure et dénaturer une porte d'époque.",
+  "Cette densité de portes anciennes tient à l'histoire du quartier : le boulevard de Cimiez, tracé à la Belle Époque par l'architecte Sébastien-Marcel Biasini sur le site de l'antique Cemenelum, a accueilli des hôtels-palais pour une clientèle européenne fortunée — la reine Victoria ou Édouard VII y ont séjourné. C'est ce patrimoine qui fait de Cimiez l'un des quartiers où mon expertise sur les mécanismes anciens sert le plus souvent.",
 ];
 
 const blocks = [
   {
-    heading: "Des palaces Belle Époque reconvertis en copropriétés",
+    heading: "Changement de serrure sur les portes anciennes de Cimiez",
     paragraphs: [
-      "Plusieurs des grands hôtels construits pour la clientèle royale européenne ont été reconvertis en copropriétés résidentielles au fil du XXe siècle. Leurs portes et serrures, souvent d'origine, demandent un vrai savoir-faire pour être réparées sans dénaturer ces bâtiments remarquables.",
+      "Les palaces Belle Époque reconvertis en copropriétés et les grands immeubles du quartier ont souvent conservé leurs portes et cylindres d'origine. Sur ce type de porte, je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet : ça évite de dénaturer une porte d'époque tout en retrouvant un fonctionnement fiable. Un remplacement intégral n'intervient que si le mécanisme est trop endommagé pour être conservé.",
     ],
   },
   {
-    heading: "Des immeubles au bâti ancien et soigné",
+    heading: "Dépannage et ouverture de porte dans les immeubles de standing",
     paragraphs: [
-      "Dans les grands immeubles Belle Époque de Cimiez, les portes sont souvent plus lourdes et les serrures d'origine parfois anciennes, avec des mécanismes qui demandent une expertise particulière. Je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'époque, sauf si l'état du mécanisme ne le permet plus.",
+      "Les portes de ces immeubles anciens sont souvent plus lourdes et plus épaisses que la moyenne, avec des mécanismes qui demandent une méthode d'ouverture adaptée pour ne pas les abîmer. Que ce soit pour un cylindre grippé, une clé cassée ou une porte claquée, je diagnostique l'origine réelle du blocage avant d'intervenir, plutôt que de forcer.",
     ],
   },
   {
-    heading: "Copropriétés de standing",
+    heading: "Sécurisation des halls de copropriété",
     paragraphs: [
-      "Les copropriétés de Cimiez sont généralement bien entretenues, avec des règlements exigeants sur l'esthétique des parties communes. Pour un hall d'immeuble ou une porte palière, je propose des solutions de sécurité qui respectent ce niveau de finition plutôt qu'une pose standard sans considération pour le cadre existant.",
+      "Les copropriétés de Cimiez sont généralement bien entretenues, avec des règlements exigeants sur l'esthétique des parties communes. Pour un digicode, une gâche électrique ou une porte de hall, je propose des solutions qui respectent ce niveau de finition, sur demande d'un syndic ou d'un résident mandaté.",
     ],
   },
   {
-    heading: "Villas et maisons individuelles",
+    heading: "Sécurisation des portes de villa et portails",
     paragraphs: [
-      "Le secteur compte aussi des villas individuelles, avec des besoins différents : porte d'entrée principale à sécuriser, parfois un portillon ou un accès secondaire. Le diagnostic reste le même, adapté à chaque configuration.",
+      "Le secteur compte aussi des villas individuelles, avec des besoins différents : porte d'entrée principale à sécuriser, parfois un portillon ou un accès secondaire. J'interviens sur le remplacement de serrure, l'installation d'un cylindre plus résistant, ou le blindage de la porte principale selon l'état du bâti.",
     ],
   },
 ];

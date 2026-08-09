@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-isidore-nice/" },
-  title: "Serrurier Saint-Isidore Nice – 24h/24 | VAF",
+  title: "Serrurier Saint-Isidore Nice – Résidences neuves | VAF",
   description:
-    "Serrurier à Saint-Isidore, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Saint-Isidore, Nice : dépannage sur résidences récentes près du stade Allianz Riviera. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "Saint-Isidore tire son nom d'Isidore le Laboureur, saint espagnol du XIIe siècle vénéré pour son lien spirituel avec la terre et les cycles agricoles — une procession traditionnelle perpétue encore chaque année en avril cette dévotion séculaire. À l'origine, Saint-Isidore était un relais de diligences, une étape stratégique où voyageurs et attelages s'arrêtaient avant de rejoindre Nice, le temps de reposer et de changer les chevaux.",
-  "D'anciennes fermes reconverties en lieux culturels racontent aujourd'hui ce passé agricole, aux côtés de l'église paroissiale dédiée à saint Isidore. Le quartier abrite aussi le Musée National du Sport, seul établissement en France consacré à la préservation de l'histoire sportive, et le stade Allianz Riviera qui accueille l'OGC Nice, représentant la facette contemporaine de ce secteur de l'extrême ouest niçois, avec un habitat plus récent mêlant résidences neuves et quelques maisons individuelles.",
+  "Serrurier à Saint-Isidore : j'interviens sur ce secteur de l'extrême ouest niçois, où beaucoup de résidences sont plus récentes qu'ailleurs à Nice, avec des serrures multipoints standard. Le diagnostic reste systématique avant toute intervention, avec généralement un cylindre Picard ou Vak adapté au bâti neuf du quartier.",
+  "Saint-Isidore tire son nom d'Isidore le Laboureur, saint espagnol vénéré pour son lien avec la terre — une procession perpétue encore chaque année en avril cette dévotion. À l'origine relais de diligences, le quartier abrite aujourd'hui le Musée National du Sport et le stade Allianz Riviera qui accueille l'OGC Nice, représentant la facette contemporaine de ce secteur à l'habitat plus récent mêlant résidences neuves et quelques maisons individuelles.",
 ];
 
 const blocks = [

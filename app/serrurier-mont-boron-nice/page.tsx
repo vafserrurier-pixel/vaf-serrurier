@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-boron-nice/" },
-  title: "Serrurier Mont Boron Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Mont Boron Nice – Villas vue mer | VAF",
   description:
-    "Serrurier au Mont Boron, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au Mont Boron, Nice : sécurisation de villas de standing, systèmes de sécurité avancés. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "Le Mont Boron, colline culminant à 191 mètres sur la partie sud-est de Nice, abrite plusieurs vestiges militaires remarquables : une petite batterie du XIXe siècle à l'extrémité du Cap de Nice, et la batterie du Mont Boron à son sommet, en lien avec le fort voisin du Mont Alban construit au XVIe siècle. Au pied de la colline se trouve aussi la grotte du Lazaret, site préhistorique du Paléolithique moyen, et le site archéologique de Terra Amata découvert en 1966.",
-  "Aujourd'hui, le Mont Boron est l'un des quartiers résidentiels les plus huppés de Nice, connu pour ses villas avec vue mer et son cadre verdoyant classé au patrimoine. Le bâti y est principalement constitué de maisons individuelles et de résidences de standing, dans un secteur où j'interviens avec un soin particulier pour ce type de bien souvent équipé de systèmes de sécurité plus avancés.",
+  "Serrurier au Mont Boron : j'interviens 24h/24 sur ce secteur résidentiel huppé, avec un soin particulier pour les villas souvent équipées de systèmes de sécurité plus avancés que la moyenne. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, adapté aux portes principales comme aux portails et accès secondaires de ces propriétés avec vue mer.",
+  "Cette colline culminant à 191 mètres abrite plusieurs vestiges militaires remarquables : une batterie du XIXe siècle au Cap de Nice, et le fort voisin du Mont Alban du XVIe siècle. Au pied de la colline se trouvent aussi la grotte préhistorique du Lazaret et le site archéologique de Terra Amata découvert en 1966. Ce cadre verdoyant classé au patrimoine explique la présence de nombreuses résidences de standing, dont le bâti demande une approche sur mesure.",
 ];
 
 const blocks = [

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-rimiez-nice/" },
-  title: "Serrurier Rimiez Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Rimiez Nice – Serrures anciennes | VAF",
   description:
-    "Serrurier à Rimiez, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Rimiez, Nice : réparation de serrures anciennes, dépannage sur villas et résidences. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Rimiez s'est développé au XIXe siècle comme quartier résidentiel sur les hauteurs de Nice, dans la continuité de Cimiez tout proche, à l'époque où l'aristocratie européenne recherchait ces collines pour leur climat et leur tranquillité. Le quartier compte aujourd'hui plus de 6 300 habitants, avec un profil plutôt âgé (47 ans en moyenne) et une majorité de couples sans enfant.",
-  "Le parc immobilier de Rimiez reste majoritairement composé d'appartements, aux côtés de maisons individuelles, sur une surface de 2,1 km² parsemée de nombreux espaces verts. C'est un quartier au cadre verdoyant et calme, avec un bâti qui mêle villas, petites résidences et quelques ensembles collectifs plus importants.",
+  "Serrure bloquée, porte qui ferme mal à Rimiez : j'interviens 24h/24 sur ce quartier résidentiel calme, où l'âge moyen plus élevé que la moyenne niçoise (47 ans) va souvent de pair avec des serrures installées depuis longtemps. Je privilégie systématiquement la réparation quand elle est possible, avec un cylindre Heraclès ou Fichet compatible, plutôt qu'un remplacement complet.",
+  "Rimiez s'est développé au XIXe siècle comme quartier résidentiel sur les hauteurs de Nice, dans la continuité de Cimiez tout proche, à l'époque où l'aristocratie européenne recherchait ces collines pour leur climat. Le quartier compte aujourd'hui plus de 6 300 habitants sur 2,1 km², avec un bâti qui mêle villas, petites résidences et quelques ensembles collectifs dans un cadre verdoyant et calme.",
 ];
 
 const blocks = [

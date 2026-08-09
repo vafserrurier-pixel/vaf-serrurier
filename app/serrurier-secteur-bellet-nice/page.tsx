@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-secteur-bellet-nice/" },
-  title: "Serrurier Secteur Bellet Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Secteur Bellet Nice – Domaines viticoles | VAF",
   description:
-    "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : ouverture de porte, dépannage, changement de serrure. 24h/24.",
+    "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : sécurisation de maisons isolées et domaines viticoles. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le vignoble de Bellet, seule appellation d'origine contrôlée urbaine de France implantée entièrement sur une grande agglomération, remonte au IVe siècle avant J.-C., quand les Phocéens y implantèrent leurs premières vignes. Sous la Révolution, le hameau de Saint-Roman-de-Bellet, cœur de l'appellation, fut même rebaptisé « Bacchus » en hommage à cette vocation viticole ancestrale. Le phylloxéra puis les deux guerres mondiales entraînèrent une chute spectaculaire des surfaces plantées, les producteurs se tournant alors vers la culture de l'œillet de Nice, plus lucrative.",
-  "En 1941, alors que le vignoble ne comptait plus que 60 hectares morcelés, dix propriétaires convaincus obtinrent de l'INAO la création de l'appellation d'origine contrôlée Bellet, l'une des toutes premières AOC viticoles de France. Depuis les années 1990, de nouvelles générations relancent les plantations, souvent en agriculture biologique, pour privilégier qualité et typicité. Le secteur Bellet regroupe aujourd'hui les hameaux de Crémat, Saint-Roman-de-Bellet et Ventabren, sur des terrasses surplombant la rive gauche du Var entre 200 et 400 mètres d'altitude — le secteur le plus rural et le plus vallonné du territoire niçois.",
+  "Serrurier au secteur Bellet : j'interviens sur ce territoire le plus rural et le plus vallonné de Nice, avec un délai réaliste annoncé dès l'appel compte tenu des routes de collines. Les hameaux sont composés presque exclusivement de maisons individuelles, parfois isolées au milieu des vignes : je pose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage complet selon l'état du bâti.",
+  "Le vignoble de Bellet, seule appellation d'origine contrôlée urbaine de France, remonte au IVe siècle avant J.-C., quand les Phocéens y implantèrent leurs premières vignes. En 1941, dix propriétaires obtinrent de l'INAO la création de l'AOC Bellet, l'une des toutes premières de France. Le secteur regroupe aujourd'hui les hameaux de Crémat, Saint-Roman-de-Bellet et Ventabren, sur des terrasses surplombant la rive gauche du Var entre 200 et 400 mètres d'altitude.",
 ];
 
 const blocks = [

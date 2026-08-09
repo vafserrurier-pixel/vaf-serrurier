@@ -3,37 +3,37 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-des-fleurs-nice/" },
-  title: "Serrurier Quartier des Fleurs Nice – 24h/24 | VAF",
+  title: "Serrurier Quartier des Fleurs Nice – Immeubles de caractère | VAF",
   description:
-    "Serrurier au quartier des Fleurs, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier au quartier des Fleurs, Nice : dépannage et changement de serrure sur immeubles Art déco et anciens palais. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier des Fleurs s'étend entre le boulevard François Grosso à l'ouest et le boulevard Gambetta à l'est, et tire son nom de l'avenue des Fleurs, son artère principale longue d'environ 500 mètres. Le nom rappelle les propriétés d'antan et leurs jardins, progressivement remplacés par des immeubles dont certains portent encore des noms de fleurs — Mimosas, Lauriers Roses.",
-  "Le quartier a vu le jour à la fin du XIXe siècle et au début du XXe, durant l'essor de Nice comme station balnéaire réputée, avec la construction d'hôtels prestigieux et de palais éclectiques. Les rues Rossini, Verdi, Berlioz ou Gounod, à cheval avec le quartier des Musiciens voisin, sont bordées de superbes immeubles bourgeois d'inspiration Art déco, et la rue des Orangers rappelle que le secteur était autrefois planté d'agrumes.",
+  "Besoin d'un serrurier au quartier des Fleurs : j'interviens 24h/24 pour un cylindre grippé, une porte qui ferme mal ou une clé cassée, avec la même transparence sur le tarif que partout à Nice. Ce secteur résidentiel du centre, entre le boulevard François Grosso et le boulevard Gambetta, compte de nombreux immeubles bourgeois d'inspiration Art déco où je privilégie un cylindre Picard ou Vak compatible avec le mécanisme existant plutôt qu'un remplacement complet de la serrure.",
+  "Le quartier tire son nom de l'avenue des Fleurs, qui rappelle les propriétés d'antan et leurs jardins, progressivement remplacés par des immeubles élégants construits durant l'essor de Nice comme station balnéaire, fin XIXe-début XXe siècle. La rue des Orangers, qui rappelle que le secteur était autrefois planté d'agrumes, borde aujourd'hui les mêmes immeubles de caractère dont beaucoup ont conservé leurs portes et serrures d'origine.",
 ];
 
 const blocks = [
   {
-    heading: "Un patrimoine de palais et d'immeubles bourgeois",
+    heading: "Réparation des serrures d'immeubles Art déco",
     paragraphs: [
       "Les façades éclectiques et Art déco du quartier des Fleurs abritent des portes et serrures parfois anciennes, que je répare ou adapte plutôt que de remplacer systématiquement, pour préserver la cohérence esthétique de ces immeubles de caractère.",
     ],
   },
   {
-    heading: "Un secteur résidentiel du centre",
+    heading: "Dépannage courant dans les immeubles résidentiels",
     paragraphs: [
       "Les immeubles du quartier des Fleurs sont majoritairement résidentiels, avec des besoins classiques de serrurerie : cylindre grippé, porte qui ferme mal, ou volonté de renforcer une porte d'entrée vieillissante.",
     ],
   },
   {
-    heading: "Réparation avant remplacement",
+    heading: "Changement de serrure sans surcoût inutile",
     paragraphs: [
       "Je privilégie systématiquement le diagnostic et la réparation quand c'est possible, avant d'envisager un remplacement complet de la serrure, pour limiter les coûts inutiles.",
     ],
   },
   {
-    heading: "Interventions en copropriété",
+    heading: "Digicodes et parties communes en copropriété",
     paragraphs: [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-fabron-nice/" },
-  title: "Serrurier Fabron Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Fabron Nice – Villas de caractère | VAF",
   description:
-    "Serrurier à Fabron, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Fabron, Nice : sécurisation de villas héritées du patrimoine XIXe, dépannage sur résidences. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le nom de Fabron viendrait de « fabrones », qui signifie forgerons. Le secteur fut planté de vignes dès le XIIIe siècle, puis d'oliviers au XVe, avant de devenir au XVIIIe siècle un ensemble de grands domaines agricoles. Au XIXe siècle, le bas Fabron devient le quartier privilégié des grandes familles niçoises fortunées — Gastaud, Jaume, Gambart, Verani, Sasserno — qui y firent construire de magnifiques villas et folies sur de vastes propriétés, à l'époque du rattachement de Nice à la France sous Napoléon III en 1860.",
-  "En 1893, Gastaud vend sa propriété au duc Ernest II de Saxe-Cobourg-Gotha, qui y fait édifier une folie mauresque avec tour et belvédère dominant la baie des Anges — son fils était le neveu de la reine Victoria, et sa fille épousa le roi Ferdinand Ier de Roumanie. En 1978, la ville de Nice fait raser le château pour ouvrir le parc au public : le parc Carol-de-Roumanie occupe aujourd'hui ce vaste espace paysager. Fabron reste un quartier résidentiel des hauteurs ouest de Nice, entre le centre-ville et l'aéroport, mêlant villas individuelles, résidences plus récentes et quelques ensembles collectifs.",
+  "Serrure bloquée, porte qui ferme mal à Fabron : j'interviens 24h/24 sur ce quartier résidentiel des hauteurs ouest, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec le même soin pour une villa de caractère que pour une résidence plus récente à serrure multipoints standard.",
+  "Le nom de Fabron viendrait de « fabrones » (forgerons). Au XIXe siècle, le bas Fabron devient le quartier privilégié des grandes familles niçoises fortunées, qui y firent construire villas et folies, dont celle du duc Ernest II de Saxe-Cobourg-Gotha, rasée en 1978 pour ouvrir le parc Carol-de-Roumanie au public. Ce patrimoine explique la densité de villas de caractère du quartier, entre le centre-ville et l'aéroport.",
 ];
 
 const blocks = [

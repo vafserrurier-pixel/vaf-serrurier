@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carras-nice/" },
-  title: "Serrurier Carras Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Carras Nice – Bord de mer | VAF",
   description:
-    "Serrurier à Carras, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Carras, Nice : dépannage sur immeubles résidentiels en bord de mer, intervention rapide. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Carras était, depuis le milieu du XVIIIe siècle, un modeste village de pêcheurs à l'écart à l'ouest de Nice, connu sous le nom de « Sieu en Caras » — le secteur, alors surtout composé de jardins, de carrières de gravier et de pâturages, portait auparavant le nom de « Barri de Masson » vers 1767. Après la création de l'aéroport en 1966, un port-abri y fut aménagé, puis des cabines et un centre de loisirs nautiques en 1985.",
-  "La construction de la Promenade des Anglais a favorisé l'essor touristique de cet ancien village de pêcheurs, devenu aujourd'hui un quartier résidentiel et touristique prisé pour son cadre de vie en bord de mer. L'activité de pêche a progressivement décliné, et si quelques petites embarcations restent visibles, elles ne prennent plus la mer depuis une dizaine d'années. Le quartier mêle aujourd'hui bâti résidentiel, immeubles collectifs et quelques zones commerciales de proximité.",
+  "Carras, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier résidentiel en bord de mer, bien desservi et sans les contraintes d'accès des zones plus denses du centre. Je diagnostique chaque situation avant de proposer un cylindre Cisa ou Vak adapté, pour un cylindre qui accroche, une porte qui ferme mal ou une clé cassée.",
+  "Carras était, depuis le milieu du XVIIIe siècle, un modeste village de pêcheurs à l'écart à l'ouest de Nice, connu sous le nom de « Sieu en Caras ». Après la création de l'aéroport en 1966, un port-abri y fut aménagé, et la construction de la Promenade des Anglais a favorisé l'essor touristique de cet ancien village, devenu aujourd'hui un quartier résidentiel prisé pour son cadre de vie en bord de mer, où l'héritage de pêche se lit encore dans les quelques embarcations conservées le long du front de mer.",
 ];
 
 const blocks = [

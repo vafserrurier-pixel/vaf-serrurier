@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-antoine-nice/" },
-  title: "Serrurier Saint-Antoine Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Saint-Antoine Nice – Village niçois | VAF",
   description:
-    "Serrurier à Saint-Antoine, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Saint-Antoine-de-Ginestière, Nice : dépannage sur bâti villageois, sécurisation près de l'aéroport. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Saint-Antoine-de-Ginestière est un quartier perché qui ressemble davantage à un village indépendant qu'à un secteur niçois, son histoire étant liée à celle de Jeanne, reine de Naples et comtesse de Provence. Autrefois rural, il a connu une urbanisation progressive tout en conservant une ambiance villageoise, à mesure que Nice s'étendait vers l'ouest. L'église Saint-Antoine, cœur spirituel du quartier, a été construite en 1875.",
-  "Aujourd'hui, le quartier compte environ 3 000 habitants, avec un profil plutôt familial, des revenus confortables et une majorité de propriétaires, dans un cadre verdoyant à l'ambiance vivante. Le secteur mêle zones résidentielles, petites copropriétés et proximité de l'aéroport et des grands axes de circulation vers l'ouest du département.",
+  "Dépannage serrurier à Saint-Antoine : j'interviens 24h/24 sur ce quartier perché à l'ambiance villageoise préservée, entre maisons individuelles et petites résidences. Je diagnostique chaque situation avant de proposer un cylindre Vak ou Cisa adapté, avec la même méthode que pour les logements résidentiels proches des zones d'activité de l'aéroport.",
+  "Saint-Antoine-de-Ginestière ressemble davantage à un village indépendant qu'à un secteur niçois, son histoire étant liée à celle de Jeanne, reine de Naples. L'église Saint-Antoine, cœur spirituel du quartier, a été construite en 1875. Le quartier compte aujourd'hui environ 3 000 habitants, avec un profil plutôt familial et une majorité de propriétaires, dans un cadre verdoyant à l'ambiance vivante.",
 ];
 
 const blocks = [

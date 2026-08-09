@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-roch-nice/" },
-  title: "Serrurier Saint-Roch Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Saint-Roch Nice – Après effraction | VAF",
   description:
-    "Serrurier au quartier Saint-Roch, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Saint-Roch, Nice : mise en sécurité après effraction, dépannage sur immeubles populaires. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Anciennement appelé Roquebillière, le quartier Saint-Roch fut ravagé, comme toute la ville de Nice, par une terrible épidémie de peste en 1631 qui décima la moitié de la population. Avant la Première Guerre mondiale, le secteur était encore une étendue fertile vouée à l'agriculture, nourrie par des ruisseaux et des sources.",
-  "À la fin du XIXe siècle, avec le renforcement du dispositif de défense de l'État-major français dans les Alpes-Maritimes, la caserne Auvare s'installe sur des terrains vendus par la marquise de Châteauneuf en 1884. Le 6e bataillon de chasseurs alpins s'y établit en 1889, remplacé en 1920 par le 22e, originaire d'Albertville, si apprécié des Niçois qu'il inspira le surnom des « Diables Bleus » à la rue voisine. Fermée en 1995, la caserne est depuis 2003 devenue un campus universitaire. Aujourd'hui, Saint-Roch est un quartier résidentiel dense entre Riquier et la vallée du Paillon, au tissu urbain populaire et vivant.",
+  "Porte claquée, cylindre grippé à Saint-Roch : j'interviens 24h/24 dans ce quartier populaire et dense, y compris pour sécuriser rapidement une porte après une tentative d'effraction avant de proposer une solution durable. Les immeubles très sollicités par un usage quotidien intense demandent souvent un entretien régulier des cylindres : je pose généralement un cylindre Cisa ou Vak fiable, avec intervention préventive pour éviter un blocage complet.",
+  "Anciennement appelé Roquebillière, le quartier fut ravagé par l'épidémie de peste de 1631, avant de rester une étendue agricole jusqu'à la fin du XIXe siècle. La caserne Auvare s'y installe alors, occupée par le 6e puis le 22e bataillon de chasseurs alpins — les « Diables Bleus » qui ont donné leur surnom à la rue voisine — avant de fermer en 1995 et de devenir un campus universitaire en 2003, transformant une partie du bâti du quartier.",
 ];
 
 const blocks = [

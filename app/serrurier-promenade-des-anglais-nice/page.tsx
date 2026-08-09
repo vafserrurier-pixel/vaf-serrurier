@@ -3,19 +3,19 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-promenade-des-anglais-nice/" },
-  title: "Serrurier Promenade des Anglais Nice – 24h/24 | VAF",
+  title: "Serrurier Promenade des Anglais Nice – Locations saisonnières | VAF",
   description:
-    "Serrurier Promenade des Anglais, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations saisonnières, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'histoire de la Promenade des Anglais commence dans un contexte économique difficile pour Nice, au début du XIXe siècle, quand la région traverse une crise agricole qui plonge de nombreux Niçois dans la précarité. En 1822, le révérend anglican Lewis Way, face à cette détresse, lance une souscription auprès de la communauté britannique hivernant à Nice pour financer la construction d'une chaussée littorale de deux mètres de large — un projet qui donne aussi du travail à de nombreux ouvriers niçois dans le besoin.",
-  "Inaugurée en 1824, la promenade est alors baptisée par les habitants « el camin dei Inglès », la « promenade des Anglais », un nom officialisé lors du rattachement du comté de Nice à la France en 1860. Deux siècles plus tard, ce front de mer emblématique est bordé d'immeubles résidentiels de standing, de grands hôtels historiques et de résidences avec vue mer, où se côtoient bâti ancien de grand standing et constructions plus récentes.",
+  "Serrurier Promenade des Anglais : j'interviens 24h/24 sur ce front de mer emblématique, notamment pour les nombreux appartements loués à la semaine ou au mois, en cas de porte claquée entre deux locations. Sur ces résidences de standing, je pose généralement un cylindre Fichet ou Cisa haut de gamme, en prenant soin de ne pas dégrader des finitions de hall souvent haut de gamme.",
+  "L'histoire de la promenade commence en 1822, quand le révérend anglican Lewis Way lance une souscription auprès de la communauté britannique hivernant à Nice pour financer une chaussée littorale, en pleine crise agricole niçoise. Inaugurée en 1824 et baptisée « el camin dei Inglès » par les habitants, elle est aujourd'hui bordée d'immeubles résidentiels de standing et de grands hôtels historiques, où se côtoient bâti ancien de grand standing et constructions plus récentes.",
 ];
 
 const blocks = [
   {
-    heading: "Immeubles de standing en bord de mer",
+    heading: "Digicodes et halls sécurisés en bord de mer",
     paragraphs: [
       "Les résidences de la Promenade des Anglais disposent souvent d'un hall d'entrée sécurisé, avec digicode, interphone et parfois gardien. J'interviens sur ces équipements comme sur les serrures d'appartement, avec un soin particulier pour ne pas dégrader des finitions haut de gamme.",
     ],

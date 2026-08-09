@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pessicart-nice/" },
-  title: "Serrurier Pessicart Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Pessicart Nice – Villas & résidences | VAF",
   description:
-    "Serrurier à Pessicart, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Pessicart, Nice : dépannage sur villas et résidences collectives des hauteurs. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "Le nom de Pessicart apparaît pour la première fois dans une section du cadastre napoléonien de 1812, mais le quartier conserve des traces remontant à l'époque romaine. Cette colline est délimitée à l'est par la plaine alluviale de l'ancien ruisseau Mantega, et à l'ouest et au sud par le vallon des Sablières qui la sépare de la colline de Saint-Pierre-de-Féric.",
-  "Aujourd'hui, Pessicart est un quartier résidentiel huppé et calme des hauteurs nord de Nice, offrant des vues remarquables sur la ville et la Méditerranée. Le bâti y mêle villas individuelles et résidences collectives, dans un cadre verdoyant particulièrement apprécié des familles en quête de tranquillité.",
+  "Serrurier à Pessicart : j'interviens sur ce quartier résidentiel huppé des hauteurs nord, aussi bien pour une villa individuelle que pour une résidence collective. Le diagnostic reste systématique, avec le plus souvent un cylindre Picard ou Heraclès adapté au type de serrure déjà en place.",
+  "Le nom de Pessicart apparaît pour la première fois dans le cadastre napoléonien de 1812, mais le quartier conserve des traces remontant à l'époque romaine. Cette colline, délimitée par la plaine alluviale de l'ancien ruisseau Mantega et le vallon des Sablières, offre aujourd'hui des vues remarquables sur la ville et la Méditerranée, dans un cadre verdoyant particulièrement apprécié des familles.",
 ];
 
 const blocks = [

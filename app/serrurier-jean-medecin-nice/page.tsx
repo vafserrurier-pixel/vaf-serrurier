@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-jean-medecin-nice/" },
-  title: "Serrurier Jean-Médecin Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Jean-Médecin Nice – Halls & commerces | VAF",
   description:
-    "Serrurier avenue Jean-Médecin, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier avenue Jean-Médecin, Nice : digicodes et halls d'immeuble très sollicités, sécurisation de commerces et bureaux. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'avenue Jean-Médecin a porté plusieurs noms au fil de son histoire : tracée en 1864 dans la vallée du Paillon selon le plan du Consiglio d'Ornato de l'époque sarde, elle s'appelait d'abord avenue du Prince-Impérial, puis avenue de la Gare en 1870, et avenue de la Victoire après la Première Guerre mondiale. Ce n'est qu'en 1966 qu'elle prend son nom actuel, en hommage à Jean Médecin, maire de Nice de 1928 à 1943 puis de 1947 à 1965.",
-  "Cette grande artère commerçante relie aujourd'hui la gare de Nice-Ville au centre-ville et à la place Masséna. C'est l'un des secteurs les plus denses de Nice, mêlant immeubles résidentiels, commerces en rez-de-chaussée et bureaux, avec un passage important qui en fait un quartier où les besoins de sécurisation sont variés : appartements en étage, portes de hall très sollicitées, et parfois locaux professionnels à l'entrée d'immeuble.",
+  "Dépannage serrurier avenue Jean-Médecin : j'interviens 24h/24 sur cet axe très dense, où le passage important use les serrures de hall plus vite qu'ailleurs. Digicodes, gâches électriques et cylindres de porte collective font partie de mes interventions les plus fréquentes ici, avec le plus souvent un cylindre Fichet ou Cisa pour les copropriétés comme pour les commerces qui bordent l'avenue.",
+  "L'avenue a porté plusieurs noms depuis son tracé en 1864 dans la vallée du Paillon — avenue du Prince-Impérial, puis avenue de la Gare, avenue de la Victoire — avant de prendre en 1966 le nom de Jean Médecin, maire de Nice pendant près de 25 ans. Cette grande artère commerçante qui relie la gare à la place Masséna reste l'un des secteurs les plus denses de Nice, avec un bâti mêlant immeubles résidentiels, commerces et bureaux.",
 ];
 
 const blocks = [

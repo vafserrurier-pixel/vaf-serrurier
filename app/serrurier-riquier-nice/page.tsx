@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-riquier-nice/" },
-  title: "Serrurier Riquier Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Riquier Nice – Sécurité renforcée | VAF",
   description:
-    "Serrurier à Riquier, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Riquier, Nice : renforcement de porte près de la gare, dépannage sur immeubles des années 1920. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le nom de Riquier viendrait d'une riche famille niçoise propriétaire terrienne, ou d'un ancien cours d'eau appelé Richier qui aurait traversé la zone. Autrefois territoire de jardins potagers et d'arbres fruitiers dès la fin du Moyen Âge, le secteur abritait des moulins exploitant les eaux de l'ancien lit du Paillon, où s'étaient installés forgerons, tonneliers et autres artisans.",
-  "À partir du XVIIIe siècle, Riquier devient le cœur industriel de Nice : manufacture des tabacs (1861-1979), atelier de mécanique et de menuiserie, usine à gaz de 1854, laboratoires Ronchèse (1927-1974). Le boulevard de Riquier, inauguré en 1886, symbolise la transition vers un quartier plus urbain, dont la plupart des immeubles actuels datent des années 1920. Aujourd'hui organisé autour de sa gare ferroviaire et de son marché, c'est un quartier populaire et vivant, à mi-chemin entre le port et les hauteurs du secteur Est.",
+  "Serrure à changer, porte qui bloque à Riquier : j'interviens 24h/24 dans ce quartier populaire organisé autour de sa gare et de son marché, où le passage important pousse souvent les résidents à renforcer leur porte d'entrée. Sur les immeubles des années 1920 qui composent l'essentiel du bâti, je pose le plus souvent un cylindre Vak ou Fichet haute sécurité, avec possibilité de serrure multipoints ou de blindage selon l'état de la porte.",
+  "Le nom de Riquier viendrait d'une riche famille niçoise propriétaire terrienne, sur un secteur qui devient au XVIIIe siècle le cœur industriel de Nice : manufacture des tabacs, usine à gaz, ateliers mécaniques. Le boulevard de Riquier, inauguré en 1886, symbolise la transition vers le quartier urbain actuel, dont la plupart des immeubles datent des années 1920 — un héritage qui explique le profil de bâti que je rencontre le plus souvent ici.",
 ];
 
 const blocks = [

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-le-port-nice/" },
-  title: "Serrurier Le Port Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Le Port Nice – Ouvert tard le soir | VAF",
   description:
-    "Serrurier au quartier du Port, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier du Port, Nice : dépannage tardif, sécurisation après effraction dans ce secteur animé jour et nuit. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier du Port tire son origine du XVIIIe siècle, quand cette zone marécageuse était traversée par un petit cours d'eau appelé « Lympia ». En 1749, le roi de Sardaigne Charles-Emmanuel III décide d'y construire un grand port maritime pour développer le commerce méditerranéen. Pour aménager les quais et creuser les bassins, les autorités font appel à des forçats, ce qui conduit à la construction, entre 1750 et 1753, d'un bâtiment servant d'abord de prison et d'administration portuaire, avant de devenir une annexe du bagne de Villefranche-sur-Mer.",
-  "Avec l'achèvement du port, Nice transforme son visage urbain et son rôle économique : le port Lympia devient rapidement un pôle d'échanges commerciaux et culturels avec le reste de la Méditerranée. Aujourd'hui, les anciens entrepôts ont été transformés en restaurants, boutiques et galeries d'art, donnant une nouvelle vie à ces espaces chargés d'histoire, dans un quartier au bâti ancien du XIXe siècle, à la fois résidentiel et animé par les bars et restaurants du secteur.",
+  "Serrurier au quartier du Port : j'interviens 24h/24, y compris tard le soir dans ce secteur animé par ses bars et restaurants, pour un dépannage tardif ou une sécurisation après effraction. Sur les immeubles du XIXe siècle qui bordent le port Lympia, je pose le plus souvent un cylindre Picard ou Fichet compatible avec le mécanisme d'origine, plutôt qu'un remplacement standard qui dénaturerait ces façades anciennes.",
+  "Le port Lympia tire son origine du XVIIIe siècle, quand le roi de Sardaigne Charles-Emmanuel III décide en 1749 d'y construire un grand port maritime. Les autorités font alors appel à des forçats pour creuser les bassins, ce qui donne naissance à un bâtiment-prison devenu ensuite annexe du bagne de Villefranche-sur-Mer. Aujourd'hui, les anciens entrepôts transformés en restaurants et galeries d'art côtoient des immeubles résidentiels du XIXe siècle, dans un quartier à la fois historique et vivant jusque tard dans la nuit.",
 ];
 
 const blocks = [

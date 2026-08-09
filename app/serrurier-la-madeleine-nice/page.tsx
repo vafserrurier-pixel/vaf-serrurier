@@ -3,25 +3,25 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-la-madeleine-nice/" },
-  title: "Serrurier La Madeleine Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier La Madeleine Nice – Ruelles & maisons de ville | VAF",
   description:
-    "Serrurier à La Madeleine, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à La Madeleine, Nice : dépannage sur maisons de ville et immeubles anciens du vallon, changement de serrure. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Accroché entre mer et collines, La Madeleine s'étire depuis 1619 autour de l'église paroissiale Sainte-Marie-Madeleine, qui a donné son nom à la partie haute du vallon — la partie basse restant plus souvent désignée sous le nom de Magnan. Le boulevard de la Madeleine débute au carrefour Magnan et s'étire jusqu'au chemin du Génie, en passant par Ventabrun, la Costière et Saint-Pierre-de-Féric.",
-  "Le quartier compte mille habitants en 1900, dont un cinquième d'origine italienne ; en 1925, la population atteint trois mille âmes, avec l'arrivée de nouveaux immigrants grecs, russes et arméniens fuyant les révolutions et les pogroms. Cette histoire cosmopolite a forgé un quartier au caractère populaire affirmé, fier de son identité, avec ses ruelles en pente et son boulevard animé qui racontent une autre Nice, celle des familles installées là depuis des générations.",
+  "Cylindre grippé, porte à sécuriser à La Madeleine : j'interviens 24h/24 dans ce quartier populaire accroché entre mer et collines, aussi bien pour un petit immeuble ancien que pour une maison de ville sur les ruelles en pente du vallon. Je diagnostique la serrure en place avant toute intervention, avec le plus souvent un cylindre Vak ou Fichet adapté au bâti, qu'il s'agisse d'un gond fatigué ou d'une porte qui a bougé avec le temps.",
+  "La Madeleine s'étire depuis 1619 autour de l'église paroissiale Sainte-Marie-Madeleine, du carrefour Magnan jusqu'au chemin du Génie. Le quartier comptait mille habitants en 1900, dont un cinquième d'origine italienne, et trois mille en 1925 avec l'arrivée de nouveaux immigrants grecs, russes et arméniens. Cette histoire cosmopolite a forgé un bâti varié et un caractère populaire affirmé, avec des logements occupés par les mêmes familles depuis plusieurs générations.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier populaire à l'histoire cosmopolite",
+    heading: "Dépannage sur le bâti varié du vallon",
     paragraphs: [
       "L'identité forte de La Madeleine, façonnée par des vagues successives d'habitants venus d'Italie, de Grèce, de Russie ou d'Arménie, se retrouve dans un bâti varié où je m'adapte à chaque configuration : petit immeuble ancien, maison de ville ou copropriété plus récente.",
     ],
   },
   {
-    heading: "Un bâti résidentiel mixte",
+    heading: "Diagnostic sur immeubles collectifs et maisons individuelles",
     paragraphs: [
       "Le quartier de La Madeleine comprend des immeubles collectifs et quelques maisons individuelles, souvent situées sur des rues en pente typiques du vallon. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ou d'une porte de maison.",
     ],

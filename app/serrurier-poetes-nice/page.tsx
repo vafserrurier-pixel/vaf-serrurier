@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-poetes-nice/" },
-  title: "Serrurier Quartier des Poètes Nice – 24h/24 | VAF",
+  title: "Serrurier Quartier des Poètes Nice – Halls d'immeuble | VAF",
   description:
-    "Serrurier au quartier des Poètes, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+    "Serrurier au quartier des Poètes, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier des Poètes trouve ses racines dans les années 1920, sur l'ancienne propriété des Dames de l'Assomption — le cadastre de 1873 y mentionne déjà un « établissement horticole » tenu par ces religieuses. Situé entre Cimiez à l'ouest et Saint-Maurice à l'est, le lotissement rend hommage à la littérature française : ses rues portent le nom de grands écrivains et poètes, Alfred de Musset, George Sand, Charles Baudelaire, André Chénier ou Edmond Rostand.",
-  "Le parc Chambrun, ancien domaine du comte Aldebert de Chambrun, en constitue le centre historique. Aujourd'hui, le quartier des Poètes est un secteur résidentiel calme composé principalement d'immeubles collectifs, sur les hauteurs de Nice à proximité du Brancolar.",
+  "Cylindre grippé, porte à sécuriser au quartier des Poètes : j'interviens 24h/24 sur ce secteur résidentiel calme, où les portes palières et les cylindres de hall d'entrée sont soumis à un usage intensif. Je pose généralement un cylindre Heraclès ou Picard adapté au bâti de ce lotissement, qu'il s'agisse d'une réparation ou d'un remplacement après une tentative d'effraction.",
+  "Le quartier trouve ses racines dans les années 1920, sur l'ancienne propriété horticole des Dames de l'Assomption. Situé entre Cimiez et Saint-Maurice, il rend hommage à la littérature française : ses rues portent le nom d'écrivains, Alfred de Musset, George Sand, Baudelaire, Edmond Rostand. Le parc Chambrun, ancien domaine du comte Aldebert de Chambrun, en constitue le centre historique, aujourd'hui entouré d'immeubles collectifs sur les hauteurs de Nice.",
 ];
 
 const blocks = [

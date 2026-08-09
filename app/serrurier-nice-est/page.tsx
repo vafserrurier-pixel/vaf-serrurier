@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "L'est de Nice s'organise autour du port Lympia, construit à partir de 1749 sur décision du roi de Sardaigne Charles-Emmanuel III pour développer le commerce méditerranéen — ses anciens entrepôts abritent aujourd'hui restaurants et galeries d'art. Juste au nord, Riquier fut au XIXe siècle le cœur industriel de Nice, avec sa manufacture des tabacs et son usine à gaz, tandis que Saint-Roch conserve la mémoire de la caserne Auvare et de ses « Diables Bleus », fermée en 1995 et reconvertie en campus universitaire.",
-  "Sur les hauteurs, le fort du Mont-Alban, édifié entre 1557 et 1560 pour verrouiller la route entre Nice et Villefranche-sur-Mer, domine un secteur résidentiel huppé qui s'étend jusqu'au Mont Boron et ses villas avec vue mer. Plus au nord, l'Ariane a connu sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles aujourd'hui engagés dans un programme de renouvellement urbain de grande ampleur.",
+  "Dépannage serrurier dans l'est de Nice : j'interviens 24h/24 sur ce secteur très contrasté, du port historique aux villas des hauteurs, avec généralement un cylindre Picard ou Cisa adapté à chaque configuration. L'est s'organise autour du port Lympia, construit à partir de 1749 pour développer le commerce méditerranéen — ses anciens entrepôts abritent aujourd'hui restaurants et galeries d'art. Juste au nord, Riquier fut au XIXe siècle le cœur industriel de Nice, tandis que Saint-Roch conserve la mémoire de la caserne Auvare et de ses « Diables Bleus ».",
+  "Sur les hauteurs, le fort du Mont-Alban, édifié entre 1557 et 1560, domine un secteur résidentiel huppé qui s'étend jusqu'au Mont Boron et ses villas avec vue mer. Plus au nord, l'Ariane a connu sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles aujourd'hui engagés dans un programme de renouvellement urbain de grande ampleur.",
   "C'est un secteur très contrasté — entre bâti historique du port, quartiers populaires denses et hauteurs résidentielles de standing — où j'interviens avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, prix annoncé avant intervention, et déplacement organisé selon l'urgence de la situation.",
 ];
 
 const blocks = [
   {
-    heading: "Du port historique aux hauteurs fortifiées",
+    heading: "Réparation de serrures anciennes du port aux hauteurs fortifiées",
     paragraphs: [
       "Entre les anciens entrepôts du port Lympia reconvertis en commerces, les immeubles industriels du XIXe siècle de Riquier et les villas du Mont Boron proches du fort du Mont-Alban, l'est de Nice présente une grande diversité de bâti. Je diagnostique chaque situation en tenant compte de l'époque et du style de la porte concernée.",
     ],

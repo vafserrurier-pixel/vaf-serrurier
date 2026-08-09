@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-brancolar-nice/" },
-  title: "Serrurier Brancolar Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Brancolar Nice – Nouveaux programmes | VAF",
   description:
-    "Serrurier au Brancolar, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au Brancolar, Nice : personnalisation de cylindre sur logements neufs, dépannage sur grands ensembles. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "L'avenue de Brancolar, qui donne son nom au quartier, doit son nom à une ancienne famille noble niçoise et a été ouverte au XIXe siècle, à l'époque de l'expansion urbaine de Nice vers ses hauteurs nord, dans le prolongement du secteur de Cimiez. Le quartier a longtemps été marqué par de grands ensembles d'habitat collectif construits au XXe siècle.",
-  "Depuis le départ d'Enedis de son ancien site du 125 avenue de Brancolar en 2021, une partie du secteur est en pleine transformation : le foncier a été racheté par le groupe Covivio pour y développer un programme résidentiel ouvert sur un parc urbain, avec aires de jeux et espaces de détente pour les habitants. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction — deux réalités très différentes pour la serrurerie.",
+  "Serrure à changer, porte qui bloque au Brancolar : j'interviens 24h/24 sur ce quartier en pleine transformation, aussi bien sur les nouveaux programmes résidentiels que sur les grands ensembles plus anciens. Sur les logements neufs de l'ancien site Enedis, j'interviens souvent pour la personnalisation d'un accès : ajout d'un cylindre Cisa plus résistant ou ajustement après une pose un peu rapide en sortie de chantier.",
+  "L'avenue de Brancolar, qui donne son nom au quartier, a été ouverte au XIXe siècle dans le prolongement de Cimiez. Depuis le départ d'Enedis de son ancien site en 2021, le foncier a été racheté par Covivio pour développer un programme résidentiel ouvert sur un parc urbain. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction — deux réalités très différentes pour la serrurerie que je traite au quotidien.",
 ];
 
 const blocks = [

@@ -104,13 +104,9 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
-        <h2 className="font-heading text-2xl font-bold text-navy -mb-2">
-          Serrurier à {title.replace("Serrurier à ", "")} : dépannage, ouverture de porte,
-          changement de serrure
-        </h2>
         {blocks.map((block) => (
           <div key={block.heading}>
-            <h3 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h3>
+            <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
             {block.paragraphs.map((paragraph, index) => (
               <p key={index} className="text-slate leading-relaxed mb-2">
                 {paragraph}

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-pancrace-nice/" },
-  title: "Serrurier Saint-Pancrace Nice – 24h/24 | VAF",
+  title: "Serrurier Saint-Pancrace Nice – Villas rurales | VAF",
   description:
-    "Serrurier à Saint-Pancrace, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à Saint-Pancrace, Nice : sécurisation de villas sur secteur rural préservé, dépannage. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Saint-Pancrace était autrefois un territoire de la campagne niçoise, où vignes et cultures méditerranéennes se mêlaient sur cette colline située entre le vallon de Magnan et le vallon de Saint-Pancrace, au nord de la ville entre Saint-Roman et Gairaut. La chapelle Saint-Pancrace, datant du XVIIe siècle et dédiée à un martyr chrétien, témoigne encore de cette histoire et reste le cœur spirituel du quartier — une confrérie du même nom, déjà autorisée par le diocèse à recevoir des legs et aumônes, est attestée dès 1724.",
-  "La culture maraîchère et l'horticulture ont longtemps fait la réputation de ce secteur avant que l'urbanisation ne le transforme. Aujourd'hui, Saint-Pancrace est un quartier résidentiel des hauteurs nord de Nice, avec un bâti mêlant villas individuelles et petites résidences, où les rues étroites et pittoresques continuent d'évoquer ce passé rural.",
+  "Clé cassée, porte claquée à Saint-Pancrace : j'interviens sur ce secteur résidentiel des hauteurs nord de Nice, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Picard adapté, qu'il s'agisse d'une réparation ou d'un renforcement complet du bâti rural préservé.",
+  "Saint-Pancrace était autrefois un territoire de la campagne niçoise, où vignes et cultures méditerranéennes se mêlaient sur cette colline entre Saint-Roman et Gairaut. La chapelle Saint-Pancrace du XVIIe siècle, cœur spirituel du quartier, témoigne de cette histoire rurale — une confrérie du même nom est attestée dès 1724. Les rues étroites et pittoresques du secteur continuent d'évoquer ce passé, aujourd'hui mêlé à un bâti résidentiel de villas et petites résidences.",
 ];
 
 const blocks = [

@@ -3,14 +3,14 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-arenas-nice/" },
-  title: "Serrurier Arénas Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Arénas Nice – Bureaux & entreprises | VAF",
   description:
-    "Serrurier à l'Arénas, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier à l'Arénas, Nice : sécurisation de bureaux et locaux professionnels, accès contrôlés. Devis annoncé, intervention 24h/24.",
 };
 
 const intro = [
-  "Le nom de l'Arénas viendrait d'un ancien lieu de corridas — « arenas » signifiant arènes en espagnol. Le quartier a connu une transformation impressionnante au fil des décennies, passant d'une zone industrielle à un pôle d'activités économiques et culturelles : dans les années 1960, l'ouverture de l'aéroport Nice-Côte d'Azur a attiré de nombreuses entreprises sur le secteur.",
-  "Créé en 1989, l'Arénas est devenu le premier centre d'affaires international des Alpes-Maritimes, avec environ 350 000 m² de bureaux installés dans des immeubles vitrés au nord du quartier. Idéalement situé face à l'aéroport et à proximité de la gare multimodale TGV de Saint-Augustin, l'Arénas reste aujourd'hui le premier quartier d'affaires de la Côte d'Azur, avec quelques ensembles résidentiels à proximité de ses zones de bureaux.",
+  "Besoin d'un serrurier à l'Arénas : j'interviens 24h/24 sur ce premier quartier d'affaires de la Côte d'Azur, avec le même professionnalisme pour un bureau que pour un logement. Les immeubles de bureaux ont des exigences de sécurité spécifiques — accès contrôlés, cylindres professionnels Cisa ou Fichet — que je diagnostique avant toute intervention, en complément des résidences du secteur.",
+  "Le nom de l'Arénas viendrait d'un ancien lieu de corridas — « arenas » signifiant arènes en espagnol. Le quartier a connu une transformation impressionnante, passant d'une zone industrielle à un pôle d'activités économiques après l'ouverture de l'aéroport Nice-Côte d'Azur dans les années 1960. Créé en 1989, il est devenu le premier centre d'affaires international des Alpes-Maritimes, avec environ 350 000 m² de bureaux, à proximité de la gare TGV de Saint-Augustin.",
 ];
 
 const blocks = [

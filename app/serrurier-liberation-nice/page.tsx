@@ -3,31 +3,31 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-liberation-nice/" },
-  title: "Serrurier Libération Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Libération Nice – Dépannage près du marché | VAF",
   description:
-    "Serrurier au quartier Libération, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au quartier Libération, Nice : dépannage rapide près du marché couvert et de la Gare du Sud, changement de serrure. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier de la Libération s'est développé au XIXe siècle autour de l'avenue Malausséna, sur des terrains encore agricoles à l'époque. L'arrivée de la Gare du Sud en 1892 a donné une nouvelle énergie au secteur, entraînant l'urbanisation le long du boulevard Joseph-Garnier et de l'avenue Alfred-Borriglione. La place du Général-de-Gaulle porte la mémoire des résistants tombés lors des combats contre l'occupant allemand le 28 août 1944.",
-  "Aujourd'hui, le quartier s'organise toujours autour de son marché couvert, l'un des plus animés de Nice, qui s'étend de la place du Général-de-Gaulle jusqu'à l'avenue Malausséna, la rue Clément-Roassal, la rue Joseph-Garnier et la rue Veillon. L'arrivée du tramway et la rénovation de la Gare du Sud ont dynamisé ce secteur populaire et vivant, au bâti dense d'immeubles du début et du milieu du XXe siècle.",
+  "Porte claquée, cylindre grippé au quartier Libération : j'interviens 24h/24 dans ce secteur populaire et vivant, où le passage intense autour du marché couvert use les cylindres de porte plus vite que la moyenne. Sur les immeubles du début et du milieu du XXe siècle qui bordent l'avenue Malausséna, je pose le plus souvent un cylindre Vak ou Picard adapté au mécanisme déjà en place, pour un dépannage rapide sans attendre l'usure complète de la serrure.",
+  "Le quartier s'est développé au XIXe siècle autour de l'avenue Malausséna, dynamisé par l'arrivée de la Gare du Sud en 1892, puis marqué par la mémoire des résistants tombés place du Général-de-Gaulle le 28 août 1944. L'arrivée du tramway et la rénovation récente de la Gare du Sud ont encore accéléré le renouvellement du bâti, un mélange d'immeubles anciens et de constructions plus récentes qui demande une méthode de diagnostic adaptée à chaque cas.",
 ];
 
 const blocks = [
   {
-    heading: "Un bâti dense, des serrures à surveiller",
+    heading: "Dépannage préventif sur les cylindres très sollicités",
     paragraphs: [
       "Dans les immeubles de la Libération, les cylindres de porte d'entrée et les serrures de hall subissent un usage intensif lié à la vie de quartier. Un entretien ou un remplacement préventif évite souvent un blocage complet en pleine journée d'activité.",
     ],
   },
   {
-    heading: "Autour du marché et de la Gare du Sud",
+    heading: "Serrurerie de commerce près du marché et de la Gare du Sud",
     paragraphs: [
       "Le secteur mêle logements et commerces de proximité, entre le marché couvert et la Gare du Sud rénovée. Pour la partie serrurerie de ces locaux — porte d'entrée, rideau métallique excepté —, j'applique la même méthode de diagnostic et de devis annoncé avant intervention.",
     ],
   },
   {
-    heading: "Un quartier dynamisé par le tramway",
+    heading: "Serrures neuves et anciennes, un quartier en renouvellement",
     paragraphs: [
       "La revitalisation récente du secteur, portée par l'arrivée du tramway et l'ouverture de nouveaux commerces, s'accompagne d'un renouvellement progressif du bâti. Je m'adapte aussi bien aux vieux immeubles qu'aux constructions plus récentes.",
     ],

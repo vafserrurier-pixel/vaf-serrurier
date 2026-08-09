@@ -10,20 +10,20 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le centre de Nice concentre l'essentiel de l'histoire de la ville, de l'Antiquité romaine à la Belle Époque. À Cimiez, les arènes du Ier siècle et le monastère fondé au IXe siècle témoignent de l'ancienne cité de Cemenelum ; dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861 ; et la Promenade des Anglais, financée dès 1822 par la communauté britannique hivernante, a donné son nom à toute une manière de vivre la ville face à la mer.",
-  "Entre ces deux extrêmes, le centre s'est construit couche après couche : la place Garibaldi, ancienne place royale sarde de 1782, l'avenue Jean-Médecin tracée en 1864 dans la vallée du Paillon, ou le Carré d'Or et son Hôtel des Postes de 1888, place Wilson. C'est un secteur dense, où se côtoient immeubles Belle Époque du Carré d'Or et des Musiciens, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
+  "Besoin d'un serrurier dans le centre de Nice : j'interviens 24h/24 sur l'ensemble de ce secteur dense, du Vieux-Nice à Cimiez en passant par le Carré d'Or, avec généralement un cylindre Fichet ou Picard compatible sur les portes anciennes plutôt qu'un remplacement qui dénaturerait ces façades soignées. Le centre concentre la plus grande variété de bâti ancien de la ville, de l'Antiquité romaine à la Belle Époque : à Cimiez, les arènes du Ier siècle témoignent de l'ancienne cité de Cemenelum ; dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861.",
+  "Entre ces deux extrêmes, le centre s'est construit couche après couche : la place Garibaldi, ancienne place royale sarde de 1782, l'avenue Jean-Médecin tracée en 1864, ou le Carré d'Or et son Hôtel des Postes de 1888, place Wilson. C'est un secteur dense, où se côtoient immeubles Belle Époque, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
   "J'interviens dans l'ensemble de ce secteur avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, prix annoncé avant intervention, et un déplacement généralement rapide compte tenu de la position centrale de ces quartiers par rapport à mon point de départ au 2 Rue Antoine Gautier.",
 ];
 
 const blocks = [
   {
-    heading: "Un patrimoine architectural très dense",
+    heading: "Réparation de serrures anciennes dans tout le centre",
     paragraphs: [
       "Du Vieux-Nice aux immeubles bourgeois du Carré d'Or et de Cimiez, le centre concentre la plus grande variété de bâti ancien de toute la ville : portes et serrures d'époque, halls de copropriété classés ou très soignés, façades qui imposent une approche respectueuse plutôt qu'un remplacement standard. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible quand c'est possible.",
     ],
   },
   {
-    heading: "Un secteur qui ne dort jamais vraiment",
+    heading: "Dépannage nocturne dans un secteur qui ne dort jamais",
     paragraphs: [
       "Entre les bars du quartier du port voisin, l'animation de la place Garibaldi et du cours Saleya, et les grands axes commerçants de Jean-Médecin, le centre de Nice reste actif tard le soir. J'y interviens régulièrement pour des urgences nocturnes — porte claquée, clé perdue, sécurisation après effraction — avec la majoration de nuit annoncée avant intervention.",
     ],

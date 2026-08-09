@@ -3,25 +3,25 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-parc-imperial-nice/" },
-  title: "Serrurier Parc Impérial Nice – 24h/24 | VAF",
+  title: "Serrurier Parc Impérial Nice – Copropriétés de standing | VAF",
   description:
-    "Serrurier au Parc Impérial, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier au Parc Impérial, Nice : dépannage et sécurisation sur immeubles Belle Époque et copropriétés de standing. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le quartier du Parc Impérial doit son nom à l'Hôtel Impérial, construit en 1902 pour accueillir la communauté russe qui passait ses hivers sur la Côte d'Azur. L'édifice, bâti sur les terres de l'ancien domaine Bermond à la demande du propriétaire J.-B. Gay et confié à l'architecte polonais Adam Dettloff, impressionnait par ses dimensions : 109 mètres de long et 37 mètres de haut, avec une rotonde de 43 mètres dédiée à la famille impériale.",
-  "Réquisitionné comme hôpital pendant la Première Guerre mondiale, l'hôtel périclite ensuite et cesse son activité en 1920. Racheté par la mairie de Nice en 1923, il devient le lycée Alexandre-Mari, inauguré en 1931 et renommé lycée du Parc-Impérial en 1948. Le quartier conserve aujourd'hui de nombreuses villas, des immeubles Belle Époque, le Nice Lawn Tennis Club et la cathédrale orthodoxe russe inaugurée en 1912, dans un cadre verdoyant hérité de ce passé aristocratique.",
+  "Serrure à changer, porte qui bloque au Parc Impérial : j'interviens 24h/24 sur ce quartier résidentiel de standing, entre le centre-ville et Cimiez. Les immeubles de standing du secteur ont des serrures parfois anciennes qui demandent un diagnostic soigné : je pose le plus souvent un cylindre Fichet ou Picard compatible avec le mécanisme existant, en respectant les exigences esthétiques de ces copropriétés bien entretenues.",
+  "Le quartier doit son nom à l'Hôtel Impérial, construit en 1902 pour la communauté russe hivernant sur la Côte d'Azur, un édifice de 109 mètres de long réquisitionné comme hôpital pendant la Première Guerre mondiale avant de devenir le lycée du Parc-Impérial en 1948. Le quartier conserve aujourd'hui de nombreuses villas, des immeubles Belle Époque et la cathédrale orthodoxe russe de 1912, un patrimoine qui explique la présence de portes et serrures d'origine à traiter avec soin.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier résidentiel entre centre et Cimiez",
+    heading: "Dépannage sur les immeubles de standing",
     paragraphs: [
       "Le Parc Impérial partage certaines caractéristiques avec Cimiez tout proche : des immeubles de standing avec des serrures parfois anciennes, qui demandent un diagnostic soigné avant toute intervention.",
     ],
   },
   {
-    heading: "Un héritage architectural russe",
+    heading: "Réparation de serrures sur le patrimoine russe",
     paragraphs: [
       "Entre la cathédrale orthodoxe et les villas construites pour la clientèle russe du début du XXe siècle, le quartier conserve un cachet particulier. Je privilégie une approche respectueuse de ce patrimoine pour toute intervention sur une porte ou une serrure d'origine.",
     ],

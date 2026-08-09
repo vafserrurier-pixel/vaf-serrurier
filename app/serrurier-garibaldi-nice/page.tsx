@@ -3,31 +3,31 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-garibaldi-nice/" },
-  title: "Serrurier Garibaldi Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Garibaldi Nice – Ouverture de porte rapide | VAF",
   description:
-    "Serrurier au quartier Garibaldi, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier place Garibaldi, Nice : ouverture de porte, dépannage sur immeubles anciens entre Vieux-Nice et le port. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "La place Garibaldi, l'une des plus anciennes de Nice, a été construite entre 1782 et 1784 sous le nom de Piazza Vittorio, à l'époque où la ville appartenait encore au royaume de Sardaigne. Conçue par l'architecte Antonio Spinelli sur le modèle des grandes places turinoises, elle fut d'abord la place royale de la ville, marquant l'aboutissement de la route de Turin. Elle prend son nom actuel en 1870, en hommage à Giuseppe Garibaldi, homme politique né à Nice, dont la grande statue est érigée en 1891.",
-  "Longtemps exclue des circuits touristiques car située dans les quartiers populaires, la place a longtemps été dominée par la circulation automobile et le stationnement, avant d'être rendue aux piétons dans les années 2000 grâce à l'arrivée du tramway. Le quartier Garibaldi, à la frontière du Vieux-Nice et du port, conserve un bâti ancien et homogène, avec des immeubles du XVIIIe et XIXe siècle typiques du centre historique niçois, aujourd'hui animé par de nombreux musées, théâtres et terrasses de restaurant.",
+  "Serrurier place Garibaldi : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, dans ce quartier de passage entre le Vieux-Nice et le port. Les immeubles anciens autour de la place ont souvent des portes et des serrures d'époque, sur lesquelles je pose généralement un cylindre Picard ou Cisa compatible plutôt qu'un remplacement qui dénaturerait ces façades historiques.",
+  "La place Garibaldi, l'une des plus anciennes de Nice, a été construite entre 1782 et 1784 sous le nom de Piazza Vittorio, à l'époque du royaume de Sardaigne, avant de prendre son nom actuel en 1870 en hommage à Giuseppe Garibaldi. Rendue aux piétons dans les années 2000 avec l'arrivée du tramway, elle est aujourd'hui animée par de nombreux musées, théâtres et terrasses de restaurant, ce qui explique le passage important sur les commerces et halls d'immeuble alentour.",
 ];
 
 const blocks = [
   {
-    heading: "Un bâti ancien et homogène",
+    heading: "Réparation de serrures sur les immeubles anciens",
     paragraphs: [
       "Autour de la place Garibaldi, les immeubles anciens ont souvent des portes et des serrures d'époque. Je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait ces portes historiques.",
     ],
   },
   {
-    heading: "Un secteur entre Vieux-Nice et port",
+    heading: "Dépannage rapide entre Vieux-Nice et port",
     paragraphs: [
       "La position de Garibaldi, entre le Vieux-Nice et le port, en fait un quartier de passage où les besoins de sécurisation restent classiques : porte claquée, cylindre grippé, clé cassée.",
     ],
   },
   {
-    heading: "Un quartier vivant, entre musées et restaurants",
+    heading: "Serrurerie de commerce entre musées et restaurants",
     paragraphs: [
       "Avec ses nombreux musées, théâtres et terrasses de restaurant, la place Garibaldi attire un passage important qui use aussi les serrures des commerces et des halls d'immeuble alentour. J'y interviens régulièrement pour ce type de sollicitation.",
     ],

@@ -3,31 +3,31 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-baumettes-nice/" },
-  title: "Serrurier Baumettes Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Baumettes Nice – Villas & immeubles anciens | VAF",
   description:
-    "Serrurier aux Baumettes, Nice : ouverture de porte, dépannage, changement de serrure. Devis annoncé avant intervention, disponible 24h/24.",
+    "Serrurier aux Baumettes, Nice : sécurisation de villas, réparation de serrures anciennes près du musée Jules-Chéret. Devis annoncé, 24h/24.",
 };
 
 const intro = [
-  "Le nom des Baumettes vient du niçois « bauma » (grotte), avec le suffixe diminutif « eta » — littéralement les « petites grottes ». Dès le XVIIe siècle, ce quartier rural sur une colline discrète à l'ouest de Nice, longtemps resté à l'écart de la vieille ville, était surnommé par les Niçois le « petit Paris » : un lieu de villégiature apprécié, qui a connu un moment de gloire internationale en 1538 quand la plaine accueillit la célèbre rencontre entre le pape Paul III et le roi François Ier lors du Congrès de Nice.",
-  "Le joyau culturel du quartier reste le musée des Beaux-Arts Jules-Chéret : en 1878, la princesse ukrainienne Elisabeth Kotschoubey, séduite par la beauté du site, y fait construire un vaste domaine inspiré des palais néoclassiques de Saint-Pétersbourg. Ses salons Belle Époque abritent aujourd'hui des collections allant du XVIe au XXe siècle, avec des œuvres de Rodin et des toiles de Brueghel ou de Bonnard.",
+  "Serrure bloquée, porte qui ferme mal aux Baumettes : j'interviens 24h/24 sur ce secteur résidentiel de caractère, aussi bien pour une villa que pour un appartement en immeuble ancien. Beaucoup de propriétés ici datent du passé de lieu de villégiature du quartier, avec des serrures principales qu'il faut souvent adapter plutôt que remplacer d'office — je pose généralement un cylindre Heraclès ou Picard compatible avec le mécanisme existant.",
+  "Le nom des Baumettes vient du niçois « bauma » (grotte). Ce quartier rural resté longtemps à l'écart de la vieille ville était surnommé le « petit Paris » par les Niçois, et son joyau reste le musée des Beaux-Arts Jules-Chéret, installé depuis 1878 dans le vaste domaine néoclassique de la princesse Elisabeth Kotschoubey. Ce passé de villégiature explique la présence de nombreuses villas et propriétés de caractère où mon expertise sur les serrures anciennes sert le plus souvent.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier résidentiel de caractère",
+    heading: "Sécurisation des villas et propriétés de caractère",
     paragraphs: [
       "Le secteur des Baumettes comprend des immeubles anciens et des villas héritées de son passé de lieu de villégiature, dont les portes et serrures méritent une attention particulière. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
     ],
   },
   {
-    heading: "Autour du musée Jules-Chéret",
+    heading: "Dépannage près du musée Jules-Chéret",
     paragraphs: [
       "Le secteur proche du musée des Beaux-Arts conserve un cadre résidentiel calme et arboré, avec des propriétés parfois anciennes où je privilégie systématiquement une solution respectueuse du bâti d'origine.",
     ],
   },
   {
-    heading: "Sécurisation des logements",
+    heading: "Changement de serrure après perte de clés",
     paragraphs: [
       "Après une perte de clés ou pour anticiper une usure avancée, je propose des solutions adaptées : remplacement de cylindre, serrure multipoints, ou renforcement complet selon l'état de votre porte.",
     ],
