@@ -9,28 +9,33 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Brancolar est un quartier résidentiel des hauteurs de Nice, au nord de la ville, composé pour l'essentiel de grands ensembles d'habitat collectif construits dans la seconde moitié du XXe siècle. Une partie du quartier a été rénovée ces dernières années dans le cadre d'un programme de renouvellement urbain, ce qui cohabite avec des immeubles plus anciens dont les serrures et les portes palières datent parfois de plusieurs décennies.",
-  "J'y interviens régulièrement, aussi bien pour des particuliers en appartement que pour des halls d'immeuble en copropriété. Le relief du secteur ne pose pas de difficulté particulière pour se déplacer rapidement depuis mon point de départ.",
+  "L'avenue de Brancolar, qui donne son nom au quartier, doit son nom à une ancienne famille noble niçoise et a été ouverte au XIXe siècle, à l'époque de l'expansion urbaine de Nice vers ses hauteurs nord, dans le prolongement du secteur de Cimiez. Le quartier a longtemps été marqué par de grands ensembles d'habitat collectif construits au XXe siècle.",
+  "Depuis le départ d'Enedis de son ancien site du 125 avenue de Brancolar en 2021, une partie du secteur est en pleine transformation : le foncier a été racheté par le groupe Covivio pour y développer un programme résidentiel ouvert sur un parc urbain, avec aires de jeux et espaces de détente pour les habitants. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction — deux réalités très différentes pour la serrurerie.",
 ];
 
 const blocks = [
   {
-    heading: "Le bâti du Brancolar, ce que ça change pour votre serrurerie",
+    heading: "Un quartier en pleine transformation urbaine",
     paragraphs: [
-      "Dans les immeubles collectifs comme ceux du Brancolar, les pannes les plus fréquentes concernent les portes palières un peu voilées avec le temps, les cylindres de hall d'entrée très sollicités par le passage, et les gâches électriques des digicodes qui finissent par s'user. Je diagnostique ces éléments avant de proposer une réparation ou un remplacement, en tenant compte du fait qu'une porte d'immeuble mal réglée use sa serrure plus vite que la normale.",
-      "Pour les logements plus anciens du quartier, il arrive que le modèle de serrure en place ne soit plus fabriqué : je propose alors un remplacement de cylindre compatible plutôt qu'un changement de serrure complète, quand c'est possible.",
+      "La reconversion de l'ancien site Enedis par Covivio change progressivement le visage du Brancolar, avec l'arrivée de nouveaux programmes résidentiels aux normes de sécurité récentes. Pour ces logements neufs, les demandes portent surtout sur la personnalisation des accès : ajout d'un cylindre plus résistant, remplacement d'une serrure d'origine standard par un modèle mieux certifié, ou petits ajustements après une pose parfois un peu rapide en sortie de chantier.",
+    ],
+  },
+  {
+    heading: "Le bâti historique du Brancolar",
+    paragraphs: [
+      "À côté de cette transformation, le quartier conserve ses grands ensembles d'habitat collectif plus anciens, où les portes palières et les cylindres de hall d'entrée sont soumis à un usage intensif depuis des décennies. Je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement — beaucoup de pannes viennent d'un mécanisme simplement usé plutôt que d'une pièce à changer entièrement.",
     ],
   },
   {
     heading: "Sécuriser un appartement au Brancolar",
     paragraphs: [
-      "Que ce soit après une perte de clés, une tentative d'effraction ou simplement pour renforcer une porte d'entrée vieillissante, je peux intervenir sur le remplacement de la serrure, l'installation d'un cylindre plus résistant, ou le blindage de la porte si le cadre le permet.",
+      "Que ce soit après une perte de clés, une tentative d'effraction ou pour anticiper l'usure d'une serrure ancienne, je peux intervenir sur le remplacement complet de la serrure, l'installation d'un cylindre plus résistant, ou le blindage de la porte si le cadre et le bâti le permettent.",
     ],
   },
   {
-    heading: "Interventions en copropriété",
+    heading: "Interventions en copropriété et halls d'immeuble",
     paragraphs: [
-      "Pour les halls d'immeuble et parties communes, je peux intervenir sur demande d'un syndic ou d'un résident mandaté : réglage de porte, remplacement de gâche électrique, ou reprise d'un digicode défectueux. Le devis est annoncé avant intervention, comme pour toute prestation.",
+      "Pour les parties communes — halls d'entrée, digicodes, gâches électriques — j'interviens sur demande d'un syndic ou d'un résident mandaté. C'est une configuration fréquente dans ce quartier de grands ensembles, où une porte de hall mal réglée use sa serrure bien plus vite qu'une porte d'appartement classique.",
     ],
   },
 ];
@@ -39,12 +44,17 @@ const faq = [
   {
     question: "Intervenez-vous rapidement au Brancolar en cas d'urgence ?",
     answer:
-      "Oui, je me déplace 24h/24 et 7j/7 sur le Brancolar comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
+      "Oui, je me déplace 24h/24 et 7j/7 au Brancolar comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
   },
   {
-    question: "Pouvez-vous intervenir sur la porte d'entrée d'un immeuble au Brancolar ?",
+    question: "Intervenez-vous sur les nouveaux programmes résidentiels du quartier ?",
     answer:
-      "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes, à la demande d'un résident ou d'un syndic.",
+      "Oui, avec l'arrivée de nouveaux logements sur l'ancien site Enedis, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité si besoin.",
+  },
+  {
+    question: "Pouvez-vous intervenir sur la porte d'entrée d'un immeuble ancien au Brancolar ?",
+    answer:
+      "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes des grands ensembles du quartier.",
   },
   {
     question: "Les tarifs sont-ils différents au Brancolar par rapport au centre de Nice ?",
@@ -54,12 +64,17 @@ const faq = [
   {
     question: "Que faire si ma clé casse dans une serrure ancienne au Brancolar ?",
     answer:
-      "J'extrais le morceau resté dans le cylindre et je vérifie s'il est encore compatible avec un remplacement simple, avant d'envisager un changement complet si le modèle est trop ancien.",
+      "J'extrais le morceau resté dans le cylindre et je vérifie s'il est encore compatible avec un remplacement simple, avant d'envisager un changement complet si le modèle est trop ancien pour trouver une pièce correspondante.",
+  },
+  {
+    question: "Intervenez-vous après une effraction au Brancolar ?",
+    answer:
+      "Oui, je sécurise rapidement la porte concernée 24h/24, puis je propose une solution durable une fois le diagnostic complet effectué sur place.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir au Brancolar ?",
     answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux — urgence ou non.",
   },
 ];
 

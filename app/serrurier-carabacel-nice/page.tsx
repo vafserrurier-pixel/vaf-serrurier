@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Carabacel est un quartier résidentiel sur les hauteurs proches du centre-ville, entre la gare et Cimiez. Il mêle immeubles anciens, villas et quelques résidences plus récentes, sur un terrain en pente qui lui donne un caractère plus calme.",
-  "J'y interviens pour des configurations variées : appartements en immeuble ancien, villas individuelles, et parties communes de petites copropriétés.",
+  "Carabacel, dont le nom viendrait du celte « car » (colline, mont, rocher), désigne un quartier situé juste au nord de la Vieille-Ville, au-delà du Paillon — ce torrent aujourd'hui recouvert par des jardins et des édifices publics dans sa partie centrale. Au Moyen Âge, le secteur portait le nom de faubourg Saint-Jean-Baptiste, et s'est développé très tôt autour du pont Saint-Antoine, devenu le « Pont Vieux » après la construction du pont neuf de la place Masséna en 1824.",
+  "Après le minage des remparts et de la citadelle en 1708, les couvents et belles demeures s'installent progressivement sur le secteur au XVIIIe siècle. Le plan régulateur du Consiglio d'Ornato met fin, dans les années 1850, à l'urbanisation anarchique du faubourg, et le boulevard Carabacel, planté de deux rangées d'arbres symétriques, est achevé fin 1865-début 1866. Aujourd'hui, ce quartier sur les hauteurs proches du centre-ville, entre la gare et Cimiez, mêle immeubles anciens, villas et résidences plus récentes.",
 ];
 
 const blocks = [
@@ -18,6 +18,12 @@ const blocks = [
     heading: "Un bâti varié entre ancien et villas",
     paragraphs: [
       "Carabacel mélange immeubles anciens du centre-ville étendu et villas individuelles sur les hauteurs. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ancienne ou d'une porte de villa plus récente.",
+    ],
+  },
+  {
+    heading: "Un patrimoine hérité du boulevard planté",
+    paragraphs: [
+      "Les immeubles construits le long du boulevard Carabacel dans la seconde moitié du XIXe siècle ont souvent conservé des éléments d'origine. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui dénaturerait ces façades.",
     ],
   },
   {
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous aussi sur des immeubles anciens à Carabacel ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
+  },
+  {
+    question: "Intervenez-vous près du boulevard Carabacel et du Pont Vieux ?",
+    answer:
+      "Oui, tout ce secteur entre la Vieille-Ville et les hauteurs de Carabacel fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Carabacel par rapport au reste de Nice ?",

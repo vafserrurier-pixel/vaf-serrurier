@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import InsuranceBanner from "@/components/InsuranceBanner";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/mis-en-securite-apres-effraction-nice/" },
-  title: "Serrurier après effraction Nice 24h/24 | VAF",
+  title: "Serrurier après cambriolage à Nice 24h/24 | VAF",
   description:
     "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, 24h/24, puis je propose une solution durable. Devis annoncé avant travaux.",
 };
@@ -31,6 +32,12 @@ const sections = [
     heading: "Pour les démarches avec votre assurance",
     paragraphs: [
       "Après une effraction, votre assureur vous demandera généralement un justificatif d'intervention. Je peux vous fournir une facture détaillée mentionnant la nature des dégâts constatés et les réparations effectuées, un document généralement demandé pour la déclaration de sinistre.",
+    ],
+  },
+  {
+    heading: "Les cambriolages à Nice, une réalité à prendre au sérieux",
+    paragraphs: [
+      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente — un niveau désormais supérieur à la moyenne nationale (5,6‰) et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque : la plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
     ],
   },
 ];
@@ -71,8 +78,8 @@ const faq = [
 export default function MiseEnSecuriteApresEffractionNicePage() {
   return (
     <ServicePageTemplate
-      h1="Mise en sécurité après effraction à Nice"
-      lead="Après une intrusion, la priorité c'est de fermer et sécuriser immédiatement, puis remettre une solution durable. J'interviens 24h/24, devis annoncé avant chaque intervention."
+      h1="Serrurier après cambriolage ou effraction à Nice"
+      lead="Après un cambriolage ou une tentative d'effraction, la priorité c'est de fermer et sécuriser immédiatement, puis remettre une solution durable. J'interviens 24h/24, devis annoncé avant chaque intervention."
       sections={sections}
       faq={faq}
       breadcrumbLabel="Mise en sécurité après effraction"
@@ -81,6 +88,11 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
         alt: "Porte équipée d'une serrure à code électronique, sécurisation après effraction à Nice",
       }}
+      extra={
+        <section className="mx-auto max-w-4xl px-4 py-10">
+          <InsuranceBanner />
+        </section>
+      }
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

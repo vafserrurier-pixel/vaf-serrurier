@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Saint-Antoine est un quartier de l'ouest de Nice, à proximité de l'aéroport et des grands axes de circulation vers l'ouest du département. Le secteur mêle zones résidentielles, petites copropriétés et quelques zones d'activité.",
-  "J'y interviens pour des particuliers en appartement comme pour des maisons individuelles, avec la même méthode de diagnostic partout à Nice.",
+  "Saint-Antoine-de-Ginestière est un quartier perché qui ressemble davantage à un village indépendant qu'à un secteur niçois, son histoire étant liée à celle de Jeanne, reine de Naples et comtesse de Provence. Autrefois rural, il a connu une urbanisation progressive tout en conservant une ambiance villageoise, à mesure que Nice s'étendait vers l'ouest. L'église Saint-Antoine, cœur spirituel du quartier, a été construite en 1875.",
+  "Aujourd'hui, le quartier compte environ 3 000 habitants, avec un profil plutôt familial, des revenus confortables et une majorité de propriétaires, dans un cadre verdoyant à l'ambiance vivante. Le secteur mêle zones résidentielles, petites copropriétés et proximité de l'aéroport et des grands axes de circulation vers l'ouest du département.",
 ];
 
 const blocks = [
+  {
+    heading: "Un village niçois resté à part",
+    paragraphs: [
+      "L'ambiance villageoise de Saint-Antoine-de-Ginestière, préservée malgré l'expansion de Nice, se retrouve dans un bâti varié, entre maisons individuelles et petites résidences. Je m'adapte à chaque configuration avec le même soin de diagnostic.",
+    ],
+  },
   {
     heading: "Un secteur résidentiel et d'activité mêlés",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés de Saint-Antoine ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous près de l'église Saint-Antoine, cœur du quartier ?",
+    answer:
+      "Oui, tout ce secteur au caractère villageois préservé fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Saint-Antoine par rapport au reste de Nice ?",

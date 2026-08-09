@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "L'Arénas est un secteur de l'ouest de Nice, proche de l'aéroport, connu pour ses zones de bureaux et d'activité, avec quelques ensembles résidentiels à proximité. C'est un quartier pratique, bien desservi par les grands axes.",
-  "J'y interviens pour des logements résidentiels comme pour la partie serrurerie de locaux professionnels, avec la même méthode de diagnostic partout à Nice.",
+  "Le nom de l'Arénas viendrait d'un ancien lieu de corridas — « arenas » signifiant arènes en espagnol. Le quartier a connu une transformation impressionnante au fil des décennies, passant d'une zone industrielle à un pôle d'activités économiques et culturelles : dans les années 1960, l'ouverture de l'aéroport Nice-Côte d'Azur a attiré de nombreuses entreprises sur le secteur.",
+  "Créé en 1989, l'Arénas est devenu le premier centre d'affaires international des Alpes-Maritimes, avec environ 350 000 m² de bureaux installés dans des immeubles vitrés au nord du quartier. Idéalement situé face à l'aéroport et à proximité de la gare multimodale TGV de Saint-Augustin, l'Arénas reste aujourd'hui le premier quartier d'affaires de la Côte d'Azur, avec quelques ensembles résidentiels à proximité de ses zones de bureaux.",
 ];
 
 const blocks = [
+  {
+    heading: "Le premier quartier d'affaires de la Côte d'Azur",
+    paragraphs: [
+      "Les immeubles de bureaux du centre d'affaires de l'Arénas, créé en 1989, ont des exigences de sécurité spécifiques : accès contrôlés, portes de bureaux, cylindres professionnels. J'interviens sur ces équipements avec le même professionnalisme que sur un logement.",
+    ],
+  },
   {
     heading: "Un secteur mêlant activité et résidentiel",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés de l'Arénas ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous près de la gare TGV de Saint-Augustin ?",
+    answer:
+      "Oui, tout ce secteur d'affaires entre l'aéroport et la gare multimodale fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à l'Arénas par rapport au reste de Nice ?",

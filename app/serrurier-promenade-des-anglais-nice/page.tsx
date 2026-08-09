@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "La Promenade des Anglais est le front de mer emblématique de Nice, bordée d'immeubles résidentiels de standing, de grands hôtels et de résidences avec vue mer. C'est un secteur où se côtoient des immeubles anciens de grand standing et des constructions plus récentes.",
-  "J'y interviens pour des résidents à l'année comme pour des propriétaires de biens en location saisonnière, avec la même exigence de diagnostic avant toute intervention.",
+  "L'histoire de la Promenade des Anglais commence dans un contexte économique difficile pour Nice, au début du XIXe siècle, quand la région traverse une crise agricole qui plonge de nombreux Niçois dans la précarité. En 1822, le révérend anglican Lewis Way, face à cette détresse, lance une souscription auprès de la communauté britannique hivernant à Nice pour financer la construction d'une chaussée littorale de deux mètres de large — un projet qui donne aussi du travail à de nombreux ouvriers niçois dans le besoin.",
+  "Inaugurée en 1824, la promenade est alors baptisée par les habitants « el camin dei Inglès », la « promenade des Anglais », un nom officialisé lors du rattachement du comté de Nice à la France en 1860. Deux siècles plus tard, ce front de mer emblématique est bordé d'immeubles résidentiels de standing, de grands hôtels historiques et de résidences avec vue mer, où se côtoient bâti ancien de grand standing et constructions plus récentes.",
 ];
 
 const blocks = [
@@ -54,6 +54,11 @@ const faq = [
     question: "Les tarifs sont-ils différents sur la Promenade des Anglais ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Intervenez-vous dans les grands hôtels historiques du front de mer ?",
+    answer:
+      "Pour la partie serrurerie de leurs locaux et bureaux, oui, avec la discrétion et le professionnalisme attendus dans ce type d'établissement.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir dans ce secteur ?",

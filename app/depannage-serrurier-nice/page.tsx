@@ -3,9 +3,9 @@ import ServicePageTemplate from "@/components/ServicePageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
-  title: "Dépannage serrurier Nice 24h/24 – Serrure bloquée | VAF",
+  title: "Urgence serrurier Nice 24h/24 – Dépannage rapide | VAF",
   description:
-    "Serrure bloquée, clé cassée, cylindre grippé à Nice ? J'interviens jour et nuit, prix annoncé avant intervention. Appelez le 04 22 13 85 44.",
+    "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention. Appelez le 04 22 13 85 44.",
 };
 
 const sections = [
@@ -79,7 +79,7 @@ const faq = [
 export default function DepannageSerrurierNicePage() {
   return (
     <ServicePageTemplate
-      h1="Dépannage serrurier à Nice, 24h/24 et 7j/7"
+      h1="Urgence serrurier à Nice, dépannage 24h/24 et 7j/7"
       lead="Serrure bloquée, clé cassée, cylindre qui grippe : vous m'expliquez la situation, je vous donne un prix avant de me déplacer, et j'interviens proprement, de jour comme de nuit."
       sections={sections}
       faq={faq}

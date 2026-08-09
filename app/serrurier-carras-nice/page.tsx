@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Carras est un quartier de l'ouest de Nice, entre Fabron et la mer, avec un bâti résidentiel mêlant immeubles collectifs et quelques zones commerciales de proximité. C'est un secteur bien desservi, à la fois résidentiel et pratique au quotidien.",
-  "J'y interviens régulièrement pour du dépannage classique et des demandes de changement de serrure, aussi bien pour des appartements que pour des copropriétés.",
+  "Carras était, depuis le milieu du XVIIIe siècle, un modeste village de pêcheurs à l'écart à l'ouest de Nice, connu sous le nom de « Sieu en Caras » — le secteur, alors surtout composé de jardins, de carrières de gravier et de pâturages, portait auparavant le nom de « Barri de Masson » vers 1767. Après la création de l'aéroport en 1966, un port-abri y fut aménagé, puis des cabines et un centre de loisirs nautiques en 1985.",
+  "La construction de la Promenade des Anglais a favorisé l'essor touristique de cet ancien village de pêcheurs, devenu aujourd'hui un quartier résidentiel et touristique prisé pour son cadre de vie en bord de mer. L'activité de pêche a progressivement décliné, et si quelques petites embarcations restent visibles, elles ne prennent plus la mer depuis une dizaine d'années. Le quartier mêle aujourd'hui bâti résidentiel, immeubles collectifs et quelques zones commerciales de proximité.",
 ];
 
 const blocks = [
+  {
+    heading: "Un ancien village de pêcheurs devenu résidentiel",
+    paragraphs: [
+      "L'héritage du village de pêcheurs de Carras se lit encore dans le port-abri et les quelques embarcations conservées le long du front de mer. Les immeubles résidentiels construits depuis l'essor touristique du quartier ont des profils variés, que je diagnostique au cas par cas.",
+    ],
+  },
   {
     heading: "Immeubles résidentiels de l'ouest niçois",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous près du port-abri et du front de mer de Carras ?",
+    answer:
+      "Oui, tout ce secteur résidentiel en bord de mer fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Carras par rapport au reste de Nice ?",

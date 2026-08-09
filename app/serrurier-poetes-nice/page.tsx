@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier des Poètes se situe au nord de Nice, à proximité du Brancolar, dans un secteur résidentiel composé principalement d'immeubles collectifs. C'est un quartier calme, sur les hauteurs de la ville.",
-  "J'y interviens régulièrement pour des particuliers en appartement et pour des halls d'immeuble en copropriété, avec la même méthode de diagnostic partout à Nice.",
+  "Le quartier des Poètes trouve ses racines dans les années 1920, sur l'ancienne propriété des Dames de l'Assomption — le cadastre de 1873 y mentionne déjà un « établissement horticole » tenu par ces religieuses. Situé entre Cimiez à l'ouest et Saint-Maurice à l'est, le lotissement rend hommage à la littérature française : ses rues portent le nom de grands écrivains et poètes, Alfred de Musset, George Sand, Charles Baudelaire, André Chénier ou Edmond Rostand.",
+  "Le parc Chambrun, ancien domaine du comte Aldebert de Chambrun, en constitue le centre historique. Aujourd'hui, le quartier des Poètes est un secteur résidentiel calme composé principalement d'immeubles collectifs, sur les hauteurs de Nice à proximité du Brancolar.",
 ];
 
 const blocks = [
+  {
+    heading: "Un lotissement né du domaine des Dames de l'Assomption",
+    paragraphs: [
+      "Les immeubles construits sur cet ancien domaine horticole depuis les années 1920 ont chacun leurs particularités de bâti. Je diagnostique systématiquement l'état réel de la porte et du cylindre avant de proposer une réparation ou un remplacement.",
+    ],
+  },
   {
     heading: "Un habitat collectif sur les hauteurs nord",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur la porte d'entrée d'un immeuble dans ce quartier ?",
     answer:
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près du parc Chambrun ?",
+    answer:
+      "Oui, tout le quartier des Poètes autour du parc Chambrun fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents dans ce quartier par rapport au centre de Nice ?",

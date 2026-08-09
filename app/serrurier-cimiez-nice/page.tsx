@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Cimiez est un quartier résidentiel des hauteurs de Nice, connu pour ses immeubles Belle Époque, ses villas et sa proximité avec le musée Matisse, le monastère et les arènes romaines. Le bâti y est particulièrement caractéristique : de grands immeubles bourgeois du début du XXe siècle, certains anciens palaces reconvertis en copropriétés, côtoient des villas individuelles.",
-  "Ce patrimoine architectural implique des portes et des serrures souvent plus imposantes que la moyenne, avec des mécanismes qu'il faut savoir traiter avec soin plutôt que remplacer systématiquement.",
+  "Le nom de Cimiez viendrait de Cemenelum, l'ancienne cité romaine qui fut préfecture des Alpes-Maritimes à l'époque romaine — la légende veut aussi qu'il évoque les « cimes » des grands arbres qui peuplaient la colline. Les arènes romaines, construites au Ier siècle après J.-C. pour l'entraînement des légionnaires, témoignent encore de ce passé antique, aux côtés du monastère franciscain fondé au IXe siècle par les moines bénédictins de l'abbaye de Saint-Pons.",
+  "C'est à la Belle Époque, sous l'impulsion de l'architecte Sébastien-Marcel Biasini qui traça le boulevard de Cimiez, que le quartier prend son visage actuel : de somptueux hôtels-palais et villas de luxe y accueillirent des figures de la monarchie européenne comme la reine Victoria, Édouard VII ou Léopold II. Ce patrimoine architectural implique aujourd'hui des portes et des serrures souvent plus imposantes que la moyenne, avec des mécanismes qu'il faut savoir traiter avec soin plutôt que remplacer systématiquement.",
 ];
 
 const blocks = [
+  {
+    heading: "Des palaces Belle Époque reconvertis en copropriétés",
+    paragraphs: [
+      "Plusieurs des grands hôtels construits pour la clientèle royale européenne ont été reconvertis en copropriétés résidentielles au fil du XXe siècle. Leurs portes et serrures, souvent d'origine, demandent un vrai savoir-faire pour être réparées sans dénaturer ces bâtiments remarquables.",
+    ],
+  },
   {
     heading: "Des immeubles au bâti ancien et soigné",
     paragraphs: [
@@ -49,6 +55,16 @@ const faq = [
     question: "Intervenez-vous pour les copropriétés à Cimiez ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près des arènes romaines et du monastère de Cimiez ?",
+    answer:
+      "Oui, tout ce secteur historique autour des arènes et du monastère franciscain fait partie de ma zone d'intervention habituelle.",
+  },
+  {
+    question: "Travaillez-vous sur les anciens palaces reconvertis en copropriétés ?",
+    answer:
+      "Oui, ces bâtiments remarquables demandent un vrai savoir-faire : je privilégie systématiquement une solution qui respecte l'architecture d'origine.",
   },
   {
     question: "Les tarifs sont-ils différents à Cimiez par rapport au reste de Nice ?",

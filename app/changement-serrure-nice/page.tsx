@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import BrandsSection from "@/components/BrandsSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/changement-serrure-nice/" },
@@ -93,6 +94,14 @@ export default function ChangementSerrureNicePage() {
         src: "/images/serrurier-nice-changement-de-serrure.webp",
         alt: "Clé usée dans un cylindre de porte à remplacer, changement de serrure à Nice",
       }}
+      extra={
+        <section className="mx-auto max-w-4xl px-4 py-10">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
+            Marques de serrures que je pose
+          </h2>
+          <BrandsSection />
+        </section>
+      }
       relatedServices={[
         { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

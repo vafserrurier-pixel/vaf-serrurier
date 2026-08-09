@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier Pasteur, à l'est de Nice, s'organise notamment autour du pôle hospitalier du même nom. C'est un secteur résidentiel dense, avec un bâti mêlant immeubles anciens et constructions plus récentes.",
-  "J'y interviens régulièrement pour du dépannage courant, des changements de serrure et des demandes de sécurisation, aussi bien pour des particuliers que pour des petites copropriétés.",
+  "Le quartier Pasteur est dominé par l'ancienne abbaye de Saint-Pons, l'un des plus vieux monastères de la Côte d'Azur avec celle des îles de Lérins. Détruite au XVIe siècle par les Turcs alliés au roi François Ier, elle est reconstruite en 1724 dans un style baroque, en grande partie financée par Louis XIV — le monastère est aujourd'hui intégré au sein de l'hôpital Pasteur qui porte son nom.",
+  "En 1954, le relogement de populations venues de la vieille ville entraîne une transformation urbaine rapide du secteur. En 1973, la faculté de médecine est créée et l'hôpital Pasteur est regroupé avec d'autres établissements sous le nom de Centre Hospitalier Universitaire de Nice. Le projet Pasteur 2, un investissement de 550 millions d'euros portant la surface à 130 000 m², en a fait l'un des plus grands hôpitaux modernes construits en France. Le quartier reste aujourd'hui un secteur résidentiel dense, avec un bâti mêlant immeubles anciens et constructions plus récentes.",
 ];
 
 const blocks = [
@@ -21,9 +21,15 @@ const blocks = [
     ],
   },
   {
-    heading: "Proximité du pôle hospitalier",
+    heading: "Autour de l'abbaye de Saint-Pons et du CHU",
     paragraphs: [
-      "La proximité de l'hôpital génère un passage plus important dans certaines rues, ce qui pousse parfois les résidents à vouloir renforcer leur porte d'entrée.",
+      "Le voisinage immédiat de l'ancienne abbaye baroque et du pôle hospitalier universitaire génère un passage important dans certaines rues, ce qui pousse parfois les résidents à vouloir renforcer leur porte d'entrée.",
+    ],
+  },
+  {
+    heading: "Un secteur transformé depuis les années 1950",
+    paragraphs: [
+      "La transformation urbaine rapide du quartier depuis 1954 a créé un bâti varié, entre constructions de l'après-guerre et immeubles plus récents. Je m'adapte à chaque configuration avec le même soin de diagnostic.",
     ],
   },
   {
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les immeubles proches de l'hôpital Pasteur ?",
     answer:
       "Oui, je diagnostique chaque situation avant de proposer réparation, remplacement de cylindre ou renforcement de la porte.",
+  },
+  {
+    question: "Intervenez-vous près de l'ancienne abbaye de Saint-Pons ?",
+    answer:
+      "Oui, tout ce secteur autour du monastère intégré à l'hôpital Pasteur fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents au quartier Pasteur par rapport au reste de Nice ?",

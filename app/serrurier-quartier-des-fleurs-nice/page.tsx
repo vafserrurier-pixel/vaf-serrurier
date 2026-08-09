@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier des Fleurs, dont les rues portent des noms de fleurs, se situe dans le centre de Nice, à proximité du quartier des Musiciens. C'est un secteur résidentiel calme, avec un bâti d'immeubles de standing modeste à moyen.",
-  "J'y interviens pour du dépannage courant, des changements de serrure et des demandes de sécurisation pour des appartements comme pour de petites copropriétés.",
+  "Le quartier des Fleurs s'étend entre le boulevard François Grosso à l'ouest et le boulevard Gambetta à l'est, et tire son nom de l'avenue des Fleurs, son artère principale longue d'environ 500 mètres. Le nom rappelle les propriétés d'antan et leurs jardins, progressivement remplacés par des immeubles dont certains portent encore des noms de fleurs — Mimosas, Lauriers Roses.",
+  "Le quartier a vu le jour à la fin du XIXe siècle et au début du XXe, durant l'essor de Nice comme station balnéaire réputée, avec la construction d'hôtels prestigieux et de palais éclectiques. Les rues Rossini, Verdi, Berlioz ou Gounod, à cheval avec le quartier des Musiciens voisin, sont bordées de superbes immeubles bourgeois d'inspiration Art déco, et la rue des Orangers rappelle que le secteur était autrefois planté d'agrumes.",
 ];
 
 const blocks = [
+  {
+    heading: "Un patrimoine de palais et d'immeubles bourgeois",
+    paragraphs: [
+      "Les façades éclectiques et Art déco du quartier des Fleurs abritent des portes et serrures parfois anciennes, que je répare ou adapte plutôt que de remplacer systématiquement, pour préserver la cohérence esthétique de ces immeubles de caractère.",
+    ],
+  },
   {
     heading: "Un secteur résidentiel du centre",
     paragraphs: [
@@ -39,6 +45,11 @@ const faq = [
     question: "Intervenez-vous rapidement au quartier des Fleurs en cas d'urgence ?",
     answer:
       "Oui, je me déplace 24h/24 et 7j/7 dans ce quartier central, avec un délai habituel de 10 à 20 minutes selon la circulation.",
+  },
+  {
+    question: "Travaillez-vous sur les portes des immeubles bourgeois de l'avenue des Fleurs ?",
+    answer:
+      "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet qui dénaturerait ces façades de caractère.",
   },
   {
     question: "Intervenez-vous sur les immeubles résidentiels du secteur ?",

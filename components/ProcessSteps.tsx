@@ -18,7 +18,7 @@ const steps = [
 export default function ProcessSteps() {
   return (
     <div>
-      <KeyBitDivider className="mb-8 text-steel/40" />
+      <KeyBitDivider className="mb-8" opacity={0.4} />
       <ol className="grid gap-8 sm:grid-cols-3">
         {steps.map((step, index) => (
           <li key={step.title} className="relative">

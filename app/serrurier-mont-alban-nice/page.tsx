@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Mont Alban est un secteur résidentiel boisé sur les hauteurs de l'est de Nice, voisin du Mont Boron, avec un habitat principalement composé de villas et de propriétés individuelles dans un cadre naturel préservé.",
-  "J'y interviens pour des propriétaires de maisons, avec le même soin apporté à toutes les interventions sur ce type de bien.",
+  "Le fort du Mont-Alban, construit entre 1557 et 1560 après le siège de Nice de 1543 sous l'impulsion du duc de Savoie Emmanuel-Philibert, verrouillait les hauteurs entre Nice et Villefranche-sur-Mer, protégeait la route du col et surveillait les côtes face à la frontière française. Ce monument rectangulaire de 40 sur 46 mètres, situé à 220 mètres d'altitude, reste l'un des rares exemples d'architecture militaire du milieu du XVIe siècle en France dans un aussi bon état de conservation.",
+  "Occupé par diverses garnisons aux XVIIIe et XIXe siècles, puis utilisé comme poste de transmission militaire pendant la Seconde Guerre mondiale, le fort a été désaffecté et transféré à la ville de Nice en 2007, ouvert au public depuis pour des visites estivales. Le quartier du Mont Alban qui l'entoure est un secteur résidentiel boisé sur les hauteurs de l'est de Nice, voisin du Mont Boron, avec un habitat principalement composé de villas et de propriétés individuelles dans un cadre naturel préservé.",
 ];
 
 const blocks = [
+  {
+    heading: "Autour du fort du XVIe siècle",
+    paragraphs: [
+      "Le fort du Mont-Alban, ouvert au public depuis 2007, domine un secteur résidentiel au patrimoine militaire remarquable. Les villas alentour bénéficient d'un panorama exceptionnel, entre la baie des Anges et la Riviera italienne.",
+    ],
+  },
   {
     heading: "Un secteur de villas et de propriétés individuelles",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les villas du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous près du fort du Mont-Alban ?",
+    answer:
+      "Oui, tout ce secteur boisé autour du fort du XVIe siècle fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents au Mont Alban par rapport au reste de Nice ?",

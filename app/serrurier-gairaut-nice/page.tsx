@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Gairaut est un quartier résidentiel situé sur les hauteurs nord de Nice, connu pour sa cascade et son cadre plus rural que le centre-ville. Le bâti y est principalement composé de villas et de petites résidences.",
-  "J'y interviens pour des propriétaires de maisons individuelles comme pour des petites copropriétés, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+  "La cascade de Gairaut, chute d'eau artificielle construite au XIXe siècle sur la colline du même nom, commémore l'arrivée des eaux du canal de la Vésubie en 1883 — un ouvrage d'ingénierie impressionnant qui répondait aux besoins croissants d'approvisionnement en eau d'une ville alors en pleine expansion. L'eau s'écoule dans plusieurs bassins surmontés d'un chalet alpin en bois travaillé, au milieu de grottes ornées de fausses stalactites et de rocaille en ciment armé imitant des branches.",
+  "Aujourd'hui encore, la cascade permet d'oxygéner l'eau arrivée par pompage avant sa distribution dans les quartiers niçois. Le secteur, autrefois à vocation agricole avec de nombreux oliviers, est devenu résidentiel, avec des villas offrant une vue exceptionnelle sur la mer et la ville de Nice.",
 ];
 
 const blocks = [
+  {
+    heading: "Autour de la cascade historique",
+    paragraphs: [
+      "Le secteur autour de la cascade de Gairaut, monument historique du XIXe siècle, conserve un cadre naturel préservé. Les villas alentour bénéficient de ce cadre remarquable, avec des besoins de serrurerie classiques que je diagnostique au cas par cas.",
+    ],
+  },
   {
     heading: "Un secteur de villas et de maisons individuelles",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les maisons individuelles du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous près de la cascade de Gairaut ?",
+    answer:
+      "Oui, tout ce secteur résidentiel autour de la cascade et du canal de la Vésubie fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Gairaut par rapport au reste de Nice ?",

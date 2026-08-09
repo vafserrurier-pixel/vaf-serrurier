@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier Gambetta s'étend entre la gare de Nice-Ville et le secteur de la Libération, avec un bâti résidentiel dense typique du début du XXe siècle. C'est un quartier central, à la fois calme et bien desservi.",
-  "J'y interviens régulièrement pour du dépannage classique, du changement de serrure et des demandes de sécurisation pour des appartements comme pour des petits immeubles.",
+  "Le boulevard Gambetta, qui donne son nom au quartier, rend hommage à Léon Gambetta (1838-1882), figure politique emblématique de la Troisième République française. En 1950, il n'y avait pratiquement rien à l'ouest de ce boulevard : le secteur s'est urbanisé pour l'essentiel dans l'après-guerre, prenant la suite du quartier du Piol qui occupait auparavant ces terrains.",
+  "Le quartier porte aussi la trace d'une forte présence italienne dans l'histoire de Nice : en 1926, les immigrants italiens représentaient environ 40 000 personnes, soit un quart de la population niçoise. On y trouve un patrimoine architectural varié, dont l'immeuble Art déco Le Palladium, avec son atrium décoré et sa statue d'Athéna à l'angle de l'avenue Tzarévitch et du boulevard Gambetta.",
 ];
 
 const blocks = [
   {
-    heading: "Immeubles résidentiels du début du XXe siècle",
+    heading: "Immeubles résidentiels du début et du milieu du XXe siècle",
     paragraphs: [
       "Le bâti de Gambetta comprend beaucoup d'immeubles de standing modeste à moyen, avec des serrures qui ont parfois plusieurs décennies. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
     ],
@@ -24,6 +24,12 @@ const blocks = [
     heading: "Un secteur résidentiel calme",
     paragraphs: [
       "Contrairement à des quartiers plus commerçants, Gambetta reste majoritairement résidentiel, ce qui n'empêche pas les mêmes besoins : porte claquée, cylindre grippé, ou volonté de renforcer une porte d'entrée après un cambriolage dans l'immeuble voisin.",
+    ],
+  },
+  {
+    heading: "Autour de l'immeuble Le Palladium",
+    paragraphs: [
+      "Les immeubles Art déco du secteur, comme Le Palladium à l'angle de l'avenue Tzarévitch, méritent une attention particulière : je privilégie systématiquement une solution qui respecte l'esthétique de ces façades remarquables.",
     ],
   },
   {
@@ -49,6 +55,11 @@ const faq = [
     question: "Intervenez-vous pour les copropriétés de Gambetta ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous sur les immeubles Art déco du boulevard Gambetta ?",
+    answer:
+      "Oui, je privilégie une solution qui respecte l'esthétique de ces façades remarquables plutôt qu'un remplacement standard.",
   },
   {
     question: "Les tarifs sont-ils différents au quartier Gambetta par rapport au reste de Nice ?",

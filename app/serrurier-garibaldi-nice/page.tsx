@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier Garibaldi s'organise autour de sa célèbre place ocre, à la frontière du Vieux-Nice et du port. Le bâti y est ancien et homogène, avec des immeubles du XVIIIe et XIXe siècle typiques du centre historique niçois.",
-  "J'y interviens avec la même attention que dans le Vieux-Nice tout proche : diagnostic soigné, respect du bâti ancien, et devis annoncé avant intervention.",
+  "La place Garibaldi, l'une des plus anciennes de Nice, a été construite entre 1782 et 1784 sous le nom de Piazza Vittorio, à l'époque où la ville appartenait encore au royaume de Sardaigne. Conçue par l'architecte Antonio Spinelli sur le modèle des grandes places turinoises, elle fut d'abord la place royale de la ville, marquant l'aboutissement de la route de Turin. Elle prend son nom actuel en 1870, en hommage à Giuseppe Garibaldi, homme politique né à Nice, dont la grande statue est érigée en 1891.",
+  "Longtemps exclue des circuits touristiques car située dans les quartiers populaires, la place a longtemps été dominée par la circulation automobile et le stationnement, avant d'être rendue aux piétons dans les années 2000 grâce à l'arrivée du tramway. Le quartier Garibaldi, à la frontière du Vieux-Nice et du port, conserve un bâti ancien et homogène, avec des immeubles du XVIIIe et XIXe siècle typiques du centre historique niçois, aujourd'hui animé par de nombreux musées, théâtres et terrasses de restaurant.",
 ];
 
 const blocks = [
@@ -24,6 +24,12 @@ const blocks = [
     heading: "Un secteur entre Vieux-Nice et port",
     paragraphs: [
       "La position de Garibaldi, entre le Vieux-Nice et le port, en fait un quartier de passage où les besoins de sécurisation restent classiques : porte claquée, cylindre grippé, clé cassée.",
+    ],
+  },
+  {
+    heading: "Un quartier vivant, entre musées et restaurants",
+    paragraphs: [
+      "Avec ses nombreux musées, théâtres et terrasses de restaurant, la place Garibaldi attire un passage important qui use aussi les serrures des commerces et des halls d'immeuble alentour. J'y interviens régulièrement pour ce type de sollicitation.",
     ],
   },
   {
@@ -46,6 +52,11 @@ const faq = [
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'époque.",
   },
   {
+    question: "Intervenez-vous aussi entre Garibaldi et le quartier du port ?",
+    answer:
+      "Oui, tout ce secteur de transition entre la place Garibaldi et le port fait partie de ma zone d'intervention habituelle.",
+  },
+  {
     question: "Les tarifs sont-ils différents à Garibaldi par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
@@ -54,6 +65,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés du secteur ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous en soirée près des restaurants de la place Garibaldi ?",
+    answer:
+      "Oui, je reste disponible en soirée et la nuit, avec une majoration appliquée après 19h et le week-end, annoncée avant l'intervention.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir à Garibaldi ?",

@@ -98,6 +98,31 @@ export function faqSchema(items: FaqItem[]) {
   };
 }
 
+export function personSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: business.firstName,
+    jobTitle: "Artisan serrurier",
+    url: `${business.domain}/a-propos/`,
+    worksFor: {
+      "@type": "Locksmith",
+      name: business.legalName,
+      url: business.domain,
+    },
+    knowsAbout: [
+      "Serrurerie",
+      "Ouverture de porte",
+      "Blindage de porte",
+      "Coffre-fort",
+    ],
+    areaServed: {
+      "@type": "City",
+      name: "Nice",
+    },
+  };
+}
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",

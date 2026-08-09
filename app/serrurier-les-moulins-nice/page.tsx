@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Les Moulins est un quartier résidentiel de l'ouest de Nice, composé principalement de grands ensembles d'habitat collectif. Une partie du quartier a connu des programmes de rénovation urbaine ces dernières années.",
-  "J'y interviens régulièrement pour des particuliers en appartement et pour des halls d'immeuble en copropriété, avec la même méthode de diagnostic partout à Nice.",
+  "Le quartier des Moulins, aussi appelé Moulins Point-du-Jour, a été construit entre 1965 et 1976 pour répondre à la demande croissante de logements sociaux, à la frontière entre Nice et Saint-Laurent-du-Var, au sein du grand secteur de Saint-Augustin. Il compte aujourd'hui environ 7 000 habitants sur 63 hectares.",
+  "Depuis 2009, le quartier bénéficie d'un programme de renouvellement urbain porté par l'Agence Nationale pour la Rénovation Urbaine, et il est désormais desservi par le tramway niçois depuis 2019, qui facilite grandement les déplacements vers le reste de la ville. Les Moulins reste un quartier résidentiel de l'ouest de Nice, composé principalement de grands ensembles d'habitat collectif.",
 ];
 
 const blocks = [
+  {
+    heading: "Un grand ensemble en rénovation urbaine",
+    paragraphs: [
+      "Le programme de renouvellement urbain engagé depuis 2009 transforme progressivement le bâti des Moulins, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens des années 1960-1970. Je m'adapte à ces deux réalités très différentes.",
+    ],
+  },
   {
     heading: "Un habitat collectif qui demande un suivi régulier",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur la porte d'entrée d'un immeuble aux Moulins ?",
     answer:
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Intervenez-vous sur les nouveaux programmes du renouvellement urbain des Moulins ?",
+    answer:
+      "Oui, avec l'arrivée de nouveaux logements depuis 2009, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité si besoin.",
   },
   {
     question: "Les tarifs sont-ils différents aux Moulins par rapport au centre de Nice ?",

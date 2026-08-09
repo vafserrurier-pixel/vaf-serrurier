@@ -1,16 +1,20 @@
 import Link from "next/link";
 import { business } from "@/lib/business";
+import { sectorPages } from "@/lib/quartiers";
 import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
 
 export default function Footer() {
   return (
     <footer className="bg-navy text-cream mt-16">
-      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
         <div>
           <p className="font-heading font-bold text-lg">{business.legalName}</p>
           <p className="text-sm text-cream/80 mt-1">{business.tagline}</p>
           <p className="text-sm mt-3">{business.address.full}</p>
           <p className="text-sm mt-1">SIRET {business.siret}</p>
+          <Link href="/a-propos/" className="block text-sm mt-3 hover:underline">
+            Qui suis-je
+          </Link>
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">Contact</p>
@@ -27,9 +31,22 @@ export default function Footer() {
             Écrire par email
           </a>
           <p className="text-sm mt-3">{business.hours}</p>
-          <Link href="/zones-intervention-nice/" className="block text-sm mt-3 hover:underline">
-            Zones d&apos;intervention
-          </Link>
+        </div>
+        <div>
+          <p className="font-heading font-semibold mb-2">
+            <Link href="/zones-intervention-nice/" className="hover:underline">
+              Zones d&apos;intervention
+            </Link>
+          </p>
+          <ul className="text-sm space-y-1">
+            {(Object.keys(sectorPages) as (keyof typeof sectorPages)[]).map((key) => (
+              <li key={key}>
+                <Link href={sectorPages[key].href} className="hover:underline">
+                  {sectorPages[key].label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">Informations légales</p>

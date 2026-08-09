@@ -9,7 +9,8 @@ import CtaBlock from "./CtaBlock";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { builtQuartiers, quartierHref } from "@/lib/quartiers";
+import { featuredQuartiers, quartierHref } from "@/lib/quartiers";
+import type { ReactNode } from "react";
 
 export type ServiceSection = { heading: string; paragraphs: string[] };
 export type ServiceImage = { src: string; alt: string };
@@ -23,6 +24,7 @@ export default function ServicePageTemplate({
   path,
   relatedServices,
   image,
+  extra,
 }: {
   h1: string;
   lead: string;
@@ -32,6 +34,8 @@ export default function ServicePageTemplate({
   path: string;
   relatedServices: { href: string; label: string }[];
   image?: ServiceImage;
+  /** Contenu additionnel optionnel, inséré après les sections principales (avant la FAQ). */
+  extra?: ReactNode;
 }) {
   const url = `${business.domain}${path}`;
 
@@ -92,9 +96,9 @@ export default function ServicePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <p className="font-heading font-semibold text-navy mb-4">
+        <h2 className="font-heading font-semibold text-navy mb-4">
           Comment se déroule mon intervention
-        </p>
+        </h2>
         <ProcessSteps />
       </section>
 
@@ -112,6 +116,8 @@ export default function ServicePageTemplate({
           </div>
         ))}
       </section>
+
+      {extra}
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-heading text-xl font-bold text-navy mb-4">
@@ -158,25 +164,37 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      {builtQuartiers.length > 0 && (
-        <section className="mx-auto max-w-4xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Ce service près de chez vous
-          </h2>
-          <ul className="flex flex-wrap gap-2">
-            {builtQuartiers.map((quartier) => (
-              <li key={quartier}>
-                <Link
-                  href={quartierHref(quartier)}
-                  className="block bg-white border border-navy/10 rounded-full px-4 py-1.5 text-sm text-steel hover:border-steel"
-                >
-                  {breadcrumbLabel} à {quartier}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Ce service près de chez vous
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {featuredQuartiers.map((quartier) => (
+            <Link
+              key={quartier}
+              href={quartierHref(quartier)}
+              className="bg-white border border-navy/10 rounded-lg px-4 py-3 text-sm text-navy hover:border-steel hover:shadow-sm transition-all"
+            >
+              {quartier}
+            </Link>
+          ))}
+        </div>
+        <Link
+          href="/zones-intervention-nice/"
+          className="inline-flex items-center gap-1 text-sm font-semibold text-steel mt-4 hover:underline"
+        >
+          Voir les 46 quartiers couverts
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 12h14M13 6l6 6-6 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Link>
+      </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
         <CtaBlock />

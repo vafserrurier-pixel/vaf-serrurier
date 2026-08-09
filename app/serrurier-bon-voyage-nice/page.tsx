@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Bon Voyage est un quartier résidentiel de l'est de Nice, sur les hauteurs proches du port, avec un bâti mêlant immeubles collectifs et quelques villas. C'est un secteur calme, principalement résidentiel.",
+  "Bon Voyage est un quartier résidentiel de l'est de Nice, sur les hauteurs proches du port, développé pour l'essentiel au XXe siècle autour de sa cité de transition. Le bâti y mêle immeubles collectifs et quelques villas, dans un secteur qui compte aujourd'hui environ 3 900 habitants, avec un profil plutôt jeune (34 ans en moyenne) et majoritairement locataire.",
   "J'y interviens pour des appartements comme pour des maisons individuelles, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
 ];
 
@@ -18,6 +18,12 @@ const blocks = [
     heading: "Un quartier résidentiel sur les hauteurs de l'est",
     paragraphs: [
       "Le secteur de Bon Voyage comprend des immeubles collectifs et quelques villas individuelles. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ou d'une porte de maison.",
+    ],
+  },
+  {
+    heading: "Un quartier au profil locatif marqué",
+    paragraphs: [
+      "Avec une majorité de résidents locataires, les serrures et cylindres du quartier changent plus souvent de main : état des lieux, remise de clés, changement de serrure entre deux locataires. C'est une configuration que je connais bien, avec la même transparence sur le tarif.",
     ],
   },
   {
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les villas du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous pour un changement de serrure entre deux locataires ?",
+    answer:
+      "Oui, c'est une demande fréquente à Bon Voyage où le turnover locatif est plus élevé que la moyenne. Je peux intervenir rapidement entre un état des lieux de sortie et d'entrée.",
   },
   {
     question: "Les tarifs sont-ils différents à Bon Voyage par rapport au reste de Nice ?",

@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Mont Boron est un quartier résidentiel huppé sur la colline surplombant le port de Nice, connu pour ses villas avec vue mer et son cadre verdoyant. Le bâti y est principalement constitué de maisons individuelles et de résidences de standing.",
-  "J'y interviens pour des propriétaires de villas comme pour des résidences en copropriété, avec un soin particulier pour ce type de bien souvent équipé de systèmes de sécurité plus avancés.",
+  "Le Mont Boron, colline culminant à 191 mètres sur la partie sud-est de Nice, abrite plusieurs vestiges militaires remarquables : une petite batterie du XIXe siècle à l'extrémité du Cap de Nice, et la batterie du Mont Boron à son sommet, en lien avec le fort voisin du Mont Alban construit au XVIe siècle. Au pied de la colline se trouve aussi la grotte du Lazaret, site préhistorique du Paléolithique moyen, et le site archéologique de Terra Amata découvert en 1966.",
+  "Aujourd'hui, le Mont Boron est l'un des quartiers résidentiels les plus huppés de Nice, connu pour ses villas avec vue mer et son cadre verdoyant classé au patrimoine. Le bâti y est principalement constitué de maisons individuelles et de résidences de standing, dans un secteur où j'interviens avec un soin particulier pour ce type de bien souvent équipé de systèmes de sécurité plus avancés.",
 ];
 
 const blocks = [
+  {
+    heading: "Un secteur au patrimoine militaire et préhistorique",
+    paragraphs: [
+      "Entre les vestiges de batteries du XIXe siècle et la proximité du fort du Mont Alban, ce secteur conserve un patrimoine remarquable. Les propriétés qui l'entourent bénéficient souvent d'un cadre naturel préservé, ce qui n'empêche pas les mêmes besoins classiques de serrurerie.",
+    ],
+  },
   {
     heading: "Villas et propriétés individuelles",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les résidences de standing du secteur ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et équipements des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près du fort du Mont Alban ou de la pointe du Cap de Nice ?",
+    answer:
+      "Oui, tout ce secteur résidentiel entre le fort et le Cap de Nice fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents au Mont Boron par rapport au reste de Nice ?",

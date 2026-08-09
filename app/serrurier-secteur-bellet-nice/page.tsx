@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le secteur Bellet regroupe les hameaux du nord-ouest de Nice — Crémat, Saint-Roman-de-Bellet et Ventabren — dans les collines viticoles de l'appellation Bellet. C'est le secteur le plus rural et le plus vallonné du territoire niçois, avec un habitat principalement composé de maisons individuelles et de domaines.",
-  "J'y interviens pour des propriétaires de maisons, en tenant compte des spécificités d'accès de ce secteur collinaire, avec la même exigence de diagnostic et de devis annoncé avant intervention.",
+  "Le vignoble de Bellet, seule appellation d'origine contrôlée urbaine de France implantée entièrement sur une grande agglomération, remonte au IVe siècle avant J.-C., quand les Phocéens y implantèrent leurs premières vignes. Sous la Révolution, le hameau de Saint-Roman-de-Bellet, cœur de l'appellation, fut même rebaptisé « Bacchus » en hommage à cette vocation viticole ancestrale. Le phylloxéra puis les deux guerres mondiales entraînèrent une chute spectaculaire des surfaces plantées, les producteurs se tournant alors vers la culture de l'œillet de Nice, plus lucrative.",
+  "En 1941, alors que le vignoble ne comptait plus que 60 hectares morcelés, dix propriétaires convaincus obtinrent de l'INAO la création de l'appellation d'origine contrôlée Bellet, l'une des toutes premières AOC viticoles de France. Depuis les années 1990, de nouvelles générations relancent les plantations, souvent en agriculture biologique, pour privilégier qualité et typicité. Le secteur Bellet regroupe aujourd'hui les hameaux de Crémat, Saint-Roman-de-Bellet et Ventabren, sur des terrasses surplombant la rive gauche du Var entre 200 et 400 mètres d'altitude — le secteur le plus rural et le plus vallonné du territoire niçois.",
 ];
 
 const blocks = [
+  {
+    heading: "Le seul vignoble AOC urbain de France",
+    paragraphs: [
+      "Les domaines viticoles de l'appellation Bellet, dont l'histoire remonte à l'Antiquité, comptent des bâtisses et des accès parfois anciens. Je diagnostique chaque situation en tenant compte de ce patrimoine rural unique à l'échelle de Nice.",
+    ],
+  },
   {
     heading: "Un secteur rural et vallonné",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous rapidement dans le secteur Bellet en cas d'urgence ?",
     answer:
       "Oui, je me déplace 24h/24 et 7j/7, avec un délai habituel de 30 à 45 minutes selon la circulation et l'accès exact du hameau concerné.",
+  },
+  {
+    question: "Intervenez-vous sur les domaines viticoles de l'appellation Bellet ?",
+    answer:
+      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration du domaine.",
   },
   {
     question: "Les tarifs sont-ils différents dans le secteur Bellet par rapport au reste de Nice ?",

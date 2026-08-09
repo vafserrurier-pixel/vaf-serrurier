@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier Jean-Médecin s'organise autour de la grande avenue commerçante du même nom, qui relie la gare de Nice-Ville au centre-ville et à la place Masséna. C'est l'un des secteurs les plus denses de Nice, mêlant immeubles résidentiels, commerces en rez-de-chaussée et bureaux.",
-  "Cette densité et ce passage important en font un quartier où les besoins de sécurisation sont variés : appartements en étage, portes de hall très sollicitées, et parfois locaux professionnels à l'entrée d'immeuble.",
+  "L'avenue Jean-Médecin a porté plusieurs noms au fil de son histoire : tracée en 1864 dans la vallée du Paillon selon le plan du Consiglio d'Ornato de l'époque sarde, elle s'appelait d'abord avenue du Prince-Impérial, puis avenue de la Gare en 1870, et avenue de la Victoire après la Première Guerre mondiale. Ce n'est qu'en 1966 qu'elle prend son nom actuel, en hommage à Jean Médecin, maire de Nice de 1928 à 1943 puis de 1947 à 1965.",
+  "Cette grande artère commerçante relie aujourd'hui la gare de Nice-Ville au centre-ville et à la place Masséna. C'est l'un des secteurs les plus denses de Nice, mêlant immeubles résidentiels, commerces en rez-de-chaussée et bureaux, avec un passage important qui en fait un quartier où les besoins de sécurisation sont variés : appartements en étage, portes de hall très sollicitées, et parfois locaux professionnels à l'entrée d'immeuble.",
 ];
 
 const blocks = [
@@ -24,6 +24,12 @@ const blocks = [
     heading: "Appartements en immeuble ancien ou récent",
     paragraphs: [
       "Le bâti mélange immeubles anciens rénovés et constructions plus récentes proches de la gare. Le diagnostic reste systématique : je vérifie l'état de la porte et du cylindre avant de proposer la solution la plus adaptée.",
+    ],
+  },
+  {
+    heading: "Un axe commerçant, des besoins pour les professionnels",
+    paragraphs: [
+      "Entre les boutiques et les bureaux qui bordent l'avenue, j'interviens régulièrement pour des locaux professionnels : porte d'entrée de commerce, cylindre à renforcer, ou mise en sécurité après une tentative d'effraction sur une vitrine.",
     ],
   },
   {
@@ -51,9 +57,19 @@ const faq = [
       "Oui, pour la partie serrurerie (porte d'entrée, cylindre, renforcement), selon le même principe de diagnostic et de devis annoncé avant intervention.",
   },
   {
+    question: "Intervenez-vous près de la gare de Nice-Ville ?",
+    answer:
+      "Oui, tout le tronçon de l'avenue Jean-Médecin jusqu'à la gare fait partie de ma zone d'intervention habituelle.",
+  },
+  {
     question: "Les tarifs sont-ils différents avenue Jean-Médecin par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Intervenez-vous en soirée sur cet axe commerçant très fréquenté ?",
+    answer:
+      "Oui, je reste disponible en soirée et la nuit, avec une majoration appliquée après 19h et le week-end, annoncée avant l'intervention.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",

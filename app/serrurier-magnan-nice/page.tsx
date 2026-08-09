@@ -9,15 +9,21 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Magnan est un quartier résidentiel à l'ouest du centre-ville, à proximité de la partie occidentale de la Promenade des Anglais. Il mêle immeubles des années 1960-1970 et constructions plus récentes, dans un cadre plus calme que le centre historique.",
-  "C'est un quartier familial où j'interviens souvent pour du dépannage courant et des demandes de sécurisation de logements.",
+  "Le quartier tire son nom du Magnan, un petit fleuve côtier qui prend sa source à Aspremont et se jette dans la mer à Nice. Ce nom viendrait de la culture des vers à soie autrefois pratiquée dans le pays niçois : l'ancien nom du bombyx du mûrier, le « magnan », se retrouve dans le mot magnanerie. Jusqu'au XIXe siècle, on parlait d'ailleurs plus souvent du « vallon Magnan » que de La Madeleine, le quartier voisin.",
+  "Souvent à sec mais capable de crues soudaines, le torrent du Magnan faisait autrefois tourner moulins, vanneries et ateliers de meubles, tout en irriguant les terres agricoles et maraîchères du secteur. En 1960, la décision est prise de couvrir son cours inférieur, de La Madeleine supérieure jusqu'au pont du Génie. Aujourd'hui, Magnan est un quartier résidentiel à l'ouest du centre-ville, à proximité de la partie occidentale de la Promenade des Anglais, qui mêle immeubles des années 1960-1970 et constructions plus récentes.",
 ];
 
 const blocks = [
   {
     heading: "Immeubles résidentiels des années 1960-1970",
     paragraphs: [
-      "Beaucoup de résidences de Magnan datent de cette période, avec des serrures d'origine parfois vieillissantes. Un remplacement de cylindre suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",
+      "Beaucoup de résidences de Magnan datent de cette période, construites après la couverture du torrent, avec des serrures d'origine parfois vieillissantes. Un remplacement de cylindre suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",
+    ],
+  },
+  {
+    heading: "Un ancien vallon agricole devenu résidentiel",
+    paragraphs: [
+      "L'histoire industrielle et agricole du vallon Magnan a laissé place à un urbanisme résidentiel dense depuis la fin du XIXe siècle. Ce passé se traduit aujourd'hui par un bâti varié, où je m'adapte à chaque configuration de porte et de serrure.",
     ],
   },
   {
@@ -49,6 +55,11 @@ const faq = [
     question: "Proposez-vous des serrures multipoints pour les familles du quartier ?",
     answer:
       "Oui, selon l'état de votre porte, je peux installer une serrure multipoints qui améliore la sécurité au quotidien.",
+  },
+  {
+    question: "Intervenez-vous sur tout le vallon Magnan, jusqu'au pont du Génie ?",
+    answer:
+      "Oui, tout ce secteur entre La Madeleine supérieure et le bord de mer fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents au quartier Magnan par rapport au reste de Nice ?",

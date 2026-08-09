@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "La Corniche Fleurie est un secteur résidentiel de l'ouest de Nice, au cadre verdoyant, avec un habitat principalement composé de villas et de résidences entourées de jardins.",
-  "J'y interviens pour des propriétaires de maisons, avec la même exigence de diagnostic et de devis annoncé avant intervention que partout ailleurs à Nice.",
+  "L'arrivée de l'eau sur les collines de Nice en 1895 a transformé l'agriculture locale de la Corniche Fleurie, permettant l'irrigation et l'essor de nouvelles cultures comme la floriculture, qui remplaça alors la prédominance ancienne de l'olivier. Autrefois parsemé de serres à fleurs et de jardins potagers florissants, le secteur a aussi attiré l'attention militaire pour sa position stratégique, avec l'installation de fortifications comme la batterie russe.",
+  "Le jardin botanique de Nice, ouvert au public en 1991 sur le site des anciennes pépinières municipales, occupe aujourd'hui près de 3,5 hectares et constitue la pièce maîtresse du quartier. La Corniche Fleurie s'est développée autour d'un urbanisme à taille humaine, avec des résidences arborées alternant avec des villas modernes et des copropriétés récentes, la plupart offrant une vue dégagée sur la Méditerranée.",
 ];
 
 const blocks = [
+  {
+    heading: "Un ancien terroir horticole devenu résidentiel",
+    paragraphs: [
+      "L'héritage floricole de la Corniche Fleurie, hérité de l'arrivée de l'eau en 1895, se retrouve encore dans le jardin botanique de Nice qui occupe le site des anciennes pépinières municipales. Les villas et résidences du secteur bénéficient de ce cadre verdoyant préservé.",
+    ],
+  },
   {
     heading: "Un secteur résidentiel verdoyant",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les villas du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous près du jardin botanique de Nice ?",
+    answer:
+      "Oui, tout ce secteur résidentiel autour du jardin botanique fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents dans ce secteur par rapport au reste de Nice ?",

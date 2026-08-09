@@ -9,9 +9,12 @@ import FaqAccordion from "@/components/FaqAccordion";
 import LazyMap from "@/components/LazyMap";
 import ContactForm from "@/components/ContactForm";
 import KeyBitDivider from "@/components/KeyBitDivider";
+import BrandsSection from "@/components/BrandsSection";
+import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { faqSchema } from "@/lib/schema";
+import { sectorPages } from "@/lib/quartiers";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/" },
@@ -19,6 +22,25 @@ export const metadata: Metadata = {
   description:
     "Serrurier artisan à Nice, joignable 24h/24 et 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
 };
+
+const sectorCards = [
+  {
+    key: "centre" as const,
+    blurb: "Du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez et le Carré d'Or.",
+  },
+  {
+    key: "est" as const,
+    blurb: "Du port Lympia à Riquier, jusqu'aux hauteurs du Mont Boron et de l'Ariane.",
+  },
+  {
+    key: "nord" as const,
+    blurb: "Brancolar, Gairaut, Rimiez, Pessicart et les collines résidentielles du nord.",
+  },
+  {
+    key: "ouest" as const,
+    blurb: "Fabron, Saint-Isidore, l'Arénas, Carras et les secteurs plus ruraux de l'ouest.",
+  },
+];
 
 const homeFaq = [
   {
@@ -69,20 +91,32 @@ export default function HomePage() {
         />
         <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 items-center">
           <div className="text-center sm:text-left">
+            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+              Disponible maintenant — devis par téléphone
+            </span>
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy">
-              Serrurier à Nice, disponible 24h/24
+              Serrurier à <span className="text-urgent">Nice</span>, disponible 24h/24
             </h1>
             <p className="mt-4 text-slate leading-relaxed max-w-xl mx-auto sm:mx-0">
               Porte claquée, serrure bloquée, effraction : vous m&apos;expliquez la
               situation, j&apos;annonce un prix avant de me déplacer. Ce qui compte,
               c&apos;est la transparence, pas les promesses.
             </p>
-            <a
-              href={business.phone.href}
-              className="inline-block mt-6 bg-urgent text-white font-semibold px-8 py-3.5 rounded-full text-lg shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
-            >
-              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-6">
+              <a
+                href={business.phone.href}
+                className="inline-block bg-urgent text-white font-semibold px-8 py-3.5 rounded-full text-lg shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
+              >
+                Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+              </a>
+              <Link
+                href="/tarifs-serrurier-nice/"
+                className="inline-block border border-navy/20 text-navy font-semibold px-8 py-3.5 rounded-full text-lg hover:bg-white transition-colors"
+              >
+                Voir les tarifs
+              </Link>
+            </div>
           </div>
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
             <Image
@@ -95,7 +129,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <KeyBitDivider className="relative text-steel/30" />
+        <KeyBitDivider className="relative" opacity={0.3} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">
@@ -135,21 +169,35 @@ export default function HomePage() {
             travaux, et un seul interlocuteur à qui se référer d&apos;une intervention à
             l&apos;autre.
           </p>
+          <p>
+            <Link href="/a-propos/" className="text-steel underline font-semibold">
+              En savoir plus sur mon parcours →
+            </Link>
+          </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
-        <p className="text-center font-heading font-semibold text-navy mb-6">
+        <h2 className="text-center font-heading font-semibold text-navy mb-6">
           Comment se déroule mon intervention
-        </p>
+        </h2>
         <ProcessSteps />
       </section>
 
+      <section className="bg-navy py-14">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="font-heading text-2xl font-bold text-cream mb-6 text-center">
+            Mes services de serrurerie à Nice
+          </h2>
+          <ServiceGrid />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-5xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
-          Mes services de serrurerie à Nice
+        <h2 className="font-heading text-2xl font-bold text-navy mb-4 text-center">
+          Marques de serrures que je pose à Nice
         </h2>
-        <ServiceGrid />
+        <BrandsSection />
       </section>
 
       <section className="bg-white py-14">
@@ -193,35 +241,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-4xl px-4 pt-10">
+        <InsuranceBanner />
+      </section>
+
       <section className="mx-auto max-w-5xl px-4 py-14">
         <ReviewsSection />
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-14 grid gap-8 lg:grid-cols-2">
-        <div>
-          <h2 className="font-heading text-2xl font-bold text-navy mb-4">
-            Zone d&apos;intervention à Nice
-          </h2>
-          <p className="text-slate text-sm mb-4">
-            J&apos;interviens dans tous les quartiers de Nice, centre, est, nord et
-            ouest, depuis le {business.address.full}.{" "}
-            <Link href="/zones-intervention-nice/" className="text-steel underline">
-              Voir tous les secteurs couverts
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">
+          Zone d&apos;intervention à Nice
+        </h2>
+        <p className="text-slate text-sm mb-8 text-center max-w-2xl mx-auto">
+          J&apos;interviens dans tous les quartiers de Nice, depuis le {business.address.full}.
+          Choisissez votre secteur pour voir les quartiers couverts et le délai
+          d&apos;intervention habituel.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {sectorCards.map((sector) => (
+            <Link
+              key={sector.key}
+              href={sectorPages[sector.key].href}
+              className="block rounded-xl border border-navy/10 bg-white p-5 shadow-sm hover:border-steel hover:shadow-md transition-all"
+            >
+              <p className="font-heading font-bold text-navy mb-1.5">
+                Serrurier à {sectorPages[sector.key].label}
+              </p>
+              <p className="text-sm text-slate leading-relaxed">{sector.blurb}</p>
             </Link>
-            .
-          </p>
+          ))}
+        </div>
+        <p className="text-center mt-6">
+          <Link href="/zones-intervention-nice/" className="text-steel underline text-sm">
+            Voir tous les quartiers couverts →
+          </Link>
+        </p>
+        <div className="mt-8">
           <LazyMap />
         </div>
-        <div id="contact">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-4">
-            Un devis ou une intervention ?
-          </h2>
-          <p className="text-slate text-sm mb-4">
-            Décrivez votre situation, je vous réponds vite. Pour une urgence, l&apos;appel
-            reste le moyen le plus rapide.
-          </p>
-          <ContactForm />
-        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-4xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-4">
+          Un devis ou une intervention ?
+        </h2>
+        <p className="text-slate text-sm mb-4">
+          Décrivez votre situation, je vous réponds vite. Pour une urgence, l&apos;appel
+          reste le moyen le plus rapide.
+        </p>
+        <ContactForm />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">

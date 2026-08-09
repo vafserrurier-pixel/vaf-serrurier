@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "L'Archet est un secteur de l'ouest de Nice, connu pour son pôle hospitalier, entouré de zones résidentielles et de quelques résidences plus récentes. C'est un quartier pratique, proche des grands axes de circulation vers l'ouest du département.",
-  "J'y interviens pour des particuliers en appartement comme pour des maisons individuelles, avec la même méthode de diagnostic partout à Nice.",
+  "L'hôpital de L'Archet, qui donne son nom au quartier, est né d'un projet porté dans les années 1970 par le Centre Hospitalier Régional de Nice, prévoyant un établissement de 380 lits. La première pierre est posée le 18 février 1975 en présence de la ministre de la Santé Simone Veil et du maire de Nice Jacques Médecin, avant l'inauguration de l'hôpital en 1979.",
+  "Une extension majeure, Archet 2, voit le jour en 1996 avec 506 lits supplémentaires et un parking de 720 places, suivie en 2015 par Archet 3, un bâtiment de bureaux et de services de santé. Autour de ce pôle hospitalier universitaire d'envergure, le quartier s'est développé comme un secteur résidentiel et institutionnel, entouré de zones résidentielles et de résidences plus récentes, proche des grands axes de circulation vers l'ouest du département.",
 ];
 
 const blocks = [
@@ -49,6 +49,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés de L'Archet ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous près des bâtiments Archet 1, 2 et 3 ?",
+    answer:
+      "Oui, tout le pôle hospitalier universitaire et son secteur résidentiel environnant font partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à L'Archet par rapport au reste de Nice ?",

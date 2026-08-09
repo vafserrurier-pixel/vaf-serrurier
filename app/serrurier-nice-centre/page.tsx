@@ -9,17 +9,80 @@ export const metadata: Metadata = {
     "Serrurier dans tout le centre de Nice : Jean-Médecin, Libération, Cimiez, Vieux-Nice et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
 };
 
-const paragraphs = [
-  "Le centre de Nice regroupe la majorité des quartiers où j'interviens le plus souvent : du secteur de la gare à Jean-Médecin jusqu'aux ruelles du Vieux-Nice, en passant par Cimiez, Libération, Carabacel ou la Promenade des Anglais. C'est un secteur dense, avec des immeubles d'époques très différentes, de l'Art déco du Carré d'Or aux résidences plus récentes de Magnan.",
-  "Les repères bien connus comme la place Masséna, l'hôtel Negresco ou la Promenade des Anglais se situent au cœur ou à proximité de ce secteur — je m'y déplace régulièrement, aussi bien pour des urgences en pleine nuit que pour des projets programmés comme un changement de serrure ou l'installation d'une porte blindée.",
-  "Que vous soyez au Carré d'Or, à Cimiez, à Desambrois, à la Libération ou dans le Vieux-Nice, la méthode reste la même : un diagnostic par téléphone, un prix annoncé avant intervention, et un déplacement rapide compte tenu de la position centrale de ces quartiers par rapport à mon point de départ au 2 Rue Antoine Gautier.",
+const intro = [
+  "Le centre de Nice concentre l'essentiel de l'histoire de la ville, de l'Antiquité romaine à la Belle Époque. À Cimiez, les arènes du Ier siècle et le monastère fondé au IXe siècle témoignent de l'ancienne cité de Cemenelum ; dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861 ; et la Promenade des Anglais, financée dès 1822 par la communauté britannique hivernante, a donné son nom à toute une manière de vivre la ville face à la mer.",
+  "Entre ces deux extrêmes, le centre s'est construit couche après couche : la place Garibaldi, ancienne place royale sarde de 1782, l'avenue Jean-Médecin tracée en 1864 dans la vallée du Paillon, ou le Carré d'Or et son Hôtel des Postes de 1888, place Wilson. C'est un secteur dense, où se côtoient immeubles Belle Époque du Carré d'Or et des Musiciens, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
+  "J'interviens dans l'ensemble de ce secteur avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, prix annoncé avant intervention, et un déplacement généralement rapide compte tenu de la position centrale de ces quartiers par rapport à mon point de départ au 2 Rue Antoine Gautier.",
+];
+
+const blocks = [
+  {
+    heading: "Un patrimoine architectural très dense",
+    paragraphs: [
+      "Du Vieux-Nice aux immeubles bourgeois du Carré d'Or et de Cimiez, le centre concentre la plus grande variété de bâti ancien de toute la ville : portes et serrures d'époque, halls de copropriété classés ou très soignés, façades qui imposent une approche respectueuse plutôt qu'un remplacement standard. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible quand c'est possible.",
+    ],
+  },
+  {
+    heading: "Un secteur qui ne dort jamais vraiment",
+    paragraphs: [
+      "Entre les bars du quartier du port voisin, l'animation de la place Garibaldi et du cours Saleya, et les grands axes commerçants de Jean-Médecin, le centre de Nice reste actif tard le soir. J'y interviens régulièrement pour des urgences nocturnes — porte claquée, clé perdue, sécurisation après effraction — avec la majoration de nuit annoncée avant intervention.",
+    ],
+  },
+  {
+    heading: "Des copropriétés de toutes tailles",
+    paragraphs: [
+      "Petits immeubles du Vieux-Nice, grandes copropriétés Belle Époque du Carré d'Or ou de Cimiez, résidences plus récentes de Magnan ou de la Promenade des Anglais : j'interviens sur les portes de hall, digicodes et gâches électriques de toutes ces configurations, à la demande d'un syndic ou d'un résident mandaté.",
+    ],
+  },
+  {
+    heading: "Une position centrale, un déplacement rapide",
+    paragraphs: [
+      "Mon point de départ au 2 Rue Antoine Gautier se trouve au cœur de ce secteur, ce qui me permet généralement d'intervenir plus rapidement dans le centre que dans les zones plus excentrées de Nice, urgence ou projet programmé.",
+    ],
+  },
+];
+
+const faq = [
+  {
+    question: "Quels quartiers du centre de Nice couvrez-vous ?",
+    answer:
+      "L'ensemble du centre : Jean-Médecin, Carré d'Or, Cimiez, Vieux-Nice, Garibaldi, Libération, Gambetta, Carabacel, Parc Impérial, Promenade des Anglais, Magnan et tous les quartiers environnants. Le détail complet est listé sur cette page.",
+  },
+  {
+    question: "Intervenez-vous rapidement dans le centre de Nice ?",
+    answer:
+      "Oui, la position centrale de mon point de départ me permet généralement d'intervenir en 10 à 20 minutes dans la plupart des quartiers du centre, 24h/24 et 7j/7.",
+  },
+  {
+    question: "Savez-vous intervenir sur les immeubles anciens du Vieux-Nice ou du Carré d'Or ?",
+    answer:
+      "Oui, c'est une grande partie de mon activité dans ce secteur. Je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte ancienne.",
+  },
+  {
+    question: "Les tarifs sont-ils différents dans le centre par rapport au reste de Nice ?",
+    answer:
+      "Non, mes tarifs sont identiques sur l'ensemble de la ville, avec la même majoration de nuit et de week-end partout. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Travaillez-vous avec les copropriétés et les syndics du centre-ville ?",
+    answer:
+      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Proposez-vous un devis avant d'intervenir dans le centre de Nice ?",
+    answer:
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+  },
 ];
 
 export default function SerrurierNiceCentrePage() {
   return (
     <SectorPageTemplate
       title="Serrurier à Nice Centre"
-      paragraphs={paragraphs}
+      sectorKey="centre"
+      intro={intro}
+      blocks={blocks}
+      faq={faq}
       quartiers={zones.centre}
       path="/serrurier-nice-centre/"
     />

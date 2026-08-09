@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/ServicePageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-porte-nice/" },
-  title: "Ouverture de porte Nice 24h/24 – Sans casse | VAF",
+  title: "Porte claquée à Nice – Ouverture sans casse 24h/24 | VAF",
   description:
     "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit au 04 22 13 85 44.",
 };
@@ -34,9 +34,9 @@ const sections = [
     ],
   },
   {
-    heading: "Comment se déroule l'intervention",
+    heading: "Une pièce d'identité toujours demandée",
     paragraphs: [
-      "Je vous pose quelques questions au téléphone pour comprendre le type de porte et de serrure concernés, j'annonce un prix, vous validez, j'interviens sur place avec les outils adaptés, et je teste la fermeture plusieurs fois avant de repartir pour m'assurer que tout fonctionne normalement.",
+      "Avant d'ouvrir une porte verrouillée, je dois vérifier votre identité et votre droit d'occupation du logement — pièce d'identité et document à votre nom à cette adresse (bail, facture, titre de propriété). Ce n'est pas de la paperasse inutile : la réglementation impose cette vérification à tout serrurier, sous peine de poursuites pour complicité de violation de domicile en cas de manquement. C'est une protection pour vous comme pour moi.",
     ],
   },
 ];
@@ -72,12 +72,17 @@ const faq = [
     answer:
       "Pas dans la majorité des cas de porte claquée : je privilégie toujours une méthode sans casse quand la configuration le permet. Pour une porte verrouillée sur un modèle de serrure très résistant, une intervention plus technique peut parfois être nécessaire — je vous préviens avant d'agir.",
   },
+  {
+    question: "Pourquoi un serrurier demande-t-il une pièce d'identité avant d'ouvrir une porte ?",
+    answer:
+      "C'est une obligation réglementaire, pas un choix de ma part : je dois vérifier votre identité et votre droit d'occupation du logement avant toute ouverture de porte verrouillée, pour éviter de faciliter une intrusion. Gardez une pièce d'identité et un justificatif à votre nom à portée de main.",
+  },
 ];
 
 export default function OuvertureDePorteNicePage() {
   return (
     <ServicePageTemplate
-      h1="Ouverture de porte à Nice, 24h/24 et 7j/7"
+      h1="Porte claquée à Nice : ouverture 24h/24 et 7j/7"
       lead="Porte claquée ou fermée à clé, avec ou sans casse selon la situation : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement."
       sections={sections}
       faq={faq}

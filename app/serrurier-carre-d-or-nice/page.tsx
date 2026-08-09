@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Carré d'Or est le quartier commerçant et résidentiel le plus chic du centre de Nice, entre la place Masséna et la Promenade des Anglais. Ses immeubles Belle Époque abritent boutiques de luxe en rez-de-chaussée et appartements de standing aux étages.",
-  "C'est un secteur où l'exigence esthétique est forte : les interventions de serrurerie doivent être aussi soignées que discrètes, sans dénaturer des façades et des halls souvent classés ou très surveillés.",
+  "Historiquement appelé quartier de la Buffa, du nom de la rue qui le traverse d'est en ouest, ce secteur s'est imposé comme le « Carré d'Or » à mesure qu'il devenait l'adresse de référence du centre niçois, à partir de la Belle Époque, quand Nice attirait l'aristocratie européenne et les têtes couronnées. Il est aujourd'hui délimité par l'avenue Jean-Médecin, la Promenade des Anglais et le jardin Albert Ier, et regroupe des rues emblématiques comme la rue de France, la rue du Maréchal-Joffre, la rue Masséna ou la rue de la Liberté.",
+  "Le quartier conserve le plus ancien monument de Nice, la Croix de Marbre du XVIe siècle, aux côtés d'immeubles et villas Belle Époque et Art déco datant de 1895 à 1920, aux façades élégantes et aux balcons en fer forgé. Plusieurs hôtels prestigieux, dont le célèbre Negresco, renforcent le rayonnement international de ce secteur devenu la zone piétonne et commerçante la plus recherchée du centre-ville.",
 ];
 
 const blocks = [
@@ -24,6 +24,12 @@ const blocks = [
     heading: "Appartements et commerces",
     paragraphs: [
       "Au-dessus des boutiques, les appartements combinent souvent charme ancien et rénovation récente. Le diagnostic reste systématique avant de proposer réparation, remplacement de cylindre ou renforcement de la porte d'entrée.",
+    ],
+  },
+  {
+    heading: "Boutiques de luxe et sécurisation commerciale",
+    paragraphs: [
+      "Les commerces haut de gamme de la rue de France, de la rue du Maréchal-Joffre ou de la rue Masséna ont des exigences de sécurité élevées. J'interviens sur le renforcement de portes de boutique et de rideaux métalliques avec la même discrétion attendue dans ce quartier de standing.",
     ],
   },
   {
@@ -51,9 +57,19 @@ const faq = [
       "Oui, pour la partie serrurerie de ces locaux (porte d'entrée, cylindre, renforcement), selon le même principe de diagnostic et de devis annoncé.",
   },
   {
+    question: "Intervenez-vous discrètement pour une boutique de luxe du quartier ?",
+    answer:
+      "Oui, je m'adapte à la discrétion attendue dans ce quartier, sans camion visible ni intervention bruyante si ce n'est pas nécessaire.",
+  },
+  {
     question: "Les tarifs sont-ils différents au Carré d'Or par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Intervenez-vous près de la Promenade des Anglais et du Negresco ?",
+    answer:
+      "Oui, toute cette partie du Carré d'Or jusqu'à la Promenade des Anglais fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",

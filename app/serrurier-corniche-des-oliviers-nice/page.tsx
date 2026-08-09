@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "La Corniche des Oliviers est un secteur résidentiel des hauteurs nord de Nice, au cadre verdoyant, avec un habitat principalement composé de villas et de propriétés individuelles entourées de jardins.",
-  "J'y interviens pour des propriétaires de maisons, avec la même exigence de diagnostic et de devis annoncé avant intervention que partout ailleurs à Nice.",
+  "La Corniche des Oliviers, qui relie Saint-Pierre-de-Féric à Saint-Pancrace, a été inaugurée en 1931, sur les hauteurs situées entre Fabron et Nice Nord. Comme beaucoup de secteurs agricoles des collines niçoises, ses cultures ont été progressivement remplacées par des exploitations horticoles dédiées à l'œillet, avant que l'urbanisation massive des années 1960-1970 ne transforme définitivement le quartier en secteur résidentiel.",
+  "Ce secteur des hauteurs nord de Nice offre aujourd'hui plusieurs points de vue remarquables, sur la baie des Anges comme sur le massif du Mercantour depuis ses points les plus élevés. L'habitat y est principalement composé de villas et de propriétés individuelles entourées de jardins, dans un cadre verdoyant préservé.",
 ];
 
 const blocks = [
@@ -44,6 +44,11 @@ const faq = [
     question: "Intervenez-vous sur les villas du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous sur tout le tracé de la Corniche des Oliviers, de Saint-Pierre-de-Féric à Saint-Pancrace ?",
+    answer:
+      "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle sur les hauteurs nord de Nice.",
   },
   {
     question: "Les tarifs sont-ils différents dans ce secteur par rapport au reste de Nice ?",

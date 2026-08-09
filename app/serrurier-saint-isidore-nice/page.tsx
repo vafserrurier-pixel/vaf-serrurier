@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Saint-Isidore est un secteur de l'extrême ouest de Nice, avec un habitat plus récent que le centre-ville, mêlant résidences neuves et quelques maisons individuelles. C'est un quartier en développement, plus suburbain que le reste de la ville.",
-  "J'y interviens pour des logements récents comme pour des maisons individuelles, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+  "Saint-Isidore tire son nom d'Isidore le Laboureur, saint espagnol du XIIe siècle vénéré pour son lien spirituel avec la terre et les cycles agricoles — une procession traditionnelle perpétue encore chaque année en avril cette dévotion séculaire. À l'origine, Saint-Isidore était un relais de diligences, une étape stratégique où voyageurs et attelages s'arrêtaient avant de rejoindre Nice, le temps de reposer et de changer les chevaux.",
+  "D'anciennes fermes reconverties en lieux culturels racontent aujourd'hui ce passé agricole, aux côtés de l'église paroissiale dédiée à saint Isidore. Le quartier abrite aussi le Musée National du Sport, seul établissement en France consacré à la préservation de l'histoire sportive, et le stade Allianz Riviera qui accueille l'OGC Nice, représentant la facette contemporaine de ce secteur de l'extrême ouest niçois, avec un habitat plus récent mêlant résidences neuves et quelques maisons individuelles.",
 ];
 
 const blocks = [
+  {
+    heading: "D'un relais de diligences à un pôle sportif",
+    paragraphs: [
+      "L'héritage agricole de Saint-Isidore, ancien relais de diligences, cohabite aujourd'hui avec le stade Allianz Riviera et le Musée National du Sport. Les résidences construites autour de ces pôles d'attraction ont des profils variés que je diagnostique au cas par cas.",
+    ],
+  },
   {
     heading: "Un habitat plus récent",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur des résidences récentes du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous près du stade Allianz Riviera ou du Musée National du Sport ?",
+    answer:
+      "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle à l'extrême ouest de Nice.",
   },
   {
     question: "Les tarifs sont-ils différents à Saint-Isidore par rapport au reste de Nice ?",

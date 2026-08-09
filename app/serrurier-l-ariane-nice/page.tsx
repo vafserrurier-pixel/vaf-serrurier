@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "L'Ariane est un grand quartier résidentiel du nord-est de Nice, dans la vallée du Paillon, composé principalement de grands ensembles d'habitat collectif. Une partie du quartier a connu des programmes de rénovation urbaine ces dernières années.",
-  "J'y interviens régulièrement pour des particuliers en appartement et pour des halls d'immeuble en copropriété, avec la même méthode de diagnostic partout à Nice.",
+  "L'Ariane doit son nom à la plaine alluviale du Paillon : « arena » signifie le sable, en latin comme en niçois. Son éloignement du centre-ville, tout au nord des limites communales, a longtemps favorisé un habitat rural : un petit hameau s'est formé peu à peu autour de la chapelle Saint-Pierre, comptant environ 500 habitants en 1844, un chiffre qui double pour atteindre 1 000 habitants en 1936.",
+  "C'est durant les Trente Glorieuses que l'Ariane connaît sa métamorphose la plus spectaculaire : les premières constructions de grands ensembles apparaissent dans les années 1950, avec une accélération majeure dans les années 1960-1970, en remplacement des anciens hameaux ruraux. Le quartier accueille alors des rapatriés d'Algérie puis des travailleurs immigrés. Il compte aujourd'hui près de 12 000 habitants sur 35 hectares, et bénéficie depuis 2008 d'un programme de renouvellement urbain de 300 millions d'euros.",
 ];
 
 const blocks = [
+  {
+    heading: "Un grand ensemble en pleine rénovation urbaine",
+    paragraphs: [
+      "Le programme de renouvellement urbain engagé depuis 2008 transforme progressivement le bâti de l'Ariane, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des grands ensembles plus anciens des années 1960-1970. Je m'adapte à ces deux réalités très différentes.",
+    ],
+  },
   {
     heading: "Un habitat collectif qui demande un suivi régulier",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur la porte d'entrée d'un immeuble à l'Ariane ?",
     answer:
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Intervenez-vous sur les nouveaux programmes du renouvellement urbain de l'Ariane ?",
+    answer:
+      "Oui, avec l'arrivée de nouveaux logements, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité si besoin.",
   },
   {
     question: "Les tarifs sont-ils différents à l'Ariane par rapport au centre de Nice ?",

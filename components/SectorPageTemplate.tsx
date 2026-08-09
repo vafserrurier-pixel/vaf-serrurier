@@ -2,27 +2,48 @@ import Link from "next/link";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
 import ServiceGrid from "./ServiceGrid";
+import ReviewsSection from "./ReviewsSection";
+import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import CtaBlock from "./CtaBlock";
 import LazyMap from "./LazyMap";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
-import { isQuartierBuilt, quartierHref } from "@/lib/quartiers";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
+import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
+
+export type ContentBlock = { heading: string; paragraphs: string[] };
 
 export default function SectorPageTemplate({
   title,
-  paragraphs,
+  sectorKey,
+  intro,
+  blocks,
+  faq,
   quartiers,
   path,
 }: {
   title: string;
-  paragraphs: string[];
+  sectorKey: keyof typeof sectorPages;
+  intro: string[];
+  blocks: ContentBlock[];
+  faq: FaqItem[];
   quartiers: readonly string[];
   path: string;
 }) {
   const url = `${business.domain}${path}`;
+  const siblingSectors = (Object.keys(sectorPages) as (keyof typeof sectorPages)[]).filter(
+    (key) => key !== sectorKey,
+  );
 
   return (
     <>
+      <JsonLd
+        data={serviceSchema({
+          name: title,
+          description: intro[0],
+          url,
+        })}
+      />
+      <JsonLd data={faqSchema(faq)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },
@@ -41,10 +62,16 @@ export default function SectorPageTemplate({
         />
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{title}</h1>
         <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">
-          {paragraphs.map((paragraph, index) => (
+          {intro.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
+        <a
+          href={business.phone.href}
+          className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+        >
+          Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+        </a>
 
         <div className="mt-8">
           <LazyMap />
@@ -74,15 +101,64 @@ export default function SectorPageTemplate({
             ),
           )}
         </ul>
+      </section>
 
-        <h2 className="font-heading text-xl font-bold text-navy mt-10 mb-4">
-          Mes services
+      <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
+        <h2 className="font-heading text-2xl font-bold text-navy -mb-2">
+          Serrurier à {title.replace("Serrurier à ", "")} : dépannage, ouverture de porte,
+          changement de serrure
         </h2>
-        <ServiceGrid />
+        {blocks.map((block) => (
+          <div key={block.heading}>
+            <h3 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h3>
+            {block.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-slate leading-relaxed mb-2">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        ))}
+      </section>
 
-        <div className="mt-10">
-          <CtaBlock />
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
+        <FaqAccordion items={faq} />
+      </section>
+
+      <section className="bg-navy py-14">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="font-heading text-xl font-bold text-cream mb-4">Mes services</h2>
+          <ServiceGrid />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <ReviewsSection />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">Les autres secteurs de Nice</h2>
+        <div className="flex flex-wrap gap-3">
+          {siblingSectors.map((key) => (
+            <Link
+              key={key}
+              href={sectorPages[key].href}
+              className="block bg-white border border-navy/10 rounded-lg px-4 py-2.5 text-sm text-navy hover:border-steel"
+            >
+              Serrurier à {sectorPages[key].label}
+            </Link>
+          ))}
+          <Link
+            href="/zones-intervention-nice/"
+            className="block bg-cream border border-navy/10 rounded-lg px-4 py-2.5 text-sm text-steel hover:border-steel"
+          >
+            Voir tous les quartiers →
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <CtaBlock title={`Besoin d'un serrurier ${title.replace("Serrurier à", "à")} ?`} />
       </section>
     </>
   );

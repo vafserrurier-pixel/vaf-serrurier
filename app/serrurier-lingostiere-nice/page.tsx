@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Lingostière est un secteur à l'extrême ouest du territoire de Nice, à la frontière avec les communes voisines, avec un habitat mêlant zones résidentielles et quelques zones d'activité. C'est le secteur le plus excentré que je couvre depuis mon point de départ.",
-  "J'y interviens pour des logements résidentiels comme pour la partie serrurerie de locaux professionnels, avec la même exigence de diagnostic partout à Nice.",
+  "Lingostière se situe à la lisière nord-ouest de Nice, dans la vallée du Var, un secteur au double visage : d'un côté, la plaine du Var traversée par des voies rapides et par la ligne du Train des Pignes ; de l'autre, un territoire de collines où subsistent des activités agricoles et un habitat dispersé. Le patrimoine architectural du secteur, marqué par des styles allant de l'époque romaine aux influences baroques, comprend notamment d'anciennes églises aux caractéristiques remarquables.",
+  "Aujourd'hui, Lingostière est un quartier vivant et rural qui compte environ 1 300 habitants, avec des ménages plus grands que la moyenne niçoise (3,5 personnes en moyenne) et un habitat mêlant zones résidentielles, activités commerciales, petite industrie et loisirs comme le tennis ou le golf. C'est le secteur le plus excentré que je couvre depuis mon point de départ.",
 ];
 
 const blocks = [
+  {
+    heading: "Entre vallée du Var et collines agricoles",
+    paragraphs: [
+      "Le double visage de Lingostière, entre la plaine du Var et les collines rurales, se traduit par un bâti varié : résidences proches des axes routiers, maisons plus isolées sur les hauteurs. Je m'adapte à chaque configuration avec le même soin de diagnostic.",
+    ],
+  },
   {
     heading: "Un secteur excentré aux confins de Nice",
     paragraphs: [
@@ -39,6 +45,11 @@ const faq = [
     question: "Intervenez-vous rapidement à Lingostière en cas d'urgence ?",
     answer:
       "Oui, je me déplace 24h/24 et 7j/7 à Lingostière comme sur le reste de Nice, avec un délai habituel de 30 à 40 minutes selon la circulation, ce secteur étant le plus excentré que je couvre.",
+  },
+  {
+    question: "Intervenez-vous sur les propriétés isolées des collines de Lingostière ?",
+    answer:
+      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration de la propriété.",
   },
   {
     question: "Les tarifs sont-ils différents à Lingostière par rapport au centre de Nice ?",

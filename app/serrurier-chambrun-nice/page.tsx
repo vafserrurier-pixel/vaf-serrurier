@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Chambrun est un quartier résidentiel du nord de Nice, proche de l'Ariane, avec un bâti principalement composé de grands ensembles d'habitat collectif. C'est un secteur où j'interviens régulièrement pour des demandes classiques de serrurerie.",
-  "J'y interviens pour des particuliers en appartement et pour des halls d'immeuble en copropriété, avec la même méthode de diagnostic partout à Nice.",
+  "Le parc Chambrun, qui donne son nom au quartier, était à l'origine une propriété du comte Caïs de Pierlas, où se dressait un château du début du XIXe siècle. Le comte fit appel à l'architecte Philippe Randon pour en faire un parc de plaisance dédié à son amour de la musique. Le domaine devint ensuite, pendant une longue période, la propriété du comte de Chambrun, sociologue et homme politique français installé à Nice en 1879.",
+  "Ce domaine abritait autrefois la première patinoire de la ville, le Palais de Glace, et son célèbre kiosque à musique, surnommé le « temple de l'Amour », est toujours apprécié des promeneurs aujourd'hui. Le lotissement s'est organisé autour de quatre voies sinueuses — avenues Chateaubriand, Alfred-de-Musset, George-Sand et André-Chénier — en respectant par endroits les bouquets d'arbres de hautes futaies du parc d'origine. Aujourd'hui, Chambrun est un quartier résidentiel du nord de Nice, proche de l'Ariane, avec un bâti principalement composé de grands ensembles d'habitat collectif.",
 ];
 
 const blocks = [
+  {
+    heading: "Un lotissement né d'un parc de plaisance du XIXe siècle",
+    paragraphs: [
+      "Les immeubles construits autour du parc Chambrun depuis le XXe siècle ont des profils variés selon leur date de construction. Je diagnostique chaque situation avant de proposer réparation ou remplacement.",
+    ],
+  },
   {
     heading: "Un habitat collectif à entretenir régulièrement",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur la porte d'entrée d'un immeuble à Chambrun ?",
     answer:
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près du parc Chambrun et de son kiosque à musique ?",
+    answer:
+      "Oui, tout ce secteur résidentiel autour du parc fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Chambrun par rapport au centre de Nice ?",

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Rimiez est un quartier résidentiel des hauteurs nord de Nice, voisin de Cimiez, avec un cadre verdoyant et calme. Le bâti y mêle villas, petites résidences et quelques ensembles collectifs plus importants.",
-  "J'y interviens pour des configurations variées, avec la même exigence de diagnostic avant toute intervention, que ce soit pour une villa ou un appartement en résidence.",
+  "Rimiez s'est développé au XIXe siècle comme quartier résidentiel sur les hauteurs de Nice, dans la continuité de Cimiez tout proche, à l'époque où l'aristocratie européenne recherchait ces collines pour leur climat et leur tranquillité. Le quartier compte aujourd'hui plus de 6 300 habitants, avec un profil plutôt âgé (47 ans en moyenne) et une majorité de couples sans enfant.",
+  "Le parc immobilier de Rimiez reste majoritairement composé d'appartements, aux côtés de maisons individuelles, sur une surface de 2,1 km² parsemée de nombreux espaces verts. C'est un quartier au cadre verdoyant et calme, avec un bâti qui mêle villas, petites résidences et quelques ensembles collectifs plus importants.",
 ];
 
 const blocks = [
@@ -18,6 +18,12 @@ const blocks = [
     heading: "Un quartier résidentiel calme",
     paragraphs: [
       "Rimiez conserve un caractère plus vert et résidentiel que le centre-ville, avec des maisons individuelles et des petites copropriétés. Le diagnostic reste systématique pour identifier la meilleure solution selon votre porte.",
+    ],
+  },
+  {
+    heading: "Un quartier de résidents installés depuis longtemps",
+    paragraphs: [
+      "Avec un âge moyen plus élevé que la moyenne niçoise, Rimiez compte de nombreux propriétaires installés depuis longtemps, avec des serrures parfois anciennes. Je privilégie systématiquement la réparation quand elle est possible plutôt qu'un remplacement complet.",
     ],
   },
   {
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les résidences collectives de Rimiez ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous sur des serrures anciennes chez des propriétaires installés depuis longtemps ?",
+    answer:
+      "Oui, c'est fréquent à Rimiez. Je privilégie systématiquement la réparation quand elle est possible plutôt qu'un remplacement complet.",
   },
   {
     question: "Les tarifs sont-ils différents à Rimiez par rapport au reste de Nice ?",

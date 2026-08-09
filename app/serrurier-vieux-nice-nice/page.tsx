@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Vieux-Nice est le cœur historique de la ville : ruelles étroites et souvent piétonnes, immeubles anciens aux façades colorées, proximité du cours Saleya et de la colline du Château. C'est un secteur très dense, où le bâti remonte parfois aux XVIIe et XVIIIe siècles.",
-  "Ce patrimoine ancien implique des contraintes particulières : portes et serrures d'époque, accès parfois compliqués pour un véhicule, et un diagnostic qui demande une vraie expertise plutôt qu'une solution standard.",
+  "Le Vieux-Nice est le cœur historique de la ville, avec ses ruelles étroites et souvent piétonnes, ses façades colorées et ses places animées. Le cours Saleya, son artère la plus célèbre, était connu dès le XVIIIe siècle sous le nom de « Palco » — la « scène » en italien — un lieu de promenade privilégié pour la haute société où, à partir de 1714, il fallait être vu.",
+  "Le grand tournant de son histoire survient en 1861, avec la création du marché aux fleurs, fruits et légumes qui ancre définitivement sa vocation commerçante et populaire, après avoir accueilli au XIXe siècle les défilés du carnaval de Nice avant leur déplacement vers la ville nouvelle. Aujourd'hui encore, les façades ocre et jaune du cours Saleya abritent l'un des plus beaux marchés de la région, cœur battant d'un quartier au bâti remontant parfois aux XVIIe et XVIIIe siècles.",
 ];
 
 const blocks = [
+  {
+    heading: "Autour du marché du cours Saleya",
+    paragraphs: [
+      "Les immeubles qui bordent le cours Saleya, marché quotidien depuis 1861, ont souvent des portes et des serrures anciennes soumises à un passage important de riverains et de commerçants. Je diagnostique systématiquement l'état réel du mécanisme avant de proposer une réparation ou un remplacement.",
+    ],
+  },
   {
     heading: "Un bâti ancien qui demande une approche adaptée",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Intervenez-vous pour les locations saisonnières du Vieux-Nice ?",
     answer:
       "Oui, je peux intervenir rapidement en cas de porte claquée ou de souci de serrure entre deux locations, pour des propriétaires ou des gestionnaires de biens.",
+  },
+  {
+    question: "Intervenez-vous tôt le matin pendant les horaires du marché du cours Saleya ?",
+    answer:
+      "Oui, je peux intervenir tôt le matin comme à tout autre moment de la journée, en tenant compte de l'affluence du marché pour organiser mon accès.",
   },
   {
     question: "Les tarifs sont-ils différents dans le Vieux-Nice par rapport au reste de la ville ?",

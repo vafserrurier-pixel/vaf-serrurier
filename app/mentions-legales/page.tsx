@@ -26,6 +26,7 @@ export default function MentionsLegalesPage() {
             {business.phone.display}
           </a>
         </p>
+        <p>Assurance responsabilité civile professionnelle et garantie décennale souscrites.</p>
       </div>
 
       <div>

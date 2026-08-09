@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier de la Libération s'organise autour de son marché couvert, l'un des plus animés de Nice, au nord de la gare. C'est un quartier populaire et vivant, avec un bâti dense d'immeubles du début et du milieu du XXe siècle.",
-  "La vie de quartier autour du marché et des commerces de proximité en fait un secteur où j'interviens fréquemment, pour des particuliers comme pour des petits immeubles en copropriété.",
+  "Le quartier de la Libération s'est développé au XIXe siècle autour de l'avenue Malausséna, sur des terrains encore agricoles à l'époque. L'arrivée de la Gare du Sud en 1892 a donné une nouvelle énergie au secteur, entraînant l'urbanisation le long du boulevard Joseph-Garnier et de l'avenue Alfred-Borriglione. La place du Général-de-Gaulle porte la mémoire des résistants tombés lors des combats contre l'occupant allemand le 28 août 1944.",
+  "Aujourd'hui, le quartier s'organise toujours autour de son marché couvert, l'un des plus animés de Nice, qui s'étend de la place du Général-de-Gaulle jusqu'à l'avenue Malausséna, la rue Clément-Roassal, la rue Joseph-Garnier et la rue Veillon. L'arrivée du tramway et la rénovation de la Gare du Sud ont dynamisé ce secteur populaire et vivant, au bâti dense d'immeubles du début et du milieu du XXe siècle.",
 ];
 
 const blocks = [
@@ -21,9 +21,15 @@ const blocks = [
     ],
   },
   {
-    heading: "Proximité du marché et des commerces",
+    heading: "Autour du marché et de la Gare du Sud",
     paragraphs: [
-      "Le secteur mêle logements et commerces de proximité. Pour la partie serrurerie de ces locaux — porte d'entrée, rideau métallique excepté —, j'applique la même méthode de diagnostic et de devis annoncé avant intervention.",
+      "Le secteur mêle logements et commerces de proximité, entre le marché couvert et la Gare du Sud rénovée. Pour la partie serrurerie de ces locaux — porte d'entrée, rideau métallique excepté —, j'applique la même méthode de diagnostic et de devis annoncé avant intervention.",
+    ],
+  },
+  {
+    heading: "Un quartier dynamisé par le tramway",
+    paragraphs: [
+      "La revitalisation récente du secteur, portée par l'arrivée du tramway et l'ouverture de nouveaux commerces, s'accompagne d'un renouvellement progressif du bâti. Je m'adapte aussi bien aux vieux immeubles qu'aux constructions plus récentes.",
     ],
   },
   {
@@ -46,6 +52,11 @@ const faq = [
       "Oui, c'est un secteur où j'interviens régulièrement, notamment sur les cylindres de porte d'entrée et les serrures de hall soumis à un usage intensif.",
   },
   {
+    question: "Intervenez-vous près de la Gare du Sud ?",
+    answer:
+      "Oui, tout le secteur autour de la Gare du Sud rénovée et de l'avenue Malausséna fait partie de ma zone d'intervention habituelle.",
+  },
+  {
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques des parties communes.",
@@ -54,6 +65,11 @@ const faq = [
     question: "Les tarifs sont-ils différents au quartier Libération par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Intervenez-vous tôt le matin pendant les horaires du marché ?",
+    answer:
+      "Oui, je peux intervenir tôt le matin comme à tout autre moment de la journée, avec un devis annoncé avant le déplacement.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",

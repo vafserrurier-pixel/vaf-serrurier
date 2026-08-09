@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Riquier est un quartier de l'est de Nice, organisé autour de sa gare ferroviaire et de son marché, à mi-chemin entre le port et les hauteurs du secteur Est. C'est un quartier populaire et vivant, avec un bâti mêlant immeubles anciens du début du XXe siècle et constructions plus récentes.",
-  "Le passage important autour de la gare et des commerces locaux en fait un secteur où j'interviens régulièrement, aussi bien pour du dépannage classique que pour des demandes de sécurisation après effraction.",
+  "Le nom de Riquier viendrait d'une riche famille niçoise propriétaire terrienne, ou d'un ancien cours d'eau appelé Richier qui aurait traversé la zone. Autrefois territoire de jardins potagers et d'arbres fruitiers dès la fin du Moyen Âge, le secteur abritait des moulins exploitant les eaux de l'ancien lit du Paillon, où s'étaient installés forgerons, tonneliers et autres artisans.",
+  "À partir du XVIIIe siècle, Riquier devient le cœur industriel de Nice : manufacture des tabacs (1861-1979), atelier de mécanique et de menuiserie, usine à gaz de 1854, laboratoires Ronchèse (1927-1974). Le boulevard de Riquier, inauguré en 1886, symbolise la transition vers un quartier plus urbain, dont la plupart des immeubles actuels datent des années 1920. Aujourd'hui organisé autour de sa gare ferroviaire et de son marché, c'est un quartier populaire et vivant, à mi-chemin entre le port et les hauteurs du secteur Est.",
 ];
 
 const blocks = [
+  {
+    heading: "Un héritage industriel et artisanal",
+    paragraphs: [
+      "L'ancien tissu industriel de Riquier — manufacture des tabacs, usine à gaz, ateliers mécaniques — a laissé place à des immeubles résidentiels construits pour la plupart dans les années 1920. Je diagnostique systématiquement l'état réel des serrures de ce bâti avant de proposer une réparation ou un remplacement.",
+    ],
+  },
   {
     heading: "Un bâti mêlant plusieurs époques",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Intervenez-vous sur les portes de hall d'immeuble à Riquier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Intervenez-vous sur les immeubles des années 1920 typiques de Riquier ?",
+    answer:
+      "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet de la serrure.",
   },
   {
     question: "Les tarifs sont-ils différents à Riquier par rapport au reste de Nice ?",

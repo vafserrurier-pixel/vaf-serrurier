@@ -23,6 +23,7 @@ const sectors: { key: keyof typeof sectorPages; label: string; quartiers: readon
 
 export default function ZonesInterventionNicePage() {
   return (
+    <>
     <section className="mx-auto max-w-4xl px-4 py-10">
       <Breadcrumbs
         items={[
@@ -90,14 +91,18 @@ export default function ZonesInterventionNicePage() {
         ))}
       </div>
 
-      <div className="mt-14">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Mes services</h2>
+    </section>
+
+    <section className="bg-navy py-14">
+      <div className="mx-auto max-w-4xl px-4">
+        <h2 className="font-heading text-xl font-bold text-cream mb-4">Mes services</h2>
         <ServiceGrid />
       </div>
-
-      <div className="mt-10">
-        <CtaBlock />
-      </div>
     </section>
+
+    <section className="mx-auto max-w-4xl px-4 py-10">
+      <CtaBlock />
+    </section>
+    </>
   );
 }

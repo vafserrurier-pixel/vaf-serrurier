@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Saint-Roch est un quartier résidentiel dense de l'est de Nice, entre Riquier et la vallée du Paillon. Le bâti y est majoritairement composé d'immeubles du milieu du XXe siècle, avec un tissu urbain populaire et vivant.",
-  "J'y interviens fréquemment pour du dépannage classique, des remplacements de serrure et des demandes de sécurisation après effraction.",
+  "Anciennement appelé Roquebillière, le quartier Saint-Roch fut ravagé, comme toute la ville de Nice, par une terrible épidémie de peste en 1631 qui décima la moitié de la population. Avant la Première Guerre mondiale, le secteur était encore une étendue fertile vouée à l'agriculture, nourrie par des ruisseaux et des sources.",
+  "À la fin du XIXe siècle, avec le renforcement du dispositif de défense de l'État-major français dans les Alpes-Maritimes, la caserne Auvare s'installe sur des terrains vendus par la marquise de Châteauneuf en 1884. Le 6e bataillon de chasseurs alpins s'y établit en 1889, remplacé en 1920 par le 22e, originaire d'Albertville, si apprécié des Niçois qu'il inspira le surnom des « Diables Bleus » à la rue voisine. Fermée en 1995, la caserne est depuis 2003 devenue un campus universitaire. Aujourd'hui, Saint-Roch est un quartier résidentiel dense entre Riquier et la vallée du Paillon, au tissu urbain populaire et vivant.",
 ];
 
 const blocks = [
+  {
+    heading: "Autour de l'ancienne caserne Auvare",
+    paragraphs: [
+      "Le site de l'ancienne caserne, reconverti en campus universitaire depuis 2003, a transformé une partie du quartier. Les immeubles construits autour conservent des besoins classiques de serrurerie que je diagnostique au cas par cas.",
+    ],
+  },
   {
     heading: "Un quartier populaire, un bâti à entretenir",
     paragraphs: [

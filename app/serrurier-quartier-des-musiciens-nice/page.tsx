@@ -9,15 +9,21 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier des Musiciens, dont les rues portent des noms de compositeurs, se situe dans le centre de Nice, dans un secteur résidentiel calme aux immeubles de standing modeste à moyen. C'est un quartier essentiellement résidentiel, proche des grands axes du centre-ville.",
-  "J'y interviens pour du dépannage courant, des changements de serrure et des demandes de sécurisation, avec la même méthode de diagnostic qu'ailleurs à Nice.",
+  "Le quartier des Musiciens s'étend de la rue Paganini à l'est jusqu'à l'avenue Gambetta à l'ouest, entre le boulevard Victor Hugo au sud et l'avenue Thiers au nord, où se trouve la gare centrale de Nice. Il doit son nom aux rues qui le traversent, toutes baptisées en hommage à de grands compositeurs : place Mozart, rue Verdi, rue Berlioz, rue Rossini, rue Offenbach, rue Gounod, ou encore rue Beethoven et rue Saint-Saëns.",
+  "Le quartier s'est développé à la fin du XIXe siècle, après l'arrivée du chemin de fer, quand la haute société recherchait des immeubles élégants à proximité de la gare et du centre-ville. On y trouve encore aujourd'hui une architecture riche et variée, mêlant Belle Époque, Art nouveau et Art déco — Simone Veil elle-même évoquait dans ses mémoires le bel immeuble bourgeois du quartier des Musiciens que ses parents avaient dû quitter à la fin des années 1920.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier résidentiel calme",
+    heading: "Un patrimoine Belle Époque et Art déco",
     paragraphs: [
-      "Les immeubles du quartier des Musiciens sont majoritairement résidentiels, avec des serrures qui demandent un entretien régulier pour rester fiables dans la durée. Je diagnostique chaque situation avant de proposer une solution adaptée.",
+      "Les immeubles bourgeois des rues Verdi, Rossini ou Gounod ont souvent conservé des portes et des serrures d'origine ou installées il y a plusieurs décennies. Je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard qui dénaturerait ces façades soignées, sauf quand le mécanisme est trop endommagé pour être restauré.",
+    ],
+  },
+  {
+    heading: "Un secteur central, proche de la gare",
+    paragraphs: [
+      "La proximité de la gare de Nice-Ville et du centre-ville donne à ce quartier un profil résidentiel dense, avec un usage intensif des serrures de hall et des portes d'entrée. Je diagnostique systématiquement l'origine réelle d'une panne avant de proposer une réparation ou un remplacement.",
     ],
   },
   {
@@ -29,7 +35,7 @@ const blocks = [
   {
     heading: "Interventions en copropriété",
     paragraphs: [
-      "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+      "Pour les immeubles bourgeois du secteur, souvent organisés en copropriété, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté, avec une attention particulière portée à la cohérence esthétique du bâti ancien.",
     ],
   },
 ];
@@ -41,9 +47,14 @@ const faq = [
       "Oui, je me déplace 24h/24 et 7j/7 dans ce quartier central, avec un délai habituel de 10 à 20 minutes selon la circulation.",
   },
   {
-    question: "Intervenez-vous sur les immeubles résidentiels du secteur ?",
+    question: "Travaillez-vous sur les serrures anciennes des immeubles Belle Époque du quartier ?",
     answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement de cylindre ou serrure complète.",
+      "Oui, c'est fréquent dans ce secteur. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
+  },
+  {
+    question: "Intervenez-vous près de la gare de Nice-Ville ?",
+    answer:
+      "Oui, le quartier des Musiciens jouxte la gare centrale et fait partie de mon secteur d'intervention habituel dans le centre de Nice.",
   },
   {
     question: "Travaillez-vous avec les copropriétés du quartier ?",
@@ -54,6 +65,11 @@ const faq = [
     question: "Les tarifs sont-ils différents dans ce quartier par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+  },
+  {
+    question: "Que faire si ma clé casse dans une serrure ancienne du quartier des Musiciens ?",
+    answer:
+      "J'extrais le morceau resté dans le cylindre et je vérifie s'il est compatible avec un remplacement simple, avant d'envisager un changement complet si le modèle est trop ancien.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",

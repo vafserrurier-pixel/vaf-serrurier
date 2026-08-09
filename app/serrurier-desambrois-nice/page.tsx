@@ -9,27 +9,33 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Desambrois est un quartier central de Nice, aux abords de la colline du Château, où se côtoient des immeubles anciens typiques du centre-ville et des constructions plus récentes. C'est un secteur que je connais bien, à proximité immédiate de mon point de départ au 2 Rue Antoine Gautier.",
-  "La proximité avec le Vieux-Nice et le centre-ville signifie aussi des bâtiments avec des portes et serrures d'époques très variées, du modèle ancien à remettre en état au cylindre moderne installé récemment.",
+  "L'avenue Desambrois, qui donne son nom au quartier, tire son nom de Louis des Ambrois de Névache, intendant sarde du XIXe siècle — une référence à l'époque où Nice appartenait encore au royaume de Sardaigne, avant son rattachement à la France en 1860. Le quartier fait la jonction entre les secteurs des Baumettes et de Carabacel, à proximité immédiate de mon point de départ au 2 Rue Antoine Gautier.",
+  "L'avenue est bordée d'immeubles de la période Belle Époque aux façades travaillées, aujourd'hui pour beaucoup transformés en copropriétés résidentielles. C'est un quartier dense et animé, avec environ 2 300 habitants, majoritairement locataires, et un âge moyen autour de 42 ans — un profil de quartier central plutôt jeune et actif.",
 ];
 
 const blocks = [
   {
-    heading: "Un quartier central, un bâti hétérogène",
+    heading: "Un patrimoine Belle Époque à respecter",
     paragraphs: [
-      "À Desambrois, je croise autant des immeubles de la fin du XIXe ou du début du XXe siècle, avec des portes en bois massif et des serrures encastrées d'origine, que des résidences plus récentes équipées de serrures multipoints standard. Le diagnostic est donc systématique : je ne propose jamais la même solution sans avoir vérifié l'état réel de votre porte et de son mécanisme.",
+      "Les immeubles Belle Époque de l'avenue Desambrois ont souvent conservé leurs portes et serrures d'origine, ou des modèles installés il y a plusieurs décennies. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard qui dénaturerait une porte ancienne, sauf quand le mécanisme est trop endommagé pour être restauré.",
     ],
   },
   {
-    heading: "Serrures anciennes : réparer avant de remplacer",
+    heading: "Un quartier de locataires, un usage intensif",
     paragraphs: [
-      "Sur les bâtiments plus anciens du quartier, une serrure qui grippe ou une clé qui force ne signifie pas toujours qu'il faut tout changer. Quand c'est possible, je privilégie la réparation ou le remplacement du seul cylindre, en cohérence avec l'esprit de la porte d'origine, plutôt qu'un remplacement complet plus coûteux.",
+      "Avec une majorité de résidents locataires et un turnover plus élevé que la moyenne, les serrures et cylindres de ce quartier changent plus souvent de main : état des lieux d'entrée, remise de clés, changement de serrure entre deux locataires. C'est une configuration que je connais bien, avec un même souci de transparence sur le tarif, que la demande vienne d'un propriétaire ou d'un locataire.",
     ],
   },
   {
     heading: "Proximité et rapidité d'intervention",
     paragraphs: [
       "Étant situé à proximité immédiate de Desambrois, c'est l'un des secteurs où je peux généralement intervenir le plus rapidement, ce qui compte particulièrement en cas de porte claquée ou d'urgence après une tentative d'effraction.",
+    ],
+  },
+  {
+    heading: "Interventions en copropriété",
+    paragraphs: [
+      "Pour les halls d'immeuble de ces copropriétés souvent bien entretenues, j'interviens sur les digicodes, gâches électriques et portes de hall, à la demande d'un syndic ou d'un résident mandaté, avec la même attention portée à l'esthétique du bâti ancien.",
     ],
   },
 ];
@@ -41,9 +47,14 @@ const faq = [
       "Oui, Desambrois est très proche de mon point de départ : le délai d'intervention y est généralement parmi les plus courts sur Nice, de l'ordre de 10 à 15 minutes.",
   },
   {
-    question: "Travaillez-vous sur les serrures anciennes des immeubles de Desambrois ?",
+    question: "Travaillez-vous sur les serrures anciennes des immeubles Belle Époque de Desambrois ?",
     answer:
       "Oui, c'est une situation fréquente dans ce quartier. Je privilégie la réparation ou le remplacement de cylindre quand c'est possible, plutôt qu'un changement complet systématique.",
+  },
+  {
+    question: "Intervenez-vous pour un changement de serrure entre deux locataires ?",
+    answer:
+      "Oui, c'est une demande fréquente à Desambrois où le turnover locatif est plus élevé que la moyenne. Je peux intervenir rapidement entre un état des lieux de sortie et d'entrée.",
   },
   {
     question: "Les tarifs sont-ils différents à Desambrois par rapport au reste de Nice ?",
@@ -54,6 +65,11 @@ const faq = [
     question: "Intervenez-vous aussi sur des portes blindées à Desambrois ?",
     answer:
       "Oui, aussi bien pour l'ouverture d'une porte blindée verrouillée que pour l'installation ou le blindage d'une porte existante.",
+  },
+  {
+    question: "Travaillez-vous avec les copropriétés du quartier ?",
+    answer:
+      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques des parties communes.",
   },
   {
     question: "Donnez-vous un devis avant d'intervenir à Desambrois ?",

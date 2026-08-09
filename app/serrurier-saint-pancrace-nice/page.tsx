@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Saint-Pancrace est un quartier résidentiel des hauteurs nord de Nice, avec un bâti mêlant villas individuelles et petites résidences. C'est un secteur plus calme et verdoyant que le centre-ville.",
-  "J'y interviens pour des propriétaires de maisons comme pour des appartements en résidence, avec la même exigence de diagnostic avant toute intervention.",
+  "Saint-Pancrace était autrefois un territoire de la campagne niçoise, où vignes et cultures méditerranéennes se mêlaient sur cette colline située entre le vallon de Magnan et le vallon de Saint-Pancrace, au nord de la ville entre Saint-Roman et Gairaut. La chapelle Saint-Pancrace, datant du XVIIe siècle et dédiée à un martyr chrétien, témoigne encore de cette histoire et reste le cœur spirituel du quartier — une confrérie du même nom, déjà autorisée par le diocèse à recevoir des legs et aumônes, est attestée dès 1724.",
+  "La culture maraîchère et l'horticulture ont longtemps fait la réputation de ce secteur avant que l'urbanisation ne le transforme. Aujourd'hui, Saint-Pancrace est un quartier résidentiel des hauteurs nord de Nice, avec un bâti mêlant villas individuelles et petites résidences, où les rues étroites et pittoresques continuent d'évoquer ce passé rural.",
 ];
 
 const blocks = [
+  {
+    heading: "Autour de la chapelle Saint-Pancrace",
+    paragraphs: [
+      "Le secteur historique autour de la chapelle du XVIIe siècle conserve un caractère rural préservé, avec des villas et des propriétés parfois anciennes. Je privilégie une approche respectueuse du bâti d'origine pour toute intervention.",
+    ],
+  },
   {
     heading: "Un secteur de villas et de petites résidences",
     paragraphs: [
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les villas individuelles du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous près de la chapelle Saint-Pancrace ?",
+    answer:
+      "Oui, tout ce secteur historique entre le vallon de Magnan et Gairaut fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Saint-Pancrace par rapport au reste de Nice ?",

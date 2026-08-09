@@ -46,6 +46,12 @@ const sections = [
       "Le choix entre blindage et bloc-porte complet est le facteur le plus déterminant, suivi du niveau de serrure (multipoints, certification A2P), du cylindre, des finitions visibles côté palier, et de la configuration du chantier — un accès compliqué en étage élevé sans ascenseur rallonge la manutention. Un devis détaillé, annoncé avant tout engagement, tient compte de chacun de ces éléments.",
     ],
   },
+  {
+    heading: "Un impact réel sur votre assurance habitation",
+    paragraphs: [
+      "La certification A2P est reconnue par la quasi-totalité des assureurs français : elle conditionne souvent la couverture vol de votre contrat et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats — à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé, le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
+    ],
+  },
 ];
 
 const faq = [
@@ -78,6 +84,11 @@ const faq = [
     question: "Puis-je installer une porte blindée en copropriété à Nice ?",
     answer:
       "Oui, dans la grande majorité des cas, mais le règlement de copropriété peut imposer une apparence extérieure identique sur le palier. Le blindage d'une porte existante est souvent la solution la plus simple à faire accepter, car il ne change pas l'aspect vu du couloir.",
+  },
+  {
+    question: "Une porte blindée fait-elle vraiment baisser ma prime d'assurance ?",
+    answer:
+      "Dans la majorité des cas, oui, à partir du niveau A2P BP2. Le montant de la réduction dépend de votre assureur et de votre contrat : je vous conseille de vérifier ce point directement auprès de lui, muni de la facture détaillée que je vous remets.",
   },
 ];
 

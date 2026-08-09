@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Pessicart est un quartier résidentiel des hauteurs nord de Nice, avec un bâti mêlant villas individuelles et résidences collectives. C'est un secteur calme, apprécié pour sa vue sur la ville.",
-  "J'y interviens pour des propriétaires de maisons comme pour des appartements en résidence, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+  "Le nom de Pessicart apparaît pour la première fois dans une section du cadastre napoléonien de 1812, mais le quartier conserve des traces remontant à l'époque romaine. Cette colline est délimitée à l'est par la plaine alluviale de l'ancien ruisseau Mantega, et à l'ouest et au sud par le vallon des Sablières qui la sépare de la colline de Saint-Pierre-de-Féric.",
+  "Aujourd'hui, Pessicart est un quartier résidentiel huppé et calme des hauteurs nord de Nice, offrant des vues remarquables sur la ville et la Méditerranée. Le bâti y mêle villas individuelles et résidences collectives, dans un cadre verdoyant particulièrement apprécié des familles en quête de tranquillité.",
 ];
 
 const blocks = [
@@ -24,6 +24,12 @@ const blocks = [
     heading: "Un secteur en hauteur, un déplacement à anticiper",
     paragraphs: [
       "Pessicart étant sur les hauteurs de Nice, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la distance et des routes d'accès.",
+    ],
+  },
+  {
+    heading: "Un quartier de collines entre deux vallons",
+    paragraphs: [
+      "Entre le vallon de l'ancien ruisseau Mantega et le vallon des Sablières, Pessicart conserve un relief marqué qui influence l'implantation des propriétés. Je tiens compte de cette configuration pour organiser mon intervention.",
     ],
   },
   {
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les villas individuelles du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
+  },
+  {
+    question: "Intervenez-vous sur toute la colline de Pessicart, jusqu'au vallon des Sablières ?",
+    answer:
+      "Oui, tout ce secteur des hauteurs nord fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents à Pessicart par rapport au reste de Nice ?",

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le Parc Impérial est un quartier résidentiel situé entre le centre-ville et Cimiez, connu pour son cadre verdoyant hérité d'un ancien parc d'hôtel de la Belle Époque. Le bâti y mêle immeubles de standing et résidences plus récentes.",
-  "J'y interviens pour des appartements comme pour des copropriétés, avec la même exigence de diagnostic avant toute intervention.",
+  "Le quartier du Parc Impérial doit son nom à l'Hôtel Impérial, construit en 1902 pour accueillir la communauté russe qui passait ses hivers sur la Côte d'Azur. L'édifice, bâti sur les terres de l'ancien domaine Bermond à la demande du propriétaire J.-B. Gay et confié à l'architecte polonais Adam Dettloff, impressionnait par ses dimensions : 109 mètres de long et 37 mètres de haut, avec une rotonde de 43 mètres dédiée à la famille impériale.",
+  "Réquisitionné comme hôpital pendant la Première Guerre mondiale, l'hôtel périclite ensuite et cesse son activité en 1920. Racheté par la mairie de Nice en 1923, il devient le lycée Alexandre-Mari, inauguré en 1931 et renommé lycée du Parc-Impérial en 1948. Le quartier conserve aujourd'hui de nombreuses villas, des immeubles Belle Époque, le Nice Lawn Tennis Club et la cathédrale orthodoxe russe inaugurée en 1912, dans un cadre verdoyant hérité de ce passé aristocratique.",
 ];
 
 const blocks = [
@@ -18,6 +18,12 @@ const blocks = [
     heading: "Un quartier résidentiel entre centre et Cimiez",
     paragraphs: [
       "Le Parc Impérial partage certaines caractéristiques avec Cimiez tout proche : des immeubles de standing avec des serrures parfois anciennes, qui demandent un diagnostic soigné avant toute intervention.",
+    ],
+  },
+  {
+    heading: "Un héritage architectural russe",
+    paragraphs: [
+      "Entre la cathédrale orthodoxe et les villas construites pour la clientèle russe du début du XXe siècle, le quartier conserve un cachet particulier. Je privilégie une approche respectueuse de ce patrimoine pour toute intervention sur une porte ou une serrure d'origine.",
     ],
   },
   {
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur les immeubles de standing du secteur ?",
     answer:
       "Oui, je m'adapte aux exigences de ces copropriétés pour toute intervention sur les équipements des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près de la cathédrale orthodoxe russe ou du lycée du Parc-Impérial ?",
+    answer:
+      "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle dans le centre de Nice.",
   },
   {
     question: "Les tarifs sont-ils différents au Parc Impérial par rapport au reste de Nice ?",

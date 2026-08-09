@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Le quartier Californie est un secteur résidentiel de l'ouest de Nice, avec un bâti mêlant villas et résidences de standing, dans un cadre plus aéré que le centre-ville. C'est un quartier prisé pour son calme et sa proximité avec les axes vers l'ouest.",
-  "J'y interviens pour des propriétaires de villas comme pour des résidences en copropriété, avec la même exigence de diagnostic avant toute intervention.",
+  "Le quartier Californie doit son nom à l'aéroport de Nice, dont l'histoire commence ici en 1910 avec un premier meeting aérien organisé sur les champs du lieu-dit « la Californie », devant environ 100 000 spectateurs. Avant-guerre, l'aérodrome de la Californie n'était encore qu'un modeste champ caillouteux équipé de deux hangars, avant d'être officiellement reconnu comme aérodrome par le ministre de l'Air en 1929.",
+  "Le nom du quartier garde aussi le souvenir de l'hippodrome de Californie, autrefois situé près de l'aérodrome, qui dut être déplacé lors de l'agrandissement de la piste. Aujourd'hui desservi par la ligne 2 du tramway qui relie le port de Nice à l'aéroport, ce quartier urbain populaire et décontracté, situé dans le bas de Fabron à proximité de la mer, est particulièrement apprécié des familles pour son bâti mêlant villas et résidences de standing.",
 ];
 
 const blocks = [
+  {
+    heading: "Un quartier né de l'histoire aéronautique niçoise",
+    paragraphs: [
+      "L'héritage aéronautique du quartier Californie, berceau du premier meeting aérien niçois en 1910, se lit dans sa proximité immédiate avec l'aéroport actuel. Les résidences construites depuis ont des profils variés que je diagnostique au cas par cas.",
+    ],
+  },
   {
     heading: "Villas et résidences de standing",
     paragraphs: [
@@ -49,6 +55,11 @@ const faq = [
     question: "Travaillez-vous avec les résidences de standing du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et équipements des parties communes.",
+  },
+  {
+    question: "Intervenez-vous près de l'aéroport et de la ligne 2 du tramway ?",
+    answer:
+      "Oui, tout ce secteur bien desservi entre le bas Fabron et la mer fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Les tarifs sont-ils différents au quartier Californie par rapport au reste de Nice ?",

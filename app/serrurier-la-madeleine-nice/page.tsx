@@ -9,15 +9,21 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "La Madeleine est un quartier résidentiel de Nice, avec un bâti mêlant immeubles collectifs et quelques maisons individuelles. C'est un secteur essentiellement résidentiel, où je réalise régulièrement des interventions classiques de serrurerie.",
-  "J'y interviens pour des particuliers en appartement comme pour des maisons, avec la même méthode de diagnostic et de devis annoncé avant intervention.",
+  "Accroché entre mer et collines, La Madeleine s'étire depuis 1619 autour de l'église paroissiale Sainte-Marie-Madeleine, qui a donné son nom à la partie haute du vallon — la partie basse restant plus souvent désignée sous le nom de Magnan. Le boulevard de la Madeleine débute au carrefour Magnan et s'étire jusqu'au chemin du Génie, en passant par Ventabrun, la Costière et Saint-Pierre-de-Féric.",
+  "Le quartier compte mille habitants en 1900, dont un cinquième d'origine italienne ; en 1925, la population atteint trois mille âmes, avec l'arrivée de nouveaux immigrants grecs, russes et arméniens fuyant les révolutions et les pogroms. Cette histoire cosmopolite a forgé un quartier au caractère populaire affirmé, fier de son identité, avec ses ruelles en pente et son boulevard animé qui racontent une autre Nice, celle des familles installées là depuis des générations.",
 ];
 
 const blocks = [
   {
+    heading: "Un quartier populaire à l'histoire cosmopolite",
+    paragraphs: [
+      "L'identité forte de La Madeleine, façonnée par des vagues successives d'habitants venus d'Italie, de Grèce, de Russie ou d'Arménie, se retrouve dans un bâti varié où je m'adapte à chaque configuration : petit immeuble ancien, maison de ville ou copropriété plus récente.",
+    ],
+  },
+  {
     heading: "Un bâti résidentiel mixte",
     paragraphs: [
-      "Le quartier de La Madeleine comprend des immeubles collectifs et quelques maisons individuelles. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ou d'une porte de maison.",
+      "Le quartier de La Madeleine comprend des immeubles collectifs et quelques maisons individuelles, souvent situées sur des rues en pente typiques du vallon. Le diagnostic reste systématique, qu'il s'agisse d'une serrure d'appartement ou d'une porte de maison.",
     ],
   },
   {
@@ -46,6 +52,11 @@ const faq = [
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
   },
   {
+    question: "Intervenez-vous aussi bien sur le boulevard de la Madeleine que dans les ruelles adjacentes ?",
+    answer:
+      "Oui, tout le vallon fait partie de ma zone d'intervention habituelle, du carrefour Magnan jusqu'au secteur de la Costière.",
+  },
+  {
     question: "Les tarifs sont-ils différents à La Madeleine par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
@@ -54,6 +65,11 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
+  },
+  {
+    question: "Que faire si ma porte ferme mal dans un immeuble ancien de La Madeleine ?",
+    answer:
+      "Je diagnostique en premier lieu si le problème vient de la serrure, du gond ou du bâti qui a pu bouger avec le temps, avant de proposer la réparation la plus adaptée.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir à La Madeleine ?",

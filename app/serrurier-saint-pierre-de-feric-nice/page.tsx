@@ -9,11 +9,17 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Saint-Pierre-de-Féric est un secteur résidentiel sur les hauteurs de Nice, au caractère plus villageois et verdoyant que le centre-ville. Le bâti y est principalement constitué de villas et de maisons individuelles.",
-  "J'y interviens pour des propriétaires de maisons, avec la même méthode de diagnostic et de devis annoncé avant intervention que partout ailleurs à Nice.",
+  "Le nom de Saint-Pierre-de-Féric vient du niçois « San Peire dei Ferigoula », littéralement « Saint Pierre des Thyms », en référence aux plantations de thym qui couvraient autrefois ces hauteurs. Le quartier est bordé par la Costière et La Madeleine à l'ouest, Saint-Pancrace au nord, Pessicart à l'est, et Saint-Philippe et le Parc Impérial au sud.",
+  "Longtemps rural, le secteur est resté agricole jusqu'à la création d'un réseau de routes en 1922 pour faciliter l'accès aux fermes. Depuis, Saint-Pierre-de-Féric s'est fortement urbanisé tout en conservant un caractère calme et verdoyant, avec des villas individuelles entourées de jardins, parfois piscine ou court de tennis à l'appui — un profil résidentiel haut de gamme sur les hauteurs de Nice.",
 ];
 
 const blocks = [
+  {
+    heading: "Un ancien terroir agricole devenu résidentiel",
+    paragraphs: [
+      "L'héritage rural de Saint-Pierre-de-Féric se lit encore dans le tracé des routes ouvertes en 1922 et dans la végétation abondante du quartier. Les propriétés y sont souvent plus grandes qu'ailleurs à Nice, avec des portails et des accès qui demandent parfois un diagnostic spécifique en plus de la porte d'entrée elle-même.",
+    ],
+  },
   {
     heading: "Un secteur de villas et de maisons",
     paragraphs: [
@@ -46,6 +52,11 @@ const faq = [
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
   },
   {
+    question: "Intervenez-vous sur des propriétés avec portail et grand jardin ?",
+    answer:
+      "Oui, ce type de configuration est fréquent à Saint-Pierre-de-Féric. Je diagnostique la porte d'entrée principale ainsi que les accès secondaires si besoin.",
+  },
+  {
     question: "Les tarifs sont-ils différents à Saint-Pierre-de-Féric par rapport au reste de Nice ?",
     answer:
       "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
@@ -54,6 +65,11 @@ const faq = [
     question: "Proposez-vous des solutions de blindage pour les maisons du secteur ?",
     answer:
       "Oui, selon l'état de votre porte, je peux vous orienter vers un blindage ou une serrure haute sécurité.",
+  },
+  {
+    question: "Comment estimez-vous le délai d'intervention sur ce secteur excentré ?",
+    answer:
+      "Je vous donne une estimation réaliste dès l'appel téléphonique, en tenant compte de votre adresse précise et des conditions de circulation du moment.",
   },
   {
     question: "Proposez-vous un devis avant d'intervenir à Saint-Pierre-de-Féric ?",

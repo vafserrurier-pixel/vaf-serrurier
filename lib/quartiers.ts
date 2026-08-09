@@ -70,6 +70,20 @@ export const builtQuartiers = [
   "Secteur Bellet",
 ] as const;
 
+// Sélection courte pour le maillage service → quartier (un par secteur environ),
+// plutôt que de linker les 46 pages depuis chaque page service : Google
+// déconseille les gros blocs de liens internes uniformes vers des pages très
+// proches les unes des autres (risque "doorway pages"). Le lien vers le hub
+// complet reste disponible pour la découverte des autres quartiers.
+export const featuredQuartiers = [
+  "Cimiez",
+  "Jean-Médecin",
+  "Brancolar",
+  "Riquier",
+  "Fabron",
+  "Vieux-Nice",
+] as const;
+
 export function isQuartierBuilt(name: string): boolean {
   return (builtQuartiers as readonly string[]).includes(name);
 }

@@ -9,15 +9,21 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Les Baumettes sont un quartier résidentiel de l'ouest du centre-ville de Nice, connu pour son cadre culturel avec le musée des Beaux-Arts à proximité. Le bâti y mêle immeubles anciens de caractère et constructions plus récentes.",
-  "J'y interviens pour des appartements en immeuble comme pour des maisons individuelles, avec la même méthode de diagnostic avant toute intervention.",
+  "Le nom des Baumettes vient du niçois « bauma » (grotte), avec le suffixe diminutif « eta » — littéralement les « petites grottes ». Dès le XVIIe siècle, ce quartier rural sur une colline discrète à l'ouest de Nice, longtemps resté à l'écart de la vieille ville, était surnommé par les Niçois le « petit Paris » : un lieu de villégiature apprécié, qui a connu un moment de gloire internationale en 1538 quand la plaine accueillit la célèbre rencontre entre le pape Paul III et le roi François Ier lors du Congrès de Nice.",
+  "Le joyau culturel du quartier reste le musée des Beaux-Arts Jules-Chéret : en 1878, la princesse ukrainienne Elisabeth Kotschoubey, séduite par la beauté du site, y fait construire un vaste domaine inspiré des palais néoclassiques de Saint-Pétersbourg. Ses salons Belle Époque abritent aujourd'hui des collections allant du XVIe au XXe siècle, avec des œuvres de Rodin et des toiles de Brueghel ou de Bonnard.",
 ];
 
 const blocks = [
   {
     heading: "Un quartier résidentiel de caractère",
     paragraphs: [
-      "Le secteur des Baumettes comprend des immeubles anciens dont les portes et serrures méritent une attention particulière. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
+      "Le secteur des Baumettes comprend des immeubles anciens et des villas héritées de son passé de lieu de villégiature, dont les portes et serrures méritent une attention particulière. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
+    ],
+  },
+  {
+    heading: "Autour du musée Jules-Chéret",
+    paragraphs: [
+      "Le secteur proche du musée des Beaux-Arts conserve un cadre résidentiel calme et arboré, avec des propriétés parfois anciennes où je privilégie systématiquement une solution respectueuse du bâti d'origine.",
     ],
   },
   {
@@ -44,6 +50,11 @@ const faq = [
     question: "Intervenez-vous sur des immeubles anciens de caractère ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'origine.",
+  },
+  {
+    question: "Intervenez-vous près du musée des Beaux-Arts Jules-Chéret ?",
+    answer:
+      "Oui, tout ce secteur résidentiel autour du musée fait partie de ma zone d'intervention habituelle.",
   },
   {
     question: "Travaillez-vous avec les copropriétés des Baumettes ?",

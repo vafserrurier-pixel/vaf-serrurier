@@ -4,11 +4,14 @@ import { builtQuartiers, quartierHref } from "@/lib/quartiers";
 
 const paths = [
   "",
+  "a-propos",
   "ouverture-de-porte-nice",
   "depannage-serrurier-nice",
   "changement-serrure-nice",
   "installation-porte-blindee-nice",
   "mis-en-securite-apres-effraction-nice",
+  "ouverture-de-coffre-fort-nice",
+  "installation-coffre-fort-nice",
   "tarifs-serrurier-nice",
   "zones-intervention-nice",
   "serrurier-nice-centre",
@@ -17,6 +20,8 @@ const paths = [
   "serrurier-nice-ouest",
   "contact",
   "blog",
+  "blog/que-faire-apres-un-cambriolage",
+  "blog/serrure-3-5-7-points-que-choisir",
   "remplacer-coffre-a-larder",
   "mentions-legales",
   "conditions-generales-dutilisation",
