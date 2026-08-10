@@ -10,7 +10,6 @@ const strings = {
   fr: {
     who: "Qui suis-je",
     contact: "Contact",
-    secondary: "(si injoignable)",
     whatsapp: "Écrire sur WhatsApp",
     email: "Écrire par email",
     areas: "Zones d'intervention",
@@ -27,7 +26,6 @@ const strings = {
   en: {
     who: "About me",
     contact: "Contact",
-    secondary: "(if unreachable)",
     whatsapp: "Message on WhatsApp",
     email: "Send an email",
     areas: "Areas covered",
@@ -66,9 +64,9 @@ export default function Footer() {
           </a>
           <a
             href={business.phoneSecondary.href}
-            className="block font-tabular-nums text-xs text-cream/70 mt-0.5 hover:underline"
+            className="block font-tabular-nums text-sm mt-0.5 hover:underline"
           >
-            {business.phoneSecondary.display} {t.secondary}
+            {business.phoneSecondary.display}
           </a>
           <a
             href={business.whatsapp.href}
