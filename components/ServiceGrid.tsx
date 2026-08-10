@@ -106,18 +106,12 @@ export default function ServiceGrid({ locale = "fr" }: { locale?: Locale }) {
   const services = servicesByLocale[locale];
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {services.map((service, index) => (
+      {services.map((service) => (
         <Link
           key={service.href}
           href={service.href}
           className="group relative block bg-navy/40 rounded-xl border border-cream/15 p-5 pt-6 hover:border-cream/40 hover:bg-navy/60 transition-colors"
         >
-          <span
-            className="absolute top-4 right-5 font-heading font-bold text-2xl text-cream/15 select-none"
-            aria-hidden="true"
-          >
-            {String(index + 1).padStart(2, "0")}
-          </span>
           <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-cream/15 text-cream mb-3">
             <service.Icon className="w-5 h-5" />
           </span>
