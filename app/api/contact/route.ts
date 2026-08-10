@@ -42,7 +42,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
-  if (typeof name !== "string" || name.trim().length < 2 || name.trim().length > 100) {
+  // eslint-disable-next-line no-control-regex
+  const CONTROL_CHARS_RE = /[\x00-\x1f\x7f]/;
+  if (
+    typeof name !== "string" ||
+    name.trim().length < 2 ||
+    name.trim().length > 100 ||
+    CONTROL_CHARS_RE.test(name)
+  ) {
     return NextResponse.json({ error: "Nom invalide." }, { status: 400 });
   }
   if (typeof phone !== "string" || !PHONE_RE.test(phone.trim())) {

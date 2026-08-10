@@ -35,6 +35,9 @@ const nextConfig: NextConfig = {
   // pour matcher la structure de l'ancien WordPress et éviter une redirection
   // 308 sur chaque page.
   trailingSlash: true,
+  // Retire l'en-tête X-Powered-By: Next.js — évite de faciliter le
+  // fingerprinting de la stack technique pour un attaquant.
+  poweredByHeader: false,
   async headers() {
     return [
       {
