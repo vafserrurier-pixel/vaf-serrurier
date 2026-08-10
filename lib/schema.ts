@@ -106,6 +106,7 @@ export function personSchema() {
     name: business.firstName,
     jobTitle: "Artisan serrurier",
     url: `${business.domain}/a-propos/`,
+    image: `${business.domain}/images/serrurier-nice-a-propos.webp`,
     worksFor: {
       "@type": "Locksmith",
       name: business.legalName,

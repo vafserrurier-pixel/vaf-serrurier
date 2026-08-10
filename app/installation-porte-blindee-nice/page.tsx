@@ -189,7 +189,7 @@ export default function InstallationPorteBlindeeNicePage() {
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "Serrure multipoints sur porte blindée, installation à Nice",
+          alt: "Serrurier posant une serrure multipoints sur une porte à Nice",
         },
         extra: (
           <PriceReminder
@@ -214,7 +214,7 @@ export default function InstallationPorteBlindeeNicePage() {
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "A multipoint lock on a security door, installation in Nice",
+          alt: "Locksmith fitting a multipoint lock on a door in Nice",
         },
         extra: (
           <PriceReminder

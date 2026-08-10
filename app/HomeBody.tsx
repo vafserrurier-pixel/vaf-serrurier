@@ -128,7 +128,7 @@ const strings = {
     lead: "Porte claquée, serrure bloquée, effraction : vous m'expliquez la situation, j'annonce un prix avant de me déplacer. Ce qui compte, c'est la transparence, pas les promesses.",
     call: "Appeler",
     seePricing: "Voir les tarifs",
-    heroAlt: "Porte d'entrée équipée d'une serrure moderne avec clés, serrurier à Nice",
+    heroAlt: "Benoît, artisan serrurier, à côté d'une serrure moderne posée à Nice",
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
       "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Ici, pas de standard qui redirige votre appel vers un sous-traitant inconnu : c'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
@@ -169,7 +169,7 @@ const strings = {
     lead: "Door slammed shut, jammed lock, break-in: you explain the situation, I quote a price before I travel to you. What matters is transparency, not promises.",
     call: "Call",
     seePricing: "See pricing",
-    heroAlt: "A front door fitted with a modern lock and keys, locksmith in Nice",
+    heroAlt: "Benoît, locksmith, next to a modern lock fitted in Nice",
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [
       "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor: I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",

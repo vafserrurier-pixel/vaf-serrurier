@@ -166,7 +166,7 @@ export default function ChangementSerrureNicePage() {
         path: "/changement-serrure-nice/",
         image: {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
-          alt: "Clé usée dans un cylindre de porte à remplacer, changement de serrure à Nice",
+          alt: "Cylindre de serrure Heraclès neuf et poignée, changement de serrure à Nice",
         },
         extra: (
           <>
@@ -200,7 +200,7 @@ export default function ChangementSerrureNicePage() {
         path: "/changement-serrure-nice/",
         image: {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
-          alt: "A worn key in a door cylinder due for replacement, lock change in Nice",
+          alt: "New Heraclès lock cylinder and handle, lock change in Nice",
         },
         extra: (
           <>

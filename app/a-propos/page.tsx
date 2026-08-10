@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -28,23 +29,35 @@ export default function AProposPage() {
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-3xl px-4 py-10">
-          <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Qui suis-je", href: "/a-propos/" }]} />
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-            Qui suis-je
-          </h1>
-          <p className="mt-4 text-slate leading-relaxed max-w-2xl">
-            Je m&apos;appelle Benoît. Je suis artisan serrurier depuis {experienceYears} ans,
-            installé seul à Nice au {business.address.full}. Pas d&apos;équipe commerciale,
-            pas de sous-traitant : c&apos;est moi qui décroche, moi qui viens, moi qui
-            réponds de mon travail.
-          </p>
-          <a
-            href={business.phone.href}
-            className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-          >
-            Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-          </a>
+        <div className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+          <div>
+            <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Qui suis-je", href: "/a-propos/" }]} />
+            <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+              Qui suis-je
+            </h1>
+            <p className="mt-4 text-slate leading-relaxed max-w-2xl">
+              Je m&apos;appelle Benoît. Je suis artisan serrurier depuis {experienceYears} ans,
+              installé seul à Nice au {business.address.full}. Pas d&apos;équipe commerciale,
+              pas de sous-traitant : c&apos;est moi qui décroche, moi qui viens, moi qui
+              réponds de mon travail.
+            </p>
+            <a
+              href={business.phone.href}
+              className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+            >
+              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+            </a>
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+            <Image
+              src="/images/serrurier-nice-a-propos.webp"
+              alt="Benoît, artisan serrurier à Nice, à côté d'une serrure qu'il vient de réparer"
+              fill
+              sizes="(min-width: 640px) 40vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
