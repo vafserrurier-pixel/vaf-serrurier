@@ -86,7 +86,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
       path="/mis-en-securite-apres-effraction-nice/"
       image={{
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
-        alt: "Porte équipée d'une serrure à code électronique, sécurisation après effraction à Nice",
+        alt: "Cylindre de serrure percé après une tentative d'effraction à Nice",
       }}
       extra={
         <section className="mx-auto max-w-4xl px-4 py-10">
