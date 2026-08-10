@@ -45,9 +45,10 @@ const cardsByLocale: Record<Locale, Card[]> = {
     },
     {
       title: "Remplacement de cylindre",
-      price: "Dès 119 €",
+      price: "249 €",
+      unit: "TTC",
       features: [
-        "119 à 300 €+ selon le grade de sécurité",
+        "Déplacement et main d'œuvre inclus",
         "Cylindre européen adapté à votre porte",
         "Clés neuves remises sur place",
       ],
@@ -87,9 +88,10 @@ const cardsByLocale: Record<Locale, Card[]> = {
     },
     {
       title: "Cylinder replacement",
-      price: "From €119",
+      price: "€249",
+      unit: "incl. VAT",
       features: [
-        "€119 to €300+ depending on security grade",
+        "Travel and labor included",
         "European cylinder matched to your door",
         "New keys handed over on site",
       ],
@@ -101,12 +103,14 @@ const strings = {
   fr: {
     mostRequested: "Le plus demandé",
     call: "Appeler pour ce tarif",
-    note: "Majoration de 50% après 19h, le week-end et les jours fériés. Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète, installation ou blindage de porte : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
+    nightSurcharge: "+50% après 19h, le week-end et les jours fériés",
+    note: "Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète, installation ou blindage de porte : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
   },
   en: {
     mostRequested: "Most requested",
     call: "Call for this rate",
-    note: "50% surcharge after 7pm, on weekends and public holidays. Replaced parts billed separately, always quoted before you agree. Full lock replacement, door installation or reinforcement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
+    nightSurcharge: "+50% after 7pm, on weekends and public holidays",
+    note: "Replaced parts billed separately, always quoted before you agree. Full lock replacement, door installation or reinforcement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
   },
 };
 
@@ -131,7 +135,7 @@ export default function PricingTable({ locale = "fr" }: { locale?: Locale }) {
               </span>
             )}
             <p className="font-heading font-semibold mb-1">{card.title}</p>
-            <p className="font-tabular-nums text-2xl font-bold mb-4">
+            <p className="font-tabular-nums text-2xl font-bold mb-1">
               {card.price}
               {card.unit && (
                 <span
@@ -142,6 +146,11 @@ export default function PricingTable({ locale = "fr" }: { locale?: Locale }) {
                   {card.unit}
                 </span>
               )}
+            </p>
+            <p
+              className={`text-xs mb-4 ${card.highlight ? "text-cream/70" : "text-slate"}`}
+            >
+              {t.nightSurcharge}
             </p>
             <ul className="flex flex-col gap-2 mb-5 flex-1">
               {card.features.map((feature) => (

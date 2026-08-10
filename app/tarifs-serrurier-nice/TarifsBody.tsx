@@ -6,6 +6,8 @@ import PricingTable from "@/components/PricingTable";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
 import ReviewsSection from "@/components/ReviewsSection";
 import CtaBlock from "@/components/CtaBlock";
+import { ShieldIcon, StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
 import { useLocale } from "@/lib/locale";
 
 const faqFr: FaqItem[] = [
@@ -69,6 +71,9 @@ const strings = {
     breadcrumb: "Tarifs",
     h1: "Tarifs serrurier à Nice",
     lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards — un devis précis est toujours annoncé avant que je commence l'intervention.",
+    trustSiret: (siret: string) => `SIRET vérifiable : ${siret}`,
+    trustInsurance: "Assurance RC Pro et garantie décennale",
+    trustReviews: (rating: string, count: number) => `${rating}/5 sur plus de ${count} avis Google`,
     warningTitle: "Méfiez-vous des prix d'appel trop bas",
     warningText:
       "Une ouverture de porte annoncée à 30 ou 40 € en ligne cache presque toujours une facture qui explose une fois le technicien sur place. Déplacement compris, une intervention sérieuse descend rarement sous les 100 € tout compris : un prix très inférieur à ça doit vous alerter, pas vous rassurer. Mes tarifs ci-dessus sont ceux que je facture réellement, pas un appât.",
@@ -88,6 +93,9 @@ const strings = {
     breadcrumb: "Pricing",
     h1: "Locksmith pricing in Nice",
     lead: "What matters is transparency, not promises. Here's my pricing for standard situations — a precise quote is always given before I start the work.",
+    trustSiret: (siret: string) => `Verifiable SIRET: ${siret}`,
+    trustInsurance: "Professional liability and 10-year insurance",
+    trustReviews: (rating: string, count: number) => `${rating}/5 from over ${count} Google reviews`,
     warningTitle: "Be wary of very low advertised prices",
     warningText:
       "A door opening advertised online at €30 or €40 almost always hides a bill that balloons once the technician is on site. Travel included, a serious callout rarely comes in under €100 all in: a price well below that should raise a flag, not reassure you. My prices above are what I actually charge, not bait.",
@@ -123,6 +131,20 @@ export default function TarifsBody() {
           />
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{t.h1}</h1>
           <p className="mt-4 text-slate leading-relaxed max-w-2xl">{t.lead}</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs text-slate">
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldIcon className="w-4 h-4 text-steel" />
+              {t.trustSiret(business.siret)}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldIcon className="w-4 h-4 text-steel" />
+              {t.trustInsurance}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <StarIcon className="w-4 h-4 text-steel" />
+              {t.trustReviews(business.reviews.rating.toFixed(1), business.reviews.count)}
+            </span>
+          </div>
         </div>
       </section>
 

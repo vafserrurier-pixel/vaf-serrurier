@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-porte-nice/" },
@@ -164,6 +165,12 @@ export default function OuvertureDePorteNicePage() {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
           alt: "Main ouvrant une porte d'entrée équipée d'une poignée ancienne à Nice",
         },
+        extra: (
+          <PriceReminder
+            priceLabel="149 € TTC (189 € TTC pour une porte blindée verrouillée)"
+            locale="fr"
+          />
+        ),
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
@@ -182,6 +189,12 @@ export default function OuvertureDePorteNicePage() {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
           alt: "A hand opening a front door fitted with an older handle in Nice",
         },
+        extra: (
+          <PriceReminder
+            priceLabel="€149 incl. VAT (€189 incl. VAT for a locked security door)"
+            locale="en"
+          />
+        ),
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
           { href: "/changement-serrure-nice/", label: "Lock change" },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/installation-porte-blindee-nice/" },
@@ -190,6 +191,13 @@ export default function InstallationPorteBlindeeNicePage() {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
           alt: "Serrure multipoints sur porte blindée, installation à Nice",
         },
+        extra: (
+          <PriceReminder
+            priceLabel="Sur devis"
+            note="Devis détaillé et annoncé avant tout engagement"
+            locale="fr"
+          />
+        ),
         relatedServices: [
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
@@ -208,6 +216,13 @@ export default function InstallationPorteBlindeeNicePage() {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
           alt: "A multipoint lock on a security door, installation in Nice",
         },
+        extra: (
+          <PriceReminder
+            priceLabel="Quoted on assessment"
+            note="Detailed quote given before any commitment"
+            locale="en"
+          />
+        ),
         relatedServices: [
           { href: "/changement-serrure-nice/", label: "Lock change" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "After a break-in" },

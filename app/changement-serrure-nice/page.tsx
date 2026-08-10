@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import BrandsSection from "@/components/BrandsSection";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/changement-serrure-nice/" },
@@ -72,7 +73,7 @@ const faqFr = [
   {
     question: "Combien coûte un changement de serrure à Nice ?",
     answer:
-      "À partir de 119 € pour un cylindre selon le grade de sécurité, et sur devis pour une serrure complète. Le prix exact est toujours annoncé avant intervention.",
+      "249 € TTC pour un remplacement de cylindre européen, déplacement et main d'œuvre inclus, et sur devis pour une serrure complète. Le prix exact est toujours annoncé avant intervention.",
   },
   {
     question: "Combien de temps dure un changement de serrure ?",
@@ -144,7 +145,7 @@ const faqEn = [
   {
     question: "How much does a lock change cost in Nice?",
     answer:
-      "From €119 for a cylinder depending on the security grade, and quoted on assessment for a full lock. The exact price is always given before the work starts.",
+      "€249 incl. VAT for a European cylinder replacement, travel and labor included, and quoted on assessment for a full lock. The exact price is always given before the work starts.",
   },
   {
     question: "How long does a lock change take?",
@@ -168,12 +169,20 @@ export default function ChangementSerrureNicePage() {
           alt: "Clé usée dans un cylindre de porte à remplacer, changement de serrure à Nice",
         },
         extra: (
-          <section className="mx-auto max-w-4xl px-4 py-10">
-            <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
-              Marques de serrures que je pose
-            </h2>
-            <BrandsSection locale="fr" />
-          </section>
+          <>
+            <div className="py-10">
+              <PriceReminder
+                priceLabel="249 € TTC pour un cylindre (serrure complète sur devis)"
+                locale="fr"
+              />
+            </div>
+            <section className="mx-auto max-w-4xl px-4 py-10">
+              <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
+                Marques de serrures que je pose
+              </h2>
+              <BrandsSection locale="fr" />
+            </section>
+          </>
         ),
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
@@ -194,12 +203,20 @@ export default function ChangementSerrureNicePage() {
           alt: "A worn key in a door cylinder due for replacement, lock change in Nice",
         },
         extra: (
-          <section className="mx-auto max-w-4xl px-4 py-10">
-            <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
-              Lock brands I install
-            </h2>
-            <BrandsSection locale="en" />
-          </section>
+          <>
+            <div className="py-10">
+              <PriceReminder
+                priceLabel="€249 incl. VAT for a cylinder (full lock quoted on assessment)"
+                locale="en"
+              />
+            </div>
+            <section className="mx-auto max-w-4xl px-4 py-10">
+              <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
+                Lock brands I install
+              </h2>
+              <BrandsSection locale="en" />
+            </section>
+          </>
         ),
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },

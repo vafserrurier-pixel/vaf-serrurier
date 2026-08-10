@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
@@ -158,6 +159,7 @@ export default function DepannageSerrurierNicePage() {
           src: "/images/serrurier-nice-depannage-reparation.webp",
           alt: "Réparation d'un mécanisme de serrure par un serrurier à Nice",
         },
+        extra: <PriceReminder priceLabel="À partir de 149 € TTC" locale="fr" />,
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
@@ -176,6 +178,7 @@ export default function DepannageSerrurierNicePage() {
           src: "/images/serrurier-nice-depannage-reparation.webp",
           alt: "A locksmith repairing a lock mechanism in Nice",
         },
+        extra: <PriceReminder priceLabel="From €149 incl. VAT" locale="en" />,
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },
           { href: "/changement-serrure-nice/", label: "Lock change" },
