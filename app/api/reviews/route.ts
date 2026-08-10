@@ -40,7 +40,7 @@ export async function GET() {
 
   try {
     const res = await fetch(
-      `https://places.googleapis.com/v1/places/${placeId}?fields=reviews,rating,userRatingCount`,
+      `https://places.googleapis.com/v1/places/${placeId}?fields=reviews,rating,userRatingCount&languageCode=fr`,
       { headers: { "X-Goog-Api-Key": apiKey }, next: { revalidate: 3600 } }
     );
     if (!res.ok) throw new Error(`Places API ${res.status}`);
