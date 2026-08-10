@@ -1,5 +1,6 @@
 import { business } from "@/lib/business";
 import ReviewsCarousel from "./ReviewsCarousel";
+import type { Locale } from "@/lib/locale";
 
 function Stars({ size = 16 }: { size?: number }) {
   return (
@@ -13,21 +14,25 @@ function Stars({ size = 16 }: { size?: number }) {
   );
 }
 
-export default function ReviewsSection() {
+const strings = {
+  fr: { ariaLabel: "Avis clients", suffix: (count: number) => `sur plus de ${count} avis Google` },
+  en: { ariaLabel: "Customer reviews", suffix: (count: number) => `from over ${count} Google reviews` },
+};
+
+export default function ReviewsSection({ locale = "fr" }: { locale?: Locale }) {
+  const t = strings[locale];
   return (
-    <section aria-label="Avis clients" className="max-w-xl mx-auto">
+    <section aria-label={t.ariaLabel} className="max-w-xl mx-auto">
       <div className="flex items-center justify-center gap-4 mb-6">
         <span className="font-heading text-4xl font-bold text-navy font-tabular-nums">
           {business.reviews.rating.toFixed(1)}
         </span>
         <div>
           <Stars size={18} />
-          <p className="text-sm text-slate mt-0.5">
-            sur plus de {business.reviews.count} avis Google
-          </p>
+          <p className="text-sm text-slate mt-0.5">{t.suffix(business.reviews.count)}</p>
         </div>
       </div>
-      <ReviewsCarousel />
+      <ReviewsCarousel locale={locale} />
     </section>
   );
 }

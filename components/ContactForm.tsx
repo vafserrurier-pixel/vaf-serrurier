@@ -1,10 +1,41 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import type { Locale } from "@/lib/locale";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-export default function ContactForm({ compact = false }: { compact?: boolean }) {
+const strings = {
+  fr: {
+    success: "Votre message a bien été transmis, réponse sous 24h.",
+    name: "Nom",
+    phone: "Téléphone",
+    message: "Message",
+    placeholder: "Type de porte, urgence ou non...",
+    sending: "Envoi en cours...",
+    send: "Envoyer",
+    genericError: "Envoi impossible",
+  },
+  en: {
+    success: "Your message has been sent, I'll reply within 24h.",
+    name: "Name",
+    phone: "Phone",
+    message: "Message",
+    placeholder: "Type of door, urgent or not...",
+    sending: "Sending...",
+    send: "Send",
+    genericError: "Could not send the message",
+  },
+};
+
+export default function ContactForm({
+  compact = false,
+  locale = "fr",
+}: {
+  compact?: boolean;
+  locale?: Locale;
+}) {
+  const t = strings[locale];
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -30,13 +61,13 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || "Envoi impossible");
+        throw new Error(body.error || t.genericError);
       }
       setStatus("success");
       form.reset();
     } catch (err) {
       setStatus("error");
-      setErrorMessage(err instanceof Error ? err.message : "Envoi impossible");
+      setErrorMessage(err instanceof Error ? err.message : t.genericError);
     }
   }
 
@@ -46,7 +77,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
         role="status"
         className="bg-steel/10 border border-steel/30 text-navy rounded-lg p-4 text-sm"
       >
-        Votre message a bien été transmis, réponse sous 24h.
+        {t.success}
       </p>
     );
   }
@@ -64,7 +95,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
       />
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-navy mb-1">
-          Nom
+          {t.name}
         </label>
         <input
           id="name"
@@ -77,7 +108,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
       </div>
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-navy mb-1">
-          Téléphone
+          {t.phone}
         </label>
         <input
           id="phone"
@@ -90,14 +121,14 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-navy mb-1">
-          Message
+          {t.message}
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={compact ? 3 : 4}
-          placeholder="Type de porte, urgence ou non..."
+          placeholder={t.placeholder}
           className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
         />
       </div>
@@ -110,7 +141,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
         aria-busy={status === "sending"}
         className="mt-1 bg-urgent text-white font-semibold rounded-md px-5 py-2.5 hover:opacity-90 disabled:opacity-60"
       >
-        {status === "sending" ? "Envoi en cours..." : "Envoyer"}
+        {status === "sending" ? t.sending : t.send}
       </button>
     </form>
   );

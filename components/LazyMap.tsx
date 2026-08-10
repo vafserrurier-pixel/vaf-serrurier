@@ -2,10 +2,17 @@
 
 import { useState } from "react";
 import { business } from "@/lib/business";
+import type { Locale } from "@/lib/locale";
 
-export default function LazyMap() {
+const strings = {
+  fr: { show: "Afficher la carte", title: "Zone d'intervention à Nice" },
+  en: { show: "Show the map", title: "Service area in Nice" },
+};
+
+export default function LazyMap({ locale = "fr" }: { locale?: Locale }) {
   const [loaded, setLoaded] = useState(false);
   const src = `https://www.google.com/maps?q=${business.geo.latitude},${business.geo.longitude}&z=13&output=embed`;
+  const t = strings[locale];
 
   if (!loaded) {
     return (
@@ -22,14 +29,14 @@ export default function LazyMap() {
           />
           <circle cx="12" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.8" />
         </svg>
-        <span className="text-sm font-medium">Afficher la carte</span>
+        <span className="text-sm font-medium">{t.show}</span>
       </button>
     );
   }
 
   return (
     <iframe
-      title="Zone d'intervention à Nice"
+      title={t.title}
       src={src}
       className="w-full aspect-video rounded-lg border border-navy/10"
       loading="lazy"

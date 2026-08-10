@@ -11,9 +11,41 @@ import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import type { ReactNode } from "react";
+import type { Locale } from "@/lib/locale";
 
 export type ServiceSection = { heading: string; paragraphs: string[] };
 export type ServiceImage = { src: string; alt: string };
+
+const strings = {
+  fr: {
+    home: "Accueil",
+    call: "Appeler",
+    howItWorks: "Comment se déroule mon intervention",
+    faqTitle: "Questions fréquentes",
+    serviceArea: "Zone d'intervention",
+    serviceAreaText: (address: string) => (
+      <>J&apos;interviens dans tous les quartiers de Nice depuis le {address}.</>
+    ),
+    seeAllAreas: "Voir tous les secteurs",
+    otherServices: "Autres interventions",
+    nearYou: "Ce service près de chez vous",
+    seeAllQuartiers: "Voir les 46 quartiers couverts",
+  },
+  en: {
+    home: "Home",
+    call: "Call",
+    howItWorks: "How my callout works",
+    faqTitle: "Frequently asked questions",
+    serviceArea: "Service area",
+    serviceAreaText: (address: string) => (
+      <>I cover every neighborhood in Nice, working out of {address}.</>
+    ),
+    seeAllAreas: "See all areas (in French)",
+    otherServices: "Other services",
+    nearYou: "This service near you",
+    seeAllQuartiers: "See all 46 neighborhoods covered (in French)",
+  },
+};
 
 export default function ServicePageTemplate({
   h1,
@@ -25,6 +57,7 @@ export default function ServicePageTemplate({
   relatedServices,
   image,
   extra,
+  locale = "fr",
 }: {
   h1: string;
   lead: string;
@@ -36,8 +69,10 @@ export default function ServicePageTemplate({
   image?: ServiceImage;
   /** Contenu additionnel optionnel, inséré après les sections principales (avant la FAQ). */
   extra?: ReactNode;
+  locale?: Locale;
 }) {
   const url = `${business.domain}${path}`;
+  const t = strings[locale];
 
   return (
     <>
@@ -47,7 +82,7 @@ export default function ServicePageTemplate({
       <JsonLd data={faqSchema(faq)} />
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Accueil", url: business.domain },
+          { name: t.home, url: business.domain },
           { name: breadcrumbLabel, url },
         ])}
       />
@@ -66,8 +101,9 @@ export default function ServicePageTemplate({
         <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
+              locale={locale}
               items={[
-                { name: "Accueil", href: "/" },
+                { name: t.home, href: "/" },
                 { name: breadcrumbLabel, href: path },
               ]}
             />
@@ -77,7 +113,7 @@ export default function ServicePageTemplate({
               href={business.phone.href}
               className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
             >
-              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+              {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
             </a>
           </div>
           {image && (
@@ -96,10 +132,8 @@ export default function ServicePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading font-semibold text-navy mb-4">
-          Comment se déroule mon intervention
-        </h2>
-        <ProcessSteps />
+        <h2 className="font-heading font-semibold text-navy mb-4">{t.howItWorks}</h2>
+        <ProcessSteps locale={locale} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
@@ -120,35 +154,28 @@ export default function ServicePageTemplate({
       {extra}
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Questions fréquentes
-        </h2>
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.faqTitle}</h2>
         <FaqAccordion items={faq} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <ReviewsSection />
+        <ReviewsSection locale={locale} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2">
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Zone d&apos;intervention
-          </h2>
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.serviceArea}</h2>
           <p className="text-slate text-sm mb-4">
-            J&apos;interviens dans tous les quartiers de Nice depuis le{" "}
-            {business.address.full}.{" "}
+            {t.serviceAreaText(business.address.full)}{" "}
             <Link href="/zones-intervention-nice/" className="text-steel underline">
-              Voir tous les secteurs
+              {t.seeAllAreas}
             </Link>
             .
           </p>
-          <LazyMap />
+          <LazyMap locale={locale} />
         </div>
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Autres interventions
-          </h2>
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.otherServices}</h2>
           <ul className="flex flex-col gap-2">
             {relatedServices.map((service) => (
               <li key={service.href}>
@@ -165,9 +192,7 @@ export default function ServicePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Ce service près de chez vous
-        </h2>
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.nearYou}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {featuredQuartiers.map((quartier) => (
             <Link
@@ -183,7 +208,7 @@ export default function ServicePageTemplate({
           href="/zones-intervention-nice/"
           className="inline-flex items-center gap-1 text-sm font-semibold text-steel mt-4 hover:underline"
         >
-          Voir les 46 quartiers couverts
+          {t.seeAllQuartiers}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path
               d="M5 12h14M13 6l6 6-6 6"
@@ -197,7 +222,7 @@ export default function ServicePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
-        <CtaBlock />
+        <CtaBlock locale={locale} />
       </section>
     </>
   );

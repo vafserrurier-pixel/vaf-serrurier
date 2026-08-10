@@ -1,0 +1,369 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import ProcessSteps from "@/components/ProcessSteps";
+import ServiceGrid from "@/components/ServiceGrid";
+import ReviewsSection from "@/components/ReviewsSection";
+import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
+import LazyMap from "@/components/LazyMap";
+import ContactForm from "@/components/ContactForm";
+import KeyBitDivider from "@/components/KeyBitDivider";
+import BrandsSection from "@/components/BrandsSection";
+import InsuranceBanner from "@/components/InsuranceBanner";
+import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { sectorPages } from "@/lib/quartiers";
+import { useLocale } from "@/lib/locale";
+
+const sectorCards = {
+  fr: [
+    {
+      key: "centre" as const,
+      blurb: "Du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez et le Carré d'Or.",
+    },
+    {
+      key: "est" as const,
+      blurb: "Du port Lympia à Riquier, jusqu'aux hauteurs du Mont Boron et de l'Ariane.",
+    },
+    {
+      key: "nord" as const,
+      blurb: "Brancolar, Gairaut, Rimiez, Pessicart et les collines résidentielles du nord.",
+    },
+    {
+      key: "ouest" as const,
+      blurb: "Fabron, Saint-Isidore, l'Arénas, Carras et les secteurs plus ruraux de l'ouest.",
+    },
+  ],
+  en: [
+    {
+      key: "centre" as const,
+      blurb: "From the Old Town to the Promenade des Anglais, through Cimiez and the Carré d'Or.",
+    },
+    {
+      key: "est" as const,
+      blurb: "From the Lympia harbor to Riquier, up to the heights of Mont Boron and l'Ariane.",
+    },
+    {
+      key: "nord" as const,
+      blurb: "Brancolar, Gairaut, Rimiez, Pessicart and the residential hills to the north.",
+    },
+    {
+      key: "ouest" as const,
+      blurb: "Fabron, Saint-Isidore, l'Arénas, Carras and the more rural areas to the west.",
+    },
+  ],
+};
+
+const homeFaqFr: FaqItem[] = [
+  {
+    question: "Y a-t-il un serrurier ouvert maintenant près de moi à Nice ?",
+    answer:
+      "Oui, j'interviens 24h/24 et 7j/7 sur Nice, y compris la nuit, le week-end et les jours fériés. Vous m'appelez, je vous dis dans combien de temps je peux être sur place.",
+  },
+  {
+    question: "Combien coûte un serrurier en urgence à Nice ?",
+    answer:
+      "À partir de 149 € TTC pour une ouverture de porte standard, avec une majoration de 50% après 19h, le week-end et les jours fériés. Le détail complet est sur ma page tarifs, et le prix exact est toujours annoncé avant que j'intervienne.",
+  },
+  {
+    question: "Donnez-vous un devis avant l'intervention ?",
+    answer:
+      "Systématiquement, et ce n'est pas une option : la loi oblige tout serrurier à annoncer son prix avant de commencer les travaux. Je vous le confirme sur place avant d'intervenir.",
+  },
+  {
+    question: "Dans quels quartiers de Nice intervenez-vous ?",
+    answer:
+      "Je couvre l'ensemble de Nice — centre, est, nord et ouest, du Vieux-Nice à Fabron en passant par Cimiez ou Riquier. Voir le détail sur la page zones d'intervention.",
+  },
+  {
+    question: "Pourquoi choisir un artisan serrurier solo plutôt qu'une grande enseigne ?",
+    answer:
+      "Parce que c'est moi qui réponds au téléphone, moi qui viens, et moi qui reste joignable après l'intervention si besoin. Pas d'intermédiaire, pas de sous-traitance, un seul interlocuteur du premier appel à la fin du chantier.",
+  },
+  {
+    question: "Travaillez-vous aussi bien sur les urgences que sur les projets programmés ?",
+    answer:
+      "Oui. Les urgences (porte claquée, effraction) passent en priorité, mais j'interviens tout autant sur des projets réfléchis à l'avance comme un changement de serrure ou l'installation d'une porte blindée.",
+  },
+];
+
+const homeFaqEn: FaqItem[] = [
+  {
+    question: "Is there a locksmith open near me in Nice right now?",
+    answer:
+      "Yes, I work 24/7 across Nice, including nights, weekends and public holidays. You call me, and I'll tell you how long it'll take me to get there.",
+  },
+  {
+    question: "How much does an emergency locksmith cost in Nice?",
+    answer:
+      "From €149 incl. VAT for a standard door opening, with a 50% surcharge after 7pm, on weekends and public holidays. Full details are on my pricing page, and the exact price is always given before I start any work.",
+  },
+  {
+    question: "Do you give a quote before the work starts?",
+    answer:
+      "Always, and it isn't optional: French law requires every locksmith to quote a price before starting any work. I confirm it on site before I begin.",
+  },
+  {
+    question: "Which areas of Nice do you cover?",
+    answer:
+      "I cover the whole of Nice — center, east, north and west, from the Old Town to Fabron, through Cimiez or Riquier. See the full detail on the areas covered page (in French).",
+  },
+  {
+    question: "Why choose a solo locksmith over a large company?",
+    answer:
+      "Because I'm the one who answers the phone, the one who shows up, and the one you can still reach afterward if needed. No middleman, no subcontracting — a single point of contact from the first call to the end of the job.",
+  },
+  {
+    question: "Do you handle both emergencies and planned projects?",
+    answer:
+      "Yes. Emergencies (a slammed door, a break-in) take priority, but I handle planned projects just as much, like a lock change or fitting a security door.",
+  },
+];
+
+const strings = {
+  fr: {
+    badge: "Disponible maintenant — devis par téléphone",
+    h1a: "Serrurier à",
+    h1b: ", disponible 24h/24",
+    lead: "Porte claquée, serrure bloquée, effraction : vous m'expliquez la situation, j'annonce un prix avant de me déplacer. Ce qui compte, c'est la transparence, pas les promesses.",
+    call: "Appeler",
+    seePricing: "Voir les tarifs",
+    heroAlt: "Porte d'entrée équipée d'une serrure moderne avec clés, serrurier à Nice",
+    introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
+    intro: [
+      "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Ici, pas de standard qui redirige votre appel vers un sous-traitant inconnu : c'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
+      "J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron, pour tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Le prix est toujours annoncé avant que je commence, et les 150 avis 5 étoiles laissés sur ma fiche Google portent surtout sur un point : aucune mauvaise surprise sur la facture.",
+      "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate — une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure — et d'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
+      "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice : mêmes explications claires, même devis annoncé avant travaux, et un seul interlocuteur à qui se référer d'une intervention à l'autre.",
+    ],
+    aboutLink: "En savoir plus sur mon parcours →",
+    howItWorks: "Comment se déroule mon intervention",
+    services: "Mes services de serrurerie à Nice",
+    brands: "Marques de serrures que je pose à Nice",
+    feature1Title: "Prix annoncé avant",
+    feature1Text:
+      "Le devis vous est communiqué avant que je touche à quoi que ce soit — c'est une obligation légale que je respecte systématiquement, urgence ou non.",
+    feature2Title: "Un artisan, pas un centre d'appel",
+    feature2Text:
+      "Vous parlez directement à la personne qui va intervenir chez vous, du premier appel jusqu'à la fin du chantier.",
+    feature3Title: "5,0/5 sur plus de 150 avis",
+    feature3Text:
+      "Des avis Google vérifiés, pas des témoignages mis en scène. Vous pouvez les consulter avant de m'appeler.",
+    areaTitle: "Zone d'intervention à Nice",
+    areaText: (address: string) => (
+      <>
+        J&apos;interviens dans tous les quartiers de Nice, depuis le {address}. Choisissez
+        votre secteur pour voir les quartiers couverts et le délai d&apos;intervention
+        habituel.
+      </>
+    ),
+    seeAllQuartiers: "Voir tous les quartiers couverts →",
+    contactTitle: "Un devis ou une intervention ?",
+    contactText: "Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le moyen le plus rapide.",
+    faqTitle: "Questions fréquentes",
+  },
+  en: {
+    badge: "Available now — quote by phone",
+    h1a: "Locksmith in",
+    h1b: ", available 24/7",
+    lead: "Door slammed shut, jammed lock, break-in: you explain the situation, I quote a price before I travel to you. What matters is transparency, not promises.",
+    call: "Call",
+    seePricing: "See pricing",
+    heroAlt: "A front door fitted with a modern lock and keys, locksmith in Nice",
+    introTitle: "A locksmith craftsman, not a platform of middlemen",
+    intro: [
+      "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor: I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
+      "I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron, for everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. The price is always given before I start, and the 150 five-star reviews on my Google listing mostly come back to one point: no bad surprises on the bill.",
+      "Not every situation is the same. Some need an immediate response — a door slammed shut with the keys inside, a break-in to secure within the hour — and others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
+      "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice: the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
+    ],
+    aboutLink: "More about me (in French) →",
+    howItWorks: "How my callout works",
+    services: "My locksmith services in Nice",
+    brands: "Lock brands I install in Nice",
+    feature1Title: "Price quoted upfront",
+    feature1Text:
+      "You get the quote before I touch anything — it's a legal requirement I always follow, emergency or not.",
+    feature2Title: "A craftsman, not a call center",
+    feature2Text: "You speak directly to the person who'll show up at your place, from the first call to the end of the job.",
+    feature3Title: "5.0/5 from over 150 reviews",
+    feature3Text: "Verified Google reviews, not staged testimonials. You can check them before you call.",
+    areaTitle: "Service area in Nice",
+    areaText: (address: string) => (
+      <>
+        I cover every neighborhood in Nice, working out of {address}. Choose your area to
+        see the neighborhoods covered and the usual response time.
+      </>
+    ),
+    seeAllQuartiers: "See all neighborhoods covered (in French) →",
+    contactTitle: "Need a quote or a callout?",
+    contactText: "Describe your situation and I'll reply quickly. For an emergency, calling remains the fastest way to reach me.",
+    faqTitle: "Frequently asked questions",
+  },
+};
+
+export default function HomeBody() {
+  const { locale } = useLocale();
+  const t = strings[locale];
+  const cards = sectorCards[locale];
+  const homeFaq = locale === "en" ? homeFaqEn : homeFaqFr;
+
+  return (
+    <>
+      <section className="relative overflow-hidden bg-white">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-steel/10 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-urgent/5 blur-3xl"
+        />
+        <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 items-center">
+          <div className="text-center sm:text-left">
+            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+              {t.badge}
+            </span>
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy">
+              {t.h1a} <span className="text-urgent">Nice</span>
+              {t.h1b}
+            </h1>
+            <p className="mt-4 text-slate leading-relaxed max-w-xl mx-auto sm:mx-0">{t.lead}</p>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-6">
+              <a
+                href={business.phone.href}
+                className="inline-block bg-urgent text-white font-semibold px-8 py-3.5 rounded-full text-lg shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
+              >
+                {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+              </a>
+              <Link
+                href="/tarifs-serrurier-nice/"
+                className="inline-block border border-navy/20 text-navy font-semibold px-8 py-3.5 rounded-full text-lg hover:bg-white transition-colors"
+              >
+                {t.seePricing}
+              </Link>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
+            <Image
+              src="/images/serrurier-nice-porte-cle.webp"
+              alt={t.heroAlt}
+              fill
+              sizes="(min-width: 640px) 40vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <KeyBitDivider className="relative" opacity={0.3} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.introTitle}</h2>
+        <div className="text-slate leading-relaxed flex flex-col gap-3">
+          {t.intro.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+          <p>
+            <Link href="/a-propos/" className="text-steel underline font-semibold">
+              {t.aboutLink}
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="text-center font-heading font-semibold text-navy mb-6">{t.howItWorks}</h2>
+        <ProcessSteps locale={locale} />
+      </section>
+
+      <section className="bg-navy py-14">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="font-heading text-2xl font-bold text-cream mb-6 text-center">{t.services}</h2>
+          <ServiceGrid locale={locale} />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-4 text-center">{t.brands}</h2>
+        <BrandsSection locale={locale} />
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto max-w-5xl px-4 grid gap-6 sm:grid-cols-3">
+          <div className="rounded-xl border border-navy/10 p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <PriceTagIcon className="w-5 h-5" />
+            </span>
+            <p className="font-heading font-semibold text-navy mb-2">{t.feature1Title}</p>
+            <p className="text-sm text-slate leading-relaxed">{t.feature1Text}</p>
+          </div>
+          <div className="rounded-xl border border-navy/10 p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <HandshakeIcon className="w-5 h-5" />
+            </span>
+            <p className="font-heading font-semibold text-navy mb-2">{t.feature2Title}</p>
+            <p className="text-sm text-slate leading-relaxed">{t.feature2Text}</p>
+          </div>
+          <div className="rounded-xl border border-navy/10 p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <StarIcon className="w-5 h-5" />
+            </span>
+            <p className="font-heading font-semibold text-navy mb-2">{t.feature3Title}</p>
+            <p className="text-sm text-slate leading-relaxed">{t.feature3Text}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 pt-10">
+        <InsuranceBanner locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <ReviewsSection locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">{t.areaTitle}</h2>
+        <p className="text-slate text-sm mb-8 text-center max-w-2xl mx-auto">
+          {t.areaText(business.address.full)}
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {cards.map((sector) => (
+            <Link
+              key={sector.key}
+              href={sectorPages[sector.key].href}
+              className="block rounded-xl border border-navy/10 bg-white p-5 shadow-sm hover:border-steel hover:shadow-md transition-all"
+            >
+              <p className="font-heading font-bold text-navy mb-1.5">
+                {locale === "en" ? "Locksmith in" : "Serrurier à"} {sectorPages[sector.key].label}
+              </p>
+              <p className="text-sm text-slate leading-relaxed">{sector.blurb}</p>
+            </Link>
+          ))}
+        </div>
+        <p className="text-center mt-6">
+          <Link href="/zones-intervention-nice/" className="text-steel underline text-sm">
+            {t.seeAllQuartiers}
+          </Link>
+        </p>
+        <div className="mt-8">
+          <LazyMap locale={locale} />
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-4xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.contactTitle}</h2>
+        <p className="text-slate text-sm mb-4">{t.contactText}</p>
+        <ContactForm locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
+        <FaqAccordion items={homeFaq} />
+      </section>
+    </>
+  );
+}

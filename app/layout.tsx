@@ -8,6 +8,7 @@ import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { localBusinessSchema } from "@/lib/schema";
+import { LocaleProvider } from "@/lib/locale";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -64,20 +65,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${archivo.variable} ${publicSans.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream">
-        <JsonLd data={localBusinessSchema()} />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-navy focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
-        >
-          Aller au contenu principal
-        </a>
-        <Header />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <StickyCallButton />
-        <CookieConsent />
+        <LocaleProvider>
+          <JsonLd data={localBusinessSchema()} />
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-navy focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
+          >
+            Aller au contenu principal
+          </a>
+          <Header />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <StickyCallButton />
+          <CookieConsent />
+        </LocaleProvider>
       </body>
     </html>
   );

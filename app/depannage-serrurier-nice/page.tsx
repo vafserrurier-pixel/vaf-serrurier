@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import LocalizedServicePage from "@/components/LocalizedServicePage";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention. Appelez le 04 22 13 85 44.",
 };
 
-const sections = [
+const sectionsFr = [
   {
     heading: "Une serrure bloquée à Nice, d'où ça vient",
     paragraphs: [
@@ -43,7 +43,7 @@ const sections = [
   },
 ];
 
-const faq = [
+const faqFr = [
   {
     question: "Comment se passe l'intervention d'un serrurier à Nice ?",
     answer:
@@ -76,25 +76,113 @@ const faq = [
   },
 ];
 
+const sectionsEn = [
+  {
+    heading: "Where a stuck lock in Nice usually comes from",
+    paragraphs: [
+      "A lock that resists rarely comes out of nowhere. Most often it's a cylinder that has collected dust and humidity over the seasons, a tired internal mechanism, or simply a misaligned door that forces the bolt every time it closes. In Nice's older city-center buildings, humidity and temperature swings also affect the wood and how well the door sits in its frame.",
+      "Before concluding anything, I check everything: the door, the strike plate, the bolt and the cylinder. A lock that sticks slightly today can jam completely tomorrow — a preventive callout is almost always cheaper than a middle-of-the-night repair once the mechanism has fully seized.",
+    ],
+  },
+  {
+    heading: "A key broken off inside the lock",
+    paragraphs: [
+      "This is one of the most common callouts: a worn key snaps clean off inside the cylinder, usually at the worst possible time. I extract the piece left inside with the right tools, then check the condition of the cylinder before putting it back into service.",
+      "One thing to avoid absolutely: pushing the broken key with a sharp object or trying to glue it back together. Both of these common reflexes almost always make extraction harder and damage the cylinder, turning a simple repair into a full replacement.",
+    ],
+  },
+  {
+    heading: "When the key turns but nothing happens",
+    paragraphs: [
+      "If the key turns freely without engaging anything, the mechanism is no longer transmitting movement to the bolt. This is often a sign of a broken internal part or a fully worn cylinder. I check the whole assembly — door, strike plate, bolt and cylinder — to pinpoint the exact cause, fix what can be fixed, and only replace what's truly necessary.",
+    ],
+  },
+  {
+    heading: "A stiff cylinder: act before it fails completely",
+    paragraphs: [
+      "A cylinder that catches, a key that needs a little more force each week: these are warning signs. The right lubricant can sometimes offer temporary relief, but if the problem keeps coming back, it's better to deal with it before you find yourself locked out on a weekend evening.",
+    ],
+  },
+  {
+    heading: "How I set the price for a callout",
+    paragraphs: [
+      "The cost depends on the problem, the time needed on site, and any parts that need replacing. You call me, explain the issue in a few words, and I give you a price before I travel to you — no bad surprises at the end.",
+    ],
+  },
+];
+
+const faqEn = [
+  {
+    question: "How does a locksmith callout work in Nice?",
+    answer:
+      "I first listen to the problem over the phone, suggest the most suitable solution, quote a detailed price, then carry out the work on site.",
+  },
+  {
+    question: "Who covers the cost of a lock replacement in Nice?",
+    answer:
+      "Generally, the owner covers locksmithing costs tied to normal wear. Damage caused by misuse remains the occupant's responsibility.",
+  },
+  {
+    question: "How does a locksmith open a door slammed shut without a key?",
+    answer:
+      "Depending on the lock model, I slide a thin, rigid strip between the frame and the bolt to release the mechanism, without damaging the door.",
+  },
+  {
+    question: "Does home insurance cover a lock replacement in Nice?",
+    answer:
+      "In most cases, the tenant's or owner's home insurance covers replacing a damaged lock, particularly after a break-in. Check the terms of your own contract.",
+  },
+  {
+    question: "Is a locksmith allowed to quote a price only after the work is done?",
+    answer:
+      "No. The locksmith trade is regulated: I'm required to give you a quote before starting any work.",
+  },
+  {
+    question: "Is there a locksmith open near me in Nice right now?",
+    answer:
+      "Yes, I work 24/7 across Nice and its surrounding area, including nights, weekends and public holidays.",
+  },
+];
+
 export default function DepannageSerrurierNicePage() {
   return (
-    <ServicePageTemplate
-      h1="Urgence serrurier à Nice, dépannage 24h/24 et 7j/7"
-      lead="Serrure bloquée, clé cassée, cylindre qui grippe : vous m'expliquez la situation, je vous donne un prix avant de me déplacer, et j'interviens proprement, de jour comme de nuit."
-      sections={sections}
-      faq={faq}
-      breadcrumbLabel="Dépannage serrurier"
-      path="/depannage-serrurier-nice/"
-      image={{
-        src: "/images/serrurier-nice-depannage-reparation.webp",
-        alt: "Réparation d'un mécanisme de serrure par un serrurier à Nice",
+    <LocalizedServicePage
+      fr={{
+        h1: "Urgence serrurier à Nice, dépannage 24h/24 et 7j/7",
+        lead: "Serrure bloquée, clé cassée, cylindre qui grippe : vous m'expliquez la situation, je vous donne un prix avant de me déplacer, et j'interviens proprement, de jour comme de nuit.",
+        sections: sectionsFr,
+        faq: faqFr,
+        breadcrumbLabel: "Dépannage serrurier",
+        path: "/depannage-serrurier-nice/",
+        image: {
+          src: "/images/serrurier-nice-depannage-reparation.webp",
+          alt: "Réparation d'un mécanisme de serrure par un serrurier à Nice",
+        },
+        relatedServices: [
+          { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
+          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+          { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+        ],
       }}
-      relatedServices={[
-        { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      en={{
+        h1: "Emergency locksmith in Nice, 24/7 callout service",
+        lead: "Stuck lock, broken key, jammed cylinder: you explain the situation, I quote a price before I travel to you, and I get it fixed cleanly, day or night.",
+        sections: sectionsEn,
+        faq: faqEn,
+        breadcrumbLabel: "Emergency callout",
+        path: "/depannage-serrurier-nice/",
+        image: {
+          src: "/images/serrurier-nice-depannage-reparation.webp",
+          alt: "A locksmith repairing a lock mechanism in Nice",
+        },
+        relatedServices: [
+          { href: "/ouverture-de-porte-nice/", label: "Door opening" },
+          { href: "/changement-serrure-nice/", label: "Lock change" },
+          { href: "/mis-en-securite-apres-effraction-nice/", label: "After a break-in" },
+          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
+        ],
+      }}
     />
   );
 }

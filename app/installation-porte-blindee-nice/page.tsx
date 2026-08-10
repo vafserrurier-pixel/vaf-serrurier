@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import LocalizedServicePage from "@/components/LocalizedServicePage";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/installation-porte-blindee-nice/" },
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Porte blindée ou blindage d'une porte existante à Nice : diagnostic, devis annoncé, pose soignée. Certification A2P BP expliquée simplement.",
 };
 
-const sections = [
+const sectionsFr = [
   {
     heading: "Porte blindée ou blindage, que choisir",
     paragraphs: [
@@ -54,7 +54,7 @@ const sections = [
   },
 ];
 
-const faq = [
+const faqFr = [
   {
     question: "Comment savoir si ma porte blindée est aux normes ?",
     answer:
@@ -92,25 +92,129 @@ const faq = [
   },
 ];
 
+const sectionsEn = [
+  {
+    heading: "Security door or reinforcement: which to choose",
+    paragraphs: [
+      "Two solutions exist: a full armored door block, or reinforcement that strengthens an existing door. The choice depends on the current condition of your door and building — a full door block suits a tired setup better, reinforcement suits a door that's still sound and sturdy.",
+    ],
+  },
+  {
+    heading: "In an apartment building in Nice",
+    paragraphs: [
+      "Building bylaws sometimes require an identical exterior appearance on the landing. Reinforcement often preserves the existing look better, while a full door block has to respect the required visible finish.",
+    ],
+  },
+  {
+    heading: "What actually makes a door secure",
+    paragraphs: [
+      "A solid lock isn't enough: the frame, the anchor points and the hinges matter just as much. A door fitted and adjusted properly lasts longer than a rushed install — I take the time needed to get the adjustment right.",
+      "A burglar takes about 90 seconds on average to force a standard lock. A well-fitted security door can hold out for nearly 50 minutes.",
+    ],
+  },
+  {
+    heading: "Understanding A2P BP certification",
+    paragraphs: [
+      "A2P certification ranks door blocks by resistance level: BP1, BP2, BP3. An A2P BP1 door has at least a 3-point lock and resists break-in attempts for at least 5 minutes. It's a useful benchmark for comparison, but an excellent door poorly fitted loses all its value.",
+    ],
+  },
+  {
+    heading: "How an installation goes",
+    paragraphs: [
+      "I take the time to understand the need and look at the entrance and its constraints, suggest a solution that fits with a price quoted upfront, protect the walkways, remove the old door cleanly, prepare the frame, fit and fine-adjust, test the closing several times, then explain the upkeep to expect.",
+    ],
+  },
+  {
+    heading: "What makes the price of a security door vary",
+    paragraphs: [
+      "The choice between reinforcement and a full door block is the biggest factor, followed by the lock level (multipoint, A2P certification), the cylinder, the visible finish on the landing side, and the site setup — awkward access on a high floor with no lift adds handling time. A detailed quote, given before any commitment, accounts for each of these factors.",
+    ],
+  },
+  {
+    heading: "A real impact on your home insurance",
+    paragraphs: [
+      "A2P certification is recognized by almost all French insurers: it often affects the theft cover in your contract and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract — check directly with yours. I provide a detailed invoice stating the certification level fitted, the document usually required to claim this security upgrade with your insurer.",
+    ],
+  },
+];
+
+const faqEn = [
+  {
+    question: "How do I know if my security door meets current standards?",
+    answer:
+      "A compliant security door lock has several locking points (2, 3, 5 or even 7) combined with an A2P-certified cylinder and lock.",
+  },
+  {
+    question: "What is an A2P BP1 door?",
+    answer:
+      "An A2P BP1 door has at least a 3-point lock and resists break-in attempts for at least 5 minutes, under a standardized test.",
+  },
+  {
+    question: "What are the real benefits of a security door?",
+    answer:
+      "Where a standard lock gives way in about 90 seconds, a well-fitted security door can resist a break-in attempt for nearly 50 minutes.",
+  },
+  {
+    question: "Who installs security doors in Nice?",
+    answer:
+      "I handle it myself, from diagnosis to final fitting, as a locksmith specialized in door reinforcement.",
+  },
+  {
+    question: "How much does a security door weigh?",
+    answer:
+      "For common dimensions (1.10 m wide, 2.20 m tall), expect between 130 and 180 kg, more if the door also offers fire resistance.",
+  },
+  {
+    question: "Can I install a security door in an apartment building in Nice?",
+    answer:
+      "Yes, in most cases, though the building bylaws may require an identical exterior look on the landing. Reinforcing an existing door is often the easiest solution to get approved, since it doesn't change the appearance seen from the hallway.",
+  },
+  {
+    question: "Does a security door really lower my insurance premium?",
+    answer:
+      "In most cases, yes, from A2P BP2 level up. The size of the reduction depends on your insurer and contract: I'd recommend checking directly with them, with the detailed invoice I provide.",
+  },
+];
+
 export default function InstallationPorteBlindeeNicePage() {
   return (
-    <ServicePageTemplate
-      h1="Installation de porte blindée à Nice"
-      lead="Bloc-porte blindé complet ou blindage d'une porte existante : je vous aide à choisir la solution adaptée à votre porte et à votre bâti, devis annoncé avant intervention."
-      sections={sections}
-      faq={faq}
-      breadcrumbLabel="Installation porte blindée"
-      path="/installation-porte-blindee-nice/"
-      image={{
-        src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "Serrure multipoints sur porte blindée, installation à Nice",
+    <LocalizedServicePage
+      fr={{
+        h1: "Installation de porte blindée à Nice",
+        lead: "Bloc-porte blindé complet ou blindage d'une porte existante : je vous aide à choisir la solution adaptée à votre porte et à votre bâti, devis annoncé avant intervention.",
+        sections: sectionsFr,
+        faq: faqFr,
+        breadcrumbLabel: "Installation porte blindée",
+        path: "/installation-porte-blindee-nice/",
+        image: {
+          src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+          alt: "Serrure multipoints sur porte blindée, installation à Nice",
+        },
+        relatedServices: [
+          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+          { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+        ],
       }}
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      en={{
+        h1: "Security door installation in Nice",
+        lead: "Full armored door block or reinforcing an existing door: I help you choose the solution suited to your door and your building, price quoted before the work starts.",
+        sections: sectionsEn,
+        faq: faqEn,
+        breadcrumbLabel: "Security door installation",
+        path: "/installation-porte-blindee-nice/",
+        image: {
+          src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+          alt: "A multipoint lock on a security door, installation in Nice",
+        },
+        relatedServices: [
+          { href: "/changement-serrure-nice/", label: "Lock change" },
+          { href: "/mis-en-securite-apres-effraction-nice/", label: "After a break-in" },
+          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
+          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
+        ],
+      }}
     />
   );
 }

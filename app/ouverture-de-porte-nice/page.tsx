@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import LocalizedServicePage from "@/components/LocalizedServicePage";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-porte-nice/" },
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit au 04 22 13 85 44.",
 };
 
-const sections = [
+const sectionsFr = [
   {
     heading: "Porte claquée n'est pas porte verrouillée",
     paragraphs: [
@@ -41,7 +41,7 @@ const sections = [
   },
 ];
 
-const faq = [
+const faqFr = [
   {
     question: "Comment ouvrir une porte claquée sans serrurier ?",
     answer:
@@ -79,25 +79,116 @@ const faq = [
   },
 ];
 
+const sectionsEn = [
+  {
+    heading: "A slammed door is not the same as a locked door",
+    paragraphs: [
+      "This is the first question I ask on the phone, because the method changes completely depending on the case. A door slammed shut — closed by the simple movement of the door itself, without turning a key — very often gets resolved with zero damage: a misaligned strike plate, a slightly warped bolt or a worn handle frequently cause this kind of jam, especially on the older doors in central Nice.",
+    ],
+  },
+  {
+    heading: "Door locked with a key",
+    paragraphs: [
+      "This case calls for more care, depending on the type of lock installed: standard cylinder, multipoint lock, or an older model. If your keys are lost or stolen, I'll often suggest a cylinder replacement at the same time — it solves the access problem and improves security in one go, rather than cutting a new key that could still be circulating elsewhere.",
+    ],
+  },
+  {
+    heading: "Broken key or jammed lock",
+    paragraphs: [
+      "I cleanly extract the piece of key left inside the cylinder, without forcing or damaging the mechanism. A jammed lock can also come from a cylinder stiffened by humidity or a door rubbing against its frame: a preventive callout is almost always cheaper than a night-time repair on a weekend.",
+    ],
+  },
+  {
+    heading: "Locked security door",
+    paragraphs: [
+      "I adapt my method without ever compromising on the quality of the opening, and without forcing a security door that's specifically built to resist. The goal stays the same: stay clean, respect the structure of the building, and avoid turning an opening into a heavy repair job.",
+    ],
+  },
+  {
+    heading: "ID is always required",
+    paragraphs: [
+      "Before opening a locked door, I have to verify your identity and your right to occupy the property — an ID card plus a document in your name at that address (lease, bill, deed). This isn't unnecessary paperwork: regulation requires this check from every locksmith, with legal liability for complicity in an unlawful entry if it's skipped. It protects you as much as it protects me.",
+    ],
+  },
+];
+
+const faqEn = [
+  {
+    question: "How can I open a slammed door without a locksmith?",
+    answer:
+      "Depending on the model, a thin rigid strip (an old X-ray film or a card) slid between the frame and the bolt can sometimes be enough to release the mechanism. If it resists, it's best not to force it: you risk damaging the strike plate or the door itself, which costs more to repair than a simple callout.",
+  },
+  {
+    question: "How do you open a door when the key was left inside?",
+    answer:
+      "With a spare key, it's sometimes possible to gently push the mechanism so the key left in the cylinder falls out. This isn't guaranteed depending on the lock model, and I intervene directly if this method doesn't work.",
+  },
+  {
+    question: "What is a door bolt?",
+    answer:
+      "The bolt is the moving part of the lock, on the edge of the door, that slides into the strike plate on the frame to keep the door shut. It's this part that blocks or releases the opening depending on its position.",
+  },
+  {
+    question: "How much does opening a slammed door cost in Nice?",
+    answer:
+      "€149 incl. VAT for a standard daytime opening. Full pricing details, including night and weekend surcharges, are on my pricing page.",
+  },
+  {
+    question: "How much does opening a locked door cost in Nice?",
+    answer:
+      "€149 incl. VAT for a standard situation, €189 incl. VAT for a locked security door. A 50% surcharge applies after 7pm, on weekends and public holidays.",
+  },
+  {
+    question: "Does opening a door leave marks?",
+    answer:
+      "Not in most slammed-door cases: I always favor a damage-free method when the setup allows it. For a locked door on a very resistant lock model, a more technical approach may sometimes be needed — I'll tell you before I act.",
+  },
+  {
+    question: "Why does a locksmith ask for ID before opening a door?",
+    answer:
+      "It's a regulatory requirement, not my own choice: I must verify your identity and your right to occupy the property before opening any locked door, to avoid facilitating an unlawful entry. Keep an ID and proof in your name close at hand.",
+  },
+];
+
 export default function OuvertureDePorteNicePage() {
   return (
-    <ServicePageTemplate
-      h1="Porte claquée à Nice : ouverture 24h/24 et 7j/7"
-      lead="Porte claquée ou fermée à clé, avec ou sans casse selon la situation : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement."
-      sections={sections}
-      faq={faq}
-      breadcrumbLabel="Ouverture de porte"
-      path="/ouverture-de-porte-nice/"
-      image={{
-        src: "/images/serrurier-nice-ouverture-de-porte.webp",
-        alt: "Main ouvrant une porte d'entrée équipée d'une poignée ancienne à Nice",
+    <LocalizedServicePage
+      fr={{
+        h1: "Porte claquée à Nice : ouverture 24h/24 et 7j/7",
+        lead: "Porte claquée ou fermée à clé, avec ou sans casse selon la situation : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement.",
+        sections: sectionsFr,
+        faq: faqFr,
+        breadcrumbLabel: "Ouverture de porte",
+        path: "/ouverture-de-porte-nice/",
+        image: {
+          src: "/images/serrurier-nice-ouverture-de-porte.webp",
+          alt: "Main ouvrant une porte d'entrée équipée d'une poignée ancienne à Nice",
+        },
+        relatedServices: [
+          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+          { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
+        ],
       }}
-      relatedServices={[
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      en={{
+        h1: "Door slammed shut in Nice: opened 24/7",
+        lead: "Door slammed shut or locked with a key, with or without damage depending on the situation: I diagnose over the phone, quote a price, then get it done cleanly.",
+        sections: sectionsEn,
+        faq: faqEn,
+        breadcrumbLabel: "Door opening",
+        path: "/ouverture-de-porte-nice/",
+        image: {
+          src: "/images/serrurier-nice-ouverture-de-porte.webp",
+          alt: "A hand opening a front door fitted with an older handle in Nice",
+        },
+        relatedServices: [
+          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
+          { href: "/changement-serrure-nice/", label: "Lock change" },
+          { href: "/installation-porte-blindee-nice/", label: "Security door installation" },
+          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
+        ],
+      }}
     />
   );
 }

@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import PricingTable from "@/components/PricingTable";
-import FaqAccordion from "@/components/FaqAccordion";
-import ReviewsSection from "@/components/ReviewsSection";
-import CtaBlock from "@/components/CtaBlock";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import TarifsBody from "./TarifsBody";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/tarifs-serrurier-nice/" },
@@ -56,90 +51,7 @@ export default function TarifsSerrurierNicePage() {
           { name: "Tarifs", url },
         ])}
       />
-
-      <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
-          <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Tarifs", href: "/tarifs-serrurier-nice/" }]} />
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-            Tarifs serrurier à Nice
-          </h1>
-          <p className="mt-4 text-slate leading-relaxed max-w-2xl">
-            Ce qui compte, c&apos;est la transparence, pas les promesses. Voici mes tarifs
-            pour les situations standards — un devis précis est toujours annoncé avant
-            que je commence l&apos;intervention.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <PricingTable />
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4">
-        <div className="bg-cream border border-urgent/20 rounded-xl p-5 sm:p-6">
-          <p className="font-heading font-bold text-navy mb-2">
-            Méfiez-vous des prix d&apos;appel trop bas
-          </p>
-          <p className="text-sm text-slate leading-relaxed">
-            Une ouverture de porte annoncée à 30 ou 40 € en ligne cache presque toujours
-            une facture qui explose une fois le technicien sur place. Déplacement
-            compris, une intervention sérieuse descend rarement sous les 100 € tout
-            compris : un prix très inférieur à ça doit vous alerter, pas vous rassurer.
-            Mes tarifs ci-dessus sont ceux que je facture réellement, pas un appât.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Ce qui fait varier le prix
-        </h2>
-        <p className="text-slate leading-relaxed">
-          Le tarif final dépend du problème rencontré (porte claquée ou verrouillée,
-          type de cylindre), de la marque et du modèle de la serrure, de l&apos;état de
-          la porte, et de l&apos;heure d&apos;intervention. Une majoration de 50%
-          s&apos;applique après 19h, le week-end et les jours fériés. Les pièces
-          remplacées sont toujours facturées à part et validées avec vous avant
-          intervention.
-        </p>
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Questions fréquentes sur les tarifs
-        </h2>
-        <FaqAccordion items={faq} />
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <ReviewsSection />
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <p className="text-slate text-sm">
-          Besoin d&apos;un service en particulier ?{" "}
-          <Link href="/depannage-serrurier-nice/" className="text-steel underline">
-            Dépannage
-          </Link>
-          ,{" "}
-          <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
-            ouverture de porte
-          </Link>
-          ,{" "}
-          <Link href="/changement-serrure-nice/" className="text-steel underline">
-            changement de serrure
-          </Link>{" "}
-          ou{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            installation de porte blindée
-          </Link>
-          .
-        </p>
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 pb-14">
-        <CtaBlock />
-      </section>
+      <TarifsBody />
     </>
   );
 }

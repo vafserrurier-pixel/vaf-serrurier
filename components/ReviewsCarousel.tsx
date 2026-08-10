@@ -3,6 +3,22 @@
 import { useEffect, useRef, useState } from "react";
 import type { Review } from "@/app/api/reviews/route";
 import { business } from "@/lib/business";
+import type { Locale } from "@/lib/locale";
+
+const strings = {
+  fr: {
+    googleReview: "avis Google",
+    reviewLabel: (i: number) => `Avis ${i + 1}`,
+    seeAll: "Voir tous les avis sur Google",
+    seeListing: "Voir la fiche Google de l'entreprise",
+  },
+  en: {
+    googleReview: "Google review, original in French",
+    reviewLabel: (i: number) => `Review ${i + 1}`,
+    seeAll: "See all reviews on Google",
+    seeListing: "View the business's Google listing",
+  },
+};
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -42,7 +58,8 @@ const fallback: Review[] = [
   },
 ];
 
-export default function ReviewsCarousel() {
+export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) {
+  const t = strings[locale];
   const [reviews, setReviews] = useState<Review[]>(fallback);
   const [live, setLive] = useState(false);
   const [index, setIndex] = useState(0);
@@ -82,7 +99,8 @@ export default function ReviewsCarousel() {
         <p className="mt-3 text-navy leading-relaxed">&ldquo;{current.text}&rdquo;</p>
         <div className="mt-4 flex items-center justify-between text-xs text-slate">
           <span>
-            {current.author} — avis Google{current.relativeTime ? ` · ${current.relativeTime}` : ""}
+            {current.author} — {t.googleReview}
+            {current.relativeTime ? ` · ${current.relativeTime}` : ""}
           </span>
         </div>
       </div>
@@ -94,7 +112,7 @@ export default function ReviewsCarousel() {
               key={review.author + i}
               type="button"
               onClick={() => setIndex(i)}
-              aria-label={`Avis ${i + 1}`}
+              aria-label={t.reviewLabel(i)}
               aria-current={i === index}
               className={`w-2 h-2 rounded-full transition-colors ${
                 i === index ? "bg-navy" : "bg-navy/20"
@@ -111,7 +129,7 @@ export default function ReviewsCarousel() {
           rel="noopener noreferrer"
           className="text-sm text-steel underline underline-offset-2"
         >
-          {live ? "Voir tous les avis sur Google" : "Voir la fiche Google de l'entreprise"}
+          {live ? t.seeAll : t.seeListing}
         </a>
       </p>
     </div>
