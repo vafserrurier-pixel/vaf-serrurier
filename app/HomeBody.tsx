@@ -233,13 +233,13 @@ export default function HomeBody() {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-6">
               <a
                 href={business.phone.href}
-                className="inline-block bg-urgent text-white font-semibold px-8 py-3.5 rounded-full text-lg shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
+                className="inline-block whitespace-nowrap bg-urgent text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
                 {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"
-                className="inline-block border border-navy/20 text-navy font-semibold px-8 py-3.5 rounded-full text-lg hover:bg-white transition-colors"
+                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-5 py-3 rounded-full hover:bg-white transition-colors"
               >
                 {t.seePricing}
               </Link>
