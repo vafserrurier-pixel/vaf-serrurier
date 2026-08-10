@@ -1,4 +1,3 @@
-import KeyBitDivider from "./KeyBitDivider";
 import type { Locale } from "@/lib/locale";
 
 const stepsByLocale = {
@@ -36,7 +35,6 @@ export default function ProcessSteps({ locale = "fr" }: { locale?: Locale }) {
   const steps = stepsByLocale[locale];
   return (
     <div>
-      <KeyBitDivider className="mb-8" opacity={0.4} />
       <ol className="grid gap-8 sm:grid-cols-3">
         {steps.map((step, index) => (
           <li key={step.title} className="relative">

@@ -8,7 +8,6 @@ import ReviewsSection from "@/components/ReviewsSection";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
 import LazyMap from "@/components/LazyMap";
 import ContactForm from "@/components/ContactForm";
-import KeyBitDivider from "@/components/KeyBitDivider";
 import BrandsSection from "@/components/BrandsSection";
 import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
@@ -257,7 +256,6 @@ export default function HomeBody() {
             />
           </div>
         </div>
-        <KeyBitDivider className="relative" opacity={0.3} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">
