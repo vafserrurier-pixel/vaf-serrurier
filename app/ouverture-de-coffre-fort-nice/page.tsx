@@ -88,6 +88,10 @@ export default function OuvertureDeCoffreFortNicePage() {
       faq={faq}
       breadcrumbLabel="Ouverture de coffre-fort"
       path="/ouverture-de-coffre-fort-nice/"
+      image={{
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Coffre-fort à serrure électronique diagnostiqué par un serrurier à Nice",
+      }}
       relatedServices={[
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

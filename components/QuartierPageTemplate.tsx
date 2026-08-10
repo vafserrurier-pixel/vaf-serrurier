@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
@@ -9,6 +10,7 @@ import CtaBlock from "./CtaBlock";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
+import { pickPhoto } from "@/lib/photos";
 
 export type ContentBlock = { heading: string; paragraphs: string[] };
 
@@ -34,6 +36,7 @@ export default function QuartierPageTemplate({
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
   const nearbyQuartiers = relatedQuartiers(sector, quartier);
+  const photo = pickPhoto(quartier);
 
   return (
     <>
@@ -55,31 +58,43 @@ export default function QuartierPageTemplate({
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
-          <Breadcrumbs
-            items={[
-              { name: "Accueil", href: "/" },
-              { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
-              { name: quartier, href: path },
-            ]}
-          />
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-            Serrurier à {quartier}, Nice
-          </h1>
-          {intro.map((paragraph, index) => (
-            <p key={index} className="mt-4 text-slate leading-relaxed max-w-2xl">
-              {paragraph}
+        <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+          <div>
+            <Breadcrumbs
+              items={[
+                { name: "Accueil", href: "/" },
+                { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
+                { name: quartier, href: path },
+              ]}
+            />
+            <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+              Serrurier à {quartier}, Nice
+            </h1>
+            {intro.map((paragraph, index) => (
+              <p key={index} className="mt-4 text-slate leading-relaxed max-w-2xl">
+                {paragraph}
+              </p>
+            ))}
+            <a
+              href={business.phone.href}
+              className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+            >
+              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+            </a>
+            <p className="mt-3 text-xs text-slate">
+              Délai habituel depuis le {business.address.full} : {travelEstimate}
             </p>
-          ))}
-          <a
-            href={business.phone.href}
-            className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-          >
-            Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-          </a>
-          <p className="mt-3 text-xs text-slate">
-            Délai habituel depuis le {business.address.full} : {travelEstimate}
-          </p>
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 640px) 40vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 

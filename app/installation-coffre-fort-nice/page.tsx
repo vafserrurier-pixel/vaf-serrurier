@@ -89,6 +89,10 @@ export default function InstallationCoffreFortNicePage() {
       faq={faq}
       breadcrumbLabel="Installation de coffre-fort"
       path="/installation-coffre-fort-nice/"
+      image={{
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Coffre-fort à installer, prêt pour la fixation, à Nice",
+      }}
       relatedServices={[
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

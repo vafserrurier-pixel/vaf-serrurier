@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
@@ -9,6 +10,7 @@ import LazyMap from "./LazyMap";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
+import { pickPhoto } from "@/lib/photos";
 
 export type ContentBlock = { heading: string; paragraphs: string[] };
 
@@ -33,6 +35,7 @@ export default function SectorPageTemplate({
   const siblingSectors = (Object.keys(sectorPages) as (keyof typeof sectorPages)[]).filter(
     (key) => key !== sectorKey,
   );
+  const photo = pickPhoto(sectorKey);
 
   return (
     <>
@@ -53,28 +56,42 @@ export default function SectorPageTemplate({
         ])}
       />
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <Breadcrumbs
-          items={[
-            { name: "Accueil", href: "/" },
-            { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
-            { name: title, href: path },
-          ]}
-        />
-        <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{title}</h1>
-        <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">
-          {intro.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+      <section className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+        <div>
+          <Breadcrumbs
+            items={[
+              { name: "Accueil", href: "/" },
+              { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
+              { name: title, href: path },
+            ]}
+          />
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{title}</h1>
+          <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">
+            {intro.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <a
+            href={business.phone.href}
+            className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+          >
+            Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+          </a>
         </div>
-        <a
-          href={business.phone.href}
-          className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-        >
-          Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-        </a>
+        <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            fill
+            sizes="(min-width: 640px) 40vw, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+      </section>
 
-        <div className="mt-8">
+      <section className="mx-auto max-w-4xl px-4 pb-10">
+        <div className="mt-2">
           <LazyMap />
         </div>
 
