@@ -1,10 +1,11 @@
 import { business } from "@/lib/business";
 import ReviewsCarousel from "./ReviewsCarousel";
+import { GoogleLogoIcon } from "./Icons";
 import type { Locale } from "@/lib/locale";
 
 function Stars({ size = 16 }: { size?: number }) {
   return (
-    <div className="flex gap-0.5 text-urgent" aria-hidden="true">
+    <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} width={size} height={size} viewBox="0 0 20 20" fill="currentColor">
           <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
@@ -24,6 +25,8 @@ export default function ReviewsSection({ locale = "fr" }: { locale?: Locale }) {
   return (
     <section aria-label={t.ariaLabel} className="max-w-xl mx-auto">
       <div className="flex items-center justify-center gap-4 mb-6">
+        <GoogleLogoIcon className="w-9 h-9 shrink-0" />
+        <div className="w-px h-9 bg-navy/10" aria-hidden="true" />
         <span className="font-heading text-4xl font-bold text-navy font-tabular-nums">
           {business.reviews.rating.toFixed(1)}
         </span>

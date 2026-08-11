@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { business } from "@/lib/business";
-import { StarIcon } from "./Icons";
+import { GoogleLogoIcon, StarIcon } from "./Icons";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
@@ -47,12 +47,13 @@ export default function LazyMap({ locale = "fr" }: { locale?: Locale }) {
     <div>
       <div className="bg-white border border-navy/10 rounded-xl p-5 mb-3">
         <div className="flex items-center gap-2">
+          <GoogleLogoIcon className="w-6 h-6 shrink-0" />
           <span className="font-tabular-nums font-bold text-navy text-lg">
             {business.reviews.rating.toFixed(1)}
           </span>
           <div className="flex items-center gap-0.5" aria-hidden="true">
             {Array.from({ length: 5 }).map((_, i) => (
-              <StarIcon key={i} className="w-4 h-4 text-urgent" />
+              <StarIcon key={i} className="w-4 h-4 text-amber-400" />
             ))}
           </div>
           <span className="text-sm text-slate">{t.reviews(business.reviews.count)}</span>

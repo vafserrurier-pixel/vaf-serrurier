@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Review } from "@/app/api/reviews/route";
 import { business } from "@/lib/business";
+import { GoogleLogoIcon } from "./Icons";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
@@ -22,7 +23,7 @@ const strings = {
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5 text-urgent" aria-hidden="true">
+    <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
@@ -127,8 +128,9 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
           href={business.googleMaps.shareLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-steel underline underline-offset-2"
+          className="inline-flex items-center gap-1.5 text-sm text-steel underline underline-offset-2"
         >
+          <GoogleLogoIcon className="w-4 h-4 shrink-0" />
           {live ? t.seeAll : t.seeListing}
         </a>
       </p>
