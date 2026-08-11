@@ -24,7 +24,7 @@ const sections = [
   {
     heading: "Une pièce d'identité systématiquement demandée",
     paragraphs: [
-      "Avant toute ouverture de coffre-fort, je demande une pièce d'identité et un justificatif de votre lien avec le logement ou le bien concerné — la même règle que pour l'ouverture d'une porte d'entrée verrouillée. Ce n'est pas une formalité superflue : c'est une garantie, pour vous comme pour moi, que je n'interviens pas sur un coffre qui ne vous appartient pas.",
+      "Avant toute ouverture de coffre-fort, je demande une pièce d'identité et un justificatif de votre lien avec le logement ou le bien concerné. C'est la même règle que pour l'ouverture d'une porte d'entrée verrouillée. Ce n'est pas une formalité superflue : c'est une garantie, pour vous comme pour moi, que je n'interviens pas sur un coffre qui ne vous appartient pas.",
     ],
   },
   {

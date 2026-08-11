@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à la Corniche des Oliviers : j'interviens sur ce secteur de villas entre Saint-Pierre-de-Féric et Saint-Pancrace, en vous donnant un délai réaliste dès l'appel compte tenu de la distance. Je diagnostique la serrure en place et propose généralement un cylindre Cisa ou Fichet adapté, avec possibilité de blindage si la porte le permet.",
-  "La Corniche des Oliviers a été inaugurée en 1931, sur les hauteurs entre Fabron et Nice Nord. Comme beaucoup de secteurs agricoles des collines niçoises, ses cultures ont été remplacées par des exploitations horticoles dédiées à l'œillet, avant que l'urbanisation des années 1960-1970 ne transforme le quartier en secteur résidentiel offrant des vues remarquables sur la baie des Anges et le Mercantour.",
+  "La Corniche des Oliviers a été inaugurée en 1931, sur les hauteurs entre Fabron et Nice Nord. Comme beaucoup de secteurs agricoles des collines niçoises, ses cultures ont été remplacées par des exploitations horticoles dédiées à l'œillet. L'urbanisation des années 1960-1970 a ensuite transformé le quartier en secteur résidentiel, offrant des vues remarquables sur la baie des Anges et le Mercantour.",
 ];
 
 const blocks = [

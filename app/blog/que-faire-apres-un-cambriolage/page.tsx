@@ -105,7 +105,7 @@ export default function QueFaireApresUnCambriolagePage() {
             visite, en particulier si le logement est visiblement vide le temps que vous
             organisiez la suite. Je peux intervenir 24h/24 pour une mise en sécurité
             immédiate — blocage temporaire ou remplacement selon l&apos;ampleur des
-            dégâts — puis vous proposer une solution durable une fois le diagnostic
+            dégâts. Je vous propose ensuite une solution durable, une fois le diagnostic
             complet effectué. Je vous fournis systématiquement une facture détaillée,
             le document généralement demandé pour votre déclaration de sinistre.
           </p>

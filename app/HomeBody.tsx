@@ -12,8 +12,13 @@ import BrandsSection from "@/components/BrandsSection";
 import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { sectorPages } from "@/lib/quartiers";
+import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { useLocale } from "@/lib/locale";
+
+const introPhoto = {
+  src: "/images/pool/photo-12.webp",
+  alt: "Benoît, artisan serrurier, après la pose d'une porte à Nice",
+};
 
 const sectorCards = {
   fr: [
@@ -131,10 +136,10 @@ const strings = {
     heroAlt: "Benoît, artisan serrurier, à côté d'une serrure moderne posée à Nice",
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
-      "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Ici, pas de standard qui redirige votre appel vers un sous-traitant inconnu : c'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
-      "J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron, pour tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Le prix est toujours annoncé avant que je commence, et les 150 avis 5 étoiles laissés sur ma fiche Google portent surtout sur un point : aucune mauvaise surprise sur la facture.",
-      "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate — une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure — et d'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
-      "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice : mêmes explications claires, même devis annoncé avant travaux, et un seul interlocuteur à qui se référer d'une intervention à l'autre.",
+      "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Chez moi, pas de standard qui redirige votre appel vers un sous-traitant inconnu. C'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
+      "J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron. Mon métier couvre tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Dans tous les cas, j'annonce le prix avant de commencer. Résultat : sur les 150 avis 5 étoiles laissés sur ma fiche Google, un point revient sans cesse — aucune mauvaise surprise sur la facture.",
+      "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate — une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure. D'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
+      "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice. Concrètement, vous avez les mêmes explications claires, le même devis annoncé avant travaux, et un seul interlocuteur à qui vous référer d'une intervention à l'autre.",
     ],
     aboutLink: "En savoir plus sur mon parcours →",
     howItWorks: "Comment se déroule mon intervention",
@@ -157,6 +162,7 @@ const strings = {
         habituel.
       </>
     ),
+    quartiersSubtitle: "Quelques quartiers où j'interviens régulièrement",
     seeAllQuartiers: "Voir tous les quartiers couverts →",
     contactTitle: "Un devis ou une intervention ?",
     contactText: "Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le moyen le plus rapide.",
@@ -172,10 +178,10 @@ const strings = {
     heroAlt: "Benoît, locksmith, next to a modern lock fitted in Nice",
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [
-      "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor: I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
-      "I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron, for everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. The price is always given before I start, and the 150 five-star reviews on my Google listing mostly come back to one point: no bad surprises on the bill.",
-      "Not every situation is the same. Some need an immediate response — a door slammed shut with the keys inside, a break-in to secure within the hour — and others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
-      "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice: the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
+      "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor. I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
+      "I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron. My work covers everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. In every case, I quote the price before I start. The result: across 150 five-star reviews on my Google listing, one point comes up again and again — no bad surprises on the bill.",
+      "Not every situation is the same. Some need an immediate response — a door slammed shut with the keys inside, a break-in to secure within the hour. Others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
+      "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice. In practice, that means the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
     ],
     aboutLink: "More about me (in French) →",
     howItWorks: "How my callout works",
@@ -195,6 +201,7 @@ const strings = {
         see the neighborhoods covered and the usual response time.
       </>
     ),
+    quartiersSubtitle: "Some of the neighborhoods I regularly work in",
     seeAllQuartiers: "See all neighborhoods covered (in French) →",
     contactTitle: "Need a quote or a callout?",
     contactText: "Describe your situation and I'll reply quickly. For an emergency, calling remains the fastest way to reach me.",
@@ -258,17 +265,30 @@ export default function HomeBody() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.introTitle}</h2>
-        <div className="text-slate leading-relaxed flex flex-col gap-3">
-          {t.intro.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          <p>
-            <Link href="/a-propos/" className="text-steel underline font-semibold">
-              {t.aboutLink}
-            </Link>
-          </p>
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <div className="grid gap-8 sm:grid-cols-2 items-start">
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.introTitle}</h2>
+            <div className="text-slate leading-relaxed flex flex-col gap-3">
+              {t.intro.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+              <p>
+                <Link href="/a-propos/" className="text-steel underline font-semibold">
+                  {t.aboutLink}
+                </Link>
+              </p>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
+            <Image
+              src={introPhoto.src}
+              alt={introPhoto.alt}
+              fill
+              sizes="(min-width: 640px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -342,7 +362,23 @@ export default function HomeBody() {
             </Link>
           ))}
         </div>
-        <p className="text-center mt-6">
+        <div className="mt-8">
+          <h3 className="text-center font-heading font-semibold text-navy text-sm mb-3">
+            {t.quartiersSubtitle}
+          </h3>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {featuredQuartiers.map((quartier) => (
+              <Link
+                key={quartier}
+                href={quartierHref(quartier)}
+                className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
+              >
+                {quartier}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <p className="text-center mt-4">
           <Link href="/zones-intervention-nice/" className="text-steel underline text-sm">
             {t.seeAllQuartiers}
           </Link>

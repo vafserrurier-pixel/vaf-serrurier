@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Dépannage serrurier à Desambrois : c'est l'un des quartiers où j'interviens le plus vite depuis mon point de départ, généralement en 10 à 15 minutes. La demande la plus fréquente ici n'est pas la panne classique, mais le changement de serrure entre deux locataires — le quartier compte environ 2 300 habitants majoritairement locataires, avec un turnover plus élevé que la moyenne niçoise. J'installe le plus souvent un cylindre Picard ou Fichet neuf après un état des lieux, pour repartir sur une serrure fiable entre chaque bail.",
+  "Dépannage serrurier à Desambrois : c'est l'un des quartiers où j'interviens le plus vite depuis mon point de départ, généralement en 10 à 15 minutes. La demande la plus fréquente ici n'est pas la panne classique, mais le changement de serrure entre deux locataires. Le quartier compte environ 2 300 habitants majoritairement locataires, avec un turnover plus élevé que la moyenne niçoise. J'installe le plus souvent un cylindre Picard ou Fichet neuf après un état des lieux, pour repartir sur une serrure fiable entre chaque bail.",
   "L'avenue Desambrois, bordée d'immeubles Belle Époque aux façades travaillées, tire son nom de Louis des Ambrois de Névache, intendant sarde du XIXe siècle, à l'époque où Nice appartenait encore au royaume de Sardaigne. Ce bâti ancien signifie aussi des cylindres et mécanismes d'origine, parfois conservés depuis plusieurs décennies, que je répare quand c'est possible plutôt que de les remplacer d'office.",
 ];
 

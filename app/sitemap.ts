@@ -1,3 +1,5 @@
+import { readdirSync } from "fs";
+import { join } from "path";
 import type { MetadataRoute } from "next";
 import { business } from "@/lib/business";
 import { builtQuartiers, quartierHref } from "@/lib/quartiers";
@@ -20,11 +22,6 @@ const paths = [
   "serrurier-nice-ouest",
   "contact",
   "blog",
-  "blog/que-faire-apres-un-cambriolage",
-  "blog/serrure-3-5-7-points-que-choisir",
-  "blog/certification-a2p-serrure",
-  "blog/serrurier-agree-assurances-vrai-faux",
-  "blog/porte-qui-claque-avant-appeler-serrurier",
   "remplacer-coffre-a-larder",
   "mentions-legales",
   "conditions-generales-dutilisation",
@@ -32,8 +29,14 @@ const paths = [
   "politique-de-confidentialite",
 ];
 
+function blogSlugs(): string[] {
+  return readdirSync(join(process.cwd(), "app/blog"), { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => `blog/${entry.name}`);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: MetadataRoute.Sitemap = paths.map((path) => ({
+  const staticEntries: MetadataRoute.Sitemap = [...paths, ...blogSlugs()].map((path) => ({
     url: `${business.domain}/${path}${path ? "/" : ""}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? "daily" : "monthly",

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Besoin d'un serrurier à Saint-Pierre-de-Féric : j'interviens 24h/24 sur ce secteur résidentiel haut de gamme des hauteurs de Nice, où les propriétés sont souvent plus grandes qu'ailleurs, avec portails et accès secondaires à diagnostiquer en plus de la porte d'entrée. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, avec possibilité de blindage complet selon l'état du bâti.",
-  "Le nom du quartier vient du niçois « San Peire dei Ferigoula », littéralement « Saint Pierre des Thyms », en référence aux plantations de thym qui couvraient autrefois ces hauteurs. Longtemps rural, le secteur est resté agricole jusqu'à la création d'un réseau de routes en 1922, avant de s'urbaniser fortement tout en conservant son caractère calme et verdoyant, avec des villas entourées de jardins, parfois piscine ou court de tennis à l'appui.",
+  "Le nom du quartier vient du niçois « San Peire dei Ferigoula », littéralement « Saint Pierre des Thyms », en référence aux plantations de thym qui couvraient autrefois ces hauteurs. Longtemps rural, le secteur est resté agricole jusqu'à la création d'un réseau de routes en 1922. Il s'est ensuite urbanisé fortement, tout en conservant son caractère calme et verdoyant, avec des villas entourées de jardins, parfois piscine ou court de tennis à l'appui.",
 ];
 
 const blocks = [

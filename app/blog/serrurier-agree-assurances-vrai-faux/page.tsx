@@ -72,8 +72,8 @@ export default function AgreeAssurancesPage() {
           <p>
             D&apos;après ce que je constate sur le terrain, ce qui compte pour un
             dossier de sinistre, c&apos;est une facture détaillée et conforme (avec
-            SIRET, description précise de l&apos;intervention, matériel posé), et
-            parfois la preuve que l&apos;équipement installé répond à une norme
+            SIRET, description précise de l&apos;intervention, matériel posé). Parfois,
+            c&apos;est aussi la preuve que l&apos;équipement installé répond à une norme
             reconnue comme la certification A2P. Chaque contrat a ses propres
             exigences : le plus sûr reste de vérifier directement les conditions du
             vôtre auprès de votre assureur plutôt que de se fier à un sigle affiché

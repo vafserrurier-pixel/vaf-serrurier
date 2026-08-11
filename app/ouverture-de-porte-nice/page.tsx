@@ -13,19 +13,19 @@ const sectionsFr = [
   {
     heading: "Porte claquée n'est pas porte verrouillée",
     paragraphs: [
-      "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée — fermée par le simple mouvement du battant, sans tour de clé — se résout très souvent sans aucune casse : une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
+      "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée — fermée par le simple mouvement du battant, sans tour de clé — se résout très souvent sans aucune casse. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
     ],
   },
   {
     heading: "Porte verrouillée à clé",
     paragraphs: [
-      "Ce cas demande davantage de précautions, selon le type de serrure installée : cylindre standard, serrure multipoints ou modèle plus ancien. Si vos clés sont perdues ou volées, j'en profite souvent pour vous proposer un remplacement de cylindre qui règle le problème d'accès et améliore la sécurité en même temps, plutôt que de reproduire une clé qui pourrait circuler ailleurs.",
+      "Ce cas demande davantage de précautions, selon le type de serrure installée : cylindre standard, serrure multipoints ou modèle plus ancien. Si vos clés sont perdues ou volées, j'en profite souvent pour vous proposer un remplacement de cylindre. Cette solution règle le problème d'accès et améliore la sécurité en même temps, plutôt que de reproduire une clé qui pourrait circuler ailleurs.",
     ],
   },
   {
     heading: "Clé cassée ou serrure bloquée",
     paragraphs: [
-      "J'extrais proprement le morceau de clé resté dans le cylindre, sans forcer ni abîmer le mécanisme. Une serrure bloquée peut aussi venir d'un cylindre grippé par l'humidité ou d'un frottement de la porte sur son cadre : une intervention préventive coûte presque toujours moins cher qu'un dépannage de nuit un week-end.",
+      "J'extrais proprement le morceau de clé resté dans le cylindre, sans forcer ni abîmer le mécanisme. Une serrure bloquée peut aussi venir d'un cylindre grippé par l'humidité ou d'un frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours moins cher qu'un dépannage de nuit un week-end.",
     ],
   },
   {
@@ -37,7 +37,7 @@ const sectionsFr = [
   {
     heading: "Une pièce d'identité toujours demandée",
     paragraphs: [
-      "Avant d'ouvrir une porte verrouillée, je dois vérifier votre identité et votre droit d'occupation du logement — pièce d'identité et document à votre nom à cette adresse (bail, facture, titre de propriété). Ce n'est pas de la paperasse inutile : la réglementation impose cette vérification à tout serrurier, sous peine de poursuites pour complicité de violation de domicile en cas de manquement. C'est une protection pour vous comme pour moi.",
+      "Avant d'ouvrir une porte verrouillée, je dois vérifier votre identité et votre droit d'occupation du logement — pièce d'identité et document à votre nom à cette adresse (bail, facture, titre de propriété). Ce n'est pas de la paperasse inutile. La réglementation impose cette vérification à tout serrurier, sous peine de poursuites pour complicité de violation de domicile en cas de manquement. C'est une protection pour vous comme pour moi.",
     ],
   },
 ];
@@ -84,19 +84,19 @@ const sectionsEn = [
   {
     heading: "A slammed door is not the same as a locked door",
     paragraphs: [
-      "This is the first question I ask on the phone, because the method changes completely depending on the case. A door slammed shut — closed by the simple movement of the door itself, without turning a key — very often gets resolved with zero damage: a misaligned strike plate, a slightly warped bolt or a worn handle frequently cause this kind of jam, especially on the older doors in central Nice.",
+      "This is the first question I ask on the phone, because the method changes completely depending on the case. A door slammed shut — closed by the simple movement of the door itself, without turning a key — very often gets resolved with zero damage. A misaligned strike plate, a slightly warped bolt or a worn handle frequently cause this kind of jam, especially on the older doors in central Nice.",
     ],
   },
   {
     heading: "Door locked with a key",
     paragraphs: [
-      "This case calls for more care, depending on the type of lock installed: standard cylinder, multipoint lock, or an older model. If your keys are lost or stolen, I'll often suggest a cylinder replacement at the same time — it solves the access problem and improves security in one go, rather than cutting a new key that could still be circulating elsewhere.",
+      "This case calls for more care, depending on the type of lock installed: standard cylinder, multipoint lock, or an older model. If your keys are lost or stolen, I'll often suggest a cylinder replacement at the same time. It solves the access problem and improves security in one go, rather than cutting a new key that could still be circulating elsewhere.",
     ],
   },
   {
     heading: "Broken key or jammed lock",
     paragraphs: [
-      "I cleanly extract the piece of key left inside the cylinder, without forcing or damaging the mechanism. A jammed lock can also come from a cylinder stiffened by humidity or a door rubbing against its frame: a preventive callout is almost always cheaper than a night-time repair on a weekend.",
+      "I cleanly extract the piece of key left inside the cylinder, without forcing or damaging the mechanism. A jammed lock can also come from a cylinder stiffened by humidity or a door rubbing against its frame. Either way, a preventive callout is almost always cheaper than a night-time repair on a weekend.",
     ],
   },
   {
@@ -108,7 +108,7 @@ const sectionsEn = [
   {
     heading: "ID is always required",
     paragraphs: [
-      "Before opening a locked door, I have to verify your identity and your right to occupy the property — an ID card plus a document in your name at that address (lease, bill, deed). This isn't unnecessary paperwork: regulation requires this check from every locksmith, with legal liability for complicity in an unlawful entry if it's skipped. It protects you as much as it protects me.",
+      "Before opening a locked door, I have to verify your identity and your right to occupy the property — an ID card plus a document in your name at that address (lease, bill, deed). This isn't unnecessary paperwork. Regulation requires this check from every locksmith, with legal liability for complicity in an unlawful entry if it's skipped. It protects you as much as it protects me.",
     ],
   },
 ];

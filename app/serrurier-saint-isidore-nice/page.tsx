@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier à Saint-Isidore : j'interviens sur ce secteur de l'extrême ouest niçois, où beaucoup de résidences sont plus récentes qu'ailleurs à Nice, avec des serrures multipoints standard. Le diagnostic reste systématique avant toute intervention, avec généralement un cylindre Picard ou Vak adapté au bâti neuf du quartier.",
-  "Saint-Isidore tire son nom d'Isidore le Laboureur, saint espagnol vénéré pour son lien avec la terre — une procession perpétue encore chaque année en avril cette dévotion. À l'origine relais de diligences, le quartier abrite aujourd'hui le Musée National du Sport et le stade Allianz Riviera qui accueille l'OGC Nice, représentant la facette contemporaine de ce secteur à l'habitat plus récent mêlant résidences neuves et quelques maisons individuelles.",
+  "Saint-Isidore tire son nom d'Isidore le Laboureur, saint espagnol vénéré pour son lien avec la terre — une procession perpétue encore chaque année en avril cette dévotion. À l'origine relais de diligences, le quartier abrite aujourd'hui le Musée National du Sport et le stade Allianz Riviera qui accueille l'OGC Nice. Ces équipements représentent la facette contemporaine de ce secteur à l'habitat plus récent, qui mêle résidences neuves et quelques maisons individuelles.",
 ];
 
 const blocks = [

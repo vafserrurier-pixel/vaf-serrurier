@@ -52,10 +52,10 @@ export default function SerrureMultipointsPage() {
           <p>
             Contrairement à une serrure à un point qui verrouille la porte à un seul
             endroit, une serrure multipoints ancre le battant dans son dormant en
-            plusieurs endroits répartis sur toute la hauteur : un point central assuré
-            par le cylindre, complété par des points hauts et bas. La serrure 3 points
-            associe généralement un point central à un point haut et un point bas ; la
-            5 points ajoute des points intermédiaires ou latéraux ; la 7 points répartit
+            plusieurs endroits répartis sur toute la hauteur. Il y a un point central
+            assuré par le cylindre, complété par des points hauts et bas. La serrure 3
+            points associe généralement un point central à un point haut et un point bas.
+            La 5 points ajoute des points intermédiaires ou latéraux. La 7 points répartit
             ses pênes sur l&apos;ensemble de la hauteur de la porte.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function SerrureMultipointsPage() {
             Le passage d&apos;un point à trois points constitue un vrai bond de
             sécurité, car il empêche la porte de se déformer localement sous l&apos;effet
             d&apos;un pied-de-biche. En revanche, la sécurité n&apos;augmente pas de
-            façon strictement proportionnelle au nombre de points : passer de 3 à 5
+            façon strictement proportionnelle au nombre de points. Passer de 3 à 5
             points améliore surtout la répartition des efforts sur une porte large ou
             haute, mais ne compense ni un cylindre bas de gamme, ni un bâti fragile
             autour de la porte. Une excellente serrure posée sur un chambranle abîmé

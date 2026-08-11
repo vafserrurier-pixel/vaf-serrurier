@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Magnan, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier familial à l'ouest du centre-ville, proche de la Promenade des Anglais. Beaucoup de résidences datent des années 1960-1970, avec des serrures d'origine parfois vieillissantes : un remplacement de cylindre Vak ou Picard suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",
-  "Le quartier tire son nom du Magnan, un petit fleuve côtier qui prend sa source à Aspremont, lui-même nommé d'après la culture des vers à soie autrefois pratiquée dans le pays niçois (le « magnan », d'où magnanerie). Le torrent faisait tourner moulins et ateliers avant que son cours inférieur ne soit couvert en 1960, laissant place à l'urbanisation résidentielle actuelle, entre La Madeleine supérieure et le bord de mer.",
+  "Le quartier tire son nom du Magnan, un petit fleuve côtier qui prend sa source à Aspremont, lui-même nommé d'après la culture des vers à soie autrefois pratiquée dans le pays niçois (le « magnan », d'où magnanerie). Le torrent faisait tourner moulins et ateliers, avant que son cours inférieur ne soit couvert en 1960. Cela a laissé place à l'urbanisation résidentielle actuelle, entre La Madeleine supérieure et le bord de mer.",
 ];
 
 const blocks = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque aux Moulins : j'interviens 24h/24 dans ce quartier composé principalement de grands ensembles, où les portes palières et cylindres de hall subissent un usage intensif. Après une perte de clés ou une tentative d'effraction, je pose généralement un cylindre Vak ou Picard plus résistant, avec possibilité de blindage selon le cadre.",
-  "Le quartier des Moulins, aussi appelé Moulins Point-du-Jour, a été construit entre 1965 et 1976 pour répondre à la demande croissante de logements sociaux, à la frontière entre Nice et Saint-Laurent-du-Var. Depuis 2009, il bénéficie d'un programme de renouvellement urbain porté par l'ANRU, et il est désormais desservi par le tramway depuis 2019, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens.",
+  "Le quartier des Moulins, aussi appelé Moulins Point-du-Jour, a été construit entre 1965 et 1976 pour répondre à la demande croissante de logements sociaux, à la frontière entre Nice et Saint-Laurent-du-Var. Depuis 2009, il bénéficie d'un programme de renouvellement urbain porté par l'ANRU. Il est désormais desservi par le tramway depuis 2019, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens.",
 ];
 
 const blocks = [

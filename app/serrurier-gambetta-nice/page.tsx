@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Porte claquée, cylindre grippé à Gambetta : j'interviens 24h/24 dans ce quartier résidentiel calme, pour une porte claquée, un cylindre grippé, ou pour renforcer une porte d'entrée après un cambriolage dans l'immeuble voisin. Le bâti de standing modeste à moyen, construit pour l'essentiel dans l'après-guerre, a souvent des serrures qui datent de plusieurs décennies : je pose généralement un cylindre Fichet ou Cisa compatible plutôt qu'un remplacement complet quand c'est possible.",
-  "Le boulevard Gambetta rend hommage à Léon Gambetta, figure de la Troisième République. En 1950, il n'y avait pratiquement rien à l'ouest de ce boulevard : le quartier s'est urbanisé après-guerre sur les terrains de l'ancien Piol, marqué aussi par la forte présence italienne de Nice au XXe siècle. L'immeuble Art déco Le Palladium, avec son atrium décoré et sa statue d'Athéna à l'angle de l'avenue Tzarévitch, en est le témoin architectural le plus marquant.",
+  "Le boulevard Gambetta rend hommage à Léon Gambetta, figure de la Troisième République. En 1950, il n'y avait pratiquement rien à l'ouest de ce boulevard. Le quartier s'est urbanisé après-guerre sur les terrains de l'ancien Piol, marqué aussi par la forte présence italienne de Nice au XXe siècle. L'immeuble Art déco Le Palladium, avec son atrium décoré et sa statue d'Athéna à l'angle de l'avenue Tzarévitch, en est le témoin architectural le plus marquant.",
 ];
 
 const blocks = [

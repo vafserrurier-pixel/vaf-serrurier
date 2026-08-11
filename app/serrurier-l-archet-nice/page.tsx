@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Besoin d'un serrurier à L'Archet : j'interviens 24h/24 sur ce secteur résidentiel et institutionnel autour du pôle hospitalier universitaire, en vous donnant un délai réaliste dès l'appel compte tenu de la distance à l'ouest de la ville. Je diagnostique chaque situation avant de proposer un cylindre Picard ou Fichet adapté au bâti, immeuble collectif ou maison individuelle.",
-  "L'hôpital de L'Archet, qui donne son nom au quartier, est né d'un projet porté dans les années 1970, avec une première pierre posée en 1975 en présence de la ministre de la Santé Simone Veil, avant l'inauguration en 1979. Les extensions Archet 2 (1996) et Archet 3 (2015) en ont fait un pôle hospitalier universitaire d'envergure, autour duquel s'est développé ce secteur résidentiel mêlant immeubles collectifs et résidences plus récentes.",
+  "L'hôpital de L'Archet, qui donne son nom au quartier, est né d'un projet porté dans les années 1970, avec une première pierre posée en 1975 en présence de la ministre de la Santé Simone Veil. Il est inauguré en 1979. Les extensions Archet 2 (1996) et Archet 3 (2015) en ont fait un pôle hospitalier universitaire d'envergure, autour duquel s'est développé ce secteur résidentiel mêlant immeubles collectifs et résidences plus récentes.",
 ];
 
 const blocks = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Besoin d'un serrurier à Cimiez : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, avec le même délai que sur le reste de Nice. Ce quartier pose un défi particulier : les grands immeubles Belle Époque et les anciens palaces reconvertis en copropriétés ont souvent gardé leurs serrures et cylindres d'origine, parfois centenaires. Sur ce type de porte, je pose le plus souvent un cylindre récent (Picard ou Vak, entre autres) compatible avec le mécanisme existant, plutôt que de remplacer toute la serrure et dénaturer une porte d'époque.",
-  "Cette densité de portes anciennes tient à l'histoire du quartier : le boulevard de Cimiez, tracé à la Belle Époque par l'architecte Sébastien-Marcel Biasini sur le site de l'antique Cemenelum, a accueilli des hôtels-palais pour une clientèle européenne fortunée — la reine Victoria ou Édouard VII y ont séjourné. C'est ce patrimoine qui fait de Cimiez l'un des quartiers où mon expertise sur les mécanismes anciens sert le plus souvent.",
+  "Cette densité de portes anciennes tient à l'histoire du quartier. Le boulevard de Cimiez, tracé à la Belle Époque par l'architecte Sébastien-Marcel Biasini sur le site de l'antique Cemenelum, a accueilli des hôtels-palais pour une clientèle européenne fortunée. La reine Victoria ou Édouard VII y ont d'ailleurs séjourné. C'est ce patrimoine qui fait de Cimiez l'un des quartiers où mon expertise sur les mécanismes anciens sert le plus souvent.",
 ];
 
 const blocks = [

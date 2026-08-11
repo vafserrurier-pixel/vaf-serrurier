@@ -14,37 +14,37 @@ const sectionsFr = [
   {
     heading: "Quand faut-il changer une serrure à Nice",
     paragraphs: [
-      "Un déménagement, une perte de clés, un vol ou une effraction sont les cas les plus fréquents. Une clé qui force de plus en plus, un cylindre qui accroche, ou une fermeture de moins en moins franche sont aussi des signes d'usure à ne pas ignorer : mieux vaut changer une serrure fatiguée avant qu'elle ne lâche complètement, souvent au pire moment.",
+      "Un déménagement, une perte de clés, un vol ou une effraction sont les cas les plus fréquents. Une clé qui force de plus en plus, un cylindre qui accroche, ou une fermeture de moins en moins franche sont aussi des signes d'usure à ne pas ignorer. Mieux vaut changer une serrure fatiguée avant qu'elle ne lâche complètement, souvent au pire moment.",
     ],
   },
   {
     heading: "Cylindre ou serrure complète, quelle différence",
     paragraphs: [
-      "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme : son remplacement suffit souvent et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même — le coffre encastré dans la porte — est endommagé, instable ou d'un modèle trop ancien pour trouver un cylindre compatible.",
+      "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme. Son remplacement suffit souvent, et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même — le coffre encastré dans la porte — est endommagé ou instable, ou quand il s'agit d'un modèle trop ancien pour trouver un cylindre compatible.",
     ],
   },
   {
     heading: "Serrure multipoints, confort et fiabilité au quotidien",
     paragraphs: [
-      "Une serrure multipoints répartit la résistance sur plusieurs points d'ancrage (3, 5 voire 7 points selon les modèles), ce qui limite les déformations de la porte dans le temps. Elle demande en revanche un réglage précis : un mauvais alignement use la serrure prématurément et peut la faire forcer à chaque fermeture, je fais donc toujours un contrôle fin après la pose.",
+      "Une serrure multipoints répartit la résistance sur plusieurs points d'ancrage (3, 5 voire 7 points selon les modèles), ce qui limite les déformations de la porte dans le temps. Elle demande en revanche un réglage précis : un mauvais alignement use la serrure prématurément et peut la faire forcer à chaque fermeture. C'est pourquoi je fais toujours un contrôle fin après la pose.",
     ],
   },
   {
     heading: "Certification A2P, utile ou pas",
     paragraphs: [
-      "La certification A2P aide à comparer objectivement la résistance d'une serrure face à une tentative d'effraction. Ce n'est pas une obligation légale pour un logement standard, et je préfère vous orienter vers une sécurisation cohérente avec l'état réel de votre porte plutôt que vers du suréquipement qui ne servira à rien si le bâti autour reste fragile.",
+      "La certification A2P aide à comparer objectivement la résistance d'une serrure face à une tentative d'effraction. Ce n'est pas une obligation légale pour un logement standard. Je préfère donc vous orienter vers une sécurisation cohérente avec l'état réel de votre porte, plutôt que vers du suréquipement qui ne servira à rien si le bâti autour reste fragile.",
     ],
   },
   {
     heading: "Changement de serrure après une effraction",
     paragraphs: [
-      "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés — cylindre, gâche, parfois le coffre de serrure — et je stabilise l'ensemble pour éviter un nouveau risque, sans vous vendre un remplacement complet si ce n'est pas nécessaire.",
+      "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés — cylindre, gâche, parfois le coffre de serrure — et je stabilise l'ensemble pour éviter un nouveau risque. Je ne vous vends pas un remplacement complet si ce n'est pas nécessaire.",
     ],
   },
   {
     heading: "Ce que je fais concrètement chez vous",
     paragraphs: [
-      "J'identifie d'abord le modèle de serrure en place, je vérifie l'alignement de la porte et du cadre, puis je propose la solution la plus cohérente avec votre budget et votre niveau d'exigence en sécurité. La pose est suivie de plusieurs tests de fermeture et d'un ajustement fin, pour éviter qu'une serrure neuve ne force dès la première semaine.",
+      "J'identifie d'abord le modèle de serrure en place, puis je vérifie l'alignement de la porte et du cadre. Ensuite, je propose la solution la plus cohérente avec votre budget et votre niveau d'exigence en sécurité. Je termine par plusieurs tests de fermeture et un ajustement fin, pour éviter qu'une serrure neuve ne force dès la première semaine.",
     ],
   },
 ];
@@ -86,37 +86,37 @@ const sectionsEn = [
   {
     heading: "When you should change a lock in Nice",
     paragraphs: [
-      "Moving into a new place, lost keys, a theft or a break-in are the most common cases. A key that takes more and more force, a cylinder that catches, or a latch that closes less and less firmly are also wear signs not to ignore: it's better to replace a tired lock before it fails completely, usually at the worst possible time.",
+      "Moving into a new place, lost keys, a theft or a break-in are the most common cases. A key that takes more and more force, a cylinder that catches, or a latch that closes less and less firmly are also wear signs not to ignore. It's better to replace a tired lock before it fails completely, usually at the worst possible time.",
     ],
   },
   {
     heading: "Cylinder or full lock: what's the difference",
     paragraphs: [
-      "The cylinder is the part that takes the key and drives the mechanism: replacing it is often enough and costs noticeably less than a full replacement. A full lock replacement becomes necessary when the mechanism itself — the case set into the door — is damaged, loose, or too old a model to find a compatible cylinder.",
+      "The cylinder is the part that takes the key and drives the mechanism. Replacing it is often enough, and costs noticeably less than a full replacement. A full lock replacement becomes necessary when the mechanism itself — the case set into the door — is damaged or loose, or too old a model to find a compatible cylinder.",
     ],
   },
   {
     heading: "Multipoint locks: everyday comfort and reliability",
     paragraphs: [
-      "A multipoint lock spreads resistance across several anchor points (3, 5 or even 7 depending on the model), which limits the door warping over time. It does require precise adjustment though: poor alignment wears the lock out prematurely and can make it force with every closing, so I always do a careful check after fitting one.",
+      "A multipoint lock spreads resistance across several anchor points (3, 5 or even 7 depending on the model), which limits the door warping over time. It does require precise adjustment though: poor alignment wears the lock out prematurely and can make it force with every closing. That's why I always do a careful check after fitting one.",
     ],
   },
   {
     heading: "A2P certification: useful or not",
     paragraphs: [
-      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. It isn't a legal requirement for a standard home, and I'd rather guide you toward security that matches the real condition of your door than toward over-equipping it, which won't help much if the structure around it stays weak.",
+      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. It isn't a legal requirement for a standard home. So I'd rather guide you toward security that matches the real condition of your door, than toward over-equipping it — which won't help much if the structure around it stays weak.",
     ],
   },
   {
     heading: "Changing a lock after a break-in",
     paragraphs: [
-      "After an attempted break-in, the priority is closing your door securely right away. I then replace whatever's actually damaged — cylinder, strike plate, sometimes the lock case — and stabilize the whole assembly to prevent a repeat risk, without selling you a full replacement if it isn't needed.",
+      "After an attempted break-in, the priority is closing your door securely right away. I then replace whatever's actually damaged — cylinder, strike plate, sometimes the lock case — and stabilize the whole assembly to prevent a repeat risk. I won't sell you a full replacement if it isn't needed.",
     ],
   },
   {
     heading: "What I actually do at your place",
     paragraphs: [
-      "I first identify the lock model in place, check the alignment of the door and frame, then suggest the solution that best fits your budget and your security expectations. Fitting is followed by several closing tests and fine adjustment, so a new lock doesn't start forcing within the first week.",
+      "I first identify the lock model in place, then check the alignment of the door and frame. Next, I suggest the solution that best fits your budget and your security expectations. I finish with several closing tests and fine adjustment, so a new lock doesn't start forcing within the first week.",
     ],
   },
 ];

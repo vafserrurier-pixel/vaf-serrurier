@@ -10,16 +10,16 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Besoin d'un serrurier dans le centre de Nice : j'interviens 24h/24 sur l'ensemble de ce secteur dense, du Vieux-Nice à Cimiez en passant par le Carré d'Or, avec généralement un cylindre Fichet ou Picard compatible sur les portes anciennes plutôt qu'un remplacement qui dénaturerait ces façades soignées. Le centre concentre la plus grande variété de bâti ancien de la ville, de l'Antiquité romaine à la Belle Époque : à Cimiez, les arènes du Ier siècle témoignent de l'ancienne cité de Cemenelum ; dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861.",
-  "Entre ces deux extrêmes, le centre s'est construit couche après couche : la place Garibaldi, ancienne place royale sarde de 1782, l'avenue Jean-Médecin tracée en 1864, ou le Carré d'Or et son Hôtel des Postes de 1888, place Wilson. C'est un secteur dense, où se côtoient immeubles Belle Époque, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
-  "J'interviens dans l'ensemble de ce secteur avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, prix annoncé avant intervention, et un déplacement généralement rapide compte tenu de la position centrale de ces quartiers par rapport à mon point de départ au 2 Rue Antoine Gautier.",
+  "Besoin d'un serrurier dans le centre de Nice ? J'interviens 24h/24 sur l'ensemble de ce secteur dense, du Vieux-Nice à Cimiez en passant par le Carré d'Or. Sur les portes anciennes, je privilégie généralement un cylindre Fichet ou Picard compatible, plutôt qu'un remplacement qui dénaturerait ces façades soignées. Le centre concentre la plus grande variété de bâti ancien de la ville, de l'Antiquité romaine à la Belle Époque. À Cimiez, les arènes du Ier siècle témoignent de l'ancienne cité de Cemenelum. Dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861.",
+  "Entre ces deux extrêmes, le centre s'est construit couche après couche. On y trouve la place Garibaldi, ancienne place royale sarde de 1782, l'avenue Jean-Médecin tracée en 1864, ou encore le Carré d'Or et son Hôtel des Postes de 1888, place Wilson. C'est un secteur dense, où se côtoient immeubles Belle Époque, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
+  "J'interviens dans l'ensemble de ce secteur avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, puis prix annoncé avant intervention. Le déplacement reste généralement rapide, compte tenu de la position centrale de ces quartiers par rapport à mon point de départ au 2 Rue Antoine Gautier.",
 ];
 
 const blocks = [
   {
     heading: "Réparation de serrures anciennes dans tout le centre",
     paragraphs: [
-      "Du Vieux-Nice aux immeubles bourgeois du Carré d'Or et de Cimiez, le centre concentre la plus grande variété de bâti ancien de toute la ville : portes et serrures d'époque, halls de copropriété classés ou très soignés, façades qui imposent une approche respectueuse plutôt qu'un remplacement standard. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible quand c'est possible.",
+      "Du Vieux-Nice aux immeubles bourgeois du Carré d'Or et de Cimiez, le centre concentre la plus grande variété de bâti ancien de toute la ville. On y trouve des portes et serrures d'époque, des halls de copropriété classés ou très soignés, des façades qui imposent une approche respectueuse plutôt qu'un remplacement standard. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible quand c'est possible.",
     ],
   },
   {
@@ -31,13 +31,13 @@ const blocks = [
   {
     heading: "Des copropriétés de toutes tailles",
     paragraphs: [
-      "Petits immeubles du Vieux-Nice, grandes copropriétés Belle Époque du Carré d'Or ou de Cimiez, résidences plus récentes de Magnan ou de la Promenade des Anglais : j'interviens sur les portes de hall, digicodes et gâches électriques de toutes ces configurations, à la demande d'un syndic ou d'un résident mandaté.",
+      "Petits immeubles du Vieux-Nice, grandes copropriétés Belle Époque du Carré d'Or ou de Cimiez, résidences plus récentes de Magnan ou de la Promenade des Anglais : j'interviens sur toutes ces configurations. Portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
   {
     heading: "Une position centrale, un déplacement rapide",
     paragraphs: [
-      "Mon point de départ au 2 Rue Antoine Gautier se trouve au cœur de ce secteur, ce qui me permet généralement d'intervenir plus rapidement dans le centre que dans les zones plus excentrées de Nice, urgence ou projet programmé.",
+      "Mon point de départ au 2 Rue Antoine Gautier se trouve au cœur de ce secteur. Je peux donc généralement intervenir plus rapidement dans le centre que dans les zones plus excentrées de Nice, urgence ou projet programmé.",
     ],
   },
 ];

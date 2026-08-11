@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal aux Baumettes : j'interviens 24h/24 sur ce secteur résidentiel de caractère, aussi bien pour une villa que pour un appartement en immeuble ancien. Beaucoup de propriétés ici datent du passé de lieu de villégiature du quartier, avec des serrures principales qu'il faut souvent adapter plutôt que remplacer d'office — je pose généralement un cylindre Heraclès ou Picard compatible avec le mécanisme existant.",
-  "Le nom des Baumettes vient du niçois « bauma » (grotte). Ce quartier rural resté longtemps à l'écart de la vieille ville était surnommé le « petit Paris » par les Niçois, et son joyau reste le musée des Beaux-Arts Jules-Chéret, installé depuis 1878 dans le vaste domaine néoclassique de la princesse Elisabeth Kotschoubey. Ce passé de villégiature explique la présence de nombreuses villas et propriétés de caractère où mon expertise sur les serrures anciennes sert le plus souvent.",
+  "Le nom des Baumettes vient du niçois « bauma » (grotte). Ce quartier rural resté longtemps à l'écart de la vieille ville était surnommé le « petit Paris » par les Niçois. Son joyau reste le musée des Beaux-Arts Jules-Chéret, installé depuis 1878 dans le vaste domaine néoclassique de la princesse Elisabeth Kotschoubey. Ce passé de villégiature explique la présence de nombreuses villas et propriétés de caractère où mon expertise sur les serrures anciennes sert le plus souvent.",
 ];
 
 const blocks = [

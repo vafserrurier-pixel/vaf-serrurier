@@ -45,7 +45,7 @@ export default function ProcessSteps({ locale = "fr" }: { locale?: Locale }) {
               >
                 {index + 1}
               </span>
-              <p className="font-heading font-semibold text-navy">{step.title}</p>
+              <h3 className="font-heading font-semibold text-navy">{step.title}</h3>
             </div>
             <p className="text-sm text-slate leading-relaxed">{step.text}</p>
           </li>

@@ -13,19 +13,19 @@ const sections = [
   {
     heading: "Ma priorité : fermer, sécuriser, puis proposer une solution durable",
     paragraphs: [
-      "Découvrir sa porte forcée est toujours un choc, en plus d'être une vraie faille de sécurité tant qu'elle reste dans cet état. J'interviens 24h/24 après une intrusion, y compris la nuit, car chaque heure sans fermeture fiable est un risque de récidive. Je commence toujours par évaluer les dégâts réels — cylindre endommagé, serrure tordue, bâti marqué, gâche arrachée — avant de proposer un devis transparent, même en pleine urgence.",
+      "Découvrir sa porte forcée est toujours un choc, en plus d'être une vraie faille de sécurité tant qu'elle reste dans cet état. J'interviens 24h/24 après une intrusion, y compris la nuit, car chaque heure sans fermeture fiable est un risque de récidive. Je commence toujours par évaluer les dégâts réels — cylindre endommagé, serrure tordue, bâti marqué, gâche arrachée. Je propose ensuite un devis transparent, même en pleine urgence.",
     ],
   },
   {
     heading: "Ce que je vérifie systématiquement sur place",
     paragraphs: [
-      "Le remplacement du cylindre, l'ajustement d'une porte voilée par le choc, et la vérification complète de la gâche font partie du diagnostic que je mène à chaque intervention. Je préfère régler le vrai problème — un bâti fragilisé, un point d'ancrage arraché — plutôt que masquer le symptôme avec une réparation rapide qui ne tiendra pas à la prochaine tentative.",
+      "Le remplacement du cylindre, l'ajustement d'une porte voilée par le choc, et la vérification complète de la gâche font partie du diagnostic que je mène à chaque intervention. Je préfère régler le vrai problème — un bâti fragilisé, un point d'ancrage arraché. Une réparation rapide qui masque le symptôme ne tiendra pas à la prochaine tentative.",
     ],
   },
   {
     heading: "Mise en sécurité provisoire ou solution définitive",
     paragraphs: [
-      "Selon l'ampleur des dégâts, une mise en sécurité provisoire (blocage temporaire, remplacement partiel) peut suffire dans un premier temps, le temps de planifier une solution durable dans de bonnes conditions plutôt que dans la précipitation : remplacement de serrure, renforcement des points d'ancrage, voire blindage complet si l'état de la porte le justifie.",
+      "Selon l'ampleur des dégâts, une mise en sécurité provisoire (blocage temporaire, remplacement partiel) peut suffire dans un premier temps. Cela laisse le temps de planifier une solution durable dans de bonnes conditions, plutôt que dans la précipitation. Cette solution durable peut prendre la forme d'un remplacement de serrure, d'un renforcement des points d'ancrage, voire d'un blindage complet si l'état de la porte le justifie.",
     ],
   },
   {
@@ -37,7 +37,7 @@ const sections = [
   {
     heading: "Les cambriolages à Nice, une réalité à prendre au sérieux",
     paragraphs: [
-      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente — un niveau désormais supérieur à la moyenne nationale (5,6‰) et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque : la plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
+      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6‰), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque. La plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
     ],
   },
 ];

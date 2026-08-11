@@ -30,14 +30,14 @@ const sections = [
   {
     heading: "Comprendre les certifications A2P et EN 1143-1",
     paragraphs: [
-      "En France, la certification A2P est délivrée par le CNPP (Centre national de prévention et de protection) et classe les coffres selon 1, 2 ou 3 étoiles, correspondant à une durée moyenne de résistance à l'effraction de 5, 10 ou 15 minutes. La norme européenne EN 1143-1, utilisée pour les coffres à usage professionnel comme pour certains modèles résidentiels haut de gamme, définit 7 classes de résistance, de 0 à VI.",
+      "En France, la certification A2P est délivrée par le CNPP (Centre national de prévention et de protection). Elle classe les coffres selon 1, 2 ou 3 étoiles, correspondant à une durée moyenne de résistance à l'effraction de 5, 10 ou 15 minutes. La norme européenne EN 1143-1, utilisée pour les coffres à usage professionnel comme pour certains modèles résidentiels haut de gamme, définit 7 classes de résistance, de 0 à VI.",
       "Ces classifications ne sont pas qu'un argument commercial : elles conditionnent directement les plafonds de garantie reconnus par les compagnies d'assurance. Je vous oriente vers le niveau de certification cohérent avec ce que vous souhaitez protéger, sans vous vendre plus cher que nécessaire.",
     ],
   },
   {
     heading: "L'impact d'un coffre certifié sur votre assurance",
     paragraphs: [
-      "Sans coffre-fort déclaré, la plupart des contrats multirisques habitation plafonnent la couverture des bijoux et espèces à une fraction du capital mobilier, avec un plafond unitaire souvent limité à quelques milliers d'euros. Un coffre certifié permet généralement de relever sensiblement ce plafond — les montants exacts dépendent entièrement de votre contrat et doivent être vérifiés auprès de votre assureur, mais la différence est réelle. Déclarer le coffre et son niveau de certification à votre assurance conditionne directement l'indemnisation en cas de vol.",
+      "Sans coffre-fort déclaré, la plupart des contrats multirisques habitation plafonnent la couverture des bijoux et espèces à une fraction du capital mobilier, avec un plafond unitaire souvent limité à quelques milliers d'euros. Un coffre certifié permet généralement de relever sensiblement ce plafond. Les montants exacts dépendent entièrement de votre contrat et doivent être vérifiés auprès de votre assureur, mais la différence est réelle. Déclarer le coffre et son niveau de certification à votre assurance conditionne directement l'indemnisation en cas de vol.",
     ],
   },
 ];

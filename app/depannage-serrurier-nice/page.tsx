@@ -13,27 +13,27 @@ const sectionsFr = [
   {
     heading: "Une serrure bloquée à Nice, d'où ça vient",
     paragraphs: [
-      "Une serrure qui résiste vient rarement de nulle part. Le plus souvent, c'est le cylindre qui a pris la poussière et l'humidité au fil des saisons, un mécanisme interne fatigué, ou tout simplement un défaut d'alignement de la porte qui force le pêne à chaque fermeture. Sur les immeubles anciens du centre de Nice, l'humidité et les variations de température jouent aussi beaucoup sur le bois et sur le jeu de la porte.",
-      "Avant de conclure quoi que ce soit, je vérifie l'ensemble : la porte, la gâche, le pêne et le cylindre. Une serrure qui grippe légèrement aujourd'hui peut se bloquer complètement demain — une intervention préventive coûte presque toujours moins cher qu'un dépannage en pleine nuit, une fois le mécanisme totalement figé.",
+      "Une serrure qui résiste vient rarement de nulle part. Le plus souvent, c'est le cylindre qui a pris la poussière et l'humidité au fil des saisons, ou un mécanisme interne fatigué. Autre cause fréquente : un défaut d'alignement de la porte qui force le pêne à chaque fermeture. Sur les immeubles anciens du centre de Nice, l'humidité et les variations de température jouent aussi beaucoup sur le bois et sur le jeu de la porte.",
+      "Avant de conclure quoi que ce soit, je vérifie l'ensemble : la porte, la gâche, le pêne et le cylindre. Une serrure qui grippe légèrement aujourd'hui peut se bloquer complètement demain. Résultat : une intervention préventive coûte presque toujours moins cher qu'un dépannage en pleine nuit, une fois le mécanisme totalement figé.",
     ],
   },
   {
     heading: "Clé cassée dans la serrure",
     paragraphs: [
       "C'est l'un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au pire moment. J'extrais le morceau resté à l'intérieur avec les outils adaptés, puis je vérifie l'état du cylindre avant de le remettre en service.",
-      "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre, ce qui transforme un dépannage simple en remplacement complet.",
+      "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre. Résultat : un dépannage simple se transforme en remplacement complet.",
     ],
   },
   {
     heading: "Quand la clé tourne dans le vide",
     paragraphs: [
-      "Si la clé tourne sans que rien ne se passe, le mécanisme ne transmet plus le mouvement au pêne. C'est souvent le signe d'une pièce interne cassée ou d'un cylindre complètement usé. Je contrôle l'ensemble porte, gâche, pêne et cylindre pour identifier précisément l'origine du problème, je corrige ce qui peut l'être, et je ne remplace que ce qui est réellement nécessaire.",
+      "Si la clé tourne sans que rien ne se passe, le mécanisme ne transmet plus le mouvement au pêne. C'est souvent le signe d'une pièce interne cassée ou d'un cylindre complètement usé. Je contrôle l'ensemble porte, gâche, pêne et cylindre pour identifier précisément l'origine du problème. Ensuite, je corrige ce qui peut l'être, et je ne remplace que ce qui est réellement nécessaire.",
     ],
   },
   {
     heading: "Cylindre grippé : agir avant la panne complète",
     paragraphs: [
-      "Un cylindre qui accroche, une clé qui force un peu plus chaque semaine : ce sont des signaux d'alerte. Un peu de lubrifiant adapté peut parfois soulager temporairement, mais si le problème revient, mieux vaut le traiter avant de se retrouver bloqué dehors un soir de week-end.",
+      "Un cylindre qui accroche, une clé qui force un peu plus chaque semaine : ce sont des signaux d'alerte. Un peu de lubrifiant adapté peut parfois soulager temporairement. Mais si le problème revient, mieux vaut le traiter avant de se retrouver bloqué dehors un soir de week-end.",
     ],
   },
   {
@@ -81,27 +81,27 @@ const sectionsEn = [
   {
     heading: "Where a stuck lock in Nice usually comes from",
     paragraphs: [
-      "A lock that resists rarely comes out of nowhere. Most often it's a cylinder that has collected dust and humidity over the seasons, a tired internal mechanism, or simply a misaligned door that forces the bolt every time it closes. In Nice's older city-center buildings, humidity and temperature swings also affect the wood and how well the door sits in its frame.",
-      "Before concluding anything, I check everything: the door, the strike plate, the bolt and the cylinder. A lock that sticks slightly today can jam completely tomorrow — a preventive callout is almost always cheaper than a middle-of-the-night repair once the mechanism has fully seized.",
+      "A lock that resists rarely comes out of nowhere. Most often it's a cylinder that has collected dust and humidity over the seasons, or a tired internal mechanism. Another common cause: a misaligned door that forces the bolt every time it closes. In Nice's older city-center buildings, humidity and temperature swings also affect the wood and how well the door sits in its frame.",
+      "Before concluding anything, I check everything: the door, the strike plate, the bolt and the cylinder. A lock that sticks slightly today can jam completely tomorrow. The result: a preventive callout is almost always cheaper than a middle-of-the-night repair once the mechanism has fully seized.",
     ],
   },
   {
     heading: "A key broken off inside the lock",
     paragraphs: [
       "This is one of the most common callouts: a worn key snaps clean off inside the cylinder, usually at the worst possible time. I extract the piece left inside with the right tools, then check the condition of the cylinder before putting it back into service.",
-      "One thing to avoid absolutely: pushing the broken key with a sharp object or trying to glue it back together. Both of these common reflexes almost always make extraction harder and damage the cylinder, turning a simple repair into a full replacement.",
+      "One thing to avoid absolutely: pushing the broken key with a sharp object or trying to glue it back together. Both of these common reflexes almost always make extraction harder and damage the cylinder. The result: a simple repair turns into a full replacement.",
     ],
   },
   {
     heading: "When the key turns but nothing happens",
     paragraphs: [
-      "If the key turns freely without engaging anything, the mechanism is no longer transmitting movement to the bolt. This is often a sign of a broken internal part or a fully worn cylinder. I check the whole assembly — door, strike plate, bolt and cylinder — to pinpoint the exact cause, fix what can be fixed, and only replace what's truly necessary.",
+      "If the key turns freely without engaging anything, the mechanism is no longer transmitting movement to the bolt. This is often a sign of a broken internal part or a fully worn cylinder. I check the whole assembly — door, strike plate, bolt and cylinder — to pinpoint the exact cause. Then I fix what can be fixed, and only replace what's truly necessary.",
     ],
   },
   {
     heading: "A stiff cylinder: act before it fails completely",
     paragraphs: [
-      "A cylinder that catches, a key that needs a little more force each week: these are warning signs. The right lubricant can sometimes offer temporary relief, but if the problem keeps coming back, it's better to deal with it before you find yourself locked out on a weekend evening.",
+      "A cylinder that catches, a key that needs a little more force each week: these are warning signs. The right lubricant can sometimes offer temporary relief. But if the problem keeps coming back, it's better to deal with it before you find yourself locked out on a weekend evening.",
     ],
   },
   {

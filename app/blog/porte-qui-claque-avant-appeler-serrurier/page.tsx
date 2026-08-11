@@ -55,7 +55,7 @@ export default function PorteQuiClaquePage() {
             Vérifiez d&apos;abord si la porte est vraiment verrouillée
           </h2>
           <p>
-            Une porte qui claque ne s&apos;est pas forcément verrouillée : sur
+            Une porte qui claque ne s&apos;est pas forcément verrouillée. Sur
             beaucoup de modèles, le pêne demi-tour se bloque au claquement, mais le
             pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
             été fermée à clé. Avant toute chose, essayez la poignée. Si elle

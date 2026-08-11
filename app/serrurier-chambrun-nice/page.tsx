@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Clé cassée, porte claquée à Chambrun : j'interviens 24h/24 sur ce quartier résidentiel du nord de Nice, principalement composé de grands ensembles d'habitat collectif où les portes palières et cylindres de hall subissent un usage intensif. Je pose généralement un cylindre Fichet ou Vak plus résistant après une perte de clés ou une tentative d'effraction.",
-  "Le parc Chambrun, qui donne son nom au quartier, était à l'origine une propriété du comte Caïs de Pierlas dotée d'un château du début du XIXe siècle, devenue plus tard celle du comte de Chambrun, installé à Nice en 1879. Ce domaine abritait la première patinoire de la ville et son kiosque à musique, le « temple de l'Amour », toujours apprécié des promeneurs. Le lotissement s'est organisé autour de quatre voies sinueuses en respectant les bouquets d'arbres du parc d'origine.",
+  "Le parc Chambrun, qui donne son nom au quartier, était à l'origine une propriété du comte Caïs de Pierlas, dotée d'un château du début du XIXe siècle. Il devint plus tard celle du comte de Chambrun, installé à Nice en 1879. Ce domaine abritait la première patinoire de la ville et son kiosque à musique, le « temple de l'Amour », toujours apprécié des promeneurs. Le lotissement s'est organisé autour de quatre voies sinueuses en respectant les bouquets d'arbres du parc d'origine.",
 ];
 
 const blocks = [

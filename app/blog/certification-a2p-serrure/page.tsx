@@ -82,8 +82,8 @@ export default function CertificationA2pPage() {
           </h2>
           <p>
             Au-delà de la résistance physique, disposer d&apos;un équipement
-            certifié A2P facilite généralement les démarches après un sinistre :
-            beaucoup de contrats d&apos;assurance habitation en tiennent compte, en
+            certifié A2P facilite généralement les démarches après un sinistre.
+            Beaucoup de contrats d&apos;assurance habitation en tiennent compte, en
             particulier pour les logements avec des biens de valeur ou dans certaines
             zones. Je vous invite à vérifier les conditions exactes de votre propre
             contrat plutôt que de vous fier à une règle générale, chaque assureur

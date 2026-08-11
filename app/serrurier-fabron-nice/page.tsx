@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal à Fabron : j'interviens 24h/24 sur ce quartier résidentiel des hauteurs ouest, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec le même soin pour une villa de caractère que pour une résidence plus récente à serrure multipoints standard.",
-  "Le nom de Fabron viendrait de « fabrones » (forgerons). Au XIXe siècle, le bas Fabron devient le quartier privilégié des grandes familles niçoises fortunées, qui y firent construire villas et folies, dont celle du duc Ernest II de Saxe-Cobourg-Gotha, rasée en 1978 pour ouvrir le parc Carol-de-Roumanie au public. Ce patrimoine explique la densité de villas de caractère du quartier, entre le centre-ville et l'aéroport.",
+  "Le nom de Fabron viendrait de « fabrones » (forgerons). Au XIXe siècle, le bas Fabron devient le quartier privilégié des grandes familles niçoises fortunées, qui y firent construire villas et folies. L'une d'elles, celle du duc Ernest II de Saxe-Cobourg-Gotha, fut rasée en 1978 pour ouvrir le parc Carol-de-Roumanie au public. Ce patrimoine explique la densité de villas de caractère du quartier, entre le centre-ville et l'aéroport.",
 ];
 
 const blocks = [

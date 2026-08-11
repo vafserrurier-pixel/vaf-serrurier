@@ -38,19 +38,19 @@ const sectionsFr = [
   {
     heading: "Déroulé d'une installation",
     paragraphs: [
-      "Je prends le temps de comprendre le besoin et d'observer l'entrée et ses contraintes, je propose une solution cohérente avec un devis annoncé, je protège les zones de passage, je dépose l'ancienne porte proprement, je prépare le support, je pose et j'ajuste finement, je teste plusieurs fois la fermeture, puis j'explique l'entretien à prévoir.",
+      "Je prends le temps de comprendre le besoin, et j'observe l'entrée et ses contraintes. Je propose ensuite une solution cohérente, avec un devis annoncé avant tout engagement. Sur place, je protège les zones de passage, je dépose l'ancienne porte proprement, puis je prépare le support. Je pose et j'ajuste finement, je teste plusieurs fois la fermeture, et j'explique enfin l'entretien à prévoir.",
     ],
   },
   {
     heading: "Ce qui fait varier le prix d'une porte blindée",
     paragraphs: [
-      "Le choix entre blindage et bloc-porte complet est le facteur le plus déterminant, suivi du niveau de serrure (multipoints, certification A2P), du cylindre, des finitions visibles côté palier, et de la configuration du chantier — un accès compliqué en étage élevé sans ascenseur rallonge la manutention. Un devis détaillé, annoncé avant tout engagement, tient compte de chacun de ces éléments.",
+      "Le choix entre blindage et bloc-porte complet est le facteur le plus déterminant. Viennent ensuite le niveau de serrure (multipoints, certification A2P), le cylindre, les finitions visibles côté palier, et la configuration du chantier. Un accès compliqué en étage élevé sans ascenseur, par exemple, rallonge la manutention. Un devis détaillé, annoncé avant tout engagement, tient compte de chacun de ces éléments.",
     ],
   },
   {
     heading: "Un impact réel sur votre assurance habitation",
     paragraphs: [
-      "La certification A2P est reconnue par la quasi-totalité des assureurs français : elle conditionne souvent la couverture vol de votre contrat et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats — à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé, le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
+      "La certification A2P est reconnue par la quasi-totalité des assureurs français. Elle conditionne souvent la couverture vol de votre contrat, et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats — à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé. C'est le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
     ],
   },
 ];
@@ -122,19 +122,19 @@ const sectionsEn = [
   {
     heading: "How an installation goes",
     paragraphs: [
-      "I take the time to understand the need and look at the entrance and its constraints, suggest a solution that fits with a price quoted upfront, protect the walkways, remove the old door cleanly, prepare the frame, fit and fine-adjust, test the closing several times, then explain the upkeep to expect.",
+      "I take the time to understand the need, and look at the entrance and its constraints. I then suggest a solution that fits, with a price quoted before any commitment. On site, I protect the walkways, remove the old door cleanly, then prepare the frame. I fit and fine-adjust, test the closing several times, and finish by explaining the upkeep to expect.",
     ],
   },
   {
     heading: "What makes the price of a security door vary",
     paragraphs: [
-      "The choice between reinforcement and a full door block is the biggest factor, followed by the lock level (multipoint, A2P certification), the cylinder, the visible finish on the landing side, and the site setup — awkward access on a high floor with no lift adds handling time. A detailed quote, given before any commitment, accounts for each of these factors.",
+      "The choice between reinforcement and a full door block is the biggest factor. Next come the lock level (multipoint, A2P certification), the cylinder, the visible finish on the landing side, and the site setup. Awkward access on a high floor with no lift, for example, adds handling time. A detailed quote, given before any commitment, accounts for each of these factors.",
     ],
   },
   {
     heading: "A real impact on your home insurance",
     paragraphs: [
-      "A2P certification is recognized by almost all French insurers: it often affects the theft cover in your contract and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract — check directly with yours. I provide a detailed invoice stating the certification level fitted, the document usually required to claim this security upgrade with your insurer.",
+      "A2P certification is recognized by almost all French insurers. It often affects the theft cover in your contract, and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract — check directly with yours. I provide a detailed invoice stating the certification level fitted. It's the document usually required to claim this security upgrade with your insurer.",
     ],
   },
 ];
