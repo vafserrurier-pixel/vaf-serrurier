@@ -8,7 +8,7 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "Locksmith",
     name: business.legalName,
-    image: `${business.domain}/logo.png`,
+    image: `${business.domain}/logo-full.png`,
     "@id": business.domain,
     url: business.domain,
     telephone: business.phone.href.replace("tel:", ""),
