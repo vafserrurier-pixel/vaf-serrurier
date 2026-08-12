@@ -26,8 +26,9 @@ const securityHeaders = [
   { key: "Permissions-Policy", value: "geolocation=(), camera=(), microphone=()" },
   {
     key: "Strict-Transport-Security",
-    value: "max-age=63072000; includeSubDomains",
+    value: "max-age=63072000; includeSubDomains; preload",
   },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
 ];
 
 const nextConfig: NextConfig = {
