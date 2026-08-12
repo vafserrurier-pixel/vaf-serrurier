@@ -115,10 +115,15 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
               onClick={() => setIndex(i)}
               aria-label={t.reviewLabel(i)}
               aria-current={i === index}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === index ? "bg-navy" : "bg-navy/20"
-              }`}
-            />
+              className="w-6 h-6 flex items-center justify-center"
+            >
+              <span
+                aria-hidden="true"
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  i === index ? "bg-navy" : "bg-navy/20"
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}

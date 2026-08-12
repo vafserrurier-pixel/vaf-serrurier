@@ -126,17 +126,17 @@ export default function Footer() {
           <p className="font-heading font-semibold mb-2">{t.payment}</p>
           <p className="text-sm text-cream/80">{t.paymentMethods}</p>
           <p className="font-heading font-semibold mt-4 mb-2">{t.follow}</p>
-          <div className="flex gap-3">
-            <a href={business.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <div className="flex gap-1 -mx-1">
+            <a href={business.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="p-1.5">
               <FacebookIcon className="w-5 h-5 hover:text-steel" />
             </a>
-            <a href={business.social.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href={business.social.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="p-1.5">
               <InstagramIcon className="w-5 h-5 hover:text-steel" />
             </a>
-            <a href={business.social.youtube} aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <a href={business.social.youtube} aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="p-1.5">
               <YouTubeIcon className="w-5 h-5 hover:text-steel" />
             </a>
-            <a href={business.social.tiktok} aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <a href={business.social.tiktok} aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="p-1.5">
               <TikTokIcon className="w-5 h-5 hover:text-steel" />
             </a>
           </div>
