@@ -3,9 +3,9 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-promenade-des-anglais-nice/" },
-  title: "Serrurier Promenade des Anglais Nice – Locations saisonnières | VAF",
+  title: "Serrurier Promenade des Anglais – Locations saisonnières | VAF",
   description:
-    "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations saisonnières, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
+    "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
 };
 
 const intro = [

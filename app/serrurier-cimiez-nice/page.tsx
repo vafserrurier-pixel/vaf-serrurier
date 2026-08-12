@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-cimiez-nice/" },
   title: "Serrurier Cimiez Nice – Serrures anciennes, dépannage | VAF",
   description:
-    "Serrurier à Cimiez, Nice : changement de serrure et dépannage adaptés aux portes anciennes des immeubles Belle Époque, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
+    "Serrurier à Cimiez, Nice : changement de serrure et dépannage sur portes anciennes, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
 };
 
 const intro = [

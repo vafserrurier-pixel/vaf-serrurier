@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-wilson-nice/" },
-  title: "Serrurier Quartier Wilson Nice – Commerces & serrures anciennes | VAF",
+  title: "Serrurier Quartier Wilson – Commerces & serrures anciennes | VAF",
   description:
     "Serrurier place Wilson, Nice : dépannage de commerce, serrures d'immeubles bourgeois Belle Époque, sécurisation de vitrine. Devis annoncé, 24h/24.",
 };

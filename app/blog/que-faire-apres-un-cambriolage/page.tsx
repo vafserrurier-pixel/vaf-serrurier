@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/blog/que-faire-apres-un-cambriolage/" },
   title: "Que faire après un cambriolage : les bons réflexes | VAF",
   description:
-    "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut surtout pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
+    "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
 };
 
 export default function QueFaireApresUnCambriolagePage() {

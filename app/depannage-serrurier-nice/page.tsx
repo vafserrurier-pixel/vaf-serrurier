@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
   title: "Urgence serrurier Nice 24h/24 – Dépannage rapide | VAF",
   description:
-    "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention. Appelez le 04 22 13 85 44.",
+    "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention.",
 };
 
 const sectionsFr = [

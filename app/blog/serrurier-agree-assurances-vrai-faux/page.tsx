@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://vaf-serrurier.fr/blog/serrurier-agree-assurances-vrai-faux/",
   },
-  title: "« Agréé toutes assurances » : ce que cette formule ne veut pas dire | VAF",
+  title: "« Agréé toutes assurances » : la vérité sur cette formule | VAF",
   description:
     "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
 };

@@ -4,7 +4,7 @@ import CtaBlock from "@/components/CtaBlock";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/remplacer-coffre-a-larder/" },
-  title: "Comment remplacer un coffre à larder : guide simple et propre | VAF",
+  title: "Remplacer un coffre à larder : guide simple et propre | VAF",
   description:
     "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
 };

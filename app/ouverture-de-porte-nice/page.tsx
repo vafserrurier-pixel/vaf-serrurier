@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-porte-nice/" },
   title: "Porte claquée à Nice – Ouverture sans casse 24h/24 | VAF",
   description:
-    "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit au 04 22 13 85 44.",
+    "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit.",
 };
 
 const sectionsFr = [
