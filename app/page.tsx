@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/" },
   title: "Serrurier Nice 24h/24 – Devis avant intervention | VAF",
   description:
-    "Serrurier artisan à Nice, joignable 24h/24 et 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
+    "Serrurier à Nice, disponible 24h/24, 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
 };
 
 const homeFaq = [
