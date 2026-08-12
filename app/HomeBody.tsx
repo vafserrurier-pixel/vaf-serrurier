@@ -16,7 +16,7 @@ import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { useLocale } from "@/lib/locale";
 
 const introPhoto = {
-  src: "/images/pool/photo-12.webp",
+  src: "/images/pool/benoit-serrurier-pose-porte-nice.webp",
   alt: "Benoît, artisan serrurier, après la pose d'une porte à Nice",
 };
 
