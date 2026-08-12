@@ -90,7 +90,7 @@ export default function Header() {
             </button>
             <a
               href={business.phone.href}
-              className="font-semibold underline underline-offset-2"
+              className="font-semibold underline underline-offset-2 py-1 -my-1"
             >
               {business.phone.display}
             </a>
