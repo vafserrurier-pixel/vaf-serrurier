@@ -38,6 +38,12 @@ const blocks = [
       "Pour les appartements du quartier, je propose des solutions adaptées à chaque situation : réparation, remplacement de cylindre, ou renforcement complet de la porte d'entrée.",
     ],
   },
+  {
+    heading: "Résidences de standing au Parc Impérial",
+    paragraphs: [
+      "Le secteur du Parc Impérial, proche de Cimiez, doit son nom à l'ancien Grand Hôtel devenu résidence. Les immeubles de standing qui le composent ont souvent des systèmes de fermeture plus élaborés que la moyenne : interphones couplés à une gâche électrique, double cylindre. Je diagnostique l'ensemble du système avant d'intervenir, pas seulement la serrure.",
+    ],
+  },
 ];
 
 const faq = [

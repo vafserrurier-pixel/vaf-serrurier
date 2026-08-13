@@ -38,6 +38,12 @@ const blocks = [
       "Pour les maisons du secteur, je peux intervenir sur le remplacement de la serrure principale, l'installation d'un cylindre plus résistant, ou un blindage si la porte le permet.",
     ],
   },
+  {
+    heading: "Propriétés isolées des hauteurs de Saint-Pierre-de-Féric",
+    paragraphs: [
+      "Saint-Pierre-de-Féric, hameau perché dans les collines au nord-ouest de Nice, reste plus excentré et moins dense que les quartiers du centre. Les propriétés y sont souvent isolées, avec portail d'entrée et long accès privé. Je m'organise en conséquence pour annoncer un délai réaliste, tenant compte de la distance et de l'accès.",
+    ],
+  },
 ];
 
 const faq = [

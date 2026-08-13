@@ -38,6 +38,12 @@ const blocks = [
       "Pour les maisons plus isolées du secteur, je peux intervenir sur le remplacement de la serrure principale, l'installation d'un cylindre plus résistant, ou un blindage si la porte le permet.",
     ],
   },
+  {
+    heading: "Propriétés viticoles isolées du secteur Bellet",
+    paragraphs: [
+      "Le secteur Bellet, sur les collines qui portent l'appellation viticole du même nom, reste rural et peu dense, avec des propriétés et domaines parfois isolés. J'y interviens sur des portails d'accès longs, des portes de dépendance ou d'habitation principale, en tenant compte d'un délai plus long que dans le centre-ville pour organiser le déplacement.",
+    ],
+  },
 ];
 
 const faq = [

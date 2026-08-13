@@ -38,6 +38,12 @@ const blocks = [
       "Pour les halls d'immeuble et parties communes du quartier, j'interviens sur demande d'un syndic ou d'un résident mandaté : réglage de porte, remplacement de gâche électrique, digicode défectueux.",
     ],
   },
+  {
+    heading: "Commerces et immeubles autour du marché de la Libération",
+    paragraphs: [
+      "Le quartier de la Libération vit au rythme de son marché couvert, avec de nombreux commerces en rez-de-chaussée surmontés d'appartements. J'y interviens aussi bien sur des rideaux métalliques ou des serrures de boutique que sur les portes d'entrée des immeubles au-dessus, souvent plus anciennes que la moyenne du centre-ville.",
+    ],
+  },
 ];
 
 const faq = [

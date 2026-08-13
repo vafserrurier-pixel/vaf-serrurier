@@ -9,6 +9,8 @@ import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import PricingTable from "./PricingTable";
 import BrandsSection from "./BrandsSection";
+import TrustBadges from "./TrustBadges";
+import StatBar from "./StatBar";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
@@ -98,6 +100,12 @@ export default function QuartierPageTemplate({
             />
           </div>
         </div>
+      </section>
+
+      <StatBar />
+
+      <section className="mx-auto max-w-4xl px-4 pt-8 pb-2">
+        <TrustBadges />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

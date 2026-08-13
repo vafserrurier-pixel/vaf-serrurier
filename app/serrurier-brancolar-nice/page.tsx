@@ -38,6 +38,12 @@ const blocks = [
       "Pour les parties communes — halls d'entrée, digicodes, gâches électriques — j'interviens sur demande d'un syndic ou d'un résident mandaté. C'est une configuration fréquente dans ce quartier de grands ensembles, où une porte de hall mal réglée use sa serrure bien plus vite qu'une porte d'appartement classique.",
     ],
   },
+  {
+    heading: "Villas et résidences des collines de Brancolar",
+    paragraphs: [
+      "Brancolar, secteur résidentiel sur les collines au nord de Nice, mêle villas individuelles et petites résidences. Le relief du quartier signifie que je m'organise différemment selon l'accès : certaines propriétés sont visibles depuis la route, d'autres nécessitent de remonter une allée privée. J'en tiens compte pour annoncer un délai réaliste au téléphone.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Bâti ancien exposé à l'air marin au Port",
+    paragraphs: [
+      "Le quartier du Port, autour du bassin Lympia, cumule un bâti ancien et une exposition directe à l'air marin. Les deux facteurs se combinent : les cylindres d'origine, déjà plus fragiles, corrodent aussi plus vite à proximité immédiate de l'eau. Je surveille particulièrement ce point lors de mes diagnostics dans ce secteur.",
+    ],
+  },
 ];
 
 const faq = [

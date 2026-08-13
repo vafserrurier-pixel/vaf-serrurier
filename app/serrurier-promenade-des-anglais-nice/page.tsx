@@ -32,6 +32,12 @@ const blocks = [
       "Certains résidents souhaitent renforcer leur porte sans en changer l'aspect extérieur, notamment dans les immeubles au règlement de copropriété strict. Le blindage d'une porte existante répond souvent bien à cette contrainte.",
     ],
   },
+  {
+    heading: "Sécurité renforcée sur le front de mer de la Promenade des Anglais",
+    paragraphs: [
+      "Sur la Promenade des Anglais, les résidences et hôtels de prestige font directement face à la mer. L'air chargé en sel y accélère la corrosion des mécanismes métalliques exposés, en particulier sur les portes donnant sur une terrasse ou un balcon. Je recommande souvent un cylindre en inox ou traité anticorrosion pour ce type d'exposition directe.",
+    ],
+  },
 ];
 
 const faq = [

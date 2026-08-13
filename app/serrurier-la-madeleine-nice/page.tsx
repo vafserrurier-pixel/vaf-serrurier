@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Grands ensembles résidentiels à La Madeleine",
+    paragraphs: [
+      "À l'extrême ouest de Nice, en bord de mer, La Madeleine se compose surtout de grands ensembles résidentiels construits dans les années 1970-1980. Sur ce type de copropriété, j'interviens souvent sur les portes de hall, les digicodes et les boîtes aux lettres collectives, à la demande d'un syndic ou d'un résident mandaté.",
+    ],
+  },
 ];
 
 const faq = [

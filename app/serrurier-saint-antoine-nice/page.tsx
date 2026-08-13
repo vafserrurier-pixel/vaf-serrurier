@@ -38,6 +38,12 @@ const blocks = [
       "Saint-Antoine étant à l'ouest de la ville, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la circulation sur les axes menant à ce secteur.",
     ],
   },
+  {
+    heading: "Dépannage résidentiel à Saint-Antoine",
+    paragraphs: [
+      "Saint-Antoine, secteur résidentiel à l'ouest de Nice proche du Var, compte un mélange d'immeubles collectifs et d'habitat individuel. Les interventions y couvrent tout le spectre habituel : porte claquée, changement de cylindre, sécurisation après une tentative d'effraction. Le prix annoncé reste identique à celui pratiqué sur le reste de la ville.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les petites copropriétés du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Résidentiel pavillonnaire à Saint-Pancrace",
+    paragraphs: [
+      "Saint-Pancrace, secteur résidentiel au nord de Nice, mêle petites résidences collectives et habitat pavillonnaire. Les demandes y sont assez équilibrées entre urgences classiques (porte claquée, clé cassée) et projets programmés comme un changement de serrure avant l'été ou l'installation d'un cylindre plus résistant sur une porte d'entrée individuelle.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Commerces et résidentiel dans le secteur de Carras",
+    paragraphs: [
+      "Carras, à l'ouest de Nice, combine zones commerciales et quartiers résidentiels. J'y interviens aussi bien sur des serrures de local commercial ou de rideau métallique que sur des portes d'appartement classiques. La proximité de zones d'activité signifie aussi des demandes régulières pour sécuriser des accès professionnels en dehors des heures d'ouverture.",
+    ],
+  },
 ];
 
 const faq = [

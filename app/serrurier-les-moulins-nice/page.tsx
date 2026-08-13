@@ -38,6 +38,12 @@ const blocks = [
       "Pour les halls d'immeuble et parties communes, j'interviens sur demande d'un syndic ou d'un résident mandaté : réglage de porte, remplacement de gâche électrique, digicode défectueux.",
     ],
   },
+  {
+    heading: "Grand ensemble résidentiel des Moulins",
+    paragraphs: [
+      "Les Moulins, quartier résidentiel à l'ouest de Nice, se compose principalement de grands ensembles collectifs. Comme à l'Ariane, les portes de hall et les digicodes y subissent un usage intensif. J'interviens régulièrement pour ce type de panne, ainsi que pour la sécurisation des accès communs à la demande des syndics.",
+    ],
+  },
 ];
 
 const faq = [

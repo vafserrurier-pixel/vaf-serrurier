@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Dépannage résidentiel calme à Saint-Philippe",
+    paragraphs: [
+      "Saint-Philippe, secteur résidentiel proche de Cimiez, mêle villas et petites résidences dans un cadre plutôt calme. Les demandes y concernent surtout l'entretien préventif : un cylindre qui commence à forcer, une porte qui ferme mal après plusieurs années. Intervenir avant la panne complète coûte toujours moins cher qu'un dépannage en urgence.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les villas du secteur, je peux intervenir sur le remplacement de la serrure principale, l'installation d'un cylindre plus résistant, ou un blindage si la porte le permet.",
     ],
   },
+  {
+    heading: "Villas le long de la Corniche Fleurie",
+    paragraphs: [
+      "La Corniche Fleurie, route résidentielle des hauteurs ouest, dessert principalement des villas individuelles avec jardin. Sur ce type de propriété, j'interviens sur la porte d'entrée comme sur les portails et portillons, plus exposés aux intempéries qu'une porte d'appartement. Un entretien anticipé évite souvent un blocage complet en pleine urgence.",
+    ],
+  },
 ];
 
 const faq = [

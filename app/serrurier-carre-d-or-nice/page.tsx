@@ -38,6 +38,12 @@ const blocks = [
       "La position centrale du Carré d'Or permet généralement un déplacement rapide depuis mon point de départ, un atout appréciable en cas de porte claquée ou de clé perdue.",
     ],
   },
+  {
+    heading: "Serrures haute sécurité dans le Carré d'Or",
+    paragraphs: [
+      "Le Carré d'Or, entre la Promenade des Anglais et la place Masséna, concentre boutiques haut de gamme et résidences de standing. Sur ce secteur, je propose plus souvent des cylindres et serrures haute sécurité, en cohérence avec la valeur des biens protégés, sans que le tarif de base change : le prix dépend du matériel choisi, jamais du quartier.",
+    ],
+  },
 ];
 
 const faq = [

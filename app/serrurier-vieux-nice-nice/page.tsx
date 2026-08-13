@@ -38,6 +38,12 @@ const blocks = [
       "Le quartier compte de nombreux logements loués en courte durée. Pour les propriétaires ou gestionnaires de ces biens, je peux intervenir rapidement en cas de porte claquée ou de problème de serrure entre deux locations.",
     ],
   },
+  {
+    heading: "Ruelles étroites et bâti médiéval du Vieux-Nice",
+    paragraphs: [
+      "Le Vieux-Nice, cœur historique aux ruelles étroites et aux immeubles de pierre parfois centenaires, cumule deux défis : des serrures et cylindres d'origine sur les étages résidentiels, et des rideaux métalliques ou portes de commerce très sollicités au rez-de-chaussée. J'adapte ma méthode selon qu'il s'agit d'un appartement ancien ou d'une devanture commerciale.",
+    ],
+  },
 ];
 
 const faq = [

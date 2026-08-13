@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Dépannage calme dans le secteur résidentiel des Baumettes",
+    paragraphs: [
+      "Les Baumettes, à l'ouest du centre-ville près du musée des Beaux-Arts, restent un secteur résidentiel plutôt calme, mêlant villas et petits immeubles bourgeois. Les interventions y sont surtout programmées : changement de serrure vieillissante, renforcement d'une porte d'entrée, plutôt que des urgences à répétition. Le diagnostic reste le même quel que soit le contexte.",
+    ],
+  },
 ];
 
 const faq = [

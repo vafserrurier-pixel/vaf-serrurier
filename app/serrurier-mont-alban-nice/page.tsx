@@ -38,6 +38,12 @@ const blocks = [
       "Pour les villas du secteur, je peux intervenir sur le remplacement de la serrure principale, l'installation d'un cylindre plus résistant, ou un blindage si la porte le permet.",
     ],
   },
+  {
+    heading: "Villas et propriétés du Mont Alban",
+    paragraphs: [
+      "Voisin du Mont Boron, le secteur du Mont Alban conserve un caractère résidentiel préservé, entre villas et propriétés arborées, à proximité de l'ancien fort. Comme sur les hauteurs voisines, l'essentiel de mon activité y concerne les portes d'entrée individuelles et les portails, avec un délai d'intervention à anticiper selon l'accès de la propriété.",
+    ],
+  },
 ];
 
 const faq = [

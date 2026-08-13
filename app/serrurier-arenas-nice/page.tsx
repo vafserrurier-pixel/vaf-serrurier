@@ -38,6 +38,12 @@ const blocks = [
       "L'Arénas étant à l'ouest de la ville, proche de l'aéroport, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la circulation.",
     ],
   },
+  {
+    heading: "Bureaux et contrôle d'accès à l'Arénas",
+    paragraphs: [
+      "L'Arénas, zone d'activité et de bureaux à l'ouest de Nice proche de l'aéroport, présente des besoins différents des secteurs résidentiels : portes de bureaux, systèmes de contrôle d'accès, serrures multipoints sur les locaux professionnels. J'interviens aussi bien pour une entreprise que pour un particulier résidant dans ce secteur mixte.",
+    ],
+  },
 ];
 
 const faq = [

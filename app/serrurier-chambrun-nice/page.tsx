@@ -38,6 +38,12 @@ const blocks = [
       "Pour les halls d'immeuble et parties communes, j'interviens sur demande d'un syndic ou d'un résident mandaté : réglage de porte, remplacement de gâche électrique, digicode défectueux.",
     ],
   },
+  {
+    heading: "Immeubles résidentiels du secteur Chambrun",
+    paragraphs: [
+      "Chambrun, quartier résidentiel au nord de Nice, se compose principalement d'immeubles collectifs de taille moyenne. Comme sur les secteurs voisins des hauteurs nord, les interventions les plus fréquentes concernent les portes palières et les systèmes de fermeture des halls d'entrée. Je diagnostique la panne avant d'intervenir, urgence ou non.",
+    ],
+  },
 ];
 
 const faq = [

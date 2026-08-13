@@ -38,6 +38,12 @@ const blocks = [
       "Le secteur compte aussi des villas individuelles, avec des besoins différents : porte d'entrée principale à sécuriser, parfois un portillon ou un accès secondaire. J'interviens sur le remplacement de serrure, l'installation d'un cylindre plus résistant, ou le blindage de la porte principale selon l'état du bâti.",
     ],
   },
+  {
+    heading: "Portails et grilles des propriétés de Cimiez",
+    paragraphs: [
+      "Au-delà des immeubles anciens déjà évoqués, Cimiez compte aussi de nombreuses propriétés avec portail et grille d'enceinte, parfois d'origine. Ces équipements extérieurs, exposés aux intempéries, demandent un entretien différent d'une serrure de porte intérieure : je vérifie aussi bien la gâche que la fixation, avant de proposer un remplacement complet si nécessaire.",
+    ],
+  },
 ];
 
 const faq = [

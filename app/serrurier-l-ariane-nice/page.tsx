@@ -38,6 +38,12 @@ const blocks = [
       "Pour les halls d'immeuble et parties communes, j'interviens sur demande d'un syndic ou d'un résident mandaté : réglage de porte, remplacement de gâche électrique, digicode défectueux.",
     ],
   },
+  {
+    heading: "Portes de hall et gâches électriques à l'Ariane",
+    paragraphs: [
+      "L'Ariane, grand ensemble de logements dans la vallée à l'est de Nice, se compose principalement de tours et de barres d'immeubles collectifs. Sur ce type de bâti, les portes de hall et les gâches électriques subissent un usage intensif. J'interviens régulièrement pour ce type de panne, avec un diagnostic rapide pour limiter le temps d'immobilisation de l'accès collectif.",
+    ],
+  },
 ];
 
 const faq = [

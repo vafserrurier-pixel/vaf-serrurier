@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Immeubles denses du quartier Saint-Roch",
+    paragraphs: [
+      "Saint-Roch, quartier populaire et dense de l'est-centre niçois, compte une forte concentration d'immeubles collectifs. Les pannes les plus fréquentes touchent les gâches électriques et les digicodes de hall, sollicités par un nombre important de résidents. Je privilégie la réparation quand elle est possible, pour limiter le coût et le délai d'intervention.",
+    ],
+  },
 ];
 
 const faq = [

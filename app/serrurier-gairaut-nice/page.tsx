@@ -38,6 +38,12 @@ const blocks = [
       "Pour les petites copropriétés du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Villas des hauteurs de Gairaut",
+    paragraphs: [
+      "Gairaut, connu pour sa cascade, occupe les hauteurs au nord de Nice dans un environnement plutôt verdoyant fait de villas individuelles. Sur ce type de propriété, j'interviens aussi bien sur la porte d'entrée que sur un portail ou une porte de garage, souvent plus exposés aux intempéries que sur un appartement en centre-ville.",
+    ],
+  },
 ];
 
 const faq = [

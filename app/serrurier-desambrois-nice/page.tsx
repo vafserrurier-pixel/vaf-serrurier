@@ -38,6 +38,12 @@ const blocks = [
       "Pour les halls d'immeuble de ces copropriétés souvent bien entretenues, j'interviens sur les digicodes, gâches électriques et portes de hall, à la demande d'un syndic ou d'un résident mandaté, avec la même attention portée à l'esthétique du bâti ancien.",
     ],
   },
+  {
+    heading: "Villas et résidences des hauteurs de Desambrois",
+    paragraphs: [
+      "Le secteur Desambrois, sur les hauteurs entre le centre-ville et Cimiez, mêle villas individuelles et petites résidences construites sur le site de l'ancien hôpital Saint-Roch. Sur ce type de bâti en pente, j'interviens aussi bien sur une porte d'entrée de villa que sur un portail ou une porte de garage exposée à l'extérieur.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les résidences collectives du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Bâti ancien et villas du quartier Californie",
+    paragraphs: [
+      "Le quartier Californie, à l'ouest de Nice, tire son nom de villas construites au tournant du XXe siècle, aujourd'hui entourées d'immeubles plus récents. Sur les propriétés les plus anciennes, je privilégie l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui changerait l'aspect d'une porte d'origine, comme sur d'autres quartiers historiques de la ville.",
+    ],
+  },
 ];
 
 const faq = [

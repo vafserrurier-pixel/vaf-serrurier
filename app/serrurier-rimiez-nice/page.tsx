@@ -38,6 +38,12 @@ const blocks = [
       "Pour les résidences collectives du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Villas et verdure sur les hauteurs de Rimiez",
+    paragraphs: [
+      "Rimiez, sur les hauteurs proches de Cimiez et de son monastère, conserve un cadre résidentiel arboré fait de villas et de petites résidences. Le secteur partage certains traits avec Cimiez voisin : un bâti parfois ancien, où je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet quand la porte le permet.",
+    ],
+  },
 ];
 
 const faq = [

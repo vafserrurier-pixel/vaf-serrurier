@@ -38,6 +38,12 @@ const blocks = [
       "Pour les petites copropriétés du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Portes d'immeubles bourgeois sur le boulevard Carabacel",
+    paragraphs: [
+      "Au-delà de la réparation de cylindre déjà évoquée, les immeubles bourgeois du boulevard Carabacel posent parfois un autre défi : des portes d'entrée d'origine, plus lourdes et plus hautes que la moyenne, avec une serrure centrale qu'il faut savoir démonter sans abîmer le bois ancien. Je m'adapte à ce type de menuiserie plutôt que de forcer une solution standard.",
+    ],
+  },
 ];
 
 const faq = [

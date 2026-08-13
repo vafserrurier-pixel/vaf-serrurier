@@ -32,6 +32,12 @@ const blocks = [
       "L'Archet étant à l'ouest de la ville, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la circulation sur les axes menant à ce secteur.",
     ],
   },
+  {
+    heading: "Résidences proches du CHU de l'Archet",
+    paragraphs: [
+      "Le secteur de l'Archet, au nord-ouest de Nice, s'est développé autour de l'hôpital du même nom. Les résidences collectives qui l'entourent accueillent notamment du personnel soignant aux horaires décalés. J'y interviens à toute heure, de jour comme de nuit, pour les urgences liées à une porte claquée ou une clé perdue.",
+    ],
+  },
 ];
 
 const faq = [

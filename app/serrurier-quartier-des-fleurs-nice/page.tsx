@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Changement de serrure entre deux locations au quartier des Fleurs",
+    paragraphs: [
+      "Le quartier des Fleurs, proche de la gare, compte une forte proportion de logements locatifs dans des immeubles anciens. Entre deux locataires, changer le cylindre ou toute la serrure est la solution la plus fiable pour éviter qu'une ancienne clé reste en circulation. J'interviens régulièrement pour ce type de remplacement, à la demande de propriétaires ou d'agences.",
+    ],
+  },
 ];
 
 const faq = [

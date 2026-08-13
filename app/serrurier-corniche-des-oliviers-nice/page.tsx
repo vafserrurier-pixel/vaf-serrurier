@@ -32,6 +32,12 @@ const blocks = [
       "Pour les villas du secteur, je peux intervenir sur le remplacement de la serrure principale, l'installation d'un cylindre plus résistant, ou un blindage si la porte le permet.",
     ],
   },
+  {
+    heading: "Villas le long de la Corniche des Oliviers",
+    paragraphs: [
+      "La Corniche des Oliviers, route des hauteurs nord bordée d'oliviers, dessert principalement des villas individuelles avec vue sur la ville. Sur ce type de propriété en pente, les portails et portes de garage sont particulièrement exposés aux éléments. Je vérifie systématiquement l'état de la gâche et de la fixation avant de proposer une réparation ou un remplacement.",
+    ],
+  },
 ];
 
 const faq = [

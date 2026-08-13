@@ -38,6 +38,12 @@ const blocks = [
       "Fabron étant plus excentré que le centre-ville, je m'organise pour vous donner un délai d'intervention réaliste dès l'appel, plutôt qu'une estimation optimiste qui ne tiendrait pas compte de la distance réelle.",
     ],
   },
+  {
+    heading: "Villas et immeubles mixtes sur la colline de Fabron",
+    paragraphs: [
+      "Fabron, colline résidentielle à l'ouest de Nice, mêle villas individuelles et immeubles collectifs plus récents. Cette diversité de bâti demande une approche au cas par cas : cylindre à adapter sur une porte ancienne de villa, ou remplacement standard sur un immeuble récent. Je diagnostique toujours avant de proposer une solution.",
+    ],
+  },
 ];
 
 const faq = [

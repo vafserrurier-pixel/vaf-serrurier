@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles bourgeois du secteur, souvent organisés en copropriété, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté, avec une attention particulière portée à la cohérence esthétique du bâti ancien.",
     ],
   },
+  {
+    heading: "Cylindres à adapter sur le bâti ancien du quartier des Musiciens",
+    paragraphs: [
+      "Proche de la gare, le quartier des Musiciens doit son nom aux rues portant des noms de compositeurs. Les immeubles de la fin du XIXe siècle qui le composent ont souvent gardé leurs portes et cylindres d'origine. Je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet, pour préserver l'aspect de ces façades anciennes.",
+    ],
+  },
 ];
 
 const faq = [

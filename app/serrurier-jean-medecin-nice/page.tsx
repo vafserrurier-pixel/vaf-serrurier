@@ -38,6 +38,12 @@ const blocks = [
       "La position centrale de ce quartier, proche de la place Masséna et du Carré d'Or, en fait un secteur où je peux généralement intervenir rapidement depuis mon point de départ.",
     ],
   },
+  {
+    heading: "Serrures de commerce et halls d'immeubles sur l'avenue Jean-Médecin",
+    paragraphs: [
+      "L'avenue Jean-Médecin concentre boutiques, immeubles mixtes et halls d'entrée à fort passage. Sur les rez-de-chaussée commerciaux, j'interviens aussi bien sur un rideau métallique bloqué que sur une serrure de vitrine forcée. Pour les étages, les halls d'immeubles anciens au-dessus des commerces demandent souvent un entretien régulier des gâches et digicodes, sollicités par un passage important.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les résidences du quartier, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Immeubles en bord de mer à Magnan",
+    paragraphs: [
+      "Le quartier de Magnan, résidentiel en bord de mer à l'ouest du centre, compte de nombreux immeubles des années 1960-1970 exposés à l'air marin. Comme sur toute la façade littorale de Nice, les cylindres extérieurs y vieillissent plus vite qu'ailleurs en ville : un entretien ou un remplacement anticipé évite le blocage complet un jour d'urgence.",
+    ],
+  },
 ];
 
 const faq = [

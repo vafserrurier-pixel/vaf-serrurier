@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Bâti ancien autour de la place Garibaldi",
+    paragraphs: [
+      "La place Garibaldi et ses immeubles ocre du XVIIIe siècle marquent la porte d'entrée entre la Vieille-Ville et les quartiers de Riquier et Cimiez. Ce bâti ancien, souvent classé ou protégé, demande une attention particulière : je privilégie systématiquement la réparation ou l'adaptation d'un cylindre existant avant d'envisager un remplacement qui changerait l'aspect d'une porte d'époque.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles collectifs du quartier, j'interviens sur les portes de hall, les gâches électriques et les digicodes, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Bâti mixte ancien et récent à Riquier",
+    paragraphs: [
+      "Riquier, porte d'entrée historique et populaire à l'est de Nice, mélange immeubles anciens du centre-bourg et constructions plus récentes. Ce bâti mixte demande une approche différente selon les cas : adaptation d'un cylindre sur une porte ancienne, ou remplacement standard sur un immeuble plus récent. Je diagnostique systématiquement avant de proposer une solution.",
+    ],
+  },
 ];
 
 const faq = [

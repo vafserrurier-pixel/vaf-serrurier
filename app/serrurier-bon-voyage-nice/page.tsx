@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Résidences collectives du quartier Bon Voyage",
+    paragraphs: [
+      "Bon Voyage, secteur résidentiel à l'est de Nice proche du port, compte plusieurs résidences collectives construites entre les années 1960 et 1980. J'y interviens couramment sur les portes de hall, les cylindres de porte palière et les boîtes aux lettres collectives, à la demande de résidents ou de syndics de copropriété.",
+    ],
+  },
 ];
 
 const faq = [

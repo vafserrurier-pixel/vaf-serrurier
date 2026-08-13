@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Résidences proches du CHU Pasteur",
+    paragraphs: [
+      "Le quartier Pasteur, à l'est de Nice, doit une partie de son identité à la proximité du CHU Pasteur. Le secteur compte de nombreuses résidences collectives, occupées notamment par du personnel hospitalier aux horaires décalés. J'y interviens à toute heure pour les urgences comme pour l'entretien courant des portes de hall et digicodes.",
+    ],
+  },
 ];
 
 const faq = [

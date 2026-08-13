@@ -38,6 +38,12 @@ const blocks = [
       "Après une perte de clés ou pour anticiper une usure avancée, je propose des solutions adaptées à l'état réel de votre porte, sans suréquipement inutile.",
     ],
   },
+  {
+    heading: "Secteur excentré à Lingostière",
+    paragraphs: [
+      "Lingostière, à l'extrémité ouest de Nice, reste plus excentré et moins dense que les quartiers centraux. Le secteur mêle habitat résidentiel et proximité de zones d'activité. Compte tenu de la distance depuis mon point de départ, j'annonce systématiquement un délai réaliste au téléphone, ajusté selon la circulation sur cet axe.",
+    ],
+  },
 ];
 
 const faq = [

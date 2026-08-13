@@ -38,6 +38,12 @@ const blocks = [
       "Le Mont Boron étant plus éloigné du centre-ville, je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la distance et de la circulation.",
     ],
   },
+  {
+    heading: "Villas de prestige et portails du Mont Boron",
+    paragraphs: [
+      "Le Mont Boron, colline résidentielle surplombant la baie des Anges, concentre des villas de prestige avec portails, grilles d'enceinte et systèmes de fermeture souvent plus élaborés que la moyenne. J'interviens sur ces équipements extérieurs comme sur la porte d'entrée elle-même, en recommandant des solutions robustes adaptées à ce type de propriété individuelle.",
+    ],
+  },
 ];
 
 const faq = [

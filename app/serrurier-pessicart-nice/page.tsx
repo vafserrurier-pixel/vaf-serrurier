@@ -38,6 +38,12 @@ const blocks = [
       "Pour les résidences collectives du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Résidences panoramiques des hauteurs de Pessicart",
+    paragraphs: [
+      "Pessicart, sur les hauteurs nord de Nice, offre un cadre résidentiel recherché pour sa vue panoramique, entre villas et résidences de standing. Comme sur les autres secteurs en altitude, j'anticipe le temps de trajet dans le délai annoncé au téléphone, et j'interviens aussi bien sur une porte d'entrée que sur un portail d'accès.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les immeubles bourgeois du quartier, souvent organisés en copropriété avec des halls d'entrée soignés, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté, avec la même attention portée à la cohérence esthétique du bâti ancien.",
     ],
   },
+  {
+    heading: "Immeubles collectifs et digicodes au quartier Wilson",
+    paragraphs: [
+      "Le quartier Wilson, résidentiel et dense au cœur de Nice, compte de nombreux immeubles collectifs des années 1960-1970. Sur ce type de bâti, les pannes les plus fréquentes concernent les gâches électriques de hall et les digicodes, sollicités quotidiennement par un grand nombre de résidents. Je diagnostique le mécanisme avant de proposer réparation ou remplacement.",
+    ],
+  },
 ];
 
 const faq = [

@@ -38,6 +38,12 @@ const blocks = [
       "Pour les résidences du secteur, j'interviens sur les portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Résidences récentes à Saint-Isidore",
+    paragraphs: [
+      "Saint-Isidore, secteur en développement à l'ouest de Nice proche du stade, compte de nombreuses résidences construites ces dernières années. Sur ce type de bâti récent, les pannes concernent surtout l'usure normale des cylindres et des mécanismes de porte, plutôt que des serrures d'origine à adapter comme dans les quartiers plus anciens du centre.",
+    ],
+  },
 ];
 
 const faq = [
