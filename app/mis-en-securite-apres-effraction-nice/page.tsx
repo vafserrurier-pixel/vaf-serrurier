@@ -37,7 +37,7 @@ const sections = [
   {
     heading: "Les cambriolages à Nice, une réalité à prendre au sérieux",
     paragraphs: [
-      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6‰), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque. La plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
+      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4 pour 1 000 l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6 pour 1 000), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3 pour 1 000). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque. La plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
     ],
   },
 ];

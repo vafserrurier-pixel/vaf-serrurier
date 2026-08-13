@@ -159,7 +159,7 @@ const strings = {
     aboutLink: "En savoir plus sur mon parcours →",
     crimeTitle: "Les cambriolages à Nice, une réalité à prendre au sérieux",
     crimeText:
-      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6‰), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville.",
+      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4 pour 1 000 l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6 pour 1 000), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3 pour 1 000). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville.",
     causesTitle: "Pourquoi fait-on appel à un serrurier à Nice",
     causes: [
       {
@@ -225,7 +225,7 @@ const strings = {
     aboutLink: "More about me (in French) →",
     crimeTitle: "Break-ins in Nice, a risk worth taking seriously",
     crimeText:
-      "According to figures from the French Interior Ministry published in March 2026, the burglary rate in Nice rose to 6.1 per 1,000 homes in 2025, up from 5.4‰ the previous year. That level is now above the national average (5.6‰), and well above the average for the Alpes-Maritimes département (4.3‰). A properly fitted door remains the most direct way to limit this risk, wherever you are in the city.",
+      "According to figures from the French Interior Ministry published in March 2026, the burglary rate in Nice rose to 6.1 per 1,000 homes in 2025, up from 5.4 per 1,000 the previous year. That level is now above the national average (5.6 per 1,000), and well above the average for the Alpes-Maritimes département (4.3 per 1,000). A properly fitted door remains the most direct way to limit this risk, wherever you are in the city.",
     causesTitle: "Why people call a locksmith in Nice",
     causes: [
       {
