@@ -7,6 +7,7 @@ import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import CtaBlock from "./CtaBlock";
 import LazyMap from "./LazyMap";
+import BlogPreview from "./BlogPreview";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
@@ -148,6 +149,10 @@ export default function SectorPageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <ReviewsSection />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <BlogPreview />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
