@@ -14,7 +14,7 @@ import StatBar from "./StatBar";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
-import { pickPhoto } from "@/lib/photos";
+import { pickPortrait } from "@/lib/photos";
 
 export type ContentBlock = { heading: string; paragraphs: string[] };
 
@@ -40,7 +40,7 @@ export default function QuartierPageTemplate({
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
   const nearbyQuartiers = relatedQuartiers(sector, quartier);
-  const photo = pickPhoto(quartier);
+  const photo = pickPortrait(quartier);
 
   return (
     <>

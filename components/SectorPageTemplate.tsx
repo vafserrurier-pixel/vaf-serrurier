@@ -11,7 +11,7 @@ import BlogPreview from "./BlogPreview";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
-import { pickPhoto } from "@/lib/photos";
+import { pickPortrait } from "@/lib/photos";
 
 export type ContentBlock = { heading: string; paragraphs: string[] };
 
@@ -36,7 +36,7 @@ export default function SectorPageTemplate({
   const siblingSectors = (Object.keys(sectorPages) as (keyof typeof sectorPages)[]).filter(
     (key) => key !== sectorKey,
   );
-  const photo = pickPhoto(sectorKey);
+  const photo = pickPortrait(sectorKey);
 
   return (
     <>
