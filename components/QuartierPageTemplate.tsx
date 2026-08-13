@@ -109,9 +109,12 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading font-semibold text-navy mb-4">
+        <h2 className="font-heading font-semibold text-navy mb-2 text-center">
           Comment se déroule mon intervention à {quartier}
         </h2>
+        <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
+          De votre appel au règlement : un déroulement simple, sans zone d&apos;ombre.
+        </p>
         <ProcessSteps place={quartier} />
       </section>
 

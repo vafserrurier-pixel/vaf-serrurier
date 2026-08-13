@@ -53,18 +53,19 @@ export default function ProcessSteps({
   const steps = stepsByLocale[locale](place);
   return (
     <div>
-      <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
-          <li key={step.title} className="relative">
-            <div className="flex items-center gap-3 mb-2">
-              <span
-                className="flex items-center justify-center w-9 h-9 rounded-full bg-navy text-cream font-heading font-bold text-sm shrink-0 shadow-sm"
-                aria-hidden="true"
-              >
-                {index + 1}
-              </span>
-              <h3 className="font-heading font-semibold text-navy">{step.title}</h3>
-            </div>
+          <li
+            key={step.title}
+            className="bg-white border border-navy/10 rounded-xl p-5 text-center flex flex-col items-center"
+          >
+            <span
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-navy text-cream font-heading font-bold shrink-0 shadow-sm mb-3"
+              aria-hidden="true"
+            >
+              {index + 1}
+            </span>
+            <h3 className="font-heading font-semibold text-navy mb-1.5">{step.title}</h3>
             <p className="text-sm text-slate leading-relaxed">{step.text}</p>
           </li>
         ))}

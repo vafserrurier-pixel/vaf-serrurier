@@ -180,6 +180,7 @@ const strings = {
       },
     ],
     howItWorks: "Comment se déroule mon intervention",
+    howItWorksSubtitle: "De votre appel au règlement : un déroulement simple, sans zone d'ombre.",
     pricingTitle: "Mes tarifs à Nice",
     services: "Mes services de serrurerie à Nice",
     brands: "Marques de serrures que je pose à Nice",
@@ -245,6 +246,7 @@ const strings = {
       },
     ],
     howItWorks: "How my callout works",
+    howItWorksSubtitle: "From your call to payment: a simple process, no grey areas.",
     pricingTitle: "My pricing in Nice",
     services: "My locksmith services in Nice",
     brands: "Lock brands I install in Nice",
@@ -374,7 +376,8 @@ export default function HomeBody() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
-        <h2 className="text-center font-heading font-semibold text-navy mb-6">{t.howItWorks}</h2>
+        <h2 className="text-center font-heading font-semibold text-navy mb-2">{t.howItWorks}</h2>
+        <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">{t.howItWorksSubtitle}</p>
         <ProcessSteps locale={locale} />
       </section>
 
