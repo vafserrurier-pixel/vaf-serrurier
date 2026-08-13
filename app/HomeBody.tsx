@@ -12,6 +12,7 @@ import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
 import LazyMap from "@/components/LazyMap";
 import ContactForm from "@/components/ContactForm";
 import BrandsSection from "@/components/BrandsSection";
+import PricingTable from "@/components/PricingTable";
 import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
@@ -175,6 +176,7 @@ const strings = {
       },
     ],
     howItWorks: "Comment se déroule mon intervention",
+    pricingTitle: "Mes tarifs à Nice",
     services: "Mes services de serrurerie à Nice",
     brands: "Marques de serrures que je pose à Nice",
     feature1Title: "Prix annoncé avant",
@@ -236,6 +238,7 @@ const strings = {
       },
     ],
     howItWorks: "How my callout works",
+    pricingTitle: "My pricing in Nice",
     services: "My locksmith services in Nice",
     brands: "Lock brands I install in Nice",
     feature1Title: "Price quoted upfront",
@@ -366,6 +369,11 @@ export default function HomeBody() {
       <section className="mx-auto max-w-5xl px-4 py-14">
         <h2 className="text-center font-heading font-semibold text-navy mb-6">{t.howItWorks}</h2>
         <ProcessSteps locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.pricingTitle}</h2>
+        <PricingTable locale={locale} />
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-14">
