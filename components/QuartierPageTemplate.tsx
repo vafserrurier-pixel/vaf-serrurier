@@ -7,6 +7,8 @@ import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
+import PricingTable from "./PricingTable";
+import BrandsSection from "./BrandsSection";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
@@ -100,9 +102,16 @@ export default function QuartierPageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-heading font-semibold text-navy mb-4">
-          Comment se déroule mon intervention
+          Comment se déroule mon intervention à {quartier}
         </h2>
-        <ProcessSteps />
+        <ProcessSteps place={quartier} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Mes tarifs à {quartier}
+        </h2>
+        <PricingTable />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
@@ -118,6 +127,30 @@ export default function QuartierPageTemplate({
             ))}
           </div>
         ))}
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Marques de serrures que je pose
+        </h2>
+        <BrandsSection />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          Les cambriolages à Nice, une réalité à prendre au sérieux
+        </h2>
+        <p className="text-slate leading-relaxed">
+          Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
+          taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025,
+          contre 5,4‰ l&apos;année précédente. Ce niveau est désormais supérieur à la
+          moyenne nationale (5,6‰), et bien au-dessus de la moyenne du département des
+          Alpes-Maritimes (4,3‰). Cette donnée concerne l&apos;ensemble de la ville de
+          Nice, qui ne compte pas d&apos;arrondissements officiels — il n&apos;existe
+          pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.
+          Une porte correctement équipée reste le moyen le plus direct de limiter ce
+          risque, où que vous soyez dans la ville.
+        </p>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

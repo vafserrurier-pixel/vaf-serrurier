@@ -1,14 +1,16 @@
 import type { Locale } from "@/lib/locale";
 
 const stepsByLocale = {
-  fr: [
+  fr: (place?: string) => [
     {
       title: "Appel",
       text: "Vous m'appelez, vous décrivez la situation en quelques mots, et j'identifie le problème le plus probable dès le téléphone.",
     },
     {
       title: "Délai d'arrivée",
-      text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure, et je vous préviens si la situation évolue en route.",
+      text: place
+        ? `Je vous annonce un prix et un délai réaliste pour ${place}, et je vous préviens si la situation évolue en route.`
+        : "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure, et je vous préviens si la situation évolue en route.",
     },
     {
       title: "Diagnostic sur place",
@@ -19,14 +21,16 @@ const stepsByLocale = {
       text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois le travail fini.",
     },
   ],
-  en: [
+  en: (place?: string) => [
     {
       title: "Call",
       text: "You call me, describe the situation in a few words, and I identify the most likely problem right there on the phone.",
     },
     {
       title: "Time to arrival",
-      text: "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
+      text: place
+        ? `I quote a price and a realistic time frame for ${place}, and let you know if anything changes on the way.`
+        : "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
     },
     {
       title: "On-site diagnosis",
@@ -39,8 +43,14 @@ const stepsByLocale = {
   ],
 };
 
-export default function ProcessSteps({ locale = "fr" }: { locale?: Locale }) {
-  const steps = stepsByLocale[locale];
+export default function ProcessSteps({
+  locale = "fr",
+  place,
+}: {
+  locale?: Locale;
+  place?: string;
+}) {
+  const steps = stepsByLocale[locale](place);
   return (
     <div>
       <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
