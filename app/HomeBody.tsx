@@ -139,6 +139,36 @@ const homeFaqEn: FaqItem[] = [
   },
 ];
 
+const featuredPosts = [
+  {
+    href: "/blog/que-faire-apres-un-cambriolage/",
+    title: "Que faire après un cambriolage : les bons réflexes",
+    excerpt:
+      "Ne rien toucher, faire opposition, porter plainte sous 48h, prévenir l'assurance : l'ordre des démarches recommandé après une effraction.",
+    category: "Sécurité",
+    accent: "border-t-urgent",
+    tagClass: "bg-urgent/10 text-urgent",
+  },
+  {
+    href: "/blog/certification-a2p-serrure/",
+    title: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+    excerpt:
+      "Une, deux ou trois étoiles : ce que signifie réellement cette certification, et comment vérifier qu'elle est authentique avant de payer.",
+    category: "Comprendre",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+  },
+  {
+    href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+    title: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
+    excerpt:
+      "Vérifications à faire avant d'appeler, ce qu'il ne faut surtout pas tenter seul, et comment reconnaître une annonce à prix d'appel trop bas.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+  },
+];
+
 const strings = {
   fr: {
     badge: "Disponible maintenant — devis par téléphone",
@@ -199,6 +229,10 @@ const strings = {
         habituel.
       </>
     ),
+    blogTitle: "Mes derniers articles",
+    blogSubtitle: "Conseils pratiques et explications claires, sans jargon commercial.",
+    blogRead: "Lire l'article",
+    blogSeeAll: "Voir tous les articles →",
     quartiersSubtitle: "Quelques quartiers où j'interviens régulièrement",
     seeAllQuartiers: "Voir tous les quartiers couverts →",
     contactTitle: "Un devis ou une intervention ?",
@@ -261,6 +295,10 @@ const strings = {
         see the neighborhoods covered and the usual response time.
       </>
     ),
+    blogTitle: "From the blog (in French)",
+    blogSubtitle: "Practical advice and clear explanations, no sales pitch.",
+    blogRead: "Read the article",
+    blogSeeAll: "See all articles (in French) →",
     quartiersSubtitle: "Some of the neighborhoods I regularly work in",
     seeAllQuartiers: "See all neighborhoods covered (in French) →",
     contactTitle: "Need a quote or a callout?",
@@ -430,6 +468,45 @@ export default function HomeBody() {
 
       <section className="mx-auto max-w-5xl px-4 py-14">
         <ReviewsSection locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">{t.blogTitle}</h2>
+        <p className="text-slate text-sm mb-8 text-center max-w-xl mx-auto">{t.blogSubtitle}</p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {featuredPosts.map((post) => (
+            <Link
+              key={post.href}
+              href={post.href}
+              className={`block bg-white border border-navy/10 border-t-4 ${post.accent} rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow h-full`}
+            >
+              <span
+                className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}
+              >
+                {post.category}
+              </span>
+              <p className="font-heading font-semibold text-navy">{post.title}</p>
+              <p className="text-sm text-slate mt-1">{post.excerpt}</p>
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-steel mt-3">
+                {t.blogRead}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </Link>
+          ))}
+        </div>
+        <p className="text-center mt-6">
+          <Link href="/blog/" className="text-steel underline text-sm">
+            {t.blogSeeAll}
+          </Link>
+        </p>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
