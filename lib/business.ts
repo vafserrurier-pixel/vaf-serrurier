@@ -13,6 +13,10 @@ export const business = {
   rcs: "980 385 868 R.C.S. Nice",
   tagline: "Serrurier à Nice",
   siret: "980 385 868 00024",
+  // Année de début d'activité de Benoît comme serrurier (chez son frère à
+  // Paris, avant de s'installer seul à Nice) — sert à calculer l'ancienneté
+  // réelle affichée sur le site, jamais un chiffre fixe à mettre à jour.
+  professionSinceYear: 2011,
   address: {
     street: "2 Rue Antoine Gautier",
     postalCode: "06300",

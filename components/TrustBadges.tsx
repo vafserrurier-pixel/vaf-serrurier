@@ -1,15 +1,17 @@
-import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon } from "./Icons";
+import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon, WrenchIcon } from "./Icons";
 import { business } from "@/lib/business";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
   fr: {
+    experience: (years: number) => `${years} ans d'expérience`,
     siret: (siret: string) => `SIRET vérifiable : ${siret}`,
     insurance: "RC Pro & garantie décennale",
     invoice: "Facture conforme aux assureurs",
     reviews: (rating: string, count: number) => `${rating}/5 sur ${count}+ avis Google`,
   },
   en: {
+    experience: (years: number) => `${years} years of experience`,
     siret: (siret: string) => `Verifiable SIRET: ${siret}`,
     insurance: "Professional liability & 10-year insurance",
     invoice: "Invoice compliant with insurers",
@@ -19,7 +21,9 @@ const strings = {
 
 export default function TrustBadges({ locale = "fr" }: { locale?: Locale }) {
   const t = strings[locale];
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
   const badges = [
+    { Icon: WrenchIcon, label: t.experience(experienceYears) },
     { Icon: ShieldIcon, label: t.siret(business.siret) },
     { Icon: HandshakeIcon, label: t.insurance },
     { Icon: CheckIcon, label: t.invoice },
