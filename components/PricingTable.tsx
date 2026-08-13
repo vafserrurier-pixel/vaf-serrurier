@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { business } from "@/lib/business";
 import { CheckIcon } from "./Icons";
 import type { Locale } from "@/lib/locale";
@@ -8,6 +11,7 @@ type Card = {
   unit?: string;
   features: string[];
   highlight?: boolean;
+  featured?: boolean;
 };
 
 const cardsByLocale: Record<Locale, Card[]> = {
@@ -22,6 +26,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Déplacement inclus sur Nice",
       ],
       highlight: true,
+      featured: true,
     },
     {
       title: "Porte verrouillée (cylindre européen)",
@@ -32,6 +37,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Tests finaux de fermeture",
         "Déplacement inclus sur Nice",
       ],
+      featured: true,
     },
     {
       title: "Porte verrouillée (serrure Fichet)",
@@ -52,6 +58,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Cylindre européen adapté à votre porte",
         "Clés neuves remises sur place",
       ],
+      featured: true,
     },
     {
       title: "Changement de cylindre haute sécurité",
@@ -71,6 +78,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Pose, réglage et tests de fermeture inclus",
         "Devis détaillé confirmé avant travaux",
       ],
+      featured: true,
     },
     {
       title: "Coffre-fort (ouverture et installation)",
@@ -104,6 +112,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Travel included within Nice",
       ],
       highlight: true,
+      featured: true,
     },
     {
       title: "Door locked (European cylinder)",
@@ -114,6 +123,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Final closing tests",
         "Travel included within Nice",
       ],
+      featured: true,
     },
     {
       title: "Door locked (Fichet lock)",
@@ -134,6 +144,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "European cylinder matched to your door",
         "New keys handed over on site",
       ],
+      featured: true,
     },
     {
       title: "High-security cylinder replacement",
@@ -153,6 +164,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
         "Fitting, adjustment and closing tests included",
         "Detailed quote confirmed before work",
       ],
+      featured: true,
     },
     {
       title: "Safe (opening and installation)",
@@ -183,25 +195,54 @@ const strings = {
     call: "Appeler pour ce tarif",
     nightSurcharge: "+50% après 19h, le week-end et les jours fériés",
     note: "Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
+    tabFeatured: "Les plus demandés",
+    tabAll: "Tous les tarifs",
   },
   en: {
     mostRequested: "Most requested",
     call: "Call for this rate",
     nightSurcharge: "+50% after 7pm, on weekends and public holidays",
     note: "Replaced parts billed separately, always quoted before you agree. Full lock replacement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
+    tabFeatured: "Most requested",
+    tabAll: "All prices",
   },
 };
 
 export default function PricingTable({ locale = "fr" }: { locale?: Locale }) {
+  const [showAll, setShowAll] = useState(false);
   const cards = cardsByLocale[locale];
   const t = strings[locale];
   return (
     <div>
+      <div className="flex justify-center gap-2 mb-6">
+        <button
+          type="button"
+          onClick={() => setShowAll(false)}
+          className={`text-sm font-semibold px-4 py-2 rounded-full border transition-colors ${
+            !showAll
+              ? "bg-navy text-cream border-navy"
+              : "bg-white text-slate border-navy/10 hover:border-steel"
+          }`}
+        >
+          {t.tabFeatured}
+        </button>
+        <button
+          type="button"
+          onClick={() => setShowAll(true)}
+          className={`text-sm font-semibold px-4 py-2 rounded-full border transition-colors ${
+            showAll
+              ? "bg-navy text-cream border-navy"
+              : "bg-white text-slate border-navy/10 hover:border-steel"
+          }`}
+        >
+          {t.tabAll}
+        </button>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => (
           <div
             key={card.title}
-            className={`rounded-xl p-5 flex flex-col ${
+            className={`rounded-xl p-5 flex-col ${!showAll && !card.featured ? "hidden" : "flex"} ${
               card.highlight
                 ? "bg-navy text-cream shadow-lg ring-2 ring-urgent"
                 : "bg-white text-navy border border-navy/10"
