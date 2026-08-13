@@ -66,18 +66,30 @@ export default function SectorPageTemplate({
               { name: title, href: path },
             ]}
           />
+          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            Disponible maintenant — devis par téléphone
+          </span>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{title}</h1>
           <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">
             {intro.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <a
-            href={business.phone.href}
-            className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-          >
-            Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-3 mt-6">
+            <a
+              href={business.phone.href}
+              className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+            >
+              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+            </a>
+            <Link
+              href="/tarifs-serrurier-nice/"
+              className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
+            >
+              Voir les tarifs
+            </Link>
+          </div>
         </div>
         <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
           <Image

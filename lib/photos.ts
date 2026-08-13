@@ -3,6 +3,8 @@
 // alternatif reste volontairement générique — ces photos ne sont pas prises
 // dans le quartier en question, on ne prétend pas le contraire.
 
+import { zones } from "./business";
+
 export type Photo = { src: string; alt: string };
 
 export const generalPhotoPool: Photo[] = [
@@ -30,13 +32,27 @@ export const generalPhotoPool: Photo[] = [
   { src: "/images/pool/serrure-heracles-posee-porte-nice.webp", alt: "Serrure Heraclès posée sur une porte à Nice" },
 ];
 
-// Choix déterministe (même nom -> même photo à chaque rendu) mais réparti
-// entre toutes les photos du pool, pour éviter que deux pages proches
-// affichent la même image.
+// Attribution déterministe construite à partir des secteurs réels : chaque
+// quartier d'un même secteur reçoit une photo différente (les secteurs ont
+// tous moins de quartiers que le pool n'a de photos), pour qu'on n'affiche
+// jamais la même image sur deux pages liées entre elles via "quartiers
+// voisins". Les décalages par secteur limitent aussi les répétitions
+// visibles d'un secteur à l'autre.
+const photoAssignments: Record<string, Photo> = (() => {
+  const map: Record<string, Photo> = {};
+  const sectorKeys = Object.keys(zones) as (keyof typeof zones)[];
+  const poolSize = generalPhotoPool.length;
+  sectorKeys.forEach((sector, sectorIndex) => {
+    const offset = sectorIndex * 5;
+    zones[sector].forEach((quartier, i) => {
+      map[quartier] = generalPhotoPool[(offset + i) % poolSize];
+    });
+    // Page secteur elle-même : décalée par rapport à ses propres quartiers.
+    map[sector] = generalPhotoPool[(offset + zones[sector].length) % poolSize];
+  });
+  return map;
+})();
+
 export function pickPhoto(seed: string): Photo {
-  let hash = 0;
-  for (let i = 0; i < seed.length; i++) {
-    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
-  }
-  return generalPhotoPool[hash % generalPhotoPool.length];
+  return photoAssignments[seed] ?? generalPhotoPool[0];
 }
