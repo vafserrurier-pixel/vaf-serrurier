@@ -1,0 +1,44 @@
+import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon } from "./Icons";
+import { business } from "@/lib/business";
+import type { Locale } from "@/lib/locale";
+
+const strings = {
+  fr: {
+    siret: (siret: string) => `SIRET vérifiable : ${siret}`,
+    insurance: "RC Pro & garantie décennale",
+    invoice: "Facture conforme aux assureurs",
+    reviews: (rating: string, count: number) => `${rating}/5 sur ${count}+ avis Google`,
+  },
+  en: {
+    siret: (siret: string) => `Verifiable SIRET: ${siret}`,
+    insurance: "Professional liability & 10-year insurance",
+    invoice: "Invoice compliant with insurers",
+    reviews: (rating: string, count: number) => `${rating}/5 from ${count}+ Google reviews`,
+  },
+};
+
+export default function TrustBadges({ locale = "fr" }: { locale?: Locale }) {
+  const t = strings[locale];
+  const badges = [
+    { Icon: ShieldIcon, label: t.siret(business.siret) },
+    { Icon: HandshakeIcon, label: t.insurance },
+    { Icon: CheckIcon, label: t.invoice },
+    {
+      Icon: StarIcon,
+      label: t.reviews(business.reviews.rating.toFixed(1), business.reviews.count),
+    },
+  ];
+  return (
+    <div className="flex flex-wrap justify-center gap-3">
+      {badges.map((b) => (
+        <div
+          key={b.label}
+          className="inline-flex items-center gap-2 bg-white border border-navy/10 rounded-full px-4 py-2 text-xs font-medium text-navy shadow-sm"
+        >
+          <b.Icon className="w-4 h-4 text-steel shrink-0" />
+          {b.label}
+        </div>
+      ))}
+    </div>
+  );
+}

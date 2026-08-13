@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ProcessSteps from "@/components/ProcessSteps";
 import QuoteBlock from "@/components/QuoteBlock";
+import TrustBadges from "@/components/TrustBadges";
+import StatBar from "@/components/StatBar";
 import ServiceGrid from "@/components/ServiceGrid";
 import ReviewsSection from "@/components/ReviewsSection";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
@@ -153,6 +155,25 @@ const strings = {
       "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice. Concrètement, vous avez les mêmes explications claires, le même devis annoncé avant travaux, et un seul interlocuteur à qui vous référer d'une intervention à l'autre.",
     ],
     aboutLink: "En savoir plus sur mon parcours →",
+    causesTitle: "Pourquoi fait-on appel à un serrurier à Nice",
+    causes: [
+      {
+        title: "La porte claquée, cas le plus fréquent",
+        text: "C'est l'appel le plus courant : une porte qui se referme seule, avec les clés restées à l'intérieur. Dans la grande majorité des cas, elle s'ouvre sans dommage grâce à la méthode radio, sans qu'il soit nécessaire de forcer la serrure ou de percer.",
+      },
+      {
+        title: "L'air marin use les mécanismes plus vite",
+        text: "À Nice, la proximité de la mer joue un rôle qu'on sous-estime souvent : l'air chargé en sel accélère la corrosion des pièces métalliques, en particulier sur les serrures exposées (portes de garage, entrées donnant sur l'extérieur, portails). Un cylindre qui tourne difficilement ou une clé qui force sont souvent les premiers signes, bien avant la panne complète.",
+      },
+      {
+        title: "L'effraction ou la tentative d'effraction",
+        text: "Porte forcée, cylindre arraché ou cadre endommagé : la priorité est de sécuriser le logement dans l'heure, puis de proposer une solution durable, idéalement certifiée A2P, pour ne pas revivre la même situation.",
+      },
+      {
+        title: "L'usure naturelle après plusieurs années",
+        text: "Une serrure vieillit même sans incident : jeu dans le mécanisme, clé de plus en plus difficile à tourner, verrouillage qui accroche. Un changement anticipé coûte toujours moins cher et prend moins de temps qu'un dépannage en urgence.",
+      },
+    ],
     howItWorks: "Comment se déroule mon intervention",
     services: "Mes services de serrurerie à Nice",
     brands: "Marques de serrures que je pose à Nice",
@@ -195,6 +216,25 @@ const strings = {
       "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice. In practice, that means the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
     ],
     aboutLink: "More about me (in French) →",
+    causesTitle: "Why people call a locksmith in Nice",
+    causes: [
+      {
+        title: "A slammed door, the most common case",
+        text: "It's the most frequent call: a door that shuts on its own, with the keys left inside. In the vast majority of cases it opens without any damage using the radio method, with no need to force the lock or drill it.",
+      },
+      {
+        title: "Sea air wears mechanisms out faster",
+        text: "In Nice, being close to the sea plays a role that's often underestimated: salt-laden air speeds up corrosion of metal parts, especially on exposed locks (garage doors, entrances facing outside, gates). A cylinder that turns stiffly or a key that needs force are often the first signs, well before a full failure.",
+      },
+      {
+        title: "Break-ins and attempted break-ins",
+        text: "A forced door, a torn-out cylinder, a damaged frame: the priority is to secure the home within the hour, then offer a lasting solution, ideally A2P-certified, so it doesn't happen again.",
+      },
+      {
+        title: "Natural wear after several years",
+        text: "A lock ages even without an incident: play in the mechanism, a key that's harder and harder to turn, a latch that catches. Replacing it early always costs less and takes less time than an emergency callout.",
+      },
+    ],
     howItWorks: "How my callout works",
     services: "My locksmith services in Nice",
     brands: "Lock brands I install in Nice",
@@ -276,6 +316,12 @@ export default function HomeBody() {
         </div>
       </section>
 
+      <StatBar locale={locale} />
+
+      <section className="mx-auto max-w-5xl px-4 pt-8 pb-2">
+        <TrustBadges locale={locale} />
+      </section>
+
       <section className="mx-auto max-w-5xl px-4 py-14">
         <div className="grid gap-8 sm:grid-cols-2 items-start">
           <div>
@@ -299,6 +345,20 @@ export default function HomeBody() {
               sizes="(min-width: 640px) 40vw, 100vw"
               className="object-cover"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-8 text-center">{t.causesTitle}</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {t.causes.map((cause) => (
+              <div key={cause.title}>
+                <p className="font-heading font-semibold text-navy mb-1.5">{cause.title}</p>
+                <p className="text-sm text-slate leading-relaxed">{cause.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
