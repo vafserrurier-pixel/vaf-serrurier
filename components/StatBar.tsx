@@ -5,8 +5,8 @@ const strings = {
   fr: {
     availability: "Disponible",
     availabilityUnit: "7j/7",
-    price: "Dès",
-    priceUnit: "l'intervention",
+    price: "Tarif de base",
+    priceUnit: "TTC",
     rating: "Note Google",
     ratingUnit: (count: number) => `sur ${count}+ avis`,
     success: "Ouvertures",
@@ -15,8 +15,8 @@ const strings = {
   en: {
     availability: "Available",
     availabilityUnit: "7 days a week",
-    price: "From",
-    priceUnit: "per callout",
+    price: "Base rate",
+    priceUnit: "incl. VAT",
     rating: "Google rating",
     ratingUnit: (count: number) => `from ${count}+ reviews`,
     success: "Door openings",
