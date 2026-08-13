@@ -32,6 +32,10 @@ export default function AProposPage() {
         <div className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
           <div>
             <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Qui suis-je", href: "/a-propos/" }]} />
+            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+              Disponible maintenant — devis par téléphone
+            </span>
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
               Qui suis-je
             </h1>
@@ -41,12 +45,20 @@ export default function AProposPage() {
               pas de sous-traitant : c&apos;est moi qui décroche, moi qui viens, moi qui
               réponds de mon travail.
             </p>
-            <a
-              href={business.phone.href}
-              className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-            >
-              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-            </a>
+            <div className="flex flex-wrap items-center gap-3 mt-6">
+              <a
+                href={business.phone.href}
+                className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+              >
+                Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+              </a>
+              <Link
+                href="/tarifs-serrurier-nice/"
+                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
+              >
+                Voir les tarifs
+              </Link>
+            </div>
           </div>
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
             <Image

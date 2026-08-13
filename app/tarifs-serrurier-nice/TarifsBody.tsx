@@ -69,8 +69,10 @@ const faqEn: FaqItem[] = [
 const strings = {
   fr: {
     breadcrumb: "Tarifs",
+    badge: "Disponible maintenant — devis par téléphone",
     h1: "Tarifs serrurier à Nice",
     lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards — un devis précis est toujours annoncé avant que je commence l'intervention.",
+    call: "Appeler",
     trustSiret: (siret: string) => `SIRET vérifiable : ${siret}`,
     trustInsurance: "Assurance RC Pro et garantie décennale",
     trustReviews: (rating: string, count: number) => `${rating}/5 sur plus de ${count} avis Google`,
@@ -91,8 +93,10 @@ const strings = {
   },
   en: {
     breadcrumb: "Pricing",
+    badge: "Available now — quote by phone",
     h1: "Locksmith pricing in Nice",
     lead: "What matters is transparency, not promises. Here's my pricing for standard situations — a precise quote is always given before I start the work.",
+    call: "Call",
     trustSiret: (siret: string) => `Verifiable SIRET: ${siret}`,
     trustInsurance: "Professional liability and 10-year insurance",
     trustReviews: (rating: string, count: number) => `${rating}/5 from over ${count} Google reviews`,
@@ -129,8 +133,18 @@ export default function TarifsBody() {
               { name: t.breadcrumb, href: "/tarifs-serrurier-nice/" },
             ]}
           />
+          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            {t.badge}
+          </span>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{t.h1}</h1>
           <p className="mt-4 text-slate leading-relaxed max-w-2xl">{t.lead}</p>
+          <a
+            href={business.phone.href}
+            className="inline-block mt-5 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+          >
+            {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+          </a>
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs text-slate">
             <span className="inline-flex items-center gap-1.5">
               <ShieldIcon className="w-4 h-4 text-steel" />

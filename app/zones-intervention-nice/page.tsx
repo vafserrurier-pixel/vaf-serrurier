@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyMap from "@/components/LazyMap";
 import CtaBlock from "@/components/CtaBlock";
 import ServiceGrid from "@/components/ServiceGrid";
-import { zones } from "@/lib/business";
+import { business, zones } from "@/lib/business";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
 
 export const metadata: Metadata = {
@@ -31,6 +31,10 @@ export default function ZonesInterventionNicePage() {
           { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
         ]}
       />
+      <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+        Disponible maintenant — devis par téléphone
+      </span>
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
         Zones d&apos;intervention à Nice
       </h1>
@@ -60,6 +64,13 @@ export default function ZonesInterventionNicePage() {
           page individuelle — un simple appel suffit.
         </p>
       </div>
+
+      <a
+        href={business.phone.href}
+        className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+      >
+        Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+      </a>
 
       <div className="mt-8">
         <LazyMap />

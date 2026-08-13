@@ -10,6 +10,7 @@ const strings = {
   fr: {
     home: "Accueil",
     contact: "Contact",
+    badge: "Disponible maintenant — devis par téléphone",
     h1: "Contact",
     lead: "Besoin d'un devis ou d'une intervention ? Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le canal le plus rapide.",
     writeMe: "Écrivez-moi",
@@ -19,6 +20,7 @@ const strings = {
   en: {
     home: "Home",
     contact: "Contact",
+    badge: "Available now — quote by phone",
     h1: "Contact",
     lead: "Need a quote or a callout? Describe your situation and I'll reply quickly. For an emergency, calling remains the fastest way to reach me.",
     writeMe: "Write to me",
@@ -40,6 +42,10 @@ export default function ContactBody() {
           { name: t.contact, href: "/contact/" },
         ]}
       />
+      <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+        {t.badge}
+      </span>
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{t.h1}</h1>
       <p className="mt-4 text-slate leading-relaxed max-w-2xl">{t.lead}</p>
 
