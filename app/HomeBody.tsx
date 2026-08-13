@@ -156,6 +156,9 @@ const strings = {
       "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice. Concrètement, vous avez les mêmes explications claires, le même devis annoncé avant travaux, et un seul interlocuteur à qui vous référer d'une intervention à l'autre.",
     ],
     aboutLink: "En savoir plus sur mon parcours →",
+    crimeTitle: "Les cambriolages à Nice, une réalité à prendre au sérieux",
+    crimeText:
+      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025, contre 5,4‰ l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (5,6‰), et bien au-dessus de la moyenne du département des Alpes-Maritimes (4,3‰). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville.",
     causesTitle: "Pourquoi fait-on appel à un serrurier à Nice",
     causes: [
       {
@@ -218,6 +221,9 @@ const strings = {
       "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice. In practice, that means the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
     ],
     aboutLink: "More about me (in French) →",
+    crimeTitle: "Break-ins in Nice, a risk worth taking seriously",
+    crimeText:
+      "According to figures from the French Interior Ministry published in March 2026, the burglary rate in Nice rose to 6.1 per 1,000 homes in 2025, up from 5.4‰ the previous year. That level is now above the national average (5.6‰), and well above the average for the Alpes-Maritimes département (4.3‰). A properly fitted door remains the most direct way to limit this risk, wherever you are in the city.",
     causesTitle: "Why people call a locksmith in Nice",
     causes: [
       {
@@ -424,6 +430,11 @@ export default function HomeBody() {
 
       <section className="mx-auto max-w-5xl px-4 py-14">
         <ReviewsSection locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-2">{t.crimeTitle}</h2>
+        <p className="text-slate leading-relaxed">{t.crimeText}</p>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
