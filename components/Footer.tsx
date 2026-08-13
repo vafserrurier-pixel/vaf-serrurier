@@ -59,12 +59,12 @@ export default function Footer() {
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">{t.contact}</p>
-          <a href={business.phone.href} className="block py-1 -my-1 font-tabular-nums text-sm hover:underline">
+          <a href={business.phone.href} className="block py-3.5 font-tabular-nums text-sm hover:underline">
             {business.phone.display}
           </a>
           <a
             href={business.phoneSecondary.href}
-            className="block py-1 -my-1 mt-0.5 font-tabular-nums text-sm hover:underline"
+            className="block py-3.5 font-tabular-nums text-sm hover:underline"
           >
             {business.phoneSecondary.display}
           </a>
@@ -72,14 +72,14 @@ export default function Footer() {
             href={business.whatsapp.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-sm mt-1 hover:underline"
+            className="block py-3.5 text-sm hover:underline"
           >
             {t.whatsapp}
           </a>
-          <a href={`mailto:${business.email}`} className="block text-sm mt-1 hover:underline">
+          <a href={`mailto:${business.email}`} className="block py-3.5 text-sm hover:underline">
             {t.email}
           </a>
-          <p className="text-sm mt-3">{business.hours}</p>
+          <p className="text-sm mt-2">{business.hours}</p>
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">
