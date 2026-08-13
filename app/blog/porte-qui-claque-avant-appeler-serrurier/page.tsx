@@ -107,6 +107,21 @@ export default function PorteQuiClaquePage() {
 
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            Comment un serrurier ouvre une porte claquée sans l&apos;abîmer
+          </h2>
+          <p>
+            Sur la plupart des portes, j&apos;utilise la méthode radio, aussi appelée
+            technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée
+            entre le cadre et le pêne, qui libère le mécanisme sans dommage dans la
+            quasi-totalité des cas. C&apos;est plus délicat qu&apos;il n&apos;y paraît
+            — mal maîtrisée, cette manipulation abîme justement ce qu&apos;elle est
+            censée préserver, d&apos;où l&apos;intérêt de laisser un professionnel s&apos;en
+            charger dès que la porte résiste un peu.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Ce que je fais concrètement à mon arrivée
           </h2>
           <p>

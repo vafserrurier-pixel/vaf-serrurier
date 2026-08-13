@@ -108,6 +108,22 @@ export default function CertificationA2pPage() {
 
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            À ne pas confondre : A2P étoiles et A2P BP
+          </h2>
+          <p>
+            Le CNPP délivre en réalité deux échelles A2P différentes, et la confusion
+            est fréquente. Les serrures et cylindres sont notés en étoiles (1 à 3),
+            comme expliqué plus haut. Les blocs-portes blindés complets, eux, sont notés
+            BP1, BP2 ou BP3, une échelle qui évalue la porte entière — cadre, gonds,
+            panneau et serrure — et non la seule serrure. Un excellent cylindre 3
+            étoiles posé sur une porte standard non blindée n&apos;offre pas le même
+            niveau de résistance globale qu&apos;un bloc-porte certifié BP, même
+            d&apos;entrée de gamme.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Mon approche sur le choix du niveau
           </h2>
           <p>

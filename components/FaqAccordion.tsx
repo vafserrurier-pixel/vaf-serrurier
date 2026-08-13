@@ -28,16 +28,14 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 {isOpen ? "−" : "+"}
               </span>
             </button>
-            {isOpen && (
-              <p
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                className="pb-4 text-slate text-sm leading-relaxed"
-              >
-                {item.answer}
-              </p>
-            )}
+            <p
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              className={`pb-4 text-slate text-sm leading-relaxed ${isOpen ? "" : "hidden"}`}
+            >
+              {item.answer}
+            </p>
           </div>
         );
       })}

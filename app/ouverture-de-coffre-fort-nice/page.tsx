@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-coffre-fort-nice/" },
@@ -92,6 +93,13 @@ export default function OuvertureDeCoffreFortNicePage() {
         src: "/images/serrurier-nice-coffre-fort.webp",
         alt: "Coffre-fort à serrure électronique diagnostiqué par un serrurier à Nice",
       }}
+      extra={
+        <PriceReminder
+          priceLabel="À partir de 299 € TTC"
+          note="Prix ajusté selon le modèle et la méthode nécessaire"
+          locale="fr"
+        />
+      }
       relatedServices={[
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

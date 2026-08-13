@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
+import QuoteBlock from "@/components/QuoteBlock";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
@@ -20,7 +21,7 @@ const sectionsFr = [
   {
     heading: "Clé cassée dans la serrure",
     paragraphs: [
-      "C'est l'un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au pire moment. J'extrais le morceau resté à l'intérieur avec les outils adaptés, puis je vérifie l'état du cylindre avant de le remettre en service.",
+      "C'est l'un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au pire moment. J'extrais le morceau resté à l'intérieur avec les outils adaptés, puis je vérifie l'état du cylindre avant de le remettre en service. Le perçage ne reste qu'une solution de tout dernier recours, si aucune autre méthode n'aboutit.",
       "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre. Résultat : un dépannage simple se transforme en remplacement complet.",
     ],
   },
@@ -88,7 +89,7 @@ const sectionsEn = [
   {
     heading: "A key broken off inside the lock",
     paragraphs: [
-      "This is one of the most common callouts: a worn key snaps clean off inside the cylinder, usually at the worst possible time. I extract the piece left inside with the right tools, then check the condition of the cylinder before putting it back into service.",
+      "This is one of the most common callouts: a worn key snaps clean off inside the cylinder, usually at the worst possible time. I extract the piece left inside with the right tools, then check the condition of the cylinder before putting it back into service. Drilling stays a last-resort solution, only if no other method works.",
       "One thing to avoid absolutely: pushing the broken key with a sharp object or trying to glue it back together. Both of these common reflexes almost always make extraction harder and damage the cylinder. The result: a simple repair turns into a full replacement.",
     ],
   },
@@ -159,7 +160,14 @@ export default function DepannageSerrurierNicePage() {
           src: "/images/serrurier-nice-depannage-reparation.webp",
           alt: "Réparation d'un mécanisme de serrure par un serrurier à Nice",
         },
-        extra: <PriceReminder priceLabel="À partir de 149 € TTC" locale="fr" />,
+        extra: (
+          <>
+            <PriceReminder priceLabel="À partir de 149 € TTC" locale="fr" />
+            <div className="mx-auto max-w-4xl px-4 py-10">
+              <QuoteBlock locale="fr" />
+            </div>
+          </>
+        ),
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
@@ -178,7 +186,14 @@ export default function DepannageSerrurierNicePage() {
           src: "/images/serrurier-nice-depannage-reparation.webp",
           alt: "A locksmith repairing a lock mechanism in Nice",
         },
-        extra: <PriceReminder priceLabel="From €149 incl. VAT" locale="en" />,
+        extra: (
+          <>
+            <PriceReminder priceLabel="From €149 incl. VAT" locale="en" />
+            <div className="mx-auto max-w-4xl px-4 py-10">
+              <QuoteBlock locale="en" />
+            </div>
+          </>
+        ),
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },
           { href: "/changement-serrure-nice/", label: "Lock change" },

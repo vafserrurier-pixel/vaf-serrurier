@@ -3,30 +3,38 @@ import type { Locale } from "@/lib/locale";
 const stepsByLocale = {
   fr: [
     {
-      title: "Diagnostic",
-      text: "Vous m'expliquez la situation au téléphone, j'identifie le problème et j'annonce un prix avant de me déplacer.",
+      title: "Appel",
+      text: "Vous m'appelez, vous décrivez la situation en quelques mots, et j'identifie le problème le plus probable dès le téléphone.",
     },
     {
-      title: "Intervention",
-      text: "J'utilise les outils adaptés à votre serrure, sans forcer inutilement, en limitant les dégâts au strict nécessaire.",
+      title: "Délai d'arrivée",
+      text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure, et je vous préviens si la situation évolue en route.",
     },
     {
-      title: "Vérification",
-      text: "Je teste la fermeture, j'explique ce qui a été fait, et je m'assure que tout fonctionne avant de repartir.",
+      title: "Diagnostic sur place",
+      text: "J'examine la porte, la serrure et le cadre pour confirmer la meilleure méthode, sans rien forcer avant d'être sûr de mon geste.",
+    },
+    {
+      title: "Règlement",
+      text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois le travail fini.",
     },
   ],
   en: [
     {
-      title: "Diagnosis",
-      text: "You explain the situation over the phone, I identify the problem and quote a price before I travel to you.",
+      title: "Call",
+      text: "You call me, describe the situation in a few words, and I identify the most likely problem right there on the phone.",
     },
     {
-      title: "Intervention",
-      text: "I use the tools suited to your lock, without forcing unnecessarily, keeping any damage to the strict minimum.",
+      title: "Time to arrival",
+      text: "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
     },
     {
-      title: "Verification",
-      text: "I test that everything closes properly, explain what was done, and make sure it all works before I leave.",
+      title: "On-site diagnosis",
+      text: "I examine the door, the lock and the frame to confirm the best method, without forcing anything until I'm sure of my approach.",
+    },
+    {
+      title: "Payment",
+      text: "The price confirmed on site is what you pay, with a detailed invoice, no surprise extra charge once the work is done.",
     },
   ],
 };
@@ -35,7 +43,7 @@ export default function ProcessSteps({ locale = "fr" }: { locale?: Locale }) {
   const steps = stepsByLocale[locale];
   return (
     <div>
-      <ol className="grid gap-8 sm:grid-cols-3">
+      <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
           <li key={step.title} className="relative">
             <div className="flex items-center gap-3 mb-2">

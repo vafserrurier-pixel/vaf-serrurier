@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import BrandsSection from "@/components/BrandsSection";
 import PriceReminder from "@/components/PriceReminder";
+import QuoteBlock from "@/components/QuoteBlock";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/changement-serrure-nice/" },
@@ -32,7 +33,7 @@ const sectionsFr = [
   {
     heading: "Certification A2P, utile ou pas",
     paragraphs: [
-      "La certification A2P aide à comparer objectivement la résistance d'une serrure face à une tentative d'effraction. Ce n'est pas une obligation légale pour un logement standard. Je préfère donc vous orienter vers une sécurisation cohérente avec l'état réel de votre porte, plutôt que vers du suréquipement qui ne servira à rien si le bâti autour reste fragile.",
+      "La certification A2P aide à comparer objectivement la résistance d'une serrure face à une tentative d'effraction. Je pose des serrures et cylindres certifiés A2P 1, 2 ou 3 étoiles selon le besoin réel de votre logement, sans viser systématiquement le niveau maximum. Ce n'est pas une obligation légale pour un logement standard. Je préfère donc vous orienter vers une sécurisation cohérente avec l'état réel de votre porte, plutôt que vers du suréquipement qui ne servira à rien si le bâti autour reste fragile.",
     ],
   },
   {
@@ -104,7 +105,7 @@ const sectionsEn = [
   {
     heading: "A2P certification: useful or not",
     paragraphs: [
-      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. It isn't a legal requirement for a standard home. So I'd rather guide you toward security that matches the real condition of your door, than toward over-equipping it — which won't help much if the structure around it stays weak.",
+      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. I fit locks and cylinders certified A2P 1, 2 or 3 stars depending on your home's real needs, without automatically pushing the highest level. It isn't a legal requirement for a standard home. So I'd rather guide you toward security that matches the real condition of your door, than toward over-equipping it — which won't help much if the structure around it stays weak.",
     ],
   },
   {
@@ -172,7 +173,7 @@ export default function ChangementSerrureNicePage() {
           <>
             <div className="py-10">
               <PriceReminder
-                priceLabel="249 € TTC pour un cylindre (serrure complète sur devis)"
+                priceLabel="À partir de 249 € TTC pour un cylindre standard (haute sécurité et serrure complète sur devis)"
                 locale="fr"
               />
             </div>
@@ -182,6 +183,9 @@ export default function ChangementSerrureNicePage() {
               </h2>
               <BrandsSection locale="fr" />
             </section>
+            <div className="mx-auto max-w-4xl px-4 pb-10">
+              <QuoteBlock locale="fr" />
+            </div>
           </>
         ),
         relatedServices: [
@@ -206,7 +210,7 @@ export default function ChangementSerrureNicePage() {
           <>
             <div className="py-10">
               <PriceReminder
-                priceLabel="€249 incl. VAT for a cylinder (full lock quoted on assessment)"
+                priceLabel="From €249 incl. VAT for a standard cylinder (high-security and full lock quoted on assessment)"
                 locale="en"
               />
             </div>
@@ -216,6 +220,9 @@ export default function ChangementSerrureNicePage() {
               </h2>
               <BrandsSection locale="en" />
             </section>
+            <div className="mx-auto max-w-4xl px-4 pb-10">
+              <QuoteBlock locale="en" />
+            </div>
           </>
         ),
         relatedServices: [

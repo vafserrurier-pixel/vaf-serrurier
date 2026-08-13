@@ -96,6 +96,21 @@ export default function AgreeAssurancesPage() {
 
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            D&apos;où vient cette confusion, concrètement
+          </h2>
+          <p>
+            Beaucoup d&apos;artisans reprennent cette formule sans mauvaise intention,
+            simplement parce qu&apos;elle rassure et qu&apos;elle circule depuis
+            longtemps dans le métier. D&apos;autres l&apos;utilisent volontairement
+            pour donner une impression d&apos;officialité à une entreprise récente ou
+            peu identifiable. Dans les deux cas, le résultat est le même pour vous :
+            la mention ne garantit rien de vérifiable, ni sur la qualité du travail,
+            ni sur la prise en charge par votre assurance en cas de sinistre.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Pourquoi je ne mets pas ce sigle sur mon site
           </h2>
           <p>
@@ -116,6 +131,10 @@ export default function AgreeAssurancesPage() {
         Voir aussi :{" "}
         <Link href="/a-propos/" className="text-steel underline">
           qui je suis
+        </Link>
+        ,{" "}
+        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+          dépannage serrurier
         </Link>{" "}
         et{" "}
         <Link href="/tarifs-serrurier-nice/" className="text-steel underline">

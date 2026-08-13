@@ -86,6 +86,21 @@ export default function QueFaireApresUnCambriolagePage() {
 
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            Photographiez tout avant de ranger
+          </h2>
+          <p>
+            Une fois le dépôt de plainte fait, prenez le temps de photographier chaque
+            pièce touchée avant de commencer à ranger : la porte forcée, les tiroirs
+            ouverts, les emplacements vides. Ces photos datées appuient votre déclaration
+            de sinistre et évitent les contestations sur l&apos;étendue des dégâts. Si
+            vous avez des factures, des photos anciennes ou des garanties pour les objets
+            volés, rassemblez-les aussi : l&apos;assurance les demande presque toujours
+            pour chiffrer l&apos;indemnisation.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Prévenez votre assurance rapidement
           </h2>
           <p>
@@ -108,6 +123,21 @@ export default function QueFaireApresUnCambriolagePage() {
             dégâts. Je vous propose ensuite une solution durable, une fois le diagnostic
             complet effectué. Je vous fournis systématiquement une facture détaillée,
             le document généralement demandé pour votre déclaration de sinistre.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            Si vous êtes en copropriété, prévenez le syndic
+          </h2>
+          <p>
+            Une effraction sur une porte palière ou une tentative sur la porte de hall
+            concerne aussi les autres occupants de l&apos;immeuble. Signalez l&apos;incident
+            au syndic ou au gardien s&apos;il y en a un : ça permet de vérifier si
+            d&apos;autres logements ont été visés, et parfois de déclencher un renforcement
+            de la porte d&apos;entrée collective (digicode, gâche électrique, vidéosurveillance).
+            Prévenir vos voisins directs reste aussi un bon réflexe, ne serait-ce que pour
+            comparer les observations si plusieurs logements ont été touchés le même jour.
           </p>
         </div>
 

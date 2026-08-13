@@ -24,7 +24,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
       highlight: true,
     },
     {
-      title: "Porte verrouillée",
+      title: "Porte verrouillée (cylindre européen)",
       price: "149 €",
       unit: "TTC",
       features: [
@@ -34,7 +34,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
       ],
     },
     {
-      title: "Porte blindée verrouillée",
+      title: "Porte verrouillée (serrure Fichet)",
       price: "189 €",
       unit: "TTC",
       features: [
@@ -44,13 +44,52 @@ const cardsByLocale: Record<Locale, Card[]> = {
       ],
     },
     {
-      title: "Remplacement de cylindre",
-      price: "249 €",
+      title: "Changement de cylindre standard",
+      price: "à partir de 249 €",
       unit: "TTC",
       features: [
         "Déplacement et main d'œuvre inclus",
         "Cylindre européen adapté à votre porte",
         "Clés neuves remises sur place",
+      ],
+    },
+    {
+      title: "Changement de cylindre haute sécurité",
+      price: "Sur devis",
+      features: [
+        "Marques premium (Fichet) : toujours sur devis",
+        "Diagnostic de votre porte sur place",
+        "Prix confirmé avant toute intervention",
+      ],
+    },
+    {
+      title: "Installation porte blindée",
+      price: "1 490 €",
+      unit: "TTC",
+      features: [
+        "Bloc-porte ou blindage selon votre porte",
+        "Pose, réglage et tests de fermeture inclus",
+        "Devis détaillé confirmé avant travaux",
+      ],
+    },
+    {
+      title: "Coffre-fort (ouverture et installation)",
+      price: "à partir de 299 €",
+      unit: "TTC",
+      features: [
+        "Ouverture sans destruction quand c'est possible",
+        "Installation et fixation au sol ou au mur",
+        "Prix ajusté selon le modèle sur place",
+      ],
+    },
+    {
+      title: "Installation de poignée blindée",
+      price: "369 €",
+      unit: "TTC",
+      features: [
+        "Déplacement et main d'œuvre inclus",
+        "Compatible avec la plupart des portes blindées",
+        "Tests de fermeture après la pose",
       ],
     },
   ],
@@ -67,7 +106,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
       highlight: true,
     },
     {
-      title: "Door locked",
+      title: "Door locked (European cylinder)",
       price: "€149",
       unit: "incl. VAT",
       features: [
@@ -77,7 +116,7 @@ const cardsByLocale: Record<Locale, Card[]> = {
       ],
     },
     {
-      title: "Locked security door",
+      title: "Door locked (Fichet lock)",
       price: "€189",
       unit: "incl. VAT",
       features: [
@@ -87,13 +126,52 @@ const cardsByLocale: Record<Locale, Card[]> = {
       ],
     },
     {
-      title: "Cylinder replacement",
-      price: "€249",
+      title: "Standard cylinder replacement",
+      price: "from €249",
       unit: "incl. VAT",
       features: [
         "Travel and labor included",
         "European cylinder matched to your door",
         "New keys handed over on site",
+      ],
+    },
+    {
+      title: "High-security cylinder replacement",
+      price: "Quoted on assessment",
+      features: [
+        "Premium brands (Fichet): always quoted",
+        "On-site diagnosis of your door",
+        "Price confirmed before any work",
+      ],
+    },
+    {
+      title: "Security door installation",
+      price: "€1,490",
+      unit: "incl. VAT",
+      features: [
+        "Full door block or reinforcement, matched to your door",
+        "Fitting, adjustment and closing tests included",
+        "Detailed quote confirmed before work",
+      ],
+    },
+    {
+      title: "Safe (opening and installation)",
+      price: "from €299",
+      unit: "incl. VAT",
+      features: [
+        "Non-destructive opening when possible",
+        "Fitting and fixing to floor or wall",
+        "Price adjusted to the model on site",
+      ],
+    },
+    {
+      title: "Armored handle installation",
+      price: "€369",
+      unit: "incl. VAT",
+      features: [
+        "Travel and labor included",
+        "Compatible with most security doors",
+        "Closing tests after fitting",
       ],
     },
   ],
@@ -104,13 +182,13 @@ const strings = {
     mostRequested: "Le plus demandé",
     call: "Appeler pour ce tarif",
     nightSurcharge: "+50% après 19h, le week-end et les jours fériés",
-    note: "Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète, installation ou blindage de porte : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
+    note: "Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
   },
   en: {
     mostRequested: "Most requested",
     call: "Call for this rate",
     nightSurcharge: "+50% after 7pm, on weekends and public holidays",
-    note: "Replaced parts billed separately, always quoted before you agree. Full lock replacement, door installation or reinforcement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
+    note: "Replaced parts billed separately, always quoted before you agree. Full lock replacement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
   },
 };
 

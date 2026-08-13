@@ -108,6 +108,22 @@ export default function SerrureMultipointsPage() {
 
         <div>
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            Le rôle du bâti, souvent négligé
+          </h2>
+          <p>
+            Une serrure multipoints ne travaille jamais seule : elle s&apos;ancre dans
+            la gâche et dans le cadre de la porte. Si le chambranle est fissuré, mal
+            fixé au mur, ou en bois trop tendre, même une serrure 7 points perd une
+            bonne partie de son efficacité, car les points d&apos;ancrage n&apos;ont
+            plus rien de solide à mordre. C&apos;est pour ça que je vérifie toujours
+            l&apos;état du cadre avant de recommander un niveau de serrure : parfois,
+            renforcer la gâche ou consolider le chambranle apporte plus de sécurité
+            réelle qu&apos;ajouter des points de fermeture.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Mon conseil pour éviter le suréquipement
           </h2>
           <p>

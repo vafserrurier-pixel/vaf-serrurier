@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProcessSteps from "@/components/ProcessSteps";
+import QuoteBlock from "@/components/QuoteBlock";
 import ServiceGrid from "@/components/ServiceGrid";
 import ReviewsSection from "@/components/ReviewsSection";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
@@ -90,6 +91,11 @@ const homeFaqFr: FaqItem[] = [
     answer:
       "Oui. Les urgences (porte claquée, effraction) passent en priorité, mais j'interviens tout autant sur des projets réfléchis à l'avance comme un changement de serrure ou l'installation d'une porte blindée.",
   },
+  {
+    question: "Comment ouvrez-vous une porte claquée sans l'abîmer ?",
+    answer:
+      "Le plus souvent grâce à la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage dans 99% des cas. Pour une clé cassée, j'extrais le morceau avec un outil adapté ; le perçage ne reste qu'une solution de tout dernier recours.",
+  },
 ];
 
 const homeFaqEn: FaqItem[] = [
@@ -122,6 +128,11 @@ const homeFaqEn: FaqItem[] = [
     question: "Do you handle both emergencies and planned projects?",
     answer:
       "Yes. Emergencies (a slammed door, a break-in) take priority, but I handle planned projects just as much, like a lock change or fitting a security door.",
+  },
+  {
+    question: "How do you open a slammed door without damaging it?",
+    answer:
+      "Most often with the radio method, also called the shim or by-pass technique: a thin rigid strip slid between the frame and the bolt, which releases the mechanism without damage in 99% of cases. For a broken key, I extract the piece with a proper tool; drilling stays a last-resort solution.",
   },
 ];
 
@@ -295,6 +306,10 @@ export default function HomeBody() {
       <section className="mx-auto max-w-5xl px-4 py-14">
         <h2 className="text-center font-heading font-semibold text-navy mb-6">{t.howItWorks}</h2>
         <ProcessSteps locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 pb-14">
+        <QuoteBlock locale={locale} />
       </section>
 
       <section className="bg-navy py-14">

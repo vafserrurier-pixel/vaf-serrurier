@@ -193,8 +193,8 @@ export default function InstallationPorteBlindeeNicePage() {
         },
         extra: (
           <PriceReminder
-            priceLabel="Sur devis"
-            note="Devis détaillé et annoncé avant tout engagement"
+            priceLabel="1 490 € TTC"
+            note="Devis détaillé confirmé avant tout engagement, selon votre porte"
             locale="fr"
           />
         ),
@@ -218,8 +218,8 @@ export default function InstallationPorteBlindeeNicePage() {
         },
         extra: (
           <PriceReminder
-            priceLabel="Quoted on assessment"
-            note="Detailed quote given before any commitment"
+            priceLabel="€1,490 incl. VAT"
+            note="Detailed quote confirmed before any commitment, based on your door"
             locale="en"
           />
         ),

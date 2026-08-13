@@ -27,6 +27,26 @@ const brandsByLocale = {
       text: "Marque de cylindres haute sécurité développée par Picard, une alternative solide sur de nombreux modèles de porte.",
       url: "https://www.picard-serrures.com/global/fr",
     },
+    {
+      name: "Vachette",
+      text: "Marque française historique, cylindres et serrures fiables, très répandus sur les portes d'immeuble à Nice.",
+      url: "https://www.vachette.fr",
+    },
+    {
+      name: "Bricard",
+      text: "Fabricant français reconnu pour ses serrures multipoints et ses cylindres haute sécurité, notamment en copropriété.",
+      url: "https://www.bricard.fr",
+    },
+    {
+      name: "Mottura",
+      text: "Marque italienne spécialisée dans les serrures à cylindre européen, appréciée pour son bon rapport qualité-prix.",
+      url: "https://www.mottura.com",
+    },
+    {
+      name: "Kaba",
+      text: "Cylindres haute sécurité d'origine suisse, souvent utilisés en copropriété pour leur gestion fine des clés autorisées.",
+      url: "https://www.kaba.fr",
+    },
   ],
   en: [
     {
@@ -54,12 +74,32 @@ const brandsByLocale = {
       text: "A high-security cylinder brand developed by Picard, a solid alternative on many door models.",
       url: "https://www.picard-serrures.com/global/fr",
     },
+    {
+      name: "Vachette",
+      text: "A long-standing French brand, reliable cylinders and locks, very common on apartment building doors in Nice.",
+      url: "https://www.vachette.fr",
+    },
+    {
+      name: "Bricard",
+      text: "A French manufacturer known for its multipoint locks and high-security cylinders, especially in apartment buildings.",
+      url: "https://www.bricard.fr",
+    },
+    {
+      name: "Mottura",
+      text: "An Italian brand specialised in European-profile cylinder locks, valued for good value for money.",
+      url: "https://www.mottura.com",
+    },
+    {
+      name: "Kaba",
+      text: "Swiss-origin high-security cylinders, often used in apartment buildings for their fine-grained key management.",
+      url: "https://www.kaba.fr",
+    },
   ],
 };
 
 const intro = {
-  fr: "Je travaille avec les grandes marques de serrurerie du marché, quel que soit le modèle déjà installé chez vous. Je vous oriente vers la solution la plus cohérente avec votre porte, sans vous vendre une marque plutôt qu'une autre.",
-  en: "I work with the major locksmithing brands on the market, whatever model is already installed at your place. I guide you toward the solution that best fits your door, without pushing one brand over another.",
+  fr: "Je travaille avec les grandes marques de serrurerie du marché, quel que soit le modèle déjà installé chez vous. Je vous oriente vers la solution la plus cohérente avec votre porte, sans vous vendre une marque plutôt qu'une autre. Selon la gamme, la clé est fournie avec une carte de reproduction ou de propriété, qui limite la copie non autorisée.",
+  en: "I work with the major locksmithing brands on the market, whatever model is already installed at your place. I guide you toward the solution that best fits your door, without pushing one brand over another. Depending on the range, the key comes with a reproduction or ownership card, which limits unauthorised copying.",
 };
 
 export default function BrandsSection({ locale = "fr" }: { locale?: Locale }) {

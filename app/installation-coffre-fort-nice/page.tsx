@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import PriceReminder from "@/components/PriceReminder";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/installation-coffre-fort-nice/" },
@@ -93,6 +94,13 @@ export default function InstallationCoffreFortNicePage() {
         src: "/images/serrurier-nice-coffre-fort.webp",
         alt: "Coffre-fort à installer, prêt pour la fixation, à Nice",
       }}
+      extra={
+        <PriceReminder
+          priceLabel="À partir de 299 € TTC"
+          note="Prix ajusté selon le modèle et la fixation nécessaire"
+          locale="fr"
+        />
+      }
       relatedServices={[
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
