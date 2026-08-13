@@ -165,10 +165,10 @@ export default function QuartierPageTemplate({
         </h2>
         <p className="text-slate leading-relaxed">
           Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
-          taux de cambriolages à Nice est remonté à 6,1 pour 1 000 logements en 2025,
-          contre 5,4 pour 1 000 l&apos;année précédente. Ce niveau est désormais supérieur
-          à la moyenne nationale (5,6 pour 1 000), et bien au-dessus de la moyenne du
-          département des Alpes-Maritimes (4,3 pour 1 000). Cette donnée concerne
+          taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
+          contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur
+          à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
+          département des Alpes-Maritimes (0,43%). Cette donnée concerne
           l&apos;ensemble de la ville de
           Nice, qui ne compte pas d&apos;arrondissements officiels — il n&apos;existe
           pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.
