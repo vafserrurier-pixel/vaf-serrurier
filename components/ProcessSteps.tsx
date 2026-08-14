@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/locale";
 
 const stepsByLocale = {
-  fr: (place?: string) => [
+  fr: (place?: string, delayEstimate = "15 à 30 minutes") => [
     {
       title: "Appel",
       text: "Vous m'appelez, vous décrivez la situation en quelques mots, et j'identifie le problème le plus probable dès le téléphone.",
@@ -9,8 +9,8 @@ const stepsByLocale = {
     {
       title: "Délai d'arrivée",
       text: place
-        ? `Je vous annonce un prix et un délai réaliste pour ${place} (généralement 15 à 30 minutes), et je vous préviens si la situation évolue en route.`
-        : "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+        ? `Je vous annonce un prix et un délai réaliste pour ${place} (généralement ${delayEstimate}), et je vous préviens si la situation évolue en route.`
+        : `Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement ${delayEstimate} à Nice), et je vous préviens si la situation évolue en route.`,
     },
     {
       title: "Diagnostic sur place",
@@ -21,7 +21,7 @@ const stepsByLocale = {
       text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois le travail fini.",
     },
   ],
-  en: (place?: string) => [
+  en: (place?: string, delayEstimate = "15 to 30 minutes") => [
     {
       title: "Call",
       text: "You call me, describe the situation in a few words, and I identify the most likely problem right there on the phone.",
@@ -29,8 +29,8 @@ const stepsByLocale = {
     {
       title: "Time to arrival",
       text: place
-        ? `I quote a price and a realistic time frame for ${place} (usually 15 to 30 minutes), and let you know if anything changes on the way.`
-        : "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+        ? `I quote a price and a realistic time frame for ${place} (usually ${delayEstimate}), and let you know if anything changes on the way.`
+        : `I quote a price and a realistic time frame based on your area and the time of day (usually ${delayEstimate} in Nice), and let you know if anything changes on the way.`,
     },
     {
       title: "On-site diagnosis",
@@ -46,11 +46,13 @@ const stepsByLocale = {
 export default function ProcessSteps({
   locale = "fr",
   place,
+  delayEstimate,
 }: {
   locale?: Locale;
   place?: string;
+  delayEstimate?: string;
 }) {
-  const steps = stepsByLocale[locale](place);
+  const steps = stepsByLocale[locale](place, delayEstimate);
   return (
     <div>
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -18,6 +18,7 @@ import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
+import { builtCommunes, communeHref } from "@/lib/communes";
 import { useLocale } from "@/lib/locale";
 
 const introPhoto = {
@@ -499,6 +500,24 @@ export default function HomeBody() {
             {t.seeAllQuartiers}
           </Link>
         </p>
+        {builtCommunes.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-center font-heading font-semibold text-navy text-sm mb-3">
+              {locale === "en" ? "Towns near Nice" : "Villes voisines de Nice"}
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {builtCommunes.map((commune) => (
+                <Link
+                  key={commune}
+                  href={communeHref(commune)}
+                  className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
+                >
+                  {commune}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="mt-8">
           <LazyMap locale={locale} />
         </div>

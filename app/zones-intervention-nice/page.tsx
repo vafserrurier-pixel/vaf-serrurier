@@ -6,6 +6,7 @@ import CtaBlock from "@/components/CtaBlock";
 import ServiceGrid from "@/components/ServiceGrid";
 import { business, zones } from "@/lib/business";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
+import { communes, communeHref, isCommuneBuilt } from "@/lib/communes";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/zones-intervention-nice/" },
@@ -102,6 +103,30 @@ export default function ZonesInterventionNicePage() {
         ))}
       </div>
 
+      <div className="mt-14">
+        <h2 className="font-heading text-lg font-bold text-navy mb-2">
+          Villes voisines de Nice
+        </h2>
+        <p className="text-sm text-slate mb-4 max-w-2xl">
+          Je me déplace aussi dans certaines communes limitrophes de Nice. Les villes
+          déjà pourvues d&apos;une page dédiée apparaissent en lien ci-dessous ; les
+          autres restent couvertes dès aujourd&apos;hui même sans page individuelle.
+        </p>
+        <ul className="text-sm text-slate flex flex-wrap gap-x-1 gap-y-1">
+          {communes.map((commune, index) => (
+            <li key={commune}>
+              {isCommuneBuilt(commune) ? (
+                <Link href={communeHref(commune)} className="text-steel hover:underline">
+                  {commune}
+                </Link>
+              ) : (
+                commune
+              )}
+              {index < communes.length - 1 ? "," : ""}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
 
     <section className="bg-navy py-14">

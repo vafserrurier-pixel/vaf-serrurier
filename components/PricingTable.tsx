@@ -208,9 +208,24 @@ const strings = {
   },
 };
 
-export default function PricingTable({ locale = "fr" }: { locale?: Locale }) {
+const travelNotes = ["Déplacement inclus sur Nice", "Travel included within Nice"];
+
+export default function PricingTable({
+  locale = "fr",
+  hideTravelNote = false,
+}: {
+  locale?: Locale;
+  /** À activer sur les pages hors Nice tant que la politique de supplément
+   * distance n'est pas confirmée — évite d'affirmer un tarif non vérifié. */
+  hideTravelNote?: boolean;
+}) {
   const [showAll, setShowAll] = useState(false);
-  const cards = cardsByLocale[locale];
+  const cards = hideTravelNote
+    ? cardsByLocale[locale].map((card) => ({
+        ...card,
+        features: card.features.filter((f) => !travelNotes.includes(f)),
+      }))
+    : cardsByLocale[locale];
   const t = strings[locale];
   return (
     <div>

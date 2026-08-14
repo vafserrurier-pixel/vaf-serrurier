@@ -28,11 +28,19 @@ const strings = {
   },
 };
 
-export default function StatBar({ locale = "fr" }: { locale?: Locale }) {
+export default function StatBar({
+  locale = "fr",
+  delay = "15-30 min",
+  delayUnit,
+}: {
+  locale?: Locale;
+  delay?: string;
+  delayUnit?: string;
+}) {
   const t = strings[locale];
   const stats = [
     { value: "24h/24", label: t.availability, unit: t.availabilityUnit },
-    { value: "15-30 min", label: t.delay, unit: t.delayUnit },
+    { value: delay, label: t.delay, unit: delayUnit ?? t.delayUnit },
     { value: "149€", label: t.price, unit: t.priceUnit },
     {
       value: `${business.reviews.rating.toFixed(1)}/5`,

@@ -3,6 +3,7 @@ import { join } from "path";
 import type { MetadataRoute } from "next";
 import { business } from "@/lib/business";
 import { builtQuartiers, quartierHref } from "@/lib/quartiers";
+import { builtCommunes, communeHref } from "@/lib/communes";
 
 const paths = [
   "",
@@ -50,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...quartierEntries];
+  const communeEntries: MetadataRoute.Sitemap = builtCommunes.map((commune) => ({
+    url: `${business.domain}${communeHref(commune)}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...quartierEntries, ...communeEntries];
 }

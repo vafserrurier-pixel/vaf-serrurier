@@ -10,6 +10,7 @@ import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { featuredQuartiers, quartierHref } from "@/lib/quartiers";
+import { builtCommunes, communeHref } from "@/lib/communes";
 import type { ReactNode } from "react";
 import type { Locale } from "@/lib/locale";
 
@@ -32,6 +33,7 @@ const strings = {
     otherServices: "Autres interventions",
     nearYou: "Ce service près de chez vous",
     seeAllQuartiers: "Voir les 46 quartiers couverts",
+    nearbyTowns: "Villes voisines de Nice",
   },
   en: {
     home: "Home",
@@ -48,6 +50,7 @@ const strings = {
     otherServices: "Other services",
     nearYou: "This service near you",
     seeAllQuartiers: "See all 46 neighborhoods covered (in French)",
+    nearbyTowns: "Towns near Nice",
   },
 };
 
@@ -237,6 +240,23 @@ export default function ServicePageTemplate({
           </svg>
         </Link>
       </section>
+
+      {builtCommunes.length > 0 && (
+        <section className="mx-auto max-w-4xl px-4 py-10">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.nearbyTowns}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {builtCommunes.map((commune) => (
+              <Link
+                key={commune}
+                href={communeHref(commune)}
+                className="bg-white border border-navy/10 rounded-lg px-4 py-3 text-sm text-navy hover:border-steel hover:shadow-sm transition-all"
+              >
+                {commune}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
         <CtaBlock locale={locale} />
