@@ -83,6 +83,8 @@ export default function SerrurierParcImperialNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Parc Impérial"
+      crimeIntro="Le secteur du Parc Impérial, résidentiel et de standing, reste concerné par cette tendance générale à Nice."
+      crimeClosing="Sur les résidences de ce type, un système de fermeture complet (interphone, gâche, cylindre) mérite une vérification régulière."
       sector="centre"
       intro={intro}
       blocks={blocks}

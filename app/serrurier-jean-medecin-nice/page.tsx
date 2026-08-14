@@ -88,6 +88,8 @@ export default function SerrurierJeanMedecinNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Jean-Médecin"
+      crimeIntro="Sur l'avenue Jean-Médecin et ses immeubles mixtes commerces-logements, la vigilance sur les accès reste importante malgré le passage constant."
+      crimeClosing="Les rez-de-chaussée commerciaux comme les étages résidentiels gagnent à avoir une serrure à jour, pas seulement les logements isolés."
       sector="centre"
       intro={intro}
       blocks={blocks}

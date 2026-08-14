@@ -83,6 +83,8 @@ export default function SerrurierArianeNicePage() {
   return (
     <QuartierPageTemplate
       quartier="l'Ariane"
+      crimeIntro="L'Ariane, grand ensemble de logements dans la vallée est, reste concerné par cette réalité comme le reste de la ville."
+      crimeClosing="Sur ce type d'habitat collectif dense, sécuriser les portes de hall reste un enjeu partagé par l'ensemble des résidents."
       sector="est"
       intro={intro}
       blocks={blocks}

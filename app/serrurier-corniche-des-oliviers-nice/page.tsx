@@ -77,6 +77,8 @@ export default function SerrurierCornicheDesOliviersNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Corniche des Oliviers"
+      crimeIntro="La Corniche des Oliviers, route résidentielle des hauteurs nord, reste concernée par cette tendance malgré son cadre préservé."
+      crimeClosing="Sur les villas de ce secteur en pente, portails et portes de garage sont particulièrement exposés et méritent une attention régulière."
       sector="nord"
       intro={intro}
       blocks={blocks}

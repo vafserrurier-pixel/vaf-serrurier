@@ -83,6 +83,8 @@ export default function SerrurierQuartierDesFleursNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Quartier des Fleurs"
+      crimeIntro="Le quartier des Fleurs, proche de la gare et à forte rotation locative, n'est pas épargné par cette tendance."
+      crimeClosing="Changer la serrure entre deux locataires reste le geste le plus simple pour limiter ce risque dans ce type de logement."
       sector="centre"
       intro={intro}
       blocks={blocks}

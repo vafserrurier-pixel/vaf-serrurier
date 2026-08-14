@@ -83,6 +83,8 @@ export default function SerrurierCalifornieNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Californie"
+      crimeIntro="Le quartier Californie, avec ses villas du début du XXe siècle, reste concerné par cette réalité malgré son cadre résidentiel."
+      crimeClosing="Sur ce bâti ancien, l'adaptation d'un cylindre compatible reste préférable à un remplacement qui dénaturerait la porte d'origine."
       sector="ouest"
       intro={intro}
       blocks={blocks}

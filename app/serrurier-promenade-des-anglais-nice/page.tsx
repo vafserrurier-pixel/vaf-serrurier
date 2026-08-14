@@ -77,6 +77,8 @@ export default function SerrurierPromenadeDesAnglaisNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Promenade des Anglais"
+      crimeIntro="Sur la Promenade des Anglais, entre résidences de prestige et immeubles de front de mer, la vigilance reste de mise malgré l'affluence touristique."
+      crimeClosing="L'air marin use aussi les mécanismes plus vite ici, un facteur supplémentaire à surveiller en plus du risque d'effraction."
       sector="centre"
       intro={intro}
       blocks={blocks}

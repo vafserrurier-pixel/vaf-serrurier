@@ -83,6 +83,8 @@ export default function SerrurierCarabacelNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Carabacel"
+      crimeIntro="Carabacel, avec ses immeubles du XIXe siècle et ses villas, reste concerné par cette tendance comme le reste du centre."
+      crimeClosing="Sur le bâti ancien du boulevard, l'adaptation d'un cylindre récent reste souvent suffisante pour combler l'écart de sécurité."
       sector="centre"
       intro={intro}
       blocks={blocks}

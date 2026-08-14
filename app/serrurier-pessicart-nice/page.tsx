@@ -83,6 +83,8 @@ export default function SerrurierPessicartNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Pessicart"
+      crimeIntro="Pessicart, sur les hauteurs nord recherchées pour leur vue, n'est pas à l'abri de cette évolution malgré son cadre résidentiel."
+      crimeClosing="Sur les résidences de standing de ce secteur, un système de fermeture complet mérite une vérification régulière."
       sector="nord"
       intro={intro}
       blocks={blocks}

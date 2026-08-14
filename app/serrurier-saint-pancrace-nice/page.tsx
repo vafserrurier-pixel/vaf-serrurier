@@ -83,6 +83,8 @@ export default function SerrurierSaintPancraceNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Pancrace"
+      crimeIntro="Saint-Pancrace, secteur résidentiel au nord de Nice, suit la même évolution que le reste de la ville."
+      crimeClosing="Sur ce mélange de résidences collectives et d'habitat pavillonnaire, chaque type de porte demande un diagnostic adapté."
       sector="nord"
       intro={intro}
       blocks={blocks}

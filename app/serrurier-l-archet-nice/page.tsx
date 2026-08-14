@@ -77,6 +77,8 @@ export default function SerrurierArchetNicePage() {
   return (
     <QuartierPageTemplate
       quartier="L'Archet"
+      crimeIntro="Le secteur de l'Archet, développé autour de l'hôpital du même nom, reste concerné par cette tendance comme le reste de la ville."
+      crimeClosing="Pour les résidents aux horaires décalés de ce secteur, une serrure fiable à toute heure compte particulièrement."
       sector="ouest"
       intro={intro}
       blocks={blocks}

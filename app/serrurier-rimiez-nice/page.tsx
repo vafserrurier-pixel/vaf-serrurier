@@ -83,6 +83,8 @@ export default function SerrurierRimiezNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Rimiez"
+      crimeIntro="Rimiez, sur les hauteurs proches de Cimiez, reste concerné par cette réalité malgré son cadre résidentiel arboré."
+      crimeClosing="Sur le bâti parfois ancien de ce secteur, l'adaptation d'un cylindre compatible reste souvent la meilleure option."
       sector="nord"
       intro={intro}
       blocks={blocks}

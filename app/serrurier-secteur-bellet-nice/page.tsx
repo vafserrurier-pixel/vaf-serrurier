@@ -83,6 +83,8 @@ export default function SerrurierSecteurBelletNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Secteur Bellet"
+      crimeIntro="Le secteur Bellet, sur les collines viticoles, n'est pas à l'abri de cette évolution malgré son caractère rural et isolé."
+      crimeClosing="Les propriétés et domaines de ce secteur, parfois isolés, gagnent à sécuriser portails et dépendances autant que l'habitation principale."
       sector="ouest"
       intro={intro}
       blocks={blocks}

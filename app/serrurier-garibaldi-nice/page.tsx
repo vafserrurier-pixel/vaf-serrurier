@@ -88,6 +88,8 @@ export default function SerrurierGaribaldiNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Garibaldi"
+      crimeIntro="Autour de la place Garibaldi, le bâti ancien et parfois classé n'est pas à l'abri de cette évolution."
+      crimeClosing="Une porte d'époque bien équipée reste tout aussi efficace qu'une porte récente, à condition d'un cylindre fiable."
       sector="centre"
       intro={intro}
       blocks={blocks}

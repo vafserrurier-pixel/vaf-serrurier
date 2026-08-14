@@ -83,6 +83,8 @@ export default function SerrurierRiquierNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Riquier"
+      crimeIntro="Riquier, porte d'entrée historique et populaire à l'est de Nice, suit la même évolution que le reste de la ville."
+      crimeClosing="Sur ce bâti mixte, ancien et récent, un diagnostic adapté à chaque type de porte reste la meilleure approche."
       sector="est"
       intro={intro}
       blocks={blocks}

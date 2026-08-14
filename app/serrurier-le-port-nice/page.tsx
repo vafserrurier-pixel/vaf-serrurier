@@ -83,6 +83,8 @@ export default function SerrurierLePortNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Le Port"
+      crimeIntro="Le quartier du Port, entre bâti ancien et proximité immédiate de la mer, reste concerné par cette réalité."
+      crimeClosing="L'air marin y accélère aussi la corrosion des cylindres anciens, un point à surveiller en plus du risque d'effraction."
       sector="est"
       intro={intro}
       blocks={blocks}

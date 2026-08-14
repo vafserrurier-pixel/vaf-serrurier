@@ -83,6 +83,8 @@ export default function SerrurierBaumettesNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Baumettes"
+      crimeIntro="Les Baumettes, secteur résidentiel plus calme à l'ouest du centre, restent concernées par cette évolution à l'échelle de la ville."
+      crimeClosing="Sur les villas comme sur les petits immeubles du secteur, un diagnostic préventif reste le meilleur réflexe."
       sector="centre"
       intro={intro}
       blocks={blocks}

@@ -83,6 +83,8 @@ export default function SerrurierPoetesNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Poètes"
+      crimeIntro="Le quartier des Poètes, résidentiel et calme, suit la même évolution que le reste du nord de la ville."
+      crimeClosing="Sur les immeubles de taille moyenne de ce secteur, l'entretien régulier des cylindres reste la meilleure prévention."
       sector="nord"
       intro={intro}
       blocks={blocks}

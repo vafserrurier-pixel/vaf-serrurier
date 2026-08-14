@@ -83,6 +83,8 @@ export default function SerrurierSaintAntoineNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Antoine"
+      crimeIntro="Saint-Antoine, secteur résidentiel à l'ouest proche du Var, suit la même évolution que le reste de la ville."
+      crimeClosing="Sur ce mélange d'immeubles collectifs et d'habitat individuel, chaque configuration demande un diagnostic adapté."
       sector="ouest"
       intro={intro}
       blocks={blocks}

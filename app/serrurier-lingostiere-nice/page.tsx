@@ -83,6 +83,8 @@ export default function SerrurierLingostiereNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Lingostière"
+      crimeIntro="Lingostière, à l'extrémité ouest de Nice, reste concernée par cette réalité malgré son caractère plus excentré."
+      crimeClosing="Dans ce secteur plus isolé, un diagnostic préventif évite souvent un dépannage en urgence, plus long à organiser."
       sector="ouest"
       intro={intro}
       blocks={blocks}

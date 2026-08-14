@@ -83,6 +83,8 @@ export default function SerrurierPasteurNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Pasteur"
+      crimeIntro="Le quartier Pasteur, proche du CHU, reste concerné par cette tendance comme le reste de l'est niçois."
+      crimeClosing="Pour les résidents aux horaires décalés de ce secteur, une serrure fiable jour et nuit compte double."
       sector="est"
       intro={intro}
       blocks={blocks}

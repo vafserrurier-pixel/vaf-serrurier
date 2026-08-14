@@ -83,6 +83,8 @@ export default function SerrurierVieuxNiceNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Vieux-Nice"
+      crimeIntro="Le Vieux-Nice, avec ses ruelles étroites et son bâti ancien, reste concerné par cette tendance malgré l'animation permanente du quartier."
+      crimeClosing="Sur les immeubles historiques comme sur les commerces du rez-de-chaussée, une serrure à jour reste la meilleure protection."
       sector="centre"
       intro={intro}
       blocks={blocks}

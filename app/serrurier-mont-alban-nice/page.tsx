@@ -83,6 +83,8 @@ export default function SerrurierMontAlbanNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Mont Alban"
+      crimeIntro="Le Mont Alban, voisin du Mont Boron, suit la même tendance malgré son caractère résidentiel préservé."
+      crimeClosing="Les propriétés arborées de ce secteur gagnent à sécuriser aussi bien les accès visibles depuis la route que les entrées secondaires."
       sector="est"
       intro={intro}
       blocks={blocks}

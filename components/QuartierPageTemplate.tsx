@@ -27,6 +27,8 @@ export default function QuartierPageTemplate({
   faq,
   path,
   relatedServices,
+  crimeIntro,
+  crimeClosing,
 }: {
   quartier: string;
   sector: keyof typeof sectorPages;
@@ -36,6 +38,8 @@ export default function QuartierPageTemplate({
   faq: FaqItem[];
   path: string;
   relatedServices: { href: string; label: string }[];
+  crimeIntro?: string;
+  crimeClosing?: string;
 }) {
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
@@ -164,16 +168,16 @@ export default function QuartierPageTemplate({
           Les cambriolages à Nice, une réalité à prendre au sérieux
         </h2>
         <p className="text-slate leading-relaxed">
-          Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
+          {crimeIntro ?? `À ${quartier} comme ailleurs à Nice, la sécurité de la porte d'entrée reste un sujet à prendre au sérieux.`}
+          {" "}Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
           taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
           contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur
           à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
           département des Alpes-Maritimes (0,43%). Cette donnée concerne
           l&apos;ensemble de la ville de
           Nice, qui ne compte pas d&apos;arrondissements officiels — il n&apos;existe
-          pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.
-          Une porte correctement équipée reste le moyen le plus direct de limiter ce
-          risque, où que vous soyez dans la ville.
+          pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
+          {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
         </p>
       </section>
 

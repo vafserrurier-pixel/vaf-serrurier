@@ -88,6 +88,8 @@ export default function SerrurierSaintPhilippeNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Philippe"
+      crimeIntro="Saint-Philippe, secteur résidentiel calme proche de Cimiez, suit la même évolution que le reste de la ville."
+      crimeClosing="Un entretien préventif de la serrure reste le moyen le plus simple d'éviter une mauvaise surprise dans ce type de quartier."
       sector="centre"
       intro={intro}
       blocks={blocks}

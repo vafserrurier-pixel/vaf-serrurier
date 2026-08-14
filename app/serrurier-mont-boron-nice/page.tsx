@@ -83,6 +83,8 @@ export default function SerrurierMontBoronNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Mont Boron"
+      crimeIntro="Le Mont Boron, secteur résidentiel huppé aux villas isolées, n'est pas à l'abri de cette évolution malgré son cadre préservé."
+      crimeClosing="Sur ce type de propriété individuelle, portails et grilles d'enceinte méritent la même attention que la porte d'entrée."
       sector="est"
       intro={intro}
       blocks={blocks}

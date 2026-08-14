@@ -83,6 +83,8 @@ export default function SerrurierMagnanNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Magnan"
+      crimeIntro="Magnan, quartier résidentiel en bord de mer, reste concerné par cette réalité comme le reste de la façade littorale."
+      crimeClosing="Sur les immeubles de ce secteur, l'entretien des cylindres exposés à l'air marin va souvent de pair avec la sécurisation des accès."
       sector="centre"
       intro={intro}
       blocks={blocks}

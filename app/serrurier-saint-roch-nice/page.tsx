@@ -78,6 +78,8 @@ export default function SerrurierSaintRochNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Roch"
+      crimeIntro="Saint-Roch, quartier dense de l'est-centre, suit la même évolution que le reste de la ville."
+      crimeClosing="Sur les immeubles collectifs de ce secteur, la vigilance porte autant sur les accès communs que sur les logements eux-mêmes."
       sector="est"
       intro={intro}
       blocks={blocks}

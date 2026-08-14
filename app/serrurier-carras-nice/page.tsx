@@ -83,6 +83,8 @@ export default function SerrurierCarrasNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Carras"
+      crimeIntro="Carras, entre zones commerciales et quartiers résidentiels, n'est pas à l'abri de cette évolution."
+      crimeClosing="Les locaux professionnels de ce secteur gagnent à sécuriser leurs accès en dehors des heures d'ouverture, tout comme les logements."
       sector="ouest"
       intro={intro}
       blocks={blocks}

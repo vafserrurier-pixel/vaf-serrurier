@@ -83,6 +83,8 @@ export default function SerrurierSaintIsidoreNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Isidore"
+      crimeIntro="Saint-Isidore, secteur en développement proche du stade, suit la même tendance que le reste de la ville."
+      crimeClosing="Sur les résidences récentes de ce secteur, l'usure normale des mécanismes reste le point de vigilance principal."
       sector="ouest"
       intro={intro}
       blocks={blocks}

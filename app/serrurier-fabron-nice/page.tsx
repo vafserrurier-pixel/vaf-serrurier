@@ -83,6 +83,8 @@ export default function SerrurierFabronNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Fabron"
+      crimeIntro="Fabron, colline résidentielle à l'ouest de Nice, reste concernée par cette tendance malgré la diversité de son bâti."
+      crimeClosing="Entre villas et immeubles plus récents, ce secteur bénéficie d'un diagnostic au cas par cas plutôt que d'une solution unique."
       sector="ouest"
       intro={intro}
       blocks={blocks}

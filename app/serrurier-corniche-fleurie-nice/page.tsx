@@ -83,6 +83,8 @@ export default function SerrurierCornicheFleurieNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Corniche Fleurie"
+      crimeIntro="La Corniche Fleurie, route résidentielle des hauteurs ouest, reste concernée par cette tendance malgré son cadre préservé."
+      crimeClosing="Sur les villas avec jardin de ce secteur, portails et portillons méritent autant d'attention que la porte d'entrée."
       sector="ouest"
       intro={intro}
       blocks={blocks}

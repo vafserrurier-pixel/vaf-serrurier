@@ -88,6 +88,8 @@ export default function SerrurierSaintPierreDeFericNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Saint-Pierre-de-Féric"
+      crimeIntro="Saint-Pierre-de-Féric, hameau perché dans les collines, n'est pas à l'abri de cette évolution malgré son caractère plus isolé."
+      crimeClosing="Les propriétés isolées de ce secteur gagnent particulièrement à sécuriser portails et accès secondaires, pas seulement la porte principale."
       sector="centre"
       intro={intro}
       blocks={blocks}

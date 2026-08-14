@@ -83,6 +83,8 @@ export default function SerrurierGambettaNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Gambetta"
+      crimeIntro="Le quartier Gambetta, dense et résidentiel, suit la même tendance que le reste du centre-ville."
+      crimeClosing="Sur les immeubles collectifs de ce type, la vigilance porte autant sur les portes de hall que sur celles des appartements."
       sector="centre"
       intro={intro}
       blocks={blocks}

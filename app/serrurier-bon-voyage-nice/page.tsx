@@ -83,6 +83,8 @@ export default function SerrurierBonVoyageNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Bon Voyage"
+      crimeIntro="Bon Voyage, secteur résidentiel proche du port, suit la même évolution que le reste de l'est niçois."
+      crimeClosing="Sur les résidences collectives de ce secteur, la sécurisation des halls d'entrée reste un point de vigilance partagé."
       sector="est"
       intro={intro}
       blocks={blocks}

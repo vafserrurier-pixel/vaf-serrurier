@@ -88,6 +88,8 @@ export default function SerrurierQuartierWilsonNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Quartier Wilson"
+      crimeIntro="Le quartier Wilson, dense et résidentiel, suit la même tendance que le reste du centre-ville de Nice."
+      crimeClosing="Sur les immeubles collectifs comme celui-ci, la sécurisation des portes de hall compte autant que celle des appartements."
       sector="centre"
       intro={intro}
       blocks={blocks}

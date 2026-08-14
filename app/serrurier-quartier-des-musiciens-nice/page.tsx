@@ -88,6 +88,8 @@ export default function SerrurierQuartierDesMusiciensNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Quartier des Musiciens"
+      crimeIntro="Le quartier des Musiciens, proche de la gare, compte de nombreux immeubles anciens dont les serrures d'origine méritent une attention particulière."
+      crimeClosing="Un cylindre récent adapté à une porte ancienne suffit souvent à combler l'écart de sécurité, sans tout remplacer."
       sector="centre"
       intro={intro}
       blocks={blocks}

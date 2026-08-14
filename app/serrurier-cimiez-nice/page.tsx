@@ -88,6 +88,8 @@ export default function SerrurierCimiezNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Cimiez"
+      crimeIntro="Cimiez, avec ses grands immeubles Belle Époque et ses villas, reste concerné par cette réalité malgré son cadre résidentiel recherché."
+      crimeClosing="Sur ce type de patrimoine, une porte ancienne bien entretenue protège aussi bien qu'un modèle récent, à condition d'un cylindre à jour."
       sector="centre"
       intro={intro}
       blocks={blocks}

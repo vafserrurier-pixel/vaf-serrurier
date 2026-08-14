@@ -83,6 +83,8 @@ export default function SerrurierChambrunNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Chambrun"
+      crimeIntro="Chambrun, quartier résidentiel au nord de Nice, reste concerné par cette tendance comme le reste de la ville."
+      crimeClosing="Sur les immeubles collectifs de ce secteur, la vigilance porte autant sur les portes palières que sur les accès communs."
       sector="nord"
       intro={intro}
       blocks={blocks}

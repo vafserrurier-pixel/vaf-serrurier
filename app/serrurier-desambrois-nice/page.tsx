@@ -88,6 +88,8 @@ export default function SerrurierDesambroisNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Desambrois"
+      crimeIntro="Le secteur Desambrois, entre villas et petites résidences sur les hauteurs, suit la même évolution que le reste de la ville."
+      crimeClosing="Les propriétés en pente de ce secteur gagnent à sécuriser aussi bien les accès secondaires que la porte principale."
       sector="centre"
       intro={intro}
       blocks={blocks}

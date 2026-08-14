@@ -88,6 +88,8 @@ export default function SerrurierBrancolarNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Brancolar"
+      crimeIntro="Brancolar, sur les collines au nord de Nice, reste concerné par cette tendance malgré son cadre plus résidentiel."
+      crimeClosing="Sur les villas comme sur les petites résidences du secteur, un diagnostic préventif reste le meilleur réflexe."
       sector="nord"
       intro={intro}
       blocks={blocks}

@@ -83,6 +83,8 @@ export default function SerrurierLesMoulinsNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Les Moulins"
+      crimeIntro="Les Moulins, grand ensemble résidentiel à l'ouest de Nice, suit la même évolution que le reste de la ville."
+      crimeClosing="Sur ce type d'habitat collectif dense, la sécurisation des accès communs reste un enjeu partagé par l'ensemble des résidents."
       sector="ouest"
       intro={intro}
       blocks={blocks}

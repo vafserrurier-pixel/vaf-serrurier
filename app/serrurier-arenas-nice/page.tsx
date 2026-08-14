@@ -83,6 +83,8 @@ export default function SerrurierArenasNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Arénas"
+      crimeIntro="L'Arénas, zone d'activité et de bureaux proche de l'aéroport, n'est pas à l'abri de cette évolution."
+      crimeClosing="Les locaux professionnels de ce secteur ont tout intérêt à vérifier leurs systèmes de contrôle d'accès aussi régulièrement que les logements voisins."
       sector="ouest"
       intro={intro}
       blocks={blocks}

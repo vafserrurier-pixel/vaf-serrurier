@@ -88,6 +88,8 @@ export default function SerrurierLiberationNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Libération"
+      crimeIntro="Autour du marché de la Libération, entre commerces et logements, la sécurité des accès mérite la même attention qu'ailleurs à Nice."
+      crimeClosing="Les portes d'immeuble au-dessus des commerces, souvent plus anciennes, sont un bon point de départ pour un diagnostic."
       sector="centre"
       intro={intro}
       blocks={blocks}

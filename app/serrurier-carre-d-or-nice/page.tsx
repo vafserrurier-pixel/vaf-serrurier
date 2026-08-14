@@ -88,6 +88,8 @@ export default function SerrurierCarreDorNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Carré d'Or"
+      crimeIntro="Le Carré d'Or, secteur résidentiel prisé entre Masséna et la Promenade, n'échappe pas à cette réalité malgré son standing."
+      crimeClosing="Sur ce type de bien, une serrure haute sécurité reste un investissement cohérent avec la valeur du logement."
       sector="centre"
       intro={intro}
       blocks={blocks}

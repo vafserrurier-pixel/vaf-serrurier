@@ -83,6 +83,8 @@ export default function SerrurierGairautNicePage() {
   return (
     <QuartierPageTemplate
       quartier="Gairaut"
+      crimeIntro="Gairaut, sur les hauteurs nord connues pour sa cascade, n'est pas à l'abri de cette évolution malgré son cadre verdoyant."
+      crimeClosing="Sur les villas de ce secteur en pente, portails et portes de garage méritent la même attention que la porte d'entrée."
       sector="nord"
       intro={intro}
       blocks={blocks}

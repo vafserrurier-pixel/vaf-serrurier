@@ -88,6 +88,8 @@ export default function SerrurierLaMadeleineNicePage() {
   return (
     <QuartierPageTemplate
       quartier="La Madeleine"
+      crimeIntro="La Madeleine, à l'extrême ouest de Nice, suit la même tendance que le reste de la ville malgré son caractère plus excentré."
+      crimeClosing="Sur les grands ensembles de ce secteur, sécuriser les portes de hall reste aussi important que celle de chaque logement."
       sector="centre"
       intro={intro}
       blocks={blocks}
