@@ -89,9 +89,24 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         alt: "Cylindre de serrure percé après une tentative d'effraction à Nice",
       }}
       extra={
-        <section className="mx-auto max-w-4xl px-4 py-10">
-          <InsuranceBanner />
-        </section>
+        <>
+          <section className="mx-auto max-w-4xl px-4 -mt-6">
+            <p className="text-xs text-slate/70">
+              Source :{" "}
+              <a
+                href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-steel"
+              >
+                Ministère de l&apos;Intérieur — statistiques officielles des cambriolages
+              </a>
+            </p>
+          </section>
+          <section className="mx-auto max-w-4xl px-4 py-10">
+            <InsuranceBanner />
+          </section>
+        </>
       }
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },

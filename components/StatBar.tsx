@@ -5,6 +5,8 @@ const strings = {
   fr: {
     availability: "Disponible",
     availabilityUnit: "7j/7",
+    delay: "Délai moyen",
+    delayUnit: "à Nice",
     price: "Tarif de base",
     priceUnit: "TTC",
     rating: "Note Google",
@@ -15,6 +17,8 @@ const strings = {
   en: {
     availability: "Available",
     availabilityUnit: "7 days a week",
+    delay: "Average delay",
+    delayUnit: "in Nice",
     price: "Base rate",
     priceUnit: "incl. VAT",
     rating: "Google rating",
@@ -28,6 +32,7 @@ export default function StatBar({ locale = "fr" }: { locale?: Locale }) {
   const t = strings[locale];
   const stats = [
     { value: "24h/24", label: t.availability, unit: t.availabilityUnit },
+    { value: "15-30 min", label: t.delay, unit: t.delayUnit },
     { value: "149€", label: t.price, unit: t.priceUnit },
     {
       value: `${business.reviews.rating.toFixed(1)}/5`,
@@ -38,7 +43,7 @@ export default function StatBar({ locale = "fr" }: { locale?: Locale }) {
   ];
   return (
     <div className="bg-navy">
-      <div className="mx-auto max-w-5xl px-4 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+      <div className="mx-auto max-w-5xl px-4 py-8 grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
         {stats.map((stat) => (
           <div key={stat.label}>
             <p className="font-heading text-3xl sm:text-4xl font-bold text-cream font-tabular-nums">

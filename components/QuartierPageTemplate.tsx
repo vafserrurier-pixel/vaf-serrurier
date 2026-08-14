@@ -180,6 +180,17 @@ export default function QuartierPageTemplate({
           pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
           {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
         </p>
+        <p className="text-xs text-slate/70 mt-2">
+          Source :{" "}
+          <a
+            href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-steel"
+          >
+            Ministère de l&apos;Intérieur — statistiques officielles des cambriolages
+          </a>
+        </p>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

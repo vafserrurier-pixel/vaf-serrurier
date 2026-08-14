@@ -9,8 +9,8 @@ const stepsByLocale = {
     {
       title: "Délai d'arrivée",
       text: place
-        ? `Je vous annonce un prix et un délai réaliste pour ${place}, et je vous préviens si la situation évolue en route.`
-        : "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure, et je vous préviens si la situation évolue en route.",
+        ? `Je vous annonce un prix et un délai réaliste pour ${place} (généralement 15 à 30 minutes), et je vous préviens si la situation évolue en route.`
+        : "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
     },
     {
       title: "Diagnostic sur place",
@@ -29,8 +29,8 @@ const stepsByLocale = {
     {
       title: "Time to arrival",
       text: place
-        ? `I quote a price and a realistic time frame for ${place}, and let you know if anything changes on the way.`
-        : "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
+        ? `I quote a price and a realistic time frame for ${place} (usually 15 to 30 minutes), and let you know if anything changes on the way.`
+        : "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
     },
     {
       title: "On-site diagnosis",
