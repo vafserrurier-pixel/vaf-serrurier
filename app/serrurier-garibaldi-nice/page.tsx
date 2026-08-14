@@ -101,6 +101,7 @@ export default function SerrurierGaribaldiNicePage() {
         { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
+        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />
