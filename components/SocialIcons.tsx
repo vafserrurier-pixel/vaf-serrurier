@@ -24,6 +24,14 @@ export function YouTubeIcon({ className }: IconProps) {
   );
 }
 
+export function XIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7l4.9 6L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z" />
+    </svg>
+  );
+}
+
 export function TikTokIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">

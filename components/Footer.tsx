@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { sectorPages } from "@/lib/quartiers";
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from "./SocialIcons";
 import { useLocale } from "@/lib/locale";
 
 const strings = {
@@ -138,6 +138,9 @@ export default function Footer() {
             </a>
             <a href={business.social.tiktok} aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="p-1.5">
               <TikTokIcon className="w-5 h-5 hover:text-steel" />
+            </a>
+            <a href={business.social.twitter} aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer" className="p-1.5">
+              <XIcon className="w-5 h-5 hover:text-steel" />
             </a>
           </div>
         </div>

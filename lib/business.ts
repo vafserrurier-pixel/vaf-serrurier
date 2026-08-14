@@ -63,6 +63,7 @@ export const business = {
     instagram: "https://www.instagram.com/serrurier_nice_vaf/",
     tiktok: "https://www.tiktok.com/@vaf.serrurier.nice",
     facebook: "https://www.facebook.com/vafserruriernice/",
+    twitter: "https://twitter.com/vaf_serrurerie",
   },
   hostingProvider: "O2switch",
 } as const;

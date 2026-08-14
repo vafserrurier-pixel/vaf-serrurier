@@ -55,6 +55,7 @@ export function localBusinessSchema() {
       business.social.instagram,
       business.social.youtube,
       business.social.tiktok,
+      business.social.twitter,
     ],
   };
 }
