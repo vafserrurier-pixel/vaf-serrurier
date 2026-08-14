@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/blog/que-faire-apres-un-cambriolage/" },
@@ -16,6 +16,16 @@ export const metadata: Metadata = {
 export default function QueFaireApresUnCambriolagePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Que faire après un cambriolage : les bons réflexes",
+          description:
+            "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
+          url: `${business.domain}/blog/que-faire-apres-un-cambriolage/`,
+          datePublished: "2026-08-09",
+          dateModified: "2026-08-13",
+        })}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },

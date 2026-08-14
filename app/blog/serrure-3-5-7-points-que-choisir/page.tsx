@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/blog/serrure-3-5-7-points-que-choisir/" },
@@ -16,6 +16,16 @@ export const metadata: Metadata = {
 export default function SerrureMultipointsPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
+          description:
+            "Différence réelle entre une serrure 3, 5 et 7 points, et comment choisir le bon niveau selon votre porte. Explications claires, sans survendre.",
+          url: `${business.domain}/blog/serrure-3-5-7-points-que-choisir/`,
+          datePublished: "2026-08-09",
+          dateModified: "2026-08-13",
+        })}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },

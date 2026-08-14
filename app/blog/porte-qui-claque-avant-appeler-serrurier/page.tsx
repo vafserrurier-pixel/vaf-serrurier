@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: {
@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 export default function PorteQuiClaquePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
+          description:
+            "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
+          url: `${business.domain}/blog/porte-qui-claque-avant-appeler-serrurier/`,
+          datePublished: "2026-08-09",
+          dateModified: "2026-08-13",
+        })}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },

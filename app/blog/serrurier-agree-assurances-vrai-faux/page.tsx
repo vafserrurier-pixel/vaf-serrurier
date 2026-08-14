@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: {
@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 export default function AgreeAssurancesPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "« Agréé toutes assurances » : ce que cette formule ne veut pas dire",
+          description:
+            "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
+          url: `${business.domain}/blog/serrurier-agree-assurances-vrai-faux/`,
+          datePublished: "2026-08-09",
+          dateModified: "2026-08-13",
+        })}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },

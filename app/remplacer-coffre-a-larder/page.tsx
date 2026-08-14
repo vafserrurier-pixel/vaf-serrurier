@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
+import JsonLd from "@/components/JsonLd";
+import { business } from "@/lib/business";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/remplacer-coffre-a-larder/" },
@@ -13,6 +16,26 @@ export const metadata: Metadata = {
 export default function RemplacerCoffreALarderPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Comment remplacer un coffre à larder : guide simple et propre",
+          description:
+            "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
+          url: `${business.domain}/remplacer-coffre-a-larder/`,
+          datePublished: "2026-08-08",
+          dateModified: "2026-08-13",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Accueil", url: business.domain },
+          { name: "Blog", url: `${business.domain}/blog/` },
+          {
+            name: "Remplacer un coffre à larder",
+            url: `${business.domain}/remplacer-coffre-a-larder/`,
+          },
+        ])}
+      />
       <Breadcrumbs
         items={[
           { name: "Accueil", href: "/" },

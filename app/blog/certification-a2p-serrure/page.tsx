@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/blog/certification-a2p-serrure/" },
@@ -16,6 +16,16 @@ export const metadata: Metadata = {
 export default function CertificationA2pPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+          description:
+            "A2P, une ou trois étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+          url: `${business.domain}/blog/certification-a2p-serrure/`,
+          datePublished: "2026-08-09",
+          dateModified: "2026-08-13",
+        })}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },

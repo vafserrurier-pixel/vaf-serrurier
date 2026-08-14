@@ -99,6 +99,42 @@ export function faqSchema(items: FaqItem[]) {
   };
 }
 
+export function blogPostingSchema(opts: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: opts.headline,
+    description: opts.description,
+    url: opts.url,
+    image: `${business.domain}/logo-full.png`,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    author: {
+      "@type": "Person",
+      name: business.firstName,
+      url: `${business.domain}/a-propos/`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: business.legalName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${business.domain}/logo-full.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": opts.url,
+    },
+  };
+}
+
 export function personSchema() {
   return {
     "@context": "https://schema.org",
