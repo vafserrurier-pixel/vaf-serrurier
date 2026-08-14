@@ -3,6 +3,27 @@ import { business } from "./business";
 type FaqItem = { question: string; answer: string };
 type BreadcrumbItem = { name: string; url: string };
 
+// Avis reels (memes que le fallback de app/api/reviews/route.ts, jamais
+// inventes) : sert de donnee structuree Review individuelle, en plus de
+// l'aggregateRating deja present plus bas.
+const verifiedReviews = [
+  {
+    author: "Marine D.",
+    rating: 5,
+    text: "Intervention rapide pour une porte claquée. Devis annoncé avant, travail propre, et explications claires. Je recommande sans hésiter.",
+  },
+  {
+    author: "Thomas G.",
+    rating: 5,
+    text: "Serrurier sérieux et efficace. Remplacement de cylindre propre, bons conseils, et aucune mauvaise surprise sur le tarif. Très pro.",
+  },
+  {
+    author: "Nadia F.",
+    rating: 5,
+    text: "Mise en sécurité après effraction réalisée rapidement. Communication claire, devis transparent, et travail soigné. Merci pour la réactivité.",
+  },
+];
+
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
@@ -49,6 +70,12 @@ export function localBusinessSchema() {
       ratingValue: business.reviews.rating,
       reviewCount: business.reviews.count,
     },
+    review: verifiedReviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
+      reviewBody: r.text,
+    })),
     sameAs: [
       business.googleMaps.shareLink,
       business.social.facebook,
