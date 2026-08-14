@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Review } from "@/app/api/reviews/route";
+import type { Review } from "@/lib/reviews";
 import { business } from "@/lib/business";
 import { GoogleLogoIcon } from "./Icons";
 import type { Locale } from "@/lib/locale";
