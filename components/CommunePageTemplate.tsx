@@ -135,7 +135,7 @@ export default function CommunePageTemplate({
         <h2 className="font-heading text-xl font-bold text-navy mb-4">
           Mes tarifs à {commune}
         </h2>
-        <PricingTable hideTravelNote />
+        <PricingTable travelLabel="jusqu'à 30 min de route" />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">

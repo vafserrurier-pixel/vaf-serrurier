@@ -208,22 +208,33 @@ const strings = {
   },
 };
 
-const travelNotes = ["Déplacement inclus sur Nice", "Travel included within Nice"];
+const travelNotes: Record<Locale, string> = {
+  fr: "Déplacement inclus sur Nice",
+  en: "Travel included within Nice",
+};
 
 export default function PricingTable({
   locale = "fr",
-  hideTravelNote = false,
+  travelLabel,
 }: {
   locale?: Locale;
-  /** À activer sur les pages hors Nice tant que la politique de supplément
-   * distance n'est pas confirmée — évite d'affirmer un tarif non vérifié. */
-  hideTravelNote?: boolean;
+  /**
+   * Remplace "sur Nice"/"within Nice" par un texte adapté (ex. "jusqu'à 30
+   * minutes de route") sur les pages hors Nice — le déplacement reste inclus
+   * dans les mêmes conditions (confirmé par Benoît, même seuil de 30 min),
+   * seule la mention géographique change pour rester exacte.
+   */
+  travelLabel?: string;
 }) {
   const [showAll, setShowAll] = useState(false);
-  const cards = hideTravelNote
+  const cards = travelLabel
     ? cardsByLocale[locale].map((card) => ({
         ...card,
-        features: card.features.filter((f) => !travelNotes.includes(f)),
+        features: card.features.map((f) =>
+          f === travelNotes[locale]
+            ? (locale === "en" ? `Travel included ${travelLabel}` : `Déplacement inclus ${travelLabel}`)
+            : f
+        ),
       }))
     : cardsByLocale[locale];
   const t = strings[locale];
