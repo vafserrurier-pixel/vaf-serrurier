@@ -91,7 +91,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
       extra={
         <>
           <section className="mx-auto max-w-4xl px-4 -mt-6">
-            <p className="text-xs text-slate/70">
+            <p className="text-xs text-slate">
               Source :{" "}
               <a
                 href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
