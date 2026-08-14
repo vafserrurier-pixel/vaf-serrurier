@@ -5,7 +5,7 @@ import { business } from "@/lib/business";
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/conditions-generales-dutilisation/" },
   title: "Conditions générales d'utilisation | Votre Artisan Français",
-  description: "CGU du site vaf-serrurier.fr.",
+  description: "Conditions générales d'utilisation du site vaf-serrurier.fr : accès au site, propriété intellectuelle, responsabilité.",
 };
 
 export default function CguPage() {
