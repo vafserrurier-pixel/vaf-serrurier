@@ -95,6 +95,7 @@ export default function SerrurierCornicheFleurieNicePage() {
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
+        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />

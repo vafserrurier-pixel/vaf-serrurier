@@ -192,6 +192,7 @@ export default function ChangementSerrureNicePage() {
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+          { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
       }}
@@ -229,6 +230,7 @@ export default function ChangementSerrureNicePage() {
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "After a break-in" },
+          { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
           { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],
       }}

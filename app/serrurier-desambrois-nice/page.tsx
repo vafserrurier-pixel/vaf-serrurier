@@ -100,6 +100,7 @@ export default function SerrurierDesambroisNicePage() {
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />
