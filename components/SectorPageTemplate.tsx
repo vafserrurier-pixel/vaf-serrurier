@@ -68,7 +68,7 @@ export default function SectorPageTemplate({
           />
           <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            Disponible maintenant — devis par téléphone
+            Disponible maintenant — devis gratuit par téléphone
           </span>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{title}</h1>
           <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">

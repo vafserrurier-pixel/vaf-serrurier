@@ -10,7 +10,7 @@ const strings = {
   fr: {
     home: "Accueil",
     contact: "Contact",
-    badge: "Disponible maintenant — devis par téléphone",
+    badge: "Disponible maintenant — devis gratuit par téléphone",
     h1: "Contact",
     lead: "Besoin d'un devis ou d'une intervention ? Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le canal le plus rapide.",
     writeMe: "Écrivez-moi",
@@ -20,7 +20,7 @@ const strings = {
   en: {
     home: "Home",
     contact: "Contact",
-    badge: "Available now — quote by phone",
+    badge: "Available now — free quote by phone",
     h1: "Contact",
     lead: "Need a quote or a callout? Describe your situation and I'll reply quickly. For an emergency, calling remains the fastest way to reach me.",
     writeMe: "Write to me",

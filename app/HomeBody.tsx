@@ -142,7 +142,7 @@ const homeFaqEn: FaqItem[] = [
 
 const strings = {
   fr: {
-    badge: "Disponible maintenant — devis par téléphone",
+    badge: "Disponible maintenant — devis gratuit par téléphone",
     h1a: "Serrurier à",
     h1b: ", disponible 24h/24",
     lead: "Porte claquée, serrure bloquée, effraction : vous m'expliquez la situation, j'annonce un prix avant de me déplacer. Ce qui compte, c'est la transparence, pas les promesses.",
@@ -208,7 +208,7 @@ const strings = {
     faqTitle: "Questions fréquentes",
   },
   en: {
-    badge: "Available now — quote by phone",
+    badge: "Available now — free quote by phone",
     h1a: "Locksmith in",
     h1b: ", available 24/7",
     lead: "Door slammed shut, jammed lock, break-in: you explain the situation, I quote a price before I travel to you. What matters is transparency, not promises.",

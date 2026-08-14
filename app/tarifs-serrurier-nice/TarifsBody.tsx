@@ -69,7 +69,7 @@ const faqEn: FaqItem[] = [
 const strings = {
   fr: {
     breadcrumb: "Tarifs",
-    badge: "Disponible maintenant — devis par téléphone",
+    badge: "Disponible maintenant — devis gratuit par téléphone",
     h1: "Tarifs serrurier à Nice",
     lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards — un devis précis est toujours annoncé avant que je commence l'intervention.",
     call: "Appeler",
@@ -93,7 +93,7 @@ const strings = {
   },
   en: {
     breadcrumb: "Pricing",
-    badge: "Available now — quote by phone",
+    badge: "Available now — free quote by phone",
     h1: "Locksmith pricing in Nice",
     lead: "What matters is transparency, not promises. Here's my pricing for standard situations — a precise quote is always given before I start the work.",
     call: "Call",
