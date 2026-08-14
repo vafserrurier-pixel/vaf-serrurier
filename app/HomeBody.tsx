@@ -323,6 +323,7 @@ export default function HomeBody() {
               sizes="(min-width: 640px) 40vw, 100vw"
               className="object-cover"
               priority
+              fetchPriority="high"
             />
           </div>
         </div>
