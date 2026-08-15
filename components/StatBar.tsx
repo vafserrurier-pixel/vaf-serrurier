@@ -7,8 +7,6 @@ const strings = {
     availabilityUnit: "7j/7",
     delay: "Délai moyen",
     delayUnit: "à Nice",
-    price: "Tarif de base",
-    priceUnit: "TTC",
     rating: "Note Google",
     ratingUnit: (count: number) => `sur ${count}+ avis`,
     success: "Ouvertures",
@@ -19,8 +17,6 @@ const strings = {
     availabilityUnit: "7 days a week",
     delay: "Average delay",
     delayUnit: "in Nice",
-    price: "Base rate",
-    priceUnit: "incl. VAT",
     rating: "Google rating",
     ratingUnit: (count: number) => `from ${count}+ reviews`,
     success: "Door openings",
@@ -41,7 +37,6 @@ export default function StatBar({
   const stats = [
     { value: "24h/24", label: t.availability, unit: t.availabilityUnit },
     { value: delay, label: t.delay, unit: delayUnit ?? t.delayUnit },
-    { value: "149€", label: t.price, unit: t.priceUnit },
     {
       value: `${business.reviews.rating.toFixed(1)}/5`,
       label: t.rating,
@@ -51,7 +46,7 @@ export default function StatBar({
   ];
   return (
     <div className="bg-navy">
-      <div className="mx-auto max-w-5xl px-4 py-8 grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
+      <div className="mx-auto max-w-5xl px-4 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {stats.map((stat) => (
           <div key={stat.label}>
             <p className="font-heading text-3xl sm:text-4xl font-bold text-cream font-tabular-nums">
