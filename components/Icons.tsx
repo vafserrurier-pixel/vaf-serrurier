@@ -135,6 +135,23 @@ export function CheckIcon({ className }: IconProps) {
   );
 }
 
+export function ClockIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+export function BoltIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+    </svg>
+  );
+}
+
 export function StarIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
