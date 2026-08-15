@@ -1,7 +1,7 @@
 import Image from "next/image";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
-import ProcessSteps from "./ProcessSteps";
+import ProcessSteps, { ProcessStep } from "./ProcessSteps";
 import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
@@ -65,6 +65,7 @@ export default function ServicePageTemplate({
   image,
   extra,
   locale = "fr",
+  processSteps,
 }: {
   h1: string;
   lead: string;
@@ -77,6 +78,8 @@ export default function ServicePageTemplate({
   /** Contenu additionnel optionnel, inséré après les sections principales (avant la FAQ). */
   extra?: ReactNode;
   locale?: Locale;
+  /** Étapes "Comment se déroule mon intervention" propres à ce service. */
+  processSteps?: ProcessStep[];
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
@@ -153,7 +156,7 @@ export default function ServicePageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-heading font-semibold text-navy mb-4">{t.howItWorks}</h2>
-        <ProcessSteps locale={locale} />
+        <ProcessSteps locale={locale} steps={processSteps} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">

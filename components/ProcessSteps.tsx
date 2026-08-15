@@ -43,16 +43,22 @@ const stepsByLocale = {
   ],
 };
 
+export type ProcessStep = { title: string; text: string };
+
 export default function ProcessSteps({
   locale = "fr",
   place,
   delayEstimate,
+  steps: customSteps,
 }: {
   locale?: Locale;
   place?: string;
   delayEstimate?: string;
+  /** Remplace les 4 étapes génériques par un contenu propre à la page
+   * (utilisé sur les pages service pour varier titres et textes). */
+  steps?: ProcessStep[];
 }) {
-  const steps = stepsByLocale[locale](place, delayEstimate);
+  const steps = customSteps ?? stepsByLocale[locale](place, delayEstimate);
   return (
     <div>
       <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

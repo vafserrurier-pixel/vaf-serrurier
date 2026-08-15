@@ -100,6 +100,24 @@ export default function OuvertureDeCoffreFortNicePage() {
           locale="fr"
         />
       }
+      processSteps={[
+        {
+          title: "Appel",
+          text: "Vous me décrivez le modèle de coffre-fort si vous le connaissez, et la raison du blocage — code oublié, clé perdue, coffre hérité.",
+        },
+        {
+          title: "Délai d'arrivée",
+          text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+        },
+        {
+          title: "Diagnostic du mécanisme",
+          text: "J'identifie le modèle et le type de mécanisme — à clé, combinaison mécanique ou électronique — pour choisir la méthode la moins destructive.",
+        },
+        {
+          title: "Règlement",
+          text: "Le prix confirmé avant l'ouverture est celui que vous payez, quelle que soit la méthode finalement nécessaire.",
+        },
+      ]}
       relatedServices={[
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

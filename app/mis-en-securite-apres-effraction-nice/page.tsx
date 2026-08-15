@@ -108,6 +108,24 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
           </section>
         </>
       }
+      processSteps={[
+        {
+          title: "Appel",
+          text: "Vous me décrivez les dégâts constatés après l'effraction, et j'identifie l'urgence réelle de l'intervention dès le téléphone.",
+        },
+        {
+          title: "Délai d'arrivée",
+          text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+        },
+        {
+          title: "Évaluation des dégâts",
+          text: "J'évalue l'ampleur des dégâts — cylindre arraché, bâti fissuré, gâche endommagée — pour proposer une mise en sécurité immédiate adaptée.",
+        },
+        {
+          title: "Règlement",
+          text: "Le prix confirmé sur place est celui que vous payez, facture détaillée utile pour votre déclaration de sinistre.",
+        },
+      ]}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

@@ -188,6 +188,24 @@ export default function ChangementSerrureNicePage() {
             </div>
           </>
         ),
+        processSteps: [
+          {
+            title: "Appel",
+            text: "Vous me décrivez votre porte et la serrure actuelle, et je vous oriente déjà vers les options les plus adaptées.",
+          },
+          {
+            title: "Délai d'arrivée",
+            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+          },
+          {
+            title: "Choix du cylindre ou de la serrure",
+            text: "Je vérifie le format exact de votre porte pour poser un cylindre ou une serrure complète parfaitement adapté, sans improviser une solution qui vieillira mal.",
+          },
+          {
+            title: "Règlement",
+            text: "Le prix confirmé avant la pose est celui que vous payez, clés neuves et facture détaillée à l'appui.",
+          },
+        ],
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
@@ -227,6 +245,24 @@ export default function ChangementSerrureNicePage() {
             </div>
           </>
         ),
+        processSteps: [
+          {
+            title: "Call",
+            text: "You describe your door and current lock, and I already point you toward the most suitable options.",
+          },
+          {
+            title: "Time to arrival",
+            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+          },
+          {
+            title: "Choosing the cylinder or lock",
+            text: "I check your door's exact format to fit a cylinder or full lock that's a perfect match, rather than improvising a solution that won't age well.",
+          },
+          {
+            title: "Payment",
+            text: "The price confirmed before fitting is what you pay, new keys and a detailed invoice included.",
+          },
+        ],
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },

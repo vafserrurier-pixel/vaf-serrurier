@@ -171,6 +171,24 @@ export default function OuvertureDePorteNicePage() {
             locale="fr"
           />
         ),
+        processSteps: [
+          {
+            title: "Appel",
+            text: "Vous m'indiquez si la porte est claquée ou verrouillée à clé, et le type de serrure si vous le connaissez, pour que j'arrive déjà préparé.",
+          },
+          {
+            title: "Délai d'arrivée",
+            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+          },
+          {
+            title: "Diagnostic de la porte",
+            text: "Je vérifie le type de serrure et l'état du cadre pour choisir la méthode d'ouverture la moins destructrice, sans forcer si une alternative existe.",
+          },
+          {
+            title: "Règlement",
+            text: "Le prix confirmé avant l'ouverture est celui que vous payez, sans supplément surprise une fois la porte rouverte.",
+          },
+        ],
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
@@ -197,6 +215,24 @@ export default function OuvertureDePorteNicePage() {
             locale="en"
           />
         ),
+        processSteps: [
+          {
+            title: "Call",
+            text: "You tell me whether the door is slammed shut or locked with a key, and the lock type if you know it, so I arrive already prepared.",
+          },
+          {
+            title: "Time to arrival",
+            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+          },
+          {
+            title: "Diagnosing the door",
+            text: "I check the lock type and the frame's condition to choose the least destructive opening method, without forcing anything if an alternative exists.",
+          },
+          {
+            title: "Payment",
+            text: "The price confirmed before opening is what you pay, no surprise extra charge once the door is open again.",
+          },
+        ],
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
           { href: "/changement-serrure-nice/", label: "Lock change" },

@@ -101,6 +101,24 @@ export default function InstallationCoffreFortNicePage() {
           locale="fr"
         />
       }
+      processSteps={[
+        {
+          title: "Appel",
+          text: "Vous me décrivez l'usage prévu — documents, valeurs, armes — et l'emplacement envisagé, pour vous orienter vers le bon modèle.",
+        },
+        {
+          title: "Rendez-vous",
+          text: "Je fixe un rendez-vous pour évaluer l'emplacement et le support de fixation, à l'heure qui vous convient.",
+        },
+        {
+          title: "Choix de l'emplacement et fixation",
+          text: "Je vous conseille sur le modèle et l'emplacement, puis je prépare la fixation au sol ou au mur pour une résistance réelle à l'arrachement.",
+        },
+        {
+          title: "Règlement",
+          text: "Le devis détaillé est validé avant l'installation, sans supplément surprise une fois le coffre fixé.",
+        },
+      ]}
       relatedServices={[
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

@@ -168,6 +168,24 @@ export default function DepannageSerrurierNicePage() {
             </div>
           </>
         ),
+        processSteps: [
+          {
+            title: "Appel",
+            text: "Vous décrivez la panne — porte bloquée, cylindre grippé, clé cassée — et j'identifie la cause la plus probable dès le téléphone.",
+          },
+          {
+            title: "Délai d'arrivée",
+            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
+          },
+          {
+            title: "Diagnostic de la panne",
+            text: "J'examine le mécanisme pour confirmer s'il s'agit d'un blocage, d'une usure ou d'une casse, avant de choisir la méthode la moins invasive.",
+          },
+          {
+            title: "Règlement",
+            text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois la panne réglée.",
+          },
+        ],
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
@@ -196,6 +214,24 @@ export default function DepannageSerrurierNicePage() {
             </div>
           </>
         ),
+        processSteps: [
+          {
+            title: "Call",
+            text: "You describe the fault — jammed door, seized cylinder, broken key — and I identify the most likely cause right there on the phone.",
+          },
+          {
+            title: "Time to arrival",
+            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+          },
+          {
+            title: "Diagnosing the fault",
+            text: "I examine the mechanism to confirm whether it's a jam, wear, or breakage, before choosing the least invasive method.",
+          },
+          {
+            title: "Payment",
+            text: "The price confirmed on site is what you pay, with a detailed invoice, no surprise extra charge once the fault is fixed.",
+          },
+        ],
         relatedServices: [
           { href: "/ouverture-de-porte-nice/", label: "Door opening" },
           { href: "/changement-serrure-nice/", label: "Lock change" },

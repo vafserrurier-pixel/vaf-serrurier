@@ -198,6 +198,24 @@ export default function InstallationPorteBlindeeNicePage() {
             locale="fr"
           />
         ),
+        processSteps: [
+          {
+            title: "Appel",
+            text: "Vous me décrivez votre porte actuelle et vos priorités — sécurité, isolation, esthétique — pour un premier avis dès le téléphone.",
+          },
+          {
+            title: "Rendez-vous",
+            text: "Ce n'est pas toujours une urgence : je fixe un rendez-vous pour évaluer votre porte sur place, à l'heure qui vous convient, tout en restant réactif si besoin.",
+          },
+          {
+            title: "Évaluation de la porte et du bâti",
+            text: "J'examine l'état du bâti et de la porte existante pour déterminer si un blindage suffit ou si un bloc-porte complet est nécessaire.",
+          },
+          {
+            title: "Règlement",
+            text: "Le devis détaillé est validé avant le début des travaux, facture conforme aux assureurs à l'appui.",
+          },
+        ],
         relatedServices: [
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
@@ -225,6 +243,24 @@ export default function InstallationPorteBlindeeNicePage() {
             locale="en"
           />
         ),
+        processSteps: [
+          {
+            title: "Call",
+            text: "You describe your current door and your priorities — security, insulation, appearance — for a first opinion right there on the phone.",
+          },
+          {
+            title: "Appointment",
+            text: "This isn't always urgent: I schedule a visit to assess your door on site, at a time that suits you, while staying responsive if needed.",
+          },
+          {
+            title: "Assessing the door and the building",
+            text: "I examine the condition of the building and the existing door to determine whether reinforcement is enough or a full armored door block is needed.",
+          },
+          {
+            title: "Payment",
+            text: "The detailed quote is confirmed before work starts, with an invoice that meets insurer requirements.",
+          },
+        ],
         relatedServices: [
           { href: "/changement-serrure-nice/", label: "Lock change" },
           { href: "/mis-en-securite-apres-effraction-nice/", label: "After a break-in" },
