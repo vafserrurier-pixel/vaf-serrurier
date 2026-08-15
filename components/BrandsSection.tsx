@@ -47,6 +47,11 @@ const brandsByLocale = {
       text: "Cylindres haute sécurité d'origine suisse, souvent utilisés en copropriété pour leur gestion fine des clés autorisées.",
       url: "https://www.kaba.fr",
     },
+    {
+      name: "Iseo",
+      text: "Fabricant italien reconnu pour ses cylindres haute sécurité et ses solutions de gestion d'accès, notamment sur les portes multipoints.",
+      url: "https://www.iseo.com/fr/",
+    },
   ],
   en: [
     {
@@ -93,6 +98,11 @@ const brandsByLocale = {
       name: "Kaba",
       text: "Swiss-origin high-security cylinders, often used in apartment buildings for their fine-grained key management.",
       url: "https://www.kaba.fr",
+    },
+    {
+      name: "Iseo",
+      text: "An Italian manufacturer known for its high-security cylinders and access management solutions, especially on multipoint doors.",
+      url: "https://www.iseo.com/fr/",
     },
   ],
 };
