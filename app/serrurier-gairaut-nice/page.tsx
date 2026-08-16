@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque à Gairaut : j'interviens sur ce secteur résidentiel de villas, en tenant compte du délai réaliste lié à la distance depuis mon point de départ. L'essentiel du bâti est constitué de maisons avec porte d'entrée individuelle : je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Cisa adapté, de la simple réparation au renforcement complet.",
-  "La cascade de Gairaut, chute d'eau artificielle construite au XIXe siècle, commémore l'arrivée des eaux du canal de la Vésubie en 1883, un ouvrage qui répondait aux besoins d'une ville alors en pleine expansion. Le secteur, autrefois à vocation agricole avec de nombreux oliviers, est devenu résidentiel, avec des villas offrant une vue exceptionnelle sur la mer et la ville de Nice.",
+  "La cascade de Gairaut, chute d'eau artificielle construite au XIXe siècle et classée monument historique depuis 2001, commémore l'arrivée des eaux du canal de la Vésubie en 1883, un ouvrage qui répondait aux besoins d'une ville alors en pleine expansion. Le secteur, autrefois à vocation agricole avec de nombreux oliviers, est devenu résidentiel, avec des villas offrant une vue exceptionnelle sur la mer et la ville de Nice.",
 ];
 
 const blocks = [

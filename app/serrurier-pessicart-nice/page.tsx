@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier à Pessicart : j'interviens sur ce quartier résidentiel huppé des hauteurs nord, aussi bien pour une villa individuelle que pour une résidence collective. Le diagnostic reste systématique, avec le plus souvent un cylindre Picard ou Heraclès adapté au type de serrure déjà en place.",
-  "Le nom de Pessicart apparaît pour la première fois dans le cadastre napoléonien de 1812, mais le quartier conserve des traces remontant à l'époque romaine. Cette colline, délimitée par la plaine alluviale de l'ancien ruisseau Mantega et le vallon des Sablières, offre aujourd'hui des vues remarquables sur la ville et la Méditerranée, dans un cadre verdoyant particulièrement apprécié des familles.",
+  "Le nom de Pessicart apparaît pour la première fois dans le cadastre napoléonien de 1812, mais le quartier conserve des traces remontant à l'époque romaine. Cette colline, délimitée par la plaine alluviale de l'ancien ruisseau Mantega et le vallon des Sablières, offre aujourd'hui des vues remarquables sur la ville et la Méditerranée depuis l'avenue de Pessicart et les abords de l'église Saint-Paul, dans un cadre verdoyant particulièrement apprécié des familles.",
 ];
 
 const blocks = [

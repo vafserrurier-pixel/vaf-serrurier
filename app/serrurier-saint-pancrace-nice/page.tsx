@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Clé cassée, porte claquée à Saint-Pancrace : j'interviens sur ce secteur résidentiel des hauteurs nord de Nice, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Picard adapté, qu'il s'agisse d'une réparation ou d'un renforcement complet du bâti rural préservé.",
-  "Saint-Pancrace était autrefois un territoire de la campagne niçoise, où vignes et cultures méditerranéennes se mêlaient sur cette colline entre Saint-Roman et Gairaut. La chapelle Saint-Pancrace du XVIIe siècle, cœur spirituel du quartier, témoigne de cette histoire rurale — une confrérie du même nom est attestée dès 1724. Les rues étroites et pittoresques du secteur continuent d'évoquer ce passé, aujourd'hui mêlé à un bâti résidentiel de villas et petites résidences.",
+  "Saint-Pancrace était autrefois un territoire de la campagne niçoise, où vignes et cultures méditerranéennes se mêlaient sur cette colline entre Saint-Roman et Gairaut. La chapelle Saint-Pancrace du XVIIe siècle, cœur spirituel du quartier, témoigne de cette histoire rurale — une confrérie du même nom est attestée dès 1724. Les rues étroites et pittoresques du secteur, entre la Corniche des Oliviers et la route de la Sirole, continuent d'évoquer ce passé, aujourd'hui mêlé à un bâti résidentiel de villas et petites résidences.",
 ];
 
 const blocks = [
