@@ -66,6 +66,11 @@ export const business = {
     twitter: "https://twitter.com/vaf_serrurerie",
   },
   hostingProvider: "O2switch",
+  insurance: {
+    provider: "APRIL",
+    liability: "Assurance responsabilité civile professionnelle",
+    decennale: true,
+  },
 } as const;
 
 // Liste de référence confirmée par Benoît (remplace une première liste générique) :
