@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Carras, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier résidentiel en bord de mer, bien desservi et sans les contraintes d'accès des zones plus denses du centre. Je diagnostique chaque situation avant de proposer un cylindre Cisa ou Vak adapté, pour un cylindre qui accroche, une porte qui ferme mal ou une clé cassée.",
-  "Carras était, depuis le milieu du XVIIIe siècle, un modeste village de pêcheurs à l'écart à l'ouest de Nice, connu sous le nom de « Sieu en Caras ». Après la création de l'aéroport en 1966, un port-abri y fut aménagé. La construction de la Promenade des Anglais a ensuite favorisé l'essor touristique de cet ancien village. Il est devenu aujourd'hui un quartier résidentiel prisé pour son cadre de vie en bord de mer, où l'héritage de pêche se lit encore dans les quelques embarcations conservées le long du front de mer.",
+  "Carras était, depuis le milieu du XVIIIe siècle, un modeste village de pêcheurs à l'écart à l'ouest de Nice, connu sous le nom de « Sieu en Caras ». Après la création de l'aéroport en 1966, un port-abri y fut aménagé. La construction de la Promenade des Anglais a ensuite favorisé l'essor touristique de cet ancien village. Il est devenu aujourd'hui un quartier résidentiel prisé pour son cadre de vie en bord de mer, où l'héritage de pêche se lit encore dans les quelques embarcations conservées le long de la plage de Carras et de l'avenue de la Californie.",
 ];
 
 const blocks = [

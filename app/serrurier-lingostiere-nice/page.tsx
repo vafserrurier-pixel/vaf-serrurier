@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Dépannage serrurier à Lingostière : j'interviens sur ce secteur le plus excentré que je couvre depuis mon point de départ, en vous donnant un délai réaliste dès l'appel plutôt qu'une estimation optimiste. Je m'adapte à chaque configuration, résidence proche des axes routiers ou maison plus isolée sur les hauteurs, avec généralement un cylindre Vak ou Cisa adapté au diagnostic effectué sur place.",
-  "Lingostière se situe à la lisière nord-ouest de Nice, dans la vallée du Var, un secteur au double visage : la plaine traversée par le Train des Pignes d'un côté, un territoire de collines agricoles de l'autre. Le quartier compte environ 1 300 habitants, avec des ménages plus grands que la moyenne niçoise et un habitat mêlant zones résidentielles, activités commerciales et loisirs comme le tennis ou le golf.",
+  "Lingostière se situe à la lisière nord-ouest de Nice, dans la vallée du Var, un secteur au double visage : la plaine traversée par le Train des Pignes d'un côté, un territoire de collines agricoles de l'autre. Le quartier compte environ 1 300 habitants, avec des ménages plus grands que la moyenne niçoise et un habitat mêlant zones résidentielles, activités commerciales autour du centre commercial Nice Lingostière (Carrefour, Forum Lingostière, Leroy Merlin) et loisirs comme le tennis ou le golf.",
 ];
 
 const blocks = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Besoin d'un serrurier à l'Arénas : j'interviens 24h/24 sur ce premier quartier d'affaires de la Côte d'Azur, avec le même professionnalisme pour un bureau que pour un logement. Les immeubles de bureaux ont des exigences de sécurité spécifiques — accès contrôlés, cylindres professionnels Cisa ou Fichet — que je diagnostique avant toute intervention, en complément des résidences du secteur.",
-  "Le nom de l'Arénas viendrait d'un ancien lieu de corridas — « arenas » signifiant arènes en espagnol. Le quartier a connu une transformation impressionnante, passant d'une zone industrielle à un pôle d'activités économiques après l'ouverture de l'aéroport Nice-Côte d'Azur dans les années 1960. Créé en 1989, il est devenu le premier centre d'affaires international des Alpes-Maritimes, avec environ 350 000 m² de bureaux, à proximité de la gare TGV de Saint-Augustin.",
+  "Le nom de l'Arénas viendrait d'un ancien lieu de corridas — « arenas » signifiant arènes en espagnol. Le quartier a connu une transformation impressionnante, passant d'une zone industrielle à un pôle d'activités économiques après l'ouverture de l'aéroport Nice-Côte d'Azur dans les années 1960. Créé en 1989, il est devenu le premier centre d'affaires international des Alpes-Maritimes, avec environ 350 000 m² de bureaux, desservi par la ligne 2 du tramway et la gare multimodale de Saint-Augustin.",
 ];
 
 const blocks = [

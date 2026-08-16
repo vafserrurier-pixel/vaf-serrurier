@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Dépannage serrurier au quartier Californie : j'interviens 24h/24 sur ce secteur familial du bas de Fabron, avec de nombreuses villas et résidences de standing à proximité de la mer. Je diagnostique chaque configuration avant de proposer généralement un cylindre Fichet ou Cisa, avec possibilité de blindage de la porte principale si le bâti le permet.",
-  "Le quartier Californie doit son nom à l'aéroport de Nice, dont l'histoire commence ici en 1910 avec un premier meeting aérien devant 100 000 spectateurs, sur ce qui n'était alors qu'un champ caillouteux. Le nom garde aussi le souvenir de l'hippodrome de Californie, déplacé lors de l'agrandissement de la piste. Aujourd'hui desservi par la ligne 2 du tramway, ce quartier urbain décontracté reste particulièrement apprécié des familles pour son bâti mêlant villas et résidences.",
+  "Le quartier Californie doit son nom à l'aéroport de Nice, dont l'histoire commence ici en 1910 avec un premier meeting aérien devant 100 000 spectateurs, sur ce qui n'était alors qu'un champ caillouteux. Le nom garde aussi le souvenir de l'hippodrome de Californie, déplacé lors de l'agrandissement de la piste. Aujourd'hui desservi par la ligne 2 du tramway le long de l'avenue de la Californie, ce quartier urbain décontracté reste particulièrement apprécié des familles pour son bâti mêlant villas et résidences.",
 ];
 
 const blocks = [

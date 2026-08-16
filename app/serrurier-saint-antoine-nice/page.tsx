@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Dépannage serrurier à Saint-Antoine : j'interviens 24h/24 sur ce quartier perché à l'ambiance villageoise préservée, entre maisons individuelles et petites résidences. Je diagnostique chaque situation avant de proposer un cylindre Vak ou Cisa adapté, avec la même méthode que pour les logements résidentiels proches des zones d'activité de l'aéroport.",
-  "Saint-Antoine-de-Ginestière ressemble davantage à un village indépendant qu'à un secteur niçois, son histoire étant liée à celle de Jeanne, reine de Naples. L'église Saint-Antoine, cœur spirituel du quartier, a été construite en 1875. Le quartier compte aujourd'hui environ 3 000 habitants, avec un profil plutôt familial et une majorité de propriétaires, dans un cadre verdoyant à l'ambiance vivante.",
+  "Saint-Antoine-de-Ginestière ressemble davantage à un village indépendant qu'à un secteur niçois, son histoire étant liée à celle de Jeanne, reine de Naples. L'église Saint-Antoine, cœur spirituel du quartier, a été construite en 1875. Le quartier compte aujourd'hui environ 3 000 habitants, avec un profil plutôt familial et une majorité de propriétaires, dans un cadre verdoyant à l'ambiance vivante, entre le chemin de Saint-Antoine, la route de Bellet et la Corniche Fleurie, non loin du parc Carol-de-Roumanie.",
 ];
 
 const blocks = [
