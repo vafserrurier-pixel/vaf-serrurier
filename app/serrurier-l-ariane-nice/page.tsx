@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Clé cassée, porte claquée à l'Ariane : j'interviens 24h/24 dans ce grand quartier d'habitat collectif, où les portes palières et les cylindres de hall subissent un usage intensif. Après une perte de clés ou une tentative d'effraction, je pose généralement un cylindre Vak ou Cisa plus résistant, avec possibilité de blindage de la porte si le cadre le permet.",
-  "L'Ariane doit son nom à la plaine alluviale du Paillon : « arena » signifie le sable, en latin comme en niçois. Longtemps rural autour d'un petit hameau, le quartier connaît sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles dans les années 1950-1970. Il compte aujourd'hui près de 12 000 habitants. Depuis 2008, il bénéficie d'un programme de renouvellement urbain de 300 millions d'euros, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens.",
+  "L'Ariane doit son nom à la plaine alluviale du Paillon : « arena » signifie le sable, en latin comme en niçois. Longtemps rural autour d'un petit hameau, le quartier connaît sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles dans les années 1950-1970. Il compte aujourd'hui près de 12 000 habitants. Depuis 2008, il bénéficie d'un programme de renouvellement urbain de 300 millions d'euros, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens, autour de la place des Mosaïques, de la rue Anatole-de-Monzie, du parc des Tripodes et du jardin Saramito.",
 ];
 
 const blocks = [

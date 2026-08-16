@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque au Parc Impérial : j'interviens 24h/24 sur ce quartier résidentiel de standing, entre le centre-ville et Cimiez. Les immeubles de standing du secteur ont des serrures parfois anciennes qui demandent un diagnostic soigné : je pose le plus souvent un cylindre Fichet ou Picard compatible avec le mécanisme existant, en respectant les exigences esthétiques de ces copropriétés bien entretenues.",
-  "Le quartier doit son nom à l'Hôtel Impérial, construit en 1902 pour la communauté russe hivernant sur la Côte d'Azur. Cet édifice de 109 mètres de long fut réquisitionné comme hôpital pendant la Première Guerre mondiale, avant de devenir le lycée du Parc-Impérial en 1948. Le quartier conserve aujourd'hui de nombreuses villas, des immeubles Belle Époque et la cathédrale orthodoxe russe de 1912, un patrimoine qui explique la présence de portes et serrures d'origine à traiter avec soin.",
+  "Le quartier doit son nom à l'Hôtel Impérial, construit en 1902 pour la communauté russe hivernant sur la Côte d'Azur. Cet édifice de 109 mètres de long fut réquisitionné comme hôpital pendant la Première Guerre mondiale, avant de devenir le lycée du Parc-Impérial en 1948. Le quartier conserve aujourd'hui de nombreuses villas, des immeubles Belle Époque et la cathédrale orthodoxe russe de 1912, un patrimoine qui explique la présence de portes et serrures d'origine à traiter avec soin, entre le boulevard du Parc-Impérial et le boulevard du Tsarewitch.",
 ];
 
 const blocks = [

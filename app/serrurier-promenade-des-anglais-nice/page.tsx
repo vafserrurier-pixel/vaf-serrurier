@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier Promenade des Anglais : j'interviens 24h/24 sur ce front de mer emblématique, notamment pour les nombreux appartements loués à la semaine ou au mois, en cas de porte claquée entre deux locations. Sur ces résidences de standing, je pose généralement un cylindre Fichet ou Cisa haut de gamme, en prenant soin de ne pas dégrader des finitions de hall souvent haut de gamme.",
-  "L'histoire de la promenade commence en 1822, quand le révérend anglican Lewis Way lance une souscription auprès de la communauté britannique hivernant à Nice pour financer une chaussée littorale, en pleine crise agricole niçoise. Inaugurée en 1824, elle est baptisée « el camin dei Inglès » par les habitants. Elle est aujourd'hui bordée d'immeubles résidentiels de standing et de grands hôtels historiques, où se côtoient bâti ancien de grand standing et constructions plus récentes.",
+  "L'histoire de la promenade commence en 1822, quand le révérend anglican Lewis Way lance une souscription auprès de la communauté britannique hivernant à Nice pour financer une chaussée littorale, en pleine crise agricole niçoise. Inaugurée en 1824, elle est baptisée « el camin dei Inglès » par les habitants. Elle est aujourd'hui bordée d'immeubles résidentiels de standing et de grands hôtels historiques sur ses 7 kilomètres, où se côtoient bâti ancien de grand standing et constructions plus récentes desservies par la ligne 2 du tramway.",
 ];
 
 const blocks = [

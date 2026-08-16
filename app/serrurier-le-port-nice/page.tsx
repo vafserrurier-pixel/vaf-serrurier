@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier au quartier du Port : j'interviens 24h/24, y compris tard le soir dans ce secteur animé par ses bars et restaurants, pour un dépannage tardif ou une sécurisation après effraction. Sur les immeubles du XIXe siècle qui bordent le port Lympia, je pose le plus souvent un cylindre Picard ou Fichet compatible avec le mécanisme d'origine, plutôt qu'un remplacement standard qui dénaturerait ces façades anciennes.",
-  "Le port Lympia tire son origine du XVIIIe siècle, quand le roi de Sardaigne Charles-Emmanuel III décide en 1749 d'y construire un grand port maritime. Les autorités font alors appel à des forçats pour creuser les bassins, ce qui donne naissance à un bâtiment-prison devenu ensuite annexe du bagne de Villefranche-sur-Mer. Aujourd'hui, les anciens entrepôts transformés en restaurants et galeries d'art côtoient des immeubles résidentiels du XIXe siècle, dans un quartier à la fois historique et vivant jusque tard dans la nuit.",
+  "Le port Lympia tire son origine du XVIIIe siècle, quand le roi de Sardaigne Charles-Emmanuel III décide en 1749 d'y construire un grand port maritime. Les autorités font alors appel à des forçats pour creuser les bassins, ce qui donne naissance à un bâtiment-prison devenu ensuite annexe du bagne de Villefranche-sur-Mer. Aujourd'hui, les anciens entrepôts transformés en restaurants et galeries d'art côtoient des immeubles résidentiels du XIXe siècle, autour de la place Île-de-Beauté et de l'église Notre-Dame-du-Port (1853), à quelques pas de la place Garibaldi, dans un quartier à la fois historique et vivant jusque tard dans la nuit.",
 ];
 
 const blocks = [

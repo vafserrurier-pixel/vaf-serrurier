@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque à Riquier : j'interviens 24h/24 dans ce quartier populaire organisé autour de sa gare et de son marché, où le passage important pousse souvent les résidents à renforcer leur porte d'entrée. Sur les immeubles des années 1920 qui composent l'essentiel du bâti, je pose le plus souvent un cylindre Vak ou Fichet haute sécurité, avec possibilité de serrure multipoints ou de blindage selon l'état de la porte.",
-  "Le nom de Riquier viendrait d'une riche famille niçoise propriétaire terrienne, sur un secteur qui devient au XVIIIe siècle le cœur industriel de Nice : manufacture des tabacs, usine à gaz, ateliers mécaniques. Le boulevard de Riquier, inauguré en 1886, symbolise la transition vers le quartier urbain actuel, dont la plupart des immeubles datent des années 1920 — un héritage qui explique le profil de bâti que je rencontre le plus souvent ici.",
+  "Le nom de Riquier viendrait d'une riche famille niçoise propriétaire terrienne, sur un secteur qui devient au XVIIIe siècle le cœur industriel de Nice : manufacture des tabacs, usine à gaz, ateliers mécaniques. Le boulevard de Riquier, inauguré en 1886, symbolise la transition vers le quartier urbain actuel, dont la plupart des immeubles datent des années 1920 — un héritage qui explique le profil de bâti que je rencontre le plus souvent ici, autour de la place Max-Barel, de la place Arson et de l'église Saint-Martin.",
 ];
 
 const blocks = [

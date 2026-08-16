@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Besoin d'un serrurier place Wilson : je diagnostique par téléphone puis j'interviens 24h/24, aussi bien pour un appartement que pour l'un des nombreux commerces du secteur — rideau métallique bloqué, serrure de vitrine à sécuriser après une vitre cassée, porte de galerie qui ferme mal. Le passage important toute la journée use les cylindres plus vite que la moyenne, et je pose le plus souvent un cylindre Picard ou Cisa adapté au type de serrure déjà en place.",
-  "La place Wilson doit son nom actuel à un hommage rendu au président américain Woodrow Wilson après la Première Guerre mondiale, sur le site de l'ancienne Bourgade médiévale. L'ancien Hôtel des Postes de 1888 domine toujours la place, entouré d'immeubles bourgeois Belle Époque dont beaucoup ont conservé leurs portes et cylindres d'origine — un point d'attention à chaque intervention pour ne pas dénaturer ces façades soignées.",
+  "La place Wilson doit son nom actuel à un hommage rendu au président américain Woodrow Wilson après la Première Guerre mondiale, sur le site de l'ancienne Bourgade médiévale. L'ancien Hôtel des Postes de 1888 domine toujours la place, entouré d'immeubles bourgeois Belle Époque dont beaucoup ont conservé leurs portes et cylindres d'origine — un point d'attention à chaque intervention pour ne pas dénaturer ces façades soignées. La Coulée Verte et la station de tramway Durandy sont à deux pas.",
 ];
 
 const blocks = [

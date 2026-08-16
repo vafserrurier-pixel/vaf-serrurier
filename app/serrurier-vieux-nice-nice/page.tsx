@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Dépannage serrurier dans le Vieux-Nice : j'interviens 24h/24 en tenant compte des ruelles piétonnes pour organiser mon accès. Beaucoup de portes ici sont anciennes, parfois artisanales, avec des dimensions non standards : je privilégie systématiquement le diagnostic et la réparation avec un cylindre Picard ou Heraclès compatible, plutôt qu'un remplacement par un modèle générique qui dénaturerait le cachet de la porte.",
-  "Le cours Saleya, artère la plus célèbre du Vieux-Nice, était connu dès le XVIIIe siècle sous le nom de « Palco » — la « scène » en italien. C'était déjà un lieu de promenade prisé de la haute société dès 1714. Le grand tournant survient en 1861 avec la création du marché aux fleurs, fruits et légumes, qui ancre sa vocation commerçante et populaire. Ce bâti remontant parfois aux XVIIe et XVIIIe siècles explique la densité de portes et serrures d'époque du quartier.",
+  "Le cours Saleya, artère la plus célèbre du Vieux-Nice, était connu dès le XVIIIe siècle sous le nom de « Palco » — la « scène » en italien. C'était déjà un lieu de promenade prisé de la haute société dès 1714. Le grand tournant survient en 1861 avec la création du marché aux fleurs, fruits et légumes, qui ancre sa vocation commerçante et populaire. Ce bâti remontant parfois aux XVIIe et XVIIIe siècles explique la densité de portes et serrures d'époque du quartier, de la Cathédrale Sainte-Réparate à la Place Saint-François, jusqu'à la Fontaine du Soleil de la Place Masséna.",
 ];
 
 const blocks = [

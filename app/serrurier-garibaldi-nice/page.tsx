@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier place Garibaldi : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, dans ce quartier de passage entre le Vieux-Nice et le port. Les immeubles anciens autour de la place ont souvent des portes et des serrures d'époque, sur lesquelles je pose généralement un cylindre Picard ou Cisa compatible plutôt qu'un remplacement qui dénaturerait ces façades historiques.",
-  "La place Garibaldi, l'une des plus anciennes de Nice, a été construite entre 1782 et 1784 sous le nom de Piazza Vittorio, à l'époque du royaume de Sardaigne. Elle prend son nom actuel en 1870, en hommage à Giuseppe Garibaldi. Rendue aux piétons dans les années 2000 avec l'arrivée du tramway, elle est aujourd'hui animée par de nombreux musées, théâtres et terrasses de restaurant. Cela explique le passage important sur les commerces et halls d'immeuble alentour.",
+  "La place Garibaldi, l'une des plus anciennes de Nice, a été construite entre 1782 et 1784 sous le nom de Piazza Vittorio, à l'époque du royaume de Sardaigne. Elle prend son nom actuel en 1870, en hommage à Giuseppe Garibaldi, dont la statue trône sur la place depuis 1891, à deux pas du Palais Avigdor. Rendue aux piétons dans les années 2000 avec l'arrivée du tramway, elle est aujourd'hui animée par de nombreux musées, théâtres et terrasses de restaurant. Cela explique le passage important sur les commerces et halls d'immeuble alentour.",
 ];
 
 const blocks = [

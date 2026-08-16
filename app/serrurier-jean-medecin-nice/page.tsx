@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Dépannage serrurier avenue Jean-Médecin : j'interviens 24h/24 sur cet axe très dense, où le passage important use les serrures de hall plus vite qu'ailleurs. Digicodes, gâches électriques et cylindres de porte collective font partie de mes interventions les plus fréquentes ici, avec le plus souvent un cylindre Fichet ou Cisa pour les copropriétés comme pour les commerces qui bordent l'avenue.",
-  "L'avenue a porté plusieurs noms depuis son tracé en 1864 dans la vallée du Paillon : avenue du Prince-Impérial, puis avenue de la Gare, avenue de la Victoire. Elle prend en 1966 le nom de Jean Médecin, maire de Nice pendant près de 25 ans. Cette grande artère commerçante qui relie la gare à la place Masséna reste l'un des secteurs les plus denses de Nice, avec un bâti mêlant immeubles résidentiels, commerces et bureaux.",
+  "L'avenue a porté plusieurs noms depuis son tracé en 1864 dans la vallée du Paillon : avenue du Prince-Impérial, puis avenue de la Gare, avenue de la Victoire. Elle prend en 1966 le nom de Jean Médecin, maire de Nice pendant près de 25 ans. Cette grande artère commerçante qui relie la gare à la place Masséna reste l'un des secteurs les plus denses de Nice, avec un bâti mêlant immeubles résidentiels, commerces et bureaux. La station de tramway Jean Médecin, sur la ligne 1, marque le cœur de ce passage constant.",
 ];
 
 const blocks = [

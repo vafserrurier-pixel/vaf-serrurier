@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier au Carré d'Or : j'interviens rapidement dans ce secteur central, en 10 à 15 minutes en général depuis mon point de départ, avec la discrétion attendue par les boutiques de luxe comme par les copropriétés Belle Époque du quartier. Je pose le plus souvent un cylindre Fichet ou Cisa haut de gamme, cohérent avec le niveau de finition des halls et vitrines de ce secteur.",
-  "Historiquement appelé quartier de la Buffa, ce secteur s'est imposé comme le « Carré d'Or » à partir de la Belle Époque, quand Nice attirait l'aristocratie européenne. Il conserve le plus ancien monument de la ville, la Croix de Marbre du XVIe siècle, aux côtés d'immeubles Belle Époque et Art déco datant de 1895 à 1920, et de l'hôtel Negresco. C'est aujourd'hui la zone piétonne et commerçante la plus recherchée du centre-ville.",
+  "Historiquement appelé quartier de la Buffa, ce secteur s'est imposé comme le « Carré d'Or » à partir de la Belle Époque, quand Nice attirait l'aristocratie européenne. Il conserve le plus ancien monument de la ville, la Croix de Marbre du XVIe siècle, aux côtés d'immeubles Belle Époque et Art déco datant de 1895 à 1920, et de l'hôtel Negresco. C'est aujourd'hui la zone piétonne et commerçante la plus recherchée du centre-ville, entre la rue de la Buffa, la rue de France et le boulevard Victor-Hugo.",
 ];
 
 const blocks = [

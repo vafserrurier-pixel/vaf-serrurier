@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Clé cassée, porte claquée au quartier Pasteur : j'interviens 24h/24 dans ce secteur résidentiel dense, voisin du pôle hospitalier universitaire, où le passage important pousse parfois les résidents à renforcer leur porte d'entrée. Sur ce bâti varié entre immeubles anciens et constructions plus récentes, je pose le plus souvent un cylindre Picard ou Heraclès adapté au diagnostic effectué sur place.",
-  "Le quartier est dominé par l'ancienne abbaye de Saint-Pons, détruite au XVIe siècle puis reconstruite en 1724 dans un style baroque en grande partie financé par Louis XIV, aujourd'hui intégrée à l'hôpital Pasteur. Le relogement de populations de la vieille ville en 1954 a entraîné une transformation urbaine rapide. Le projet Pasteur 2, un investissement de 550 millions d'euros, en a fait ensuite l'un des plus grands hôpitaux modernes construits en France.",
+  "Le quartier est dominé par l'ancienne abbaye de Saint-Pons, détruite au XVIe siècle puis reconstruite en 1724 dans un style baroque en grande partie financé par Louis XIV, aujourd'hui intégrée à l'hôpital Pasteur. Le relogement de populations de la vieille ville en 1954 a entraîné une transformation urbaine rapide. Le projet Pasteur 2, un investissement de 550 millions d'euros, en a fait ensuite l'un des plus grands hôpitaux modernes construits en France, desservi par l'arrêt de tramway Hôpital Pasteur sur la ligne 1.",
 ];
 
 const blocks = [

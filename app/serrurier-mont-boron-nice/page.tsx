@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier au Mont Boron : j'interviens 24h/24 sur ce secteur résidentiel huppé, avec un soin particulier pour les villas souvent équipées de systèmes de sécurité plus avancés que la moyenne. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, adapté aux portes principales comme aux portails et accès secondaires de ces propriétés avec vue mer.",
-  "Cette colline culminant à 191 mètres abrite plusieurs vestiges militaires remarquables : une batterie du XIXe siècle au Cap de Nice, et le fort voisin du Mont Alban du XVIe siècle. Au pied de la colline se trouvent aussi la grotte préhistorique du Lazaret et le site archéologique de Terra Amata découvert en 1966. Ce cadre verdoyant classé au patrimoine explique la présence de nombreuses résidences de standing, dont le bâti demande une approche sur mesure.",
+  "Cette colline culminant à 191 mètres abrite plusieurs vestiges militaires remarquables : une batterie du XIXe siècle au Cap de Nice, et le fort voisin du Mont Alban du XVIe siècle. Au pied de la colline se trouvent aussi la grotte préhistorique du Lazaret et le site archéologique de Terra Amata découvert en 1966. Ce cadre verdoyant classé au patrimoine, dont le parc forestier s'étend sur 80 hectares autour du Château de l'Anglais, explique la présence de nombreuses résidences de standing, dont le bâti demande une approche sur mesure.",
 ];
 
 const blocks = [

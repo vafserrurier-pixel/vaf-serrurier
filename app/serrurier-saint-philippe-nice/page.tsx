@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à Saint-Philippe : j'interviens 24h/24 sur ce quartier vallonné qui compte de nombreuses villas et propriétés avec jardin. Pour une porte principale, un portillon ou un accès secondaire, je diagnostique chaque situation avant de proposer une réparation ou un remplacement, avec le plus souvent un cylindre Heraclès ou Fichet adapté au bâti déjà en place.",
-  "Le quartier vallonné entre le Parc Impérial et La Madeleine tire son nom de la chapelle Saint-Philippe-Néri, achevée en 1612 et classée monument historique depuis 1964 — la plus vieille construction du secteur. Au XIXe siècle, la noblesse européenne appréciait ce climat méditerranéen idéal, comme le peintre Joseph Fricéro qui y reçut l'impératrice douairière de Russie. Le parc départemental Estienne-d'Orves, 15 hectares d'oliviers centenaires, occupe aujourd'hui la majeure partie de la colline autour de laquelle se sont bâties ces villas.",
+  "Le quartier vallonné entre le Parc Impérial et La Madeleine tire son nom de la chapelle Saint-Philippe-Néri, achevée en 1612 et classée monument historique depuis 1964 — la plus vieille construction du secteur. Au XIXe siècle, la noblesse européenne appréciait ce climat méditerranéen idéal, comme le peintre Joseph Fricéro qui y reçut l'impératrice douairière de Russie. Le parc départemental Estienne-d'Orves, 15 hectares d'oliviers centenaires, occupe aujourd'hui la majeure partie de la colline autour de laquelle se sont bâties ces villas, entre l'avenue Estienne-d'Orves, la gare de Nice-Saint-Philippe et le boulevard du Tzarewitch.",
 ];
 
 const blocks = [

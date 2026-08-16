@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Porte claquée, cylindre grippé à Carabacel : j'interviens 24h/24 sur ce secteur qui mêle immeubles anciens et villas sur les hauteurs proches du centre-ville. Le bâti du boulevard planté, construit dans la seconde moitié du XIXe siècle, a souvent conservé ses portes et cylindres d'origine : je pose le plus souvent un cylindre Fichet ou Heraclès compatible, plutôt qu'un remplacement complet qui dénaturerait ces façades.",
-  "Carabacel, dont le nom viendrait du celte « car » (colline, mont, rocher), désigne le secteur situé juste au nord de la Vieille-Ville, au-delà du Paillon. Développé autour du pont Saint-Antoine devenu le « Pont Vieux », puis structuré par le plan régulateur du Consiglio d'Ornato dans les années 1850, le boulevard Carabacel est achevé fin 1865. Ce quartier entre la gare et Cimiez conserve aujourd'hui ce mélange d'immeubles anciens, de villas et de résidences plus récentes.",
+  "Carabacel, dont le nom viendrait du celte « car » (colline, mont, rocher), désigne le secteur situé juste au nord de la Vieille-Ville, au-delà du Paillon. Développé autour du pont Saint-Antoine devenu le « Pont Vieux », puis structuré par le plan régulateur du Consiglio d'Ornato dans les années 1850, le boulevard Carabacel est achevé fin 1865. Ce quartier entre la gare et Cimiez conserve aujourd'hui ce mélange d'immeubles anciens, de villas et de résidences plus récentes, à proximité de la place Wilson et du MAMAC.",
 ];
 
 const blocks = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Porte claquée, cylindre grippé à Saint-Roch : j'interviens 24h/24 dans ce quartier populaire et dense, y compris pour sécuriser rapidement une porte après une tentative d'effraction avant de proposer une solution durable. Les immeubles très sollicités par un usage quotidien intense demandent souvent un entretien régulier des cylindres : je pose généralement un cylindre Cisa ou Vak fiable, avec intervention préventive pour éviter un blocage complet.",
-  "Anciennement appelé Roquebillière, le quartier fut ravagé par l'épidémie de peste de 1631, avant de rester une étendue agricole jusqu'à la fin du XIXe siècle. La caserne Auvare s'y installe alors, occupée par le 6e puis le 22e bataillon de chasseurs alpins — les « Diables Bleus » qui ont donné leur surnom à la rue voisine. Elle ferme en 1995, avant de devenir un campus universitaire en 2003, transformant une partie du bâti du quartier.",
+  "Anciennement appelé Roquebillière, le quartier fut ravagé par l'épidémie de peste de 1631, avant de rester une étendue agricole jusqu'à la fin du XIXe siècle. La caserne Auvare s'y installe alors, occupée par le 6e puis le 22e bataillon de chasseurs alpins — les « Diables Bleus » qui ont donné leur surnom à la rue voisine. Elle ferme en 1995, avant de devenir un campus universitaire en 2003, transformant une partie du bâti du quartier autour de la place Saint-Roch, son église classée, et du marché voisin.",
 ];
 
 const blocks = [

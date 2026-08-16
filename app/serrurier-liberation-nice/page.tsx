@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "Porte claquée, cylindre grippé au quartier Libération : j'interviens 24h/24 dans ce secteur populaire et vivant, où le passage intense autour du marché couvert use les cylindres de porte plus vite que la moyenne. Sur les immeubles du début et du milieu du XXe siècle qui bordent l'avenue Malausséna, je pose le plus souvent un cylindre Vak ou Picard adapté au mécanisme déjà en place, pour un dépannage rapide sans attendre l'usure complète de la serrure.",
-  "Le quartier s'est développé au XIXe siècle autour de l'avenue Malausséna, dynamisé par l'arrivée de la Gare du Sud en 1892. Il est aussi marqué par la mémoire des résistants tombés place du Général-de-Gaulle le 28 août 1944. L'arrivée du tramway et la rénovation récente de la Gare du Sud ont encore accéléré le renouvellement du bâti, un mélange d'immeubles anciens et de constructions plus récentes qui demande une méthode de diagnostic adaptée à chaque cas.",
+  "Porte claquée, cylindre grippé au quartier Libération : j'interviens 24h/24 dans ce secteur populaire et vivant, où le passage intense autour du Marché de la Libération, avenue Malausséna, use les cylindres de porte plus vite que la moyenne. Sur les immeubles du début et du milieu du XXe siècle qui bordent cette avenue, je pose le plus souvent un cylindre Vak ou Picard adapté au mécanisme déjà en place, pour un dépannage rapide sans attendre l'usure complète de la serrure.",
+  "Le quartier s'est développé au XIXe siècle autour de l'avenue Malausséna, dynamisé par l'arrivée de la Gare du Sud en 1892. Il est aussi marqué par la mémoire des résistants tombés place du Général-de-Gaulle le 28 août 1944. L'arrivée de la ligne 1 du tramway et la rénovation récente de la Gare du Sud ont encore accéléré le renouvellement du bâti, un mélange d'immeubles anciens et de constructions plus récentes qui demande une méthode de diagnostic adaptée à chaque cas.",
 ];
 
 const blocks = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier au quartier des Musiciens : je diagnostique par téléphone et j'interviens 24h/24 dans ce secteur dense proche de la gare de Nice-Ville, où le passage quotidien use les cylindres de hall plus vite que la moyenne. Sur les portes d'immeubles bourgeois des rues Verdi, Rossini ou Gounod, je pose le plus souvent un cylindre Fichet ou Picard compatible avec le mécanisme d'origine, plutôt que de remplacer toute la serrure sur une porte de caractère.",
-  "Le quartier tient son nom de ses rues, toutes baptisées en hommage à des compositeurs — Mozart, Verdi, Berlioz, Rossini, Gounod, Beethoven. Il s'est développé à la fin du XIXe siècle après l'arrivée du chemin de fer, quand la haute société recherchait des immeubles élégants près de la gare. Simone Veil elle-même évoquait dans ses mémoires l'immeuble bourgeois du quartier que ses parents avaient dû quitter à la fin des années 1920. Ce patrimoine explique la densité de portes et de serrures anciennes du secteur.",
+  "Le quartier tient son nom de ses rues, toutes baptisées en hommage à des compositeurs — Mozart, Verdi, Berlioz, Rossini, Gounod, Beethoven, Paganini. Il s'est développé à la fin du XIXe siècle après l'arrivée du chemin de fer, quand la haute société recherchait des immeubles élégants près de la gare. Simone Veil elle-même évoquait dans ses mémoires l'immeuble bourgeois du quartier que ses parents avaient dû quitter à la fin des années 1920. Ce patrimoine explique la densité de portes et de serrures anciennes du secteur, entre le boulevard Victor-Hugo et l'avenue Thiers.",
 ];
 
 const blocks = [
