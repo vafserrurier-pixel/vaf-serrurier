@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal à Rimiez : j'interviens 24h/24 sur ce quartier résidentiel calme, où l'âge moyen plus élevé que la moyenne niçoise (47 ans) va souvent de pair avec des serrures installées depuis longtemps. Je privilégie systématiquement la réparation quand elle est possible, avec un cylindre Heraclès ou Fichet compatible, plutôt qu'un remplacement complet.",
-  "Rimiez s'est développé au XIXe siècle comme quartier résidentiel sur les hauteurs de Nice, dans la continuité de Cimiez tout proche, à l'époque où l'aristocratie européenne recherchait ces collines pour leur climat. Le quartier compte aujourd'hui plus de 6 300 habitants sur 2,1 km², avec un bâti qui mêle villas, petites résidences et quelques ensembles collectifs dans un cadre verdoyant et calme.",
+  "Rimiez s'est développé au XIXe siècle comme quartier résidentiel sur les hauteurs de Nice, dans la continuité de Cimiez tout proche, à l'époque où l'aristocratie européenne recherchait ces collines pour leur climat. Le quartier compte aujourd'hui plus de 6 300 habitants sur 2,1 km², avec un bâti qui mêle villas, petites résidences et quelques ensembles collectifs le long de l'avenue de Rimiez, dans un cadre verdoyant et calme.",
 ];
 
 const blocks = [

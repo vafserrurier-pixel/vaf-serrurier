@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrurier à Bon Voyage : j'interviens 24h/24 dans ce quartier résidentiel sur les hauteurs proches du port, où le turnover locatif plus élevé que la moyenne génère des demandes fréquentes de changement de serrure entre deux locataires. Je pose généralement un cylindre Vak ou Picard neuf après un état des lieux, avec la même transparence sur le tarif que la demande vienne d'un propriétaire ou d'un locataire.",
-  "Développé pour l'essentiel au XXe siècle autour de sa cité de transition, Bon Voyage mêle aujourd'hui immeubles collectifs et quelques villas, avec environ 3 900 habitants au profil plutôt jeune (34 ans en moyenne) et majoritairement locataire. Ce profil démographique explique la fréquence des demandes liées aux changements de locataires, une configuration que je connais bien.",
+  "Développé pour l'essentiel au XXe siècle autour de sa cité de transition, Bon Voyage mêle aujourd'hui immeubles collectifs et quelques villas, avec environ 3 900 habitants au profil plutôt jeune (34 ans en moyenne) et majoritairement locataire. Ce profil démographique explique la fréquence des demandes liées aux changements de locataires, une configuration que je connais bien, entre la rue Fenoglio-de-Briga, la rue Général-Tordo et la route de Turin.",
 ];
 
 const blocks = [

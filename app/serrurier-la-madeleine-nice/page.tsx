@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à La Madeleine : j'interviens 24h/24 dans ce quartier populaire accroché entre mer et collines, aussi bien pour un petit immeuble ancien que pour une maison de ville sur les ruelles en pente du vallon. Je diagnostique la serrure en place avant toute intervention, avec le plus souvent un cylindre Vak ou Fichet adapté au bâti, qu'il s'agisse d'un gond fatigué ou d'une porte qui a bougé avec le temps.",
-  "La Madeleine s'étire depuis 1619 autour de l'église paroissiale Sainte-Marie-Madeleine, du carrefour Magnan jusqu'au chemin du Génie. Le quartier comptait mille habitants en 1900, dont un cinquième d'origine italienne, et trois mille en 1925 avec l'arrivée de nouveaux immigrants grecs, russes et arméniens. Cette histoire cosmopolite a forgé un bâti varié et un caractère populaire affirmé, avec des logements occupés par les mêmes familles depuis plusieurs générations.",
+  "La Madeleine s'étire depuis 1619 autour de l'église paroissiale Sainte-Marie-Madeleine, le long du boulevard de la Madeleine, du carrefour Magnan jusqu'au chemin du Génie. Le quartier comptait mille habitants en 1900, dont un cinquième d'origine italienne, et trois mille en 1925 avec l'arrivée de nouveaux immigrants grecs, russes et arméniens. Cette histoire cosmopolite a forgé un bâti varié et un caractère populaire affirmé, avec des logements occupés par les mêmes familles depuis plusieurs générations.",
 ];
 
 const blocks = [

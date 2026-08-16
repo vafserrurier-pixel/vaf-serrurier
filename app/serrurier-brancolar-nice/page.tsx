@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque au Brancolar : j'interviens 24h/24 sur ce quartier en pleine transformation, aussi bien sur les nouveaux programmes résidentiels que sur les grands ensembles plus anciens. Sur les logements neufs de l'ancien site Enedis, j'interviens souvent pour la personnalisation d'un accès : ajout d'un cylindre Cisa plus résistant ou ajustement après une pose un peu rapide en sortie de chantier.",
-  "L'avenue de Brancolar, qui donne son nom au quartier, a été ouverte au XIXe siècle dans le prolongement de Cimiez. Depuis le départ d'Enedis de son ancien site en 2021, le foncier a été racheté par Covivio pour développer un programme résidentiel ouvert sur un parc urbain. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction — deux réalités très différentes pour la serrurerie que je traite au quotidien.",
+  "L'avenue de Brancolar, qui donne son nom au quartier, a été ouverte au XIXe siècle dans le prolongement de Cimiez. Depuis le départ d'Enedis de son ancien site en 2021, le foncier a été racheté par Covivio pour développer un programme résidentiel ouvert sur un parc urbain. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction, à proximité du boulevard des 2 Corniches — deux réalités très différentes pour la serrurerie que je traite au quotidien.",
 ];
 
 const blocks = [
