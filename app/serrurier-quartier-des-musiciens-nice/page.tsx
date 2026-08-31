@@ -102,6 +102,7 @@ export default function SerrurierQuartierDesMusiciensNicePage() {
         { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
+        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />
