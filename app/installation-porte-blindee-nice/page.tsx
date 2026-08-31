@@ -193,8 +193,8 @@ export default function InstallationPorteBlindeeNicePage() {
         },
         extra: (
           <PriceReminder
-            priceLabel="1 490 € TTC"
-            note="Devis détaillé confirmé avant tout engagement, selon votre porte"
+            priceLabel="à partir de 2 689 € TTC"
+            note="Prix pour une porte de taille standard avec serrure 5 points en applique — un devis sur place reste systématique avant tout engagement"
             locale="fr"
           />
         ),
@@ -238,8 +238,8 @@ export default function InstallationPorteBlindeeNicePage() {
         },
         extra: (
           <PriceReminder
-            priceLabel="€1,490 incl. VAT"
-            note="Detailed quote confirmed before any commitment, based on your door"
+            priceLabel="from €2,689 incl. VAT"
+            note="Price for a standard door size with a 5-point rim lock — an on-site quote is always required before any commitment"
             locale="en"
           />
         ),
