@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
+import BrandsSection from "@/components/BrandsSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrure-carenee-nice/" },
@@ -13,21 +14,35 @@ const sections = [
   {
     heading: "Qu'est-ce qu'une serrure carénée",
     paragraphs: [
-      "Une serrure carénée est une serrure en applique — posée sur la face intérieure de la porte plutôt qu'encastrée dedans — dont le boîtier est protégé par un carénage métallique. Ce carénage empêche un cambrioleur de s'attaquer directement au mécanisme à la pince ou à la perceuse, une faiblesse classique des serrures en applique non protégées.",
-      "Le modèle à 5 points répartit la résistance sur plusieurs points d'ancrage dans le dormant, ce qui limite le risque de faire céder la porte par arrachement plutôt que par la serrure elle-même.",
+      "Une serrure carénée est une serrure en applique, posée sur la face intérieure de la porte plutôt qu'encastrée dedans. Son boîtier est protégé par un carénage métallique qui empêche un cambrioleur de s'attaquer directement au mécanisme à la pince ou à la perceuse. C'est justement cette exposition du boîtier qui fait la faiblesse classique d'une serrure en applique non protégée.",
+      "Le modèle à 5 points répartit la résistance sur plusieurs points d'ancrage dans le dormant. Cela limite le risque de faire céder la porte par arrachement plutôt que par la serrure elle-même, un mode d'effraction fréquent sur les portes équipées d'une simple serrure à un point.",
     ],
   },
   {
     heading: "Un renfort intermédiaire, pas un blindage complet",
     paragraphs: [
-      "C'est une solution efficace quand votre porte reste saine mais que la serrure en place n'offre plus une résistance suffisante — sans passer par un blindage complet ou un bloc-porte neuf. Le coût reste nettement inférieur à une installation de porte blindée, pour un vrai gain de résistance sur l'accès.",
-      "Si le bâti ou la porte elle-même sont fatigués, en revanche, une serrure carénée seule ne suffit pas : je vous oriente alors vers un blindage ou un bloc-porte, plutôt que de poser un renfort sur une base fragile.",
+      "C'est une solution efficace quand votre porte reste saine mais que la serrure en place n'offre plus une résistance suffisante, sans passer par un blindage complet ou un bloc-porte neuf. Le coût reste nettement inférieur à une installation de porte blindée, pour un vrai gain de résistance sur l'accès.",
+      "Si le bâti ou la porte elle-même sont fatigués, en revanche, une serrure carénée seule ne suffit pas. Je vous oriente alors vers un blindage ou un bloc-porte, plutôt que de poser un renfort sur une base fragile qui ne tiendrait pas dans la durée.",
     ],
   },
   {
     heading: "Compatible avec la plupart des portes existantes",
     paragraphs: [
       "La pose en applique ne nécessite pas de modifier la structure de la porte, contrairement à une serrure encastrée. Elle convient aussi bien à une porte en bois qu'à une porte métallique, en résidence principale comme en copropriété où le règlement impose parfois de préserver l'aspect extérieur du palier.",
+    ],
+  },
+  {
+    heading: "Les marques que je pose à Nice",
+    paragraphs: [
+      "Je travaille avec des marques reconnues pour leurs serrures carénées, en particulier Héraclès, référence française sur ce type de mécanisme et courante sur les portes d'entrée à Nice. Vachette et Bricard proposent également des modèles fiables selon la configuration de votre porte.",
+      "Le choix de la marque compte moins que le diagnostic préalable : l'épaisseur du carénage, la qualité de l'acier et la précision du réglage des points d'ancrage font la vraie différence sur la résistance finale, bien plus qu'une référence commerciale à elle seule.",
+    ],
+  },
+  {
+    heading: "Cylindre standard, serrure carénée ou blindage : comment choisir",
+    paragraphs: [
+      "Un simple remplacement de cylindre suffit quand la porte et son bâti sont sains et que seul le mécanisme de verrouillage montre des signes de faiblesse. La serrure carénée intervient un cran au-dessus, quand vous voulez renforcer significativement la résistance à l'effraction sans reprendre toute la porte. Le blindage complet ou le bloc-porte neuf restent la solution quand la porte elle-même, ou le bâti autour, ne tiennent plus la route.",
+      "Je vous conseille selon l'état réel constaté sur place, pas selon la solution la plus chère. Une bonne partie de mon travail consiste justement à éviter un suréquipement inutile sur une porte qui n'en a pas besoin.",
     ],
   },
 ];
@@ -58,6 +73,11 @@ const faq = [
     answer:
       "Généralement une demi-journée, selon l'état de la porte et les ajustements nécessaires pour un réglage fin des points d'ancrage.",
   },
+  {
+    question: "Quelles marques de serrures carénées installez-vous ?",
+    answer:
+      "Principalement Héraclès, référence sur ce type de mécanisme, ainsi que Vachette et Bricard selon la configuration de votre porte. Je vous oriente vers le modèle adapté après diagnostic, pas vers une marque par défaut.",
+  },
 ];
 
 export default function SerrureCareneeNicePage() {
@@ -74,11 +94,19 @@ export default function SerrureCareneeNicePage() {
         alt: "Serrure carénée 5 points en applique posée sur une porte à Nice",
       }}
       extra={
-        <PriceReminder
-          priceLabel="1 490 € TTC"
-          note="Pose et réglage inclus, pour une porte standard — devis confirmé avant intervention"
-          locale="fr"
-        />
+        <>
+          <PriceReminder
+            priceLabel="1 490 € TTC"
+            note="Pose et réglage inclus, pour une porte standard. Devis confirmé avant intervention."
+            locale="fr"
+          />
+          <section className="mx-auto max-w-4xl px-4 py-10">
+            <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
+              Marques de serrures que je pose
+            </h2>
+            <BrandsSection locale="fr" />
+          </section>
+        </>
       }
       processSteps={[
         {
