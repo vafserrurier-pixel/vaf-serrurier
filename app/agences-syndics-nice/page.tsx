@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import TrustBadges from "@/components/TrustBadges";
 import { CheckIcon } from "@/components/Icons";
@@ -31,9 +32,11 @@ const sections = [
     ],
   },
   {
-    heading: "Ouvert aux syndics de copropriété",
+    heading: "Audit copropriété & entretien préventif",
     paragraphs: [
-      "Je n'ai pas encore de partenariat établi avec un syndic, mais je suis disponible pour accompagner une copropriété sur l'entretien courant de ses accès : portes de hall, digicodes, gâches électriques, blocs boîtes aux lettres, sur demande du syndic ou d'un résident mandaté. Si vous gérez une copropriété à Nice et cherchez un interlocuteur unique plutôt qu'un prestataire changeant, contactez-moi pour en discuter.",
+      "Sur demande du syndic ou du conseil syndical, je réalise un passage complet de l'immeuble : portes de hall, ferme-portes, blocs boîtes aux lettres, accès parking, locaux techniques, gâches. L'objectif est de repérer ce qui vieillit mal avant que ça devienne une urgence à traiter dans la précipitation.",
+      "Le livrable est un devis détaillé poste par poste, avec l'état constaté de chaque mécanisme et mes recommandations (entretien, réglage ou remplacement). Le prix dépend du nombre d'accès et du temps passé sur place : il repose sur le déplacement, la main-d'œuvre à 75 € de l'heure, et le matériel remplacé le cas échéant — toujours communiqué avant intervention.",
+      "Je n'ai pas encore de contrat d'entretien récurrent avec un syndic à ce jour, mais cette prestation est disponible dès maintenant, à la demande. Si vous gérez une copropriété à Nice, contactez-moi pour en discuter.",
     ],
   },
   {
@@ -58,7 +61,12 @@ const faq = [
   {
     question: "Intervenez-vous pour les syndics de copropriété ?",
     answer:
-      "Je n'ai pas encore de partenariat établi avec un syndic, mais je suis ouvert à en construire un. Contactez-moi pour en discuter.",
+      "Oui, via un audit copropriété et entretien préventif : passage complet de l'immeuble, devis détaillé poste par poste. Je n'ai pas encore de contrat récurrent avec un syndic, mais la prestation est disponible dès maintenant, à la demande.",
+  },
+  {
+    question: "Combien coûte un audit de copropriété ?",
+    answer:
+      "Le prix dépend du nombre d'accès et du temps passé sur place : main-d'œuvre à 75 € de l'heure, déplacement et matériel remplacé le cas échéant, toujours communiqué avant intervention.",
   },
   {
     question: "Comment se passe un changement de serrure entre deux locataires ?",
@@ -120,6 +128,17 @@ export default function AgencesSyndicsNicePage() {
                 </li>
               ))}
             </ul>
+            <p className="text-sm text-slate mt-4">
+              Pour la gestion des accès en copropriété (clés de hall, digicode,
+              organigramme), j&apos;ai détaillé qui décide et qui paie dans{" "}
+              <Link
+                href="/blog/cles-hall-digicode-organigramme-copropriete/"
+                className="text-steel underline"
+              >
+                ce guide
+              </Link>
+              .
+            </p>
           </section>
         </>
       }

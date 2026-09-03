@@ -73,6 +73,15 @@ const posts = [
     accent: "border-t-navy",
     tagClass: "bg-navy/10 text-navy",
   },
+  {
+    href: "/blog/cles-hall-digicode-organigramme-copropriete/",
+    title: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
+    excerpt:
+      "Serrure de hall, digicode, organigramme de clés : qui décide, qui paie, et ce qui détermine le prix d'une intervention en copropriété.",
+    category: "Comprendre",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+  },
 ];
 
 export default function BlogPage() {
