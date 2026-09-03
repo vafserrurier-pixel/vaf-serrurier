@@ -135,6 +135,15 @@ export function CheckIcon({ className }: IconProps) {
   );
 }
 
+export function VideoIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <rect x="3" y="6" width="12" height="12" rx="1.5" />
+      <path d="M15 10.5 21 7v10l-6-3.5Z" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function ClockIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">

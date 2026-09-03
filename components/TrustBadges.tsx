@@ -1,4 +1,4 @@
-import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon, WrenchIcon } from "./Icons";
+import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon, WrenchIcon, VideoIcon } from "./Icons";
 import { business } from "@/lib/business";
 import type { Locale } from "@/lib/locale";
 
@@ -9,6 +9,7 @@ const strings = {
     insurance: (provider: string) => `RC Pro ${provider} & garantie décennale`,
     invoice: "Facture conforme aux assureurs",
     reviews: (rating: string, count: number) => `${rating}/5 sur ${count}+ avis Google`,
+    video: "Vidéo avant/après sur demande",
   },
   en: {
     experience: (years: number) => `${years} years of experience`,
@@ -16,6 +17,7 @@ const strings = {
     insurance: (provider: string) => `${provider} liability & 10-year insurance`,
     invoice: "Invoice compliant with insurers",
     reviews: (rating: string, count: number) => `${rating}/5 from ${count}+ Google reviews`,
+    video: "Before/after video on request",
   },
 };
 
@@ -31,6 +33,7 @@ export default function TrustBadges({ locale = "fr" }: { locale?: Locale }) {
       Icon: StarIcon,
       label: t.reviews(business.reviews.rating.toFixed(1), business.reviews.count),
     },
+    { Icon: VideoIcon, label: t.video },
   ];
   return (
     <div className="flex flex-wrap justify-center gap-3">

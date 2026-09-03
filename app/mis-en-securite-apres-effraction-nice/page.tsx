@@ -73,6 +73,11 @@ const faq = [
     answer:
       "Dans la majorité des cas, oui, sous réserve du dépôt de plainte et des conditions de votre contrat. Je vous fournis une facture détaillée pour appuyer votre déclaration de sinistre.",
   },
+  {
+    question: "Je ne suis pas sur place (propriétaire absent, syndic, gestionnaire) : puis-je voir ce qui a été fait ?",
+    answer:
+      "Oui, sur simple demande je vous transmets une courte vidéo de l'intervention (avant/après) par WhatsApp ou email — utile si vous n'êtes pas présent au moment des travaux.",
+  },
 ];
 
 export default function MiseEnSecuriteApresEffractionNicePage() {

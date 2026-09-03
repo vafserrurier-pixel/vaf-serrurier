@@ -64,6 +64,15 @@ const posts = [
     accent: "border-t-steel",
     tagClass: "bg-steel/10 text-steel",
   },
+  {
+    href: "/blog/qui-paie-changement-serrure-location/",
+    title: "Location : qui paie le changement de serrure ?",
+    excerpt:
+      "Clés perdues, cambriolage, changement de locataire : la règle générale pour savoir qui du propriétaire ou du locataire prend en charge la facture.",
+    category: "Comprendre",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+  },
 ];
 
 export default function BlogPage() {
