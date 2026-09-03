@@ -122,6 +122,7 @@ export default function OuvertureDeCoffreFortNicePage() {
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />

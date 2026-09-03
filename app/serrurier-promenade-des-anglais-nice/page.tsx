@@ -91,6 +91,7 @@ export default function SerrurierPromenadeDesAnglaisNicePage() {
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
+        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />

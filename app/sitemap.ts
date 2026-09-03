@@ -11,6 +11,7 @@ const paths = [
   "ouverture-de-porte-nice",
   "depannage-serrurier-nice",
   "changement-serrure-nice",
+  "serrure-carenee-nice",
   "installation-porte-blindee-nice",
   "mis-en-securite-apres-effraction-nice",
   "ouverture-de-coffre-fort-nice",
