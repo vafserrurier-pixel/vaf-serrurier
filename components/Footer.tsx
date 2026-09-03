@@ -13,6 +13,7 @@ const strings = {
     whatsapp: "Écrire sur WhatsApp",
     email: "Écrire par email",
     areas: "Zones d'intervention",
+    pros: "Agences & syndics",
     legal: "Informations légales",
     legalNotice: "Mentions légales",
     terms: "CGU",
@@ -29,6 +30,7 @@ const strings = {
     whatsapp: "Message on WhatsApp",
     email: "Send an email",
     areas: "Areas covered",
+    pros: "Agencies & syndics",
     legal: "Legal information",
     legalNotice: "Legal notice",
     terms: "Terms of use",
@@ -55,6 +57,9 @@ export default function Footer() {
           <p className="text-sm mt-1">SIRET {business.siret}</p>
           <Link href="/a-propos/" className="block text-sm mt-3 hover:underline">
             {t.who}
+          </Link>
+          <Link href="/agences-syndics-nice/" className="block text-sm mt-1 hover:underline">
+            {t.pros}
           </Link>
         </div>
         <div>
