@@ -109,8 +109,8 @@ export default function AgencesSyndicsNicePage() {
       breadcrumbLabel="Agences & syndics"
       path="/agences-syndics-nice/"
       image={{
-        src: "/images/pool/porte-immeuble-interphone-securisee-nice.webp",
-        alt: "Porte d'immeuble avec interphone, sécurisée à Nice",
+        src: "/images/agences-syndics-remise-de-cles.webp",
+        alt: "Remise d'un trousseau de clés entre deux personnes",
       }}
       extra={
         <>
