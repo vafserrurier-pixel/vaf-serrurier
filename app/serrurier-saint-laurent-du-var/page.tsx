@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
 
 export const metadata: Metadata = {
@@ -25,7 +26,13 @@ const blocks = [
     heading: "Cap 3000 et ses copropriétés récentes",
     paragraphs: [
       "Ouvert en 1969, Cap 3000 est aujourd'hui l'un des plus grands centres commerciaux des Alpes-Maritimes, avec près de 300 enseignes. Autour, la commune a vu se développer des résidences et copropriétés plus récentes que le Vieux-Village, avec leurs propres besoins : serrures de hall, digicodes, gâches électriques à entretenir sur la durée.",
-      "J'interviens aussi bien pour un particulier que pour l'entretien courant d'une copropriété dans ce secteur, selon les mêmes règles que partout ailleurs : diagnostic avant intervention, prix annoncé avant de commencer.",
+      <>
+            J&apos;interviens aussi bien pour un particulier que pour l&apos;entretien courant d&apos;une{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              copropriété
+            </Link>{" "}
+            dans ce secteur, selon les mêmes règles que partout ailleurs : diagnostic avant intervention, prix annoncé avant de commencer.
+          </>,
     ],
   },
   {

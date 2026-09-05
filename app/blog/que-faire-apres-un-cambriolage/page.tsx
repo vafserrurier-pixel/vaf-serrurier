@@ -143,7 +143,11 @@ export default function QueFaireApresUnCambriolagePage() {
           <p>
             Une effraction sur une porte palière ou une tentative sur la porte de hall
             concerne aussi les autres occupants de l&apos;immeuble. Signalez l&apos;incident
-            au syndic ou au gardien s&apos;il y en a un : ça permet de vérifier si
+            au{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              syndic
+            </Link>{" "}
+            ou au gardien s&apos;il y en a un : ça permet de vérifier si
             d&apos;autres logements ont été visés, et parfois de déclencher un renforcement
             de la porte d&apos;entrée collective (digicode, gâche électrique, vidéosurveillance).
             Prévenir vos voisins directs reste aussi un bon réflexe, ne serait-ce que pour

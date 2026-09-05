@@ -155,6 +155,10 @@ export default function SerrureMultipointsPage() {
         Voir aussi :{" "}
         <Link href="/changement-serrure-nice/" className="text-steel underline">
           changement de serrure
+        </Link>
+        ,{" "}
+        <Link href="/serrure-carenee-nice/" className="text-steel underline">
+          serrure carénée 5 points
         </Link>{" "}
         et{" "}
         <Link href="/installation-porte-blindee-nice/" className="text-steel underline">

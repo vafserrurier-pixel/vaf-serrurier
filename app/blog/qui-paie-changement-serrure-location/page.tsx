@@ -159,10 +159,14 @@ export default function QuiPaieChangementSerrureLocationPage() {
         Voir aussi :{" "}
         <Link href="/changement-serrure-nice/" className="text-steel underline">
           changement de serrure
-        </Link>{" "}
-        et{" "}
+        </Link>
+        ,{" "}
         <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
           mise en sécurité après effraction
+        </Link>{" "}
+        et{" "}
+        <Link href="/agences-syndics-nice/" className="text-steel underline">
+          serrurier partenaire agences & syndics
         </Link>
         .
       </p>
