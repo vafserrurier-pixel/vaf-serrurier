@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -17,7 +18,9 @@ const blocks = [
   {
     heading: "Immeubles Belle Époque et copropriétés exigeantes",
     paragraphs: [
-      "Les halls d'immeuble du Carré d'Or sont souvent richement décorés, avec des règlements de copropriété stricts sur l'aspect des équipements. Je m'adapte à ces contraintes pour toute intervention sur une porte de hall, un digicode ou une gâche électrique.",
+      <>
+            Les halls d&apos;immeuble du Carré d&apos;Or sont souvent richement décorés, avec des règlements de <Link href="/agences-syndics-nice/" className="text-steel underline">copropriété</Link> stricts sur l&apos;aspect des équipements. Je m&apos;adapte à ces contraintes pour toute intervention sur une porte de hall, un digicode ou une gâche électrique.
+          </>,
     ],
   },
   {

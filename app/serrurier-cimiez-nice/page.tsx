@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ const blocks = [
   {
     heading: "Sécurisation des halls de copropriété",
     paragraphs: [
-      "Les copropriétés de Cimiez sont généralement bien entretenues, avec des règlements exigeants sur l'esthétique des parties communes. Pour un digicode, une gâche électrique ou une porte de hall, je propose des solutions qui respectent ce niveau de finition, sur demande d'un syndic ou d'un résident mandaté.",
+      <>
+            Les copropriétés de Cimiez sont généralement bien entretenues, avec des règlements exigeants sur l&apos;esthétique des parties communes. Pour un digicode, une gâche électrique ou une porte de hall, je propose des solutions qui respectent ce niveau de finition, sur demande d&apos;un <Link href="/agences-syndics-nice/" className="text-steel underline">syndic</Link> ou d&apos;un résident mandaté.
+          </>,
     ],
   },
   {

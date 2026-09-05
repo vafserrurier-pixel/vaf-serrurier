@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -23,7 +24,13 @@ const blocks = [
   {
     heading: "Locations saisonnières face à la mer",
     paragraphs: [
-      "Le secteur compte de nombreux appartements loués à la semaine ou au mois. Pour les propriétaires ou gestionnaires, je peux intervenir rapidement en cas de porte claquée entre deux locations, sans retarder l'arrivée des voyageurs suivants.",
+      <>
+            Le secteur compte de nombreux appartements loués à la semaine ou au mois. Pour les propriétaires ou{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              gestionnaires
+            </Link>
+            , je peux intervenir rapidement en cas de porte claquée entre deux locations, sans retarder l&apos;arrivée des voyageurs suivants.
+          </>,
     ],
   },
   {

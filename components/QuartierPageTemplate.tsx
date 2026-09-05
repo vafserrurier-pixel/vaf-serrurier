@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
 import ProcessSteps from "./ProcessSteps";
@@ -16,7 +17,7 @@ import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
 import { pickPortrait } from "@/lib/photos";
 
-export type ContentBlock = { heading: string; paragraphs: string[] };
+export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
 export default function QuartierPageTemplate({
   quartier,

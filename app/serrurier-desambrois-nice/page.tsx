@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -35,7 +36,9 @@ const blocks = [
   {
     heading: "Digicodes et portes de hall en copropriété",
     paragraphs: [
-      "Pour les halls d'immeuble de ces copropriétés souvent bien entretenues, j'interviens sur les digicodes, gâches électriques et portes de hall, à la demande d'un syndic ou d'un résident mandaté, avec la même attention portée à l'esthétique du bâti ancien.",
+      <>
+            Pour les halls d&apos;immeuble de ces copropriétés souvent bien entretenues, j&apos;interviens sur les digicodes, gâches électriques et portes de hall, à la demande d&apos;un <Link href="/agences-syndics-nice/" className="text-steel underline">syndic</Link> ou d&apos;un résident mandaté, avec la même attention portée à l&apos;esthétique du bâti ancien.
+          </>,
     ],
   },
   {

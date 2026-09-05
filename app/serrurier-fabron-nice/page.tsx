@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ const blocks = [
   {
     heading: "Résidences et copropriétés",
     paragraphs: [
-      "Le secteur compte aussi des résidences plus récentes, avec des serrures multipoints standard. J'interviens sur les portes d'appartement comme sur les parties communes, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+      <>
+            Le secteur compte aussi des résidences plus récentes, avec des serrures multipoints standard. J&apos;interviens sur les portes d&apos;appartement comme sur les parties communes, digicodes et gâches électriques, à la demande d&apos;un <Link href="/agences-syndics-nice/" className="text-steel underline">syndic</Link> ou d&apos;un résident mandaté.
+          </>,
     ],
   },
   {

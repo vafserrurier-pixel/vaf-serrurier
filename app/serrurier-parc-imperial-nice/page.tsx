@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ const blocks = [
   {
     heading: "Copropriétés bien entretenues",
     paragraphs: [
-      "Les résidences du secteur sont généralement bien entretenues, avec des attentes précises sur la finition des interventions en parties communes : digicode, gâche électrique, porte de hall.",
+      <>
+            Les résidences du secteur sont généralement bien entretenues, avec des attentes précises sur la finition des interventions en <Link href="/agences-syndics-nice/" className="text-steel underline">parties communes</Link> : digicode, gâche électrique, porte de hall.
+          </>,
     ],
   },
   {

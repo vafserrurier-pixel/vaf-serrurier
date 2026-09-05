@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
@@ -35,7 +36,9 @@ const blocks = [
   {
     heading: "Interventions en copropriété",
     paragraphs: [
-      "Pour les immeubles collectifs du quartier, j'interviens sur les portes de hall, les gâches électriques et les digicodes, à la demande d'un syndic ou d'un résident mandaté.",
+      <>
+            Pour les immeubles collectifs du quartier, j&apos;interviens sur les portes de hall, les gâches électriques et les digicodes, à la demande d&apos;un <Link href="/agences-syndics-nice/" className="text-steel underline">syndic</Link> ou d&apos;un résident mandaté.
+          </>,
     ],
   },
   {
