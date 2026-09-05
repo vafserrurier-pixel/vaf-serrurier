@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
 import { zones } from "@/lib/business";
 
@@ -31,7 +32,13 @@ const blocks = [
   {
     heading: "Des copropriétés de toutes tailles",
     paragraphs: [
-      "Petits immeubles du Vieux-Nice, grandes copropriétés Belle Époque du Carré d'Or ou de Cimiez, résidences plus récentes de Magnan ou de la Promenade des Anglais : j'interviens sur toutes ces configurations. Portes de hall, digicodes et gâches électriques, à la demande d'un syndic ou d'un résident mandaté.",
+      <>
+            Petits immeubles du Vieux-Nice, grandes copropriétés Belle Époque du Carré d&apos;Or ou de Cimiez, résidences plus récentes de Magnan ou de la Promenade des Anglais : j&apos;interviens sur toutes ces configurations. Portes de hall, digicodes et gâches électriques, à la demande d&apos;un{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              syndic
+            </Link>{" "}
+            ou d&apos;un résident mandaté.
+          </>,
     ],
   },
   {

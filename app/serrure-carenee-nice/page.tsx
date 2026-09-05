@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
 import BrandsSection from "@/components/BrandsSection";
@@ -28,7 +29,13 @@ const sections = [
   {
     heading: "Compatible avec la plupart des portes existantes",
     paragraphs: [
-      "La pose en applique ne nécessite pas de modifier la structure de la porte, contrairement à une serrure encastrée. Elle convient aussi bien à une porte en bois qu'à une porte métallique, en résidence principale comme en copropriété où le règlement impose parfois de préserver l'aspect extérieur du palier.",
+      <>
+            La pose en applique ne nécessite pas de modifier la structure de la porte, contrairement à une serrure encastrée. Elle convient aussi bien à une porte en bois qu&apos;à une porte métallique, en résidence principale comme en{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              copropriété
+            </Link>{" "}
+            où le règlement impose parfois de préserver l&apos;aspect extérieur du palier.
+          </>,
     ],
   },
   {

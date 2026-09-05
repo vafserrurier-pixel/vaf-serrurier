@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 
@@ -19,7 +20,13 @@ const sectionsFr = [
   {
     heading: "En copropriété à Nice",
     paragraphs: [
-      "Les règlements de copropriété imposent parfois une apparence extérieure identique sur le palier. Le blindage préserve souvent mieux l'esthétique existante, tandis qu'un bloc-porte doit respecter les finitions visibles imposées.",
+      <>
+            Les règlements de{" "}
+            <Link href="/agences-syndics-nice/" className="text-steel underline">
+              copropriété
+            </Link>{" "}
+            imposent parfois une apparence extérieure identique sur le palier. Le blindage préserve souvent mieux l&apos;esthétique existante, tandis qu&apos;un bloc-porte doit respecter les finitions visibles imposées.
+          </>,
     ],
   },
   {

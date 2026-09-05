@@ -14,7 +14,7 @@ import { builtCommunes, communeHref } from "@/lib/communes";
 import type { ReactNode } from "react";
 import type { Locale } from "@/lib/locale";
 
-export type ServiceSection = { heading: string; paragraphs: string[] };
+export type ServiceSection = { heading: string; paragraphs: ReactNode[] };
 export type ServiceImage = { src: string; alt: string };
 
 const strings = {
