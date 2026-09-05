@@ -29,7 +29,7 @@ export const communes = [
 // maillage (hub zones-intervention, pastilles accueil, mini-section pages
 // service, sitemap). Grandit une ville à la fois, à chaque nouvelle mise en
 // ligne, pour un flux de contenu frais régulier plutôt qu'un pic unique.
-export const builtCommunes = ["Èze", "Villefranche-sur-Mer"] as const;
+export const builtCommunes = ["Èze", "Villefranche-sur-Mer", "Saint-Laurent-du-Var"] as const;
 
 export function isCommuneBuilt(name: string): boolean {
   return (builtCommunes as readonly string[]).includes(name);
