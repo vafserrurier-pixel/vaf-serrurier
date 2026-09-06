@@ -12,7 +12,7 @@ export const business = {
   legalForm: "Société par actions simplifiée unipersonnelle (SASU) au capital de 1 000 €",
   rcs: "980 385 868 R.C.S. Nice",
   tagline: "Serrurier à Nice",
-  siret: "980 385 868 00024",
+  siret: "980 385 868 00032",
   // Année de début d'activité de Benoît comme serrurier (chez son frère à
   // Paris, avant de s'installer seul à Nice) — sert à calculer l'ancienneté
   // réelle affichée sur le site, jamais un chiffre fixe à mettre à jour.
