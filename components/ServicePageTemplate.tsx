@@ -7,6 +7,7 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import RelatedServicesGrid from "./RelatedServicesGrid";
+import { WhatsAppIcon } from "./Icons";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
@@ -23,6 +24,7 @@ const strings = {
     home: "Accueil",
     badge: "Disponible maintenant : devis gratuit par téléphone",
     call: "Appeler",
+    whatsapp: "Écrire sur WhatsApp",
     seePricing: "Voir les tarifs",
     howItWorks: "Comment se déroule mon intervention",
     faqTitle: "Questions fréquentes",
@@ -40,6 +42,7 @@ const strings = {
     home: "Home",
     badge: "Available now: free quote by phone",
     call: "Call",
+    whatsapp: "Message on WhatsApp",
     seePricing: "See pricing",
     howItWorks: "How my callout works",
     faqTitle: "Frequently asked questions",
@@ -130,6 +133,15 @@ export default function ServicePageTemplate({
                 className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
               >
                 {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+              </a>
+              <a
+                href={business.whatsapp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t.whatsapp}
+                className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
+              >
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"

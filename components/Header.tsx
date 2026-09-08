@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
-import { StarIcon, PhoneIcon } from "./Icons";
+import { StarIcon, PhoneIcon, WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { useLocale } from "@/lib/locale";
 
@@ -55,6 +55,7 @@ const strings = {
     everywhere: "Tout Nice et ses environs",
     reviewsSuffix: "avis",
     call: "Appeler maintenant",
+    whatsapp: "Écrire sur WhatsApp",
     openMenu: "Ouvrir le menu",
     home: "Retour à l'accueil",
     langSwitchLabel: "EN",
@@ -65,6 +66,7 @@ const strings = {
     everywhere: "All of Nice and surrounding areas",
     reviewsSuffix: "reviews",
     call: "Call now",
+    whatsapp: "Message on WhatsApp",
     openMenu: "Open menu",
     home: "Back to homepage",
     langSwitchLabel: "FR",
@@ -206,6 +208,15 @@ export default function Header() {
             >
               <PhoneIcon className="w-4 h-4" />
               {t.call}
+            </a>
+            <a
+              href={business.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t.whatsapp}
+              className="hidden sm:inline-flex items-center justify-center bg-emerald-600 text-white p-2 rounded-full hover:opacity-90"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
             </a>
             <button
               type="button"

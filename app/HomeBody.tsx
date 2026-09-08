@@ -15,7 +15,7 @@ import BrandsSection from "@/components/BrandsSection";
 import PricingTable from "@/components/PricingTable";
 import BlogPreview from "@/components/BlogPreview";
 import InsuranceBanner from "@/components/InsuranceBanner";
-import { PriceTagIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
+import { PriceTagIcon, HandshakeIcon, StarIcon, WhatsAppIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
@@ -148,6 +148,7 @@ const strings = {
     h1b: ", disponible 24h/24",
     lead: "Porte claquée, serrure bloquée, effraction : vous m'expliquez la situation, j'annonce un prix avant de me déplacer. Ce qui compte, c'est la transparence, pas les promesses.",
     call: "Appeler",
+    whatsapp: "Écrire sur WhatsApp",
     seePricing: "Voir les tarifs",
     heroAlt: "Benoît, artisan serrurier, à côté d'une serrure moderne posée à Nice",
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
@@ -214,6 +215,7 @@ const strings = {
     h1b: ", available 24/7",
     lead: "Door slammed shut, jammed lock, break-in: you explain the situation, I quote a price before I travel to you. What matters is transparency, not promises.",
     call: "Call",
+    whatsapp: "Message on WhatsApp",
     seePricing: "See pricing",
     heroAlt: "Benoît, locksmith, next to a modern lock fitted in Nice",
     introTitle: "A locksmith craftsman, not a platform of middlemen",
@@ -307,6 +309,15 @@ export default function HomeBody() {
                 className="inline-block whitespace-nowrap bg-urgent text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
                 {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+              </a>
+              <a
+                href={business.whatsapp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t.whatsapp}
+                className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
+              >
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"

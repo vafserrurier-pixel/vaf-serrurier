@@ -9,6 +9,7 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import CtaBlock from "./CtaBlock";
 import LazyMap from "./LazyMap";
 import BlogPreview from "./BlogPreview";
+import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
@@ -83,6 +84,15 @@ export default function SectorPageTemplate({
               className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
             >
               Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+            </a>
+            <a
+              href={business.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Écrire sur WhatsApp"
+              className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
+            >
+              <WhatsAppIcon className="w-5 h-5" />
             </a>
             <Link
               href="/tarifs-serrurier-nice/"

@@ -37,9 +37,9 @@ export const business = {
     display: "06 41 78 55 56",
     href: "tel:+33641785556",
   },
-  // Utilise le numéro mobile ci-dessus (seul numéro susceptible d'être relié à
-  // WhatsApp) : à confirmer par Benoît que ce numéro est bien actif sur WhatsApp
-  // avant mise en production.
+  // Utilise le numéro mobile ci-dessus. Numéro confirmé actif sur WhatsApp par
+  // Benoît (2026-09-08) : affiché dans le header, les héros de page, le footer
+  // et la barre mobile flottante.
   whatsapp: {
     display: "06 41 78 55 56",
     href: "https://wa.me/33641785556?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20serrurier%20%C3%A0%20Nice",
