@@ -247,7 +247,9 @@ export default function CommunePageTemplate({
         <h2 className="font-heading text-xl font-bold text-navy mb-4">
           Prenez rendez-vous avec votre serrurier à {commune}
         </h2>
-        <ContactForm services={relatedServices} />
+        <ContactForm
+          services={relatedServices.filter((service) => service.href !== "/tarifs-serrurier-nice/")}
+        />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
