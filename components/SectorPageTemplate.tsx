@@ -157,7 +157,7 @@ export default function SectorPageTemplate({
       <section className="bg-navy py-14">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="font-heading text-xl font-bold text-cream mb-4">Mes services</h2>
-          <ServiceGrid />
+          <ServiceGrid lieu={title.replace("Serrurier à ", "")} />
         </div>
       </section>
 

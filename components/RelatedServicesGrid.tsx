@@ -7,11 +7,15 @@ const moreLabel = { fr: "En savoir plus", en: "Learn more" };
 export default function RelatedServicesGrid({
   items,
   locale = "fr",
+  lieu,
 }: {
   items: { href: string; label: string }[];
   locale?: Locale;
+  /** Nom du quartier/commune à injecter dans les descriptions ("à Cagnes-sur-Mer"). */
+  lieu?: string;
 }) {
   const cards = serviceCardsByLocale[locale];
+  const place = lieu ?? "Nice";
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => {
@@ -28,7 +32,7 @@ export default function RelatedServicesGrid({
               </span>
             )}
             <p className="font-heading font-semibold text-navy mb-1.5">{item.label}</p>
-            {card && <p className="text-sm text-slate leading-relaxed">{card.text}</p>}
+            {card && <p className="text-sm text-slate leading-relaxed">{card.text(place)}</p>}
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-steel mt-3 group-hover:gap-2 transition-all">
               {moreLabel[locale]}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">

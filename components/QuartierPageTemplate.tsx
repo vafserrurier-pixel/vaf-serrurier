@@ -210,7 +210,7 @@ export default function QuartierPageTemplate({
         <h2 className="font-heading text-xl font-bold text-navy mb-4">
           Services disponibles à {quartier}
         </h2>
-        <RelatedServicesGrid items={relatedServices} />
+        <RelatedServicesGrid items={relatedServices} lieu={quartier} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

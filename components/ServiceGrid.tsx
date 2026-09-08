@@ -46,10 +46,18 @@ const titlesByLocale: Record<Locale, Record<string, string>> = {
 
 const moreLabel = { fr: "En savoir plus", en: "Learn more" };
 
-export default function ServiceGrid({ locale = "fr" }: { locale?: Locale }) {
+export default function ServiceGrid({
+  locale = "fr",
+  lieu,
+}: {
+  locale?: Locale;
+  /** Nom du lieu à injecter dans les descriptions ("à Nice Centre"). Par défaut "Nice". */
+  lieu?: string;
+}) {
   const hrefs = hrefsByLocale[locale];
   const titles = titlesByLocale[locale];
   const cards = serviceCardsByLocale[locale];
+  const place = lieu ?? "Nice";
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {hrefs.map((href) => {
@@ -64,7 +72,7 @@ export default function ServiceGrid({ locale = "fr" }: { locale?: Locale }) {
               <card.Icon className="w-5 h-5" />
             </span>
             <p className="font-heading font-semibold text-cream mb-1.5">{titles[href]}</p>
-            <p className="text-sm text-cream/70 leading-relaxed mb-3">{card.text}</p>
+            <p className="text-sm text-cream/70 leading-relaxed mb-3">{card.text(place)}</p>
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-cream group-hover:gap-2 transition-all">
               {moreLabel[locale]}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
