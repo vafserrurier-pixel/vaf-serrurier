@@ -147,7 +147,7 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8 flex flex-col gap-8">
+        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8 flex flex-col gap-8">
           {blocks.map((block) => (
             <div key={block.heading}>
               <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
@@ -162,7 +162,7 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
           <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
           <FaqAccordion items={faq} />
         </div>
