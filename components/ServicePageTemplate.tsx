@@ -112,7 +112,7 @@ export default function ServicePageTemplate({
       )}
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
               locale={locale}
@@ -167,16 +167,16 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading font-semibold text-navy mb-4">{t.howItWorks}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.howItWorks}</h2>
         <ProcessSteps locale={locale} steps={processSteps} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
+        <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
           {sections.map((section) => (
             <div key={section.heading}>
-              <h2 className="font-heading text-xl font-bold text-navy mb-2">
+              <h2 className="font-heading text-2xl font-bold text-navy mb-3">
                 {section.heading}
               </h2>
               {section.paragraphs.map((paragraph, index) => (
@@ -191,24 +191,24 @@ export default function ServicePageTemplate({
 
       {extra}
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.faqTitle}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.faqTitle}</h2>
         <FaqAccordion items={faq} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
+        <div className="mx-auto max-w-4xl px-4 py-12">
           <ReviewsSection locale={locale} />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.otherServices}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.otherServices}</h2>
         <RelatedServicesGrid items={relatedServices} locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.serviceArea}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.serviceArea}</h2>
         <p className="text-slate text-sm mb-4">
           {t.serviceAreaText(business.address.full)}{" "}
           <Link href="/zones-intervention-nice/" className="text-steel underline">
@@ -219,8 +219,8 @@ export default function ServicePageTemplate({
         <LazyMap locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.nearYou}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.nearYou}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {featuredQuartiers.map((quartier) => (
             <Link
@@ -250,8 +250,8 @@ export default function ServicePageTemplate({
       </section>
 
       {builtCommunes.length > 0 && (
-        <section className="mx-auto max-w-4xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.nearbyTowns}</h2>
+        <section className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.nearbyTowns}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {builtCommunes.map((commune) => (
               <Link
@@ -266,7 +266,7 @@ export default function ServicePageTemplate({
         </section>
       )}
 
-      <section className="mx-auto max-w-4xl px-4 py-10 pb-14">
+      <section className="mx-auto max-w-4xl px-4 py-12 pb-14">
         <CtaBlock locale={locale} />
       </section>
     </>

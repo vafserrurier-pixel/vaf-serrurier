@@ -70,7 +70,7 @@ export default function QuartierPageTemplate({
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
               items={[
@@ -140,8 +140,8 @@ export default function QuartierPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading font-semibold text-navy mb-2 text-center">
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-3 text-center">
           Comment se déroule mon intervention à {quartier}
         </h2>
         <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
@@ -151,26 +151,26 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
+        <div className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
             Mes tarifs à {quartier}
           </h2>
           <PricingTable />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Services disponibles à {quartier}
         </h2>
         <RelatedServicesGrid items={relatedServices} lieu={quartier} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
+        <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
           {blocks.map((block) => (
             <div key={block.heading}>
-              <h2 className="font-heading text-xl font-bold text-navy mb-2">
+              <h2 className="font-heading text-2xl font-bold text-navy mb-3">
                 {block.heading}
               </h2>
               {block.paragraphs.map((paragraph, index) => (
@@ -183,16 +183,16 @@ export default function QuartierPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Marques de serrures que je pose
         </h2>
         <BrandsSection />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+        <div className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-3">
             Les cambriolages à Nice, une réalité à prendre au sérieux
           </h2>
           <p className="text-slate leading-relaxed">
@@ -221,21 +221,21 @@ export default function QuartierPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Questions fréquentes
         </h2>
         <FaqAccordion items={faq} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
+        <div className="mx-auto max-w-4xl px-4 py-12">
           <ReviewsSection />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Localisation
         </h2>
         <p className="text-slate text-sm mb-4">
@@ -272,8 +272,8 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-2xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
+        <div className="mx-auto max-w-2xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
             Prenez rendez-vous avec votre serrurier à {quartier}
           </h2>
           <ContactForm
@@ -282,7 +282,7 @@ export default function QuartierPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 pb-14">
+      <section className="mx-auto max-w-4xl px-4 py-12 pb-14">
         <CtaBlock title={`Besoin d'un serrurier à ${quartier} ?`} />
       </section>
     </>

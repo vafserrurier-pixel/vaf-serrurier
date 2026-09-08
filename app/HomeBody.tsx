@@ -394,8 +394,8 @@ export default function HomeBody() {
         <ProcessSteps locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.pricingTitle}</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center text-center">{t.pricingTitle}</h2>
         <PricingTable locale={locale} />
       </section>
 
@@ -456,8 +456,8 @@ export default function HomeBody() {
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">{t.crimeTitle}</h2>
+        <div className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-3">{t.crimeTitle}</h2>
           <p className="text-slate leading-relaxed">{t.crimeText}</p>
           <p className="text-xs text-slate mt-2">
             {locale === "en" ? "Source: " : "Source : "}
@@ -547,7 +547,7 @@ export default function HomeBody() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.faqTitle}</h2>
         <FaqAccordion items={homeFaq} />
       </section>
     </>

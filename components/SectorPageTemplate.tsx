@@ -60,7 +60,7 @@ export default function SectorPageTemplate({
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
         <div>
           <Breadcrumbs
             items={[
@@ -149,10 +149,10 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
+        <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
           {blocks.map((block) => (
             <div key={block.heading}>
-              <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-3">{block.heading}</h2>
               {block.paragraphs.map((paragraph, index) => (
                 <p key={index} className="text-slate leading-relaxed mb-2">
                   {paragraph}
@@ -163,8 +163,8 @@ export default function SectorPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">Questions fréquentes</h2>
         <FaqAccordion items={faq} />
       </section>
 
@@ -176,17 +176,17 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10">
+        <div className="mx-auto max-w-4xl px-4 py-12">
           <ReviewsSection />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
+      <section className="mx-auto max-w-4xl px-4 py-12">
         <BlogPreview />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Les autres secteurs de Nice</h2>
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">Les autres secteurs de Nice</h2>
         <div className="flex flex-wrap gap-3">
           {siblingSectors.map((key) => (
             <Link
@@ -206,7 +206,7 @@ export default function SectorPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
+      <section className="mx-auto max-w-4xl px-4 py-12">
         <CtaBlock title={`Besoin d'un serrurier ${title.replace("Serrurier à", "à")} ?`} />
       </section>
     </>
