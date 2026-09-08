@@ -445,16 +445,18 @@ export default function HomeBody() {
         <InsuranceBanner locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-14">
-        <ReviewsSection locale={locale} />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-5xl px-4 py-14">
+          <ReviewsSection locale={locale} />
+        </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
         <BlogPreview locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10">
           <h2 className="font-heading text-xl font-bold text-navy mb-2">{t.crimeTitle}</h2>
           <p className="text-slate leading-relaxed">{t.crimeText}</p>
           <p className="text-xs text-slate mt-2">
@@ -536,8 +538,8 @@ export default function HomeBody() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-4xl px-4 py-14">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
+      <section id="contact" className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-14">
           <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.contactTitle}</h2>
           <p className="text-slate text-sm mb-4">{t.contactText}</p>
           <ContactForm locale={locale} />
@@ -545,10 +547,8 @@ export default function HomeBody() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
-          <FaqAccordion items={homeFaq} />
-        </div>
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
+        <FaqAccordion items={homeFaq} />
       </section>
     </>
   );

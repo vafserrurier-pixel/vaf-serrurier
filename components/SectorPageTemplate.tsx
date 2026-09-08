@@ -59,7 +59,8 @@ export default function SectorPageTemplate({
         ])}
       />
 
-      <section className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+      <section className="bg-white border-b border-navy/10">
+        <div className="mx-auto max-w-5xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
         <div>
           <Breadcrumbs
             items={[
@@ -113,6 +114,7 @@ export default function SectorPageTemplate({
             fetchPriority="high"
           />
         </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-10">
@@ -146,8 +148,8 @@ export default function SectorPageTemplate({
         </ul>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8 flex flex-col gap-8">
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
           {blocks.map((block) => (
             <div key={block.heading}>
               <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
@@ -162,10 +164,8 @@ export default function SectorPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
-          <FaqAccordion items={faq} />
-        </div>
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
+        <FaqAccordion items={faq} />
       </section>
 
       <section className="bg-navy py-14">
@@ -175,8 +175,10 @@ export default function SectorPageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <ReviewsSection />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10">
+          <ReviewsSection />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

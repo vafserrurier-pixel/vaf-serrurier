@@ -130,8 +130,10 @@ export default function CommunePageTemplate({
 
       <StatBar delay={travelEstimate} delayUnit={`à ${commune}`} />
 
-      <section className="mx-auto max-w-4xl px-4 pt-8 pb-2">
-        <TrustBadges />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 pt-8 pb-2">
+          <TrustBadges />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
@@ -144,11 +146,13 @@ export default function CommunePageTemplate({
         <ProcessSteps place={commune} delayEstimate={travelEstimate} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Mes tarifs à {commune}
-        </h2>
-        <PricingTable travelLabel="jusqu'à 30 min de route" />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">
+            Mes tarifs à {commune}
+          </h2>
+          <PricingTable travelLabel="jusqu'à 30 min de route" />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
@@ -158,8 +162,8 @@ export default function CommunePageTemplate({
         <RelatedServicesGrid items={relatedServices} lieu={commune} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8 flex flex-col gap-8">
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
           {blocks.map((block) => (
             <div key={block.heading}>
               <h2 className="font-heading text-xl font-bold text-navy mb-2">
@@ -182,8 +186,8 @@ export default function CommunePageTemplate({
         <BrandsSection />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10">
           <h2 className="font-heading text-xl font-bold text-navy mb-2">
             Sécurité et cambriolages : la réalité du secteur
           </h2>
@@ -203,16 +207,16 @@ export default function CommunePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Questions fréquentes
-          </h2>
-          <FaqAccordion items={faq} />
-        </div>
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Questions fréquentes
+        </h2>
+        <FaqAccordion items={faq} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <ReviewsSection />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-4xl px-4 py-10">
+          <ReviewsSection />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
@@ -249,8 +253,8 @@ export default function CommunePageTemplate({
         )}
       </section>
 
-      <section className="mx-auto max-w-2xl px-4 py-10">
-        <div className="bg-white border border-navy/10 rounded-2xl shadow-sm p-6 sm:p-8">
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-2xl px-4 py-10">
           <h2 className="font-heading text-xl font-bold text-navy mb-4">
             Prenez rendez-vous avec votre serrurier à {commune}
           </h2>
@@ -260,7 +264,7 @@ export default function CommunePageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 pb-14">
+      <section className="mx-auto max-w-4xl px-4 py-10 pb-14">
         <CtaBlock title={`Besoin d'un serrurier à ${commune} ?`} />
       </section>
     </>
