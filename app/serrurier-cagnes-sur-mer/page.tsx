@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const intro = [
-  "J'interviens à Cagnes-sur-Mer aussi bien dans les ruelles du Haut-de-Cagnes que sur le front de mer du Cros-de-Cagnes ou dans le centre-ville, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'un logement.",
+  "J'interviens en urgence à Cagnes-sur-Mer, aussi bien dans les ruelles du Haut-de-Cagnes que sur le front de mer du Cros-de-Cagnes ou dans le centre-ville, pour tout type de dépannage serrurier : ouverture de porte claquée, changement de cylindre, ou sécurisation d'un logement.",
   "La méthode reste la même partout : je diagnostique la situation au téléphone, j'annonce un prix avant de me déplacer, et je m'adapte au bâti réel une fois sur place, qu'il s'agisse d'une porte ancienne du village perché ou d'un appartement récent près du front de mer.",
 ];
 
