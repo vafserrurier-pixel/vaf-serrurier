@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Requête invalide." }, { status: 400 });
   }
 
-  const { name, phone, message, website } = body;
+  const { name, phone, service, message, website } = body;
 
   // Honeypot : un champ rempli signale un bot.
   if (typeof website === "string" && website.trim().length > 0) {
@@ -54,6 +54,12 @@ export async function POST(request: NextRequest) {
   }
   if (typeof phone !== "string" || !PHONE_RE.test(phone.trim())) {
     return NextResponse.json({ error: "Numéro de téléphone invalide." }, { status: 400 });
+  }
+  if (
+    service !== undefined &&
+    (typeof service !== "string" || service.trim().length > 100 || CONTROL_CHARS_RE.test(service))
+  ) {
+    return NextResponse.json({ error: "Service invalide." }, { status: 400 });
   }
   if (
     typeof message !== "string" ||
@@ -82,7 +88,9 @@ export async function POST(request: NextRequest) {
       from: fromAddress,
       to: business.email,
       subject: `Nouvelle demande de contact : ${name.trim()}`,
-      text: `Nom: ${name.trim()}\nTéléphone: ${phone.trim()}\n\nMessage:\n${message.trim()}`,
+      text: `Nom: ${name.trim()}\nTéléphone: ${phone.trim()}${
+        typeof service === "string" && service.trim() ? `\nService demandé: ${service.trim()}` : ""
+      }\n\nMessage:\n${message.trim()}`,
     });
   } catch (err) {
     console.error("Échec envoi Resend", err);

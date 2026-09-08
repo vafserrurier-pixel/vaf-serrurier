@@ -10,6 +10,8 @@ const strings = {
     success: "Votre message a bien été transmis, réponse sous 24h.",
     name: "Nom",
     phone: "Téléphone",
+    service: "Service souhaité",
+    serviceEmpty: "Sélectionnez un service (optionnel)",
     message: "Message",
     placeholder: "Type de porte, urgence ou non...",
     sending: "Envoi en cours...",
@@ -20,6 +22,8 @@ const strings = {
     success: "Your message has been sent, I'll reply within 24h.",
     name: "Name",
     phone: "Phone",
+    service: "Service needed",
+    serviceEmpty: "Select a service (optional)",
     message: "Message",
     placeholder: "Type of door, urgent or not...",
     sending: "Sending...",
@@ -31,9 +35,11 @@ const strings = {
 export default function ContactForm({
   compact = false,
   locale = "fr",
+  services,
 }: {
   compact?: boolean;
   locale?: Locale;
+  services?: { href: string; label: string }[];
 }) {
   const t = strings[locale];
   const [status, setStatus] = useState<Status>("idle");
@@ -49,6 +55,7 @@ export default function ContactForm({
     const payload = {
       name: data.get("name"),
       phone: data.get("phone"),
+      service: data.get("service") || undefined,
       message: data.get("message"),
       website: data.get("website"), // honeypot
     };
@@ -119,6 +126,26 @@ export default function ContactForm({
           className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
         />
       </div>
+      {services && services.length > 0 && (
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-navy mb-1">
+            {t.service}
+          </label>
+          <select
+            id="service"
+            name="service"
+            defaultValue=""
+            className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
+          >
+            <option value="">{t.serviceEmpty}</option>
+            {services.map((service) => (
+              <option key={service.href} value={service.label}>
+                {service.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-navy mb-1">
           {t.message}

@@ -13,6 +13,7 @@ import BrandsSection from "./BrandsSection";
 import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
 import RelatedServicesGrid from "./RelatedServicesGrid";
+import ContactForm from "./ContactForm";
 import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
@@ -258,6 +259,13 @@ export default function QuartierPageTemplate({
             </ul>
           </div>
         )}
+      </section>
+
+      <section className="mx-auto max-w-2xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Prenez rendez-vous avec votre serrurier à {quartier}
+        </h2>
+        <ContactForm services={relatedServices} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
