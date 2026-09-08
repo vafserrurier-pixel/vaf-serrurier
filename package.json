@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "browserslist": [
-    "> 0.2%",
-    "not dead",
-    "not op_mini all"
+    "chrome >= 105",
+    "edge >= 105",
+    "firefox >= 104",
+    "safari >= 15.4",
+    "ios_saf >= 15.4",
+    "not dead"
   ],
   "scripts": {
     "dev": "next dev",
