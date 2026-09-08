@@ -84,7 +84,7 @@ export default function ContactForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      {/* Honeypot anti-spam — laissé vide par les humains */}
+      {/* Honeypot anti-spam : laissé vide par les humains */}
       <input
         type="text"
         name="website"

@@ -240,7 +240,7 @@ export default function PricingTable({
   locale?: Locale;
   /**
    * Remplace "sur Nice"/"within Nice" par un texte adapté (ex. "jusqu'à 30
-   * minutes de route") sur les pages hors Nice — le déplacement reste inclus
+   * minutes de route") sur les pages hors Nice : le déplacement reste inclus
    * dans les mêmes conditions (confirmé par Benoît, même seuil de 30 min),
    * seule la mention géographique change pour rester exacte.
    */

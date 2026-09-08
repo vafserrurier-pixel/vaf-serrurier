@@ -1,5 +1,5 @@
 // Utilitaires de gabarit pour les pages de quartier.
-// `builtQuartiers` liste les 46 quartiers, tous publiés — voir `lib/business.ts`
+// `builtQuartiers` liste les 46 quartiers, tous publiés : voir `lib/business.ts`
 // (export `zones`) pour la répartition par secteur.
 
 import { zones } from "./business";
@@ -91,7 +91,7 @@ export function isQuartierBuilt(name: string): boolean {
 }
 
 // Autres quartiers du même secteur à mettre en avant sur une page de quartier
-// donnée — favorise le maillage interne entre pages proches sans reproduire
+// donnée : favorise le maillage interne entre pages proches sans reproduire
 // un bloc de liens identique sur les 46 pages (chaque page pointe vers un
 // sous-ensemble différent, décalé selon sa position dans la liste du secteur).
 export function relatedQuartiers(

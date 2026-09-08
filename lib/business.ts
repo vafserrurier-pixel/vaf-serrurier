@@ -4,7 +4,7 @@
 export const business = {
   legalName: "Votre Artisan Français",
   // Le nom complet existe pour référence interne (facturation, KBis) mais n'est
-  // affiché nulle part sur le site public, y compris sur les pages légales — choix
+  // affiché nulle part sur le site public, y compris sur les pages légales : choix
   // explicite de Benoît, malgré le risque de non-conformité LCEN art. 6-III qui
   // demande normalement d'identifier le président d'une SASU sur ces pages.
   ownerFullNameInternalOnly: "Benoît Jaoui",
@@ -14,7 +14,7 @@ export const business = {
   tagline: "Serrurier à Nice",
   siret: "980 385 868 00032",
   // Année de début d'activité de Benoît comme serrurier (chez son frère à
-  // Paris, avant de s'installer seul à Nice) — sert à calculer l'ancienneté
+  // Paris, avant de s'installer seul à Nice) : sert à calculer l'ancienneté
   // réelle affichée sur le site, jamais un chiffre fixe à mettre à jour.
   professionSinceYear: 2011,
   address: {
@@ -38,7 +38,7 @@ export const business = {
     href: "tel:+33641785556",
   },
   // Utilise le numéro mobile ci-dessus (seul numéro susceptible d'être relié à
-  // WhatsApp) — à confirmer par Benoît que ce numéro est bien actif sur WhatsApp
+  // WhatsApp) : à confirmer par Benoît que ce numéro est bien actif sur WhatsApp
   // avant mise en production.
   whatsapp: {
     display: "06 41 78 55 56",
@@ -49,7 +49,7 @@ export const business = {
   domain: "https://vaf-serrurier.fr",
   googleMaps: {
     shareLink: "https://maps.app.goo.gl/an35iFRpf1MZTaQj7",
-    // Place ID non confirmé — à reconfirmer via l'API Google Places (Place Details)
+    // Place ID non confirmé : à reconfirmer via l'API Google Places (Place Details)
     // avant toute intégration en dur dans un composant qui en dépendrait.
     placeIdConfirmed: false,
   },
@@ -75,10 +75,10 @@ export const business = {
 
 // Liste de référence confirmée par Benoît (remplace une première liste générique) :
 // 46 quartiers répartis en 4 secteurs. Place Masséna, Negresco et l'Acropolis ne sont
-// pas des quartiers résidentiels — ils sont mentionnés comme repères géo dans le texte
+// pas des quartiers résidentiels : ils sont mentionnés comme repères géo dans le texte
 // des pages voisines (Jean-Médecin/Carré d'Or/Promenade des Anglais, secteur Est/Le Port)
 // plutôt que comme pages dédiées. "Méridas" a été définitivement écarté (2026-08-09) :
-// aucune correspondance ne parle à Benoît sur le terrain — ne pas y revenir.
+// aucune correspondance ne parle à Benoît sur le terrain : ne pas y revenir.
 //
 // Ordre de création prioritaire pour les pages de quartier (Phase 2/3) :
 // 1. Brancolar, Desambrois (avis clients déjà en main)

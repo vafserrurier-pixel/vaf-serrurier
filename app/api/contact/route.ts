@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.error("RESEND_API_KEY manquante — email non envoyé.");
+    console.error("RESEND_API_KEY manquante : email non envoyé.");
     return NextResponse.json(
       { error: "Service d'envoi indisponible pour le moment." },
       { status: 503 }

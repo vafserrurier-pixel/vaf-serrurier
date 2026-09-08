@@ -3,11 +3,11 @@
 // quartier avec des mentions concrètes plutôt que des généralités.
 //
 // `confidence: "faible"` = un seul repère modeste (souvent juste un nom de
-// voie), pas de monument/lieu notable — ne pas écrire plus précis que ce qui
+// voie), pas de monument/lieu notable : ne pas écrire plus précis que ce qui
 // est listé ici sans confirmation explicite de Benoît.
 //
 // Attention : le Monastère de Cimiez appartient au quartier Cimiez, pas à
-// Rimiez, malgré une association courante — ne pas les confondre.
+// Rimiez, malgré une association courante : ne pas les confondre.
 
 export type Repere = {
   landmarks: string[];

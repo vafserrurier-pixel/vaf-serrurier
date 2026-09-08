@@ -3,7 +3,7 @@
 //   (même traitement que la photo de l'accueil).
 // - generalPhotoPool : photos d'objets (serrures, cylindres, portes, outils),
 //   disponibles pour d'autres usages futurs.
-// Le texte alternatif reste volontairement générique — ces photos ne sont
+// Le texte alternatif reste volontairement générique : ces photos ne sont
 // pas prises dans le quartier en question, on ne prétend pas le contraire.
 
 import { zones } from "./business";

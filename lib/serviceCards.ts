@@ -1,6 +1,6 @@
 // Source unique des icônes + descriptions courtes utilisées à la fois par
 // ServiceGrid (accueil, pages secteur, fond navy) et RelatedServicesGrid
-// (pages quartier/commune/service, fond blanc) — pour ne jamais avoir deux
+// (pages quartier/commune/service, fond blanc) : pour ne jamais avoir deux
 // textes différents pour le même service selon la page.
 //
 // Le texte est une fonction (lieu) => string plutôt qu'une chaîne fixe : ça
