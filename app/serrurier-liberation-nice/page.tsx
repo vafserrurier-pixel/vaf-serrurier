@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-liberation-nice/" },
-  title: "Serrurier Libération Nice – Dépannage près du marché | VAF",
+  title: "Serrurier Libération Nice – Dépannage rapide | VAF",
   description:
     "Serrurier au quartier Libération, Nice : dépannage rapide près du marché couvert et de la Gare du Sud, changement de serrure. Devis annoncé, 24h/24.",
 };

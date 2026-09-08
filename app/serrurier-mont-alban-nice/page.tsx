@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-alban-nice/" },
-  title: "Serrurier Mont Alban Nice – Villas boisées | VAF",
+  title: "Serrurier Mont Alban Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier au Mont Alban, Nice : blindage et sécurisation de villas sur secteur boisé près du fort. Devis annoncé, intervention 24h/24.",
 };

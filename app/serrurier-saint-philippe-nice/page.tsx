@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-philippe-nice/" },
-  title: "Serrurier Saint-Philippe Nice – Villas & jardins | VAF",
+  title: "Serrurier Saint-Philippe Nice – Dépannage 24h/24 | VAF",
   description:
     "Serrurier à Saint-Philippe, Nice : sécurisation de villas et propriétés avec jardin, dépannage près du parc Estienne-d'Orves. Devis annoncé, 24h/24.",
 };

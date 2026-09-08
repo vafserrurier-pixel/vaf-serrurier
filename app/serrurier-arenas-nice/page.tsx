@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-arenas-nice/" },
-  title: "Serrurier Arénas Nice – Bureaux & entreprises | VAF",
+  title: "Serrurier Arénas Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à l'Arénas, Nice : sécurisation de bureaux et locaux professionnels, accès contrôlés. Devis annoncé, intervention 24h/24.",
 };

@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carabacel-nice/" },
-  title: "Serrurier Carabacel Nice – Villas & immeubles anciens | VAF",
+  title: "Serrurier Carabacel Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier au quartier Carabacel, Nice : dépannage sur villas et immeubles anciens du boulevard planté, changement de serrure. Devis annoncé, 24h/24.",
 };

@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-archet-nice/" },
-  title: "Serrurier L'Archet Nice – Près du CHU | VAF",
+  title: "Serrurier L'Archet Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à L'Archet, Nice : dépannage près du pôle hospitalier universitaire, changement de serrure. Devis annoncé, 24h/24.",
 };

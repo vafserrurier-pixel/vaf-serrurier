@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-vieux-nice-nice/" },
-  title: "Serrurier Vieux-Nice – Portes anciennes & locations | VAF",
+  title: "Serrurier Vieux-Nice – Ouverture de porte 24h/24 | VAF",
   description:
     "Serrurier dans le Vieux-Nice : réparation de portes anciennes non standards, dépannage pour locations saisonnières près du cours Saleya. Devis annoncé, 24h/24.",
 };

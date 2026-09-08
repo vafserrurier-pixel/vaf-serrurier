@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-des-musiciens-nice/" },
-  title: "Serrurier Quartier des Musiciens Nice – Près de la gare | VAF",
+  title: "Serrurier Quartier des Musiciens – Urgence 24h/24 | VAF",
   description:
     "Serrurier au quartier des Musiciens, Nice, près de la gare de Nice-Ville : dépannage, changement de serrure sur immeubles Belle Époque. Devis annoncé, 24h/24.",
 };

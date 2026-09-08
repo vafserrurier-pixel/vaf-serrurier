@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gambetta-nice/" },
-  title: "Serrurier Gambetta Nice – Immeubles Art déco | VAF",
+  title: "Serrurier Gambetta Nice – Dépannage rapide | VAF",
   description:
     "Serrurier au quartier Gambetta, Nice : changement de serrure et dépannage sur immeubles du XXe siècle, sécurisation après cambriolage. Devis annoncé, 24h/24.",
 };

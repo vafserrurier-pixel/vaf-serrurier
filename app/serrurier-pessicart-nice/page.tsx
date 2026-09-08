@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pessicart-nice/" },
-  title: "Serrurier Pessicart Nice – Villas & résidences | VAF",
+  title: "Serrurier Pessicart Nice – Dépannage rapide | VAF",
   description:
     "Serrurier à Pessicart, Nice : dépannage sur villas et résidences collectives des hauteurs. Devis annoncé, intervention 24h/24.",
 };

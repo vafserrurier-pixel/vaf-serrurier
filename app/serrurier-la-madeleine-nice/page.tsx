@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-la-madeleine-nice/" },
-  title: "Serrurier La Madeleine Nice – Ruelles & maisons de ville | VAF",
+  title: "Serrurier La Madeleine Nice – Intervention rapide | VAF",
   description:
     "Serrurier à La Madeleine, Nice : dépannage sur maisons de ville et immeubles anciens du vallon, changement de serrure. Devis annoncé, 24h/24.",
 };

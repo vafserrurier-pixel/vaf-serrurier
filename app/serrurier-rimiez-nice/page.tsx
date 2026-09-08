@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-rimiez-nice/" },
-  title: "Serrurier Rimiez Nice – Serrures anciennes | VAF",
+  title: "Serrurier Rimiez Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à Rimiez, Nice : réparation de serrures anciennes, dépannage sur villas et résidences. Devis annoncé, 24h/24.",
 };

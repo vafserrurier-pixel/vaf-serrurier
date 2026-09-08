@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-boron-nice/" },
-  title: "Serrurier Mont Boron Nice – Villas vue mer | VAF",
+  title: "Serrurier Mont Boron Nice – Dépannage 24h/24 | VAF",
   description:
     "Serrurier au Mont Boron, Nice : sécurisation de villas de standing, systèmes de sécurité avancés. Devis annoncé, intervention 24h/24.",
 };

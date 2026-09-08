@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-chambrun-nice/" },
-  title: "Serrurier Chambrun Nice – Immeubles collectifs | VAF",
+  title: "Serrurier Chambrun Nice – Dépannage 24h/24 | VAF",
   description:
     "Serrurier à Chambrun, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 };

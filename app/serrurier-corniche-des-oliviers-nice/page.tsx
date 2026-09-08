@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-des-oliviers-nice/" },
-  title: "Serrurier Corniche des Oliviers Nice – Blindage villas | VAF",
+  title: "Serrurier Corniche des Oliviers – Urgence 24h/24 | VAF",
   description:
     "Serrurier à la Corniche des Oliviers, Nice : blindage et renforcement de villas sur les hauteurs. Devis annoncé, intervention 24h/24.",
 };

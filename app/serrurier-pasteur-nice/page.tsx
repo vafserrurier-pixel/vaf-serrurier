@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pasteur-nice/" },
-  title: "Serrurier Pasteur Nice – Près du CHU | VAF",
+  title: "Serrurier Pasteur Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier au quartier Pasteur, Nice : dépannage près du pôle hospitalier, changement de serrure sur bâti mêlant ancien et récent. Devis annoncé, 24h/24.",
 };

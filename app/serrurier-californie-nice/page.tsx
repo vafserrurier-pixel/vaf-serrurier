@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-californie-nice/" },
-  title: "Serrurier Californie Nice – Villas familiales | VAF",
+  title: "Serrurier Californie Nice – Ouverture 24h/24 | VAF",
   description:
     "Serrurier au quartier Californie, Nice : sécurisation de villas familiales, dépannage près de l'aéroport. Devis annoncé, 24h/24.",
 };

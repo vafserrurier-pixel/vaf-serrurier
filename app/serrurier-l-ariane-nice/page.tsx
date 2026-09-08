@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-ariane-nice/" },
-  title: "Serrurier l'Ariane Nice – Grands ensembles | VAF",
+  title: "Serrurier l'Ariane Nice – Dépannage 24h/24 | VAF",
   description:
     "Serrurier à l'Ariane, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 };

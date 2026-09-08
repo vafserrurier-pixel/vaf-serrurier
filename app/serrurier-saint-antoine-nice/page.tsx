@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-antoine-nice/" },
-  title: "Serrurier Saint-Antoine Nice – Village niçois | VAF",
+  title: "Serrurier Saint-Antoine Nice – Dépannage rapide | VAF",
   description:
     "Serrurier à Saint-Antoine-de-Ginestière, Nice : dépannage sur bâti villageois, sécurisation près de l'aéroport. Devis annoncé, 24h/24.",
 };

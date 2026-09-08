@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-lingostiere-nice/" },
-  title: "Serrurier Lingostière Nice – Secteur excentré | VAF",
+  title: "Serrurier Lingostière Nice – Dépannage rapide | VAF",
   description:
     "Serrurier à Lingostière, Nice : dépannage sur propriétés isolées, délai réaliste pour ce secteur éloigné. Devis annoncé, 24h/24.",
 };

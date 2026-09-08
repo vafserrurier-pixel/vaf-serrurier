@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carre-d-or-nice/" },
-  title: "Serrurier Carré d'Or Nice – Boutiques de luxe | VAF",
+  title: "Serrurier Carré d'Or Nice – Intervention en 30 min | VAF",
   description:
     "Serrurier au Carré d'Or, Nice : sécurisation discrète de boutiques de luxe et copropriétés Belle Époque. Devis annoncé, intervention rapide 24h/24.",
 };

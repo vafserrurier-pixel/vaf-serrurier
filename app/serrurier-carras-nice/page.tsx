@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carras-nice/" },
-  title: "Serrurier Carras Nice – Bord de mer | VAF",
+  title: "Serrurier Carras Nice – Dépannage rapide | VAF",
   description:
     "Serrurier à Carras, Nice : dépannage sur immeubles résidentiels en bord de mer, intervention rapide. Devis annoncé, 24h/24.",
 };

@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-jean-medecin-nice/" },
-  title: "Serrurier Jean-Médecin Nice – Halls & commerces | VAF",
+  title: "Serrurier Jean-Médecin Nice – Intervention 24h/24 | VAF",
   description:
     "Serrurier avenue Jean-Médecin, Nice : digicodes et halls d'immeuble très sollicités, sécurisation de commerces et bureaux. Devis annoncé, 24h/24.",
 };

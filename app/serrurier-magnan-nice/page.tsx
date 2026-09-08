@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-magnan-nice/" },
-  title: "Serrurier Magnan Nice – Familles & serrures multipoints | VAF",
+  title: "Serrurier Magnan Nice – Intervention en 30 min | VAF",
   description:
     "Serrurier au quartier Magnan, Nice : remplacement de cylindre sur résidences des années 1960-1970, serrure multipoints pour familles. Devis annoncé, 24h/24.",
 };

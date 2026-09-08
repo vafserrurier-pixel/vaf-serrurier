@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-isidore-nice/" },
-  title: "Serrurier Saint-Isidore Nice – Résidences neuves | VAF",
+  title: "Serrurier Saint-Isidore Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à Saint-Isidore, Nice : dépannage sur résidences récentes près du stade Allianz Riviera. Devis annoncé, intervention 24h/24.",
 };

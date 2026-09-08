@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-fleurie-nice/" },
-  title: "Serrurier Corniche Fleurie Nice – Villas & jardins | VAF",
+  title: "Serrurier Corniche Fleurie Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à la Corniche Fleurie, Nice : sécurisation de villas près du jardin botanique, blindage. Devis annoncé, 24h/24.",
 };

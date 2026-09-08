@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-fabron-nice/" },
-  title: "Serrurier Fabron Nice – Villas de caractère | VAF",
+  title: "Serrurier Fabron Nice – Ouverture de porte 24h/24 | VAF",
   description:
     "Serrurier à Fabron, Nice : sécurisation de villas héritées du patrimoine XIXe, dépannage sur résidences. Devis annoncé, 24h/24.",
 };

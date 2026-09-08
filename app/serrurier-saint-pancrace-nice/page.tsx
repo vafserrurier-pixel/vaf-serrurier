@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-pancrace-nice/" },
-  title: "Serrurier Saint-Pancrace Nice – Villas rurales | VAF",
+  title: "Serrurier Saint-Pancrace Nice – Intervention rapide | VAF",
   description:
     "Serrurier à Saint-Pancrace, Nice : sécurisation de villas sur secteur rural préservé, dépannage. Devis annoncé, 24h/24.",
 };

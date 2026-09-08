@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-les-moulins-nice/" },
-  title: "Serrurier Les Moulins Nice – Grands ensembles | VAF",
+  title: "Serrurier Les Moulins Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier aux Moulins, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, intervention 24h/24.",
 };

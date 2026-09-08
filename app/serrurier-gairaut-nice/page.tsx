@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gairaut-nice/" },
-  title: "Serrurier Gairaut Nice – Villas vue mer | VAF",
+  title: "Serrurier Gairaut Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier à Gairaut, Nice : sécurisation de villas près de la cascade historique, renforcement de porte. Devis annoncé, 24h/24.",
 };

@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-des-fleurs-nice/" },
-  title: "Serrurier Quartier des Fleurs Nice – Immeubles de caractère | VAF",
+  title: "Serrurier Quartier des Fleurs – Urgence 24h/24 | VAF",
   description:
     "Serrurier au quartier des Fleurs, Nice : dépannage et changement de serrure sur immeubles Art déco et anciens palais. Devis annoncé, 24h/24.",
 };

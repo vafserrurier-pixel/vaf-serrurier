@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-brancolar-nice/" },
-  title: "Serrurier Brancolar Nice – Nouveaux programmes | VAF",
+  title: "Serrurier Brancolar Nice – Intervention rapide | VAF",
   description:
     "Serrurier au Brancolar, Nice : personnalisation de cylindre sur logements neufs, dépannage sur grands ensembles. Devis annoncé, 24h/24.",
 };

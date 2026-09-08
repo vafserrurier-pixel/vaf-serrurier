@@ -3,7 +3,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-secteur-bellet-nice/" },
-  title: "Serrurier Secteur Bellet Nice – Domaines viticoles | VAF",
+  title: "Serrurier Secteur Bellet Nice – Intervention rapide | VAF",
   description:
     "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : sécurisation de maisons isolées et domaines viticoles. Devis annoncé, 24h/24.",
 };

@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-poetes-nice/" },
-  title: "Serrurier Quartier des Poètes Nice – Halls d'immeuble | VAF",
+  title: "Serrurier Quartier des Poètes Nice – Urgence 24h/24 | VAF",
   description:
     "Serrurier au quartier des Poètes, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, 24h/24.",
 };

@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-parc-imperial-nice/" },
-  title: "Serrurier Parc Impérial Nice – Copropriétés de standing | VAF",
+  title: "Serrurier Parc Impérial Nice – Intervention rapide | VAF",
   description:
     "Serrurier au Parc Impérial, Nice : dépannage et sécurisation sur immeubles Belle Époque et copropriétés de standing. Devis annoncé, 24h/24.",
 };

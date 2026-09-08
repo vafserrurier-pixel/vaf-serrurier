@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-riquier-nice/" },
-  title: "Serrurier Riquier Nice – Sécurité renforcée | VAF",
+  title: "Serrurier Riquier Nice – Ouverture de porte 24h/24 | VAF",
   description:
     "Serrurier à Riquier, Nice : renforcement de porte près de la gare, dépannage sur immeubles des années 1920. Devis annoncé, 24h/24.",
 };

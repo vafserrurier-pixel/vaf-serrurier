@@ -4,7 +4,7 @@ import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://vaf-serrurier.fr/serrurier-baumettes-nice/" },
-  title: "Serrurier Baumettes Nice – Villas & immeubles anciens | VAF",
+  title: "Serrurier Baumettes Nice – Dépannage 24h/24 | VAF",
   description:
     "Serrurier aux Baumettes, Nice : sécurisation de villas, réparation de serrures anciennes près du musée Jules-Chéret. Devis annoncé, 24h/24.",
 };
