@@ -21,7 +21,7 @@ export type ServiceImage = { src: string; alt: string };
 const strings = {
   fr: {
     home: "Accueil",
-    badge: "Disponible maintenant — devis gratuit par téléphone",
+    badge: "Disponible maintenant : devis gratuit par téléphone",
     call: "Appeler",
     seePricing: "Voir les tarifs",
     howItWorks: "Comment se déroule mon intervention",
@@ -38,7 +38,7 @@ const strings = {
   },
   en: {
     home: "Home",
-    badge: "Available now — free quote by phone",
+    badge: "Available now: free quote by phone",
     call: "Call",
     seePricing: "See pricing",
     howItWorks: "How my callout works",

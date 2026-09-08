@@ -19,7 +19,7 @@ const sections = [
   {
     heading: "Ouvrir sans détruire, quand c'est possible",
     paragraphs: [
-      "Selon le mécanisme — serrure à clé, à combinaison mécanique ou électronique — je privilégie toujours une méthode qui préserve le coffre et permet de le remettre en service ensuite. Le perçage ou la découpe restent une solution de dernier recours, quand le mécanisme est bloqué de façon irréversible.",
+      "Selon le mécanisme (serrure à clé, à combinaison mécanique ou électronique), je privilégie toujours une méthode qui préserve le coffre et permet de le remettre en service ensuite. Le perçage ou la découpe restent une solution de dernier recours, quand le mécanisme est bloqué de façon irréversible.",
     ],
   },
   {
@@ -103,7 +103,7 @@ export default function OuvertureDeCoffreFortNicePage() {
       processSteps={[
         {
           title: "Appel",
-          text: "Vous me décrivez le modèle de coffre-fort si vous le connaissez, et la raison du blocage — code oublié, clé perdue, coffre hérité.",
+          text: "Vous me décrivez le modèle de coffre-fort si vous le connaissez, et la raison du blocage : code oublié, clé perdue, coffre hérité.",
         },
         {
           title: "Délai d'arrivée",
@@ -111,7 +111,7 @@ export default function OuvertureDeCoffreFortNicePage() {
         },
         {
           title: "Diagnostic du mécanisme",
-          text: "J'identifie le modèle et le type de mécanisme — à clé, combinaison mécanique ou électronique — pour choisir la méthode la moins destructive.",
+          text: "J'identifie le modèle et le type de mécanisme (à clé, combinaison mécanique ou électronique) pour choisir la méthode la moins destructive.",
         },
         {
           title: "Règlement",

@@ -21,7 +21,7 @@ const sectionsFr = [
   {
     heading: "Cylindre ou serrure complète, quelle différence",
     paragraphs: [
-      "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme. Son remplacement suffit souvent, et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même — le coffre encastré dans la porte — est endommagé ou instable, ou quand il s'agit d'un modèle trop ancien pour trouver un cylindre compatible.",
+      "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme. Son remplacement suffit souvent, et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même (le coffre encastré dans la porte) est endommagé ou instable, ou quand il s'agit d'un modèle trop ancien pour trouver un cylindre compatible.",
     ],
   },
   {
@@ -39,7 +39,7 @@ const sectionsFr = [
   {
     heading: "Changement de serrure après une effraction",
     paragraphs: [
-      "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés — cylindre, gâche, parfois le coffre de serrure — et je stabilise l'ensemble pour éviter un nouveau risque. Je ne vous vends pas un remplacement complet si ce n'est pas nécessaire.",
+      "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés (cylindre, gâche, parfois le coffre de serrure) et je stabilise l'ensemble pour éviter un nouveau risque. Je ne vous vends pas un remplacement complet si ce n'est pas nécessaire.",
     ],
   },
   {
@@ -93,7 +93,7 @@ const sectionsEn = [
   {
     heading: "Cylinder or full lock: what's the difference",
     paragraphs: [
-      "The cylinder is the part that takes the key and drives the mechanism. Replacing it is often enough, and costs noticeably less than a full replacement. A full lock replacement becomes necessary when the mechanism itself — the case set into the door — is damaged or loose, or too old a model to find a compatible cylinder.",
+      "The cylinder is the part that takes the key and drives the mechanism. Replacing it is often enough, and costs noticeably less than a full replacement. A full lock replacement becomes necessary when the mechanism itself (the case set into the door) is damaged or loose, or too old a model to find a compatible cylinder.",
     ],
   },
   {
@@ -105,13 +105,13 @@ const sectionsEn = [
   {
     heading: "A2P certification: useful or not",
     paragraphs: [
-      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. I fit locks and cylinders certified A2P 1, 2 or 3 stars depending on your home's real needs, without automatically pushing the highest level. It isn't a legal requirement for a standard home. So I'd rather guide you toward security that matches the real condition of your door, than toward over-equipping it — which won't help much if the structure around it stays weak.",
+      "A2P certification helps objectively compare a lock's resistance to a break-in attempt. I fit locks and cylinders certified A2P 1, 2 or 3 stars depending on your home's real needs, without automatically pushing the highest level. It isn't a legal requirement for a standard home. So I'd rather guide you toward security that matches the real condition of your door, than toward over-equipping it, which won't help much if the structure around it stays weak.",
     ],
   },
   {
     heading: "Changing a lock after a break-in",
     paragraphs: [
-      "After an attempted break-in, the priority is closing your door securely right away. I then replace whatever's actually damaged — cylinder, strike plate, sometimes the lock case — and stabilize the whole assembly to prevent a repeat risk. I won't sell you a full replacement if it isn't needed.",
+      "After an attempted break-in, the priority is closing your door securely right away. I then replace whatever's actually damaged (cylinder, strike plate, sometimes the lock case) and stabilize the whole assembly to prevent a repeat risk. I won't sell you a full replacement if it isn't needed.",
     ],
   },
   {

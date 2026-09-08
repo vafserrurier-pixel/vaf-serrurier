@@ -24,7 +24,7 @@ const blocks = [
   {
     heading: "Serrurerie de commerce près du marché et de la Gare du Sud",
     paragraphs: [
-      "Le secteur mêle logements et commerces de proximité, entre le marché couvert et la Gare du Sud rénovée. Pour la partie serrurerie de ces locaux — porte d'entrée, rideau métallique excepté —, j'applique la même méthode de diagnostic et de devis annoncé avant intervention.",
+      "Le secteur mêle logements et commerces de proximité, entre le marché couvert et la Gare du Sud rénovée. Pour la partie serrurerie de ces locaux (porte d'entrée, rideau métallique excepté), j'applique la même méthode de diagnostic et de devis annoncé avant intervention.",
     ],
   },
   {

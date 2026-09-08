@@ -15,7 +15,7 @@ export default function CguPage() {
       path="/conditions-generales-dutilisation/"
     >
       <div>
-        <h2>Article 1 — Objet</h2>
+        <h2>Article 1 : Objet</h2>
         <p>
           Les présentes conditions générales d&apos;utilisation (CGU) encadrent l&apos;accès
           et l&apos;usage du site {business.domain.replace("https://", "")}. L&apos;accès au
@@ -28,7 +28,7 @@ export default function CguPage() {
       </div>
 
       <div>
-        <h2>Article 2 — Accès au site</h2>
+        <h2>Article 2 : Accès au site</h2>
         <p>
           Le site est accessible gratuitement à tout utilisateur disposant d&apos;un accès
           à internet. Les frais de connexion restent à la charge de l&apos;utilisateur. Je
@@ -39,7 +39,7 @@ export default function CguPage() {
       </div>
 
       <div>
-        <h2>Article 3 — Propriété intellectuelle</h2>
+        <h2>Article 3 : Propriété intellectuelle</h2>
         <p>
           Les marques, logos, textes et contenus présents sur ce site sont protégés par le
           droit de la propriété intellectuelle. Toute reproduction non autorisée constitue
@@ -48,7 +48,7 @@ export default function CguPage() {
       </div>
 
       <div>
-        <h2>Article 4 — Données personnelles</h2>
+        <h2>Article 4 : Données personnelles</h2>
         <p>
           Vos données ne sont utilisées que dans le cadre de la gestion de votre demande.
           Vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de
@@ -57,7 +57,7 @@ export default function CguPage() {
       </div>
 
       <div>
-        <h2>Article 5 — Responsabilité et force majeure</h2>
+        <h2>Article 5 : Responsabilité et force majeure</h2>
         <p>
           Ma responsabilité ne saurait être engagée en cas de force majeure. Je ne suis pas
           responsable du contenu des sites vers lesquels des liens hypertextes pourraient
@@ -66,7 +66,7 @@ export default function CguPage() {
       </div>
 
       <div>
-        <h2>Article 6 — Droit applicable</h2>
+        <h2>Article 6 : Droit applicable</h2>
         <p>
           Les présentes CGU sont soumises au droit français. En cas de litige, les
           tribunaux français sont seuls compétents.

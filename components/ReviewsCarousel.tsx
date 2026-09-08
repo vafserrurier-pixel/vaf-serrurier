@@ -100,7 +100,7 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
         <p className="mt-3 text-navy leading-relaxed">&ldquo;{current.text}&rdquo;</p>
         <div className="mt-4 flex items-center justify-between text-xs text-slate">
           <span>
-            {current.author} — {t.googleReview}
+            {current.author} · {t.googleReview}
             {current.relativeTime ? ` · ${current.relativeTime}` : ""}
           </span>
         </div>

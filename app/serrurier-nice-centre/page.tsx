@@ -26,7 +26,7 @@ const blocks = [
   {
     heading: "Dépannage nocturne dans un secteur qui ne dort jamais",
     paragraphs: [
-      "Entre les bars du quartier du port voisin, l'animation de la place Garibaldi et du cours Saleya, et les grands axes commerçants de Jean-Médecin, le centre de Nice reste actif tard le soir. J'y interviens régulièrement pour des urgences nocturnes — porte claquée, clé perdue, sécurisation après effraction — avec la majoration de nuit annoncée avant intervention.",
+      "Entre les bars du quartier du port voisin, l'animation de la place Garibaldi et du cours Saleya, et les grands axes commerçants de Jean-Médecin, le centre de Nice reste actif tard le soir. J'y interviens régulièrement pour des urgences nocturnes (porte claquée, clé perdue, sécurisation après effraction) avec la majoration de nuit annoncée avant intervention.",
     ],
   },
   {

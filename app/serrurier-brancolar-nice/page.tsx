@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const intro = [
   "Serrure à changer, porte qui bloque au Brancolar : j'interviens 24h/24 sur ce quartier en pleine transformation, aussi bien sur les nouveaux programmes résidentiels que sur les grands ensembles plus anciens. Sur les logements neufs de l'ancien site Enedis, j'interviens souvent pour la personnalisation d'un accès : ajout d'un cylindre Cisa plus résistant ou ajustement après une pose un peu rapide en sortie de chantier.",
-  "L'avenue de Brancolar, qui donne son nom au quartier, a été ouverte au XIXe siècle dans le prolongement de Cimiez. Depuis le départ d'Enedis de son ancien site en 2021, le foncier a été racheté par Covivio pour développer un programme résidentiel ouvert sur un parc urbain. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction, à proximité du boulevard des 2 Corniches — deux réalités très différentes pour la serrurerie que je traite au quotidien.",
+  "L'avenue de Brancolar, qui donne son nom au quartier, a été ouverte au XIXe siècle dans le prolongement de Cimiez. Depuis le départ d'Enedis de son ancien site en 2021, le foncier a été racheté par Covivio pour développer un programme résidentiel ouvert sur un parc urbain. Le quartier mêle donc aujourd'hui immeubles collectifs plus anciens et nouveaux programmes en construction, à proximité du boulevard des 2 Corniches, deux réalités très différentes pour la serrurerie que je traite au quotidien.",
 ];
 
 const blocks = [
@@ -24,7 +24,7 @@ const blocks = [
   {
     heading: "Le bâti historique du Brancolar",
     paragraphs: [
-      "À côté de cette transformation, le quartier conserve ses grands ensembles d'habitat collectif plus anciens, où les portes palières et les cylindres de hall d'entrée sont soumis à un usage intensif depuis des décennies. Je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement — beaucoup de pannes viennent d'un mécanisme simplement usé plutôt que d'une pièce à changer entièrement.",
+      "À côté de cette transformation, le quartier conserve ses grands ensembles d'habitat collectif plus anciens, où les portes palières et les cylindres de hall d'entrée sont soumis à un usage intensif depuis des décennies. Je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement : beaucoup de pannes viennent d'un mécanisme simplement usé plutôt que d'une pièce à changer entièrement.",
     ],
   },
   {
@@ -83,7 +83,7 @@ const faq = [
   {
     question: "Proposez-vous un devis avant d'intervenir au Brancolar ?",
     answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux — urgence ou non.",
+      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux, urgence ou non.",
   },
 ];
 

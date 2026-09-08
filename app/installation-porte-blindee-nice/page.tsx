@@ -14,7 +14,7 @@ const sectionsFr = [
   {
     heading: "Porte blindée ou blindage, que choisir",
     paragraphs: [
-      "Deux solutions existent : le bloc-porte blindé complet, ou le blindage qui renforce une porte existante. Le choix dépend de l'état actuel de votre porte et de votre bâti — un bloc-porte convient mieux quand l'ensemble est fatigué, le blindage quand la porte reste saine et robuste.",
+      "Deux solutions existent : le bloc-porte blindé complet, ou le blindage qui renforce une porte existante. Le choix dépend de l'état actuel de votre porte et de votre bâti : un bloc-porte convient mieux quand l'ensemble est fatigué, le blindage quand la porte reste saine et robuste.",
     ],
   },
   {
@@ -32,7 +32,7 @@ const sectionsFr = [
   {
     heading: "Ce qui fait vraiment la sécurité d'une porte",
     paragraphs: [
-      "Une serrure solide ne suffit pas : le bâti, les points d'ancrage et les paumelles comptent tout autant. Une porte bien posée et bien réglée dure plus longtemps qu'une installation expédiée — je prends le temps nécessaire pour l'ajustement.",
+      "Une serrure solide ne suffit pas : le bâti, les points d'ancrage et les paumelles comptent tout autant. Une porte bien posée et bien réglée dure plus longtemps qu'une installation expédiée, je prends le temps nécessaire pour l'ajustement.",
       "Un cambrioleur met en moyenne 90 secondes pour forcer une serrure classique. Une porte blindée bien posée peut résister près de 50 minutes.",
     ],
   },
@@ -57,7 +57,7 @@ const sectionsFr = [
   {
     heading: "Un impact réel sur votre assurance habitation",
     paragraphs: [
-      "La certification A2P est reconnue par la quasi-totalité des assureurs français. Elle conditionne souvent la couverture vol de votre contrat, et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats — à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé. C'est le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
+      "La certification A2P est reconnue par la quasi-totalité des assureurs français. Elle conditionne souvent la couverture vol de votre contrat, et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats : à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé. C'est le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
     ],
   },
 ];
@@ -104,7 +104,7 @@ const sectionsEn = [
   {
     heading: "Security door or reinforcement: which to choose",
     paragraphs: [
-      "Two solutions exist: a full armored door block, or reinforcement that strengthens an existing door. The choice depends on the current condition of your door and building — a full door block suits a tired setup better, reinforcement suits a door that's still sound and sturdy.",
+      "Two solutions exist: a full armored door block, or reinforcement that strengthens an existing door. The choice depends on the current condition of your door and building: a full door block suits a tired setup better, reinforcement suits a door that's still sound and sturdy.",
     ],
   },
   {
@@ -116,7 +116,7 @@ const sectionsEn = [
   {
     heading: "What actually makes a door secure",
     paragraphs: [
-      "A solid lock isn't enough: the frame, the anchor points and the hinges matter just as much. A door fitted and adjusted properly lasts longer than a rushed install — I take the time needed to get the adjustment right.",
+      "A solid lock isn't enough: the frame, the anchor points and the hinges matter just as much. A door fitted and adjusted properly lasts longer than a rushed install, I take the time needed to get the adjustment right.",
       "A burglar takes about 90 seconds on average to force a standard lock. A well-fitted security door can hold out for nearly 50 minutes.",
     ],
   },
@@ -141,7 +141,7 @@ const sectionsEn = [
   {
     heading: "A real impact on your home insurance",
     paragraphs: [
-      "A2P certification is recognized by almost all French insurers. It often affects the theft cover in your contract, and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract — check directly with yours. I provide a detailed invoice stating the certification level fitted. It's the document usually required to claim this security upgrade with your insurer.",
+      "A2P certification is recognized by almost all French insurers. It often affects the theft cover in your contract, and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract: check directly with yours. I provide a detailed invoice stating the certification level fitted. It's the document usually required to claim this security upgrade with your insurer.",
     ],
   },
 ];
@@ -201,14 +201,14 @@ export default function InstallationPorteBlindeeNicePage() {
         extra: (
           <PriceReminder
             priceLabel="à partir de 2 689 € TTC"
-            note="Prix pour une porte de taille standard avec serrure 5 points en applique — un devis sur place reste systématique avant tout engagement"
+            note="Prix pour une porte de taille standard avec serrure 5 points en applique, un devis sur place reste systématique avant tout engagement"
             locale="fr"
           />
         ),
         processSteps: [
           {
             title: "Appel",
-            text: "Vous me décrivez votre porte actuelle et vos priorités — sécurité, isolation, esthétique — pour un premier avis dès le téléphone.",
+            text: "Vous me décrivez votre porte actuelle et vos priorités (sécurité, isolation, esthétique) pour un premier avis dès le téléphone.",
           },
           {
             title: "Rendez-vous",
@@ -247,14 +247,14 @@ export default function InstallationPorteBlindeeNicePage() {
         extra: (
           <PriceReminder
             priceLabel="from €2,689 incl. VAT"
-            note="Price for a standard door size with a 5-point rim lock — an on-site quote is always required before any commitment"
+            note="Price for a standard door size with a 5-point rim lock, an on-site quote is always required before any commitment"
             locale="en"
           />
         ),
         processSteps: [
           {
             title: "Call",
-            text: "You describe your current door and your priorities — security, insulation, appearance — for a first opinion right there on the phone.",
+            text: "You describe your current door and your priorities (security, insulation, appearance) for a first opinion right there on the phone.",
           },
           {
             title: "Appointment",

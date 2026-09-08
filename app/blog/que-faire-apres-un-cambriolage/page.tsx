@@ -61,8 +61,8 @@ export default function QueFaireApresUnCambriolagePage() {
           </h2>
           <p>
             Avant même de constater les dégâts en détail, résistez à l&apos;envie de
-            tout ranger. Chaque trace laissée par les cambrioleurs — empreintes, objets
-            déplacés, marques d&apos;outils sur la porte — est une preuve utile pour
+            tout ranger. Chaque trace laissée par les cambrioleurs (empreintes, objets
+            déplacés, marques d&apos;outils sur la porte) est une preuve utile pour
             l&apos;enquête. Si le logement semble encore occupé ou si vous avez un
             doute sur la présence des cambrioleurs, ne rentrez pas et appelez le 17
             depuis l&apos;extérieur.
@@ -76,7 +76,7 @@ export default function QueFaireApresUnCambriolagePage() {
           <p>
             Avant même de porter plainte, vérifiez si des cartes bancaires, chéquiers
             ou papiers d&apos;identité ont disparu. Le cas échéant, faites opposition
-            sans attendre — c&apos;est une course contre la montre, et ça peut se faire
+            sans attendre : c&apos;est une course contre la montre, et ça peut se faire
             depuis votre téléphone pendant que vous patientez pour la suite.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function QueFaireApresUnCambriolagePage() {
           </h2>
           <p>
             La plupart des contrats multirisques habitation imposent un délai de
-            déclaration après un cambriolage — vérifiez le vôtre, mais n&apos;attendez
+            déclaration après un cambriolage : vérifiez le vôtre, mais n&apos;attendez
             pas. Transmettez une copie du dépôt de plainte et une déclaration écrite
             décrivant les faits et les biens volés ou endommagés.
           </p>
@@ -129,7 +129,7 @@ export default function QueFaireApresUnCambriolagePage() {
             Une porte forcée qui reste dans cet état est une invitation à une seconde
             visite, en particulier si le logement est visiblement vide le temps que vous
             organisiez la suite. Je peux intervenir 24h/24 pour une mise en sécurité
-            immédiate — blocage temporaire ou remplacement selon l&apos;ampleur des
+            immédiate : blocage temporaire ou remplacement selon l&apos;ampleur des
             dégâts. Je vous propose ensuite une solution durable, une fois le diagnostic
             complet effectué. Je vous fournis systématiquement une facture détaillée,
             le document généralement demandé pour votre déclaration de sinistre.

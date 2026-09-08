@@ -141,7 +141,7 @@ export default function SerrureMultipointsPage() {
             l&apos;état du bâti, la largeur et la hauteur du battant, le niveau de
             risque réel de votre logement. Inutile de payer une serrure 7 points sur
             une porte d&apos;appartement standard en étage si un 3 points A2P bien posé
-            suffit largement — et inversement, sous-équiper une grande porte de maison
+            suffit largement, et inversement, sous-équiper une grande porte de maison
             individuelle serait une fausse économie.
           </p>
         </div>

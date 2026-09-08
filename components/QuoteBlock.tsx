@@ -31,7 +31,7 @@ export default function QuoteBlock({ locale = "fr" }: { locale?: Locale }) {
       </p>
       <div className="flex items-center justify-center gap-2 mt-5">
         <KeyIcon className="w-3.5 h-3.5 text-steel" />
-        <p className="text-sm text-slate">— {t.attribution}</p>
+        <p className="text-sm text-slate">{t.attribution}</p>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ const blocks = [
 ];
 
 const safetyParagraph =
-  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune d'Èze. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur — un repère régional plutôt qu'une donnée précise pour Èze. Les résidences secondaires et villas isolées, plus nombreuses ici que dans le centre de Nice, restent statistiquement des cibles recherchées lors des périodes d'absence prolongée. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
+  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune d'Èze. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur (un repère régional plutôt qu'une donnée précise pour Èze). Les résidences secondaires et villas isolées, plus nombreuses ici que dans le centre de Nice, restent statistiquement des cibles recherchées lors des périodes d'absence prolongée. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
 
 const faq = [
   {

@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     await resend.emails.send({
       from: fromAddress,
       to: business.email,
-      subject: `Nouvelle demande de contact — ${name.trim()}`,
+      subject: `Nouvelle demande de contact : ${name.trim()}`,
       text: `Nom: ${name.trim()}\nTéléphone: ${phone.trim()}\n\nMessage:\n${message.trim()}`,
     });
   } catch (err) {

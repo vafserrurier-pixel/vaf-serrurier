@@ -28,7 +28,7 @@ export default function CtaBlock({
       <div>
         <p className="font-heading font-bold text-lg">{title ?? t.defaultTitle}</p>
         <p className="text-cream/80 text-sm mt-1">
-          {business.address.full} — {t.available(business.hours)}
+          {business.address.full} · {t.available(business.hours)}
         </p>
       </div>
       <div className="shrink-0 flex items-center gap-2">

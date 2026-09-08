@@ -84,7 +84,7 @@ const homeFaqFr: FaqItem[] = [
   {
     question: "Dans quels quartiers de Nice intervenez-vous ?",
     answer:
-      "Je couvre l'ensemble de Nice — centre, est, nord et ouest, du Vieux-Nice à Fabron en passant par Cimiez ou Riquier. Voir le détail sur la page zones d'intervention.",
+      "Je couvre l'ensemble de Nice (centre, est, nord et ouest), du Vieux-Nice à Fabron en passant par Cimiez ou Riquier. Voir le détail sur la page zones d'intervention.",
   },
   {
     question: "Pourquoi choisir un artisan serrurier solo plutôt qu'une grande enseigne ?",
@@ -122,12 +122,12 @@ const homeFaqEn: FaqItem[] = [
   {
     question: "Which areas of Nice do you cover?",
     answer:
-      "I cover the whole of Nice — center, east, north and west, from the Old Town to Fabron, through Cimiez or Riquier. See the full detail on the areas covered page (in French).",
+      "I cover the whole of Nice (center, east, north and west), from the Old Town to Fabron, through Cimiez or Riquier. See the full detail on the areas covered page (in French).",
   },
   {
     question: "Why choose a solo locksmith over a large company?",
     answer:
-      "Because I'm the one who answers the phone, the one who shows up, and the one you can still reach afterward if needed. No middleman, no subcontracting — a single point of contact from the first call to the end of the job.",
+      "Because I'm the one who answers the phone, the one who shows up, and the one you can still reach afterward if needed. No middleman, no subcontracting: a single point of contact from the first call to the end of the job.",
   },
   {
     question: "Do you handle both emergencies and planned projects?",
@@ -143,7 +143,7 @@ const homeFaqEn: FaqItem[] = [
 
 const strings = {
   fr: {
-    badge: "Disponible maintenant — devis gratuit par téléphone",
+    badge: "Disponible maintenant : devis gratuit par téléphone",
     h1a: "Serrurier à",
     h1b: ", disponible 24h/24",
     lead: "Porte claquée, serrure bloquée, effraction : vous m'expliquez la situation, j'annonce un prix avant de me déplacer. Ce qui compte, c'est la transparence, pas les promesses.",
@@ -153,8 +153,8 @@ const strings = {
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
       "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Chez moi, pas de standard qui redirige votre appel vers un sous-traitant inconnu. C'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
-      "J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron. Mon métier couvre tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Dans tous les cas, j'annonce le prix avant de commencer. Résultat : sur les 150 avis 5 étoiles laissés sur ma fiche Google, un point revient sans cesse — aucune mauvaise surprise sur la facture.",
-      "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate — une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure. D'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
+      "J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron. Mon métier couvre tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Dans tous les cas, j'annonce le prix avant de commencer. Résultat : sur les 150 avis 5 étoiles laissés sur ma fiche Google, un point revient sans cesse : aucune mauvaise surprise sur la facture.",
+      "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate (une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure). D'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
       "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice. Concrètement, vous avez les mêmes explications claires, le même devis annoncé avant travaux, et un seul interlocuteur à qui vous référer d'une intervention à l'autre.",
     ],
     aboutLink: "En savoir plus sur mon parcours →",
@@ -187,7 +187,7 @@ const strings = {
     brands: "Marques de serrures que je pose à Nice",
     feature1Title: "Prix annoncé avant",
     feature1Text:
-      "Le devis vous est communiqué avant que je touche à quoi que ce soit — c'est une obligation légale que je respecte systématiquement, urgence ou non.",
+      "Le devis vous est communiqué avant que je touche à quoi que ce soit, c'est une obligation légale que je respecte systématiquement, urgence ou non.",
     feature2Title: "Un artisan, pas un centre d'appel",
     feature2Text:
       "Vous parlez directement à la personne qui va intervenir chez vous, du premier appel jusqu'à la fin du chantier.",
@@ -209,7 +209,7 @@ const strings = {
     faqTitle: "Questions fréquentes",
   },
   en: {
-    badge: "Available now — free quote by phone",
+    badge: "Available now: free quote by phone",
     h1a: "Locksmith in",
     h1b: ", available 24/7",
     lead: "Door slammed shut, jammed lock, break-in: you explain the situation, I quote a price before I travel to you. What matters is transparency, not promises.",
@@ -219,8 +219,8 @@ const strings = {
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [
       "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor. I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
-      "I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron. My work covers everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. In every case, I quote the price before I start. The result: across 150 five-star reviews on my Google listing, one point comes up again and again — no bad surprises on the bill.",
-      "Not every situation is the same. Some need an immediate response — a door slammed shut with the keys inside, a break-in to secure within the hour. Others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
+      "I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron. My work covers everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. In every case, I quote the price before I start. The result: across 150 five-star reviews on my Google listing, one point comes up again and again: no bad surprises on the bill.",
+      "Not every situation is the same. Some need an immediate response (a door slammed shut with the keys inside, a break-in to secure within the hour). Others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
       "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice. In practice, that means the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
     ],
     aboutLink: "More about me (in French) →",
@@ -253,7 +253,7 @@ const strings = {
     brands: "Lock brands I install in Nice",
     feature1Title: "Price quoted upfront",
     feature1Text:
-      "You get the quote before I touch anything — it's a legal requirement I always follow, emergency or not.",
+      "You get the quote before I touch anything, it's a legal requirement I always follow, emergency or not.",
     feature2Title: "A craftsman, not a call center",
     feature2Text: "You speak directly to the person who'll show up at your place, from the first call to the end of the job.",
     feature3Title: "5.0/5 from over 150 reviews",
@@ -454,8 +454,8 @@ export default function HomeBody() {
             className="underline hover:text-steel"
           >
             {locale === "en"
-              ? "French Interior Ministry — official burglary statistics"
-              : "Ministère de l'Intérieur — statistiques officielles des cambriolages"}
+              ? "French Interior Ministry: official burglary statistics"
+              : "Ministère de l'Intérieur : statistiques officielles des cambriolages"}
           </a>
         </p>
       </section>

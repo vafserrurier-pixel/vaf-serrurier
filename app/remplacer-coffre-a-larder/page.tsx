@@ -98,8 +98,8 @@ export default function RemplacerCoffreALarderPage() {
             Tous les coffres à larder ne sont pas interchangeables, même à taille
             proche. Avant d&apos;en acheter un neuf, vérifiez le sens de la porte
             (poussant ou tirant, droite ou gauche), la fonction exacte (simple, à
-            condamnation, ou avec bec-de-cane), et si possible la marque d&apos;origine
-            — certains fabricants comme Fichet, Vachette ou Bricard utilisent des
+            condamnation, ou avec bec-de-cane), et si possible la marque d&apos;origine :
+            certains fabricants comme Fichet, Vachette ou Bricard utilisent des
             entraxes propriétaires qui ne correspondent à aucun standard générique.
             Dans le doute, démontez d&apos;abord l&apos;ancien coffre et comparez-le
             physiquement en magasin plutôt que de commander sur la seule base des

@@ -19,7 +19,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Le devis est-il vraiment gratuit ?",
     answer:
-      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux — c'est une obligation légale pour un serrurier.",
+      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier.",
   },
   {
     question: "Les pièces remplacées sont-elles comprises dans le prix affiché ?",
@@ -34,7 +34,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Comment éviter une arnaque de serrurier ?",
     answer:
-      "Méfiez-vous d'abord des prix d'appel affichés très bas (30 ou 40 € par exemple) : c'est presque toujours le signe que la facture va gonfler une fois le technicien sur place, avec des frais ajoutés sur le pas de la porte. Une intervention sérieuse, déplacement compris, descend rarement sous les 100 € tout compris — un prix très inférieur à la réalité du marché doit alerter, pas rassurer. Exigez un prix ferme par téléphone avant tout déplacement, demandez toujours une facture détaillée, et vérifiez que l'entreprise a une adresse et un SIRET vérifiables, pas seulement un numéro de mobile. C'est exactement pour lutter contre ces pratiques que je me suis installé à mon compte : mes tarifs sont annoncés à l'avance et ne bougent pas une fois sur place, sauf pièce supplémentaire clairement identifiée et validée par vous.",
+      "Méfiez-vous d'abord des prix d'appel affichés très bas (30 ou 40 € par exemple) : c'est presque toujours le signe que la facture va gonfler une fois le technicien sur place, avec des frais ajoutés sur le pas de la porte. Une intervention sérieuse, déplacement compris, descend rarement sous les 100 € tout compris. Un prix très inférieur à la réalité du marché doit alerter, pas rassurer. Exigez un prix ferme par téléphone avant tout déplacement, demandez toujours une facture détaillée, et vérifiez que l'entreprise a une adresse et un SIRET vérifiables, pas seulement un numéro de mobile. C'est exactement pour lutter contre ces pratiques que je me suis installé à mon compte : mes tarifs sont annoncés à l'avance et ne bougent pas une fois sur place, sauf pièce supplémentaire clairement identifiée et validée par vous.",
   },
 ];
 
@@ -47,7 +47,7 @@ const faqEn: FaqItem[] = [
   {
     question: "Is the quote really free?",
     answer:
-      "Yes. I give you a price over the phone based on your description, and confirm it on site before starting any work — it's a legal requirement for a locksmith.",
+      "Yes. I give you a price over the phone based on your description, and confirm it on site before starting any work, it's a legal requirement for a locksmith.",
   },
   {
     question: "Are replaced parts included in the price shown?",
@@ -62,16 +62,16 @@ const faqEn: FaqItem[] = [
   {
     question: "How do I avoid a locksmith scam?",
     answer:
-      "First, be wary of very low advertised prices (€30 or €40, for example): it's almost always a sign the bill will balloon once the technician is on site, with extra fees added at your door. A serious callout, travel included, rarely comes in under €100 all in — a price well below market reality should raise a flag, not reassure you. Insist on a firm price over the phone before any travel, always ask for a detailed invoice, and check the company has a verifiable address and SIRET number, not just a mobile number. This is exactly why I set up on my own: my prices are quoted upfront and don't move once I'm on site, except for a clearly identified extra part you've approved.",
+      "First, be wary of very low advertised prices (€30 or €40, for example): it's almost always a sign the bill will balloon once the technician is on site, with extra fees added at your door. A serious callout, travel included, rarely comes in under €100 all in. A price well below market reality should raise a flag, not reassure you. Insist on a firm price over the phone before any travel, always ask for a detailed invoice, and check the company has a verifiable address and SIRET number, not just a mobile number. This is exactly why I set up on my own: my prices are quoted upfront and don't move once I'm on site, except for a clearly identified extra part you've approved.",
   },
 ];
 
 const strings = {
   fr: {
     breadcrumb: "Tarifs",
-    badge: "Disponible maintenant — devis gratuit par téléphone",
+    badge: "Disponible maintenant : devis gratuit par téléphone",
     h1: "Tarifs serrurier à Nice",
-    lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards — un devis précis est toujours annoncé avant que je commence l'intervention.",
+    lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards : un devis précis est toujours annoncé avant que je commence l'intervention.",
     call: "Appeler",
     trustSiret: (siret: string) => `SIRET vérifiable : ${siret}`,
     trustInsurance: "Assurance RC Pro et garantie décennale",
@@ -93,9 +93,9 @@ const strings = {
   },
   en: {
     breadcrumb: "Pricing",
-    badge: "Available now — free quote by phone",
+    badge: "Available now: free quote by phone",
     h1: "Locksmith pricing in Nice",
-    lead: "What matters is transparency, not promises. Here's my pricing for standard situations — a precise quote is always given before I start the work.",
+    lead: "What matters is transparency, not promises. Here's my pricing for standard situations: a precise quote is always given before I start the work.",
     call: "Call",
     trustSiret: (siret: string) => `Verifiable SIRET: ${siret}`,
     trustInsurance: "Professional liability and 10-year insurance",

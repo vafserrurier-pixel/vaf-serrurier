@@ -13,13 +13,13 @@ const sections = [
   {
     heading: "Ma priorité : fermer, sécuriser, puis proposer une solution durable",
     paragraphs: [
-      "Découvrir sa porte forcée est toujours un choc, en plus d'être une vraie faille de sécurité tant qu'elle reste dans cet état. J'interviens 24h/24 après une intrusion, y compris la nuit, car chaque heure sans fermeture fiable est un risque de récidive. Je commence toujours par évaluer les dégâts réels — cylindre endommagé, serrure tordue, bâti marqué, gâche arrachée. Je propose ensuite un devis transparent, même en pleine urgence.",
+      "Découvrir sa porte forcée est toujours un choc, en plus d'être une vraie faille de sécurité tant qu'elle reste dans cet état. J'interviens 24h/24 après une intrusion, y compris la nuit, car chaque heure sans fermeture fiable est un risque de récidive. Je commence toujours par évaluer les dégâts réels (cylindre endommagé, serrure tordue, bâti marqué, gâche arrachée). Je propose ensuite un devis transparent, même en pleine urgence.",
     ],
   },
   {
     heading: "Ce que je vérifie systématiquement sur place",
     paragraphs: [
-      "Le remplacement du cylindre, l'ajustement d'une porte voilée par le choc, et la vérification complète de la gâche font partie du diagnostic que je mène à chaque intervention. Je préfère régler le vrai problème — un bâti fragilisé, un point d'ancrage arraché. Une réparation rapide qui masque le symptôme ne tiendra pas à la prochaine tentative.",
+      "Le remplacement du cylindre, l'ajustement d'une porte voilée par le choc, et la vérification complète de la gâche font partie du diagnostic que je mène à chaque intervention. Je préfère régler le vrai problème : un bâti fragilisé, un point d'ancrage arraché. Une réparation rapide qui masque le symptôme ne tiendra pas à la prochaine tentative.",
     ],
   },
   {
@@ -76,7 +76,7 @@ const faq = [
   {
     question: "Je ne suis pas sur place (propriétaire absent, syndic, gestionnaire) : puis-je voir ce qui a été fait ?",
     answer:
-      "Oui, sur simple demande je vous transmets une courte vidéo de l'intervention (avant/après) par WhatsApp ou email — utile si vous n'êtes pas présent au moment des travaux.",
+      "Oui, sur simple demande je vous transmets une courte vidéo de l'intervention (avant/après) par WhatsApp ou email, utile si vous n'êtes pas présent au moment des travaux.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
                 rel="noopener noreferrer"
                 className="underline hover:text-steel"
               >
-                Ministère de l&apos;Intérieur — statistiques officielles des cambriolages
+                Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
               </a>
             </p>
           </section>
@@ -124,7 +124,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         },
         {
           title: "Évaluation des dégâts",
-          text: "J'évalue l'ampleur des dégâts — cylindre arraché, bâti fissuré, gâche endommagée — pour proposer une mise en sécurité immédiate adaptée.",
+          text: "J'évalue l'ampleur des dégâts (cylindre arraché, bâti fissuré, gâche endommagée) pour proposer une mise en sécurité immédiate adaptée.",
         },
         {
           title: "Règlement",

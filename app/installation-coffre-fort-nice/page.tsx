@@ -104,7 +104,7 @@ export default function InstallationCoffreFortNicePage() {
       processSteps={[
         {
           title: "Appel",
-          text: "Vous me décrivez l'usage prévu — documents, valeurs, armes — et l'emplacement envisagé, pour vous orienter vers le bon modèle.",
+          text: "Vous me décrivez l'usage prévu (documents, valeurs, armes) et l'emplacement envisagé, pour vous orienter vers le bon modèle.",
         },
         {
           title: "Rendez-vous",

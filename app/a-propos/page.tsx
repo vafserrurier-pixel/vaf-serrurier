@@ -34,7 +34,7 @@ export default function AProposPage() {
             <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Qui suis-je", href: "/a-propos/" }]} />
             <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              Disponible maintenant — devis gratuit par téléphone
+              Disponible maintenant : devis gratuit par téléphone
             </span>
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
               Qui suis-je
@@ -79,7 +79,7 @@ export default function AProposPage() {
           <h2 className="font-heading text-xl font-bold text-navy mb-2">Mon parcours</h2>
           <p className="text-slate leading-relaxed">
             Je suis titulaire d&apos;un CAP Serrurier Métallier, complété au fil des
-            années par beaucoup de formation sur le terrain — c&apos;est là, en
+            années par beaucoup de formation sur le terrain : c&apos;est là, en
             intervenant, que l&apos;on apprend vraiment ce métier. Ce métier m&apos;est
             venu naturellement : j&apos;ai commencé en travaillant dans l&apos;entreprise
             de mon frère à Paris, l&apos;une des plus grandes sociétés du secteur en
@@ -95,8 +95,8 @@ export default function AProposPage() {
           <p className="text-slate leading-relaxed">
             Après plusieurs années dans une grande structure, j&apos;ai fait le choix de
             m&apos;installer à mon compte. La serrurerie est un métier qui traîne une
-            mauvaise réputation — prix gonflés, interventions douteuses, profit sur
-            l&apos;urgence et la détresse du client. Par conscience professionnelle,
+            mauvaise réputation (prix gonflés, interventions douteuses, profit sur
+            l&apos;urgence et la détresse du client). Par conscience professionnelle,
             j&apos;ai voulu montrer que ce n&apos;est pas une fatalité : que
             l&apos;honnêteté et la transparence peuvent aussi être la norme dans ce
             métier, pas l&apos;exception.

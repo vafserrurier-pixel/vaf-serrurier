@@ -3,7 +3,7 @@ import { business } from "@/lib/business";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${business.legalName} — ${business.tagline}`,
+    name: `${business.legalName} : ${business.tagline}`,
     short_name: business.legalName,
     description: "Serrurier à Nice, disponible 24h/24. Devis annoncé avant chaque intervention.",
     start_url: "/",

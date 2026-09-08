@@ -21,7 +21,7 @@ export default function MentionsLegalesPage() {
         <p>SIRET : {business.siret}</p>
         <p>Directeur de la publication : {business.firstName}, président de la société</p>
         <p>
-          Email : {business.email} — Téléphone :{" "}
+          Email : {business.email} · Téléphone :{" "}
           <a href={business.phone.href} className="underline">
             {business.phone.display}
           </a>

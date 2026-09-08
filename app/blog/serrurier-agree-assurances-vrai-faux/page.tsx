@@ -127,7 +127,7 @@ export default function AgreeAssurancesPage() {
             Je préfère mettre en avant ce qui se vérifie réellement : mon SIRET, mon
             assurance RC Pro, et une facture détaillée systématique. Si vous avez un
             doute sur une intervention en cours ailleurs, n&apos;hésitez pas à
-            demander ces informations avant d&apos;accepter un devis — c&apos;est un
+            demander ces informations avant d&apos;accepter un devis : c&apos;est un
             réflexe simple qui évite les mauvaises surprises.
           </p>
         </div>

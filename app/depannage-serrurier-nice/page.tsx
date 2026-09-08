@@ -40,7 +40,7 @@ const sectionsFr = [
   {
     heading: "Comment je fixe le tarif d'un dépannage",
     paragraphs: [
-      "Le coût dépend du problème rencontré, du temps nécessaire sur place et des pièces éventuellement à remplacer. Vous m'appelez, vous m'expliquez le souci en quelques mots, et je vous donne un prix avant de me déplacer — pas de mauvaise surprise à la fin.",
+      "Le coût dépend du problème rencontré, du temps nécessaire sur place et des pièces éventuellement à remplacer. Vous m'appelez, vous m'expliquez le souci en quelques mots, et je vous donne un prix avant de me déplacer, pas de mauvaise surprise à la fin.",
     ],
   },
 ];
@@ -96,7 +96,7 @@ const sectionsEn = [
   {
     heading: "When the key turns but nothing happens",
     paragraphs: [
-      "If the key turns freely without engaging anything, the mechanism is no longer transmitting movement to the bolt. This is often a sign of a broken internal part or a fully worn cylinder. I check the whole assembly — door, strike plate, bolt and cylinder — to pinpoint the exact cause. Then I fix what can be fixed, and only replace what's truly necessary.",
+      "If the key turns freely without engaging anything, the mechanism is no longer transmitting movement to the bolt. This is often a sign of a broken internal part or a fully worn cylinder. I check the whole assembly (door, strike plate, bolt and cylinder) to pinpoint the exact cause. Then I fix what can be fixed, and only replace what's truly necessary.",
     ],
   },
   {
@@ -108,7 +108,7 @@ const sectionsEn = [
   {
     heading: "How I set the price for a callout",
     paragraphs: [
-      "The cost depends on the problem, the time needed on site, and any parts that need replacing. You call me, explain the issue in a few words, and I give you a price before I travel to you — no bad surprises at the end.",
+      "The cost depends on the problem, the time needed on site, and any parts that need replacing. You call me, explain the issue in a few words, and I give you a price before I travel to you, no bad surprises at the end.",
     ],
   },
 ];
@@ -171,7 +171,7 @@ export default function DepannageSerrurierNicePage() {
         processSteps: [
           {
             title: "Appel",
-            text: "Vous décrivez la panne — porte bloquée, cylindre grippé, clé cassée — et j'identifie la cause la plus probable dès le téléphone.",
+            text: "Vous décrivez la panne (porte bloquée, cylindre grippé, clé cassée) et j'identifie la cause la plus probable dès le téléphone.",
           },
           {
             title: "Délai d'arrivée",
@@ -218,7 +218,7 @@ export default function DepannageSerrurierNicePage() {
         processSteps: [
           {
             title: "Call",
-            text: "You describe the fault — jammed door, seized cylinder, broken key — and I identify the most likely cause right there on the phone.",
+            text: "You describe the fault (jammed door, seized cylinder, broken key) and I identify the most likely cause right there on the phone.",
           },
           {
             title: "Time to arrival",

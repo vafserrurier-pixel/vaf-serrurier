@@ -44,7 +44,7 @@ const blocks = [
   {
     heading: "Résidentiel calme dans le quartier des Poètes",
     paragraphs: [
-      "Le quartier des Poètes, au nord de Nice, doit son nom aux rues qui portent des noms d'écrivains. Secteur résidentiel plutôt calme, il compte surtout des immeubles collectifs de taille moyenne. J'y interviens autant pour du dépannage classique — cylindre grippé, porte claquée — que pour des changements de serrure programmés à l'avance.",
+      "Le quartier des Poètes, au nord de Nice, doit son nom aux rues qui portent des noms d'écrivains. Secteur résidentiel plutôt calme, il compte surtout des immeubles collectifs de taille moyenne. J'y interviens autant pour du dépannage classique (cylindre grippé, porte claquée) que pour des changements de serrure programmés à l'avance.",
     ],
   },
 ];

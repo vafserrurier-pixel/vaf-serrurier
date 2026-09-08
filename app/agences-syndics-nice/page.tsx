@@ -21,21 +21,21 @@ const sections = [
   {
     heading: "Un tarif étudié selon votre volume",
     paragraphs: [
-      "Le tarif d'un particulier ne s'applique pas nécessairement à une agence qui me sollicite régulièrement. J'applique un tarif préférentiel étudié au cas par cas, selon la fréquence et la nature de vos demandes — on en discute directement selon votre situation, plutôt qu'une grille figée qui ne correspondrait à personne.",
+      "Le tarif d'un particulier ne s'applique pas nécessairement à une agence qui me sollicite régulièrement. J'applique un tarif préférentiel étudié au cas par cas, selon la fréquence et la nature de vos demandes : on en discute directement selon votre situation, plutôt qu'une grille figée qui ne correspondrait à personne.",
     ],
   },
   {
     heading: "Comment ça se passe pour démarrer",
     paragraphs: [
       "Pas de convention à signer ni de process compliqué : vous m'appelez, on échange quelques minutes sur vos besoins et votre volume habituel, et vous avez immédiatement un contact direct pour toutes vos serrures. Je m'adapte à votre fonctionnement, pas l'inverse.",
-      "Vous n'avez pas besoin de remplacer votre prestataire actuel pour commencer. Beaucoup de mises en relation démarrent en solution de secours — le numéro que vous appelez quand votre interlocuteur habituel ne répond pas ou n'est pas disponible le soir ou le week-end. C'est sans risque, et c'est souvent comme ça qu'une vraie collaboration s'installe dans la durée.",
+      "Vous n'avez pas besoin de remplacer votre prestataire actuel pour commencer. Beaucoup de mises en relation démarrent en solution de secours : le numéro que vous appelez quand votre interlocuteur habituel ne répond pas ou n'est pas disponible le soir ou le week-end. C'est sans risque, et c'est souvent comme ça qu'une vraie collaboration s'installe dans la durée.",
     ],
   },
   {
     heading: "Audit copropriété & entretien préventif",
     paragraphs: [
       "Sur demande du syndic ou du conseil syndical, je réalise un passage complet de l'immeuble : portes de hall, ferme-portes, blocs boîtes aux lettres, accès parking, locaux techniques, gâches. L'objectif est de repérer ce qui vieillit mal avant que ça devienne une urgence à traiter dans la précipitation.",
-      "Le livrable est un devis détaillé poste par poste, avec l'état constaté de chaque mécanisme et mes recommandations (entretien, réglage ou remplacement). Le prix dépend du nombre d'accès et du temps passé sur place : il repose sur le déplacement, la main-d'œuvre à 75 € de l'heure, et le matériel remplacé le cas échéant — toujours communiqué avant intervention.",
+      "Le livrable est un devis détaillé poste par poste, avec l'état constaté de chaque mécanisme et mes recommandations (entretien, réglage ou remplacement). Le prix dépend du nombre d'accès et du temps passé sur place : il repose sur le déplacement, la main-d'œuvre à 75 € de l'heure, et le matériel remplacé le cas échéant, toujours communiqué avant intervention.",
       "Je n'ai pas encore de contrat d'entretien récurrent avec un syndic à ce jour, mais cette prestation est disponible dès maintenant, à la demande. Si vous gérez une copropriété à Nice, contactez-moi pour en discuter.",
     ],
   },
@@ -76,7 +76,7 @@ const faq = [
   {
     question: "Intervenez-vous en urgence pour un logement vacant ou sinistré ?",
     answer:
-      "Oui, avec le même délai que pour un particulier — je vous annonce un prix avant de me déplacer, quelle que soit l'urgence.",
+      "Oui, avec le même délai que pour un particulier : je vous annonce un prix avant de me déplacer, quelle que soit l'urgence.",
   },
   {
     question: "Faut-il signer un contrat ou une convention pour travailler avec vous ?",

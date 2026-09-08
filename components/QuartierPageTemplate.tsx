@@ -79,7 +79,7 @@ export default function QuartierPageTemplate({
             />
             <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              Disponible maintenant — devis gratuit par téléphone
+              Disponible maintenant : devis gratuit par téléphone
             </span>
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
               Serrurier à {quartier}, Nice
@@ -178,7 +178,7 @@ export default function QuartierPageTemplate({
           à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
           département des Alpes-Maritimes (0,43%). Cette donnée concerne
           l&apos;ensemble de la ville de
-          Nice, qui ne compte pas d&apos;arrondissements officiels — il n&apos;existe
+          Nice, qui ne compte pas d&apos;arrondissements officiels : il n&apos;existe
           pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
           {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
         </p>
@@ -190,7 +190,7 @@ export default function QuartierPageTemplate({
             rel="noopener noreferrer"
             className="underline hover:text-steel"
           >
-            Ministère de l&apos;Intérieur — statistiques officielles des cambriolages
+            Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
           </a>
         </p>
       </section>

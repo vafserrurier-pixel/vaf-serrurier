@@ -68,8 +68,8 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           <p>
             Une porte de hall, un digicode ou une gâche électrique font partie des
             parties communes de l&apos;immeuble. Toute décision qui engage une dépense
-            significative — remplacement de la serrure, installation d&apos;un nouveau
-            digicode, mise en place d&apos;un organigramme — relève en principe d&apos;un
+            significative (remplacement de la serrure, installation d&apos;un nouveau
+            digicode, mise en place d&apos;un organigramme) relève en principe d&apos;un
             vote en assemblée générale des copropriétaires. Le syndic exécute la
             décision votée, il ne la prend pas seul, sauf urgence avérée.
           </p>
@@ -143,7 +143,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             électrique demande davantage de travail qu&apos;une serrure mécanique), et
             la complexité de l&apos;organigramme si plusieurs niveaux de clés sont
             nécessaires. Dans tous les cas, un devis détaillé, poste par poste, reste
-            la seule façon d&apos;avoir un prix fiable — pas une estimation
+            la seule façon d&apos;avoir un prix fiable, pas une estimation
             approximative au téléphone.
           </p>
         </div>

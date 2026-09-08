@@ -56,7 +56,7 @@ export default function PorteQuiClaquePage() {
         <p>
           C&apos;est l&apos;un des appels les plus fréquents que je reçois : une
           porte qui se referme d&apos;un coup de vent ou d&apos;un geste rapide, et
-          la question qui suit immédiatement — faut-il forcer, appeler tout de suite,
+          la question qui suit immédiatement : faut-il forcer, appeler tout de suite,
           ou d&apos;abord vérifier quelque chose ? Voici l&apos;ordre que je conseille.
         </p>
 
@@ -110,7 +110,7 @@ export default function PorteQuiClaquePage() {
             exemple), annoncés pour un simple déplacement. Le tarif réel, une fois
             sur place, grimpe presque toujours bien au-delà une fois sur le pas de la
             porte. Une intervention sérieuse pour une porte claquée descend rarement
-            sous les 100 € tout compris — chez moi, ce tarif est annoncé à
+            sous les 100 € tout compris. Chez moi, ce tarif est annoncé à
             l&apos;avance et fixe, sans surprise une fois sur place.
           </p>
         </div>
@@ -123,8 +123,8 @@ export default function PorteQuiClaquePage() {
             Sur la plupart des portes, j&apos;utilise la méthode radio, aussi appelée
             technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée
             entre le cadre et le pêne, qui libère le mécanisme sans dommage dans la
-            quasi-totalité des cas. C&apos;est plus délicat qu&apos;il n&apos;y paraît
-            — mal maîtrisée, cette manipulation abîme justement ce qu&apos;elle est
+            quasi-totalité des cas. C&apos;est plus délicat qu&apos;il n&apos;y paraît :
+            mal maîtrisée, cette manipulation abîme justement ce qu&apos;elle est
             censée préserver, d&apos;où l&apos;intérêt de laisser un professionnel s&apos;en
             charger dès que la porte résiste un peu.
           </p>

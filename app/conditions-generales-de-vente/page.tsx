@@ -12,7 +12,7 @@ export default function CgvPage() {
   return (
     <LegalPageLayout title="Conditions générales de vente" path="/conditions-generales-de-vente/">
       <div>
-        <h2>Article 1 — Champ d&apos;application</h2>
+        <h2>Article 1 : Champ d&apos;application</h2>
         <p>
           Les présentes conditions générales de vente s&apos;appliquent à toutes les
           prestations de serrurerie réalisées par {business.legalName}, {business.legalForm},
@@ -22,7 +22,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 2 — Information précontractuelle et devis</h2>
+        <h2>Article 2 : Information précontractuelle et devis</h2>
         <p>
           Avant toute intervention, je vous communique clairement la nature de la
           prestation, le tarif estimé, le délai d&apos;intervention et mes coordonnées. Un
@@ -31,7 +31,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 3 — Droit de rétractation</h2>
+        <h2>Article 3 : Droit de rétractation</h2>
         <p>
           Pour une commande à distance, vous disposez d&apos;un délai de rétractation de 14
           jours. Ce délai ne s&apos;applique pas aux interventions d&apos;urgence réalisées à
@@ -41,7 +41,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 4 — Commande et paiement</h2>
+        <h2>Article 4 : Commande et paiement</h2>
         <p>
           Un acompte de 40% peut être demandé à la commande pour les interventions
           programmées (hors urgence). Le solde est dû à la fin de la prestation. Les
@@ -50,7 +50,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 5 — Délai d&apos;exécution</h2>
+        <h2>Article 5 : Délai d&apos;exécution</h2>
         <p>
           Les prestations sont réalisées dans un délai maximal de 6 mois à compter de la
           validation de la commande, sauf indisponibilité exceptionnelle communiquée au
@@ -59,7 +59,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 6 — Garanties</h2>
+        <h2>Article 6 : Garanties</h2>
         <p>
           Je garantis la main d&apos;œuvre et les pièces posées pendant un an. La garantie
           légale de conformité s&apos;applique également : tout défaut doit être signalé
@@ -68,7 +68,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 7 — Données personnelles</h2>
+        <h2>Article 7 : Données personnelles</h2>
         <p>
           Vos données sont traitées uniquement pour la gestion de votre commande, dans le
           respect du RGPD. Vous disposez d&apos;un droit d&apos;accès, de rectification et
@@ -77,7 +77,7 @@ export default function CgvPage() {
       </div>
 
       <div>
-        <h2>Article 8 — Réclamations et litiges</h2>
+        <h2>Article 8 : Réclamations et litiges</h2>
         <p>
           Toute réclamation doit être adressée par écrit à {business.email}. Une tentative
           de médiation est recherchée avant toute action judiciaire. Les tribunaux français

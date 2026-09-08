@@ -29,7 +29,7 @@ const homeFaq = [
   {
     question: "Dans quels quartiers de Nice intervenez-vous ?",
     answer:
-      "Je couvre l'ensemble de Nice — centre, est, nord et ouest, du Vieux-Nice à Fabron en passant par Cimiez ou Riquier. Voir le détail sur la page zones d'intervention.",
+      "Je couvre l'ensemble de Nice (centre, est, nord et ouest), du Vieux-Nice à Fabron en passant par Cimiez ou Riquier. Voir le détail sur la page zones d'intervention.",
   },
   {
     question: "Pourquoi choisir un artisan serrurier solo plutôt qu'une grande enseigne ?",

@@ -42,8 +42,8 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: KeyIcon,
     },
     "/serrure-carenee-nice/": {
-      text: () =>
-        "Renfort intermédiaire entre cylindre standard et blindage complet, sans reprendre toute la porte.",
+      text: (lieu) =>
+        `Renfort intermédiaire entre cylindre standard et blindage complet à ${lieu}, sans reprendre toute la porte.`,
       Icon: KeyIcon,
     },
     "/installation-porte-blindee-nice/": {
@@ -57,23 +57,23 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: AlertLockIcon,
     },
     "/agences-syndics-nice/": {
-      text: () =>
-        "Interlocuteur unique pour vos biens en gestion locative ou en copropriété, tarif étudié selon le volume.",
+      text: (lieu) =>
+        `Interlocuteur unique pour vos biens en gestion locative ou en copropriété à ${lieu}, tarif étudié selon le volume.`,
       Icon: HandshakeIcon,
     },
     "/ouverture-de-coffre-fort-nice/": {
-      text: () =>
-        "Code oublié, clé perdue, coffre hérité : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.",
+      text: (lieu) =>
+        `Code oublié, clé perdue, coffre hérité à ${lieu} : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.`,
       Icon: SafeIcon,
     },
     "/installation-coffre-fort-nice/": {
-      text: () =>
-        "Conseil sur le modèle, fixation sécurisée au sol ou au mur : un coffre non fixé ne protège pas grand-chose.",
+      text: (lieu) =>
+        `Conseil sur le modèle, fixation sécurisée au sol ou au mur à ${lieu} : un coffre non fixé ne protège pas grand-chose.`,
       Icon: SafeIcon,
     },
     "/tarifs-serrurier-nice/": {
-      text: () =>
-        "Grille de prix complète pour chaque intervention, toujours annoncée avant que je me déplace.",
+      text: (lieu) =>
+        `Grille de prix complète pour chaque intervention à ${lieu}, toujours annoncée avant que je me déplace.`,
       Icon: PriceTagIcon,
     },
   },
@@ -90,12 +90,12 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/changement-serrure-nice/": {
       text: (lieu) =>
-        `Cylinder or full lock replacement in ${lieu}, multipoint locks included. Fitted, adjusted and tested — not just screwed in.`,
+        `Cylinder or full lock replacement in ${lieu}, multipoint locks included. Fitted, adjusted and tested, not just screwed in.`,
       Icon: KeyIcon,
     },
     "/serrure-carenee-nice/": {
-      text: () =>
-        "An intermediate reinforcement between a standard cylinder and full armoring, without redoing the whole door.",
+      text: (lieu) =>
+        `An intermediate reinforcement between a standard cylinder and full armoring in ${lieu}, without redoing the whole door.`,
       Icon: KeyIcon,
     },
     "/installation-porte-blindee-nice/": {
@@ -109,22 +109,22 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: AlertLockIcon,
     },
     "/agences-syndics-nice/": {
-      text: () =>
-        "A single point of contact for your rental or co-ownership properties, rate studied by volume.",
+      text: (lieu) =>
+        `A single point of contact for your rental or co-ownership properties in ${lieu}, rate studied by volume.`,
       Icon: HandshakeIcon,
     },
     "/ouverture-de-coffre-fort-nice/": {
-      text: () =>
-        "Forgotten code, lost key, inherited safe: mechanism diagnosis and opening using the least destructive method available.",
+      text: (lieu) =>
+        `Forgotten code, lost key, inherited safe in ${lieu}: mechanism diagnosis and opening using the least destructive method available.`,
       Icon: SafeIcon,
     },
     "/installation-coffre-fort-nice/": {
-      text: () =>
-        "Advice on the right model, secure fixing to floor or wall: a safe that isn't bolted down doesn't protect much.",
+      text: (lieu) =>
+        `Advice on the right model, secure fixing to floor or wall in ${lieu}: a safe that isn't bolted down doesn't protect much.`,
       Icon: SafeIcon,
     },
     "/tarifs-serrurier-nice/": {
-      text: () => "Full price list for every callout, always quoted before I travel.",
+      text: (lieu) => `Full price list for every callout in ${lieu}, always quoted before I travel.`,
       Icon: PriceTagIcon,
     },
   },

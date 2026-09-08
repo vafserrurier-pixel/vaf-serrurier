@@ -81,7 +81,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
           <p>
             Si la serrure lâche parce qu&apos;elle est ancienne, mal entretenue depuis
             longtemps ou défaillante indépendamment de tout usage anormal, la
-            réparation relève de l&apos;entretien du logement — donc du propriétaire.
+            réparation relève de l&apos;entretien du logement, donc du propriétaire.
             La distinction n&apos;est pas toujours évidente : un diagnostic sur place
             permet en général de voir si la panne vient d&apos;une usure logique de
             plusieurs années, ou d&apos;un incident ponctuel.
@@ -94,8 +94,8 @@ export default function QuiPaieChangementSerrureLocationPage() {
           </h2>
           <p>
             Quand la serrure a été forcée lors d&apos;une effraction, c&apos;est en
-            général l&apos;assurance habitation — celle du locataire occupant, dans la
-            plupart des contrats multirisques habitation — qui prend en charge la
+            général l&apos;assurance habitation (celle du locataire occupant, dans la
+            plupart des contrats multirisques habitation) qui prend en charge la
             remise en état, sous réserve du dépôt de plainte et des conditions
             précises du contrat. Une facture détaillée, mentionnant clairement la
             nature de l&apos;intervention, est le document généralement demandé pour
@@ -112,7 +112,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
           <p>
             Entre le départ d&apos;un locataire et l&apos;arrivée du suivant, c&apos;est
             en général au propriétaire de s&apos;assurer que le logement est
-            correctement sécurisé pour un nouvel occupant — cela fait partie de la
+            correctement sécurisé pour un nouvel occupant : cela fait partie de la
             remise en état normale du bien entre deux baux. Rien n&apos;empêche un
             propriétaire prudent de le faire systématiquement, même sans obligation
             stricte, simplement pour repartir sur une serrure fiable à chaque nouveau
@@ -127,8 +127,8 @@ export default function QuiPaieChangementSerrureLocationPage() {
           <p>
             Dans tous les cas, le document qui compte le plus en cas de désaccord est
             une facture détaillée, mentionnant précisément la nature de
-            l&apos;intervention et sa cause probable — usure, casse accidentelle,
-            effraction constatée. C&apos;est ce document que je remets
+            l&apos;intervention et sa cause probable (usure, casse accidentelle,
+            effraction constatée). C&apos;est ce document que je remets
             systématiquement, quelle que soit la situation, pour que propriétaire et
             locataire puissent s&apos;appuyer sur des faits plutôt que sur une
             interprétation.
@@ -145,7 +145,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
             juridique. En cas de litige réel, un commissaire de justice (ex-huissier)
             peut constater une situation, et la commission départementale de
             conciliation ou le tribunal compétent tranchent en dernier recours. Je
-            n&apos;ai pas vocation à arbitrer ce type de désaccord — mon rôle
+            n&apos;ai pas vocation à arbitrer ce type de désaccord : mon rôle
             s&apos;arrête à l&apos;intervention et à la facture qui la documente.
           </p>
         </div>

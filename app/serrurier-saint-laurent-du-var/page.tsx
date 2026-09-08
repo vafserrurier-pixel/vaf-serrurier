@@ -44,7 +44,7 @@ const blocks = [
 ];
 
 const safetyParagraph =
-  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune de Saint-Laurent-du-Var. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur — un repère régional plutôt qu'une donnée précise pour Saint-Laurent-du-Var. Les logements occupés de façon intermittente, plus nombreux ici en raison de la proximité de l'aéroport, restent statistiquement des cibles recherchées lors des périodes d'absence. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
+  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune de Saint-Laurent-du-Var. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur (un repère régional plutôt qu'une donnée précise pour Saint-Laurent-du-Var). Les logements occupés de façon intermittente, plus nombreux ici en raison de la proximité de l'aéroport, restent statistiquement des cibles recherchées lors des périodes d'absence. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
 
 const faq = [
   {

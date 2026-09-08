@@ -51,7 +51,7 @@ const navLinksByLocale = {
 
 const strings = {
   fr: {
-    available: `Disponible maintenant — ${business.hours}`,
+    available: `Disponible maintenant : ${business.hours}`,
     everywhere: "Tout Nice et ses environs",
     reviewsSuffix: "avis",
     call: "Appeler maintenant",
@@ -61,7 +61,7 @@ const strings = {
     services: "Services",
   },
   en: {
-    available: "Available now — 24/7",
+    available: "Available now: 24/7",
     everywhere: "All of Nice and surrounding areas",
     reviewsSuffix: "reviews",
     call: "Call now",
