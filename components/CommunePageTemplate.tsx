@@ -140,6 +140,13 @@ export default function CommunePageTemplate({
         <PricingTable travelLabel="jusqu'à 30 min de route" />
       </section>
 
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Services disponibles à {commune}
+        </h2>
+        <RelatedServicesGrid items={relatedServices} lieu={commune} />
+      </section>
+
       <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
         {blocks.map((block) => (
           <div key={block.heading}>
@@ -189,13 +196,6 @@ export default function CommunePageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <ReviewsSection />
-      </section>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Services disponibles à {commune}
-        </h2>
-        <RelatedServicesGrid items={relatedServices} lieu={commune} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
