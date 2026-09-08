@@ -454,21 +454,23 @@ export default function HomeBody() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-2">{t.crimeTitle}</h2>
-        <p className="text-slate leading-relaxed">{t.crimeText}</p>
-        <p className="text-xs text-slate mt-2">
-          {locale === "en" ? "Source: " : "Source : "}
-          <a
-            href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-steel"
-          >
-            {locale === "en"
-              ? "French Interior Ministry: official burglary statistics"
-              : "Ministère de l'Intérieur : statistiques officielles des cambriolages"}
-          </a>
-        </p>
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">{t.crimeTitle}</h2>
+          <p className="text-slate leading-relaxed">{t.crimeText}</p>
+          <p className="text-xs text-slate mt-2">
+            {locale === "en" ? "Source: " : "Source : "}
+            <a
+              href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-steel"
+            >
+              {locale === "en"
+                ? "French Interior Ministry: official burglary statistics"
+                : "Ministère de l'Intérieur : statistiques officielles des cambriolages"}
+            </a>
+          </p>
+        </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
@@ -535,14 +537,18 @@ export default function HomeBody() {
       </section>
 
       <section id="contact" className="mx-auto max-w-4xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.contactTitle}</h2>
-        <p className="text-slate text-sm mb-4">{t.contactText}</p>
-        <ContactForm locale={locale} />
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.contactTitle}</h2>
+          <p className="text-slate text-sm mb-4">{t.contactText}</p>
+          <ContactForm locale={locale} />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
-        <FaqAccordion items={homeFaq} />
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6">{t.faqTitle}</h2>
+          <FaqAccordion items={homeFaq} />
+        </div>
       </section>
     </>
   );

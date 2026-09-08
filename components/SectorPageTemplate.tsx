@@ -146,22 +146,26 @@ export default function SectorPageTemplate({
         </ul>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
-        {blocks.map((block) => (
-          <div key={block.heading}>
-            <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
-            {block.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-slate leading-relaxed mb-2">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        ))}
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8 flex flex-col gap-8">
+          {blocks.map((block) => (
+            <div key={block.heading}>
+              <h2 className="font-heading text-xl font-bold text-navy mb-2">{block.heading}</h2>
+              {block.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-slate leading-relaxed mb-2">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
-        <FaqAccordion items={faq} />
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">Questions fréquentes</h2>
+          <FaqAccordion items={faq} />
+        </div>
       </section>
 
       <section className="bg-navy py-14">

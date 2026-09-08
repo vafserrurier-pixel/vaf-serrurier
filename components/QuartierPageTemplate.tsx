@@ -162,19 +162,21 @@ export default function QuartierPageTemplate({
         <RelatedServicesGrid items={relatedServices} lieu={quartier} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 flex flex-col gap-8">
-        {blocks.map((block) => (
-          <div key={block.heading}>
-            <h2 className="font-heading text-xl font-bold text-navy mb-2">
-              {block.heading}
-            </h2>
-            {block.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-slate leading-relaxed mb-2">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        ))}
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8 flex flex-col gap-8">
+          {blocks.map((block) => (
+            <div key={block.heading}>
+              <h2 className="font-heading text-xl font-bold text-navy mb-2">
+                {block.heading}
+              </h2>
+              {block.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-slate leading-relaxed mb-2">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
@@ -185,39 +187,43 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-2">
-          Les cambriolages à Nice, une réalité à prendre au sérieux
-        </h2>
-        <p className="text-slate leading-relaxed">
-          {crimeIntro ?? `À ${quartier} comme ailleurs à Nice, la sécurité de la porte d'entrée reste un sujet à prendre au sérieux.`}
-          {" "}Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
-          taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
-          contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur
-          à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
-          département des Alpes-Maritimes (0,43%). Cette donnée concerne
-          l&apos;ensemble de la ville de
-          Nice, qui ne compte pas d&apos;arrondissements officiels : il n&apos;existe
-          pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
-          {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
-        </p>
-        <p className="text-xs text-slate mt-2">
-          Source :{" "}
-          <a
-            href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-steel"
-          >
-            Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
-          </a>
-        </p>
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+            Les cambriolages à Nice, une réalité à prendre au sérieux
+          </h2>
+          <p className="text-slate leading-relaxed">
+            {crimeIntro ?? `À ${quartier} comme ailleurs à Nice, la sécurité de la porte d'entrée reste un sujet à prendre au sérieux.`}
+            {" "}Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
+            taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
+            contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur
+            à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
+            département des Alpes-Maritimes (0,43%). Cette donnée concerne
+            l&apos;ensemble de la ville de
+            Nice, qui ne compte pas d&apos;arrondissements officiels : il n&apos;existe
+            pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
+            {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
+          </p>
+          <p className="text-xs text-slate mt-2">
+            Source :{" "}
+            <a
+              href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-steel"
+            >
+              Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
+            </a>
+          </p>
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Questions fréquentes
-        </h2>
-        <FaqAccordion items={faq} />
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">
+            Questions fréquentes
+          </h2>
+          <FaqAccordion items={faq} />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
@@ -262,12 +268,14 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="mx-auto max-w-2xl px-4 py-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">
-          Prenez rendez-vous avec votre serrurier à {quartier}
-        </h2>
-        <ContactForm
-          services={relatedServices.filter((service) => service.href !== "/tarifs-serrurier-nice/")}
-        />
+        <div className="bg-white border border-navy/10 rounded-2xl p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">
+            Prenez rendez-vous avec votre serrurier à {quartier}
+          </h2>
+          <ContactForm
+            services={relatedServices.filter((service) => service.href !== "/tarifs-serrurier-nice/")}
+          />
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">
