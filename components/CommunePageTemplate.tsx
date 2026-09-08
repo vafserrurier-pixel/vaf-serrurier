@@ -12,6 +12,7 @@ import PricingTable from "./PricingTable";
 import BrandsSection from "./BrandsSection";
 import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
+import RelatedServicesGrid from "./RelatedServicesGrid";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { communeHref, relatedCommunes } from "@/lib/communes";
@@ -190,57 +191,45 @@ export default function CommunePageTemplate({
         <ReviewsSection />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2">
-        <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Localisation
-          </h2>
-          <p className="text-slate text-sm mb-4">
-            {commune} fait partie des villes voisines de Nice où j&apos;interviens
-            régulièrement. Voir aussi{" "}
-            <Link href="/zones-intervention-nice/" className="text-steel underline">
-              toutes mes zones d&apos;intervention
-            </Link>
-            .
-          </p>
-          <LazyMap />
-          {nearbyCommunes.length > 0 && (
-            <div className="mt-6">
-              <p className="text-sm text-slate mb-2">
-                J&apos;interviens aussi dans ces villes voisines :
-              </p>
-              <ul className="flex flex-wrap gap-2">
-                {nearbyCommunes.map((name) => (
-                  <li key={name}>
-                    <Link
-                      href={communeHref(name)}
-                      className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
-                    >
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-        <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">
-            Services disponibles à {commune}
-          </h2>
-          <ul className="flex flex-col gap-2">
-            {relatedServices.map((service) => (
-              <li key={service.href}>
-                <Link
-                  href={service.href}
-                  className="block bg-white border border-navy/10 rounded-lg px-4 py-2.5 text-sm text-navy hover:border-steel"
-                >
-                  {service.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Services disponibles à {commune}
+        </h2>
+        <RelatedServicesGrid items={relatedServices} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          Localisation
+        </h2>
+        <p className="text-slate text-sm mb-4">
+          {commune} fait partie des villes voisines de Nice où j&apos;interviens
+          régulièrement. Voir aussi{" "}
+          <Link href="/zones-intervention-nice/" className="text-steel underline">
+            toutes mes zones d&apos;intervention
+          </Link>
+          .
+        </p>
+        <LazyMap />
+        {nearbyCommunes.length > 0 && (
+          <div className="mt-6">
+            <p className="text-sm text-slate mb-2">
+              J&apos;interviens aussi dans ces villes voisines :
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {nearbyCommunes.map((name) => (
+                <li key={name}>
+                  <Link
+                    href={communeHref(name)}
+                    className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-14">

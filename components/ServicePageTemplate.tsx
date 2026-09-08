@@ -6,6 +6,7 @@ import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
+import RelatedServicesGrid from "./RelatedServicesGrid";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
@@ -185,33 +186,21 @@ export default function ServicePageTemplate({
         <ReviewsSection locale={locale} />
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2">
-        <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.serviceArea}</h2>
-          <p className="text-slate text-sm mb-4">
-            {t.serviceAreaText(business.address.full)}{" "}
-            <Link href="/zones-intervention-nice/" className="text-steel underline">
-              {t.seeAllAreas}
-            </Link>
-            .
-          </p>
-          <LazyMap locale={locale} />
-        </div>
-        <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.otherServices}</h2>
-          <ul className="flex flex-col gap-2">
-            {relatedServices.map((service) => (
-              <li key={service.href}>
-                <Link
-                  href={service.href}
-                  className="block bg-white border border-navy/10 rounded-lg px-4 py-2.5 text-sm text-navy hover:border-steel"
-                >
-                  {service.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.otherServices}</h2>
+        <RelatedServicesGrid items={relatedServices} locale={locale} />
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.serviceArea}</h2>
+        <p className="text-slate text-sm mb-4">
+          {t.serviceAreaText(business.address.full)}{" "}
+          <Link href="/zones-intervention-nice/" className="text-steel underline">
+            {t.seeAllAreas}
+          </Link>
+          .
+        </p>
+        <LazyMap locale={locale} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

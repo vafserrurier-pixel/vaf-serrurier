@@ -1,0 +1,107 @@
+// Source unique des icônes + descriptions courtes utilisées à la fois par
+// ServiceGrid (accueil, pages secteur, fond navy) et RelatedServicesGrid
+// (pages quartier/commune/service, fond blanc) — pour ne jamais avoir deux
+// textes différents pour le même service selon la page.
+
+import {
+  WrenchIcon,
+  DoorIcon,
+  KeyIcon,
+  ShieldIcon,
+  AlertLockIcon,
+  SafeIcon,
+  PriceTagIcon,
+  HandshakeIcon,
+} from "@/components/Icons";
+import type { Locale } from "./locale";
+import type { ComponentType } from "react";
+
+type IconProps = { className?: string };
+type ServiceCard = { text: string; Icon: ComponentType<IconProps> };
+
+export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> = {
+  fr: {
+    "/depannage-serrurier-nice/": {
+      text: "Serrure bloquée, cylindre grippé, clé qui force : je diagnostique la panne avant d'intervenir, et je répare plutôt que je ne remplace quand c'est possible.",
+      Icon: WrenchIcon,
+    },
+    "/ouverture-de-porte-nice/": {
+      text: "Porte claquée ou fermée à clé : ouverture sans casse quand la configuration le permet, prix annoncé avant le moindre outil sorti.",
+      Icon: DoorIcon,
+    },
+    "/changement-serrure-nice/": {
+      text: "Remplacement de cylindre ou de serrure complète, multipoints compris. Pose réglée et testée, pas juste vissée.",
+      Icon: KeyIcon,
+    },
+    "/serrure-carenee-nice/": {
+      text: "Renfort intermédiaire entre cylindre standard et blindage complet, sans reprendre toute la porte.",
+      Icon: KeyIcon,
+    },
+    "/installation-porte-blindee-nice/": {
+      text: "Bloc-porte blindé complet ou blindage d'une porte existante : je vous aide à choisir selon l'état réel de votre porte et de votre bâti.",
+      Icon: ShieldIcon,
+    },
+    "/mis-en-securite-apres-effraction-nice/": {
+      text: "Mise en sécurité immédiate 24h/24, puis solution durable une fois le diagnostic fait. Facture détaillée pour votre assurance.",
+      Icon: AlertLockIcon,
+    },
+    "/agences-syndics-nice/": {
+      text: "Interlocuteur unique pour vos biens en gestion locative ou en copropriété, tarif étudié selon le volume.",
+      Icon: HandshakeIcon,
+    },
+    "/ouverture-de-coffre-fort-nice/": {
+      text: "Code oublié, clé perdue, coffre hérité : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.",
+      Icon: SafeIcon,
+    },
+    "/installation-coffre-fort-nice/": {
+      text: "Conseil sur le modèle, fixation sécurisée au sol ou au mur : un coffre non fixé ne protège pas grand-chose.",
+      Icon: SafeIcon,
+    },
+    "/tarifs-serrurier-nice/": {
+      text: "Grille de prix complète pour chaque intervention, toujours annoncée avant que je me déplace.",
+      Icon: PriceTagIcon,
+    },
+  },
+  en: {
+    "/depannage-serrurier-nice/": {
+      text: "Jammed lock, stuck cylinder, key that won't turn: I diagnose the fault before I intervene, and repair rather than replace whenever possible.",
+      Icon: WrenchIcon,
+    },
+    "/ouverture-de-porte-nice/": {
+      text: "Slammed shut or locked with the key inside: opened without damage when the setup allows it, price quoted before any tool comes out.",
+      Icon: DoorIcon,
+    },
+    "/changement-serrure-nice/": {
+      text: "Cylinder or full lock replacement, multipoint locks included. Fitted, adjusted and tested — not just screwed in.",
+      Icon: KeyIcon,
+    },
+    "/serrure-carenee-nice/": {
+      text: "An intermediate reinforcement between a standard cylinder and full armoring, without redoing the whole door.",
+      Icon: KeyIcon,
+    },
+    "/installation-porte-blindee-nice/": {
+      text: "Full armored door block or reinforcing an existing door: I help you choose based on the real condition of your door and building.",
+      Icon: ShieldIcon,
+    },
+    "/mis-en-securite-apres-effraction-nice/": {
+      text: "Immediate securing 24/7, then a lasting solution once the diagnosis is done. Detailed invoice for your insurance.",
+      Icon: AlertLockIcon,
+    },
+    "/agences-syndics-nice/": {
+      text: "A single point of contact for your rental or co-ownership properties, rate studied by volume.",
+      Icon: HandshakeIcon,
+    },
+    "/ouverture-de-coffre-fort-nice/": {
+      text: "Forgotten code, lost key, inherited safe: mechanism diagnosis and opening using the least destructive method available.",
+      Icon: SafeIcon,
+    },
+    "/installation-coffre-fort-nice/": {
+      text: "Advice on the right model, secure fixing to floor or wall: a safe that isn't bolted down doesn't protect much.",
+      Icon: SafeIcon,
+    },
+    "/tarifs-serrurier-nice/": {
+      text: "Full price list for every callout, always quoted before I travel.",
+      Icon: PriceTagIcon,
+    },
+  },
+};
