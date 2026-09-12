@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
-import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, offerSchema } from "@/lib/schema";
+import { cardsByLocale } from "@/lib/pricingCards";
 import TarifsBody from "./TarifsBody";
 
 export const metadata: Metadata = {
@@ -41,6 +42,10 @@ const faq = [
 
 export default function TarifsSerrurierNicePage() {
   const url = `${business.domain}/tarifs-serrurier-nice/`;
+  const pricedCards = cardsByLocale.fr.filter(
+    (card): card is typeof card & { priceValue: number; priceType: "fixed" | "startingFrom" } =>
+      card.priceValue !== undefined && card.priceType !== undefined
+  );
 
   return (
     <>
@@ -51,6 +56,17 @@ export default function TarifsSerrurierNicePage() {
           { name: "Tarifs", url },
         ])}
       />
+      {pricedCards.map((card) => (
+        <JsonLd
+          key={card.title}
+          data={offerSchema({
+            name: card.seoTitle ?? card.title,
+            url,
+            priceValue: card.priceValue,
+            priceType: card.priceType,
+          })}
+        />
+      ))}
       <TarifsBody />
     </>
   );

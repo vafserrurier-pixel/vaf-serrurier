@@ -71,7 +71,7 @@ export default function ServiceGrid({
             <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-cream/15 text-cream mb-3">
               <card.Icon className="w-5 h-5" />
             </span>
-            <p className="font-heading font-semibold text-cream mb-1.5">{titles[href]}</p>
+            <h3 className="font-heading font-semibold text-cream mb-1.5">{titles[href]}</h3>
             <p className="text-sm text-cream/70 leading-relaxed mb-3">{card.text(place)}</p>
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-cream group-hover:gap-2 transition-all">
               {moreLabel[locale]}

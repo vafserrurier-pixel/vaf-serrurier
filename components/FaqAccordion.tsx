@@ -21,9 +21,9 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              className="w-full flex items-center justify-between gap-4 py-4 text-left font-heading font-semibold text-navy"
+              className="w-full flex items-center justify-between gap-4 py-4 text-left"
             >
-              {item.question}
+              <h3 className="font-heading font-semibold text-navy">{item.question}</h3>
               <span className="text-steel text-xl leading-none shrink-0" aria-hidden="true">
                 {isOpen ? "−" : "+"}
               </span>

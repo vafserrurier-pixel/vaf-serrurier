@@ -134,7 +134,7 @@ export default function BrandsSection({ locale = "fr" }: { locale?: Locale }) {
             >
               {brand.name[0]}
             </span>
-            <p className="font-heading font-bold text-navy mb-1.5">{brand.name}</p>
+            <h3 className="font-heading font-bold text-navy mb-1.5">{brand.name}</h3>
             <p className="text-xs text-slate leading-relaxed">{brand.text}</p>
           </a>
         ))}

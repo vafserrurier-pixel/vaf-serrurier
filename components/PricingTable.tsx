@@ -3,211 +3,8 @@
 import { useState } from "react";
 import { business } from "@/lib/business";
 import { CheckIcon } from "./Icons";
+import { cardsByLocale } from "@/lib/pricingCards";
 import type { Locale } from "@/lib/locale";
-
-type Card = {
-  title: string;
-  price: string;
-  unit?: string;
-  features: string[];
-  highlight?: boolean;
-  featured?: boolean;
-};
-
-const cardsByLocale: Record<Locale, Card[]> = {
-  fr: [
-    {
-      title: "Porte claquée",
-      price: "149 €",
-      unit: "TTC",
-      features: [
-        "Ouverture sans casse quand c'est possible",
-        "Contrôle de fermeture après intervention",
-        "Déplacement inclus sur Nice",
-      ],
-      highlight: true,
-      featured: true,
-    },
-    {
-      title: "Porte verrouillée (cylindre européen)",
-      price: "149 €",
-      unit: "TTC",
-      features: [
-        "Configuration adaptée à votre serrure",
-        "Tests finaux de fermeture",
-        "Déplacement inclus sur Nice",
-      ],
-      featured: true,
-    },
-    {
-      title: "Porte verrouillée (serrure Fichet)",
-      price: "189 €",
-      unit: "TTC",
-      features: [
-        "Méthode adaptée aux serrures renforcées",
-        "Précautions pour limiter les dégâts",
-        "Déplacement inclus sur Nice",
-      ],
-    },
-    {
-      title: "Changement de cylindre standard",
-      price: "à partir de 249 €",
-      unit: "TTC",
-      features: [
-        "Déplacement et main d'œuvre inclus",
-        "Cylindre européen adapté à votre porte",
-        "Clés neuves remises sur place",
-      ],
-      featured: true,
-    },
-    {
-      title: "Changement de cylindre haute sécurité",
-      price: "Sur devis",
-      features: [
-        "Marques premium (Fichet) : toujours sur devis",
-        "Diagnostic de votre porte sur place",
-        "Prix confirmé avant toute intervention",
-      ],
-    },
-    {
-      title: "Serrure 5 points en applique carénée",
-      price: "1 490 €",
-      unit: "TTC",
-      features: [
-        "Pose et réglage de la serrure inclus",
-        "Compatible avec la plupart des portes existantes",
-        "Devis confirmé avant intervention",
-      ],
-    },
-    {
-      title: "Installation porte blindée",
-      price: "à partir de 2 689 €",
-      unit: "TTC",
-      features: [
-        "Prix pour une porte de taille standard",
-        "Bloc-porte ou blindage avec serrure 5 points en applique",
-        "Devis sur place systématique avant tout engagement",
-      ],
-      featured: true,
-    },
-    {
-      title: "Coffre-fort (ouverture et installation)",
-      price: "à partir de 299 €",
-      unit: "TTC",
-      features: [
-        "Ouverture sans destruction quand c'est possible",
-        "Installation et fixation au sol ou au mur",
-        "Prix ajusté selon le modèle sur place",
-      ],
-    },
-    {
-      title: "Installation de poignée blindée",
-      price: "369 €",
-      unit: "TTC",
-      features: [
-        "Déplacement et main d'œuvre inclus",
-        "Compatible avec la plupart des portes blindées",
-        "Tests de fermeture après la pose",
-      ],
-    },
-  ],
-  en: [
-    {
-      title: "Door slammed shut",
-      price: "€149",
-      unit: "incl. VAT",
-      features: [
-        "Opened without damage when possible",
-        "Closing checked after the callout",
-        "Travel included within Nice",
-      ],
-      highlight: true,
-      featured: true,
-    },
-    {
-      title: "Door locked (European cylinder)",
-      price: "€149",
-      unit: "incl. VAT",
-      features: [
-        "Method matched to your lock",
-        "Final closing tests",
-        "Travel included within Nice",
-      ],
-      featured: true,
-    },
-    {
-      title: "Door locked (Fichet lock)",
-      price: "€189",
-      unit: "incl. VAT",
-      features: [
-        "Method suited to reinforced locks",
-        "Precautions to limit damage",
-        "Travel included within Nice",
-      ],
-    },
-    {
-      title: "Standard cylinder replacement",
-      price: "from €249",
-      unit: "incl. VAT",
-      features: [
-        "Travel and labor included",
-        "European cylinder matched to your door",
-        "New keys handed over on site",
-      ],
-      featured: true,
-    },
-    {
-      title: "High-security cylinder replacement",
-      price: "Quoted on assessment",
-      features: [
-        "Premium brands (Fichet): always quoted",
-        "On-site diagnosis of your door",
-        "Price confirmed before any work",
-      ],
-    },
-    {
-      title: "5-point rim lock (shrouded)",
-      price: "€1,490",
-      unit: "incl. VAT",
-      features: [
-        "Fitting and adjustment included",
-        "Compatible with most existing doors",
-        "Quote confirmed before work",
-      ],
-    },
-    {
-      title: "Security door installation",
-      price: "from €2,689",
-      unit: "incl. VAT",
-      features: [
-        "Price for a standard door size",
-        "Door block or reinforcement with 5-point rim lock",
-        "On-site quote always required before any commitment",
-      ],
-      featured: true,
-    },
-    {
-      title: "Safe (opening and installation)",
-      price: "from €299",
-      unit: "incl. VAT",
-      features: [
-        "Non-destructive opening when possible",
-        "Fitting and fixing to floor or wall",
-        "Price adjusted to the model on site",
-      ],
-    },
-    {
-      title: "Armored handle installation",
-      price: "€369",
-      unit: "incl. VAT",
-      features: [
-        "Travel and labor included",
-        "Compatible with most security doors",
-        "Closing tests after fitting",
-      ],
-    },
-  ],
-};
 
 const strings = {
   fr: {
@@ -236,6 +33,7 @@ const travelNotes: Record<Locale, string> = {
 export default function PricingTable({
   locale = "fr",
   travelLabel,
+  useSeoTitles = false,
 }: {
   locale?: Locale;
   /**
@@ -245,6 +43,8 @@ export default function PricingTable({
    * seule la mention géographique change pour rester exacte.
    */
   travelLabel?: string;
+  /** Utilise card.seoTitle (mot-clé enrichi) pour le H3 au lieu de card.title. Réservé à /tarifs-serrurier-nice/. */
+  useSeoTitles?: boolean;
 }) {
   const [showAll, setShowAll] = useState(false);
   const cards = travelLabel
@@ -299,7 +99,9 @@ export default function PricingTable({
                 {t.mostRequested}
               </span>
             )}
-            <p className="font-heading font-semibold mb-1">{card.title}</p>
+            <h3 className="font-heading font-semibold mb-1">
+              {useSeoTitles && card.seoTitle ? card.seoTitle : card.title}
+            </h3>
             <p className="font-tabular-nums text-2xl font-bold mb-1">
               {card.price}
               {card.unit && (

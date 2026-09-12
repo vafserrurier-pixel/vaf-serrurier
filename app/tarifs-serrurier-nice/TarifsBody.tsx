@@ -163,7 +163,7 @@ export default function TarifsBody() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <PricingTable locale={locale} />
+        <PricingTable locale={locale} useSeoTitles />
       </section>
 
       <section className="mx-auto max-w-4xl px-4">

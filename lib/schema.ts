@@ -1,5 +1,6 @@
 import { business } from "./business";
 import { fallbackReviews, type Review } from "./reviews";
+import { builtCommunes } from "./communes";
 
 type FaqItem = { question: string; answer: string };
 type BreadcrumbItem = { name: string; url: string };
@@ -42,10 +43,10 @@ export function localBusinessSchema(opts?: { reviews?: Review[] }) {
       opens: "00:00",
       closes: "23:59",
     },
-    areaServed: {
-      "@type": "City",
-      name: "Nice",
-    },
+    areaServed: [
+      { "@type": "City", name: "Nice" },
+      ...builtCommunes.map((name) => ({ "@type": "City" as const, name })),
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: business.reviews.rating,
@@ -90,6 +91,38 @@ export function serviceSchema(opts: {
       "@type": opts.areaServed?.type ?? "City",
       name: opts.areaServed?.name ?? "Nice",
     },
+  };
+}
+
+export function offerSchema(opts: {
+  name: string;
+  url: string;
+  priceValue: number;
+  priceType: "fixed" | "startingFrom";
+  priceCurrency?: string;
+}) {
+  const priceCurrency = opts.priceCurrency ?? "EUR";
+  const base = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: opts.name,
+    url: opts.url,
+    availability: "https://schema.org/InStock",
+  };
+  if (opts.priceType === "startingFrom") {
+    return {
+      ...base,
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        minPrice: opts.priceValue,
+        priceCurrency,
+      },
+    };
+  }
+  return {
+    ...base,
+    price: opts.priceValue,
+    priceCurrency,
   };
 }
 
