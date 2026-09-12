@@ -15,9 +15,12 @@ export default function BlogPage() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Blog", href: "/blog/" }]} />
-      <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">Blog</h1>
+      <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+        Conseils de serrurier à Nice, écrits depuis le terrain
+      </h1>
       <p className="mt-4 text-slate leading-relaxed max-w-2xl">
-        Astuces simples, explications claires et conseils d&apos;artisan.
+        Guides pratiques, explications sans jargon et retours d&apos;intervention réels,
+        rédigés par Benoît au fil de ses chantiers à Nice.
       </p>
       <ul className="mt-8 grid gap-5 sm:grid-cols-2">
         {posts.map((post) => (
