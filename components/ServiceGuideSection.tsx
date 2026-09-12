@@ -30,7 +30,7 @@ export default function ServiceGuideSection({
   children: ReactNode;
 }) {
   return (
-    <section className="bg-white border-y border-navy/10 py-12">
+    <section id="guide" className="bg-white border-y border-navy/10 py-12 scroll-mt-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="max-w-3xl mx-auto mb-8 text-center">
           <h2 className="font-heading text-2xl font-bold text-navy">Guide complet</h2>

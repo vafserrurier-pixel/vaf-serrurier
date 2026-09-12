@@ -27,6 +27,7 @@ const strings = {
     call: "Appeler",
     whatsapp: "Écrire sur WhatsApp",
     seePricing: "Voir les tarifs",
+    seeGuide: "Voir le guide complet",
     howItWorks: "Comment se déroule mon intervention",
     faqTitle: "Questions fréquentes",
     readMore: "Pour aller plus loin",
@@ -46,6 +47,7 @@ const strings = {
     call: "Call",
     whatsapp: "Message on WhatsApp",
     seePricing: "See pricing",
+    seeGuide: "See the full guide",
     howItWorks: "How my callout works",
     faqTitle: "Frequently asked questions",
     readMore: "To go further",
@@ -171,6 +173,23 @@ export default function ServicePageTemplate({
               >
                 {t.seePricing}
               </Link>
+              {guide && (
+                <a
+                  href="#guide"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-steel hover:underline"
+                >
+                  {t.seeGuide}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M12 5v14M5 12l7 7 7-7"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              )}
             </div>
           </div>
           {image && (
