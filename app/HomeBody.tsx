@@ -487,9 +487,9 @@ export default function HomeBody() {
               href={sectorPages[sector.key].href}
               className="block rounded-xl border border-navy/10 bg-white p-5 shadow-sm hover:border-steel hover:shadow-md transition-all"
             >
-              <p className="font-heading font-bold text-navy mb-1.5">
+              <h3 className="font-heading font-bold text-navy mb-1.5">
                 {locale === "en" ? "Locksmith in" : "Serrurier à"} {sectorPages[sector.key].label}
-              </p>
+              </h3>
               <p className="text-sm text-slate leading-relaxed">{sector.blurb}</p>
             </Link>
           ))}
