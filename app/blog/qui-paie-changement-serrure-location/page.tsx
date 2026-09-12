@@ -310,7 +310,19 @@ export default function QuiPaieChangementSerrureLocationPage() {
                 effraction constatée). C&apos;est ce document que je remets
                 systématiquement, quelle que soit la situation, pour que propriétaire et
                 locataire puissent s&apos;appuyer sur des faits plutôt que sur une
-                interprétation. Retrouvez mes{" "}
+                interprétation.
+              </p>
+              <p className="text-slate leading-relaxed mt-4">
+                Une facture réellement utile en cas de litige mentionne au minimum :
+              </p>
+              <ul className="list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
+                <li>Le SIRET de l&apos;artisan intervenu.</li>
+                <li>La date et l&apos;adresse exacte de l&apos;intervention.</li>
+                <li>La nature précise du problème constaté (usure, casse, effraction).</li>
+                <li>Le détail du matériel posé (marque, référence, certification éventuelle).</li>
+              </ul>
+              <p className="text-slate leading-relaxed mt-4">
+                Retrouvez mes{" "}
                 <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
                   tarifs annoncés à l&apos;avance
                 </Link>

@@ -208,10 +208,17 @@ export default function AgreeAssurancesPage() {
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
                 Plutôt qu&apos;un sigle sans autorité derrière, je recommande de vérifier
-                des éléments concrets et contrôlables : le SIRET de l&apos;entreprise
-                (vérifiable publiquement), une assurance responsabilité civile
-                professionnelle en cours, et un devis ou un prix annoncé avant
-                l&apos;intervention plutôt qu&apos;au moment de payer. Retrouvez mes{" "}
+                des éléments concrets et contrôlables, dans cet ordre, avant même
+                d&apos;accepter un déplacement :
+              </p>
+              <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
+                <li>Le SIRET de l&apos;entreprise, vérifiable publiquement en quelques secondes.</li>
+                <li>Une assurance responsabilité civile professionnelle en cours de validité.</li>
+                <li>Un prix annoncé au téléphone avant tout déplacement, pas seulement sur place.</li>
+                <li>Une facture détaillée remise systématiquement à la fin de l&apos;intervention.</li>
+              </ol>
+              <p className="text-slate leading-relaxed mt-4">
+                Retrouvez mes{" "}
                 <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
                   tarifs annoncés à l&apos;avance
                 </Link>{" "}

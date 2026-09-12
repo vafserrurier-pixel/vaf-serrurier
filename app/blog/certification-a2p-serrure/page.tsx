@@ -158,6 +158,17 @@ export default function CertificationA2pPage() {
                 un label attribué après des essais standardisés, pas une formule choisie
                 librement par le fabricant.
               </p>
+              <div className="mt-4">
+                <ArticleWarning title="« Coffre-fort certifié A2P » peut ne concerner que la serrure">
+                  Sur un coffre-fort, le marquage A2P porte souvent uniquement sur la
+                  serrure intégrée, pas sur la résistance globale du caisson. Pour la
+                  résistance réelle du coffre entier, c&apos;est la norme européenne{" "}
+                  <strong>EN 1143-1</strong> qu&apos;il faut demander, avec une serrure
+                  elle-même classée EN 1300 (classes A, B ou C). Un vendeur qui parle
+                  seulement d&apos;A2P sans mentionner l&apos;EN 1143-1 vend peut-être un
+                  bon verrou sur une boîte ordinaire.
+                </ArticleWarning>
+              </div>
             </div>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">

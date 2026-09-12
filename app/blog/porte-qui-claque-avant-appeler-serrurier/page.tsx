@@ -166,6 +166,16 @@ export default function PorteQuiClaquePage() {
                   vérifie en arrivant, avant même de sortir un outil.
                 </p>
               </div>
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Trois vérifications avant de décrocher le téléphone
+                </h3>
+                <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
+                  <li>Actionnez la poignée : si elle descend et remonte librement, rien n&apos;est verrouillé.</li>
+                  <li>Regardez si la clé était réellement tournée avant que la porte ne se referme.</li>
+                  <li>Cherchez un accès alternatif (fenêtre, porte de service) avant d&apos;appeler en urgence.</li>
+                </ol>
+              </div>
             </div>
 
             <div>

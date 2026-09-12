@@ -149,6 +149,24 @@ export default function SerrureMultipointsPage() {
                 La 5 points ajoute des points intermédiaires ou latéraux. La 7 points répartit
                 ses pênes sur l&apos;ensemble de la hauteur de la porte.
               </p>
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Trois façons de la poser : applique, carénée, encastrée
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Le nombre de points ne dit rien sur la manière dont la serrure est
+                  fixée à la porte. En applique, le boîtier reste visible sur la face
+                  intérieure du battant. Carénée, c&apos;est une applique multipoints dont
+                  la tringlerie est protégée par un capot métallique sur toute la hauteur
+                  — plus discrète et plus résistante face à une tentative de sciage. Une{" "}
+                  <Link href="/serrure-carenee-nice/" className="text-steel underline">
+                    serrure carénée 5 points
+                  </Link>{" "}
+                  combine ces deux avantages. Encastrée (à larder), le mécanisme disparaît
+                  entièrement dans l&apos;épaisseur de la porte, sans rien de visible une
+                  fois posée.
+                </p>
+              </div>
             </div>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">

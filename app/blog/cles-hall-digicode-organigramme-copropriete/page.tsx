@@ -180,6 +180,21 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                   (article 25).
                 </p>
               </div>
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Gâche mécanique, gâche électrique, ventouse : ce que le conseil syndical vote
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Une gâche mécanique se débloque uniquement avec une clé, sans rien
+                  d&apos;électrique à entretenir. Une gâche électrique s&apos;ouvre à
+                  distance (interphone, digicode, badge), ce qui suppose une alimentation
+                  et un entretien régulier. Une ventouse magnétique retient la porte par
+                  un électroaimant, une solution surtout utilisée sur les portes vitrées
+                  ou les issues de secours, rarement sur un hall d&apos;entrée standard.
+                  Savoir laquelle est déjà en place aide à comprendre pourquoi un devis de
+                  remplacement varie autant d&apos;un immeuble à l&apos;autre.
+                </p>
+              </div>
             </div>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">

@@ -190,6 +190,15 @@ export default function QueFaireApresUnCambriolagePage() {
                 possible en ligne sur le site du ministère de l&apos;Intérieur. Ce document
                 sera indispensable pour votre déclaration à l&apos;assurance.
               </p>
+              <div className="mt-4">
+                <ArticleWarning title="Une main courante ne suffit pas">
+                  Ne confondez pas les deux : une main courante informe la police sans
+                  ouvrir d&apos;enquête, et ne permet ni poursuite contre l&apos;auteur ni
+                  indemnisation par votre assurance. Seul un dépôt de plainte déclenche
+                  les deux. En cas de doute au commissariat, demandez explicitement à
+                  déposer plainte, pas une main courante.
+                </ArticleWarning>
+              </div>
             </div>
 
             <div>

@@ -248,6 +248,20 @@ export default function RemplacerCoffreALarderPage() {
                 physiquement en magasin plutôt que de commander sur la seule base des
                 mesures.
               </p>
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Déterminer le sens de la porte en 10 secondes
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Placez-vous à l&apos;intérieur, côté poignée. Si la porte s&apos;ouvre
+                  vers vous (vous tirez pour entrer), elle est tirante ; si elle
+                  s&apos;ouvre en s&apos;éloignant de vous, elle est poussante. Regardez
+                  ensuite de quel côté se trouve la poignée : à votre gauche, la porte est
+                  gauche ; à votre droite, elle est droite. Ces quatre combinaisons
+                  (tirant gauche, tirant droit, poussant gauche, poussant droit)
+                  correspondent à des sens de demi-tour différents sur le coffre neuf.
+                </p>
+              </div>
             </div>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
