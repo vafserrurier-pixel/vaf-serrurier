@@ -3,7 +3,112 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
 import BrandsSection from "@/components/BrandsSection";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+
+const guideToc = [
+  { id: "qualite", label: "Reconnaître un carénage de qualité" },
+  { id: "5-points", label: "Le vrai rôle des 5 points d'ancrage" },
+  { id: "a2p", label: "Serrure carénée et certification A2P : ce qu'il faut vérifier" },
+  { id: "entretien", label: "Entretien : ce qui prolonge la résistance" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Toutes les serrures carénées 5 points sont-elles équivalentes ?",
+    answer:
+      "Non. Le nombre de points annoncé ne dit rien de l'épaisseur du carénage, de la qualité de l'acier ni de la précision du réglage des points d'ancrage, qui font la vraie différence sur la résistance réelle.",
+  },
+  {
+    question: "Une serrure carénée non certifiée A2P protège-t-elle quand même ?",
+    answer:
+      "Oui, le carénage seul apporte déjà un vrai gain par rapport à une serrure en applique classique exposée. La certification A2P est surtout déterminante si vous voulez faire valoir ce renfort auprès de votre assurance.",
+  },
+  {
+    question: "Puis-je changer uniquement le cylindre d'une serrure carénée A2P sans perdre la certification ?",
+    answer:
+      "Non, pas avec n'importe quel cylindre. Pour conserver la certification A2P, le cylindre et les accessoires posés doivent eux-mêmes être certifiés A2P et compatibles avec le boîtier installé.",
+  },
+  {
+    question: "Faut-il entretenir une serrure carénée particulièrement ?",
+    answer:
+      "Un contrôle du jeu de fermeture et un léger lubrifiant sec sur les points d'ancrage, une à deux fois par an, suffisent à préserver le réglage dans la durée.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille les critères techniques qui distinguent une bonne
+      installation d&apos;une autre, au-delà du simple nombre de points
+      annoncé.
+    </p>
+
+    <div>
+      <ArticleSectionHeading number={1} id="qualite" level="h3">
+        Reconnaître un carénage de qualité
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Trois éléments comptent bien plus que la marque affichée : l&apos;épaisseur
+        réelle de la tôle de carénage, la qualité de l&apos;acier utilisé pour
+        les points d&apos;ancrage, et surtout la précision du réglage lors de
+        la pose. Un boîtier haut de gamme mal réglé cède parfois plus vite
+        qu&apos;un modèle plus simple correctement ajusté au dormant.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="5-points" level="h3">
+        Le vrai rôle des 5 points d&apos;ancrage
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Les 5 points ne s&apos;ajoutent pas au hasard : un pêne central assure
+        la fermeture principale, des points hauts et bas limitent l&apos;arrachement
+        aux extrémités de la porte, et des points intermédiaires répartissent
+        l&apos;effort sur toute la hauteur du dormant. C&apos;est cette
+        répartition, pas seulement le nombre affiché, qui empêche la porte de
+        céder par déformation plutôt que par la serrure elle-même.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="a2p" level="h3">
+        Serrure carénée et certification A2P : ce qu&apos;il faut vérifier
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Certains modèles carénés, notamment chez Héraclès, existent en
+        version certifiée{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+          A2P
+        </Link>
+        . Un point souvent ignoré : pour conserver cette certification,
+        l&apos;ensemble du cylindre et des accessoires posés doit lui-même
+        être certifié A2P et compatible avec le boîtier. Un cylindre
+        générique posé sur un boîtier certifié fait perdre la certification
+        d&apos;ensemble, même si le carénage seul reste physiquement solide.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="entretien" level="h3">
+        Entretien : ce qui prolonge la résistance
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un contrôle visuel du jeu de fermeture et un lubrifiant sec sur les
+        points d&apos;ancrage, une à deux fois par an, suffisent à préserver
+        le réglage. Si la clé commence à forcer ou qu&apos;un point ne
+        s&apos;engage plus correctement, mieux vaut intervenir tôt : voir ma
+        page{" "}
+        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+          dépannage serrurier
+        </Link>
+        .
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrure-carenee-nice/",
@@ -137,6 +242,12 @@ export default function SerrureCareneeNicePage() {
         href: "/blog/serrure-multipoints-3-5-7-nice/",
         label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
       }}
+      guide={
+        <ServiceGuideSection readingMinutes={4} toc={guideToc} faq={guideFaq}>
+          {guideContent}
+        </ServiceGuideSection>
+      }
+      guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
