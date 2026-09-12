@@ -201,7 +201,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
                 Quand la serrure a été forcée lors d&apos;une{" "}
-                <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                <Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">
                   effraction
                 </Link>
                 , c&apos;est en général l&apos;assurance habitation (celle du locataire occupant, dans la

@@ -49,6 +49,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Faute d'accord corrigee (2026-09-12) : "mis" -> "mise en securite".
+      {
+        source: "/mis-en-securite-apres-effraction-nice/",
+        destination: "/mise-en-securite-apres-effraction-nice/",
+        permanent: true,
+      },
       // Uniformisation de la structure des articles de blog (2026-09-12) :
       // remplacer-coffre-a-larder etait le seul a la racine, redirige
       // directement vers son URL finale pour eviter une double redirection.

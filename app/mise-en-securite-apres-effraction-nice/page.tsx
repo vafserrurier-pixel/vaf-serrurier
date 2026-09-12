@@ -4,7 +4,7 @@ import InsuranceBanner from "@/components/InsuranceBanner";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  path: "/mis-en-securite-apres-effraction-nice/",
+  path: "/mise-en-securite-apres-effraction-nice/",
   title: "Serrurier après cambriolage à Nice 24h/24 | VAF",
   description: "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, puis je propose une solution durable. Devis annoncé avant travaux.",
 });
@@ -88,7 +88,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
       sections={sections}
       faq={faq}
       breadcrumbLabel="Mise en sécurité après effraction"
-      path="/mis-en-securite-apres-effraction-nice/"
+      path="/mise-en-securite-apres-effraction-nice/"
       image={{
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
         alt: "Cylindre de serrure percé après une tentative d'effraction à Nice",

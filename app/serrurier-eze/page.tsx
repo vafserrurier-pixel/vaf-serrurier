@@ -82,7 +82,7 @@ export default function SerrurierEzePage() {
         { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },

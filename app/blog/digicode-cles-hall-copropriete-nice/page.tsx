@@ -244,7 +244,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
               <p className="text-slate leading-relaxed">
                 Une porte de hall fracturée, une serrure bloquée qui empêche l&apos;accès
                 à l&apos;immeuble : dans ce type de situation, comparable à une{" "}
-                <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                <Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">
                   mise en sécurité après effraction
                 </Link>
                 , le syndic n&apos;a pas à

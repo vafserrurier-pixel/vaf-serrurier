@@ -51,7 +51,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
         `Bloc-porte blindé complet ou blindage d'une porte existante à ${lieu} : je vous aide à choisir selon l'état réel de votre porte et de votre bâti.`,
       Icon: ShieldIcon,
     },
-    "/mis-en-securite-apres-effraction-nice/": {
+    "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
         `Mise en sécurité immédiate 24h/24 à ${lieu}, puis solution durable une fois le diagnostic fait. Facture détaillée pour votre assurance.`,
       Icon: AlertLockIcon,
@@ -103,7 +103,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
         `Full armored door block or reinforcing an existing door in ${lieu}: I help you choose based on the real condition of your door and building.`,
       Icon: ShieldIcon,
     },
-    "/mis-en-securite-apres-effraction-nice/": {
+    "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
         `Immediate securing 24/7 in ${lieu}, then a lasting solution once the diagnosis is done. Detailed invoice for your insurance.`,
       Icon: AlertLockIcon,

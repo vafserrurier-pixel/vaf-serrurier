@@ -152,7 +152,7 @@ export default function AgencesSyndicsNicePage() {
       }}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },

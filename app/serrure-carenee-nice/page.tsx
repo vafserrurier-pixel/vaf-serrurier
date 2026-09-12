@@ -141,7 +141,7 @@ export default function SerrureCareneeNicePage() {
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
+        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
     />

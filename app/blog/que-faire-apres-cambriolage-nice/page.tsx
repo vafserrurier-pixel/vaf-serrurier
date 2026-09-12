@@ -284,7 +284,7 @@ export default function QueFaireApresUnCambriolagePage() {
                 </h3>
                 <p className="text-slate leading-relaxed">
                   Je peux intervenir 24h/24 pour une{" "}
-                  <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                  <Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">
                     mise en sécurité immédiate
                   </Link>{" "}
                   : blocage provisoire de l&apos;ouvrant ou remplacement du cylindre selon

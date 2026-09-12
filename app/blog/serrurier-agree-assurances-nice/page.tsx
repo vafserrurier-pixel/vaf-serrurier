@@ -264,7 +264,7 @@ export default function AgreeAssurancesPage() {
                   peu identifiable. Dans les deux cas, le résultat est le même pour vous :
                   la mention ne garantit rien de vérifiable, ni sur la qualité du travail,
                   ni sur la prise en charge par votre assurance en cas de{" "}
-                  <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                  <Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">
                     sinistre
                   </Link>
                   .
