@@ -6,7 +6,41 @@ import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import { DoorIcon, AlertLockIcon, KeyIcon, WrenchIcon, ShieldIcon, HandshakeIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+
+const whyReasons = [
+  {
+    Icon: DoorIcon,
+    title: "Emménagement",
+    text: "Vous ne savez jamais combien de doubles de l'ancien locataire ou propriétaire circulent encore.",
+  },
+  {
+    Icon: AlertLockIcon,
+    title: "Tentative d'effraction",
+    text: "Une serrure forcée ou marquée doit être remplacée, même si l'accès n'a pas cédé.",
+  },
+  {
+    Icon: KeyIcon,
+    title: "Clé perdue ou volée",
+    text: "Le remplacement du seul cylindre suffit dans la grande majorité des cas.",
+  },
+  {
+    Icon: WrenchIcon,
+    title: "Mécanisme usé",
+    text: "Une clé qui force de plus en plus finit par lâcher, souvent au pire moment.",
+  },
+  {
+    Icon: ShieldIcon,
+    title: "Renforcement volontaire",
+    text: "Passer à un niveau A2P supérieur ou à une serrure multipoints, par choix plutôt que par urgence.",
+  },
+  {
+    Icon: HandshakeIcon,
+    title: "Exigence d'assurance",
+    text: "Certains contrats conditionnent une garantie vol à un niveau de serrure minimum.",
+  },
+];
 
 const guideToc = [
   { id: "diagnostic", label: "Diagnostiquer sa serrure avant d'appeler" },
@@ -208,6 +242,25 @@ const guideContent = (
       un changement de serrure à Nice.
     </p>
 
+    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+      <p className="font-heading font-bold text-navy mb-4">
+        Pourquoi changer de serrure à Nice : les cas les plus fréquents
+      </p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {whyReasons.map(({ Icon, title, text }) => (
+          <div key={title} className="flex items-start gap-3">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
+              <Icon className="w-4 h-4" />
+            </span>
+            <div>
+              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
+              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
     <div>
       <ArticleSectionHeading number={1} id="diagnostic">
         Diagnostiquer sa serrure avant d&apos;appeler
@@ -245,6 +298,46 @@ const guideContent = (
         seule ne suffit pas à retrouver une sécurité fiable, quel que soit son
         niveau de certification.
       </p>
+      <div className="mt-4">
+        <h3 className="font-heading font-semibold text-navy mb-1">
+          Le cylindre européen : un standard interchangeable
+        </h3>
+        <p className="text-slate leading-relaxed">
+          La quasi-totalité des cylindres résidentiels posés en France suivent
+          le profil dit européen, encadré par la norme EN 1303 (qui teste
+          notamment la résistance à l&apos;arrachement, au perçage et à la
+          casse). Ce profil commun rend les cylindres interchangeables d&apos;une
+          marque à l&apos;autre, à condition de reprendre les bonnes dimensions.
+          Elles s&apos;expriment en millimètres, mesurées depuis l&apos;axe
+          central : 30×30 mm est la taille la plus courante en appartement à
+          Nice, suivie de 30×40 et 30×50 pour des portes plus épaisses, par
+          paliers de 5 mm. Je vérifie toujours ces mesures avant de commander
+          quoi que ce soit.
+        </p>
+      </div>
+      <div className="mt-4">
+        <h3 className="font-heading font-semibold text-navy mb-1">
+          Gammes propriétaires : reproduction contrôlée
+        </h3>
+        <p className="text-slate leading-relaxed">
+          Certains fabricants proposent, en plus du standard européen, des
+          gammes à reproduction contrôlée : la clé n&apos;est recopiable que sur
+          présentation d&apos;une carte de propriété, chez le fabricant ou un
+          réseau agréé. C&apos;est le cas par exemple de la gamme{" "}
+          <a
+            href="https://bricard.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-steel underline"
+          >
+            Serial XPi de Bricard
+          </a>
+          , pensée pour le résidentiel comme pour le tertiaire. L&apos;avantage :
+          vous seul décidez du nombre de clés en circulation. L&apos;inconvénient :
+          un remplacement de cylindre coûte généralement plus cher qu&apos;un
+          profil européen standard.
+        </p>
+      </div>
     </div>
 
     <div>
@@ -378,7 +471,7 @@ export default function ChangementSerrureNicePage() {
           label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={8} toc={guideToc} faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
