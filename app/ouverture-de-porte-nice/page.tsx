@@ -1,7 +1,181 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import { DoorIcon, KeyIcon, WrenchIcon, AlertLockIcon, ShieldIcon, HandshakeIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+
+const situations = [
+  {
+    Icon: DoorIcon,
+    title: "Porte claquée",
+    text: "Les clés sont restées à l'intérieur, mais la porte n'est pas verrouillée à clé.",
+  },
+  {
+    Icon: KeyIcon,
+    title: "Clé perdue ou volée",
+    text: "Porte verrouillée, sans clé disponible pour l'ouvrir.",
+  },
+  {
+    Icon: WrenchIcon,
+    title: "Clé cassée dans la serrure",
+    text: "Le fragment reste coincé dans le cylindre, la clé ne tourne plus.",
+  },
+  {
+    Icon: AlertLockIcon,
+    title: "Serrure grippée ou bloquée",
+    text: "Le mécanisme résiste, avec ou sans clé, souvent après une usure progressive.",
+  },
+  {
+    Icon: ShieldIcon,
+    title: "Porte verrouillée à double tour",
+    text: "Le pêne dormant est engagé, la méthode radio ne fonctionne plus.",
+  },
+  {
+    Icon: HandshakeIcon,
+    title: "Personne vulnérable à l'intérieur",
+    text: "Enfant, personne âgée ou animal bloqué seul : situation prioritaire, à signaler dès l'appel.",
+  },
+];
+
+const guideToc = [
+  { id: "diagnostic", label: "Reconnaître sa situation avant d'appeler" },
+  { id: "technique", label: "Porte verrouillée sans clé : ouverture fine ou destructive" },
+  { id: "prioritaire", label: "Cas prioritaires : personne ou animal à l'intérieur" },
+  { id: "apres", label: "Après l'ouverture : faut-il changer le cylindre ?" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Le crochetage (ouverture fine, sans aucune casse) est-il toujours possible ?",
+    answer:
+      "Non. C'est une technique réelle, utilisée par les serruriers professionnels, mais elle demande du temps et ne fonctionne pas sur tous les cylindres selon leur niveau de sécurité. Passé un certain temps sans résultat, une méthode plus directe (perçage du cylindre) devient plus raisonnable qu'un forçage prolongé.",
+  },
+  {
+    question: "Combien de temps prend une ouverture de porte verrouillée sans clé ?",
+    answer:
+      "Cela dépend entièrement du type de cylindre et de son état. Une porte claquée se résout en quelques minutes ; une porte verrouillée sur un cylindre résistant peut demander plus de temps, sans que je puisse garantir un délai avant d'avoir vu la serrure.",
+  },
+  {
+    question: "Le cylindre est-il toujours remplacé après une ouverture destructive ?",
+    answer:
+      "Oui, dans la quasi-totalité des cas : un cylindre percé ou forcé ne remplit plus correctement sa fonction de sécurité une fois l'opération terminée. Le remplacement est inclus dans l'intervention, jamais annoncé après coup.",
+  },
+  {
+    question: "Que faire si une personne âgée, un enfant ou un animal est seul à l'intérieur ?",
+    answer:
+      "Signalez-le dès l'appel : c'est traité en priorité absolue. Selon la situation, une coordination avec les pompiers reste possible en complément de mon intervention.",
+  },
+  {
+    question: "Une porte verrouillée à double tour est-elle plus longue à ouvrir qu'une porte à simple tour ?",
+    answer:
+      "Généralement oui, puisque le pêne dormant est engagé plus profondément et que la méthode radio, efficace sur une porte simplement claquée, ne s'applique plus.",
+  },
+  {
+    question: "Dois-je rester dehors pendant toute l'intervention ?",
+    answer:
+      "Pas nécessairement une fois votre identité vérifiée : vous pouvez rester à proximité, mais je dois pouvoir accéder librement à la porte le temps du diagnostic et de l'ouverture.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide complète les informations déjà présentes plus haut sur cette page,
+      avec le détail des techniques utilisées selon votre situation.
+    </p>
+
+    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+      <p className="font-heading font-bold text-navy mb-4">Dans quelle situation êtes-vous ?</p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {situations.map(({ Icon, title, text }) => (
+          <div key={title} className="flex items-start gap-3">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
+              <Icon className="w-4 h-4" />
+            </span>
+            <div>
+              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
+              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
+        Reconnaître sa situation avant d&apos;appeler
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un seul geste change tout le diagnostic : essayez la poignée. Si elle
+        s&apos;actionne normalement, seul le pêne demi-tour est engagé, la porte
+        est simplement claquée. Si elle résiste complètement, un ou plusieurs
+        tours de clé ont été donnés : le pêne dormant (ou les pênes d&apos;une
+        serrure multipoints) est sorti dans la gâche, et la méthode change
+        radicalement.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="technique" level="h3">
+        Porte verrouillée sans clé : ouverture fine ou destructive
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Sur une porte réellement verrouillée, sans clé disponible, deux familles
+        de méthodes existent. Le crochetage (une manipulation fine des goupilles
+        du cylindre, sans aucune casse) est une technique réelle, utilisée par
+        les serruriers professionnels, mais elle demande de la dextérité et ne
+        fonctionne pas sur tous les cylindres dans un temps raisonnable, en
+        particulier sur les modèles récents ou{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+          certifiés A2P
+        </Link>
+        . Passé ce délai, une méthode plus directe (perçage du cylindre) devient
+        le choix pragmatique plutôt qu&apos;un forçage prolongé qui abîmerait
+        davantage la porte. Dans les deux cas, le cylindre est ensuite remplacé
+        pour repartir sur une sécurité fiable — voir mon article sur{" "}
+        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
+          le choix du bon niveau de serrure
+        </Link>
+        .
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="prioritaire" level="h3">
+        Cas prioritaires : personne ou animal à l&apos;intérieur
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un enfant, une personne âgée ou un animal seul derrière une porte
+        bloquée change l&apos;ordre des priorités : signalez-le dès l&apos;appel,
+        je l&apos;indique en premier au diagnostic pour adapter la méthode la
+        plus rapide compatible avec la situation, plutôt que la moins
+        destructrice par défaut.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="apres" level="h3">
+        Après l&apos;ouverture : faut-il changer le cylindre ?
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Après une ouverture non destructive (méthode radio ou crochetage
+        réussi), rien n&apos;oblige à remplacer quoi que ce soit. Après une
+        ouverture destructive, le remplacement du cylindre est nécessaire et
+        inclus dans l&apos;intervention. C&apos;est aussi l&apos;occasion de
+        revoir le niveau de sécurité si vous le souhaitez : le détail complet
+        est sur ma page{" "}
+        <Link href="/changement-serrure-nice/" className="text-steel underline">
+          changement de serrure
+        </Link>
+        .
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-porte-nice/",
@@ -202,6 +376,12 @@ export default function OuvertureDePorteNicePage() {
           href: "/blog/porte-qui-claque-serrurier-nice/",
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
         },
+        guide: (
+          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
+            {guideContent}
+          </ServiceGuideSection>
+        ),
+        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Door slammed shut in Nice: opened 24/7",

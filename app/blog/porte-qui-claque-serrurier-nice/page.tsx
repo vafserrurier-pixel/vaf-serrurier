@@ -173,7 +173,13 @@ export default function PorteQuiClaquePage() {
                   Si le pêne dormant est engagé, la méthode d&apos;ouverture change
                   complètement selon le type de serrure installée (cylindre standard,
                   multipoints, modèle ancien). C&apos;est la première chose que je
-                  vérifie en arrivant, avant même de sortir un outil.
+                  vérifie en arrivant, avant même de sortir un outil. Le détail des
+                  méthodes selon votre cas (claquée, verrouillée, clé cassée) est sur ma
+                  page{" "}
+                  <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
+                    ouverture de porte à Nice
+                  </Link>
+                  .
                 </p>
               </div>
               <div className="mt-4">
