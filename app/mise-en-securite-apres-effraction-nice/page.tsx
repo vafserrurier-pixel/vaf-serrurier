@@ -1,7 +1,123 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import InsuranceBanner from "@/components/InsuranceBanner";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+
+const guideToc = [
+  { id: "diagnostic-technique", label: "Ce que j'inspecte précisément sur place" },
+  { id: "provisoire-ou-definitif", label: "Provisoire ou définitif : les critères qui tranchent" },
+  { id: "renforcer", label: "Renforcer plutôt que remplacer à l'identique" },
+  { id: "facture", label: "Ce que contient la facture pour votre assurance" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Le bâti est marqué mais tient encore : faut-il le changer ?",
+    answer:
+      "Pas systématiquement. Si le bois n'est pas fendu en profondeur et que le point d'ancrage retrouve sa tenue après réparation, un renforcement ciblé suffit souvent. Je ne remplace que ce qui a réellement perdu sa fonction de résistance.",
+  },
+  {
+    question: "Une gâche arrachée se répare-t-elle ou se remplace-t-elle toujours ?",
+    answer:
+      "Cela dépend des dégâts sur le bois ou le métal environnant. Une gâche renforcée bien fixée sur un support sain suffit dans une partie des cas ; un support trop abîmé impose un remplacement complet de la zone.",
+  },
+  {
+    question: "Dois-je attendre le passage de l'assurance avant de faire réparer ?",
+    answer:
+      "Non, la sécurisation ne doit pas attendre : c'est justement l'objet de mon intervention en urgence. La facture détaillée que je fournis sert ensuite de justificatif pour votre déclaration de sinistre.",
+  },
+  {
+    question: "Un simple remplacement de cylindre suffit-il après une tentative ratée ?",
+    answer:
+      "Souvent oui si la tentative n'a pas dépassé le cylindre : je vérifie l'état de la gâche et du bâti avant de confirmer que rien d'autre n'a été fragilisé.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille le volet technique de mon intervention : le diagnostic
+      précis et les critères de décision entre réparation et remplacement.
+      Pour les démarches administratives (plainte, assurance, syndic), voir
+      mon article{" "}
+      <Link href="/blog/que-faire-apres-cambriolage-nice/" className="text-steel underline">
+        que faire après un cambriolage
+      </Link>
+      .
+    </p>
+
+    <div>
+      <ArticleSectionHeading number={1} id="diagnostic-technique" level="h3">
+        Ce que j&apos;inspecte précisément sur place
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Au-delà du cylindre, souvent le plus visiblement endommagé, je
+        contrôle l&apos;état du bâti autour de la gâche (bois fendu ou
+        simplement marqué), le jeu de la porte sur ses paumelles après le
+        choc, et la solidité des points d&apos;ancrage. Une tentative qui
+        échoue au niveau du cylindre laisse parfois des dégâts moins visibles
+        mais bien réels sur le bâti, qu&apos;il faut vérifier avant de
+        refermer le dossier.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="provisoire-ou-definitif" level="h3">
+        Provisoire ou définitif : les critères qui tranchent
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un blocage temporaire se justifie quand la porte reste fonctionnelle
+        mais que la solution durable demande réflexion (choix du niveau de
+        sécurité, disponibilité d&apos;un modèle précis). Une intervention
+        définitive immédiate s&apos;impose quand la porte ne ferme plus de
+        façon fiable : dans ce cas, rester en mode provisoire prolonge
+        inutilement le risque de récidive.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="renforcer" level="h3">
+        Renforcer plutôt que remplacer à l&apos;identique
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Une effraction est souvent l&apos;occasion de monter en niveau plutôt
+        que de reproduire une installation qui vient de céder. Selon l&apos;état
+        du bâti, cela peut passer par un cylindre certifié{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+          A2P
+        </Link>{" "}
+        et une serrure au bon niveau de points (le détail des critères est
+        sur ma page{" "}
+        <Link href="/changement-serrure-nice/" className="text-steel underline">
+          changement de serrure
+        </Link>
+        ), ou par un blindage complet si le bâti a été fragilisé au point de
+        justifier une solution plus complète (voir{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          installation de porte blindée
+        </Link>
+        ).
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="facture" level="h3">
+        Ce que contient la facture pour votre assurance
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        La facture détaillée que je fournis décrit la nature des dégâts
+        constatés (cylindre, gâche, bâti) et les réparations effectuées, avec
+        le niveau de certification posé si une nouvelle serrure ou porte a
+        été installée. C&apos;est le document généralement demandé par
+        l&apos;assureur en complément de votre déclaration de sinistre.
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/mise-en-securite-apres-effraction-nice/",
@@ -135,6 +251,12 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         href: "/blog/que-faire-apres-cambriolage-nice/",
         label: "Que faire après un cambriolage : les bons réflexes",
       }}
+      guide={
+        <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
+          {guideContent}
+        </ServiceGuideSection>
+      }
+      guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
