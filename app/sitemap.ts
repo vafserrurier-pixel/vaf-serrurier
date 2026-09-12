@@ -1,4 +1,4 @@
-import { readdirSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import type { MetadataRoute } from "next";
 import { business } from "@/lib/business";
@@ -45,9 +45,24 @@ const paths = [
   "politique-de-confidentialite",
 ];
 
+/**
+ * Exclut les brouillons (`export const draft = true`, voir
+ * scripts/scaffold-blog-draft.js) de la liste dynamique des articles de
+ * blog : sans ce filtre, un brouillon non publié se retrouverait quand même
+ * dans le sitemap simplement parce que son dossier existe sous app/blog/.
+ */
+function isDraft(slug: string): boolean {
+  try {
+    const src = readFileSync(join(process.cwd(), "app/blog", slug, "page.tsx"), "utf8");
+    return /export const draft\s*=\s*true/.test(src);
+  } catch {
+    return false;
+  }
+}
+
 function blogSlugs(): string[] {
   return readdirSync(join(process.cwd(), "app/blog"), { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
+    .filter((entry) => entry.isDirectory() && !isDraft(entry.name))
     .map((entry) => `blog/${entry.name}`);
 }
 

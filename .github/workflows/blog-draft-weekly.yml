@@ -1,0 +1,105 @@
+name: Brouillon de blog hebdomadaire
+
+# Notification + scaffold uniquement : ce workflow propose un sujet, cree un
+# SQUELETTE de page (aucun paragraphe redige, uniquement des TODO) sur une
+# branche separee, ouvre une Pull Request en mode BROUILLON (draft), et ouvre
+# une Issue avec la checklist. Rien n'est jamais publie, merge ou deploye
+# automatiquement : la branche ne touche jamais `master` sans une action
+# manuelle explicite de Benoit (relecture, redaction du contenu reel, retrait
+# de "draft = true" et du noIndex, puis merge lui-meme).
+
+on:
+  schedule:
+    # Chaque lundi a 9h00 UTC (decale d'une heure par rapport au rappel de
+    # rafraichissement de contenu pour eviter tout chevauchement)
+    - cron: "0 9 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  propose-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Choisir le prochain sujet
+        id: topic
+        run: |
+          set -e
+          if OUTPUT=$(node scripts/pick-next-blog-topic.js); then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "$OUTPUT" > .tmp-topic.json
+            SLUG=$(node -pe "JSON.parse(require('fs').readFileSync('.tmp-topic.json','utf8')).slug")
+            DESC=$(node -pe "JSON.parse(require('fs').readFileSync('.tmp-topic.json','utf8')).description")
+            echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+            echo "description=$DESC" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Backlog épuisé — ouvrir une Issue d'alerte
+        if: steps.topic.outputs.found == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Backlog de sujets de blog épuisé" \
+            --body "Tous les sujets de content/blog-topic-backlog.md sont déjà publiés ou en cours de brouillon. Ajoutez de nouveaux sujets dans la section À traiter pour que le rappel hebdomadaire puisse continuer." \
+            --label "blog-draft" || true
+
+      - name: Créer le label blog-draft si besoin
+        if: steps.topic.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh label create "blog-draft" --color "1b3a6b" --description "Brouillon d'article de blog propose automatiquement" --force
+
+      - name: Créer la branche et le squelette
+        if: steps.topic.outputs.found == 'true'
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -f .tmp-topic.json
+          BRANCH="blog-draft/${{ steps.topic.outputs.slug }}"
+          git checkout -b "$BRANCH"
+          node scripts/scaffold-blog-draft.js --slug="${{ steps.topic.outputs.slug }}" --description="${{ steps.topic.outputs.description }}"
+          git add "app/blog/${{ steps.topic.outputs.slug }}/page.tsx"
+          git commit -m "Brouillon (draft) : ${{ steps.topic.outputs.slug }} - squelette uniquement, ne pas publier tel quel"
+          git push origin "$BRANCH"
+
+      - name: Ouvrir la Pull Request en brouillon
+        if: steps.topic.outputs.found == 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          URL=$(gh pr create \
+            --draft \
+            --base master \
+            --head "blog-draft/${{ steps.topic.outputs.slug }}" \
+            --title "[BROUILLON] Article de blog : ${{ steps.topic.outputs.slug }}" \
+            --body "Squelette généré automatiquement, aucun paragraphe n'est rédigé. Ne jamais marquer cette PR comme prête ni la fusionner sans avoir écrit le contenu réel, relu l'article en entier, et validé la checklist de l'Issue associée.")
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
+      - name: Ouvrir l'Issue de suivi
+        if: steps.topic.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/create-blog-draft-issue.js \
+            --slug="${{ steps.topic.outputs.slug }}" \
+            --description="${{ steps.topic.outputs.description }}" \
+            --pr-url="${{ steps.pr.outputs.url }}"

@@ -16,12 +16,17 @@ export function buildMetadata(opts: {
   title: string;
   /** Meta description, réutilisée pour og:description/twitter:description. */
   description: string;
+  /** Empêche l'indexation (robots noindex,nofollow) : réservé aux brouillons non publiés. */
+  noIndex?: boolean;
 }): Metadata {
   const url = `${business.domain}${opts.path}`;
   return {
     alternates: { canonical: url },
     title: opts.title,
     description: opts.description,
+    ...(opts.noIndex
+      ? { robots: { index: false, follow: false } }
+      : {}),
     openGraph: {
       type: "website",
       locale: "fr_FR",

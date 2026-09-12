@@ -1,0 +1,47 @@
+name: Rappel de rafraîchissement de contenu
+
+# Notification uniquement : ce workflow LIT content/editorial-calendar.json
+# et OUVRE une Issue GitHub par page prévue pour aujourd'hui. Il ne modifie
+# aucun fichier du site, ne commite rien, ne construit rien, ne déploie
+# rien. Toute mise à jour de contenu reste une action manuelle, faite par
+# Benoît ou par une session Claude Code lancée explicitement par lui.
+
+on:
+  schedule:
+    # Lundi, mercredi, vendredi à 8h00 UTC (~9-10h heure de Paris selon la saison)
+    - cron: "0 8 * * 1,3,5"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Forcer une date (YYYY-MM-DD) pour tester, sinon la date du jour"
+        required: false
+        type: string
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  create-reminders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: S'assurer que les labels existent
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "content-refresh" --color "0b2447" --description "Rappel de rafraichissement de contenu" --force
+          gh label create "niveau-1" --color "c8102e" --description "Page prioritaire (secteur/service/hub)" --force
+          gh label create "niveau-2" --color "1b3a6b" --description "Page quartier/commune" --force
+
+      - name: Créer les Issues du jour
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            node scripts/create-refresh-issues.js --date="${{ inputs.date }}"
+          else
+            node scripts/create-refresh-issues.js
+          fi

@@ -15,7 +15,10 @@
     "prebuild": "node scripts/generate-content-dates.js",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "update-freshness": "node scripts/update-freshness.js",
+    "freshness-report": "node scripts/content-freshness-report.js",
+    "editorial-calendar": "node scripts/generate-editorial-calendar.js"
   },
   "dependencies": {
     "next": "16.3.0",

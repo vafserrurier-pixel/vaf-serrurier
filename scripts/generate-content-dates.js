@@ -1,16 +1,29 @@
-// Genere lib/contentDates.generated.ts : pour chaque page.tsx, la date du
-// dernier commit Git qui l'a modifiee (vraie date de fraicheur de contenu),
-// utilisee par app/sitemap.ts (<lastmod>) et par serviceSchema (dateModified).
+// Genere lib/contentDates.generated.ts : pour chaque page.tsx, la date de
+// fraicheur de contenu utilisee par app/sitemap.ts (<lastmod>) et par
+// serviceSchema (dateModified). Priorite :
+//   1. content/freshness-overrides.json (defini a la main via
+//      `npm run update-freshness -- --page=/xxx/`) si present pour la page ;
+//   2. sinon, la date du dernier commit Git qui a modifie le fichier.
 //
 // Execute au moment du build (npm run build), jamais au runtime : Git n'est
 // pas forcement disponible dans l'environnement serverless deploye, donc on
 // fige le resultat dans un fichier .ts commite plutot que d'appeler `git`
 // depuis une route qui pourrait re-executer en production (ISR).
 const { execSync } = require("child_process");
-const { readdirSync, writeFileSync } = require("fs");
+const { readdirSync, writeFileSync, existsSync, readFileSync } = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
+const OVERRIDES_PATH = path.join(ROOT, "content/freshness-overrides.json");
+
+function loadOverrides() {
+  if (!existsSync(OVERRIDES_PATH)) return {};
+  try {
+    return JSON.parse(readFileSync(OVERRIDES_PATH, "utf8"));
+  } catch {
+    return {};
+  }
+}
 
 function walkPages(dir, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -43,19 +56,22 @@ function lastCommitDate(filePath) {
 }
 
 const pages = walkPages(path.join(ROOT, "app"));
+const overrides = loadOverrides();
 const now = new Date().toISOString();
 const entries = {};
 
 for (const file of pages) {
   const urlPath = urlPathFor(file);
-  const date = lastCommitDate(file) ?? now; // fallback si le fichier est non versionne ou hors depot Git
+  const date = overrides[urlPath] ?? lastCommitDate(file) ?? now; // override manuel > commit Git > fallback
   entries[urlPath] = date;
 }
 
 const fileContent = `// Fichier genere automatiquement par scripts/generate-content-dates.js
 // a chaque "npm run build". Ne pas editer a la main : les changements seraient
-// ecrases au prochain build. Mappe chaque chemin de page a la date ISO de son
-// dernier commit Git, utilisee comme signal de fraicheur (sitemap <lastmod>,
+// ecrases au prochain build. Mappe chaque chemin de page a la date ISO de sa
+// derniere fraicheur reelle (override manuel dans
+// content/freshness-overrides.json en priorite, sinon dernier commit Git du
+// fichier), utilisee comme signal de fraicheur (sitemap <lastmod>,
 // schema.org dateModified).
 export const contentDates: Record<string, string> = ${JSON.stringify(entries, null, 2)};
 `;

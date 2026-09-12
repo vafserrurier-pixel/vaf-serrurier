@@ -1,0 +1,3122 @@
+[
+  {
+    "date": "2026-09-14",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-jean-medecin-nice/",
+        "label": "Quartier : Jean-Médecin",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carre-d-or-nice/",
+        "label": "Quartier : Carré d'Or",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-wilson-nice/",
+        "label": "Quartier : Quartier Wilson",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-musiciens-nice/",
+        "label": "Quartier : Quartier des Musiciens",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-fleurs-nice/",
+        "label": "Quartier : Quartier des Fleurs",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-baumettes-nice/",
+        "label": "Quartier : Baumettes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-liberation-nice/",
+        "label": "Quartier : Libération",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gambetta-nice/",
+        "label": "Quartier : Gambetta",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cimiez-nice/",
+        "label": "Quartier : Cimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-desambrois-nice/",
+        "label": "Quartier : Desambrois",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carabacel-nice/",
+        "label": "Quartier : Carabacel",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-garibaldi-nice/",
+        "label": "Quartier : Garibaldi",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-12",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-parc-imperial-nice/",
+        "label": "Quartier : Parc Impérial",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-philippe-nice/",
+        "label": "Quartier : Saint-Philippe",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-promenade-des-anglais-nice/",
+        "label": "Quartier : Promenade des Anglais",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-magnan-nice/",
+        "label": "Quartier : Magnan",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-la-madeleine-nice/",
+        "label": "Quartier : La Madeleine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pierre-de-feric-nice/",
+        "label": "Quartier : Saint-Pierre-de-Féric",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-vieux-nice-nice/",
+        "label": "Quartier : Vieux-Nice",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-riquier-nice/",
+        "label": "Quartier : Riquier",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pasteur-nice/",
+        "label": "Quartier : Pasteur",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-roch-nice/",
+        "label": "Quartier : Saint-Roch",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-ariane-nice/",
+        "label": "Quartier : l'Ariane",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-boron-nice/",
+        "label": "Quartier : Mont Boron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-alban-nice/",
+        "label": "Quartier : Mont Alban",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-le-port-nice/",
+        "label": "Quartier : Le Port",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-bon-voyage-nice/",
+        "label": "Quartier : Bon Voyage",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-brancolar-nice/",
+        "label": "Quartier : Brancolar",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-poetes-nice/",
+        "label": "Quartier : Poètes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-chambrun-nice/",
+        "label": "Quartier : Chambrun",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gairaut-nice/",
+        "label": "Quartier : Gairaut",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-rimiez-nice/",
+        "label": "Quartier : Rimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-27",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pancrace-nice/",
+        "label": "Quartier : Saint-Pancrace",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-30",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-des-oliviers-nice/",
+        "label": "Quartier : Corniche des Oliviers",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-02",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pessicart-nice/",
+        "label": "Quartier : Pessicart",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-04",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-archet-nice/",
+        "label": "Quartier : L'Archet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-07",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-antoine-nice/",
+        "label": "Quartier : Saint-Antoine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-09",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-fabron-nice/",
+        "label": "Quartier : Fabron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-11",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carras-nice/",
+        "label": "Quartier : Carras",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-14",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-californie-nice/",
+        "label": "Quartier : Californie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-16",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-les-moulins-nice/",
+        "label": "Quartier : Les Moulins",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-18",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-fleurie-nice/",
+        "label": "Quartier : Corniche Fleurie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-21",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-arenas-nice/",
+        "label": "Quartier : Arénas",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-isidore-nice/",
+        "label": "Quartier : Saint-Isidore",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-25",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-lingostiere-nice/",
+        "label": "Quartier : Lingostière",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-28",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-secteur-bellet-nice/",
+        "label": "Quartier : Secteur Bellet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-12-30",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-01",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-04",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-06",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-08",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-jean-medecin-nice/",
+        "label": "Quartier : Jean-Médecin",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-11",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carre-d-or-nice/",
+        "label": "Quartier : Carré d'Or",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-13",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-wilson-nice/",
+        "label": "Quartier : Quartier Wilson",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-15",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-musiciens-nice/",
+        "label": "Quartier : Quartier des Musiciens",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-18",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-fleurs-nice/",
+        "label": "Quartier : Quartier des Fleurs",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-20",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-baumettes-nice/",
+        "label": "Quartier : Baumettes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-22",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-liberation-nice/",
+        "label": "Quartier : Libération",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-25",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gambetta-nice/",
+        "label": "Quartier : Gambetta",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-27",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cimiez-nice/",
+        "label": "Quartier : Cimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-01-29",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-desambrois-nice/",
+        "label": "Quartier : Desambrois",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-01",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carabacel-nice/",
+        "label": "Quartier : Carabacel",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-03",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-garibaldi-nice/",
+        "label": "Quartier : Garibaldi",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-05",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-parc-imperial-nice/",
+        "label": "Quartier : Parc Impérial",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-08",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-philippe-nice/",
+        "label": "Quartier : Saint-Philippe",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-10",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-promenade-des-anglais-nice/",
+        "label": "Quartier : Promenade des Anglais",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-12",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-magnan-nice/",
+        "label": "Quartier : Magnan",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-15",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-la-madeleine-nice/",
+        "label": "Quartier : La Madeleine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-17",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pierre-de-feric-nice/",
+        "label": "Quartier : Saint-Pierre-de-Féric",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-19",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-vieux-nice-nice/",
+        "label": "Quartier : Vieux-Nice",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-22",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-riquier-nice/",
+        "label": "Quartier : Riquier",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-24",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pasteur-nice/",
+        "label": "Quartier : Pasteur",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-02-26",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-roch-nice/",
+        "label": "Quartier : Saint-Roch",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-01",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-ariane-nice/",
+        "label": "Quartier : l'Ariane",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-03",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-boron-nice/",
+        "label": "Quartier : Mont Boron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-05",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-alban-nice/",
+        "label": "Quartier : Mont Alban",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-08",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-le-port-nice/",
+        "label": "Quartier : Le Port",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-10",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-bon-voyage-nice/",
+        "label": "Quartier : Bon Voyage",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-12",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-brancolar-nice/",
+        "label": "Quartier : Brancolar",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-15",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-poetes-nice/",
+        "label": "Quartier : Poètes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-17",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-chambrun-nice/",
+        "label": "Quartier : Chambrun",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-19",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gairaut-nice/",
+        "label": "Quartier : Gairaut",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-22",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-rimiez-nice/",
+        "label": "Quartier : Rimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-24",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pancrace-nice/",
+        "label": "Quartier : Saint-Pancrace",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-26",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-des-oliviers-nice/",
+        "label": "Quartier : Corniche des Oliviers",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-29",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pessicart-nice/",
+        "label": "Quartier : Pessicart",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-03-31",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-archet-nice/",
+        "label": "Quartier : L'Archet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-02",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-antoine-nice/",
+        "label": "Quartier : Saint-Antoine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-05",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-fabron-nice/",
+        "label": "Quartier : Fabron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-07",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carras-nice/",
+        "label": "Quartier : Carras",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-09",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-californie-nice/",
+        "label": "Quartier : Californie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-12",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-les-moulins-nice/",
+        "label": "Quartier : Les Moulins",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-14",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-fleurie-nice/",
+        "label": "Quartier : Corniche Fleurie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-16",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-arenas-nice/",
+        "label": "Quartier : Arénas",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-19",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-isidore-nice/",
+        "label": "Quartier : Saint-Isidore",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-21",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-lingostiere-nice/",
+        "label": "Quartier : Lingostière",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-23",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-secteur-bellet-nice/",
+        "label": "Quartier : Secteur Bellet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-26",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-28",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-04-30",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-03",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-05",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-jean-medecin-nice/",
+        "label": "Quartier : Jean-Médecin",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-07",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carre-d-or-nice/",
+        "label": "Quartier : Carré d'Or",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-10",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-wilson-nice/",
+        "label": "Quartier : Quartier Wilson",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-12",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-musiciens-nice/",
+        "label": "Quartier : Quartier des Musiciens",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-14",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-fleurs-nice/",
+        "label": "Quartier : Quartier des Fleurs",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-17",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-baumettes-nice/",
+        "label": "Quartier : Baumettes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-19",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-liberation-nice/",
+        "label": "Quartier : Libération",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-21",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gambetta-nice/",
+        "label": "Quartier : Gambetta",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-24",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cimiez-nice/",
+        "label": "Quartier : Cimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-26",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-desambrois-nice/",
+        "label": "Quartier : Desambrois",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-28",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carabacel-nice/",
+        "label": "Quartier : Carabacel",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-31",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-garibaldi-nice/",
+        "label": "Quartier : Garibaldi",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-02",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-parc-imperial-nice/",
+        "label": "Quartier : Parc Impérial",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-04",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-philippe-nice/",
+        "label": "Quartier : Saint-Philippe",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-07",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-promenade-des-anglais-nice/",
+        "label": "Quartier : Promenade des Anglais",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-09",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-magnan-nice/",
+        "label": "Quartier : Magnan",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-11",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-la-madeleine-nice/",
+        "label": "Quartier : La Madeleine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-14",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pierre-de-feric-nice/",
+        "label": "Quartier : Saint-Pierre-de-Féric",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-16",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-vieux-nice-nice/",
+        "label": "Quartier : Vieux-Nice",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-18",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-riquier-nice/",
+        "label": "Quartier : Riquier",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-21",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pasteur-nice/",
+        "label": "Quartier : Pasteur",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-roch-nice/",
+        "label": "Quartier : Saint-Roch",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-25",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-ariane-nice/",
+        "label": "Quartier : l'Ariane",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-28",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-boron-nice/",
+        "label": "Quartier : Mont Boron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-30",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-mont-alban-nice/",
+        "label": "Quartier : Mont Alban",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-02",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-le-port-nice/",
+        "label": "Quartier : Le Port",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-05",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-bon-voyage-nice/",
+        "label": "Quartier : Bon Voyage",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-07",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-brancolar-nice/",
+        "label": "Quartier : Brancolar",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-09",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-poetes-nice/",
+        "label": "Quartier : Poètes",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-12",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-chambrun-nice/",
+        "label": "Quartier : Chambrun",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-14",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-gairaut-nice/",
+        "label": "Quartier : Gairaut",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-16",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-rimiez-nice/",
+        "label": "Quartier : Rimiez",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-19",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-pancrace-nice/",
+        "label": "Quartier : Saint-Pancrace",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-21",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-des-oliviers-nice/",
+        "label": "Quartier : Corniche des Oliviers",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-pessicart-nice/",
+        "label": "Quartier : Pessicart",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-26",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-l-archet-nice/",
+        "label": "Quartier : L'Archet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-28",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-antoine-nice/",
+        "label": "Quartier : Saint-Antoine",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-30",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-fabron-nice/",
+        "label": "Quartier : Fabron",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-02",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carras-nice/",
+        "label": "Quartier : Carras",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-04",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-californie-nice/",
+        "label": "Quartier : Californie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-06",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-les-moulins-nice/",
+        "label": "Quartier : Les Moulins",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-09",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-corniche-fleurie-nice/",
+        "label": "Quartier : Corniche Fleurie",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-11",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-arenas-nice/",
+        "label": "Quartier : Arénas",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-13",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-isidore-nice/",
+        "label": "Quartier : Saint-Isidore",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-16",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-lingostiere-nice/",
+        "label": "Quartier : Lingostière",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-18",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-secteur-bellet-nice/",
+        "label": "Quartier : Secteur Bellet",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-20",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-23",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-25",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-27",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-30",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/depannage-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-jean-medecin-nice/",
+        "label": "Quartier : Jean-Médecin",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-01",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-carre-d-or-nice/",
+        "label": "Quartier : Carré d'Or",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-03",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mis-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-wilson-nice/",
+        "label": "Quartier : Quartier Wilson",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-06",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-musiciens-nice/",
+        "label": "Quartier : Quartier des Musiciens",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-08",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-quartier-des-fleurs-nice/",
+        "label": "Quartier : Quartier des Fleurs",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-10",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-baumettes-nice/",
+        "label": "Quartier : Baumettes",
+        "level": 2
+      }
+    ]
+  }
+]
