@@ -1,8 +1,168 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import { AlertLockIcon, WrenchIcon, KeyIcon, BoltIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+
+const symptoms = [
+  {
+    Icon: AlertLockIcon,
+    title: "La clé force ou résiste",
+    cause: "Cylindre encrassé, gâche mal réglée ou porte qui a bougé.",
+    urgence: "Faible à modérée : à traiter avant blocage complet.",
+  },
+  {
+    Icon: WrenchIcon,
+    title: "Clé cassée dans le cylindre",
+    cause: "Usure du métal, souvent après un forçage léger et répété.",
+    urgence: "Élevée si aucun double n'est disponible.",
+  },
+  {
+    Icon: KeyIcon,
+    title: "La clé tourne dans le vide",
+    cause: "Pièce interne cassée ou cylindre complètement usé.",
+    urgence: "Élevée : le pêne ne bouge plus du tout.",
+  },
+  {
+    Icon: BoltIcon,
+    title: "Blocage soudain, porte déjà fermée",
+    cause: "Mécanisme grippé ou pièce rompue sans signe avant-coureur.",
+    urgence: "Immédiate si vous êtes bloqué dehors ou dedans.",
+  },
+];
+
+const guideToc = [
+  { id: "diagnostic", label: "Reconnaître le symptôme avant d'appeler" },
+  { id: "entretien", label: "Entretien préventif : le bon geste" },
+  { id: "devis", label: "Vos droits : un devis avant toute intervention" },
+  { id: "reparer-remplacer", label: "Réparer ou remplacer : comment je tranche" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Puis-je lubrifier moi-même une serrure qui résiste ?",
+    answer:
+      "Oui, avec un lubrifiant adapté au mécanisme (graphite en poudre ou lubrifiant sec pour serrure), en petite quantité. Évitez les huiles ou dégrippants type WD-40 en usage régulier : ils apportent un soulagement immédiat mais retiennent ensuite la poussière, ce qui aggrave le grippage à moyen terme.",
+  },
+  {
+    question: "Un devis est-il vraiment obligatoire avant une intervention ?",
+    answer:
+      "Oui, c'est une obligation réglementaire pour les prestations de dépannage à domicile, pas une option laissée à l'appréciation du professionnel. Je vous communique un prix avant de me déplacer et un devis détaillé avant toute intervention.",
+  },
+  {
+    question: "Combien de temps avant qu'une serrure qui résiste finisse par se bloquer ?",
+    answer:
+      "Impossible à garantir précisément : cela dépend de l'usage quotidien et de l'état du mécanisme. Un cylindre qui accroche déjà régulièrement peut se bloquer du jour au lendemain, d'où l'intérêt de ne pas attendre.",
+  },
+  {
+    question: "Dois-je essayer de forcer si la clé tourne dans le vide ?",
+    answer:
+      "Non : forcer n'a aucun effet quand une pièce interne est cassée, et risque d'endommager le cylindre au point de compliquer son remplacement. Mieux vaut couper l'usage de cette porte et faire intervenir un professionnel.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille le diagnostic, l&apos;entretien préventif et vos droits en
+      tant que client, en complément des symptômes déjà décrits plus haut sur
+      cette page.
+    </p>
+
+    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+      <p className="font-heading font-bold text-navy mb-4">Symptôme, cause probable et urgence</p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {symptoms.map(({ Icon, title, cause, urgence }) => (
+          <div key={title} className="flex items-start gap-3">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
+              <Icon className="w-4 h-4" />
+            </span>
+            <div>
+              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
+              <p className="text-sm text-slate leading-snug mt-0.5">{cause}</p>
+              <p className="text-xs text-steel font-semibold mt-1">{urgence}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
+        Reconnaître le symptôme avant d&apos;appeler
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Le tableau ci-dessus donne un premier repère, mais un seul geste en dit
+        souvent plus long : essayez la clé lentement, sans forcer. Une
+        résistance progressive pointe vers un encrassement ou un léger
+        désalignement de la porte. Un blocage net et soudain, sans à-coups
+        avant-coureurs, évoque plutôt une pièce interne rompue. Cette
+        distinction m&apos;aide déjà à préparer le bon outillage avant de me
+        déplacer.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="entretien" level="h3">
+        Entretien préventif : le bon geste (et celui à éviter)
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un cylindre qui commence à résister peut souvent être soulagé avec un
+        lubrifiant sec (graphite en poudre ou lubrifiant spécial serrure), à
+        appliquer en petite quantité directement dans le cylindre. Les
+        dégrippants classiques type WD-40 soulagent sur l&apos;instant mais,
+        utilisés en continu, retiennent la poussière et finissent par aggraver
+        le grippage. Sur les portes plus anciennes du centre de Nice,
+        l&apos;humidité fait aussi gonfler légèrement le bois : un simple
+        réglage de la gâche évite parfois un dépannage complet.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="devis" level="h3">
+        Vos droits : un devis avant toute intervention
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Les prestations de dépannage à domicile dans le bâtiment sont
+        encadrées par l&apos;
+        <a
+          href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          arrêté du 24 janvier 2017 relatif à la publicité des prix
+        </a>{" "}
+        : un prix doit vous être communiqué avant le déplacement, et un devis
+        détaillé avant le début des travaux. Ce n&apos;est pas une option
+        laissée à l&apos;appréciation du professionnel.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="reparer-remplacer" level="h3">
+        Réparer ou remplacer : comment je tranche
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un nettoyage, un réglage de gâche ou une extraction de clé cassée
+        suffisent souvent à régler le problème sans remplacer quoi que ce
+        soit. Le remplacement devient nécessaire quand une pièce interne est
+        rompue, quand le cylindre a été percé pour une ouverture, ou quand
+        c&apos;est l&apos;occasion de monter en niveau de sécurité : le détail
+        des critères de choix est sur ma page{" "}
+        <Link href="/changement-serrure-nice/" className="text-steel underline">
+          changement de serrure
+        </Link>
+        .
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/depannage-serrurier-nice/",
@@ -199,6 +359,12 @@ export default function DepannageSerrurierNicePage() {
           href: "/blog/que-faire-apres-cambriolage-nice/",
           label: "Que faire après un cambriolage : les bons réflexes",
         },
+        guide: (
+          <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
+            {guideContent}
+          </ServiceGuideSection>
+        ),
+        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Emergency locksmith in Nice, 24/7 callout service",
