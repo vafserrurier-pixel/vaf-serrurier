@@ -235,6 +235,8 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
+      {guide}
+
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.otherServices}</h2>
         <RelatedServicesGrid items={relatedServices} locale={locale} />
@@ -298,8 +300,6 @@ export default function ServicePageTemplate({
           </div>
         </section>
       )}
-
-      {guide}
 
       <section className="mx-auto max-w-4xl px-4 py-12 pb-14">
         <CtaBlock locale={locale} />

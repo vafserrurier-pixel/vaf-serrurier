@@ -17,7 +17,7 @@ export const contentDates: Record<string, string> = {
   "/blog/remplacer-coffre-a-larder-nice/": "2026-09-12T17:17:39+02:00",
   "/blog/serrure-multipoints-3-5-7-nice/": "2026-09-12T17:17:39+02:00",
   "/blog/serrurier-agree-assurances-nice/": "2026-09-12T17:26:06+02:00",
-  "/changement-serrure-nice/": "2026-09-12T17:31:23+02:00",
+  "/changement-serrure-nice/": "2026-09-12T17:44:20+02:00",
   "/conditions-generales-de-vente/": "2026-09-12T12:47:15+02:00",
   "/conditions-generales-dutilisation/": "2026-09-12T12:47:15+02:00",
   "/contact/": "2026-09-12T12:47:15+02:00",

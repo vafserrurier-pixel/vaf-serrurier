@@ -262,7 +262,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={1} id="diagnostic">
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
         Diagnostiquer sa serrure avant d&apos;appeler
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -281,7 +281,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={2} id="niveau">
+      <ArticleSectionHeading number={2} id="niveau" level="h3">
         Cylindre, coffre complet ou porte entière : le bon niveau
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -299,9 +299,9 @@ const guideContent = (
         niveau de certification.
       </p>
       <div className="mt-4">
-        <h3 className="font-heading font-semibold text-navy mb-1">
+        <h4 className="font-heading font-semibold text-navy mb-1">
           Le cylindre européen : un standard interchangeable
-        </h3>
+        </h4>
         <p className="text-slate leading-relaxed">
           La quasi-totalité des cylindres résidentiels posés en France suivent
           le profil dit européen, encadré par la norme EN 1303 (qui teste
@@ -316,9 +316,9 @@ const guideContent = (
         </p>
       </div>
       <div className="mt-4">
-        <h3 className="font-heading font-semibold text-navy mb-1">
+        <h4 className="font-heading font-semibold text-navy mb-1">
           Gammes propriétaires : reproduction contrôlée
-        </h3>
+        </h4>
         <p className="text-slate leading-relaxed">
           Certains fabricants proposent, en plus du standard européen, des
           gammes à reproduction contrôlée : la clé n&apos;est recopiable que sur
@@ -341,7 +341,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={3} id="deroule">
+      <ArticleSectionHeading number={3} id="deroule" level="h3">
         Le déroulé technique d&apos;une intervention
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -357,7 +357,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="assurance">
+      <ArticleSectionHeading number={4} id="assurance" level="h3">
         Assurance : qui paie, et sous quel délai
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -382,7 +382,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={5} id="evolution">
+      <ArticleSectionHeading number={5} id="evolution" level="h3">
         Faire évoluer sa sécurité sans se suréquiper
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
