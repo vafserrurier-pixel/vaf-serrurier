@@ -1,7 +1,114 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+
+const guideToc = [
+  { id: "mecanismes", label: "Trois familles de mécanismes, trois approches" },
+  { id: "destructif-ou-non", label: "Ce qui rend une ouverture non destructive possible" },
+  { id: "heritage", label: "Coffre hérité : la procédure pas à pas" },
+  { id: "apres", label: "Après l'ouverture : réparer, remplacer ou monter en gamme" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Une serrure électronique est-elle plus longue à ouvrir qu'une serrure à clé ?",
+    answer:
+      "Pas forcément plus longue, mais la méthode diffère complètement : sur l'électronique, je travaille surtout sur le boîtier de commande et l'alimentation, pas sur un mécanisme mécanique à manipuler.",
+  },
+  {
+    question: "Que se passe-t-il si le notaire n'a pas encore été désigné pour la succession ?",
+    answer:
+      "Appelez-moi avant de vous déplacer avec les documents disponibles (livret de famille, acte de décès) : selon la situation, je vous indique ce qui peut suffire à sécuriser l'intervention en attendant l'acte de notoriété définitif.",
+  },
+  {
+    question: "Le coffre est ouvert par perçage : peut-on le refermer normalement après ?",
+    answer:
+      "Cela dépend de l'ampleur du perçage. Sur certains modèles, un remplacement du bloc de serrure suffit à remettre le coffre en service ; sur d'autres, notamment après un perçage large, le remplacement complet devient plus cohérent.",
+  },
+  {
+    question: "Puis-je garder le même modèle de coffre après une ouverture destructive ?",
+    answer:
+      "Oui si le corps du coffre n'a pas été touché, seul le mécanisme de verrouillage. Je vous le confirme après diagnostic, avant de proposer une réparation ou un changement de gamme.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille les aspects techniques du diagnostic selon le type de
+      mécanisme, en complément des situations déjà décrites plus haut sur
+      cette page.
+    </p>
+
+    <div>
+      <ArticleSectionHeading number={1} id="mecanismes" level="h3">
+        Trois familles de mécanismes, trois approches
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Une serrure à clé se travaille comme un cylindre classique, en plus
+        robuste. Une combinaison mécanique à disques demande une écoute fine
+        du mécanisme pour repérer les points d&apos;encoche. Une serrure
+        électronique à code implique de diagnostiquer d&apos;abord le boîtier
+        de commande et l&apos;alimentation (piles à plat, carte électronique
+        défaillante) avant même d&apos;envisager le mécanisme de verrouillage
+        lui-même : une bonne partie des blocages électroniques viennent
+        justement de là plutôt que d&apos;un vrai problème de serrure.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="destructif-ou-non" level="h3">
+        Ce qui rend une ouverture non destructive possible
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un mécanisme propre et bien entretenu se manipule presque toujours
+        sans dommage. Un mécanisme grippé par l&apos;âge, la rouille ou un
+        choc antérieur réduit fortement les chances d&apos;une ouverture fine
+        dans un temps raisonnable. C&apos;est cet état réel du mécanisme,
+        constaté sur place, qui oriente vers le perçage plutôt qu&apos;une
+        règle générale selon la marque ou le modèle.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="heritage" level="h3">
+        Coffre hérité : la procédure pas à pas
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un acte de notoriété (délivré par le notaire en charge de la
+        succession) reste le document le plus simple à présenter. À défaut,
+        les coordonnées de ce notaire permettent souvent de sécuriser
+        l&apos;intervention par un contact direct avant mon déplacement.
+        J&apos;évite ainsi de vous demander un déplacement pour rien si un
+        document manque.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="apres" level="h3">
+        Après l&apos;ouverture : réparer, remplacer ou monter en gamme
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Après une ouverture fine, le mécanisme reste en général utilisable
+        tel quel. Après une ouverture destructive, je vous indique si un
+        remplacement du bloc de serrure suffit ou si le corps du coffre est
+        également concerné. C&apos;est aussi le bon moment pour revoir le
+        niveau de protection si le coffre ouvert ne correspondait plus à vos
+        besoins : le détail des certifications et de la fixation est sur ma
+        page{" "}
+        <Link href="/installation-coffre-fort-nice/" className="text-steel underline">
+          installation de coffre-fort
+        </Link>
+        .
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-coffre-fort-nice/",
@@ -122,6 +229,12 @@ export default function OuvertureDeCoffreFortNicePage() {
         href: "/blog/certification-a2p-serrure-nice/",
         label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
       }}
+      guide={
+        <ServiceGuideSection readingMinutes={4} toc={guideToc} faq={guideFaq}>
+          {guideContent}
+        </ServiceGuideSection>
+      }
+      guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

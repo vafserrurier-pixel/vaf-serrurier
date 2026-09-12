@@ -1,7 +1,118 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+
+const guideToc = [
+  { id: "usage", label: "Quel usage, quel niveau de protection" },
+  { id: "armes", label: "Cas particulier : la détention d'armes à feu" },
+  { id: "fixation-support", label: "La fixation selon votre type de support" },
+  { id: "emplacement", label: "Emplacement : au-delà de la seule discrétion" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Un coffre anti-effraction protège-t-il aussi mes documents contre l'incendie ?",
+    answer:
+      "Pas automatiquement : ce sont deux normes distinctes (A2P/EN 1143-1 pour l'effraction, EN 1047-1 pour le feu). Certains modèles cumulent les deux certifications, à vérifier précisément avant l'achat si les deux usages vous concernent.",
+  },
+  {
+    question: "Une armoire à fusils suffit-elle légalement pour des armes de catégorie B ?",
+    answer:
+      "Oui, à condition qu'elle soit certifiée (typiquement EN 14450 S1 ou S2) et adaptée au nombre d'armes détenues. Une simple armoire non certifiée ne répond pas à l'obligation réglementaire.",
+  },
+  {
+    question: "Puis-je fixer un coffre-fort moi-même sans serrurier ?",
+    answer:
+      "Techniquement oui pour un petit modèle léger, mais une fixation mal dimensionnée pour le poids du coffre et la nature du support (cheville inadaptée, béton mal préparé) réduit fortement sa résistance réelle à l'arrachement.",
+  },
+  {
+    question: "Un coffre-fort au sol est-il plus sûr qu'un coffre mural ?",
+    answer:
+      "Cela dépend surtout de la qualité du support et de la fixation, pas uniquement de l'emplacement. Un ancrage solide dans une dalle béton pleine offre en général plus de résistance qu'une fixation murale sur cloison légère.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille le choix du niveau de protection selon l&apos;usage,
+      et les contraintes de fixation propres à votre logement, en complément
+      des certifications déjà présentées plus haut.
+    </p>
+
+    <div>
+      <ArticleSectionHeading number={1} id="usage" level="h3">
+        Quel usage, quel niveau de protection
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Des documents papier importants relèvent d&apos;abord d&apos;une
+        protection incendie (norme EN 1047-1, label S60P ou S120P selon la
+        durée de résistance recherchée), alors que des bijoux ou des espèces
+        relèvent avant tout d&apos;une résistance à l&apos;effraction (A2P ou
+        EN 1143-1). Un support numérique (disque dur, clé USB) demande une
+        protection encore plus stricte contre la chaleur (classe DIS de l&apos;EN
+        1047-1, température maintenue sous 70°C). Beaucoup de foyers ont
+        besoin d&apos;un compromis entre ces objectifs plutôt que du niveau
+        maximal sur un seul critère.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="armes" level="h3">
+        Cas particulier : la détention d&apos;armes à feu
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Pour les armes de catégorie B détenues à domicile, l&apos;
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034753901"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          article R314-3 du Code de la sécurité intérieure
+        </a>{" "}
+        impose un rangement dans un coffre ou une armoire forte adaptée,
+        matériel généralement certifié EN 14450 (niveau S1 ou S2) pour
+        répondre à cette exigence. Ce n&apos;est pas une simple recommandation :
+        le non-respect expose à une amende et à un retrait de
+        l&apos;autorisation préfectorale.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="fixation-support" level="h3">
+        La fixation selon votre type de support
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Une dalle béton pleine permet une fixation par cheville chimique ou
+        mécanique dimensionnée pour résister à un arrachement franc. Un
+        plancher bois ou une cloison légère demande une réflexion différente :
+        renforcement local du support, ou choix d&apos;un modèle suffisamment
+        lourd pour ne pas dépendre uniquement de la fixation. Je vous
+        conseille sur ce point avant l&apos;achat si vous ne l&apos;avez pas
+        encore choisi, pour éviter un modèle inadapté à votre logement.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="emplacement" level="h3">
+        Emplacement : au-delà de la seule discrétion
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un emplacement discret ne doit pas non plus devenir inaccessible en
+        cas d&apos;urgence, ni exposé à l&apos;humidité si le coffre contient de
+        l&apos;électronique ou des documents sensibles. J&apos;évalue ces
+        contraintes avec vous au moment du rendez-vous, en tenant compte de
+        la configuration réelle de votre logement.
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-coffre-fort-nice/",
@@ -123,6 +234,12 @@ export default function InstallationCoffreFortNicePage() {
         href: "/blog/certification-a2p-serrure-nice/",
         label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
       }}
+      guide={
+        <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
+          {guideContent}
+        </ServiceGuideSection>
+      }
+      guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
