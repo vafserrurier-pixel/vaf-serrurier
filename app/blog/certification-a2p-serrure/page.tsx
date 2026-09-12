@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -15,7 +16,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -106,9 +106,7 @@ export default function CertificationA2pPage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Certification A2P : ce que ce sigle change vraiment pour votre serrure
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />8 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={8} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -213,8 +211,12 @@ export default function CertificationA2pPage() {
                 certifié A2P facilite généralement les démarches après un sinistre.
                 Beaucoup de contrats d&apos;assurance habitation en tiennent compte, en
                 particulier pour les logements avec des biens de valeur ou dans certaines
-                zones. Je vous invite à vérifier les conditions exactes de votre propre
-                contrat plutôt que de vous fier à une règle générale, chaque assureur
+                zones. À Nice, où une part importante du parc est louée en meublé de
+                tourisme ou occupée une partie de l&apos;année seulement, ce niveau de
+                certification revient souvent dans les conditions demandées par les
+                assureurs pour les résidences secondaires. Je vous invite à vérifier les
+                conditions exactes de votre propre contrat plutôt que de vous fier à une
+                règle générale, chaque assureur
                 fixant ses propres critères.
               </p>
             </div>

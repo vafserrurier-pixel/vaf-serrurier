@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -14,7 +15,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -105,9 +105,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Clés de hall, digicode, organigramme : qui décide en copropriété ?
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -234,9 +232,12 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                 Un digicode n&apos;est utile que s&apos;il reste confidentiel. En pratique,
                 beaucoup de copropriétés ne le changent jamais, alors qu&apos;il finit par
                 circuler bien au-delà des occupants (livreurs, anciens locataires,
-                visiteurs). Le faire tourner une à deux fois par an, et à chaque
-                changement de prestataire ayant eu besoin du code, reste la mesure la
-                plus simple pour garder un accès réellement contrôlé.
+                visiteurs). Le phénomène est d&apos;autant plus marqué dans les grandes
+                copropriétés du centre-ville et de Jean-Médecin, où le nombre de
+                logements rend le code difficile à garder confidentiel dans la durée. Le
+                faire tourner une à deux fois par an, et à chaque changement de
+                prestataire ayant eu besoin du code, reste la mesure la plus simple pour
+                garder un accès réellement contrôlé.
               </p>
             </div>
 

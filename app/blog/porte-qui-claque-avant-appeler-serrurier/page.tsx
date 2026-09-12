@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -15,7 +16,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -105,9 +105,7 @@ export default function PorteQuiClaquePage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -152,7 +150,9 @@ export default function PorteQuiClaquePage() {
                   pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
                   été fermée à clé. Avant toute chose, essayez la poignée. Si elle
                   s&apos;actionne normalement, vous n&apos;avez pas besoin d&apos;un
-                  serrurier.
+                  serrurier. Sur les portes anciennes en bois du Vieux-Nice, le
+                  battant gonfle aussi avec l&apos;humidité et finit parfois par claquer
+                  plus fort que d&apos;habitude sans que rien ne soit réellement verrouillé.
                 </p>
               </div>
               <div className="mt-4">

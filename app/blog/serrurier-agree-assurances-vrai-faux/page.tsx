@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -15,7 +16,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -105,9 +105,7 @@ export default function AgreeAssurancesPage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             « Agréé toutes assurances » : ce que cette formule ne veut pas dire
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={6} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -134,9 +132,13 @@ export default function AgreeAssurancesPage() {
             <p className="text-slate leading-relaxed">
               C&apos;est une mention qu&apos;on retrouve sur beaucoup de camionnettes de
               serrurier et d&apos;annonces en ligne à Nice comme ailleurs. Elle sonne
-              officiel, presque comme un agrément d&apos;État. Dans les faits, ce
-              n&apos;est pas ce que ça signifie, et je préfère vous l&apos;expliquer
-              plutôt que d&apos;utiliser moi-même une formule qui prête à confusion.
+              officiel, presque comme un agrément d&apos;État. À Nice, la forte
+              fréquentation touristique autour du Vieux-Nice ou de la Promenade des
+              Anglais attire justement ce type d&apos;annonces, en particulier au moment
+              des recherches « serrurier urgence » tapées dans l&apos;affolement. Dans
+              les faits, ce n&apos;est pas ce que ça signifie, et je préfère vous
+              l&apos;expliquer plutôt que d&apos;utiliser moi-même une formule qui prête
+              à confusion.
             </p>
 
             <ArticleWarning title="« Agréé toutes assurances » ne garantit rien">

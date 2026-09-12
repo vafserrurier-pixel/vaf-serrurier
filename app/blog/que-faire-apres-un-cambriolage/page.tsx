@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -15,7 +16,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -112,9 +112,7 @@ export default function QueFaireApresUnCambriolagePage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Que faire après un cambriolage : les bons réflexes
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />8 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={8} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -312,8 +310,10 @@ export default function QueFaireApresUnCambriolagePage() {
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
                 Une effraction sur une porte palière ou une tentative sur la porte de hall
-                concerne aussi les autres occupants de l&apos;immeuble. Signalez l&apos;incident
-                au{" "}
+                concerne aussi les autres occupants de l&apos;immeuble — un point qui compte
+                particulièrement dans les grandes copropriétés du centre-ville, à Jean-Médecin
+                ou au Vieux-Nice, où plusieurs dizaines de logements partagent le même hall.
+                Signalez l&apos;incident au{" "}
                 <Link href="/agences-syndics-nice/" className="text-steel underline">
                   syndic
                 </Link>{" "}

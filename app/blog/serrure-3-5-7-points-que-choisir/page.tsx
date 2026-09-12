@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -14,7 +15,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -105,9 +105,7 @@ export default function SerrureMultipointsPage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Serrure 3, 5 ou 7 points : laquelle choisir ?
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -268,7 +266,11 @@ export default function SerrureMultipointsPage() {
                 la gâche et dans le cadre de la porte. Si le chambranle est fissuré, mal
                 fixé au mur, ou en bois trop tendre, même une serrure 7 points perd une
                 bonne partie de son efficacité, car les points d&apos;ancrage n&apos;ont
-                plus rien de solide à mordre. C&apos;est pour ça que je vérifie toujours
+                plus rien de solide à mordre. À Nice, la proximité de la mer aggrave
+                souvent ce vieillissement : l&apos;air chargé en sel accélère la corrosion
+                des fixations métalliques, en particulier sur les portes exposées côté
+                Promenade des Anglais ou dans les quartiers les plus proches du littoral.
+                C&apos;est pour ça que je vérifie toujours
                 l&apos;état du cadre avant de recommander un niveau de serrure : parfois,
                 renforcer la gâche ou consolider le chambranle apporte plus de sécurité
                 réelle qu&apos;ajouter des points de fermeture. Dans les cas les plus dégradés,

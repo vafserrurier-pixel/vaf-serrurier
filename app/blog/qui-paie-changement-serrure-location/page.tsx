@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -14,7 +15,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -106,9 +106,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Location : qui paie le changement de serrure ?
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />9 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={9} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -232,7 +230,10 @@ export default function QuiPaieChangementSerrureLocationPage() {
               <p className="text-slate leading-relaxed">
                 En location saisonnière (meublé de tourisme, plateformes type Airbnb), la
                 question ne se pose pas de la même façon : le logement change
-                d&apos;occupant chaque semaine, parfois plusieurs fois par mois. Le vrai
+                d&apos;occupant chaque semaine, parfois plusieurs fois par mois. C&apos;est
+                une situation très fréquente dans les quartiers touristiques de Nice
+                (Vieux-Nice, Carré d&apos;Or, bord de Promenade des Anglais), où une
+                grande partie du parc locatif tourne en courte durée. Le vrai
                 risque n&apos;est pas d&apos;abord l&apos;effraction, c&apos;est la clé
                 qui circule sans que vous le sachiez.
               </p>

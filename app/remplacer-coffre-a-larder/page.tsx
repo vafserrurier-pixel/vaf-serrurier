@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
+import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
@@ -14,7 +15,6 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
-import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -105,9 +105,7 @@ export default function RemplacerCoffreALarderPage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Comment remplacer un coffre à larder : guide simple et propre
           </h1>
-          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-            <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
-          </p>
+          <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -244,6 +242,8 @@ export default function RemplacerCoffreALarderPage() {
                   Bricard
                 </a>{" "}
                 utilisent des entraxes propriétaires qui ne correspondent à aucun standard générique.
+                C&apos;est très fréquent sur les portes anciennes du Vieux-Nice ou de
+                Cimiez, où le bâti d&apos;origine remonte parfois à plusieurs décennies.
                 Dans le doute, démontez d&apos;abord l&apos;ancien coffre et comparez-le
                 physiquement en magasin plutôt que de commander sur la seule base des
                 mesures.
