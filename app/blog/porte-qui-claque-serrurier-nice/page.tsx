@@ -21,7 +21,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/porte-qui-claque-avant-appeler-serrurier/";
+const HREF = "/blog/porte-qui-claque-serrurier-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -223,7 +223,7 @@ export default function PorteQuiClaquePage() {
                 surprise. Si la porte a réellement été forcée par quelqu&apos;un
                 d&apos;autre plutôt que simplement claquée, les démarches à suivre sont
                 différentes : voir mon article{" "}
-                <Link href="/blog/que-faire-apres-un-cambriolage/" className="text-steel underline">
+                <Link href="/blog/que-faire-apres-cambriolage-nice/" className="text-steel underline">
                   que faire après un cambriolage
                 </Link>
                 .

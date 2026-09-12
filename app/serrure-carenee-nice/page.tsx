@@ -134,7 +134,7 @@ export default function SerrureCareneeNicePage() {
         },
       ]}
       relatedArticle={{
-        href: "/blog/serrure-3-5-7-points-que-choisir/",
+        href: "/blog/serrure-multipoints-3-5-7-nice/",
         label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
       }}
       relatedServices={[

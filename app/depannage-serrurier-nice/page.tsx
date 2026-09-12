@@ -196,7 +196,7 @@ export default function DepannageSerrurierNicePage() {
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
-          href: "/blog/que-faire-apres-un-cambriolage/",
+          href: "/blog/que-faire-apres-cambriolage-nice/",
           label: "Que faire après un cambriolage : les bons réflexes",
         },
       }}

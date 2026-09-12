@@ -20,7 +20,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/serrure-3-5-7-points-que-choisir/";
+const HREF = "/blog/serrure-multipoints-3-5-7-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -173,7 +173,7 @@ export default function SerrureMultipointsPage() {
                     serrure carénée 5 points
                   </Link>{" "}
                   combine ces deux avantages. Encastrée, le mécanisme (un{" "}
-                  <Link href="/blog/remplacer-coffre-a-larder/" className="text-steel underline">
+                  <Link href="/blog/remplacer-coffre-a-larder-nice/" className="text-steel underline">
                     coffre à larder
                   </Link>
                   ) disparaît entièrement dans l&apos;épaisseur de la porte, sans rien de

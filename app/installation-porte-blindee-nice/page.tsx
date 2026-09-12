@@ -233,7 +233,7 @@ export default function InstallationPorteBlindeeNicePage() {
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
-          href: "/blog/certification-a2p-serrure/",
+          href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
         },
       }}

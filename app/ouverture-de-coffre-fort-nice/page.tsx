@@ -119,7 +119,7 @@ export default function OuvertureDeCoffreFortNicePage() {
         },
       ]}
       relatedArticle={{
-        href: "/blog/certification-a2p-serrure/",
+        href: "/blog/certification-a2p-serrure-nice/",
         label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
       }}
       relatedServices={[

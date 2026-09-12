@@ -199,7 +199,7 @@ export default function OuvertureDePorteNicePage() {
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
-          href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+          href: "/blog/porte-qui-claque-serrurier-nice/",
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
         },
       }}

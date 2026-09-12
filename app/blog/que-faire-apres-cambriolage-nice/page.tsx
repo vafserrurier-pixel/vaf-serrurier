@@ -21,7 +21,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/que-faire-apres-un-cambriolage/";
+const HREF = "/blog/que-faire-apres-cambriolage-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -153,7 +153,7 @@ export default function QueFaireApresUnCambriolagePage() {
               votre dossier d&apos;assurance. Si votre porte a simplement claqué sans
               trace d&apos;effraction, ce n&apos;est pas un cambriolage : voir plutôt mon
               article sur{" "}
-              <Link href="/blog/porte-qui-claque-avant-appeler-serrurier/" className="text-steel underline">
+              <Link href="/blog/porte-qui-claque-serrurier-nice/" className="text-steel underline">
                 les bons réflexes face à une porte qui claque
               </Link>
               .

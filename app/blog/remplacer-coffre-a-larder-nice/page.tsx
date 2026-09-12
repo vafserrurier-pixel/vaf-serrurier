@@ -20,7 +20,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/remplacer-coffre-a-larder/";
+const HREF = "/blog/remplacer-coffre-a-larder-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -171,7 +171,7 @@ export default function RemplacerCoffreALarderPage() {
                 malgré un cylindre changé, ou après une tentative d&apos;effraction.
                 C&apos;est aussi l&apos;occasion de vérifier si le nombre de points de
                 fermeture reste adapté ; voir mon article sur{" "}
-                <Link href="/blog/serrure-3-5-7-points-que-choisir/" className="text-steel underline">
+                <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
                   le choix entre 3, 5 ou 7 points
                 </Link>
                 .

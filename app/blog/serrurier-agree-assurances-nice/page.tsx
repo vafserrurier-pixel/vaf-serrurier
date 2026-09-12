@@ -21,7 +21,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/serrurier-agree-assurances-vrai-faux/";
+const HREF = "/blog/serrurier-agree-assurances-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -191,7 +191,7 @@ export default function AgreeAssurancesPage() {
                 SIRET, description précise de l&apos;intervention, matériel posé). Parfois,
                 c&apos;est aussi la preuve que l&apos;équipement installé répond à une norme
                 reconnue comme la{" "}
-                <Link href="/blog/certification-a2p-serrure/" className="text-steel underline">
+                <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
                   certification A2P
                 </Link>
                 , qui se vérifie elle aussi de façon concrète, contrairement à un sigle

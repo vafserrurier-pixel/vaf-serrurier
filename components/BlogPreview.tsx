@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/locale";
 
 const featuredPosts = [
   {
-    href: "/blog/que-faire-apres-un-cambriolage/",
+    href: "/blog/que-faire-apres-cambriolage-nice/",
     title: "Que faire après un cambriolage : les bons réflexes",
     excerpt:
       "Ne rien toucher, faire opposition, porter plainte sous 48h, prévenir l'assurance : l'ordre des démarches recommandé après une effraction.",
@@ -12,7 +12,7 @@ const featuredPosts = [
     tagClass: "bg-urgent/10 text-urgent",
   },
   {
-    href: "/blog/certification-a2p-serrure/",
+    href: "/blog/certification-a2p-serrure-nice/",
     title: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
     excerpt:
       "Une, deux ou trois étoiles : ce que signifie réellement cette certification, et comment vérifier qu'elle est authentique avant de payer.",
@@ -21,7 +21,7 @@ const featuredPosts = [
     tagClass: "bg-navy/10 text-navy",
   },
   {
-    href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+    href: "/blog/porte-qui-claque-serrurier-nice/",
     title: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
     excerpt:
       "Vérifications à faire avant d'appeler, ce qu'il ne faut surtout pas tenter seul, et comment reconnaître une annonce à prix d'appel trop bas.",

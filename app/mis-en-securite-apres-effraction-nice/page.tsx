@@ -132,7 +132,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         },
       ]}
       relatedArticle={{
-        href: "/blog/que-faire-apres-un-cambriolage/",
+        href: "/blog/que-faire-apres-cambriolage-nice/",
         label: "Que faire après un cambriolage : les bons réflexes",
       }}
       relatedServices={[

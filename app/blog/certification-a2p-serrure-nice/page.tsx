@@ -21,7 +21,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/certification-a2p-serrure/";
+const HREF = "/blog/certification-a2p-serrure-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -239,7 +239,7 @@ export default function CertificationA2pPage() {
                 conditions exactes de votre propre contrat plutôt que de vous fier à une
                 règle générale, chaque assureur fixant ses propres critères — voir aussi
                 mon article sur{" "}
-                <Link href="/blog/serrurier-agree-assurances-vrai-faux/" className="text-steel underline">
+                <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
                   ce qui se vérifie réellement chez un serrurier
                 </Link>
                 .

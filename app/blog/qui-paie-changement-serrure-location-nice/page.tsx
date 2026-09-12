@@ -20,7 +20,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/qui-paie-changement-serrure-location/";
+const HREF = "/blog/qui-paie-changement-serrure-location-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -353,7 +353,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
                 n&apos;ai pas vocation à arbitrer ce type de désaccord : mon rôle
                 s&apos;arrête à l&apos;intervention et à la facture qui la documente. Pour
                 les copropriétés, un cas particulier est traité dans mon article sur les{" "}
-                <Link href="/blog/cles-hall-digicode-organigramme-copropriete/" className="text-steel underline">
+                <Link href="/blog/digicode-cles-hall-copropriete-nice/" className="text-steel underline">
                   clés de hall et digicodes en copropriété
                 </Link>
                 .

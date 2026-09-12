@@ -139,7 +139,7 @@ export default function ZonesInterventionNicePage() {
     <section className="mx-auto max-w-4xl px-4">
       <p className="text-slate text-sm">
         Pour aller plus loin :{" "}
-        <Link href="/blog/porte-qui-claque-avant-appeler-serrurier/" className="text-steel underline">
+        <Link href="/blog/porte-qui-claque-serrurier-nice/" className="text-steel underline">
           porte qui claque, les bons réflexes avant d&apos;appeler
         </Link>
         .

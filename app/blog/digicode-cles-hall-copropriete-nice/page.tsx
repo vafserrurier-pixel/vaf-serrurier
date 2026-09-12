@@ -20,7 +20,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/cles-hall-digicode-organigramme-copropriete/";
+const HREF = "/blog/digicode-cles-hall-copropriete-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -230,7 +230,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                 ou à son assurance de rembourser la copropriété, pas aux autres
                 copropriétaires de l&apos;absorber dans les charges — la même logique de
                 responsabilité que pour une{" "}
-                <Link href="/blog/qui-paie-changement-serrure-location/" className="text-steel underline">
+                <Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">
                   serrure privative en location
                 </Link>
                 .

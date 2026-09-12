@@ -19,7 +19,7 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    href: "/blog/que-faire-apres-un-cambriolage/",
+    href: "/blog/que-faire-apres-cambriolage-nice/",
     title: "Que faire après un cambriolage : les bons réflexes",
     excerpt:
       "Ne rien toucher, faire opposition, porter plainte sous 48h, prévenir l'assurance : l'ordre des démarches recommandé après une effraction.",
@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/pool/benoit-serrurier-avant-intervention-nice.webp",
   },
   {
-    href: "/blog/serrure-3-5-7-points-que-choisir/",
+    href: "/blog/serrure-multipoints-3-5-7-nice/",
     title: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
     excerpt:
       "Plus de points ne veut pas dire plus de sécurité à tous les coups. Comment choisir le bon niveau selon votre porte, sans suréquipement inutile.",
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/serrurier-nice-porte-blindee-multipoints.webp",
   },
   {
-    href: "/blog/remplacer-coffre-a-larder/",
+    href: "/blog/remplacer-coffre-a-larder-nice/",
     title: "Comment remplacer un coffre à larder : guide simple et propre",
     excerpt:
       "Remplacer un coffre à larder demande de la précision : bonnes mesures, mécanisme adapté, fermeture qui joue bien. Voici comment je m'y prends.",
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/pool/reparation-mecanisme-serrure-nice.webp",
   },
   {
-    href: "/blog/certification-a2p-serrure/",
+    href: "/blog/certification-a2p-serrure-nice/",
     title: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
     excerpt:
       "Une, deux ou trois étoiles : ce que signifie réellement cette certification, et comment vérifier qu'elle est authentique avant de payer.",
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/pool/cylindre-fichet-demonte-serrurier-nice.webp",
   },
   {
-    href: "/blog/serrurier-agree-assurances-vrai-faux/",
+    href: "/blog/serrurier-agree-assurances-nice/",
     title: "« Agréé toutes assurances » : ce que cette formule ne veut pas dire",
     excerpt:
       "Ce sigle qu'on voit sur beaucoup de camionnettes n'a pas d'autorité derrière lui. Voici ce qui compte vraiment pour votre dossier d'assurance.",
@@ -84,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/pool/benoit-artisan-serrurier-nice.webp",
   },
   {
-    href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+    href: "/blog/porte-qui-claque-serrurier-nice/",
     title: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
     excerpt:
       "Vérifications à faire avant d'appeler, ce qu'il ne faut surtout pas tenter seul, et comment reconnaître une annonce à prix d'appel trop bas.",
@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/serrurier-nice-ouverture-de-porte.webp",
   },
   {
-    href: "/blog/qui-paie-changement-serrure-location/",
+    href: "/blog/qui-paie-changement-serrure-location-nice/",
     title: "Location : qui paie le changement de serrure ?",
     excerpt:
       "Clés perdues, cambriolage, changement de locataire : la règle générale pour savoir qui du propriétaire ou du locataire prend en charge la facture.",
@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/serrurier-nice-changement-de-serrure.webp",
   },
   {
-    href: "/blog/cles-hall-digicode-organigramme-copropriete/",
+    href: "/blog/digicode-cles-hall-copropriete-nice/",
     title: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
     excerpt:
       "Serrure de hall, digicode, organigramme de clés : qui décide, qui paie, et ce qui détermine le prix d'une intervention en copropriété.",

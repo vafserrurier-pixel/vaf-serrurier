@@ -49,11 +49,54 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Uniformisation de la structure des articles de blog (2026-09-12) :
+      // remplacer-coffre-a-larder etait le seul a la racine, redirige
+      // directement vers son URL finale pour eviter une double redirection.
       {
-        // Uniformisation de la structure des articles de blog : tous sous
-        // /blog/, celui-ci etait le seul a la racine (2026-09-12).
         source: "/remplacer-coffre-a-larder/",
-        destination: "/blog/remplacer-coffre-a-larder/",
+        destination: "/blog/remplacer-coffre-a-larder-nice/",
+        permanent: true,
+      },
+      // Slugs des 8 articles alignes sur des mots-cles service/local
+      // (2026-09-12), pour la meme raison que ci-dessus.
+      {
+        source: "/blog/que-faire-apres-un-cambriolage/",
+        destination: "/blog/que-faire-apres-cambriolage-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/serrure-3-5-7-points-que-choisir/",
+        destination: "/blog/serrure-multipoints-3-5-7-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/remplacer-coffre-a-larder/",
+        destination: "/blog/remplacer-coffre-a-larder-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/certification-a2p-serrure/",
+        destination: "/blog/certification-a2p-serrure-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/serrurier-agree-assurances-vrai-faux/",
+        destination: "/blog/serrurier-agree-assurances-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+        destination: "/blog/porte-qui-claque-serrurier-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/qui-paie-changement-serrure-location/",
+        destination: "/blog/qui-paie-changement-serrure-location-nice/",
+        permanent: true,
+      },
+      {
+        source: "/blog/cles-hall-digicode-organigramme-copropriete/",
+        destination: "/blog/digicode-cles-hall-copropriete-nice/",
         permanent: true,
       },
       {

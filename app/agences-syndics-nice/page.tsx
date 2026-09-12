@@ -136,7 +136,7 @@ export default function AgencesSyndicsNicePage() {
               Pour la gestion des accès en copropriété (clés de hall, digicode,
               organigramme), j&apos;ai détaillé qui décide et qui paie dans{" "}
               <Link
-                href="/blog/cles-hall-digicode-organigramme-copropriete/"
+                href="/blog/digicode-cles-hall-copropriete-nice/"
                 className="text-steel underline"
               >
                 ce guide
@@ -147,7 +147,7 @@ export default function AgencesSyndicsNicePage() {
         </>
       }
       relatedArticle={{
-        href: "/blog/cles-hall-digicode-organigramme-copropriete/",
+        href: "/blog/digicode-cles-hall-copropriete-nice/",
         label: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
       }}
       relatedServices={[
