@@ -31,7 +31,7 @@ export default function RelatedServicesGrid({
                 <card.Icon className="w-5 h-5" />
               </span>
             )}
-            <p className="font-heading font-semibold text-navy mb-1.5">{item.label}</p>
+            <h3 className="font-heading font-semibold text-navy mb-1.5">{item.label}</h3>
             {card && <p className="text-sm text-slate leading-relaxed">{card.text(place)}</p>}
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-steel mt-3 group-hover:gap-2 transition-all">
               {moreLabel[locale]}
