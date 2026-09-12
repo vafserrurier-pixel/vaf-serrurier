@@ -1,9 +1,54 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import BrandsSection from "@/components/BrandsSection";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+
+const guideToc = [
+  { id: "diagnostic", label: "Diagnostiquer sa serrure avant d'appeler" },
+  { id: "niveau", label: "Cylindre, coffre complet ou porte entière : le bon niveau" },
+  { id: "deroule", label: "Le déroulé technique d'une intervention" },
+  { id: "assurance", label: "Assurance : qui paie, et sous quel délai" },
+  { id: "evolution", label: "Faire évoluer sa sécurité sans se suréquiper" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Puis-je réutiliser mes clés actuelles avec un nouveau cylindre ?",
+    answer:
+      "Non : un nouveau cylindre est toujours livré avec son propre jeu de clés neuves. Les anciennes clés ne fonctionnent plus une fois le cylindre remplacé.",
+  },
+  {
+    question: "Combien de clés sont fournies avec un nouveau cylindre ?",
+    answer:
+      "Généralement trois à cinq clés selon le modèle et la marque. Je peux vous confirmer le nombre exact avant la pose.",
+  },
+  {
+    question: "Un cylindre certifié A2P coûte-t-il plus cher qu'un cylindre standard ?",
+    answer:
+      "Oui généralement, le supplément dépendant de la marque et du niveau choisi [DONNÉE À CONFIRMER pour un chiffre précis] : je vous le confirme au téléphone selon le modèle exact retenu.",
+  },
+  {
+    question: "Que faire si ma porte est légèrement voilée ou mal alignée ?",
+    answer:
+      "Un léger désalignement se corrige souvent en réglant la gâche ou les paumelles, sans changer la serrure elle-même. Si le battant est vraiment voilé, une serrure neuve subira les mêmes contraintes que l'ancienne et s'usera aussi vite.",
+  },
+  {
+    question: "Ai-je besoin d'une autorisation de la copropriété pour changer la serrure de ma porte palière ?",
+    answer:
+      "Non : votre porte palière et sa serrure sont des parties privatives, vous pouvez la changer librement. Seule la serrure du hall d'immeuble, partie commune, nécessite une décision collective.",
+  },
+  {
+    question: "Dois-je être présent pendant toute l'intervention ?",
+    answer:
+      "Votre présence est nécessaire au moins au début et à la fin : je dois vérifier votre identité et votre droit d'occupation avant d'intervenir sur une porte verrouillée, et vous remettre les clés neuves en main propre.",
+  },
+];
 
 export const metadata: Metadata = buildMetadata({
   path: "/changement-serrure-nice/",
@@ -155,6 +200,118 @@ const faqEn = [
   },
 ];
 
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide complète les informations déjà présentes plus haut sur cette page,
+      avec les questions de fond que se posent le plus souvent mes clients avant
+      un changement de serrure à Nice.
+    </p>
+
+    <div>
+      <ArticleSectionHeading number={1} id="diagnostic">
+        Diagnostiquer sa serrure avant d&apos;appeler
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Avant même de prendre rendez-vous, quelques observations simples
+        m&apos;aident à préparer la bonne intervention. Une clé qui accroche
+        uniquement à l&apos;entrée ou à la sortie du cylindre, sans jamais
+        bloquer complètement, vient le plus souvent du seul cylindre. Une
+        poignée qui devient molle, un pêne qui ne sort plus franchement, ou un
+        mécanisme qui résiste même avec une clé neuve pointent plutôt vers le{" "}
+        <Link href="/blog/remplacer-coffre-a-larder-nice/" className="text-steel underline">
+          coffre de la serrure
+        </Link>{" "}
+        lui-même. Cette distinction change directement le prix et la durée de
+        l&apos;intervention.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="niveau">
+        Cylindre, coffre complet ou porte entière : le bon niveau
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Le remplacement d&apos;un simple cylindre reste la solution la plus
+        courante et la moins coûteuse : c&apos;est la pièce qui reçoit la clé.
+        Un coffre complet devient nécessaire quand le mécanisme lui-même est
+        endommagé, usé, ou trop ancien pour trouver un cylindre compatible. Un
+        niveau plus élevé encore, la{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          porte blindée complète
+        </Link>
+        , se justifie seulement quand le bâti autour de la porte (cadre,
+        chambranle) est lui-même fragilisé : dans ce cas, une serrure neuve
+        seule ne suffit pas à retrouver une sécurité fiable, quel que soit son
+        niveau de certification.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="deroule">
+        Le déroulé technique d&apos;une intervention
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Au-delà des étapes déjà décrites plus haut (appel, arrivée, choix,
+        règlement), voici ce qui se passe concrètement une fois sur place :
+      </p>
+      <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
+        <li>Dépose de l&apos;ancien cylindre ou du coffre complet.</li>
+        <li>Vérification des mesures exactes (axe, entraxe) avant la pose du nouveau mécanisme.</li>
+        <li>Pose du nouveau cylindre ou coffre, poignées remontées.</li>
+        <li>Réglage fin de la gâche et plusieurs tests de fermeture, porte ouverte puis fermée.</li>
+      </ol>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="assurance">
+        Assurance : qui paie, et sous quel délai
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Si le changement fait suite à une effraction, l&apos;
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          article L.113-2 du Code des assurances
+        </a>{" "}
+        impose un délai de 2 jours ouvrés pour déclarer le sinistre. En dehors
+        de ce cas, la question de savoir qui paie (propriétaire, locataire,
+        assurance) dépend surtout de la cause du changement : le détail complet
+        est expliqué dans mon article sur{" "}
+        <Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">
+          qui paie le changement de serrure en location
+        </Link>
+        .
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={5} id="evolution">
+        Faire évoluer sa sécurité sans se suréquiper
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un changement de serrure est aussi l&apos;occasion de revoir le niveau
+        de sécurité, par étapes plutôt que d&apos;un coup : passer à un cylindre
+        certifié{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+          A2P
+        </Link>
+        , puis à une{" "}
+        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
+          serrure multipoints
+        </Link>{" "}
+        si la porte s&apos;y prête, et seulement en dernier lieu vers une porte
+        blindée complète si le bâti le justifie. Je vous oriente toujours vers
+        le niveau cohérent avec l&apos;état réel de votre porte, jamais vers le
+        plus cher par défaut.
+      </p>
+    </div>
+  </>
+);
+
 export default function ChangementSerrureNicePage() {
   return (
     <LocalizedServicePage
@@ -220,6 +377,12 @@ export default function ChangementSerrureNicePage() {
           href: "/blog/serrure-multipoints-3-5-7-nice/",
           label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
         },
+        guide: (
+          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
+            {guideContent}
+          </ServiceGuideSection>
+        ),
+        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Lock change in Nice",

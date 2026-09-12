@@ -74,6 +74,8 @@ export default function ServicePageTemplate({
   locale = "fr",
   processSteps,
   relatedArticle,
+  guide,
+  guideFaqForSchema,
 }: {
   h1: string;
   lead: string;
@@ -90,6 +92,15 @@ export default function ServicePageTemplate({
   processSteps?: ProcessStep[];
   /** Lien retour vers l'article de blog le plus pertinent pour ce service (maillage interne bidirectionnel). */
   relatedArticle?: { href: string; label: string };
+  /** Section "guide complet" optionnelle (voir ServiceGuideSection), affichee juste avant le bloc d'appel final. */
+  guide?: ReactNode;
+  /**
+   * FAQ de la section guide, pour le schema uniquement (la FAQ visuelle est
+   * rendue par ServiceGuideSection lui-meme, via `guide`). Combinee avec
+   * `faq` dans un seul faqSchema() pour eviter deux blocs FAQPage
+   * concurrents sur la meme page.
+   */
+  guideFaqForSchema?: FaqItem[];
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
@@ -104,7 +115,7 @@ export default function ServicePageTemplate({
           dateModified: contentDates[path],
         })}
       />
-      <JsonLd data={faqSchema(faq)} />
+      <JsonLd data={faqSchema(guideFaqForSchema ? [...faq, ...guideFaqForSchema] : faq)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: t.home, url: business.domain },
@@ -287,6 +298,8 @@ export default function ServicePageTemplate({
           </div>
         </section>
       )}
+
+      {guide}
 
       <section className="mx-auto max-w-4xl px-4 py-12 pb-14">
         <CtaBlock locale={locale} />
