@@ -13,6 +13,8 @@ export type BlogPost = {
   dateModified: string;
   /** Estime a la lecture du texte final (environ 200 mots/minute). */
   readingMinutes: number;
+  /** Photo reelle utilisee en tete de l'article (voir public/images). */
+  image: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -26,7 +28,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-urgent/10 text-urgent",
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
-    readingMinutes: 7,
+    readingMinutes: 8,
+    image: "/images/pool/benoit-serrurier-avant-intervention-nice.webp",
   },
   {
     href: "/blog/serrure-3-5-7-points-que-choisir/",
@@ -38,7 +41,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-steel/10 text-steel",
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
-    readingMinutes: 6,
+    readingMinutes: 7,
+    image: "/images/serrurier-nice-porte-blindee-multipoints.webp",
   },
   {
     href: "/remplacer-coffre-a-larder/",
@@ -50,7 +54,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-steel/10 text-steel",
     datePublished: "2026-08-08",
     dateModified: "2026-09-12",
-    readingMinutes: 6,
+    readingMinutes: 7,
+    image: "/images/pool/reparation-mecanisme-serrure-nice.webp",
   },
   {
     href: "/blog/certification-a2p-serrure/",
@@ -62,7 +67,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-navy/10 text-navy",
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
-    readingMinutes: 7,
+    readingMinutes: 8,
+    image: "/images/pool/cylindre-fichet-demonte-serrurier-nice.webp",
   },
   {
     href: "/blog/serrurier-agree-assurances-vrai-faux/",
@@ -75,6 +81,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
     readingMinutes: 6,
+    image: "/images/pool/benoit-artisan-serrurier-nice.webp",
   },
   {
     href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
@@ -86,7 +93,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-steel/10 text-steel",
     datePublished: "2026-08-09",
     dateModified: "2026-09-12",
-    readingMinutes: 6,
+    readingMinutes: 7,
+    image: "/images/serrurier-nice-ouverture-de-porte.webp",
   },
   {
     href: "/blog/qui-paie-changement-serrure-location/",
@@ -98,7 +106,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-navy/10 text-navy",
     datePublished: "2026-09-08",
     dateModified: "2026-09-12",
-    readingMinutes: 6,
+    readingMinutes: 9,
+    image: "/images/serrurier-nice-changement-de-serrure.webp",
   },
   {
     href: "/blog/cles-hall-digicode-organigramme-copropriete/",
@@ -110,7 +119,8 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-navy/10 text-navy",
     datePublished: "2026-09-03",
     dateModified: "2026-09-12",
-    readingMinutes: 6,
+    readingMinutes: 7,
+    image: "/images/pool/porte-immeuble-interphone-securisee-nice.webp",
   },
 ];
 

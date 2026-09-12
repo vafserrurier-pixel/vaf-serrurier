@@ -1,4 +1,6 @@
-export default function ArticleSummary({ points }: { points: string[] }) {
+import type { ReactNode } from "react";
+
+export default function ArticleSummary({ points }: { points: ReactNode[] }) {
   return (
     <div className="bg-steel/5 border-l-4 border-steel rounded-r-lg p-5">
       <p className="font-heading font-bold text-navy mb-2">L&apos;essentiel en 30 secondes</p>

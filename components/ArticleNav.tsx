@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blogPosts";
 
@@ -43,20 +44,43 @@ export default function ArticleNav({ currentHref }: { currentHref: string }) {
       )}
 
       <div>
-        <p className="font-heading font-bold text-navy mb-3">À lire aussi</p>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <p className="font-heading font-bold text-xl text-navy mb-4 text-center">Continuer la lecture</p>
+        <div className="grid gap-4 sm:grid-cols-3">
           {related.map((post) => (
             <Link
               key={post.href}
               href={post.href}
-              className={`block bg-white border border-navy/10 border-t-4 ${post.accent} rounded-lg p-4 hover:shadow-sm transition-shadow`}
+              className="block bg-white border border-navy/10 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
-              <span
-                className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-2 ${post.tagClass}`}
-              >
-                {post.category}
-              </span>
-              <p className="font-heading font-semibold text-navy text-sm">{post.title}</p>
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={post.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover"
+                />
+                <span
+                  className={`absolute top-2 left-2 inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${post.tagClass} bg-white/95`}
+                >
+                  {post.category}
+                </span>
+              </div>
+              <div className="p-4">
+                <p className="font-heading font-semibold text-navy text-sm">{post.title}</p>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-steel mt-2">
+                  Lire l&apos;article
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M5 12h14M13 6l6 6-6 6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </div>
             </Link>
           ))}
         </div>

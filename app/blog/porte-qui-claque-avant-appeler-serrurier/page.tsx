@@ -5,10 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
-import ArticleToc from "@/components/ArticleToc";
+import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleOpinion from "@/components/ArticleOpinion";
+import ArticleWarning from "@/components/ArticleWarning";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -72,7 +73,7 @@ const faqItems = [
 
 export default function PorteQuiClaquePage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10">
+    <article>
       <JsonLd
         data={blogPostingSchema({
           headline: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
@@ -92,217 +93,227 @@ export default function PorteQuiClaquePage() {
       />
       <JsonLd data={faqSchema(faqItems)} />
 
-      <Breadcrumbs
-        items={[
-          { name: "Accueil", href: "/" },
-          { name: "Blog", href: "/blog/" },
-          { name: "Porte qui claque", href: HREF },
-        ]}
-      />
-      <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-        Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
-      </h1>
-      <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
-      </p>
-
-      <div className="mt-6">
-        <TrustBadges />
-      </div>
-
-      <div className="mt-8">
-        <ArticleSummary
-          points={[
-            "Une porte qui claque n'est pas forcément verrouillée : essayez d'abord la poignée.",
-            "Ne tentez jamais de la forcer vous-même, ça abîme presque toujours l'huisserie.",
-            "Méfiez-vous des prix d'appel très bas affichés en ligne : le tarif réel grimpe souvent sur place.",
-            "La méthode radio permet d'ouvrir sans dommage dans la quasi-totalité des cas.",
-          ]}
-        />
-      </div>
-
-      <div className="mt-8">
-        <ArticleToc items={toc} />
-      </div>
-
-      <div className="prose-content mt-8 flex flex-col gap-6 text-slate leading-relaxed">
-        <p>
-          C&apos;est l&apos;un des appels les plus fréquents que je reçois : une
-          porte qui se referme d&apos;un coup de vent ou d&apos;un geste rapide, et
-          la question qui suit immédiatement : faut-il forcer, appeler tout de suite,
-          ou d&apos;abord vérifier quelque chose ? Voici l&apos;ordre que je conseille.
-        </p>
-
-        <div>
-          <ArticleSectionHeading number={1} id="verrouillee">
-            Porte claquée ou porte verrouillée : la distinction clé
-          </ArticleSectionHeading>
-          <div className="mt-2">
-            <h3 className="font-heading font-semibold text-navy mb-1">
-              Porte claquée : souvent rien de bloqué
-            </h3>
-            <p>
-              Une porte qui claque ne s&apos;est pas forcément verrouillée. Sur
-              beaucoup de modèles, le pêne demi-tour se bloque au claquement, mais le
-              pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
-              été fermée à clé. Avant toute chose, essayez la poignée. Si elle
-              s&apos;actionne normalement, vous n&apos;avez pas besoin d&apos;un
-              serrurier.
-            </p>
+      <section className="bg-white border-b border-navy/10">
+        <div className="mx-auto max-w-3xl px-4 py-10">
+          <Breadcrumbs
+            items={[
+              { name: "Accueil", href: "/" },
+              { name: "Blog", href: "/blog/" },
+              { name: "Porte qui claque", href: HREF },
+            ]}
+          />
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+            Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
+          </h1>
+          <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
+            <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
+          </p>
+          <div className="mt-6">
+            <TrustBadges />
           </div>
-          <div className="mt-4">
-            <h3 className="font-heading font-semibold text-navy mb-1">
-              Porte verrouillée à clé : un diagnostic différent
-            </h3>
-            <p>
-              Si le pêne dormant est engagé, la méthode d&apos;ouverture change
-              complètement selon le type de serrure installée (cylindre standard,
-              multipoints, modèle ancien). C&apos;est la première chose que je
-              vérifie en arrivant, avant même de sortir un outil.
-            </p>
+          <div className="mt-8">
+            <ArticleSummary
+              points={[
+                <>
+                  Une porte qui claque <strong>n&apos;est pas forcément verrouillée</strong> : essayez d&apos;abord la poignée.
+                </>,
+                "Ne tentez jamais de la forcer vous-même, ça abîme presque toujours l'huisserie.",
+                <>
+                  Méfiez-vous des <strong>prix d&apos;appel très bas</strong> affichés en ligne : le tarif réel grimpe souvent sur place.
+                </>,
+                "La méthode radio permet d'ouvrir sans dommage dans la quasi-totalité des cas.",
+              ]}
+            />
           </div>
         </div>
+      </section>
 
-        <div>
-          <ArticleSectionHeading number={2} id="double-cle">
-            Cherchez un double de clé ou un accès alternatif
-          </ArticleSectionHeading>
-          <p>
-            Avant d&apos;appeler, demandez-vous si un proche, un voisin ou un membre
-            de la famille ne détient pas un double. Vérifiez aussi s&apos;il existe
-            un autre accès au logement (porte de service, fenêtre accessible sans
-            risque) plutôt que de vous précipiter sur un service payant en urgence.
-          </p>
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-4">
+          <ArticleLayout toc={toc}>
+            <p className="text-slate leading-relaxed">
+              C&apos;est l&apos;un des appels les plus fréquents que je reçois : une
+              porte qui se referme d&apos;un coup de vent ou d&apos;un geste rapide, et
+              la question qui suit immédiatement : faut-il forcer, appeler tout de suite,
+              ou d&apos;abord vérifier quelque chose ? Voici l&apos;ordre que je conseille.
+            </p>
+
+            <div>
+              <ArticleSectionHeading number={1} id="verrouillee">
+                Porte claquée ou porte verrouillée : la distinction clé
+              </ArticleSectionHeading>
+              <div className="mt-2">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Porte claquée : souvent rien de bloqué
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Une porte qui claque ne s&apos;est pas forcément verrouillée. Sur
+                  beaucoup de modèles, le pêne demi-tour se bloque au claquement, mais le
+                  pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
+                  été fermée à clé. Avant toute chose, essayez la poignée. Si elle
+                  s&apos;actionne normalement, vous n&apos;avez pas besoin d&apos;un
+                  serrurier.
+                </p>
+              </div>
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Porte verrouillée à clé : un diagnostic différent
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Si le pêne dormant est engagé, la méthode d&apos;ouverture change
+                  complètement selon le type de serrure installée (cylindre standard,
+                  multipoints, modèle ancien). C&apos;est la première chose que je
+                  vérifie en arrivant, avant même de sortir un outil.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={2} id="double-cle">
+                Cherchez un double de clé ou un accès alternatif
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Avant d&apos;appeler, demandez-vous si un proche, un voisin ou un membre
+                de la famille ne détient pas un double. Vérifiez aussi s&apos;il existe
+                un autre accès au logement (porte de service, fenêtre accessible sans
+                risque) plutôt que de vous précipiter sur un service payant en urgence.
+              </p>
+            </div>
+
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+              <Image
+                src="/images/serrurier-nice-ouverture-de-porte.webp"
+                alt="Ouverture de porte par un serrurier à Nice"
+                fill
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="object-cover"
+              />
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={3} id="ne-forcez-pas">
+                Ne tentez pas de forcer la porte vous-même
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Glisser une carte, un tournevis ou tout autre objet dans l&apos;huisserie
+                abîme presque toujours le dormant ou le battant, même sans succès. Résultat :
+                l&apos;intervention professionnelle qui suit coûte plus cher, parce
+                qu&apos;il faut aussi réparer les dégâts causés par la tentative. Un
+                diagnostic correct avant toute manipulation évite ce genre de mauvaise
+                surprise.
+              </p>
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={4} id="prix-appel">
+                Méfiez-vous des annonces avec un prix affiché très bas
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                En cherchant « serrurier urgence » dans l&apos;affolement, on tombe
+                souvent sur des prix d&apos;appel très attractifs (30 ou 40 € par
+                exemple), annoncés pour un simple déplacement. Le tarif réel, une fois
+                sur place, grimpe presque toujours bien au-delà une fois sur le pas de la
+                porte.
+              </p>
+              <div className="mt-4">
+                <ArticleWarning title="Un prix d'appel n'est pas le prix final">
+                  Une intervention sérieuse pour une porte claquée descend rarement sous
+                  les 100 € tout compris. Chez moi, ce tarif est annoncé à l&apos;avance
+                  et fixe, sans surprise une fois sur place. Voir mes{" "}
+                  <Link href="/tarifs-serrurier-nice/" className="underline">
+                    tarifs détaillés
+                  </Link>
+                  .
+                </ArticleWarning>
+              </div>
+              <div className="mt-4">
+                <ArticleTable
+                  caption="Ce qui est annoncé en ligne face au tarif réel constaté sur le terrain."
+                  headers={["Annonce type", "Prix affiché", "Réalité fréquente"]}
+                  rows={[
+                    ["« Déplacement à partir de 30-40 € »", "30-40 €", "Tarif réel final souvent bien plus élevé sur place"],
+                    ["Prix annoncé avant intervention", "Fixe, communiqué au téléphone", "Aucune surprise une fois sur place"],
+                  ]}
+                />
+              </div>
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={5} id="methode-radio">
+                Comment un serrurier ouvre une porte claquée sans l&apos;abîmer
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Sur la plupart des portes, j&apos;utilise la méthode radio, aussi appelée
+                technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée
+                entre le cadre et le pêne, qui libère le mécanisme sans dommage dans la
+                quasi-totalité des cas. C&apos;est plus délicat qu&apos;il n&apos;y paraît :
+                mal maîtrisée, cette manipulation abîme justement ce qu&apos;elle est
+                censée préserver, d&apos;où l&apos;intérêt de laisser un professionnel s&apos;en
+                charger dès que la porte résiste un peu.
+              </p>
+            </div>
+
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+              <Image
+                src="/images/pool/poignee-porte-serrurier-nice.webp"
+                alt="Poignée de porte examinée par un serrurier à Nice"
+                fill
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="object-cover"
+              />
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={6} id="arrivee">
+                Ce que je fais concrètement à mon arrivée
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Je commence toujours par un diagnostic rapide de la serrure et du type de
+                verrouillage avant de choisir la méthode d&apos;ouverture, et
+                j&apos;annonce le prix avant d&apos;intervenir. L&apos;objectif est
+                d&apos;ouvrir sans endommager la porte quand c&apos;est possible, plutôt
+                que de forcer par défaut. J&apos;interviens dans tous les{" "}
+                <Link href="/zones-intervention-nice/" className="text-steel underline">
+                  quartiers de Nice
+                </Link>
+                , généralement en moins de 30 minutes.
+              </p>
+            </div>
+
+            <ArticleOpinion quote="La première question que je pose au téléphone, c'est toujours : la poignée s'actionne-t-elle ? Neuf appels sur dix se règlent en trente secondes rien qu'avec cette question, avant même de me déplacer." />
+
+            <ArticleKeyTakeaways
+              points={[
+                "Essayez la poignée avant d'appeler : une porte claquée n'est pas toujours verrouillée.",
+                "Ne forcez jamais vous-même, ça abîme l'huisserie et fait grimper la facture finale.",
+                "Un prix d'appel très bas en ligne cache souvent un tarif réel bien plus élevé sur place.",
+                "La méthode radio ouvre sans dommage dans la quasi-totalité des cas, entre des mains expérimentées.",
+              ]}
+            />
+
+            <div>
+              <ArticleSectionHeading number={7} id="faq">
+                Foire aux questions
+              </ArticleSectionHeading>
+              <FaqAccordion items={faqItems} />
+            </div>
+
+            <AuthorBox />
+          </ArticleLayout>
         </div>
+      </section>
 
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
-          <Image
-            src="/images/serrurier-nice-ouverture-de-porte.webp"
-            alt="Ouverture de porte par un serrurier à Nice"
-            fill
-            sizes="(min-width: 768px) 768px, 100vw"
-            className="object-cover"
-          />
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-3xl px-4 py-10">
+          <CtaBlock title="Porte claquée maintenant ?" />
         </div>
+      </section>
 
-        <div>
-          <ArticleSectionHeading number={3} id="ne-forcez-pas">
-            Ne tentez pas de forcer la porte vous-même
-          </ArticleSectionHeading>
-          <p>
-            Glisser une carte, un tournevis ou tout autre objet dans l&apos;huisserie
-            abîme presque toujours le dormant ou le battant, même sans succès. Résultat :
-            l&apos;intervention professionnelle qui suit coûte plus cher, parce
-            qu&apos;il faut aussi réparer les dégâts causés par la tentative. Un
-            diagnostic correct avant toute manipulation évite ce genre de mauvaise
-            surprise.
-          </p>
+      <section className="py-12">
+        <div className="mx-auto max-w-4xl px-4">
+          <ArticleNav currentHref={HREF} />
         </div>
-
-        <div>
-          <ArticleSectionHeading number={4} id="prix-appel">
-            Méfiez-vous des annonces avec un prix affiché très bas
-          </ArticleSectionHeading>
-          <p>
-            En cherchant « serrurier urgence » dans l&apos;affolement, on tombe
-            souvent sur des prix d&apos;appel très attractifs (30 ou 40 € par
-            exemple), annoncés pour un simple déplacement. Le tarif réel, une fois
-            sur place, grimpe presque toujours bien au-delà une fois sur le pas de la
-            porte. Une intervention sérieuse pour une porte claquée descend rarement
-            sous les 100 € tout compris. Chez moi, ce tarif est annoncé à
-            l&apos;avance et fixe, sans surprise une fois sur place. Voir mes{" "}
-            <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
-              tarifs détaillés
-            </Link>
-            .
-          </p>
-        </div>
-
-        <ArticleTable
-          caption="Ce qui est annoncé en ligne face au tarif réel constaté sur le terrain."
-          headers={["Annonce type", "Prix affiché", "Réalité fréquente"]}
-          rows={[
-            ["« Déplacement à partir de 30-40 € »", "30-40 €", "Tarif réel final souvent bien plus élevé sur place"],
-            ["Prix annoncé avant intervention", "Fixe, communiqué au téléphone", "Aucune surprise une fois sur place"],
-          ]}
-        />
-
-        <div>
-          <ArticleSectionHeading number={5} id="methode-radio">
-            Comment un serrurier ouvre une porte claquée sans l&apos;abîmer
-          </ArticleSectionHeading>
-          <p>
-            Sur la plupart des portes, j&apos;utilise la méthode radio, aussi appelée
-            technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée
-            entre le cadre et le pêne, qui libère le mécanisme sans dommage dans la
-            quasi-totalité des cas. C&apos;est plus délicat qu&apos;il n&apos;y paraît :
-            mal maîtrisée, cette manipulation abîme justement ce qu&apos;elle est
-            censée préserver, d&apos;où l&apos;intérêt de laisser un professionnel s&apos;en
-            charger dès que la porte résiste un peu.
-          </p>
-        </div>
-
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
-          <Image
-            src="/images/pool/poignee-porte-serrurier-nice.webp"
-            alt="Poignée de porte examinée par un serrurier à Nice"
-            fill
-            sizes="(min-width: 768px) 768px, 100vw"
-            className="object-cover"
-          />
-        </div>
-
-        <div>
-          <ArticleSectionHeading number={6} id="arrivee">
-            Ce que je fais concrètement à mon arrivée
-          </ArticleSectionHeading>
-          <p>
-            Je commence toujours par un diagnostic rapide de la serrure et du type de
-            verrouillage avant de choisir la méthode d&apos;ouverture, et
-            j&apos;annonce le prix avant d&apos;intervenir. L&apos;objectif est
-            d&apos;ouvrir sans endommager la porte quand c&apos;est possible, plutôt
-            que de forcer par défaut. J&apos;interviens dans tous les{" "}
-            <Link href="/zones-intervention-nice/" className="text-steel underline">
-              quartiers de Nice
-            </Link>
-            , généralement en moins de 30 minutes.
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-10">
-        <ArticleOpinion quote="La première question que je pose au téléphone, c'est toujours : la poignée s'actionne-t-elle ? Neuf appels sur dix se règlent en trente secondes rien qu'avec cette question, avant même de me déplacer." />
-      </div>
-
-      <div className="mt-10">
-        <ArticleKeyTakeaways
-          points={[
-            "Essayez la poignée avant d'appeler : une porte claquée n'est pas toujours verrouillée.",
-            "Ne forcez jamais vous-même, ça abîme l'huisserie et fait grimper la facture finale.",
-            "Un prix d'appel très bas en ligne cache souvent un tarif réel bien plus élevé sur place.",
-            "La méthode radio ouvre sans dommage dans la quasi-totalité des cas, entre des mains expérimentées.",
-          ]}
-        />
-      </div>
-
-      <div className="mt-10">
-        <ArticleSectionHeading number={7} id="faq">
-          Foire aux questions
-        </ArticleSectionHeading>
-        <FaqAccordion items={faqItems} />
-      </div>
-
-      <div className="mt-10">
-        <AuthorBox />
-      </div>
-
-      <div className="mt-10">
-        <CtaBlock title="Porte claquée maintenant ?" />
-      </div>
-
-      <div className="mt-10">
-        <ArticleNav currentHref={HREF} />
-      </div>
+      </section>
     </article>
   );
 }
