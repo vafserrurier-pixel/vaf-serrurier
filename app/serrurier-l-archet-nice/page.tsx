@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-archet-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-l-archet-nice/",
   title: "Serrurier L'Archet Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à L'Archet, Nice : dépannage près du pôle hospitalier universitaire, changement de serrure. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à L'Archet, Nice : dépannage près du pôle hospitalier universitaire, changement de serrure. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier à L'Archet : j'interviens 24h/24 sur ce secteur résidentiel et institutionnel autour du pôle hospitalier universitaire, en vous donnant un délai réaliste dès l'appel compte tenu de la distance à l'ouest de la ville. Je diagnostique chaque situation avant de proposer un cylindre Picard ou Fichet adapté au bâti, immeuble collectif ou maison individuelle.",

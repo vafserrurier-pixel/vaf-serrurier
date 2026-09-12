@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-cimiez-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-cimiez-nice/",
   title: "Serrurier Cimiez Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Cimiez, Nice : changement de serrure et dépannage sur portes anciennes, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Cimiez, Nice : changement de serrure et dépannage sur portes anciennes, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier à Cimiez : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, avec le même délai que sur le reste de Nice. Ce quartier pose un défi particulier : les grands immeubles Belle Époque et les anciens palaces reconvertis en copropriétés ont souvent gardé leurs serrures et cylindres d'origine, parfois centenaires. Sur ce type de porte, je pose le plus souvent un cylindre récent (Picard ou Vak, entre autres) compatible avec le mécanisme existant, plutôt que de remplacer toute la serrure et dénaturer une porte d'époque.",

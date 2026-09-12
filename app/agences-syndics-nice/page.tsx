@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import TrustBadges from "@/components/TrustBadges";
 import { CheckIcon } from "@/components/Icons";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/agences-syndics-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/agences-syndics-nice/",
   title: "Serrurier partenaire agences & syndics à Nice | VAF",
-  description:
-    "Serrurier partenaire d'agences immobilières à Nice : changement de serrure entre locataires, dépannage, remise de clés. Ouvert aux syndics de copropriété.",
-};
+  description: "Serrurier partenaire d'agences immobilières à Nice : changement de serrure entre locataires, dépannage, remise de clés. Ouvert aux syndics de copropriété.",
+});
 
 const sections = [
   {

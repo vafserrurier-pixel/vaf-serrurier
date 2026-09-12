@@ -5,13 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/blog/serrure-3-5-7-points-que-choisir/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/serrure-3-5-7-points-que-choisir/",
   title: "Serrure 3, 5 ou 7 points : laquelle choisir ? | VAF",
-  description:
-    "Différence réelle entre une serrure 3, 5 et 7 points, et comment choisir le bon niveau selon votre porte. Explications claires, sans survendre.",
-};
+  description: "Différence réelle entre une serrure 3, 5 et 7 points, et comment choisir le bon niveau selon votre porte. Explications claires, sans survendre.",
+});
 
 export default function SerrureMultipointsPage() {
   return (

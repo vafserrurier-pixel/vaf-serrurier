@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-desambrois-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-desambrois-nice/",
   title: "Serrurier Desambrois Nice – Changement de serrure rapide | VAF",
-  description:
-    "Serrurier à Desambrois, Nice : changement de serrure entre deux locataires, dépannage sur portes Belle Époque, intervention en 10-15 min. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Desambrois, Nice : changement de serrure entre deux locataires, dépannage sur portes Belle Époque, intervention en 10-15 min. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier à Desambrois : c'est l'un des quartiers où j'interviens le plus vite depuis mon point de départ, généralement en 10 à 15 minutes. La demande la plus fréquente ici n'est pas la panne classique, mais le changement de serrure entre deux locataires. Le quartier compte environ 2 300 habitants majoritairement locataires, avec un turnover plus élevé que la moyenne niçoise. J'installe le plus souvent un cylindre Picard ou Fichet neuf après un état des lieux, pour repartir sur une serrure fiable entre chaque bail.",

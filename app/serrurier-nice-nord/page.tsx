@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
 import { zones } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-nice-nord/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-nice-nord/",
   title: "Serrurier Nice Nord – Tous quartiers | VAF",
-  description:
-    "Serrurier dans le nord de Nice : Brancolar, Gairaut, Rimiez, Pessicart et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
-};
+  description: "Serrurier dans le nord de Nice : Brancolar, Gairaut, Rimiez, Pessicart et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+});
 
 const intro = [
   "Serrurier dans le nord de Nice : j'interviens 24h/24 sur ce secteur qui grimpe sur les collines prolongeant Cimiez, avec généralement un cylindre Heraclès ou Fichet adapté aux villas comme aux grands ensembles. Rimiez a suivi le même essor Belle Époque que Cimiez. Le quartier des Poètes, lui, s'est développé dans les années 1920 sur l'ancien domaine horticole des Dames de l'Assomption. Le parc Chambrun conserve quant à lui le souvenir d'un domaine de plaisance du XIXe siècle. Plus au nord, la cascade de Gairaut, construite en 1883, domine un secteur longtemps agricole.",

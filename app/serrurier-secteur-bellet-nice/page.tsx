@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-secteur-bellet-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-secteur-bellet-nice/",
   title: "Serrurier Secteur Bellet Nice – Intervention rapide | VAF",
-  description:
-    "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : sécurisation de maisons isolées et domaines viticoles. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : sécurisation de maisons isolées et domaines viticoles. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier au secteur Bellet : j'interviens sur ce territoire le plus rural et le plus vallonné de Nice, avec un délai réaliste annoncé dès l'appel compte tenu des routes de collines. Les hameaux sont composés presque exclusivement de maisons individuelles, parfois isolées au milieu des vignes : je pose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage complet selon l'état du bâti.",

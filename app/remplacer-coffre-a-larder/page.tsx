@@ -5,13 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/remplacer-coffre-a-larder/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/remplacer-coffre-a-larder/",
   title: "Remplacer un coffre à larder : guide simple et propre | VAF",
-  description:
-    "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
-};
+  description: "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
+});
 
 export default function RemplacerCoffreALarderPage() {
   return (

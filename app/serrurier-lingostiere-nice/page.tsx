@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-lingostiere-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-lingostiere-nice/",
   title: "Serrurier Lingostière Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier à Lingostière, Nice : dépannage sur propriétés isolées, délai réaliste pour ce secteur éloigné. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Lingostière, Nice : dépannage sur propriétés isolées, délai réaliste pour ce secteur éloigné. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier à Lingostière : j'interviens sur ce secteur le plus excentré que je couvre depuis mon point de départ, en vous donnant un délai réaliste dès l'appel plutôt qu'une estimation optimiste. Je m'adapte à chaque configuration, résidence proche des axes routiers ou maison plus isolée sur les hauteurs, avec généralement un cylindre Vak ou Cisa adapté au diagnostic effectué sur place.",

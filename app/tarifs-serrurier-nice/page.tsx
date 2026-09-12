@@ -4,13 +4,13 @@ import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, offerSchema } from "@/lib/schema";
 import { cardsByLocale } from "@/lib/pricingCards";
 import TarifsBody from "./TarifsBody";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/tarifs-serrurier-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/tarifs-serrurier-nice/",
   title: "Tarifs serrurier Nice – Prix sans surprise | VAF",
-  description:
-    "Ouverture de porte, changement de serrure, porte blindée : mes tarifs à Nice, sans surprise. Devis annoncé avant chaque intervention, 24h/24.",
-};
+  description: "Ouverture de porte, changement de serrure, porte blindée : mes tarifs à Nice, sans surprise. Devis annoncé avant chaque intervention, 24h/24.",
+});
 
 const faq = [
   {

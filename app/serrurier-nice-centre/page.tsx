@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
 import { zones } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-nice-centre/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-nice-centre/",
   title: "Serrurier Nice Centre – Tous quartiers | VAF",
-  description:
-    "Serrurier dans tout le centre de Nice : Jean-Médecin, Libération, Cimiez, Vieux-Nice et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
-};
+  description: "Serrurier dans tout le centre de Nice : Jean-Médecin, Libération, Cimiez, Vieux-Nice et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+});
 
 const intro = [
   "Besoin d'un serrurier dans le centre de Nice ? J'interviens 24h/24 sur l'ensemble de ce secteur dense, du Vieux-Nice à Cimiez en passant par le Carré d'Or. Sur les portes anciennes, je privilégie généralement un cylindre Fichet ou Picard compatible, plutôt qu'un remplacement qui dénaturerait ces façades soignées. Le centre concentre la plus grande variété de bâti ancien de la ville, de l'Antiquité romaine à la Belle Époque. À Cimiez, les arènes du Ier siècle témoignent de l'ancienne cité de Cemenelum. Dans le Vieux-Nice, le cours Saleya accueille son marché depuis 1861.",

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carras-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-carras-nice/",
   title: "Serrurier Carras Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier à Carras, Nice : dépannage sur immeubles résidentiels en bord de mer, intervention rapide. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Carras, Nice : dépannage sur immeubles résidentiels en bord de mer, intervention rapide. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Carras, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier résidentiel en bord de mer, bien desservi et sans les contraintes d'accès des zones plus denses du centre. Je diagnostique chaque situation avant de proposer un cylindre Cisa ou Vak adapté, pour un cylindre qui accroche, une porte qui ferme mal ou une clé cassée.",

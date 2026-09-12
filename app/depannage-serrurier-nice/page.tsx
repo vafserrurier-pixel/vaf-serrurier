@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/depannage-serrurier-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/depannage-serrurier-nice/",
   title: "Urgence serrurier Nice 24h/24 – Dépannage rapide | VAF",
-  description:
-    "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention.",
-};
+  description: "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention.",
+});
 
 const sectionsFr = [
   {

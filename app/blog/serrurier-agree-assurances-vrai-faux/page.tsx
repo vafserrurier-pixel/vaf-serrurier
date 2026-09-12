@@ -5,15 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://vaf-serrurier.fr/blog/serrurier-agree-assurances-vrai-faux/",
-  },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/serrurier-agree-assurances-vrai-faux/",
   title: "« Agréé toutes assurances » : la vérité sur cette formule | VAF",
-  description:
-    "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
-};
+  description: "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
+});
 
 export default function AgreeAssurancesPage() {
   return (

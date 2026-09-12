@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-les-moulins-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-les-moulins-nice/",
   title: "Serrurier Les Moulins Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier aux Moulins, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier aux Moulins, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Serrure à changer, porte qui bloque aux Moulins : j'interviens 24h/24 dans ce quartier composé principalement de grands ensembles, où les portes palières et cylindres de hall subissent un usage intensif. Après une perte de clés ou une tentative d'effraction, je pose généralement un cylindre Vak ou Picard plus résistant, avec possibilité de blindage selon le cadre.",

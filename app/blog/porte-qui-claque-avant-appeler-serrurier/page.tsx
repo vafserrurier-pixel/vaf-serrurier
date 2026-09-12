@@ -5,15 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://vaf-serrurier.fr/blog/porte-qui-claque-avant-appeler-serrurier/",
-  },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/porte-qui-claque-avant-appeler-serrurier/",
   title: "Porte qui claque : les bons réflexes avant d'appeler | VAF",
-  description:
-    "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
-};
+  description: "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
+});
 
 export default function PorteQuiClaquePage() {
   return (

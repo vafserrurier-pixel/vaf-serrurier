@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-philippe-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-philippe-nice/",
   title: "Serrurier Saint-Philippe Nice – Dépannage 24h/24 | VAF",
-  description:
-    "Serrurier à Saint-Philippe, Nice : sécurisation de villas et propriétés avec jardin, dépannage près du parc Estienne-d'Orves. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Saint-Philippe, Nice : sécurisation de villas et propriétés avec jardin, dépannage près du parc Estienne-d'Orves. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à Saint-Philippe : j'interviens 24h/24 sur ce quartier vallonné qui compte de nombreuses villas et propriétés avec jardin. Pour une porte principale, un portillon ou un accès secondaire, je diagnostique chaque situation avant de proposer une réparation ou un remplacement, avec le plus souvent un cylindre Heraclès ou Fichet adapté au bâti déjà en place.",

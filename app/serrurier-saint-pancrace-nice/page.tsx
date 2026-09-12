@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-pancrace-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-pancrace-nice/",
   title: "Serrurier Saint-Pancrace Nice – Intervention rapide | VAF",
-  description:
-    "Serrurier à Saint-Pancrace, Nice : sécurisation de villas sur secteur rural préservé, dépannage. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Saint-Pancrace, Nice : sécurisation de villas sur secteur rural préservé, dépannage. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Clé cassée, porte claquée à Saint-Pancrace : j'interviens sur ce secteur résidentiel des hauteurs nord de Nice, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Picard adapté, qu'il s'agisse d'une réparation ou d'un renforcement complet du bâti rural préservé.",

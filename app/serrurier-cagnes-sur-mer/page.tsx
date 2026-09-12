@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-cagnes-sur-mer/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-cagnes-sur-mer/",
   title: "Serrurier à Cagnes-sur-Mer – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Cagnes-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
-};
+  description: "Serrurier à Cagnes-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+});
 
 const intro = [
   "J'interviens en urgence à Cagnes-sur-Mer, aussi bien dans les ruelles du Haut-de-Cagnes que sur le front de mer du Cros-de-Cagnes ou dans le centre-ville, pour tout type de dépannage serrurier : ouverture de porte claquée, changement de cylindre, ou sécurisation d'un logement.",

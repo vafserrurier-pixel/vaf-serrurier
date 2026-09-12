@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-wilson-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-quartier-wilson-nice/",
   title: "Serrurier Quartier Wilson Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier place Wilson, Nice : dépannage de commerce, serrures d'immeubles bourgeois Belle Époque, sécurisation de vitrine. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier place Wilson, Nice : dépannage de commerce, serrures d'immeubles bourgeois Belle Époque, sécurisation de vitrine. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier place Wilson : je diagnostique par téléphone puis j'interviens 24h/24, aussi bien pour un appartement que pour l'un des nombreux commerces du secteur (rideau métallique bloqué, serrure de vitrine à sécuriser après une vitre cassée, porte de galerie qui ferme mal). Le passage important toute la journée use les cylindres plus vite que la moyenne, et je pose le plus souvent un cylindre Picard ou Cisa adapté au type de serrure déjà en place.",

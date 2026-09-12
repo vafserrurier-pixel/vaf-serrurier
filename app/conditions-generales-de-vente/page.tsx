@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import LegalPageLayout from "@/components/LegalPageLayout";
 import { business } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/conditions-generales-de-vente/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/conditions-generales-de-vente/",
   title: "Conditions générales de vente | Votre Artisan Français",
   description: "CGV des prestations de serrurerie proposées par Votre Artisan Français à Nice.",
-};
+});
 
 export default function CgvPage() {
   return (

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-coffre-fort-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/ouverture-de-coffre-fort-nice/",
   title: "Ouverture de coffre-fort Nice – Serrurier | VAF",
-  description:
-    "Coffre-fort bloqué, code oublié, clé perdue à Nice ? J'ouvre le coffre sans le détruire quand c'est possible. Devis annoncé avant intervention.",
-};
+  description: "Coffre-fort bloqué, code oublié, clé perdue à Nice ? J'ouvre le coffre sans le détruire quand c'est possible. Devis annoncé avant intervention.",
+});
 
 const sections = [
   {

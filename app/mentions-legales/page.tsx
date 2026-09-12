@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import LegalPageLayout from "@/components/LegalPageLayout";
 import { business } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/mentions-legales/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/mentions-legales/",
   title: "Mentions légales | Votre Artisan Français",
   description: "Mentions légales du site vaf-serrurier.fr, édité par Votre Artisan Français.",
-};
+});
 
 export default function MentionsLegalesPage() {
   return (

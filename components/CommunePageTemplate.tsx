@@ -19,6 +19,7 @@ import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { communeHref, relatedCommunes } from "@/lib/communes";
 import { pickPortrait } from "@/lib/photos";
+import { contentDates } from "@/lib/contentDates.generated";
 
 export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
@@ -53,6 +54,7 @@ export default function CommunePageTemplate({
           description: intro[0],
           url,
           areaServed: { type: "Place", name: commune },
+          dateModified: contentDates[path],
         })}
       />
       <JsonLd data={faqSchema(faq)} />

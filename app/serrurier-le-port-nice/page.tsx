@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-le-port-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-le-port-nice/",
   title: "Serrurier Le Port Nice – Ouvert tard le soir | VAF",
-  description:
-    "Serrurier au quartier du Port, Nice : dépannage tardif, sécurisation après effraction dans ce secteur animé jour et nuit. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier du Port, Nice : dépannage tardif, sécurisation après effraction dans ce secteur animé jour et nuit. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier au quartier du Port : j'interviens 24h/24, y compris tard le soir dans ce secteur animé par ses bars et restaurants, pour un dépannage tardif ou une sécurisation après effraction. Sur les immeubles du XIXe siècle qui bordent le port Lympia, je pose le plus souvent un cylindre Picard ou Fichet compatible avec le mécanisme d'origine, plutôt qu'un remplacement standard qui dénaturerait ces façades anciennes.",

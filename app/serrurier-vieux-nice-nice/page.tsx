@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-vieux-nice-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-vieux-nice-nice/",
   title: "Serrurier Vieux-Nice – Ouverture de porte 24h/24 | VAF",
-  description:
-    "Serrurier dans le Vieux-Nice : réparation de portes anciennes non standards, dépannage pour locations saisonnières près du cours Saleya. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier dans le Vieux-Nice : réparation de portes anciennes non standards, dépannage pour locations saisonnières près du cours Saleya. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier dans le Vieux-Nice : j'interviens 24h/24 en tenant compte des ruelles piétonnes pour organiser mon accès. Beaucoup de portes ici sont anciennes, parfois artisanales, avec des dimensions non standards : je privilégie systématiquement le diagnostic et la réparation avec un cylindre Picard ou Heraclès compatible, plutôt qu'un remplacement par un modèle générique qui dénaturerait le cachet de la porte.",

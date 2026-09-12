@@ -13,6 +13,7 @@ import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
+import { contentDates } from "@/lib/contentDates.generated";
 import type { ReactNode } from "react";
 import type { Locale } from "@/lib/locale";
 
@@ -91,7 +92,12 @@ export default function ServicePageTemplate({
   return (
     <>
       <JsonLd
-        data={serviceSchema({ name: breadcrumbLabel, description: lead, url })}
+        data={serviceSchema({
+          name: breadcrumbLabel,
+          description: lead,
+          url,
+          dateModified: contentDates[path],
+        })}
       />
       <JsonLd data={faqSchema(faq)} />
       <JsonLd

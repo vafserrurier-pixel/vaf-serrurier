@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-bon-voyage-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-bon-voyage-nice/",
   title: "Serrurier Bon Voyage Nice – Changement entre locataires | VAF",
-  description:
-    "Serrurier au quartier Bon Voyage, Nice : changement de serrure entre deux locataires, dépannage sur immeubles collectifs. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Bon Voyage, Nice : changement de serrure entre deux locataires, dépannage sur immeubles collectifs. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier à Bon Voyage : j'interviens 24h/24 dans ce quartier résidentiel sur les hauteurs proches du port, où le turnover locatif plus élevé que la moyenne génère des demandes fréquentes de changement de serrure entre deux locataires. Je pose généralement un cylindre Vak ou Picard neuf après un état des lieux, avec la même transparence sur le tarif que la demande vienne d'un propriétaire ou d'un locataire.",

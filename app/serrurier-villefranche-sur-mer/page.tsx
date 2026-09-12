@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-villefranche-sur-mer/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-villefranche-sur-mer/",
   title: "Serrurier à Villefranche-sur-Mer – Vieille ville & rade | VAF",
-  description:
-    "Serrurier à Villefranche-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
-};
+  description: "Serrurier à Villefranche-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+});
 
 const intro = [
   "J'interviens à Villefranche-sur-Mer aussi bien dans la vieille ville, sur ses ruelles voûtées, que sur les hauteurs et le front de mer, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'une résidence secondaire.",

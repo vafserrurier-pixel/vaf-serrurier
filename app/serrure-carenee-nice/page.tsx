@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
 import BrandsSection from "@/components/BrandsSection";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrure-carenee-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrure-carenee-nice/",
   title: "Serrure carénée 5 points à Nice – En applique | VAF",
-  description:
-    "Installation d'une serrure carénée 5 points en applique à Nice : renfort intermédiaire entre cylindre standard et blindage complet. Devis annoncé, 24h/24.",
-};
+  description: "Installation d'une serrure carénée 5 points en applique à Nice : renfort intermédiaire entre cylindre standard et blindage complet. Devis annoncé, 24h/24.",
+});
 
 const sections = [
   {

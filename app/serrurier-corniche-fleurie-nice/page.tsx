@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-fleurie-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-corniche-fleurie-nice/",
   title: "Serrurier Corniche Fleurie Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à la Corniche Fleurie, Nice : sécurisation de villas près du jardin botanique, blindage. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à la Corniche Fleurie, Nice : sécurisation de villas près du jardin botanique, blindage. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier à la Corniche Fleurie : j'interviens sur ce secteur résidentiel verdoyant, où l'essentiel du bâti est constitué de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage de la porte principale selon l'état du bâti.",

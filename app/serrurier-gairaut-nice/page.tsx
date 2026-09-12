@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gairaut-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-gairaut-nice/",
   title: "Serrurier Gairaut Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Gairaut, Nice : sécurisation de villas près de la cascade historique, renforcement de porte. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Gairaut, Nice : sécurisation de villas près de la cascade historique, renforcement de porte. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure à changer, porte qui bloque à Gairaut : j'interviens sur ce secteur résidentiel de villas, en tenant compte du délai réaliste lié à la distance depuis mon point de départ. L'essentiel du bâti est constitué de maisons avec porte d'entrée individuelle : je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Cisa adapté, de la simple réparation au renforcement complet.",

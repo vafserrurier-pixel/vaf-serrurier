@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-garibaldi-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-garibaldi-nice/",
   title: "Serrurier Garibaldi Nice – Ouverture de porte rapide | VAF",
-  description:
-    "Serrurier place Garibaldi, Nice : ouverture de porte, dépannage sur immeubles anciens entre Vieux-Nice et le port. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier place Garibaldi, Nice : ouverture de porte, dépannage sur immeubles anciens entre Vieux-Nice et le port. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier place Garibaldi : j'interviens 24h/24 pour une porte claquée, un cylindre grippé ou une clé cassée, dans ce quartier de passage entre le Vieux-Nice et le port. Les immeubles anciens autour de la place ont souvent des portes et des serrures d'époque, sur lesquelles je pose généralement un cylindre Picard ou Cisa compatible plutôt qu'un remplacement qui dénaturerait ces façades historiques.",

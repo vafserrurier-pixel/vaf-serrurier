@@ -7,13 +7,13 @@ import ServiceGrid from "@/components/ServiceGrid";
 import { business, zones } from "@/lib/business";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
 import { communes, communeHref, isCommuneBuilt } from "@/lib/communes";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/zones-intervention-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/zones-intervention-nice/",
   title: "Zones d'intervention à Nice | Votre Artisan Français",
-  description:
-    "Je me déplace dans tous les quartiers de Nice : centre, est, nord et ouest. Retrouvez tous les secteurs et quartiers couverts.",
-};
+  description: "Je me déplace dans tous les quartiers de Nice : centre, est, nord et ouest. Retrouvez tous les secteurs et quartiers couverts.",
+});
 
 const sectors: { key: keyof typeof sectorPages; label: string; quartiers: readonly string[] }[] = [
   { key: "centre", label: "Centre", quartiers: zones.centre },

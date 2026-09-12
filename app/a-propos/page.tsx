@@ -7,13 +7,13 @@ import CtaBlock from "@/components/CtaBlock";
 import { HandshakeIcon, PriceTagIcon, ShieldIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/a-propos/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/a-propos/",
   title: "Qui suis-je – Benoît, artisan serrurier à Nice | VAF",
-  description:
-    "Serrurier depuis 2011, installé seul à Nice pour remettre de la transparence dans ce métier. Mon parcours, ma formation, mes engagements.",
-};
+  description: "Serrurier depuis 2011, installé seul à Nice pour remettre de la transparence dans ce métier. Mon parcours, ma formation, mes engagements.",
+});
 
 const experienceYears = new Date().getFullYear() - business.professionSinceYear;
 

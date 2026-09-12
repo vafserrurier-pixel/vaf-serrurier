@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-parc-imperial-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-parc-imperial-nice/",
   title: "Serrurier Parc Impérial Nice – Intervention rapide | VAF",
-  description:
-    "Serrurier au Parc Impérial, Nice : dépannage et sécurisation sur immeubles Belle Époque et copropriétés de standing. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au Parc Impérial, Nice : dépannage et sécurisation sur immeubles Belle Époque et copropriétés de standing. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure à changer, porte qui bloque au Parc Impérial : j'interviens 24h/24 sur ce quartier résidentiel de standing, entre le centre-ville et Cimiez. Les immeubles de standing du secteur ont des serrures parfois anciennes qui demandent un diagnostic soigné : je pose le plus souvent un cylindre Fichet ou Picard compatible avec le mécanisme existant, en respectant les exigences esthétiques de ces copropriétés bien entretenues.",

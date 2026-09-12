@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-brancolar-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-brancolar-nice/",
   title: "Serrurier Brancolar Nice – Intervention rapide | VAF",
-  description:
-    "Serrurier au Brancolar, Nice : personnalisation de cylindre sur logements neufs, dépannage sur grands ensembles. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au Brancolar, Nice : personnalisation de cylindre sur logements neufs, dépannage sur grands ensembles. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure à changer, porte qui bloque au Brancolar : j'interviens 24h/24 sur ce quartier en pleine transformation, aussi bien sur les nouveaux programmes résidentiels que sur les grands ensembles plus anciens. Sur les logements neufs de l'ancien site Enedis, j'interviens souvent pour la personnalisation d'un accès : ajout d'un cylindre Cisa plus résistant ou ajustement après une pose un peu rapide en sortie de chantier.",

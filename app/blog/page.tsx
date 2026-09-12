@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/blog/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/",
   title: "Blog serrurerie | Votre Artisan Français, Nice",
-  description:
-    "Astuces simples, explications claires et conseils d'artisan sur la serrurerie à Nice.",
-};
+  description: "Astuces simples, explications claires et conseils d'artisan sur la serrurerie à Nice.",
+});
 
 const posts = [
   {

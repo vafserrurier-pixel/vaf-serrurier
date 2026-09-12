@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-eze/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-eze/",
   title: "Serrurier à Èze – Village perché & bord de mer | VAF",
-  description:
-    "Serrurier à Èze (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
-};
+  description: "Serrurier à Èze (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+});
 
 const intro = [
   "J'interviens à Èze aussi bien dans le village perché que sur le littoral d'Èze-bord-de-mer, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'une résidence secondaire.",

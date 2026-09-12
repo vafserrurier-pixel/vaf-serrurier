@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pessicart-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-pessicart-nice/",
   title: "Serrurier Pessicart Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier à Pessicart, Nice : dépannage sur villas et résidences collectives des hauteurs. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier à Pessicart, Nice : dépannage sur villas et résidences collectives des hauteurs. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Serrurier à Pessicart : j'interviens sur ce quartier résidentiel huppé des hauteurs nord, aussi bien pour une villa individuelle que pour une résidence collective. Le diagnostic reste systématique, avec le plus souvent un cylindre Picard ou Heraclès adapté au type de serrure déjà en place.",

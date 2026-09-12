@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-riquier-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-riquier-nice/",
   title: "Serrurier Riquier Nice – Ouverture de porte 24h/24 | VAF",
-  description:
-    "Serrurier à Riquier, Nice : renforcement de porte près de la gare, dépannage sur immeubles des années 1920. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Riquier, Nice : renforcement de porte près de la gare, dépannage sur immeubles des années 1920. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure à changer, porte qui bloque à Riquier : j'interviens 24h/24 dans ce quartier populaire organisé autour de sa gare et de son marché, où le passage important pousse souvent les résidents à renforcer leur porte d'entrée. Sur les immeubles des années 1920 qui composent l'essentiel du bâti, je pose le plus souvent un cylindre Vak ou Fichet haute sécurité, avec possibilité de serrure multipoints ou de blindage selon l'état de la porte.",

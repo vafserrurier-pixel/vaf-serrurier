@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-antoine-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-antoine-nice/",
   title: "Serrurier Saint-Antoine Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier à Saint-Antoine-de-Ginestière, Nice : dépannage sur bâti villageois, sécurisation près de l'aéroport. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Saint-Antoine-de-Ginestière, Nice : dépannage sur bâti villageois, sécurisation près de l'aéroport. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier à Saint-Antoine : j'interviens 24h/24 sur ce quartier perché à l'ambiance villageoise préservée, entre maisons individuelles et petites résidences. Je diagnostique chaque situation avant de proposer un cylindre Vak ou Cisa adapté, avec la même méthode que pour les logements résidentiels proches des zones d'activité de l'aéroport.",

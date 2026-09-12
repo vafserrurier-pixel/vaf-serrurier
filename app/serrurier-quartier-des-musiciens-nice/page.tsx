@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-des-musiciens-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-quartier-des-musiciens-nice/",
   title: "Serrurier Quartier des Musiciens – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au quartier des Musiciens, Nice, près de la gare de Nice-Ville : dépannage, changement de serrure sur immeubles Belle Époque. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier des Musiciens, Nice, près de la gare de Nice-Ville : dépannage, changement de serrure sur immeubles Belle Époque. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier au quartier des Musiciens : je diagnostique par téléphone et j'interviens 24h/24 dans ce secteur dense proche de la gare de Nice-Ville, où le passage quotidien use les cylindres de hall plus vite que la moyenne. Sur les portes d'immeubles bourgeois des rues Verdi, Rossini ou Gounod, je pose le plus souvent un cylindre Fichet ou Picard compatible avec le mécanisme d'origine, plutôt que de remplacer toute la serrure sur une porte de caractère.",

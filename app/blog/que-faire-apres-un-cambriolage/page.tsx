@@ -5,13 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/blog/que-faire-apres-un-cambriolage/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/que-faire-apres-un-cambriolage/",
   title: "Que faire après un cambriolage : les bons réflexes | VAF",
-  description:
-    "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
-};
+  description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
+});
 
 export default function QueFaireApresUnCambriolagePage() {
   return (

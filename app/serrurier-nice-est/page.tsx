@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
 import { zones } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-nice-est/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-nice-est/",
   title: "Serrurier Nice Est – Tous quartiers | VAF",
-  description:
-    "Serrurier dans l'est de Nice : Riquier, le Port, Mont Boron, l'Ariane et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
-};
+  description: "Serrurier dans l'est de Nice : Riquier, le Port, Mont Boron, l'Ariane et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+});
 
 const intro = [
   "Dépannage serrurier dans l'est de Nice ? J'interviens 24h/24 sur ce secteur très contrasté, du port historique aux villas des hauteurs, avec généralement un cylindre Picard ou Cisa adapté à chaque configuration. L'est s'organise autour du port Lympia, construit à partir de 1749 pour développer le commerce méditerranéen. Ses anciens entrepôts abritent aujourd'hui restaurants et galeries d'art. Juste au nord, Riquier fut au XIXe siècle le cœur industriel de Nice. Saint-Roch, de son côté, conserve la mémoire de la caserne Auvare et de ses « Diables Bleus ».",

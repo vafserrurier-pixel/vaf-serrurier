@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-l-ariane-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-l-ariane-nice/",
   title: "Serrurier l'Ariane Nice – Dépannage 24h/24 | VAF",
-  description:
-    "Serrurier à l'Ariane, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à l'Ariane, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Clé cassée, porte claquée à l'Ariane : j'interviens 24h/24 dans ce grand quartier d'habitat collectif, où les portes palières et les cylindres de hall subissent un usage intensif. Après une perte de clés ou une tentative d'effraction, je pose généralement un cylindre Vak ou Cisa plus résistant, avec possibilité de blindage de la porte si le cadre le permet.",

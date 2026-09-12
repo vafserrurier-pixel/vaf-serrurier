@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-magnan-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-magnan-nice/",
   title: "Serrurier Magnan Nice – Intervention en 30 min | VAF",
-  description:
-    "Serrurier au quartier Magnan, Nice : remplacement de cylindre sur résidences des années 1960-1970, serrure multipoints pour familles. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Magnan, Nice : remplacement de cylindre sur résidences des années 1960-1970, serrure multipoints pour familles. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Magnan, une serrure à dépanner en urgence : j'interviens 24h/24 dans ce quartier familial à l'ouest du centre-ville, proche de la Promenade des Anglais. Beaucoup de résidences datent des années 1960-1970, avec des serrures d'origine parfois vieillissantes : un remplacement de cylindre Vak ou Picard suffit souvent à retrouver un fonctionnement fiable, sans devoir changer toute la serrure.",

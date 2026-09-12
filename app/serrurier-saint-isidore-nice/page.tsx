@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-isidore-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-isidore-nice/",
   title: "Serrurier Saint-Isidore Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Saint-Isidore, Nice : dépannage sur résidences récentes près du stade Allianz Riviera. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier à Saint-Isidore, Nice : dépannage sur résidences récentes près du stade Allianz Riviera. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Serrurier à Saint-Isidore : j'interviens sur ce secteur de l'extrême ouest niçois, où beaucoup de résidences sont plus récentes qu'ailleurs à Nice, avec des serrures multipoints standard. Le diagnostic reste systématique avant toute intervention, avec généralement un cylindre Picard ou Vak adapté au bâti neuf du quartier.",

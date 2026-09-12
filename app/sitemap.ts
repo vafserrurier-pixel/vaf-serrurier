@@ -4,6 +4,19 @@ import type { MetadataRoute } from "next";
 import { business } from "@/lib/business";
 import { builtQuartiers, quartierHref } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
+import { contentDates } from "@/lib/contentDates.generated";
+
+/**
+ * Date de derniere modification reelle d'une page (dernier commit Git du
+ * fichier page.tsx, calcule au build par scripts/generate-content-dates.js).
+ * Retombe sur la date actuelle si la page n'est pas encore dans la table
+ * (jamais le cas normalement, mais evite un sitemap casse si le fichier
+ * genere n'a pas ete regenere).
+ */
+function lastModifiedFor(urlPath: string): Date {
+  const iso = contentDates[urlPath];
+  return iso ? new Date(iso) : new Date();
+}
 
 const paths = [
   "",
@@ -39,26 +52,35 @@ function blogSlugs(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: MetadataRoute.Sitemap = [...paths, ...blogSlugs()].map((path) => ({
-    url: `${business.domain}/${path}${path ? "/" : ""}`,
-    lastModified: new Date(),
-    changeFrequency: path === "" ? "daily" : "monthly",
-    priority: path === "" ? 1 : 0.7,
-  }));
+  const staticEntries: MetadataRoute.Sitemap = [...paths, ...blogSlugs()].map((path) => {
+    const urlPath = path ? `/${path}/` : "/";
+    return {
+      url: `${business.domain}${urlPath}`,
+      lastModified: lastModifiedFor(urlPath),
+      changeFrequency: path === "" ? "daily" : "monthly",
+      priority: path === "" ? 1 : 0.7,
+    };
+  });
 
-  const quartierEntries: MetadataRoute.Sitemap = builtQuartiers.map((quartier) => ({
-    url: `${business.domain}${quartierHref(quartier)}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const quartierEntries: MetadataRoute.Sitemap = builtQuartiers.map((quartier) => {
+    const urlPath = quartierHref(quartier);
+    return {
+      url: `${business.domain}${urlPath}`,
+      lastModified: lastModifiedFor(urlPath),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    };
+  });
 
-  const communeEntries: MetadataRoute.Sitemap = builtCommunes.map((commune) => ({
-    url: `${business.domain}${communeHref(commune)}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const communeEntries: MetadataRoute.Sitemap = builtCommunes.map((commune) => {
+    const urlPath = communeHref(commune);
+    return {
+      url: `${business.domain}${urlPath}`,
+      lastModified: lastModifiedFor(urlPath),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    };
+  });
 
   return [...staticEntries, ...quartierEntries, ...communeEntries];
 }

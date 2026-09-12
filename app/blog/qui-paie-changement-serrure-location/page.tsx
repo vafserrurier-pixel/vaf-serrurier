@@ -5,15 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://vaf-serrurier.fr/blog/qui-paie-changement-serrure-location/",
-  },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/qui-paie-changement-serrure-location/",
   title: "Location : qui paie le changement de serrure ? | VAF",
-  description:
-    "Clés perdues, cambriolage, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice. Ce que dit la règle générale.",
-};
+  description: "Clés perdues, cambriolage, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice. Ce que dit la règle générale.",
+});
 
 export default function QuiPaieChangementSerrureLocationPage() {
   return (

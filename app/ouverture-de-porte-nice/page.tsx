@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/ouverture-de-porte-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/ouverture-de-porte-nice/",
   title: "Porte claquée à Nice – Ouverture sans casse 24h/24 | VAF",
-  description:
-    "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit.",
-};
+  description: "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit.",
+});
 
 const sectionsFr = [
   {

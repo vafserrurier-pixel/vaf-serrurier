@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-laurent-du-var/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-laurent-du-var/",
   title: "Serrurier à Saint-Laurent-du-Var – Vieux-Village & Cap 3000 | VAF",
-  description:
-    "Serrurier à Saint-Laurent-du-Var (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
-};
+  description: "Serrurier à Saint-Laurent-du-Var (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+});
 
 const intro = [
   "J'interviens à Saint-Laurent-du-Var aussi bien dans le Vieux-Village, sur ses ruelles anciennes, que dans les quartiers résidentiels plus récents autour de Cap 3000, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'un logement.",

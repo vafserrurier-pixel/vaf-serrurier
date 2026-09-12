@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/installation-coffre-fort-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/installation-coffre-fort-nice/",
   title: "Installation de coffre-fort Nice – Serrurier | VAF",
-  description:
-    "Installation et fixation de coffre-fort à Nice : conseil sur le modèle, pose sécurisée au sol ou au mur. Devis annoncé avant intervention.",
-};
+  description: "Installation et fixation de coffre-fort à Nice : conseil sur le modèle, pose sécurisée au sol ou au mur. Devis annoncé avant intervention.",
+});
 
 const sections = [
   {

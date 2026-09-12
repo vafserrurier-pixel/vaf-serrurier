@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-liberation-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-liberation-nice/",
   title: "Serrurier Libération Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier au quartier Libération, Nice : dépannage rapide près du marché couvert et de la Gare du Sud, changement de serrure. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Libération, Nice : dépannage rapide près du marché couvert et de la Gare du Sud, changement de serrure. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Porte claquée, cylindre grippé au quartier Libération : j'interviens 24h/24 dans ce secteur populaire et vivant, où le passage intense autour du Marché de la Libération, avenue Malausséna, use les cylindres de porte plus vite que la moyenne. Sur les immeubles du début et du milieu du XXe siècle qui bordent cette avenue, je pose le plus souvent un cylindre Vak ou Picard adapté au mécanisme déjà en place, pour un dépannage rapide sans attendre l'usure complète de la serrure.",

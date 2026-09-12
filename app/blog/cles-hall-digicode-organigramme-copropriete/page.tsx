@@ -5,15 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://vaf-serrurier.fr/blog/cles-hall-digicode-organigramme-copropriete/",
-  },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/cles-hall-digicode-organigramme-copropriete/",
   title: "Clés de hall, digicode, organigramme : qui décide en copropriété ? | VAF",
-  description:
-    "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
-};
+  description: "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
+});
 
 export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
   return (

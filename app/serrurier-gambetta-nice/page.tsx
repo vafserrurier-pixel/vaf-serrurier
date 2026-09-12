@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-gambetta-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-gambetta-nice/",
   title: "Serrurier Gambetta Nice – Dépannage rapide | VAF",
-  description:
-    "Serrurier au quartier Gambetta, Nice : changement de serrure et dépannage sur immeubles du XXe siècle, sécurisation après cambriolage. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Gambetta, Nice : changement de serrure et dépannage sur immeubles du XXe siècle, sécurisation après cambriolage. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Porte claquée, cylindre grippé à Gambetta : j'interviens 24h/24 dans ce quartier résidentiel calme, pour une porte claquée, un cylindre grippé, ou pour renforcer une porte d'entrée après un cambriolage dans l'immeuble voisin. Le bâti de standing modeste à moyen, construit pour l'essentiel dans l'après-guerre, a souvent des serrures qui datent de plusieurs décennies : je pose généralement un cylindre Fichet ou Cisa compatible plutôt qu'un remplacement complet quand c'est possible.",

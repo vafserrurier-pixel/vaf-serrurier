@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-la-madeleine-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-la-madeleine-nice/",
   title: "Serrurier La Madeleine Nice – Intervention rapide | VAF",
-  description:
-    "Serrurier à La Madeleine, Nice : dépannage sur maisons de ville et immeubles anciens du vallon, changement de serrure. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à La Madeleine, Nice : dépannage sur maisons de ville et immeubles anciens du vallon, changement de serrure. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à La Madeleine : j'interviens 24h/24 dans ce quartier populaire accroché entre mer et collines, aussi bien pour un petit immeuble ancien que pour une maison de ville sur les ruelles en pente du vallon. Je diagnostique la serrure en place avant toute intervention, avec le plus souvent un cylindre Vak ou Fichet adapté au bâti, qu'il s'agisse d'un gond fatigué ou d'une porte qui a bougé avec le temps.",

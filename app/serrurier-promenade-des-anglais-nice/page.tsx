@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-promenade-des-anglais-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-promenade-des-anglais-nice/",
   title: "Serrurier Promenade des Anglais – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrurier Promenade des Anglais : j'interviens 24h/24 sur ce front de mer emblématique, notamment pour les nombreux appartements loués à la semaine ou au mois, en cas de porte claquée entre deux locations. Sur ces résidences de standing, je pose généralement un cylindre Fichet ou Cisa haut de gamme, en prenant soin de ne pas dégrader des finitions de hall souvent haut de gamme.",

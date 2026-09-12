@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import LegalPageLayout from "@/components/LegalPageLayout";
 import { business } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/politique-de-confidentialite/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/politique-de-confidentialite/",
   title: "Politique de confidentialité | Votre Artisan Français",
-  description:
-    "Comment vos données personnelles sont traitées sur vaf-serrurier.fr : formulaire de contact, cookies, droits RGPD.",
-};
+  description: "Comment vos données personnelles sont traitées sur vaf-serrurier.fr : formulaire de contact, cookies, droits RGPD.",
+});
 
 export default function PolitiqueDeConfidentialitePage() {
   return (

@@ -5,13 +5,13 @@ import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/blog/certification-a2p-serrure/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/blog/certification-a2p-serrure/",
   title: "Certification A2P : ce que ça change pour votre serrure | VAF",
-  description:
-    "A2P, une ou trois étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
-};
+  description: "A2P, une ou trois étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+});
 
 export default function CertificationA2pPage() {
   return (

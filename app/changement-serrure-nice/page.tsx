@@ -3,13 +3,13 @@ import LocalizedServicePage from "@/components/LocalizedServicePage";
 import BrandsSection from "@/components/BrandsSection";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/changement-serrure-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/changement-serrure-nice/",
   title: "Changement de serrure Nice – Cylindre & multipoints | VAF",
-  description:
-    "Remplacement de cylindre, serrure complète ou multipoints à Nice. Devis annoncé avant travaux, solution adaptée à votre porte. Appelez le 04 22 13 85 44.",
-};
+  description: "Remplacement de cylindre, serrure complète ou multipoints à Nice. Devis annoncé avant travaux, solution adaptée à votre porte. Appelez le 04 22 13 85 44.",
+});
 
 const sectionsFr = [
   {

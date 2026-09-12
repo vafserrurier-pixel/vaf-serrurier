@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-pierre-de-feric-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-pierre-de-feric-nice/",
   title: "Serrurier Saint-Pierre-de-Féric – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Saint-Pierre-de-Féric, Nice : sécurisation de villas avec portail et grand jardin, blindage de porte. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Saint-Pierre-de-Féric, Nice : sécurisation de villas avec portail et grand jardin, blindage de porte. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier à Saint-Pierre-de-Féric : j'interviens 24h/24 sur ce secteur résidentiel haut de gamme des hauteurs de Nice, où les propriétés sont souvent plus grandes qu'ailleurs, avec portails et accès secondaires à diagnostiquer en plus de la porte d'entrée. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, avec possibilité de blindage complet selon l'état du bâti.",

@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-content-dates.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-poetes-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-poetes-nice/",
   title: "Serrurier Quartier des Poètes Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au quartier des Poètes, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier des Poètes, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Cylindre grippé, porte à sécuriser au quartier des Poètes : j'interviens 24h/24 sur ce secteur résidentiel calme, où les portes palières et les cylindres de hall d'entrée sont soumis à un usage intensif. Je pose généralement un cylindre Heraclès ou Picard adapté au bâti de ce lotissement, qu'il s'agisse d'une réparation ou d'un remplacement après une tentative d'effraction.",

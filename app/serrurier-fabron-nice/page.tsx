@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-fabron-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-fabron-nice/",
   title: "Serrurier Fabron Nice – Ouverture de porte 24h/24 | VAF",
-  description:
-    "Serrurier à Fabron, Nice : sécurisation de villas héritées du patrimoine XIXe, dépannage sur résidences. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Fabron, Nice : sécurisation de villas héritées du patrimoine XIXe, dépannage sur résidences. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal à Fabron : j'interviens 24h/24 sur ce quartier résidentiel des hauteurs ouest, où une part importante du bâti est constituée de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec le même soin pour une villa de caractère que pour une résidence plus récente à serrure multipoints standard.",

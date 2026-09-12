@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carre-d-or-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-carre-d-or-nice/",
   title: "Serrurier Carré d'Or Nice – Intervention en 30 min | VAF",
-  description:
-    "Serrurier au Carré d'Or, Nice : sécurisation discrète de boutiques de luxe et copropriétés Belle Époque. Devis annoncé, intervention rapide 24h/24.",
-};
+  description: "Serrurier au Carré d'Or, Nice : sécurisation discrète de boutiques de luxe et copropriétés Belle Époque. Devis annoncé, intervention rapide 24h/24.",
+});
 
 const intro = [
   "Serrurier au Carré d'Or : j'interviens rapidement dans ce secteur central, en 10 à 15 minutes en général depuis mon point de départ, avec la discrétion attendue par les boutiques de luxe comme par les copropriétés Belle Époque du quartier. Je pose le plus souvent un cylindre Fichet ou Cisa haut de gamme, cohérent avec le niveau de finition des halls et vitrines de ce secteur.",

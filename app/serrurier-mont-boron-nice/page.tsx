@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-boron-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-mont-boron-nice/",
   title: "Serrurier Mont Boron Nice – Dépannage 24h/24 | VAF",
-  description:
-    "Serrurier au Mont Boron, Nice : sécurisation de villas de standing, systèmes de sécurité avancés. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier au Mont Boron, Nice : sécurisation de villas de standing, systèmes de sécurité avancés. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Serrurier au Mont Boron : j'interviens 24h/24 sur ce secteur résidentiel huppé, avec un soin particulier pour les villas souvent équipées de systèmes de sécurité plus avancés que la moyenne. Je pose généralement un cylindre Fichet ou Cisa haute sécurité, adapté aux portes principales comme aux portails et accès secondaires de ces propriétés avec vue mer.",

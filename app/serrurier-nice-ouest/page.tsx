@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
 import { zones } from "@/lib/business";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-nice-ouest/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-nice-ouest/",
   title: "Serrurier Nice Ouest – Tous quartiers | VAF",
-  description:
-    "Serrurier dans l'ouest de Nice : Fabron, Saint-Isidore, l'Arénas, Carras et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
-};
+  description: "Serrurier dans l'ouest de Nice : Fabron, Saint-Isidore, l'Arénas, Carras et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+});
 
 const intro = [
   "Porte claquée, cylindre grippé dans l'ouest de Nice : j'interviens 24h/24 sur ce secteur le plus contrasté de la ville, avec généralement un cylindre Fichet ou Vak adapté selon la configuration. Fabron, prisé dès le XIXe siècle par les grandes familles niçoises fortunées, conserve le souvenir du château mauresque du duc de Saxe-Cobourg-Gotha dans son parc Carol-de-Roumanie. Juste en contrebas, Carras était encore au XVIIIe siècle un modeste village de pêcheurs. Californie, de son côté, doit son nom au tout premier meeting aérien de Nice, organisé en 1910.",

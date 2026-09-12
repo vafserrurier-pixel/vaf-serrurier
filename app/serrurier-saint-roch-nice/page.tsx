@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-saint-roch-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-saint-roch-nice/",
   title: "Serrurier Saint-Roch Nice – Après effraction | VAF",
-  description:
-    "Serrurier au quartier Saint-Roch, Nice : mise en sécurité après effraction, dépannage sur immeubles populaires. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Saint-Roch, Nice : mise en sécurité après effraction, dépannage sur immeubles populaires. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Porte claquée, cylindre grippé à Saint-Roch : j'interviens 24h/24 dans ce quartier populaire et dense, y compris pour sécuriser rapidement une porte après une tentative d'effraction avant de proposer une solution durable. Les immeubles très sollicités par un usage quotidien intense demandent souvent un entretien régulier des cylindres : je pose généralement un cylindre Cisa ou Vak fiable, avec intervention préventive pour éviter un blocage complet.",

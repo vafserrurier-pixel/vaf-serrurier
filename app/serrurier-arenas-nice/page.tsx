@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-arenas-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-arenas-nice/",
   title: "Serrurier Arénas Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à l'Arénas, Nice : sécurisation de bureaux et locaux professionnels, accès contrôlés. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier à l'Arénas, Nice : sécurisation de bureaux et locaux professionnels, accès contrôlés. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier à l'Arénas : j'interviens 24h/24 sur ce premier quartier d'affaires de la Côte d'Azur, avec le même professionnalisme pour un bureau que pour un logement. Les immeubles de bureaux ont des exigences de sécurité spécifiques (accès contrôlés, cylindres professionnels Cisa ou Fichet) que je diagnostique avant toute intervention, en complément des résidences du secteur.",

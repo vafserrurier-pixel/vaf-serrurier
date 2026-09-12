@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-chambrun-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-chambrun-nice/",
   title: "Serrurier Chambrun Nice – Dépannage 24h/24 | VAF",
-  description:
-    "Serrurier à Chambrun, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Chambrun, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Clé cassée, porte claquée à Chambrun : j'interviens 24h/24 sur ce quartier résidentiel du nord de Nice, principalement composé de grands ensembles d'habitat collectif où les portes palières et cylindres de hall subissent un usage intensif. Je pose généralement un cylindre Fichet ou Vak plus résistant après une perte de clés ou une tentative d'effraction.",

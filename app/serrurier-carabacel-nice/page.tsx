@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-carabacel-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-carabacel-nice/",
   title: "Serrurier Carabacel Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au quartier Carabacel, Nice : dépannage sur villas et immeubles anciens du boulevard planté, changement de serrure. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Carabacel, Nice : dépannage sur villas et immeubles anciens du boulevard planté, changement de serrure. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Porte claquée, cylindre grippé à Carabacel : j'interviens 24h/24 sur ce secteur qui mêle immeubles anciens et villas sur les hauteurs proches du centre-ville. Le bâti du boulevard planté, construit dans la seconde moitié du XIXe siècle, a souvent conservé ses portes et cylindres d'origine : je pose le plus souvent un cylindre Fichet ou Heraclès compatible, plutôt qu'un remplacement complet qui dénaturerait ces façades.",

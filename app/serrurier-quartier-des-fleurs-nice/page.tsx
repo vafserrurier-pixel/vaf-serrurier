@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-quartier-des-fleurs-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-quartier-des-fleurs-nice/",
   title: "Serrurier Quartier des Fleurs – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au quartier des Fleurs, Nice : dépannage et changement de serrure sur immeubles Art déco et anciens palais. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier des Fleurs, Nice : dépannage et changement de serrure sur immeubles Art déco et anciens palais. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Besoin d'un serrurier au quartier des Fleurs : j'interviens 24h/24 pour un cylindre grippé, une porte qui ferme mal ou une clé cassée, avec la même transparence sur le tarif que partout à Nice. Ce secteur résidentiel du centre, entre le boulevard François Grosso et le boulevard Gambetta, compte de nombreux immeubles bourgeois d'inspiration Art déco où je privilégie un cylindre Picard ou Vak compatible avec le mécanisme existant plutôt qu'un remplacement complet de la serrure.",

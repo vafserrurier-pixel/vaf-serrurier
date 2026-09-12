@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import InsuranceBanner from "@/components/InsuranceBanner";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/mis-en-securite-apres-effraction-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/mis-en-securite-apres-effraction-nice/",
   title: "Serrurier après cambriolage à Nice 24h/24 | VAF",
-  description:
-    "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, puis je propose une solution durable. Devis annoncé avant travaux.",
-};
+  description: "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, puis je propose une solution durable. Devis annoncé avant travaux.",
+});
 
 const sections = [
   {

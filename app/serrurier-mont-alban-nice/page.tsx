@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-mont-alban-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-mont-alban-nice/",
   title: "Serrurier Mont Alban Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au Mont Alban, Nice : blindage et sécurisation de villas sur secteur boisé près du fort. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier au Mont Alban, Nice : blindage et sécurisation de villas sur secteur boisé près du fort. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal au Mont Alban : j'interviens 24h/24 sur ce secteur résidentiel boisé, où l'essentiel du bâti est constitué de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose généralement un cylindre Fichet ou Heraclès adapté, avec possibilité de blindage complet de la porte principale selon l'état du bâti.",

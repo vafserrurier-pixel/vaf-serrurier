@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-californie-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-californie-nice/",
   title: "Serrurier Californie Nice – Ouverture 24h/24 | VAF",
-  description:
-    "Serrurier au quartier Californie, Nice : sécurisation de villas familiales, dépannage près de l'aéroport. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Californie, Nice : sécurisation de villas familiales, dépannage près de l'aéroport. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier au quartier Californie : j'interviens 24h/24 sur ce secteur familial du bas de Fabron, avec de nombreuses villas et résidences de standing à proximité de la mer. Je diagnostique chaque configuration avant de proposer généralement un cylindre Fichet ou Cisa, avec possibilité de blindage de la porte principale si le bâti le permet.",

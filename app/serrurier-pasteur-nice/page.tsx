@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-pasteur-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-pasteur-nice/",
   title: "Serrurier Pasteur Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier au quartier Pasteur, Nice : dépannage près du pôle hospitalier, changement de serrure sur bâti mêlant ancien et récent. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier au quartier Pasteur, Nice : dépannage près du pôle hospitalier, changement de serrure sur bâti mêlant ancien et récent. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Clé cassée, porte claquée au quartier Pasteur : j'interviens 24h/24 dans ce secteur résidentiel dense, voisin du pôle hospitalier universitaire, où le passage important pousse parfois les résidents à renforcer leur porte d'entrée. Sur ce bâti varié entre immeubles anciens et constructions plus récentes, je pose le plus souvent un cylindre Picard ou Heraclès adapté au diagnostic effectué sur place.",

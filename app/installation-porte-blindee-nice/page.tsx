@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/installation-porte-blindee-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/installation-porte-blindee-nice/",
   title: "Porte blindée Nice – Blindage & bloc-porte A2P | VAF",
-  description:
-    "Porte blindée ou blindage d'une porte existante à Nice : diagnostic, devis annoncé, pose soignée. Certification A2P BP expliquée simplement.",
-};
+  description: "Porte blindée ou blindage d'une porte existante à Nice : diagnostic, devis annoncé, pose soignée. Certification A2P BP expliquée simplement.",
+});
 
 const sectionsFr = [
   {

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-baumettes-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-baumettes-nice/",
   title: "Serrurier Baumettes Nice – Dépannage 24h/24 | VAF",
-  description:
-    "Serrurier aux Baumettes, Nice : sécurisation de villas, réparation de serrures anciennes près du musée Jules-Chéret. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier aux Baumettes, Nice : sécurisation de villas, réparation de serrures anciennes près du musée Jules-Chéret. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal aux Baumettes : j'interviens 24h/24 sur ce secteur résidentiel de caractère, aussi bien pour une villa que pour un appartement en immeuble ancien. Beaucoup de propriétés ici datent du passé de lieu de villégiature du quartier, avec des serrures principales qu'il faut souvent adapter plutôt que remplacer d'office, je pose généralement un cylindre Heraclès ou Picard compatible avec le mécanisme existant.",

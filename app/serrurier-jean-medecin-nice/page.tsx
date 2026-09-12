@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-jean-medecin-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-jean-medecin-nice/",
   title: "Serrurier Jean-Médecin Nice – Intervention 24h/24 | VAF",
-  description:
-    "Serrurier avenue Jean-Médecin, Nice : digicodes et halls d'immeuble très sollicités, sécurisation de commerces et bureaux. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier avenue Jean-Médecin, Nice : digicodes et halls d'immeuble très sollicités, sécurisation de commerces et bureaux. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Dépannage serrurier avenue Jean-Médecin : j'interviens 24h/24 sur cet axe très dense, où le passage important use les serrures de hall plus vite qu'ailleurs. Digicodes, gâches électriques et cylindres de porte collective font partie de mes interventions les plus fréquentes ici, avec le plus souvent un cylindre Fichet ou Cisa pour les copropriétés comme pour les commerces qui bordent l'avenue.",

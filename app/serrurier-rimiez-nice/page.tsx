@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-rimiez-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-rimiez-nice/",
   title: "Serrurier Rimiez Nice – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à Rimiez, Nice : réparation de serrures anciennes, dépannage sur villas et résidences. Devis annoncé, 24h/24.",
-};
+  description: "Serrurier à Rimiez, Nice : réparation de serrures anciennes, dépannage sur villas et résidences. Devis annoncé, 24h/24.",
+});
 
 const intro = [
   "Serrure bloquée, porte qui ferme mal à Rimiez : j'interviens 24h/24 sur ce quartier résidentiel calme, où l'âge moyen plus élevé que la moyenne niçoise (47 ans) va souvent de pair avec des serrures installées depuis longtemps. Je privilégie systématiquement la réparation quand elle est possible, avec un cylindre Heraclès ou Fichet compatible, plutôt qu'un remplacement complet.",

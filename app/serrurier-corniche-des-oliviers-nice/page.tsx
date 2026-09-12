@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/serrurier-corniche-des-oliviers-nice/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/serrurier-corniche-des-oliviers-nice/",
   title: "Serrurier Corniche des Oliviers – Urgence 24h/24 | VAF",
-  description:
-    "Serrurier à la Corniche des Oliviers, Nice : blindage et renforcement de villas sur les hauteurs. Devis annoncé, intervention 24h/24.",
-};
+  description: "Serrurier à la Corniche des Oliviers, Nice : blindage et renforcement de villas sur les hauteurs. Devis annoncé, intervention 24h/24.",
+});
 
 const intro = [
   "Cylindre grippé, porte à sécuriser à la Corniche des Oliviers : j'interviens sur ce secteur de villas entre Saint-Pierre-de-Féric et Saint-Pancrace, en vous donnant un délai réaliste dès l'appel compte tenu de la distance. Je diagnostique la serrure en place et propose généralement un cylindre Cisa ou Fichet adapté, avec possibilité de blindage si la porte le permet.",

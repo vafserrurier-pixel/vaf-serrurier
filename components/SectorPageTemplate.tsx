@@ -14,6 +14,7 @@ import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
 import { pickPortrait } from "@/lib/photos";
+import { contentDates } from "@/lib/contentDates.generated";
 
 export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
@@ -48,6 +49,7 @@ export default function SectorPageTemplate({
           description: intro[0],
           url,
           areaServed: { type: "Place", name: sectorPages[sectorKey].label },
+          dateModified: contentDates[path],
         })}
       />
       <JsonLd data={faqSchema(faq)} />

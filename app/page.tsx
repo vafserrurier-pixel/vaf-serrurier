@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import HomeBody from "./HomeBody";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "https://vaf-serrurier.fr/" },
+export const metadata: Metadata = buildMetadata({
+  path: "/",
   title: "Serrurier Nice 24h/24 – Devis avant intervention | VAF",
-  description:
-    "Serrurier à Nice, disponible 24h/24, 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
-};
+  description: "Serrurier à Nice, disponible 24h/24, 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
+});
 
 const homeFaq = [
   {
