@@ -1,17 +1,72 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
+import ArticleSummary from "@/components/ArticleSummary";
+import ArticleToc from "@/components/ArticleToc";
+import ArticleTable from "@/components/ArticleTable";
+import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
+import AuthorBox from "@/components/AuthorBox";
+import ArticleNav from "@/components/ArticleNav";
+import FaqAccordion from "@/components/FaqAccordion";
+import TrustBadges from "@/components/TrustBadges";
+import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
+const HREF = "/blog/porte-qui-claque-avant-appeler-serrurier/";
+
 export const metadata: Metadata = buildMetadata({
-  path: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+  path: HREF,
   title: "Porte qui claque : les bons réflexes avant d'appeler | VAF",
   description: "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
 });
+
+const toc = [
+  { id: "verrouillee", label: "Vérifiez si la porte est vraiment verrouillée" },
+  { id: "double-cle", label: "Cherchez un double de clé ou un accès alternatif" },
+  { id: "ne-forcez-pas", label: "Ne tentez pas de forcer la porte vous-même" },
+  { id: "prix-appel", label: "Méfiez-vous des annonces à prix d'appel trop bas" },
+  { id: "methode-radio", label: "Comment un serrurier ouvre une porte claquée" },
+  { id: "arrivee", label: "Ce que je fais concrètement à mon arrivée" },
+  { id: "faq", label: "Foire aux questions" },
+];
+
+const faqItems = [
+  {
+    question: "La méthode radio abîme-t-elle la porte ?",
+    answer:
+      "Non, c'est justement son intérêt : bien maîtrisée, elle libère le mécanisme sans dommage dans la quasi-totalité des cas. C'est une manipulation délicate, ce qui justifie de la laisser à un professionnel plutôt que de l'improviser.",
+  },
+  {
+    question: "Ma porte est verrouillée à clé, pas juste claquée : est-ce différent ?",
+    answer:
+      "Oui, le diagnostic et la méthode d'ouverture changent selon que seul le pêne demi-tour est engagé (porte claquée) ou que le pêne dormant est verrouillé à clé. C'est la première chose que je vérifie en arrivant.",
+  },
+  {
+    question: "Combien de temps prend une ouverture de porte claquée ?",
+    answer:
+      "Dans la majorité des cas, l'intervention se fait en quelques minutes une fois sur place, hors temps de trajet. La durée exacte dépend du type de serrure et de son état.",
+  },
+  {
+    question: "Puis-je appeler à n'importe quelle heure, y compris la nuit ?",
+    answer:
+      "Oui, j'interviens 24h/24 et 7j/7 sur Nice. Une majoration s'applique en dehors des horaires standards, toujours annoncée avant l'intervention.",
+  },
+  {
+    question: "Comment reconnaître une annonce sérieuse en cherchant \"serrurier urgence\" ?",
+    answer:
+      "Méfiez-vous des prix d'appel affichés très bas pour un simple déplacement : le tarif réel grimpe souvent une fois sur place. Un prix annoncé clairement au téléphone, avant tout déplacement, reste le meilleur indicateur.",
+  },
+  {
+    question: "Faut-il changer la serrure après une ouverture par la méthode radio ?",
+    answer:
+      "Pas systématiquement si la serrure fonctionne normalement ensuite. Je vous le signale uniquement si le mécanisme montre des signes de faiblesse au moment du diagnostic.",
+  },
+];
 
 export default function PorteQuiClaquePage() {
   return (
@@ -21,34 +76,52 @@ export default function PorteQuiClaquePage() {
           headline: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
           description:
             "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
-          url: `${business.domain}/blog/porte-qui-claque-avant-appeler-serrurier/`,
+          url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
-          dateModified: "2026-08-13",
+          dateModified: "2026-09-12",
         })}
       />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },
           { name: "Blog", url: `${business.domain}/blog/` },
-          {
-            name: "Porte qui claque",
-            url: `${business.domain}/blog/porte-qui-claque-avant-appeler-serrurier/`,
-          },
+          { name: "Porte qui claque", url: `${business.domain}${HREF}` },
         ])}
       />
+      <JsonLd data={faqSchema(faqItems)} />
+
       <Breadcrumbs
         items={[
           { name: "Accueil", href: "/" },
           { name: "Blog", href: "/blog/" },
-          {
-            name: "Porte qui claque",
-            href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
-          },
+          { name: "Porte qui claque", href: HREF },
         ]}
       />
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
         Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
       </h1>
+      <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
+        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+      </p>
+
+      <div className="mt-6">
+        <TrustBadges />
+      </div>
+
+      <div className="mt-8">
+        <ArticleSummary
+          points={[
+            "Une porte qui claque n'est pas forcément verrouillée : essayez d'abord la poignée.",
+            "Ne tentez jamais de la forcer vous-même, ça abîme presque toujours l'huisserie.",
+            "Méfiez-vous des prix d'appel très bas affichés en ligne : le tarif réel grimpe souvent sur place.",
+            "La méthode radio permet d'ouvrir sans dommage dans la quasi-totalité des cas.",
+          ]}
+        />
+      </div>
+
+      <div className="mt-8">
+        <ArticleToc items={toc} />
+      </div>
 
       <div className="prose-content mt-8 flex flex-col gap-6 text-slate leading-relaxed">
         <p>
@@ -59,7 +132,7 @@ export default function PorteQuiClaquePage() {
         </p>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="verrouillee" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Vérifiez d&apos;abord si la porte est vraiment verrouillée
           </h2>
           <p>
@@ -73,7 +146,7 @@ export default function PorteQuiClaquePage() {
         </div>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="double-cle" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Cherchez un double de clé ou un accès alternatif
           </h2>
           <p>
@@ -84,8 +157,18 @@ export default function PorteQuiClaquePage() {
           </p>
         </div>
 
+        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <Image
+            src="/images/serrurier-nice-ouverture-de-porte.webp"
+            alt="Ouverture de porte par un serrurier à Nice"
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="ne-forcez-pas" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Ne tentez pas de forcer la porte vous-même
           </h2>
           <p>
@@ -99,7 +182,7 @@ export default function PorteQuiClaquePage() {
         </div>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="prix-appel" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Méfiez-vous des annonces avec un prix affiché très bas
           </h2>
           <p>
@@ -109,12 +192,25 @@ export default function PorteQuiClaquePage() {
             sur place, grimpe presque toujours bien au-delà une fois sur le pas de la
             porte. Une intervention sérieuse pour une porte claquée descend rarement
             sous les 100 € tout compris. Chez moi, ce tarif est annoncé à
-            l&apos;avance et fixe, sans surprise une fois sur place.
+            l&apos;avance et fixe, sans surprise une fois sur place. Voir mes{" "}
+            <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+              tarifs détaillés
+            </Link>
+            .
           </p>
         </div>
 
+        <ArticleTable
+          caption="Ce qui est annoncé en ligne face au tarif réel constaté sur le terrain."
+          headers={["Annonce type", "Prix affiché", "Réalité fréquente"]}
+          rows={[
+            ["« Déplacement à partir de 30-40 € »", "30-40 €", "Tarif réel final souvent bien plus élevé sur place"],
+            ["Prix annoncé avant intervention", "Fixe, communiqué au téléphone", "Aucune surprise une fois sur place"],
+          ]}
+        />
+
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="methode-radio" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Comment un serrurier ouvre une porte claquée sans l&apos;abîmer
           </h2>
           <p>
@@ -128,8 +224,18 @@ export default function PorteQuiClaquePage() {
           </p>
         </div>
 
+        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <Image
+            src="/images/pool/poignee-porte-serrurier-nice.webp"
+            alt="Poignée de porte examinée par un serrurier à Nice"
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="arrivee" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Ce que je fais concrètement à mon arrivée
           </h2>
           <p>
@@ -137,26 +243,42 @@ export default function PorteQuiClaquePage() {
             verrouillage avant de choisir la méthode d&apos;ouverture, et
             j&apos;annonce le prix avant d&apos;intervenir. L&apos;objectif est
             d&apos;ouvrir sans endommager la porte quand c&apos;est possible, plutôt
-            que de forcer par défaut.
+            que de forcer par défaut. J&apos;interviens dans tous les{" "}
+            <Link href="/zones-intervention-nice/" className="text-steel underline">
+              quartiers de Nice
+            </Link>
+            , généralement en moins de 30 minutes.
           </p>
         </div>
+      </div>
+
+      <div className="mt-10">
+        <ArticleKeyTakeaways
+          points={[
+            "Essayez la poignée avant d'appeler : une porte claquée n'est pas toujours verrouillée.",
+            "Ne forcez jamais vous-même, ça abîme l'huisserie et fait grimper la facture finale.",
+            "Un prix d'appel très bas en ligne cache souvent un tarif réel bien plus élevé sur place.",
+            "La méthode radio ouvre sans dommage dans la quasi-totalité des cas, entre des mains expérimentées.",
+          ]}
+        />
+      </div>
+
+      <div className="mt-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <FaqAccordion items={faqItems} />
+      </div>
+
+      <div className="mt-10">
+        <AuthorBox />
       </div>
 
       <div className="mt-10">
         <CtaBlock title="Porte claquée maintenant ?" />
       </div>
 
-      <p className="mt-6 text-sm text-slate">
-        Voir aussi :{" "}
-        <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
-          ouverture de porte
-        </Link>{" "}
-        et{" "}
-        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
-          dépannage serrurier
-        </Link>
-        .
-      </p>
+      <div className="mt-10">
+        <ArticleNav currentHref={HREF} />
+      </div>
     </article>
   );
 }

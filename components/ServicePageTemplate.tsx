@@ -29,6 +29,7 @@ const strings = {
     seePricing: "Voir les tarifs",
     howItWorks: "Comment se déroule mon intervention",
     faqTitle: "Questions fréquentes",
+    readMore: "Pour aller plus loin",
     serviceArea: "Zone d'intervention",
     serviceAreaText: (address: string) => (
       <>J&apos;interviens dans tous les quartiers de Nice depuis le {address}.</>
@@ -47,6 +48,7 @@ const strings = {
     seePricing: "See pricing",
     howItWorks: "How my callout works",
     faqTitle: "Frequently asked questions",
+    readMore: "To go further",
     serviceArea: "Service area",
     serviceAreaText: (address: string) => (
       <>I cover every neighborhood in Nice, working out of {address}.</>
@@ -71,6 +73,7 @@ export default function ServicePageTemplate({
   extra,
   locale = "fr",
   processSteps,
+  relatedArticle,
 }: {
   h1: string;
   lead: string;
@@ -85,6 +88,8 @@ export default function ServicePageTemplate({
   locale?: Locale;
   /** Étapes "Comment se déroule mon intervention" propres à ce service. */
   processSteps?: ProcessStep[];
+  /** Lien retour vers l'article de blog le plus pertinent pour ce service (maillage interne bidirectionnel). */
+  relatedArticle?: { href: string; label: string };
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
@@ -201,6 +206,17 @@ export default function ServicePageTemplate({
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.faqTitle}</h2>
         <FaqAccordion items={faq} />
       </section>
+
+      {relatedArticle && (
+        <section className="mx-auto max-w-4xl px-4 pb-12">
+          <p className="text-slate text-sm">
+            {t.readMore} :{" "}
+            <Link href={relatedArticle.href} className="text-steel underline">
+              {relatedArticle.label}
+            </Link>
+          </p>
+        </section>
+      )}
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">

@@ -232,6 +232,10 @@ export default function InstallationPorteBlindeeNicePage() {
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
+        relatedArticle: {
+          href: "/blog/certification-a2p-serrure/",
+          label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+        },
       }}
       en={{
         h1: "Security door installation in Nice",

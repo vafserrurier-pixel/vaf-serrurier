@@ -170,6 +170,15 @@ export default function TarifsBody() {
         <div className="bg-cream border border-urgent/20 rounded-xl p-5 sm:p-6">
           <p className="font-heading font-bold text-navy mb-2">{t.warningTitle}</p>
           <p className="text-sm text-slate leading-relaxed">{t.warningText}</p>
+          {locale === "fr" && (
+            <p className="text-sm text-slate mt-3">
+              Pour aller plus loin :{" "}
+              <Link href="/blog/serrurier-agree-assurances-vrai-faux/" className="text-steel underline">
+                « Agréé toutes assurances », ce que cette formule ne veut pas dire
+              </Link>
+              .
+            </p>
+          )}
         </div>
       </section>
 

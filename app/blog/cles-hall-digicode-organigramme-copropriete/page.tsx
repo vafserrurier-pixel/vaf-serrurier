@@ -1,17 +1,73 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
 import JsonLd from "@/components/JsonLd";
+import ArticleSummary from "@/components/ArticleSummary";
+import ArticleToc from "@/components/ArticleToc";
+import ArticleTable from "@/components/ArticleTable";
+import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
+import AuthorBox from "@/components/AuthorBox";
+import ArticleNav from "@/components/ArticleNav";
+import FaqAccordion from "@/components/FaqAccordion";
+import TrustBadges from "@/components/TrustBadges";
+import { ClockIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
+const HREF = "/blog/cles-hall-digicode-organigramme-copropriete/";
+
 export const metadata: Metadata = buildMetadata({
-  path: "/blog/cles-hall-digicode-organigramme-copropriete/",
+  path: HREF,
   title: "Clés de hall, digicode, organigramme : qui décide en copropriété ? | VAF",
   description: "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
 });
+
+const toc = [
+  { id: "qui-decide", label: "Qui décide : le syndic, sur mandat de l'AG" },
+  { id: "qui-paie", label: "Qui paie : la collectivité des copropriétaires" },
+  { id: "urgence", label: "En cas d'urgence, le syndic peut agir sans attendre" },
+  { id: "digicode", label: "Digicode : un code qui doit tourner régulièrement" },
+  { id: "organigramme", label: "Organigramme de clés : utile à partir de plusieurs accès" },
+  { id: "recap", label: "Récapitulatif : qui décide, qui paie" },
+  { id: "prix", label: "Ce qui détermine le prix d'une intervention" },
+  { id: "faq", label: "Foire aux questions" },
+];
+
+const faqItems = [
+  {
+    question: "Le syndic peut-il changer le digicode sans vote en assemblée générale ?",
+    answer:
+      "Pour un simple changement de code sans remplacement de matériel, le syndic peut généralement agir dans le cadre de sa gestion courante. Un remplacement complet du digicode, lui, relève d'un vote en AG.",
+  },
+  {
+    question: "Combien coûte un organigramme de clés pour un petit immeuble ?",
+    answer:
+      "Le prix dépend du nombre de niveaux d'accès et de points à équiper (hall, cave, local technique). Un devis détaillé, poste par poste, reste la seule façon d'avoir un prix fiable pour votre immeuble.",
+  },
+  {
+    question: "Que faire si un ancien locataire ou prestataire a toujours le code du digicode ?",
+    answer:
+      "C'est justement la raison de faire tourner le code régulièrement, au moins une à deux fois par an et à chaque fin de contrat avec un prestataire ayant eu besoin d'y accéder.",
+  },
+  {
+    question: "Un copropriétaire peut-il refuser de payer sa quote-part pour la serrure de hall ?",
+    answer:
+      "Une dépense votée en assemblée générale s'impose à l'ensemble des copropriétaires selon leurs tantièmes. Un désaccord sur le principe se règle en amont, lors du vote, pas après coup.",
+  },
+  {
+    question: "Qui contacter en cas de porte de hall bloquée en urgence, la nuit ou le week-end ?",
+    answer:
+      "Le syndic peut mandater une intervention immédiate sans attendre la prochaine AG. J'interviens 24h/24 sur Nice pour ce type de situation, avec une facture qui pourra être ratifiée a posteriori.",
+  },
+  {
+    question: "Le conseil syndical peut-il imposer un changement de serrure de hall ?",
+    answer:
+      "Le conseil syndical a un rôle consultatif : il peut proposer et préparer une résolution, mais la décision finale (hors urgence) revient au vote de l'assemblée générale des copropriétaires.",
+  },
+];
 
 export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
   return (
@@ -21,46 +77,67 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           headline: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
           description:
             "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
-          url: `${business.domain}/blog/cles-hall-digicode-organigramme-copropriete/`,
+          url: `${business.domain}${HREF}`,
           datePublished: "2026-09-03",
-          dateModified: "2026-09-03",
+          dateModified: "2026-09-12",
         })}
       />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Accueil", url: business.domain },
           { name: "Blog", url: `${business.domain}/blog/` },
-          {
-            name: "Clés de hall, digicode, organigramme",
-            url: `${business.domain}/blog/cles-hall-digicode-organigramme-copropriete/`,
-          },
+          { name: "Clés de hall, digicode, organigramme", url: `${business.domain}${HREF}` },
         ])}
       />
+      <JsonLd data={faqSchema(faqItems)} />
+
       <Breadcrumbs
         items={[
           { name: "Accueil", href: "/" },
           { name: "Blog", href: "/blog/" },
-          {
-            name: "Clés de hall, digicode, organigramme",
-            href: "/blog/cles-hall-digicode-organigramme-copropriete/",
-          },
+          { name: "Clés de hall, digicode, organigramme", href: HREF },
         ]}
       />
       <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
         Clés de hall, digicode, organigramme : qui décide en copropriété ?
       </h1>
+      <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
+        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+      </p>
+
+      <div className="mt-6">
+        <TrustBadges />
+      </div>
+
+      <div className="mt-8">
+        <ArticleSummary
+          points={[
+            "Une dépense sur les parties communes relève en principe d'un vote en assemblée générale.",
+            "Le syndic peut agir sans attendre l'AG en cas d'urgence avérée.",
+            "Un digicode n'est utile que si son code tourne régulièrement.",
+            "Un organigramme de clés évite de changer tout l'immeuble en cas de perte ou de départ.",
+          ]}
+        />
+      </div>
+
+      <div className="mt-8">
+        <ArticleToc items={toc} />
+      </div>
 
       <div className="prose-content mt-8 flex flex-col gap-6 text-slate leading-relaxed">
         <p>
-          C&apos;est une question qui revient souvent, du côté des syndics comme des
-          conseils syndicaux : qui a le pouvoir de faire changer une serrure de hall,
+          C&apos;est une question qui revient souvent, du côté des{" "}
+          <Link href="/agences-syndics-nice/" className="text-steel underline">
+            syndics
+          </Link>{" "}
+          comme des conseils syndicaux : qui a le pouvoir de faire changer une serrure de hall,
           de modifier un digicode, ou de mettre en place un organigramme de clés ? Et
           surtout, qui paie ? Voici les grands principes, avant d&apos;entrer dans le
           détail de ce qui influence le prix d&apos;une intervention.
         </p>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="qui-decide" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Qui décide : le syndic, sur mandat de l&apos;assemblée générale
           </h2>
           <p>
@@ -73,8 +150,18 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           </p>
         </div>
 
+        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <Image
+            src="/images/pool/porte-immeuble-interphone-securisee-nice.webp"
+            alt="Porte d'immeuble sécurisée avec interphone à Nice"
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="qui-paie" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Qui paie : la collectivité des copropriétaires
           </h2>
           <p>
@@ -89,12 +176,16 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="urgence" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             En cas d&apos;urgence, le syndic peut agir sans attendre l&apos;AG
           </h2>
           <p>
             Une porte de hall fracturée, une serrure bloquée qui empêche l&apos;accès
-            à l&apos;immeuble : dans ce type de situation, le syndic n&apos;a pas à
+            à l&apos;immeuble : dans ce type de situation, comparable à une{" "}
+            <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+              mise en sécurité après effraction
+            </Link>
+            , le syndic n&apos;a pas à
             attendre la prochaine assemblée générale pour faire intervenir un
             serrurier. Il peut mandater une intervention immédiate pour sécuriser
             l&apos;accès, et la faire ratifier a posteriori par les copropriétaires.
@@ -102,7 +193,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="digicode" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Digicode : un code qui doit tourner régulièrement
           </h2>
           <p>
@@ -116,7 +207,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="organigramme" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Organigramme de clés : utile dès que plusieurs personnes ont besoin d&apos;un accès différent
           </h2>
           <p>
@@ -130,8 +221,29 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           </p>
         </div>
 
+        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <Image
+            src="/images/agences-syndics-remise-de-cles.webp"
+            alt="Remise de clés entre un serrurier et un syndic à Nice"
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <ArticleTable
+          caption="Récapitulatif des rôles en copropriété."
+          headers={["Élément", "Qui décide", "Qui paie"]}
+          rows={[
+            ["Changement de serrure de hall", "Assemblée générale (syndic exécute)", "Copropriétaires, au tantième"],
+            ["Simple changement de code digicode", "Syndic, gestion courante", "Copropriétaires, au tantième"],
+            ["Organigramme de clés", "Assemblée générale", "Copropriétaires, au tantième"],
+            ["Intervention d'urgence", "Syndic seul, ratifiée ensuite", "Copropriétaires, au tantième"],
+          ]}
+        />
+
         <div>
-          <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          <h2 id="prix" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
             Ce qui détermine le prix d&apos;une intervention
           </h2>
           <p>
@@ -142,26 +254,46 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             la complexité de l&apos;organigramme si plusieurs niveaux de clés sont
             nécessaires. Dans tous les cas, un devis détaillé, poste par poste, reste
             la seule façon d&apos;avoir un prix fiable, pas une estimation
-            approximative au téléphone.
+            approximative au téléphone. Voir mes{" "}
+            <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+              tarifs indicatifs
+            </Link>{" "}
+            ; j&apos;interviens dans tous les{" "}
+            <Link href="/zones-intervention-nice/" className="text-steel underline">
+              quartiers de Nice
+            </Link>
+            .
           </p>
         </div>
+      </div>
+
+      <div className="mt-10">
+        <ArticleKeyTakeaways
+          points={[
+            "Une dépense sur les parties communes relève en principe d'un vote en assemblée générale.",
+            "Le syndic peut agir sans attendre en cas d'urgence, avec ratification a posteriori.",
+            "Un digicode doit tourner régulièrement pour rester réellement utile.",
+            "Un organigramme de clés évite de tout changer en cas de perte ou de départ d'un prestataire.",
+          ]}
+        />
+      </div>
+
+      <div className="mt-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <FaqAccordion items={faqItems} />
+      </div>
+
+      <div className="mt-10">
+        <AuthorBox />
       </div>
 
       <div className="mt-10">
         <CtaBlock title="Besoin d'intervenir sur les accès de votre copropriété ?" />
       </div>
 
-      <p className="mt-6 text-sm text-slate">
-        Voir aussi :{" "}
-        <Link href="/agences-syndics-nice/" className="text-steel underline">
-          serrurier partenaire agences & syndics
-        </Link>{" "}
-        et{" "}
-        <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
-          mise en sécurité après effraction
-        </Link>
-        .
-      </p>
+      <div className="mt-10">
+        <ArticleNav currentHref={HREF} />
+      </div>
     </article>
   );
 }

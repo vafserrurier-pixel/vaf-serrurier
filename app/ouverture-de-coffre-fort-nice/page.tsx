@@ -118,6 +118,10 @@ export default function OuvertureDeCoffreFortNicePage() {
           text: "Le prix confirmé avant l'ouverture est celui que vous payez, quelle que soit la méthode finalement nécessaire.",
         },
       ]}
+      relatedArticle={{
+        href: "/blog/certification-a2p-serrure/",
+        label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+      }}
       relatedServices={[
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },

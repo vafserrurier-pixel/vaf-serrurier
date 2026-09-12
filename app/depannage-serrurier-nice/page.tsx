@@ -195,6 +195,10 @@ export default function DepannageSerrurierNicePage() {
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
+        relatedArticle: {
+          href: "/blog/que-faire-apres-un-cambriolage/",
+          label: "Que faire après un cambriolage : les bons réflexes",
+        },
       }}
       en={{
         h1: "Emergency locksmith in Nice, 24/7 callout service",

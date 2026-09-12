@@ -131,6 +131,10 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
           text: "Le prix confirmé sur place est celui que vous payez, facture détaillée utile pour votre déclaration de sinistre.",
         },
       ]}
+      relatedArticle={{
+        href: "/blog/que-faire-apres-un-cambriolage/",
+        label: "Que faire après un cambriolage : les bons réflexes",
+      }}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

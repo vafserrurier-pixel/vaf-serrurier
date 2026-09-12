@@ -198,6 +198,10 @@ export default function OuvertureDePorteNicePage() {
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
+        relatedArticle: {
+          href: "/blog/porte-qui-claque-avant-appeler-serrurier/",
+          label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
+        },
       }}
       en={{
         h1: "Door slammed shut in Nice: opened 24/7",

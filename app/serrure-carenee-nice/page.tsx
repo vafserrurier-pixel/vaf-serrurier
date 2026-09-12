@@ -133,6 +133,10 @@ export default function SerrureCareneeNicePage() {
           text: "Le devis confirmé sur place est celui que vous payez, facture détaillée à l'appui.",
         },
       ]}
+      relatedArticle={{
+        href: "/blog/serrure-3-5-7-points-que-choisir/",
+        label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
+      }}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

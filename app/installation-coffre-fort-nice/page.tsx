@@ -119,6 +119,10 @@ export default function InstallationCoffreFortNicePage() {
           text: "Le devis détaillé est validé avant l'installation, sans supplément surprise une fois le coffre fixé.",
         },
       ]}
+      relatedArticle={{
+        href: "/blog/certification-a2p-serrure/",
+        label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+      }}
       relatedServices={[
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },

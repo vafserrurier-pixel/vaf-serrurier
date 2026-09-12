@@ -146,6 +146,10 @@ export default function AgencesSyndicsNicePage() {
           </section>
         </>
       }
+      relatedArticle={{
+        href: "/blog/cles-hall-digicode-organigramme-copropriete/",
+        label: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
+      }}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/mis-en-securite-apres-effraction-nice/", label: "Après effraction" },
