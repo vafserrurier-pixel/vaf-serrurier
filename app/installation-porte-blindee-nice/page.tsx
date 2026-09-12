@@ -2,7 +2,152 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
+import ServiceGuideSection from "@/components/ServiceGuideSection";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+
+const criteres = [
+  {
+    Icon: ShieldIcon,
+    title: "Cornières anti-pince",
+    text: "Empêchent d'introduire un pied-de-biche entre le dormant et le battant.",
+  },
+  {
+    Icon: WrenchIcon,
+    title: "Paumelles anti-dégondage",
+    text: "Bloquent le retrait de la porte par les gonds, même une fois les paumelles visibles dégagées.",
+  },
+  {
+    Icon: CheckIcon,
+    title: "Épaisseur et nature de la tôle",
+    text: "Un chiffre à demander précisément : elle conditionne la résistance réelle, au-delà du seul niveau de serrure.",
+  },
+  {
+    Icon: HandshakeIcon,
+    title: "Facture conforme aux assureurs",
+    text: "Mentionne le niveau de certification posé, document généralement demandé pour la réduction de prime.",
+  },
+];
+
+const guideToc = [
+  { id: "decision", label: "Bloc-porte ou blindage : la checklist de décision" },
+  { id: "verifier", label: "Ce qu'il faut vérifier au-delà du niveau de serrure" },
+  { id: "confort", label: "Isolation phonique et thermique : un effet secondaire réel" },
+  { id: "entretien", label: "Entretien : ce qui prolonge la durée de vie" },
+  { id: "faq", label: "Questions complémentaires" },
+];
+
+const guideFaq = [
+  {
+    question: "Un devis moins cher avec le même niveau A2P est-il forcément équivalent ?",
+    answer:
+      "Pas nécessairement. Le niveau A2P encadre la résistance de l'ensemble serrure-cylindre-porte testée, mais la qualité de pose (réglage du bâti, ajustement des paumelles) influence tout autant la résistance réelle. Un excellent produit mal posé perd une bonne partie de son intérêt.",
+  },
+  {
+    question: "Le blindage réduit-il l'isolation phonique ou thermique ?",
+    answer:
+      "Non, généralement l'inverse : la plaque d'acier et la garniture ajoutées renforcent aussi l'isolation par rapport à une porte d'entrée standard, même si ce n'est pas leur fonction première.",
+  },
+  {
+    question: "Faut-il graisser les paumelles d'une porte blindée ?",
+    answer:
+      "Un point de contrôle simple à faire soi-même une à deux fois par an, avec un lubrifiant adapté au métal, pour éviter le grincement et préserver le jeu de fermeture dans la durée.",
+  },
+  {
+    question: "Combien de temps dure l'installation d'une porte blindée ?",
+    answer:
+      "Comptez généralement une demi-journée pour un blindage, une journée complète pour un bloc-porte complet, selon l'état du bâti existant et les ajustements nécessaires.",
+  },
+];
+
+const guideContent = (
+  <>
+    <p className="text-slate leading-relaxed">
+      Ce guide détaille les critères concrets à vérifier au-delà du seul
+      niveau A2P déjà présenté plus haut, pour comparer un devis à un autre en
+      toute connaissance de cause.
+    </p>
+
+    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+      <p className="font-heading font-bold text-navy mb-4">À vérifier sur un devis, au-delà du prix</p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {criteres.map(({ Icon, title, text }) => (
+          <div key={title} className="flex items-start gap-3">
+            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
+              <Icon className="w-4 h-4" />
+            </span>
+            <div>
+              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
+              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={1} id="decision" level="h3">
+        Bloc-porte ou blindage : la checklist de décision
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Trois questions suffisent la plupart du temps à orienter le choix :
+        le dormant actuel est-il sain (pas de bois pourri, pas de déformation
+        visible) ? Le règlement de copropriété impose-t-il une apparence
+        identique côté palier ? Le budget cible correspond-il plutôt à un
+        renfort ciblé ou à un remplacement complet ? Un dormant en bon état
+        et une contrainte esthétique forte orientent vers le blindage ; un
+        bâti fatigué ou un objectif de résistance maximale orientent vers un
+        bloc-porte complet.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={2} id="verifier" level="h3">
+        Ce qu&apos;il faut vérifier au-delà du niveau de serrure
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Le niveau A2P (BP1, BP2, BP3) résume une résistance testée en
+        laboratoire, mais deux devis au même niveau ne se valent pas
+        forcément sur le terrain. Les cornières anti-pince, qui empêchent
+        d&apos;insérer un pied-de-biche entre le dormant et le battant, et les
+        paumelles anti-dégondage, qui empêchent de sortir la porte par les
+        gonds, comptent parmi les éléments qui font la différence en usage
+        réel. Je les inclus systématiquement sur mes installations, et je
+        recommande de les demander explicitement à tout professionnel.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={3} id="confort" level="h3">
+        Isolation phonique et thermique : un effet secondaire réel
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Ce n&apos;est pas l&apos;objectif premier d&apos;une porte blindée, mais
+        l&apos;épaisseur de la tôle et la garniture intérieure améliorent
+        presque toujours l&apos;isolation par rapport à une porte d&apos;entrée
+        standard, un vrai plus sur les paliers exposés au bruit des cages
+        d&apos;escalier du centre de Nice.
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={4} id="entretien" level="h3">
+        Entretien : ce qui prolonge la durée de vie
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Un graissage léger des paumelles une à deux fois par an et un
+        contrôle visuel du jeu de fermeture suffisent la plupart du temps.
+        Si la porte commence à résister ou à mal refermer, mieux vaut agir
+        tôt : le détail des solutions selon le symptôme est sur ma page{" "}
+        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+          dépannage serrurier
+        </Link>
+        .
+      </p>
+    </div>
+  </>
+);
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
@@ -236,6 +381,12 @@ export default function InstallationPorteBlindeeNicePage() {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
         },
+        guide: (
+          <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
+            {guideContent}
+          </ServiceGuideSection>
+        ),
+        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Security door installation in Nice",
