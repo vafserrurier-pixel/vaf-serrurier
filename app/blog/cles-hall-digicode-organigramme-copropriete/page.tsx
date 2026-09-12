@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -102,7 +104,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         Clés de hall, digicode, organigramme : qui décide en copropriété ?
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -112,9 +114,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
       <div className="mt-8">
         <ArticleSummary
           points={[
-            "Une dépense sur les parties communes relève en principe d'un vote en assemblée générale.",
+            "Une dépense sur les parties communes relève en principe d'un vote en assemblée générale (loi du 10 juillet 1965).",
             "Le syndic peut agir sans attendre l'AG en cas d'urgence avérée.",
-            "Un digicode n'est utile que si son code tourne régulièrement.",
+            "Un digicode n'est utile que s'il tourne régulièrement.",
             "Un organigramme de clés évite de changer tout l'immeuble en cas de perte ou de départ.",
           ]}
         />
@@ -137,17 +139,47 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </p>
 
         <div>
-          <h2 id="qui-decide" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="qui-decide">
             Qui décide : le syndic, sur mandat de l&apos;assemblée générale
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Une porte de hall, un digicode ou une gâche électrique font partie des
-            parties communes de l&apos;immeuble. Toute décision qui engage une dépense
-            significative (remplacement de la serrure, installation d&apos;un nouveau
-            digicode, mise en place d&apos;un organigramme) relève en principe d&apos;un
-            vote en assemblée générale des copropriétaires. Le syndic exécute la
-            décision votée, il ne la prend pas seul, sauf urgence avérée.
+            parties communes de l&apos;immeuble. La{" "}
+            <a
+              href="https://www.anil.org/copropriete-travaux-majorites/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-steel underline"
+            >
+              loi du 10 juillet 1965
+            </a>{" "}
+            prévoit plusieurs règles de majorité selon la nature des travaux votés en
+            assemblée générale. Le syndic exécute la décision votée, il ne la prend
+            pas seul, sauf urgence avérée.
           </p>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Entretien à l&apos;identique : majorité simple
+            </h3>
+            <p>
+              Remplacer une serrure de hall à l&apos;identique, sans changer sa
+              nature, relève généralement de l&apos;entretien courant des parties
+              communes, votée à la majorité simple des copropriétaires présents ou
+              représentés (article 24).
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Nouvel équipement de sécurité : majorité absolue
+            </h3>
+            <p>
+              L&apos;ajout d&apos;un équipement qui n&apos;existait pas encore (un
+              digicode, un interphone, une gâche électrique) est explicitement cité
+              par les textes comme un cas de travaux de sécurité, en général soumis à
+              la majorité absolue de tous les copropriétaires, présents ou non
+              (article 25).
+            </p>
+          </div>
         </div>
 
         <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
@@ -161,9 +193,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 id="qui-paie" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="qui-paie">
             Qui paie : la collectivité des copropriétaires
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Le remplacement d&apos;une serrure de hall ou d&apos;un digicode est une
             dépense d&apos;entretien des parties communes : elle est répartie entre
@@ -176,9 +208,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 id="urgence" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={3} id="urgence">
             En cas d&apos;urgence, le syndic peut agir sans attendre l&apos;AG
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Une porte de hall fracturée, une serrure bloquée qui empêche l&apos;accès
             à l&apos;immeuble : dans ce type de situation, comparable à une{" "}
@@ -193,9 +225,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 id="digicode" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="digicode">
             Digicode : un code qui doit tourner régulièrement
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Un digicode n&apos;est utile que s&apos;il reste confidentiel. En pratique,
             beaucoup de copropriétés ne le changent jamais, alors qu&apos;il finit par
@@ -207,9 +239,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
         </div>
 
         <div>
-          <h2 id="organigramme" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="organigramme">
             Organigramme de clés : utile dès que plusieurs personnes ont besoin d&apos;un accès différent
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Un organigramme de clés organise une hiérarchie d&apos;accès : une clé
             passe générale ouvre tout l&apos;immeuble (syndic, entretien), une clé
@@ -231,21 +263,26 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           />
         </div>
 
-        <ArticleTable
-          caption="Récapitulatif des rôles en copropriété."
-          headers={["Élément", "Qui décide", "Qui paie"]}
-          rows={[
-            ["Changement de serrure de hall", "Assemblée générale (syndic exécute)", "Copropriétaires, au tantième"],
-            ["Simple changement de code digicode", "Syndic, gestion courante", "Copropriétaires, au tantième"],
-            ["Organigramme de clés", "Assemblée générale", "Copropriétaires, au tantième"],
-            ["Intervention d'urgence", "Syndic seul, ratifiée ensuite", "Copropriétaires, au tantième"],
-          ]}
-        />
+        <div>
+          <ArticleSectionHeading number={6} id="recap">
+            Récapitulatif : qui décide, qui paie
+          </ArticleSectionHeading>
+          <ArticleTable
+            caption="Récapitulatif des rôles en copropriété."
+            headers={["Élément", "Qui décide", "Qui paie"]}
+            rows={[
+              ["Remplacement à l'identique (hall)", "Majorité simple, article 24", "Copropriétaires, au tantième"],
+              ["Nouveau digicode / interphone", "Majorité absolue, article 25", "Copropriétaires, au tantième"],
+              ["Organigramme de clés", "Assemblée générale", "Copropriétaires, au tantième"],
+              ["Intervention d'urgence", "Syndic seul, ratifiée ensuite", "Copropriétaires, au tantième"],
+            ]}
+          />
+        </div>
 
         <div>
-          <h2 id="prix" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={7} id="prix">
             Ce qui détermine le prix d&apos;une intervention
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Trois éléments font varier le prix : le nombre de points d&apos;accès à
             traiter (une porte de hall seule coûte moins qu&apos;un ensemble
@@ -268,18 +305,24 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Le réflexe que je conseille le plus souvent aux syndics : faites tourner le digicode deux fois par an, même sans raison particulière. C'est gratuit, ça prend cinq minutes, et ça règle silencieusement la moitié des soucis d'accès non maîtrisés." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Une dépense sur les parties communes relève en principe d'un vote en assemblée générale.",
+            "Un remplacement à l'identique se vote plus facilement (majorité simple) qu'un nouvel équipement (majorité absolue).",
             "Le syndic peut agir sans attendre en cas d'urgence, avec ratification a posteriori.",
             "Un digicode doit tourner régulièrement pour rester réellement utile.",
-            "Un organigramme de clés évite de tout changer en cas de perte ou de départ d'un prestataire.",
           ]}
         />
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={8} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -22,7 +24,7 @@ const HREF = "/blog/certification-a2p-serrure/";
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Certification A2P : ce que ça change pour votre serrure | VAF",
-  description: "A2P, une ou trois étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+  description: "A2P, une ou trois étoiles : ce que signifie réellement cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
 });
 
 const toc = [
@@ -50,7 +52,7 @@ const faqItems = [
   {
     question: "Quelle différence entre A2P étoiles et A2P BP ?",
     answer:
-      "Les étoiles (1 à 3) notent une serrure ou un cylindre seul. Le sigle BP (BP1, BP2, BP3) note un bloc-porte blindé complet : cadre, gonds, panneau et serrure évalués ensemble.",
+      "Les étoiles (1 à 3) notent une serrure ou un cylindre seul, avec une résistance testée de 5, 10 ou 15 minutes selon le niveau. Le sigle BP (BP1, BP2, BP3) note un bloc-porte blindé complet : cadre, gonds, panneau et serrure évalués ensemble.",
   },
   {
     question: "Mon assurance exige-t-elle un niveau A2P précis ?",
@@ -76,7 +78,7 @@ export default function CertificationA2pPage() {
         data={blogPostingSchema({
           headline: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
           description:
-            "A2P, une ou trois étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+            "A2P, une ou trois étoiles : ce que signifie réellement cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
@@ -102,7 +104,7 @@ export default function CertificationA2pPage() {
         Certification A2P : ce que ce sigle change vraiment pour votre serrure
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />8 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -113,7 +115,7 @@ export default function CertificationA2pPage() {
         <ArticleSummary
           points={[
             "L'A2P est une certification indépendante délivrée par le CNPP, pas une formule commerciale libre.",
-            "Le nombre d'étoiles (1 à 3) correspond à un niveau de résistance testé en laboratoire.",
+            "Une étoile résiste 5 minutes, deux 10 minutes, trois 15 minutes, selon les tests du CNPP.",
             "A2P étoiles note une serrure ou un cylindre seul ; A2P BP note un bloc-porte complet.",
             "Le marquage doit apparaître sur le produit lui-même, pas seulement sur l'emballage.",
           ]}
@@ -134,9 +136,9 @@ export default function CertificationA2pPage() {
         </p>
 
         <div>
-          <h2 id="definition" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="definition">
             Qu&apos;est-ce que la certification A2P
-          </h2>
+          </ArticleSectionHeading>
           <p>
             A2P (Assurance Prévention Protection) est une certification française
             délivrée par le{" "}
@@ -168,35 +170,41 @@ export default function CertificationA2pPage() {
         </div>
 
         <div>
-          <h2 id="etoiles" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="etoiles">
             Une, deux ou trois étoiles : une échelle, pas un chiffre marketing
-          </h2>
+          </ArticleSectionHeading>
           <p>
-            Le nombre d&apos;étoiles correspond à un niveau de résistance testé en
-            laboratoire face à des outils d&apos;effraction courants : plus il y a
-            d&apos;étoiles, plus le produit a résisté longtemps aux essais. Ce
+            Le nombre d&apos;étoiles correspond à un temps de résistance testé en
+            laboratoire face à des outils d&apos;effraction courants : une étoile
+            résiste 5 minutes, deux étoiles 10 minutes, trois étoiles au moins 15
+            minutes face à des attaques méthodiques avec outils professionnels. Ce
             n&apos;est pas une question de prix affiché ou de design, mais d&apos;un
             résultat de test reproductible. Un cylindre 1 étoile et un cylindre 3
-            étoiles peuvent se ressembler visuellement tout en offrant un niveau de
+            étoiles peuvent se ressembler visuellement tout en offrant un temps de
             résistance très différent.
           </p>
         </div>
 
-        <ArticleTable
-          caption="Comparatif simplifié des échelles A2P. Durées de résistance exactes testées par le CNPP : [SOURCE À CONFIRMER]."
-          headers={["Certification", "Ce qui est testé", "S'applique à"]}
-          rows={[
-            ["A2P *", "Résistance de base à l'effraction", "Cylindre ou serrure seule"],
-            ["A2P **", "Résistance intermédiaire", "Cylindre ou serrure seule"],
-            ["A2P ***", "Résistance la plus élevée de l'échelle étoiles", "Cylindre ou serrure seule"],
-            ["A2P BP1 / BP2 / BP3", "Cadre, gonds, panneau et serrure ensemble", "Bloc-porte blindé complet"],
-          ]}
-        />
+        <div>
+          <ArticleSectionHeading number={3} id="comparatif">
+            Comparatif des niveaux A2P
+          </ArticleSectionHeading>
+          <ArticleTable
+            caption="Comparatif simplifié des échelles A2P, d'après les tests du CNPP."
+            headers={["Certification", "Résistance testée", "S'applique à"]}
+            rows={[
+              ["A2P *", "5 minutes", "Cylindre ou serrure seule"],
+              ["A2P **", "10 minutes", "Cylindre ou serrure seule"],
+              ["A2P ***", "15 minutes minimum", "Cylindre ou serrure seule"],
+              ["A2P BP1 / BP2 / BP3", "Échelle propre au bloc-porte", "Bloc-porte blindé complet (cadre, gonds, panneau, serrure)"],
+            ]}
+          />
+        </div>
 
         <div>
-          <h2 id="pourquoi" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="pourquoi">
             Pourquoi ça compte, au-delà de la sécurité elle-même
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Au-delà de la résistance physique, disposer d&apos;un équipement
             certifié A2P facilite généralement les démarches après un sinistre.
@@ -209,9 +217,9 @@ export default function CertificationA2pPage() {
         </div>
 
         <div>
-          <h2 id="verifier" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="verifier">
             Comment vérifier qu&apos;un produit est vraiment certifié
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Le marquage A2P doit apparaître directement sur le produit (souvent sur
             la têtière du cylindre ou la plaque de la serrure), pas seulement sur une
@@ -234,9 +242,9 @@ export default function CertificationA2pPage() {
         </div>
 
         <div>
-          <h2 id="confusion" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="confusion">
             À ne pas confondre : A2P étoiles et A2P BP
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Le CNPP délivre en réalité deux échelles A2P différentes, et la confusion
             est fréquente. Les serrures et cylindres sont notés en étoiles (1 à 3),
@@ -253,9 +261,9 @@ export default function CertificationA2pPage() {
         </div>
 
         <div>
-          <h2 id="approche" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={7} id="approche">
             Mon approche sur le choix du niveau
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Je pose des cylindres et serrures de marques reconnues (
             <a href="https://www.fichet-pointfort.com/fr/fr" target="_blank" rel="noopener noreferrer" className="text-steel underline">
@@ -296,18 +304,24 @@ export default function CertificationA2pPage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Je ne pose jamais une étoile de plus juste pour l'argument commercial. Une A2P* bien posée sur une porte saine vaut souvent mieux qu'une A2P*** posée sur un bâti que personne n'a vérifié." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "L'A2P est un test indépendant du CNPP, pas une formule commerciale.",
+            "Une, deux, trois étoiles : 5, 10, 15 minutes de résistance testée.",
             "Les étoiles notent une serrure seule ; le BP note un bloc-porte complet.",
-            "Le marquage doit être visible sur le produit lui-même, pas seulement sur l'emballage.",
             "Un cylindre A2P haut de gamme ne compense pas une porte non blindée fragile.",
           ]}
         />
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={8} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -102,7 +104,7 @@ export default function RemplacerCoffreALarderPage() {
         Comment remplacer un coffre à larder : guide simple et propre
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -133,14 +135,30 @@ export default function RemplacerCoffreALarderPage() {
         </p>
 
         <div>
-          <h2 id="definition" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="definition">
             C&apos;est quoi un coffre à larder
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Le coffre à larder, c&apos;est le corps de la serrure, encastré dans
             l&apos;épaisseur de la porte. Il contient le demi-tour, le pêne dormant et
-            le mécanisme. Je le remplace quand la poignée devient molle, que la clé
-            accroche, ou après une tentative d&apos;effraction.
+            le mécanisme.
+          </p>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Coffre à larder ou simple cylindre : ne pas confondre
+            </h3>
+            <p>
+              Le cylindre est uniquement la pièce dans laquelle la clé tourne. Le
+              coffre à larder est le boîtier complet qui contient tout le mécanisme de
+              verrouillage. Selon la panne, on peut parfois changer l&apos;un sans
+              l&apos;autre : une clé qui accroche vient souvent du seul cylindre,
+              tandis qu&apos;une poignée molle ou un pêne qui ne sort plus vient
+              généralement du coffre lui-même.
+            </p>
+          </div>
+          <p>
+            Je remplace le coffre quand la poignée devient molle, que la clé accroche
+            malgré un cylindre changé, ou après une tentative d&apos;effraction.
           </p>
         </div>
 
@@ -155,9 +173,9 @@ export default function RemplacerCoffreALarderPage() {
         </div>
 
         <div>
-          <h2 id="mesures" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="mesures">
             Les mesures essentielles
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Trois mesures sont indispensables. Il faut aussi vérifier le sens
             d&apos;ouverture de la porte et l&apos;orientation du demi-tour avant de
@@ -176,9 +194,9 @@ export default function RemplacerCoffreALarderPage() {
         />
 
         <div>
-          <h2 id="outils" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={3} id="outils">
             Les outils nécessaires
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Pas besoin d&apos;un atelier complet : des tournevis adaptés, des clés Allen,
             un mètre, un crayon et un petit ciseau à bois pour les ajustements
@@ -187,9 +205,9 @@ export default function RemplacerCoffreALarderPage() {
         </div>
 
         <div>
-          <h2 id="compatibilite" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="compatibilite">
             Compatible ou pas : comment le savoir avant d&apos;acheter
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Tous les coffres à larder ne sont pas interchangeables, même à taille
             proche. Avant d&apos;en acheter un neuf, vérifiez le sens de la porte
@@ -240,9 +258,9 @@ export default function RemplacerCoffreALarderPage() {
         </div>
 
         <div>
-          <h2 id="etapes" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="etapes">
             Les étapes du remplacement
-          </h2>
+          </ArticleSectionHeading>
           <ol className="list-decimal pl-5 flex flex-col gap-1">
             <li>Retirer les poignées et le cylindre.</li>
             <li>Dévisser la têtière et sortir l&apos;ancien mécanisme.</li>
@@ -252,9 +270,9 @@ export default function RemplacerCoffreALarderPage() {
         </div>
 
         <div>
-          <h2 id="erreurs" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="erreurs">
             Les erreurs fréquentes
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Acheter sans avoir pris les bonnes mesures, forcer des pièces
             incompatibles, tester porte fermée, ou confondre un problème de porte avec
@@ -267,9 +285,9 @@ export default function RemplacerCoffreALarderPage() {
         </div>
 
         <div>
-          <h2 id="professionnel" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={7} id="professionnel">
             Quand faire appel à un professionnel
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Si le remplacement révèle un problème plus large (bâti abîmé,{" "}
             <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
@@ -289,6 +307,10 @@ export default function RemplacerCoffreALarderPage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Un coffre à larder mal identifié, c'est la panne la plus bête à aggraver soi-même. Si le doute persiste après les mesures, mieux vaut me l'envoyer en photo avant d'acheter que de forcer une pièce qui ne rentre pas." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Prenez l'axe, l'entraxe et la largeur de tête avant d'acheter un coffre neuf.",
@@ -300,7 +322,9 @@ export default function RemplacerCoffreALarderPage() {
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={8} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

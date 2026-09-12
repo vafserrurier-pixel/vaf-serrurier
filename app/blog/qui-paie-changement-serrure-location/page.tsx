@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -22,7 +24,7 @@ const HREF = "/blog/qui-paie-changement-serrure-location/";
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Location : qui paie le changement de serrure ? | VAF",
-  description: "Clés perdues, cambriolage, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice. Ce que dit la règle générale.",
+  description: "Clés perdues, cambriolage, location saisonnière, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice.",
 });
 
 const toc = [
@@ -30,6 +32,7 @@ const toc = [
   { id: "vetuste", label: "Vétusté de la serrure : au propriétaire" },
   { id: "cambriolage", label: "Après un cambriolage : généralement l'assurance" },
   { id: "changement-locataire", label: "Changement de locataire : au propriétaire" },
+  { id: "saisonniere", label: "Cas particulier : la location saisonnière" },
   { id: "recap", label: "Récapitulatif : qui paie selon la cause" },
   { id: "facture", label: "Ce qui évite le litige : une facture claire" },
   { id: "desaccord", label: "En cas de désaccord persistant" },
@@ -63,9 +66,9 @@ const faqItems = [
       "Un diagnostic permet en général de déterminer si la panne vient d'une usure normale (souvent à la charge du propriétaire au titre de la vétusté) ou d'un usage anormal du locataire.",
   },
   {
-    question: "Faut-il un accord écrit entre propriétaire et locataire avant l'intervention ?",
+    question: "Pour une location saisonnière, faut-il changer le cylindre entre chaque séjour ?",
     answer:
-      "Ce n'est pas obligatoire dans l'urgence, mais un échange écrit (SMS, email) précisant qui a demandé l'intervention et pourquoi facilite grandement les choses en cas de désaccord ultérieur.",
+      "Non, ce n'est ni nécessaire ni raisonnable si le cylindre est à clé à reproduction protégée : la copie est impossible sans la carte de propriété, donc compter les clés à chaque check-out suffit. Voir la section dédiée plus bas.",
   },
 ];
 
@@ -76,7 +79,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
         data={blogPostingSchema({
           headline: "Location : qui paie le changement de serrure ?",
           description:
-            "Clés perdues, cambriolage, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice. Ce que dit la règle générale.",
+            "Clés perdues, cambriolage, location saisonnière, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice.",
           url: `${business.domain}${HREF}`,
           datePublished: "2026-09-08",
           dateModified: "2026-09-12",
@@ -102,7 +105,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
         Location : qui paie le changement de serrure ?
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />9 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -112,10 +115,10 @@ export default function QuiPaieChangementSerrureLocationPage() {
       <div className="mt-8">
         <ArticleSummary
           points={[
-            "Clés perdues ou usure normale : c'est au locataire, comme tout entretien courant.",
+            "Clés perdues ou usure normale : c'est au locataire, comme tout entretien courant (décret n°87-712).",
             "Vétusté de la serrure ancienne : c'est au propriétaire.",
             "Après un cambriolage : généralement l'assurance habitation du locataire.",
-            "Entre deux locataires : généralement au propriétaire, pour repartir sur une base saine.",
+            "En location saisonnière, le vrai risque est la clé copiée, pas l'effraction : un cylindre à reproduction protégée règle le problème.",
           ]}
         />
       </div>
@@ -134,15 +137,25 @@ export default function QuiPaieChangementSerrureLocationPage() {
         </p>
 
         <div>
-          <h2 id="cles-perdues" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="cles-perdues">
             Clés perdues ou usage normal : au locataire
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Un trousseau égaré, une clé cassée dans la serrure par accident, ou une
             usure liée à l&apos;utilisation quotidienne relèvent en principe de
-            l&apos;entretien courant du logement, à la charge du locataire. C&apos;est
-            la même logique que pour un joint de robinet qui s&apos;use avec le temps :
-            l&apos;usage normal du bien reste de sa responsabilité.
+            l&apos;entretien courant du logement, à la charge du locataire. Ce
+            n&apos;est pas une simple habitude du secteur : l&apos;
+            <a
+              href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000522461"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-steel underline"
+            >
+              annexe du décret n°87-712 du 26 août 1987
+            </a>{" "}
+            liste explicitement le graissage des serrures et verrous, ainsi que le
+            remplacement des clés égarées ou détériorées, parmi les réparations
+            locatives à la charge du locataire.
           </p>
         </div>
 
@@ -157,9 +170,9 @@ export default function QuiPaieChangementSerrureLocationPage() {
         </div>
 
         <div>
-          <h2 id="vetuste" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="vetuste">
             Vétusté de la serrure : au propriétaire
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Si la serrure lâche parce qu&apos;elle est ancienne, mal entretenue depuis
             longtemps ou défaillante indépendamment de tout usage anormal, la
@@ -171,9 +184,9 @@ export default function QuiPaieChangementSerrureLocationPage() {
         </div>
 
         <div>
-          <h2 id="cambriolage" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={3} id="cambriolage">
             Après un cambriolage : généralement l&apos;assurance
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Quand la serrure a été forcée lors d&apos;une{" "}
             <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
@@ -191,9 +204,9 @@ export default function QuiPaieChangementSerrureLocationPage() {
         </div>
 
         <div>
-          <h2 id="changement-locataire" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="changement-locataire">
             Changement de locataire : généralement au propriétaire
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Entre le départ d&apos;un locataire et l&apos;arrivée du suivant, c&apos;est
             en général au propriétaire de s&apos;assurer que le logement est
@@ -208,21 +221,83 @@ export default function QuiPaieChangementSerrureLocationPage() {
           </p>
         </div>
 
+        <div>
+          <ArticleSectionHeading number={5} id="saisonniere">
+            Cas particulier : la location saisonnière
+          </ArticleSectionHeading>
+          <p>
+            En location saisonnière (meublé de tourisme, plateformes type Airbnb), la
+            question ne se pose pas de la même façon : le logement change
+            d&apos;occupant chaque semaine, parfois plusieurs fois par mois. Le vrai
+            risque n&apos;est pas d&apos;abord l&apos;effraction, c&apos;est la clé
+            qui circule sans que vous le sachiez.
+          </p>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Clé standard ou clé à reproduction protégée
+            </h3>
+            <p>
+              Une clé plate classique se reproduit à l&apos;identique dans n&apos;importe
+              quelle cordonnerie, sans aucun justificatif : un locataire de passage
+              peut s&apos;en faire un double en cinq minutes, et vous n&apos;en saurez
+              jamais rien. Un cylindre à clé à reproduction protégée fonctionne à
+              l&apos;inverse : la clé est associée à une carte de propriété, et seul
+              le fabricant ou un réseau d&apos;agents agréés peut en produire une
+              copie. Plusieurs marques que je pose proposent cette protection, dont
+              Vachette (gamme Radial), Fichet et Héraclès. C&apos;est, de loin,
+              l&apos;investissement le plus utile pour un bien loué en courte durée.
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Cylindre débrayable : ne plus jamais rester enfermé dehors
+            </h3>
+            <p>
+              La fonction débrayable (parfois appelée fonction de secours) permet
+              d&apos;ouvrir la porte de l&apos;extérieur même si une clé est restée
+              engagée à l&apos;intérieur, un incident fréquent en rotation locative.
+              Sans cette fonction, un cylindre classique se bloque de l&apos;extérieur
+              tant que la clé intérieure n&apos;est pas retirée. Pour un logement en
+              location, j&apos;évite de poser un cylindre non débrayable par défaut,
+              justement pour éviter ce type d&apos;appel évitable.
+            </p>
+          </div>
+          <p>
+            Avec ces deux fonctions réunies, changer le cylindre à chaque départ de
+            locataire n&apos;a pas de sens : il suffit de compter les clés remises à
+            chaque check-out, puisqu&apos;aucun double caché n&apos;est possible sans
+            la carte de propriété. Un remplacement reste justifié en cas de clé non
+            rendue, de perte, ou de doute sérieux sur une copie.
+          </p>
+        </div>
+
         <ArticleTable
           caption="Récapitulatif de la règle générale selon la cause du changement."
           headers={["Cause", "Qui paie généralement", "Justificatif utile"]}
           rows={[
-            ["Clés perdues, usage normal", "Locataire", "Aucun, entretien courant"],
+            ["Clés perdues, usage normal", "Locataire", "Décret n°87-712 (entretien courant)"],
             ["Vétusté de la serrure", "Propriétaire", "Diagnostic de l'artisan"],
             ["Cambriolage / effraction", "Assurance habitation du locataire", "Dépôt de plainte + facture détaillée"],
             ["Changement de locataire", "Propriétaire", "Facture entre deux baux"],
+            ["Location saisonnière", "Propriétaire-loueur (investissement, pas récurrent)", "Facture du cylindre sécurisé"],
           ]}
         />
 
         <div>
-          <h2 id="facture" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="recap">
+            Récapitulatif : qui paie selon la cause
+          </ArticleSectionHeading>
+          <p>
+            Le tableau ci-dessus résume les cinq situations les plus fréquentes. Dans
+            tous les cas, la cause précise du changement détermine qui paie, pas le
+            simple statut de propriétaire ou de locataire.
+          </p>
+        </div>
+
+        <div>
+          <ArticleSectionHeading number={7} id="facture">
             Ce qui évite le litige : une facture claire
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Dans tous les cas, le document qui compte le plus en cas de désaccord est
             une facture détaillée, mentionnant précisément la nature de
@@ -239,9 +314,9 @@ export default function QuiPaieChangementSerrureLocationPage() {
         </div>
 
         <div>
-          <h2 id="desaccord" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={8} id="desaccord">
             En cas de désaccord persistant
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Si propriétaire et locataire ne s&apos;entendent pas sur la prise en
             charge, la règle générale décrite ici reste un repère, pas une décision
@@ -260,18 +335,24 @@ export default function QuiPaieChangementSerrureLocationPage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Pour un propriétaire-loueur, je recommande presque toujours le cylindre à reproduction protégée dès la première pose. C'est un peu plus cher à l'achat, mais ça règle le problème une fois pour toutes, plutôt que de rouvrir le sujet à chaque changement de locataire." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "La cause du changement détermine qui paie, pas le simple statut propriétaire/locataire.",
-            "Clés perdues et usure normale restent à la charge du locataire.",
+            "Clés perdues et usure normale restent à la charge du locataire (décret n°87-712).",
             "Vétusté et changement de locataire relèvent généralement du propriétaire.",
-            "Une facture détaillée reste le meilleur document en cas de désaccord.",
+            "En location saisonnière, un cylindre à reproduction protégée et débrayable évite l'essentiel des soucis.",
           ]}
         />
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={9} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -30,7 +32,7 @@ const toc = [
   { id: "opposition", label: "Faites opposition sur vos moyens de paiement" },
   { id: "plainte", label: "Portez plainte dans les 48 heures" },
   { id: "photos", label: "Photographiez tout avant de ranger" },
-  { id: "assurance", label: "Prévenez votre assurance rapidement" },
+  { id: "assurance", label: "Prévenez votre assurance : le délai légal" },
   { id: "securiser", label: "Sécurisez votre porte avant de reconstituer le reste" },
   { id: "syndic", label: "Si vous êtes en copropriété, prévenez le syndic" },
   { id: "pourquoi-porte", label: "Pourquoi la porte d'entrée reste prioritaire" },
@@ -44,9 +46,9 @@ const faqItems = [
       "Oui. Une tentative d'effraction sans vol laisse quand même des dégâts (porte forcée, serrure abîmée) et le dépôt de plainte reste le document de référence pour votre assurance et pour les statistiques locales de sécurité.",
   },
   {
-    question: "Combien de temps ai-je pour déclarer le sinistre à mon assurance ?",
+    question: "Combien de temps ai-je vraiment pour déclarer le sinistre à mon assurance ?",
     answer:
-      "Le délai varie selon les contrats, souvent entre quelques jours et deux semaines pour un cambriolage. Vérifiez les conditions générales de votre contrat multirisque habitation et ne tardez pas à prévenir votre assureur, même par un premier appel avant l'envoi du dossier complet.",
+      "La loi (article L.113-2 du Code des assurances) impose un délai de 2 jours ouvrés pour un vol ou un cambriolage, contre 5 jours pour la plupart des autres sinistres. Certains contrats prévoient un délai plus favorable : vérifiez le vôtre, mais ne comptez jamais sur plus de 2 jours ouvrés par défaut.",
   },
   {
     question: "Puis-je nettoyer ou ranger avant le passage de la police ?",
@@ -61,7 +63,7 @@ const faqItems = [
   {
     question: "Mon assurance peut-elle refuser de m'indemniser ?",
     answer:
-      "Cela dépend des conditions de votre contrat (traces d'effraction constatées, délai de déclaration respecté, éventuelles clauses de vétusté). Le dépôt de plainte et une facture détaillée de la remise en sécurité sont les deux documents qui appuient le plus solidement un dossier.",
+      "Cela dépend des conditions de votre contrat (traces d'effraction constatées, délai de déclaration respecté, éventuelles clauses de vétusté). Si le délai légal de 2 jours ouvrés n'est pas respecté et que l'assureur prouve un préjudice causé par ce retard, il peut réduire l'indemnisation. Le dépôt de plainte et une facture détaillée de la remise en sécurité restent les deux documents qui appuient le plus solidement un dossier.",
   },
   {
     question: "Dois-je changer toute la serrure ou seulement réparer ce qui a été forcé ?",
@@ -108,7 +110,7 @@ export default function QueFaireApresUnCambriolagePage() {
         Que faire après un cambriolage : les bons réflexes
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />8 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -120,7 +122,7 @@ export default function QueFaireApresUnCambriolagePage() {
           points={[
             "Ne touchez à rien avant le passage de la police : les traces laissées sont des preuves utiles.",
             "Faites opposition sur vos moyens de paiement disparus, puis portez plainte sous 48h.",
-            "Photographiez les dégâts avant de ranger, pour appuyer votre déclaration à l'assurance.",
+            "La loi impose 2 jours ouvrés pour déclarer un cambriolage à votre assurance, pas plus.",
             "Une porte forcée doit être sécurisée sans attendre, avant de reconstituer le reste du dossier.",
           ]}
         />
@@ -139,9 +141,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </p>
 
         <div>
-          <h2 id="ne-rien-toucher" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="ne-rien-toucher">
             D&apos;abord, ne touchez à rien
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Avant même de constater les dégâts en détail, résistez à l&apos;envie de
             tout ranger. Chaque trace laissée par les cambrioleurs (empreintes, objets
@@ -163,9 +165,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="opposition" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="opposition">
             Faites opposition sur vos moyens de paiement
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Avant même de porter plainte, vérifiez si des cartes bancaires, chéquiers
             ou papiers d&apos;identité ont disparu. Le cas échéant, faites opposition
@@ -175,9 +177,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="plainte" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={3} id="plainte">
             Portez plainte dans les 48 heures
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Rendez-vous au commissariat ou à la brigade de gendarmerie la plus proche,
             muni d&apos;une pièce d&apos;identité et, si possible, d&apos;une liste des
@@ -188,9 +190,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="photos" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="photos">
             Photographiez tout avant de ranger
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Une fois le dépôt de plainte fait, prenez le temps de photographier chaque
             pièce touchée avant de commencer à ranger : la porte forcée, les tiroirs
@@ -203,15 +205,71 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="assurance" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
-            Prévenez votre assurance rapidement
-          </h2>
+          <ArticleSectionHeading number={5} id="assurance">
+            Prévenez votre assurance : le délai légal
+          </ArticleSectionHeading>
           <p>
-            La plupart des contrats multirisques habitation imposent un délai de
-            déclaration après un cambriolage : vérifiez le vôtre, mais n&apos;attendez
-            pas. Transmettez une copie du dépôt de plainte et une déclaration écrite
-            décrivant les faits et les biens volés ou endommagés.
+            Contrairement à une idée reçue, le délai n&apos;est pas laissé à
+            l&apos;appréciation de chaque assureur : l&apos;
+            <a
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-steel underline"
+            >
+              article L.113-2 du Code des assurances
+            </a>{" "}
+            impose un délai de <strong>2 jours ouvrés</strong> pour déclarer un vol ou
+            un cambriolage, contre 5 jours pour la plupart des autres sinistres. Un
+            cambriolage découvert un vendredi doit donc être déclaré au plus tard le
+            mardi suivant. Certains contrats prévoient un délai plus favorable, mais
+            aucun ne peut être plus strict que ce minimum légal. Transmettez une copie
+            du dépôt de plainte et une déclaration écrite décrivant les faits et les
+            biens volés ou endommagés.
           </p>
+        </div>
+
+        <div>
+          <ArticleSectionHeading number={6} id="securiser">
+            Sécurisez votre porte avant de reconstituer le reste
+          </ArticleSectionHeading>
+          <p>
+            Une porte forcée qui reste dans cet état est une invitation à une seconde
+            visite, en particulier si le logement est visiblement vide le temps que vous
+            organisiez la suite.
+          </p>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Une solution temporaire, dans l&apos;heure
+            </h3>
+            <p>
+              Je peux intervenir 24h/24 pour une{" "}
+              <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                mise en sécurité immédiate
+              </Link>{" "}
+              : blocage provisoire de l&apos;ouvrant ou remplacement du cylindre selon
+              l&apos;ampleur des dégâts, simplement pour fermer le logement le temps que
+              vous organisiez la suite.
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Une solution durable, après diagnostic
+            </h3>
+            <p>
+              Je vous propose ensuite une solution durable, éventuellement une{" "}
+              <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+                porte blindée
+              </Link>
+              , une fois le diagnostic complet effectué. Je vous fournis systématiquement
+              une facture détaillée, le document généralement demandé pour votre
+              déclaration de sinistre — voir mes{" "}
+              <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                tarifs annoncés à l&apos;avance
+              </Link>
+              .
+            </p>
+          </div>
         </div>
 
         <ArticleTable
@@ -222,37 +280,11 @@ export default function QueFaireApresUnCambriolagePage() {
             ["Opposition cartes/papiers", "Dès que possible", "Limiter un usage frauduleux"],
             ["Dépôt de plainte", "Sous 48h", "Document de référence pour l'assurance"],
             ["Photos des dégâts", "Après le dépôt de plainte", "Appuyer la déclaration de sinistre"],
-            ["Déclaration à l'assurance", "Selon délai du contrat", "Enclencher la prise en charge"],
+            ["Déclaration à l'assurance", "2 jours ouvrés maximum (L.113-2)", "Enclencher la prise en charge"],
             ["Sécurisation de la porte", "24h/24, dès que possible", "Éviter une seconde intrusion"],
             ["Information du syndic", "Rapidement si copropriété", "Vérifier les autres logements visés"],
           ]}
         />
-
-        <div>
-          <h2 id="securiser" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
-            Sécurisez votre porte avant de reconstituer le reste
-          </h2>
-          <p>
-            Une porte forcée qui reste dans cet état est une invitation à une seconde
-            visite, en particulier si le logement est visiblement vide le temps que vous
-            organisiez la suite. Je peux intervenir 24h/24 pour une{" "}
-            <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
-              mise en sécurité immédiate
-            </Link>{" "}
-            : blocage temporaire ou remplacement selon l&apos;ampleur des dégâts. Je vous
-            propose ensuite une solution durable, éventuellement une{" "}
-            <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-              porte blindée
-            </Link>
-            , une fois le diagnostic complet effectué. Je vous fournis systématiquement
-            une facture détaillée, le document généralement demandé pour votre déclaration
-            de sinistre — voir mes{" "}
-            <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
-              tarifs annoncés à l&apos;avance
-            </Link>
-            .
-          </p>
-        </div>
 
         <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
           <Image
@@ -265,9 +297,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="syndic" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={7} id="syndic">
             Si vous êtes en copropriété, prévenez le syndic
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Une effraction sur une porte palière ou une tentative sur la porte de hall
             concerne aussi les autres occupants de l&apos;immeuble. Signalez l&apos;incident
@@ -284,9 +316,9 @@ export default function QueFaireApresUnCambriolagePage() {
         </div>
 
         <div>
-          <h2 id="pourquoi-porte" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={8} id="pourquoi-porte">
             Pourquoi la porte d&apos;entrée reste le point à renforcer en priorité
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Selon les{" "}
             <a
@@ -307,18 +339,24 @@ export default function QueFaireApresUnCambriolagePage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Je sécurise toujours en premier, avant de parler papiers. Une porte qui reste ouverte une nuit de plus est un risque que je ne fais jamais prendre à un client, même en pleine reconstitution de dossier." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Ne touchez à rien et ne rangez pas avant d'avoir déposé plainte.",
             "Faites opposition sur vos moyens de paiement disparus sans attendre.",
-            "Photographiez les dégâts avant de nettoyer, pour votre dossier d'assurance.",
+            "La déclaration à l'assurance a un délai légal de 2 jours ouvrés, pas plus.",
             "Sécurisez la porte dans la foulée : une facture détaillée appuie votre déclaration de sinistre.",
           ]}
         />
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={9} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

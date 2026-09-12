@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -133,9 +135,9 @@ export default function AgreeAssurancesPage() {
         </p>
 
         <div>
-          <h2 id="pas-agrement" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="pas-agrement">
             Il n&apos;existe pas d&apos;agrément unique délivré par un organisme central
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Contrairement à certaines professions réglementées, il n&apos;y a pas
             d&apos;autorité qui « agrée » un serrurier au nom de l&apos;ensemble des
@@ -157,9 +159,9 @@ export default function AgreeAssurancesPage() {
         </div>
 
         <div>
-          <h2 id="demande-reelle" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="demande-reelle">
             Ce que les assureurs demandent réellement, en général
-          </h2>
+          </ArticleSectionHeading>
           <p>
             D&apos;après ce que je constate sur le terrain, ce qui compte pour un
             dossier de sinistre, c&apos;est une facture détaillée et conforme (avec
@@ -172,20 +174,25 @@ export default function AgreeAssurancesPage() {
           </p>
         </div>
 
-        <ArticleTable
-          caption="Ce qui ne prouve rien face à ce qui se vérifie réellement."
-          headers={["Souvent affiché", "Ce que ça prouve", "Ce qu'il faut vérifier à la place"]}
-          rows={[
-            ["« Agréé toutes assurances »", "Rien de vérifiable, aucune autorité derrière", "SIRET et assurance RC Pro de l'artisan"],
-            ["« Certifié haute sécurité »", "Formule commerciale libre", "Marquage A2P réel sur le produit"],
-            ["Prix d'appel très bas affiché", "Rarement le prix final", "Devis annoncé avant intervention"],
-          ]}
-        />
+        <div>
+          <ArticleSectionHeading number={3} id="comparatif">
+            Ce qui ne prouve rien face à ce qui compte réellement
+          </ArticleSectionHeading>
+          <ArticleTable
+            caption="Ce qui ne prouve rien face à ce qui se vérifie réellement."
+            headers={["Souvent affiché", "Ce que ça prouve", "Ce qu'il faut vérifier à la place"]}
+            rows={[
+              ["« Agréé toutes assurances »", "Rien de vérifiable, aucune autorité derrière", "SIRET et assurance RC Pro de l'artisan"],
+              ["« Certifié haute sécurité »", "Formule commerciale libre", "Marquage A2P réel sur le produit"],
+              ["Prix d'appel très bas affiché", "Rarement le prix final", "Devis annoncé avant intervention"],
+            ]}
+          />
+        </div>
 
         <div>
-          <h2 id="verifier" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="verifier">
             Le vrai indicateur à vérifier avant d&apos;appeler
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Plutôt qu&apos;un sigle sans autorité derrière, je recommande de vérifier
             des éléments concrets et contrôlables : le SIRET de l&apos;entreprise
@@ -200,22 +207,35 @@ export default function AgreeAssurancesPage() {
         </div>
 
         <div>
-          <h2 id="origine" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="origine">
             D&apos;où vient cette confusion, concrètement
-          </h2>
-          <p>
-            Beaucoup d&apos;artisans reprennent cette formule sans mauvaise intention,
-            simplement parce qu&apos;elle rassure et qu&apos;elle circule depuis
-            longtemps dans le métier. D&apos;autres l&apos;utilisent volontairement
-            pour donner une impression d&apos;officialité à une entreprise récente ou
-            peu identifiable. Dans les deux cas, le résultat est le même pour vous :
-            la mention ne garantit rien de vérifiable, ni sur la qualité du travail,
-            ni sur la prise en charge par votre assurance en cas de{" "}
-            <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
-              sinistre
-            </Link>
-            .
-          </p>
+          </ArticleSectionHeading>
+          <div className="mt-2">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Sans mauvaise intention, le plus souvent
+            </h3>
+            <p>
+              Beaucoup d&apos;artisans reprennent cette formule sans mauvaise intention,
+              simplement parce qu&apos;elle rassure et qu&apos;elle circule depuis
+              longtemps dans le métier.
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Parfois volontairement, pour rassurer à moindre effort
+            </h3>
+            <p>
+              D&apos;autres l&apos;utilisent volontairement
+              pour donner une impression d&apos;officialité à une entreprise récente ou
+              peu identifiable. Dans les deux cas, le résultat est le même pour vous :
+              la mention ne garantit rien de vérifiable, ni sur la qualité du travail,
+              ni sur la prise en charge par votre assurance en cas de{" "}
+              <Link href="/mis-en-securite-apres-effraction-nice/" className="text-steel underline">
+                sinistre
+              </Link>
+              .
+            </p>
+          </div>
         </div>
 
         <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
@@ -229,9 +249,9 @@ export default function AgreeAssurancesPage() {
         </div>
 
         <div>
-          <h2 id="pourquoi-pas" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="pourquoi-pas">
             Pourquoi je ne mets pas ce sigle sur mon site
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Je préfère mettre en avant ce qui se vérifie réellement : mon SIRET, mon
             assurance RC Pro, et une facture détaillée systématique. Si vous avez un
@@ -252,6 +272,10 @@ export default function AgreeAssurancesPage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Je n'ai jamais eu besoin d'un sigle pour rassurer un client. Un SIRET vérifiable et un prix annoncé avant travaux font plus pour la confiance que n'importe quelle formule sur une camionnette." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Il n'existe pas d'organisme qui agrée un serrurier au nom de toutes les assurances.",
@@ -263,7 +287,9 @@ export default function AgreeAssurancesPage() {
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={7} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

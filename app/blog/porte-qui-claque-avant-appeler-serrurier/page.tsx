@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -26,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const toc = [
-  { id: "verrouillee", label: "Vérifiez si la porte est vraiment verrouillée" },
+  { id: "verrouillee", label: "Porte claquée ou porte verrouillée : la distinction clé" },
   { id: "double-cle", label: "Cherchez un double de clé ou un accès alternatif" },
   { id: "ne-forcez-pas", label: "Ne tentez pas de forcer la porte vous-même" },
   { id: "prix-appel", label: "Méfiez-vous des annonces à prix d'appel trop bas" },
@@ -101,7 +103,7 @@ export default function PorteQuiClaquePage() {
         Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -132,23 +134,39 @@ export default function PorteQuiClaquePage() {
         </p>
 
         <div>
-          <h2 id="verrouillee" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
-            Vérifiez d&apos;abord si la porte est vraiment verrouillée
-          </h2>
-          <p>
-            Une porte qui claque ne s&apos;est pas forcément verrouillée. Sur
-            beaucoup de modèles, le pêne demi-tour se bloque au claquement, mais le
-            pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
-            été fermée à clé. Avant toute chose, essayez la poignée. Si elle
-            s&apos;actionne normalement, vous n&apos;avez pas besoin d&apos;un
-            serrurier.
-          </p>
+          <ArticleSectionHeading number={1} id="verrouillee">
+            Porte claquée ou porte verrouillée : la distinction clé
+          </ArticleSectionHeading>
+          <div className="mt-2">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Porte claquée : souvent rien de bloqué
+            </h3>
+            <p>
+              Une porte qui claque ne s&apos;est pas forcément verrouillée. Sur
+              beaucoup de modèles, le pêne demi-tour se bloque au claquement, mais le
+              pêne dormant (le vrai verrouillage) ne s&apos;engage que si la porte a
+              été fermée à clé. Avant toute chose, essayez la poignée. Si elle
+              s&apos;actionne normalement, vous n&apos;avez pas besoin d&apos;un
+              serrurier.
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Porte verrouillée à clé : un diagnostic différent
+            </h3>
+            <p>
+              Si le pêne dormant est engagé, la méthode d&apos;ouverture change
+              complètement selon le type de serrure installée (cylindre standard,
+              multipoints, modèle ancien). C&apos;est la première chose que je
+              vérifie en arrivant, avant même de sortir un outil.
+            </p>
+          </div>
         </div>
 
         <div>
-          <h2 id="double-cle" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="double-cle">
             Cherchez un double de clé ou un accès alternatif
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Avant d&apos;appeler, demandez-vous si un proche, un voisin ou un membre
             de la famille ne détient pas un double. Vérifiez aussi s&apos;il existe
@@ -168,9 +186,9 @@ export default function PorteQuiClaquePage() {
         </div>
 
         <div>
-          <h2 id="ne-forcez-pas" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={3} id="ne-forcez-pas">
             Ne tentez pas de forcer la porte vous-même
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Glisser une carte, un tournevis ou tout autre objet dans l&apos;huisserie
             abîme presque toujours le dormant ou le battant, même sans succès. Résultat :
@@ -182,9 +200,9 @@ export default function PorteQuiClaquePage() {
         </div>
 
         <div>
-          <h2 id="prix-appel" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="prix-appel">
             Méfiez-vous des annonces avec un prix affiché très bas
-          </h2>
+          </ArticleSectionHeading>
           <p>
             En cherchant « serrurier urgence » dans l&apos;affolement, on tombe
             souvent sur des prix d&apos;appel très attractifs (30 ou 40 € par
@@ -210,9 +228,9 @@ export default function PorteQuiClaquePage() {
         />
 
         <div>
-          <h2 id="methode-radio" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="methode-radio">
             Comment un serrurier ouvre une porte claquée sans l&apos;abîmer
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Sur la plupart des portes, j&apos;utilise la méthode radio, aussi appelée
             technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée
@@ -235,9 +253,9 @@ export default function PorteQuiClaquePage() {
         </div>
 
         <div>
-          <h2 id="arrivee" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="arrivee">
             Ce que je fais concrètement à mon arrivée
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Je commence toujours par un diagnostic rapide de la serrure et du type de
             verrouillage avant de choisir la méthode d&apos;ouverture, et
@@ -253,6 +271,10 @@ export default function PorteQuiClaquePage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="La première question que je pose au téléphone, c'est toujours : la poignée s'actionne-t-elle ? Neuf appels sur dix se règlent en trente secondes rien qu'avec cette question, avant même de me déplacer." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Essayez la poignée avant d'appeler : une porte claquée n'est pas toujours verrouillée.",
@@ -264,7 +286,9 @@ export default function PorteQuiClaquePage() {
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={7} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 

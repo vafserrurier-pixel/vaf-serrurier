@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleToc from "@/components/ArticleToc";
 import ArticleTable from "@/components/ArticleTable";
+import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -50,7 +52,7 @@ const faqItems = [
   {
     question: "Le nombre de points est-il lié à la certification A2P ?",
     answer:
-      "Non, ce sont deux choses différentes. Le nombre de points décrit la répartition mécanique du verrouillage, tandis que l'A2P certifie un niveau de résistance testé en laboratoire. Le détail est expliqué dans mon article sur la certification A2P.",
+      "Non, ce sont deux choses différentes. Le nombre de points décrit la répartition mécanique du verrouillage, tandis que l'A2P certifie un niveau de résistance testé en laboratoire (5, 10 ou 15 minutes selon le nombre d'étoiles). Le détail est expliqué dans mon article sur la certification A2P.",
   },
   {
     question: "Faut-il changer toute la porte pour passer à plus de points ?",
@@ -102,7 +104,7 @@ export default function SerrureMultipointsPage() {
         Serrure 3, 5 ou 7 points : laquelle choisir ?
       </h1>
       <p className="flex items-center gap-1.5 text-xs text-slate mt-3">
-        <ClockIcon className="w-3.5 h-3.5" />6 min de lecture &middot; Mis à jour le 12 septembre 2026
+        <ClockIcon className="w-3.5 h-3.5" />7 min de lecture &middot; Mis à jour le 12 septembre 2026
       </p>
 
       <div className="mt-6">
@@ -135,9 +137,9 @@ export default function SerrureMultipointsPage() {
         </p>
 
         <div>
-          <h2 id="fonctionnement" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={1} id="fonctionnement">
             Comment fonctionne une serrure multipoints
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Contrairement à une serrure à un point qui verrouille la porte à un seul
             endroit, une serrure multipoints ancre le battant dans son dormant en
@@ -160,35 +162,53 @@ export default function SerrureMultipointsPage() {
         </div>
 
         <div>
-          <h2 id="plus-de-points" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={2} id="plus-de-points">
             Plus de points, plus de sécurité ? Pas tout à fait
-          </h2>
-          <p>
-            Le passage d&apos;un point à trois points constitue un vrai bond de
-            sécurité, car il empêche la porte de se déformer localement sous l&apos;effet
-            d&apos;un pied-de-biche. En revanche, la sécurité n&apos;augmente pas de
-            façon strictement proportionnelle au nombre de points. Passer de 3 à 5
-            points améliore surtout la répartition des efforts sur une porte large ou
-            haute, mais ne compense ni un cylindre bas de gamme, ni un bâti fragile
-            autour de la porte. Une excellente serrure posée sur un chambranle abîmé
-            reste vulnérable.
-          </p>
+          </ArticleSectionHeading>
+          <div className="mt-2">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Le vrai saut : de 1 à 3 points
+            </h3>
+            <p>
+              Le passage d&apos;un point à trois points constitue un vrai bond de
+              sécurité, car il empêche la porte de se déformer localement sous l&apos;effet
+              d&apos;un pied-de-biche. C&apos;est la marche la plus significative de
+              toute l&apos;échelle.
+            </p>
+          </div>
+          <div className="mt-4">
+            <h3 className="font-heading font-semibold text-navy mb-1">
+              Le gain marginal : au-delà de 3 points
+            </h3>
+            <p>
+              La sécurité n&apos;augmente pas de façon strictement proportionnelle au
+              nombre de points. Passer de 3 à 5 points améliore surtout la répartition
+              des efforts sur une porte large ou haute, mais ne compense ni un cylindre
+              bas de gamme, ni un bâti fragile autour de la porte. Une excellente
+              serrure posée sur un chambranle abîmé reste vulnérable.
+            </p>
+          </div>
         </div>
 
-        <ArticleTable
-          caption="Comparatif indicatif des trois niveaux de serrure multipoints."
-          headers={["Niveau", "Points d'ancrage", "Cas d'usage typique"]}
-          rows={[
-            ["3 points", "Central + haut + bas", "Appartement standard, porte de taille classique"],
-            ["5 points", "3 points + intermédiaires/latéraux", "Maison individuelle, porte large ou haute (+2,10 m), rez-de-chaussée exposé"],
-            ["7 points", "Répartis sur toute la hauteur", "Grande porte, accès isolé, besoin de sécurité renforcée"],
-          ]}
-        />
+        <div>
+          <ArticleSectionHeading number={3} id="comparatif">
+            Comparatif des trois niveaux
+          </ArticleSectionHeading>
+          <ArticleTable
+            caption="Comparatif indicatif des trois niveaux de serrure multipoints."
+            headers={["Niveau", "Points d'ancrage", "Cas d'usage typique"]}
+            rows={[
+              ["3 points", "Central + haut + bas", "Appartement standard, porte de taille classique"],
+              ["5 points", "3 points + intermédiaires/latéraux", "Maison individuelle, porte large ou haute (+2,10 m), rez-de-chaussée exposé"],
+              ["7 points", "Répartis sur toute la hauteur", "Grande porte, accès isolé, besoin de sécurité renforcée"],
+            ]}
+          />
+        </div>
 
         <div>
-          <h2 id="cas-usage" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={4} id="cas-usage">
             Dans quel cas chaque niveau est pertinent
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Pour la majorité des appartements avec une porte standard, une{" "}
             <Link href="/serrure-carenee-nice/" className="text-steel underline">
@@ -204,9 +224,9 @@ export default function SerrureMultipointsPage() {
         </div>
 
         <div>
-          <h2 id="pourquoi-porte" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={5} id="pourquoi-porte">
             Pourquoi la porte d&apos;entrée mérite cette attention
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Selon les{" "}
             <a
@@ -220,9 +240,10 @@ export default function SerrureMultipointsPage() {
             , la porte d&apos;entrée principale reste le point d&apos;accès le plus utilisé lors
             des cambriolages et tentatives de cambriolage en France, largement devant
             les fenêtres ou les autres accès. Et le facteur temps compte réellement :
-            la grande majorité des cambrioleurs abandonnent leur tentative en quelques
-            minutes si la porte résiste. C&apos;est tout l&apos;intérêt d&apos;une
-            serrure adaptée, plutôt que la plus chère du catalogue.
+            selon les tests du CNPP, plus de 80% des cambrioleurs abandonnent leur
+            tentative après seulement 5 minutes de résistance. C&apos;est tout
+            l&apos;intérêt d&apos;une serrure adaptée, plutôt que la plus chère du
+            catalogue.
           </p>
         </div>
 
@@ -237,9 +258,9 @@ export default function SerrureMultipointsPage() {
         </div>
 
         <div>
-          <h2 id="bati" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={6} id="bati">
             Le rôle du bâti, souvent négligé
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Une serrure multipoints ne travaille jamais seule : elle s&apos;ancre dans
             la gâche et dans le cadre de la porte. Si le chambranle est fissuré, mal
@@ -258,9 +279,9 @@ export default function SerrureMultipointsPage() {
         </div>
 
         <div>
-          <h2 id="conseil" className="font-heading text-xl font-bold text-navy mb-2 scroll-mt-24">
+          <ArticleSectionHeading number={7} id="conseil">
             Mon conseil pour éviter le suréquipement
-          </h2>
+          </ArticleSectionHeading>
           <p>
             Je diagnostique toujours la porte avant de recommander un nombre de points :
             l&apos;état du bâti, la largeur et la hauteur du battant, le niveau de
@@ -278,6 +299,10 @@ export default function SerrureMultipointsPage() {
       </div>
 
       <div className="mt-10">
+        <ArticleOpinion quote="Je ne vends jamais un nombre de points, je vends un diagnostic. Une 7 points sur une porte fragile en étage, c'est de l'argent dépensé pour rien, et je le dis même si ça me fait vendre moins cher." />
+      </div>
+
+      <div className="mt-10">
         <ArticleKeyTakeaways
           points={[
             "Le vrai gain de sécurité se joue entre 1 et 3 points, pas au-delà de façon proportionnelle.",
@@ -289,7 +314,9 @@ export default function SerrureMultipointsPage() {
       </div>
 
       <div className="mt-10">
-        <h2 className="font-heading text-xl font-bold text-navy mb-4">Foire aux questions</h2>
+        <ArticleSectionHeading number={8} id="faq">
+          Foire aux questions
+        </ArticleSectionHeading>
         <FaqAccordion items={faqItems} />
       </div>
 
