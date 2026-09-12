@@ -19,6 +19,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/que-faire-apres-un-cambriolage/";
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Que faire après un cambriolage : les bons réflexes | VAF",
   description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
+  article: { author: business.firstName, readingTime: "8 min" },
 });
 
 const toc = [
@@ -79,6 +81,7 @@ const faqItems = [
 ];
 
 export default function QueFaireApresUnCambriolagePage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -89,6 +92,7 @@ export default function QueFaireApresUnCambriolagePage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -109,6 +113,12 @@ export default function QueFaireApresUnCambriolagePage() {
               { name: "Que faire après un cambriolage", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Que faire après un cambriolage : les bons réflexes
           </h1>
@@ -140,7 +150,13 @@ export default function QueFaireApresUnCambriolagePage() {
               Découvrir sa porte forcée ou son logement fouillé est un choc, et la première
               réaction est rarement la bonne. Voici l&apos;ordre des démarches recommandé
               par les forces de l&apos;ordre, pour ne rien oublier et ne pas compromettre
-              votre dossier d&apos;assurance.
+              votre dossier d&apos;assurance. Si votre porte a simplement claqué sans
+              trace d&apos;effraction, ce n&apos;est pas un cambriolage : voir plutôt mon
+              article sur{" "}
+              <Link href="/blog/porte-qui-claque-avant-appeler-serrurier/" className="text-steel underline">
+                les bons réflexes face à une porte qui claque
+              </Link>
+              .
             </p>
 
             <div>
@@ -186,9 +202,16 @@ export default function QueFaireApresUnCambriolagePage() {
               <p className="text-slate leading-relaxed">
                 Rendez-vous au commissariat ou à la brigade de gendarmerie la plus proche,
                 muni d&apos;une pièce d&apos;identité et, si possible, d&apos;une liste des
-                objets volés avec leur valeur estimée. Le dépôt de plainte est aussi
-                possible en ligne sur le site du ministère de l&apos;Intérieur. Ce document
-                sera indispensable pour votre déclaration à l&apos;assurance.
+                objets volés avec leur valeur estimée. Le dépôt de plainte est aussi possible{" "}
+                <a
+                  href="https://plainte-en-ligne.masecurite.interieur.gouv.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-steel underline"
+                >
+                  en ligne sur le site officiel du ministère de l&apos;Intérieur
+                </a>
+                . Ce document sera indispensable pour votre déclaration à l&apos;assurance.
               </p>
               <div className="mt-4">
                 <ArticleWarning title="Une main courante ne suffit pas">

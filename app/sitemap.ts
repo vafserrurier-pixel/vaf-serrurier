@@ -38,7 +38,6 @@ const paths = [
   "serrurier-nice-ouest",
   "contact",
   "blog",
-  "remplacer-coffre-a-larder",
   "mentions-legales",
   "conditions-generales-dutilisation",
   "conditions-generales-de-vente",

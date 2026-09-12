@@ -19,6 +19,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/serrurier-agree-assurances-vrai-faux/";
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "« Agréé toutes assurances » : la vérité sur cette formule | VAF",
   description: "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
+  article: { author: business.firstName, readingTime: "6 min" },
 });
 
 const toc = [
@@ -72,6 +74,7 @@ const faqItems = [
 ];
 
 export default function AgreeAssurancesPage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -82,6 +85,7 @@ export default function AgreeAssurancesPage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -102,6 +106,12 @@ export default function AgreeAssurancesPage() {
               { name: "« Agréé toutes assurances »", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             « Agréé toutes assurances » : ce que cette formule ne veut pas dire
           </h1>
@@ -180,10 +190,14 @@ export default function AgreeAssurancesPage() {
                 dossier de sinistre, c&apos;est une facture détaillée et conforme (avec
                 SIRET, description précise de l&apos;intervention, matériel posé). Parfois,
                 c&apos;est aussi la preuve que l&apos;équipement installé répond à une norme
-                reconnue comme la certification A2P. Chaque contrat a ses propres
-                exigences : le plus sûr reste de vérifier directement les conditions du
-                vôtre auprès de votre assureur plutôt que de se fier à un sigle affiché
-                sur une camionnette.
+                reconnue comme la{" "}
+                <Link href="/blog/certification-a2p-serrure/" className="text-steel underline">
+                  certification A2P
+                </Link>
+                , qui se vérifie elle aussi de façon concrète, contrairement à un sigle
+                affiché sur une camionnette. Chaque contrat a ses propres exigences : le
+                plus sûr reste de vérifier directement les conditions du vôtre auprès de
+                votre assureur.
               </p>
             </div>
 

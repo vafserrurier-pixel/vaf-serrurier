@@ -19,6 +19,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/certification-a2p-serrure/";
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Certification A2P : ce que ça change pour votre serrure | VAF",
   description: "A2P, une ou trois étoiles : ce que signifie réellement cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+  article: { author: business.firstName, readingTime: "8 min" },
 });
 
 const toc = [
@@ -73,6 +75,7 @@ const faqItems = [
 ];
 
 export default function CertificationA2pPage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -83,6 +86,7 @@ export default function CertificationA2pPage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -103,6 +107,12 @@ export default function CertificationA2pPage() {
               { name: "Certification A2P", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Certification A2P : ce que ce sigle change vraiment pour votre serrure
           </h1>
@@ -227,8 +237,12 @@ export default function CertificationA2pPage() {
                 certification revient souvent dans les conditions demandées par les
                 assureurs pour les résidences secondaires. Je vous invite à vérifier les
                 conditions exactes de votre propre contrat plutôt que de vous fier à une
-                règle générale, chaque assureur
-                fixant ses propres critères.
+                règle générale, chaque assureur fixant ses propres critères — voir aussi
+                mon article sur{" "}
+                <Link href="/blog/serrurier-agree-assurances-vrai-faux/" className="text-steel underline">
+                  ce qui se vérifie réellement chez un serrurier
+                </Link>
+                .
               </p>
             </div>
 

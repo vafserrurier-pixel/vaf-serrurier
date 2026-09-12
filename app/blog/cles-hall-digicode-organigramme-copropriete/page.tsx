@@ -18,6 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/cles-hall-digicode-organigramme-copropriete/";
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Clés de hall, digicode, organigramme : qui décide en copropriété ? | VAF",
   description: "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
+  article: { author: business.firstName, readingTime: "7 min" },
 });
 
 const toc = [
@@ -72,6 +74,7 @@ const faqItems = [
 ];
 
 export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -82,6 +85,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-09-03",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -102,6 +106,12 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
               { name: "Clés de hall, digicode, organigramme", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Clés de hall, digicode, organigramme : qui décide en copropriété ?
           </h1>
@@ -218,7 +228,12 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                 communes. Une exception fréquente : si la dégradation est causée par un
                 tiers identifié (un locataire, un prestataire), c&apos;est à cette personne
                 ou à son assurance de rembourser la copropriété, pas aux autres
-                copropriétaires de l&apos;absorber dans les charges.
+                copropriétaires de l&apos;absorber dans les charges — la même logique de
+                responsabilité que pour une{" "}
+                <Link href="/blog/qui-paie-changement-serrure-location/" className="text-steel underline">
+                  serrure privative en location
+                </Link>
+                .
               </p>
             </div>
 

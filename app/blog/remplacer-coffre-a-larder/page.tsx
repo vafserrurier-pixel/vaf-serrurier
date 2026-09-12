@@ -18,13 +18,15 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/remplacer-coffre-a-larder/";
+const HREF = "/blog/remplacer-coffre-a-larder/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Remplacer un coffre à larder : guide simple et propre | VAF",
   description: "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
+  article: { author: business.firstName, readingTime: "7 min" },
 });
 
 const toc = [
@@ -72,6 +74,7 @@ const faqItems = [
 ];
 
 export default function RemplacerCoffreALarderPage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -82,6 +85,7 @@ export default function RemplacerCoffreALarderPage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-08",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -102,6 +106,12 @@ export default function RemplacerCoffreALarderPage() {
               { name: "Remplacer un coffre à larder", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Comment remplacer un coffre à larder : guide simple et propre
           </h1>
@@ -159,6 +169,12 @@ export default function RemplacerCoffreALarderPage() {
               <p className="text-slate leading-relaxed mt-4">
                 Je remplace le coffre quand la poignée devient molle, que la clé accroche
                 malgré un cylindre changé, ou après une tentative d&apos;effraction.
+                C&apos;est aussi l&apos;occasion de vérifier si le nombre de points de
+                fermeture reste adapté ; voir mon article sur{" "}
+                <Link href="/blog/serrure-3-5-7-points-que-choisir/" className="text-steel underline">
+                  le choix entre 3, 5 ou 7 points
+                </Link>
+                .
               </p>
             </div>
 

@@ -150,6 +150,8 @@ export function blogPostingSchema(opts: {
   url: string;
   datePublished: string;
   dateModified: string;
+  /** Photo reelle d'en-tete de l'article. Retombe sur le logo si absente. */
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -157,7 +159,7 @@ export function blogPostingSchema(opts: {
     headline: opts.headline,
     description: opts.description,
     url: opts.url,
-    image: `${business.domain}/logo-full.png`,
+    image: opts.image ? `${business.domain}${opts.image}` : `${business.domain}/logo-full.png`,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
     author: {

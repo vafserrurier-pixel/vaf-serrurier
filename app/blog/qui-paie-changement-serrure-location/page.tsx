@@ -18,6 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/qui-paie-changement-serrure-location/";
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Location : qui paie le changement de serrure ? | VAF",
   description: "Clés perdues, cambriolage, location saisonnière, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice.",
+  article: { author: business.firstName, readingTime: "9 min" },
 });
 
 const toc = [
@@ -73,6 +75,7 @@ const faqItems = [
 ];
 
 export default function QuiPaieChangementSerrureLocationPage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -83,6 +86,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-09-08",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -103,6 +107,12 @@ export default function QuiPaieChangementSerrureLocationPage() {
               { name: "Qui paie le changement de serrure", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Location : qui paie le changement de serrure ?
           </h1>
@@ -343,7 +353,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
                 n&apos;ai pas vocation à arbitrer ce type de désaccord : mon rôle
                 s&apos;arrête à l&apos;intervention et à la facture qui la documente. Pour
                 les copropriétés, un cas particulier est traité dans mon article sur les{" "}
-                <Link href="/agences-syndics-nice/" className="text-steel underline">
+                <Link href="/blog/cles-hall-digicode-organigramme-copropriete/" className="text-steel underline">
                   clés de hall et digicodes en copropriété
                 </Link>
                 .

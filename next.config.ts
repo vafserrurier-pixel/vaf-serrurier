@@ -50,6 +50,13 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        // Uniformisation de la structure des articles de blog : tous sous
+        // /blog/, celui-ci etait le seul a la racine (2026-09-12).
+        source: "/remplacer-coffre-a-larder/",
+        destination: "/blog/remplacer-coffre-a-larder/",
+        permanent: true,
+      },
+      {
         source: "/politique-de-cookies-ue/",
         destination: "/politique-de-confidentialite/",
         permanent: true,

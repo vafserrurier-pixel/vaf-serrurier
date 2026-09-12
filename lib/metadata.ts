@@ -18,6 +18,16 @@ export function buildMetadata(opts: {
   description: string;
   /** Empêche l'indexation (robots noindex,nofollow) : réservé aux brouillons non publiés. */
   noIndex?: boolean;
+  /**
+   * Renseigne les champs twitter:label1/data1 (auteur) et
+   * twitter:label2/data2 (temps de lecture) affichés sous une carte Twitter
+   * d'article. Next.js n'a pas de champ type dédié pour ces balises : elles
+   * passent par `other`, qui génère des <meta name="..." content="..."> bruts.
+   */
+  article?: {
+    author: string;
+    readingTime: string;
+  };
 }): Metadata {
   const url = `${business.domain}${opts.path}`;
   return {
@@ -40,5 +50,15 @@ export function buildMetadata(opts: {
       title: opts.title,
       description: opts.description,
     },
+    ...(opts.article
+      ? {
+          other: {
+            "twitter:label1": "Écrit par",
+            "twitter:data1": opts.article.author,
+            "twitter:label2": "Temps de lecture",
+            "twitter:data2": opts.article.readingTime,
+          },
+        }
+      : {}),
   };
 }

@@ -18,6 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/serrure-3-5-7-points-que-choisir/";
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Serrure 3, 5 ou 7 points : laquelle choisir ? | VAF",
   description: "Différence réelle entre une serrure 3, 5 et 7 points, et comment choisir le bon niveau selon votre porte. Explications claires, sans survendre.",
+  article: { author: business.firstName, readingTime: "7 min" },
 });
 
 const toc = [
@@ -72,6 +74,7 @@ const faqItems = [
 ];
 
 export default function SerrureMultipointsPage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -82,6 +85,7 @@ export default function SerrureMultipointsPage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -102,6 +106,12 @@ export default function SerrureMultipointsPage() {
               { name: "Serrure 3, 5 ou 7 points", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Serrure 3, 5 ou 7 points : laquelle choisir ?
           </h1>
@@ -162,9 +172,12 @@ export default function SerrureMultipointsPage() {
                   <Link href="/serrure-carenee-nice/" className="text-steel underline">
                     serrure carénée 5 points
                   </Link>{" "}
-                  combine ces deux avantages. Encastrée (à larder), le mécanisme disparaît
-                  entièrement dans l&apos;épaisseur de la porte, sans rien de visible une
-                  fois posée.
+                  combine ces deux avantages. Encastrée, le mécanisme (un{" "}
+                  <Link href="/blog/remplacer-coffre-a-larder/" className="text-steel underline">
+                    coffre à larder
+                  </Link>
+                  ) disparaît entièrement dans l&apos;épaisseur de la porte, sans rien de
+                  visible une fois posée.
                 </p>
               </div>
             </div>
@@ -258,10 +271,18 @@ export default function SerrureMultipointsPage() {
                 , la porte d&apos;entrée principale reste le point d&apos;accès le plus utilisé lors
                 des cambriolages et tentatives de cambriolage en France, largement devant
                 les fenêtres ou les autres accès. Et le facteur temps compte réellement :
-                selon les tests du CNPP, plus de 80% des cambrioleurs abandonnent leur
-                tentative après seulement 5 minutes de résistance. C&apos;est tout
-                l&apos;intérêt d&apos;une serrure adaptée, plutôt que la plus chère du
-                catalogue.
+                selon les tests du{" "}
+                <a
+                  href="https://www.cnpp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-steel underline"
+                >
+                  CNPP
+                </a>
+                , la plupart des cambrioleurs abandonnent leur tentative après quelques
+                minutes de résistance. C&apos;est tout l&apos;intérêt d&apos;une serrure
+                adaptée, plutôt que la plus chère du catalogue.
               </p>
             </div>
 

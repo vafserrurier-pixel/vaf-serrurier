@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/serrurier-nice-porte-blindee-multipoints.webp",
   },
   {
-    href: "/remplacer-coffre-a-larder/",
+    href: "/blog/remplacer-coffre-a-larder/",
     title: "Comment remplacer un coffre à larder : guide simple et propre",
     excerpt:
       "Remplacer un coffre à larder demande de la précision : bonnes mesures, mécanisme adapté, fermeture qui joue bien. Voici comment je m'y prends.",

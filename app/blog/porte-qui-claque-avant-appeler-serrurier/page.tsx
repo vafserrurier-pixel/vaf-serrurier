@@ -19,6 +19,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { business } from "@/lib/business";
 import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/porte-qui-claque-avant-appeler-serrurier/";
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Porte qui claque : les bons réflexes avant d'appeler | VAF",
   description: "Porte claquée à Nice : les vérifications à faire avant d'appeler, ce qu'il ne faut pas tenter seul, et comment reconnaître une annonce à prix d'appel.",
+  article: { author: business.firstName, readingTime: "7 min" },
 });
 
 const toc = [
@@ -72,6 +74,7 @@ const faqItems = [
 ];
 
 export default function PorteQuiClaquePage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
       <JsonLd
@@ -82,6 +85,7 @@ export default function PorteQuiClaquePage() {
           url: `${business.domain}${HREF}`,
           datePublished: "2026-08-09",
           dateModified: "2026-09-12",
+          image: post.image,
         })}
       />
       <JsonLd
@@ -102,6 +106,12 @@ export default function PorteQuiClaquePage() {
               { name: "Porte qui claque", href: HREF },
             ]}
           />
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+
+            {post.category}
+
+          </span>
+
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Porte qui claque : les bons réflexes avant d&apos;appeler un serrurier
           </h1>
@@ -210,7 +220,13 @@ export default function PorteQuiClaquePage() {
                 l&apos;intervention professionnelle qui suit coûte plus cher, parce
                 qu&apos;il faut aussi réparer les dégâts causés par la tentative. Un
                 diagnostic correct avant toute manipulation évite ce genre de mauvaise
-                surprise.
+                surprise. Si la porte a réellement été forcée par quelqu&apos;un
+                d&apos;autre plutôt que simplement claquée, les démarches à suivre sont
+                différentes : voir mon article{" "}
+                <Link href="/blog/que-faire-apres-un-cambriolage/" className="text-steel underline">
+                  que faire après un cambriolage
+                </Link>
+                .
               </p>
             </div>
 
