@@ -109,6 +109,7 @@ export default function ServicePageTemplate({
   headingScale = "default",
   heroTrustNote,
   sectionsHeading,
+  preTitleBadge,
 }: {
   h1: string;
   lead: string;
@@ -153,6 +154,8 @@ export default function ServicePageTemplate({
   heroTrustNote?: ReactNode;
   /** Titre H2 optionnel affiche au-dessus des sections principales, pour introduire/justifier le groupe (utile surtout avec sectionsVariant="cards"). */
   sectionsHeading?: string;
+  /** Badge optionnel affiche avant le H1 (ex. positionnement B2B), au-dessus du badge de disponibilite. */
+  preTitleBadge?: ReactNode;
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
@@ -196,6 +199,7 @@ export default function ServicePageTemplate({
                 { name: breadcrumbLabel, href: path },
               ]}
             />
+            {preTitleBadge && <div className="mb-2">{preTitleBadge}</div>}
             <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
               {t.badge}
