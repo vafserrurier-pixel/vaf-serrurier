@@ -92,6 +92,7 @@ export default function ServicePageTemplate({
   sectionsVariant = "default",
   headingScale = "default",
   heroTrustNote,
+  sectionsHeading,
 }: {
   h1: string;
   lead: string;
@@ -133,6 +134,8 @@ export default function ServicePageTemplate({
   headingScale?: "default" | "lg";
   /** Bandeau de confiance optionnel (avis/anciennete) affiche sous les boutons du hero. */
   heroTrustNote?: ReactNode;
+  /** Titre H2 optionnel affiche au-dessus des sections principales, pour introduire/justifier le groupe (utile surtout avec sectionsVariant="cards"). */
+  sectionsHeading?: string;
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
@@ -247,23 +250,28 @@ export default function ServicePageTemplate({
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
+          {sectionsHeading && (
+            <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>
+              {sectionsHeading}
+            </h2>
+          )}
           {sectionsVariant === "cards" ? (
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {sections.map((section) => (
                 <div
                   key={section.heading}
-                  className="bg-white rounded-xl border border-navy/10 shadow-sm p-6"
+                  className="bg-cream rounded-xl border border-navy/10 border-l-4 border-l-steel shadow-sm p-4"
                 >
                   {section.Icon && (
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel/10 text-steel mb-3">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-navy text-cream mb-2">
                       {section.Icon}
                     </span>
                   )}
-                  <h2 className={`font-heading ${h2Size} font-bold text-navy mb-2`}>
+                  <h2 className="font-heading text-lg font-bold text-navy mb-1.5">
                     {section.heading}
                   </h2>
                   {section.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-slate leading-relaxed mb-2">
+                    <p key={index} className="text-slate text-sm leading-relaxed mb-2">
                       {paragraph}
                     </p>
                   ))}

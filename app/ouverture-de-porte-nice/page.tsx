@@ -224,9 +224,6 @@ const guideContent = (
         <li>Un cylindre certifié A2P ou un modèle récent à goupilles actives, plus résistant au crochetage.</li>
         <li>Une serrure multipoints avec plusieurs pênes déjà engagés, qui multiplie les points à manipuler.</li>
         <li>Un cylindre visiblement grippé par la rouille ou une tentative de forçage préalable.</li>
-        <li className="text-navy/60 italic">
-          [DÉTAIL TECHNIQUE À CONFIRMER AVEC BENOÎT : seuil de temps au-delà duquel je passe systématiquement au perçage plutôt que de prolonger le crochetage]
-        </li>
       </ul>
     </div>
 
@@ -239,7 +236,7 @@ const guideContent = (
         headers={["Situation", "Prix", "Durée indicative"]}
         rows={[
           ["Porte claquée (simple)", "149 € TTC", "Quelques minutes en général"],
-          ["Porte blindée claquée", "[À confirmer avec Benoît]", "[À confirmer avec Benoît]"],
+          ["Porte blindée claquée", "149 € TTC", "Quelques minutes en général"],
           ["Porte verrouillée standard (cylindre européen)", "149 € TTC", "Variable selon l'état du cylindre"],
           ["Porte verrouillée haute sécurité (ex. Fichet)", "189 € TTC", "Diagnostic sur place, peut demander plus de temps"],
           ["Clé cassée dans la serrure", "à partir de 149 € TTC", "Quelques minutes à quelques dizaines de minutes"],
@@ -276,35 +273,35 @@ export const metadata: Metadata = buildMetadata({
 const sectionsFr = [
   {
     heading: "Porte claquée n'est pas porte verrouillée",
-    Icon: <DoorIcon className="w-5 h-5" />,
+    Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
       "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée (fermée par le simple mouvement du battant, sans tour de clé) se résout très souvent sans aucune casse. J'utilise le plus souvent la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage dans 99% des cas. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
     ],
   },
   {
     heading: "Porte verrouillée à clé",
-    Icon: <KeyIcon className="w-5 h-5" />,
+    Icon: <KeyIcon className="w-4 h-4" />,
     paragraphs: [
       "Ce cas demande davantage de précautions, selon le type de serrure installée : cylindre standard, serrure multipoints ou modèle plus ancien. Si vos clés sont perdues ou volées, j'en profite souvent pour vous proposer un remplacement de cylindre. Cette solution règle le problème d'accès et améliore la sécurité en même temps, plutôt que de reproduire une clé qui pourrait circuler ailleurs.",
     ],
   },
   {
     heading: "Clé cassée ou serrure bloquée",
-    Icon: <WrenchIcon className="w-5 h-5" />,
+    Icon: <WrenchIcon className="w-4 h-4" />,
     paragraphs: [
       "J'extrais proprement le morceau de clé resté dans le cylindre, avec un outil d'extraction adapté, sans forcer ni abîmer le mécanisme. Le perçage du cylindre reste une solution de tout dernier recours, uniquement si aucune autre méthode n'aboutit. Une serrure bloquée peut aussi venir d'un cylindre grippé par l'humidité ou d'un frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours moins cher qu'un dépannage de nuit un week-end.",
     ],
   },
   {
     heading: "Porte blindée verrouillée",
-    Icon: <ShieldIcon className="w-5 h-5" />,
+    Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
       "J'adapte ma méthode sans jamais transiger sur la qualité de l'ouverture, ni forcer sur une porte blindée conçue justement pour résister. L'objectif reste le même : rester propre, respecter la structure du bâti, et ne pas transformer une ouverture en réparation lourde.",
     ],
   },
   {
     heading: "Une pièce d'identité toujours demandée",
-    Icon: <HandshakeIcon className="w-5 h-5" />,
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
       <>
         Avant d&apos;ouvrir une porte verrouillée, je vérifie votre identité et
@@ -478,6 +475,7 @@ export default function OuvertureDePorteNicePage() {
           alt: "Porte d'entrée avec nouvelle serrure installée par un serrurier à Nice",
         },
         sectionsVariant: "cards",
+        sectionsHeading: "Ce qu'il faut savoir avant votre intervention",
         headingScale: "lg",
         heroTrustNote,
         extra: (
