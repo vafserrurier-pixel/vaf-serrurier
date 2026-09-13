@@ -28,6 +28,13 @@ export type ServiceSection = {
    * elements React, pas des fonctions.
    */
   Icon?: ReactNode;
+  /**
+   * Accent visuel optionnel pour distinguer une carte qui le justifie
+   * reellement (urgence, information legale importante) des autres cartes
+   * du meme groupe. N'utiliser que sur les cartes qui le meritent vraiment :
+   * applique partout, l'effet de hierarchie disparait.
+   */
+  accent?: "urgent";
 };
 export type ServiceImage = { src: string; alt: string };
 
@@ -250,33 +257,46 @@ export default function ServicePageTemplate({
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
-          {sectionsHeading && (
-            <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>
-              {sectionsHeading}
-            </h2>
-          )}
           {sectionsVariant === "cards" ? (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {sections.map((section) => (
-                <div
-                  key={section.heading}
-                  className="bg-cream rounded-xl border border-navy/10 border-l-4 border-l-steel shadow-sm p-4"
-                >
-                  {section.Icon && (
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-navy text-cream mb-2">
-                      {section.Icon}
-                    </span>
-                  )}
-                  <h2 className="font-heading text-lg font-bold text-navy mb-1.5">
-                    {section.heading}
-                  </h2>
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-slate text-sm leading-relaxed mb-2">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              ))}
+            <div className="bg-cream rounded-2xl p-6 sm:p-8">
+              {sectionsHeading && (
+                <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>
+                  {sectionsHeading}
+                </h2>
+              )}
+              <div className="grid gap-4 sm:grid-cols-2">
+                {sections.map((section) => (
+                  <div
+                    key={section.heading}
+                    className={`relative bg-white rounded-xl border shadow-sm p-4 ${
+                      section.accent === "urgent" ? "border-urgent/40" : "border-navy/10"
+                    }`}
+                  >
+                    {section.accent === "urgent" && (
+                      <span className="absolute -top-2 -right-2 bg-urgent text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                        Important
+                      </span>
+                    )}
+                    {section.Icon && (
+                      <span
+                        className={`inline-flex items-center justify-center w-8 h-8 rounded-lg mb-2 ${
+                          section.accent === "urgent" ? "bg-urgent/15 text-urgent" : "bg-steel/10 text-steel"
+                        }`}
+                      >
+                        {section.Icon}
+                      </span>
+                    )}
+                    <h2 className="font-heading text-lg font-bold text-navy mb-1.5">
+                      {section.heading}
+                    </h2>
+                    {section.paragraphs.map((paragraph, index) => (
+                      <p key={index} className="text-slate text-sm leading-relaxed mb-2">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           ) : (
             <div className="flex flex-col gap-8">

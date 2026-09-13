@@ -19,12 +19,15 @@ import { ClockIcon } from "./Icons";
 export default function ServiceGuideSection({
   readingMinutes,
   toc,
+  tocAccentColor,
   faq,
   faqTitle = "Questions complémentaires sur ce guide",
   children,
 }: {
   readingMinutes: number;
   toc: ArticleTocItem[];
+  /** Passe-plat vers ArticleLayout/ArticleToc, pour assortir la couleur des numeros du sommaire a celle des titres numerotes du guide (voir ArticleSectionHeading numberStyle="plain"). */
+  tocAccentColor?: "steel" | "urgent";
   faq: FaqItem[];
   faqTitle?: string;
   children: ReactNode;
@@ -39,7 +42,7 @@ export default function ServiceGuideSection({
             {readingMinutes} min de lecture
           </p>
         </div>
-        <ArticleLayout toc={toc}>
+        <ArticleLayout toc={toc} tocAccentColor={tocAccentColor}>
           {children}
           <div>
             <h3 className="font-heading text-xl font-bold text-navy mb-4">{faqTitle}</h3>

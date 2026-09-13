@@ -6,7 +6,19 @@ import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
 import SituationSelector, { type Situation } from "@/components/SituationSelector";
-import { DoorIcon, KeyIcon, WrenchIcon, AlertLockIcon, ShieldIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
+import {
+  DoorIcon,
+  KeyIcon,
+  WrenchIcon,
+  ShieldIcon,
+  HandshakeIcon,
+  StarIcon,
+  KeyQuestionIcon,
+  BrokenKeyIcon,
+  GearIcon,
+  DoubleLockIcon,
+  HeartIcon,
+} from "@/components/Icons";
 import { business } from "@/lib/business";
 import { fallbackReviews } from "@/lib/reviews";
 import { buildMetadata } from "@/lib/metadata";
@@ -19,34 +31,35 @@ const situations: Situation[] = [
     anchorId: "diagnostic",
   },
   {
-    Icon: <KeyIcon className="w-4 h-4" />,
+    Icon: <KeyQuestionIcon className="w-4 h-4" />,
     title: "Clé perdue ou volée",
     text: "Porte verrouillée, sans clé disponible pour l'ouvrir.",
     anchorId: "situation-cle-perdue",
   },
   {
-    Icon: <WrenchIcon className="w-4 h-4" />,
+    Icon: <BrokenKeyIcon className="w-4 h-4" />,
     title: "Clé cassée dans la serrure",
     text: "Le fragment reste coincé dans le cylindre, la clé ne tourne plus.",
     anchorId: "situation-cle-cassee",
   },
   {
-    Icon: <AlertLockIcon className="w-4 h-4" />,
+    Icon: <GearIcon className="w-4 h-4" />,
     title: "Serrure grippée ou bloquée",
     text: "Le mécanisme résiste, avec ou sans clé, souvent après une usure progressive.",
     anchorId: "situation-serrure-grippee",
   },
   {
-    Icon: <ShieldIcon className="w-4 h-4" />,
+    Icon: <DoubleLockIcon className="w-4 h-4" />,
     title: "Porte verrouillée à double tour",
     text: "Le pêne dormant est engagé, la méthode radio ne fonctionne plus.",
     anchorId: "situation-double-tour",
   },
   {
-    Icon: <HandshakeIcon className="w-4 h-4" />,
+    Icon: <HeartIcon className="w-4 h-4" />,
     title: "Personne vulnérable à l'intérieur",
     text: "Enfant, personne âgée ou animal bloqué seul : situation prioritaire, à signaler dès l'appel.",
     anchorId: "prioritaire",
+    priority: true,
   },
 ];
 
@@ -101,13 +114,13 @@ const guideContent = (
       une carte ci-dessous pour aller directement à la section qui vous concerne.
     </p>
 
-    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+    <div className="bg-cream rounded-2xl p-6 border border-navy/10">
       <p className="font-heading font-bold text-navy mb-4">Dans quelle situation êtes-vous ?</p>
       <SituationSelector situations={situations} />
     </div>
 
     <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg">
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg" numberStyle="plain">
         Reconnaître sa situation avant d&apos;appeler
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -121,7 +134,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={2} id="technique" level="h3" size="lg">
+      <ArticleSectionHeading number={2} id="technique" level="h3" size="lg" numberStyle="plain">
         Porte verrouillée sans clé : quelle méthode selon votre cas
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -200,7 +213,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={3} id="prioritaire" level="h3" size="lg">
+      <ArticleSectionHeading number={3} id="prioritaire" level="h3" size="lg" numberStyle="plain">
         Cas prioritaires : personne ou animal à l&apos;intérieur
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -213,7 +226,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="criteres" level="h3" size="lg">
+      <ArticleSectionHeading number={4} id="criteres" level="h3" size="lg" numberStyle="plain">
         Quand une ouverture sans casse devient peu réaliste
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -227,13 +240,15 @@ const guideContent = (
       </ul>
     </div>
 
-    <div>
-      <ArticleSectionHeading number={5} id="tarifs" level="h3" size="lg">
+    <div className="bg-cream rounded-2xl p-6">
+      <ArticleSectionHeading number={5} id="tarifs" level="h3" size="lg" numberStyle="plain">
         Tarifs indicatifs selon votre situation
       </ArticleSectionHeading>
       <ArticleTable
         caption="Majoration de 50% après 19h, le week-end et les jours fériés, dans tous les cas. Détail complet sur ma page tarifs."
         headers={["Situation", "Prix", "Durée indicative"]}
+        zebra="bold"
+        featuredRowIndex={0}
         rows={[
           ["Porte claquée (simple)", "149 € TTC", "Quelques minutes en général"],
           ["Porte blindée claquée", "149 € TTC", "Quelques minutes en général"],
@@ -245,7 +260,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={6} id="apres" level="h3" size="lg">
+      <ArticleSectionHeading number={6} id="apres" level="h3" size="lg" numberStyle="plain">
         Après l&apos;ouverture : faut-il changer le cylindre ?
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -302,6 +317,7 @@ const sectionsFr = [
   {
     heading: "Une pièce d'identité toujours demandée",
     Icon: <HandshakeIcon className="w-4 h-4" />,
+    accent: "urgent" as const,
     paragraphs: [
       <>
         Avant d&apos;ouvrir une porte verrouillée, je vérifie votre identité et
@@ -533,7 +549,7 @@ export default function OuvertureDePorteNicePage() {
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={7} toc={guideToc} faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={7} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),

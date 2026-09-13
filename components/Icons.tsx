@@ -168,3 +168,61 @@ export function StarIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+/** Cle avec point d'interrogation : cle perdue ou volee (disparition). */
+export function KeyQuestionIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <circle cx="7" cy="15" r="3.2" />
+      <path d="M9.3 12.7 14.5 7.5" />
+      <path d="M12 10l1.7 1.7" />
+      <path d="M17.3 4.4a1.7 1.7 0 1 1 2.1 2.6c-.7.5-1.1.9-1.1 1.7" />
+      <circle cx="18.3" cy="10.7" r="0.15" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+/** Cle cassee en deux morceaux, avec un point de rupture visible. */
+export function BrokenKeyIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <circle cx="6" cy="17" r="3" />
+      <path d="M8.8 14.8 11.6 12" />
+      <path d="M9.7 15.7l1.3-1.3" />
+      <path d="M14.3 9.3 12.6 11" />
+      <path d="M15.8 7.8l2.6-2.6" />
+      <path d="M19.4 3.4l1.2 1.2-1 1 1 1-1.2 1.2" />
+    </svg>
+  );
+}
+
+/** Rouage/engrenage : mecanisme grippe ou bloque. */
+export function GearIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <circle cx="12" cy="12" r="3.2" />
+      <path d="M12 3.5v2.6M12 17.9v2.6M20.5 12h-2.6M6.1 12H3.5" />
+      <path d="M17.7 6.3l-1.8 1.8M8.1 15.6l-1.8 1.8M17.7 17.7l-1.8-1.8M8.1 8.4 6.3 6.6" />
+    </svg>
+  );
+}
+
+/** Verrou avec deux traits de pene : porte verrouillee a double tour. */
+export function DoubleLockIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <rect x="5" y="10" width="14" height="11" rx="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+      <path d="M9 14.5h6M9 17.5h6" />
+    </svg>
+  );
+}
+
+/** Coeur : situation vulnerable, personne ou animal a proteger en priorite. */
+export function HeartIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...common} aria-hidden="true">
+      <path d="M12 20s-7.5-4.6-9.7-9.1C.6 7.6 2 4.5 5.1 4A4.6 4.6 0 0 1 12 6.8 4.6 4.6 0 0 1 18.9 4c3.1.5 4.5 3.6 2.8 6.9C19.5 15.4 12 20 12 20Z" />
+    </svg>
+  );
+}

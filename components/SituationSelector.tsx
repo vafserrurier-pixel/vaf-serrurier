@@ -10,6 +10,12 @@ export type Situation = {
   text: string;
   /** Id de l'ancre (h2/h3/h4 avec scroll-mt) vers laquelle le clic doit scroller. */
   anchorId: string;
+  /**
+   * Situation prioritaire (urgence reelle : personne ou animal a l'interieur).
+   * Traitement visuel distinct (accent urgent + badge), reserve aux cas qui
+   * le justifient reellement pour ne pas diluer l'effet de hierarchie.
+   */
+  priority?: boolean;
 };
 
 /**
@@ -28,7 +34,7 @@ export default function SituationSelector({ situations }: { situations: Situatio
 
   return (
     <div className="grid gap-3 sm:grid-cols-2">
-      {situations.map(({ Icon, title, text, anchorId }) => {
+      {situations.map(({ Icon, title, text, anchorId, priority }) => {
         const isSelected = selected === anchorId;
         return (
           <button
@@ -36,15 +42,30 @@ export default function SituationSelector({ situations }: { situations: Situatio
             type="button"
             onClick={() => handleClick(anchorId)}
             aria-pressed={isSelected}
-            className={`flex items-start gap-3 text-left rounded-lg p-3 border transition-colors ${
+            className={`relative flex items-start gap-3 text-left rounded-xl p-3 border transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] active:shadow-none active:translate-y-0 ${
               isSelected
-                ? "bg-steel/10 border-steel"
-                : "border-transparent hover:bg-navy/5 hover:border-navy/10"
+                ? priority
+                  ? "bg-urgent/10 border-urgent"
+                  : "bg-steel/10 border-steel"
+                : priority
+                  ? "bg-urgent/5 border-urgent/30 hover:border-urgent"
+                  : "border-navy/10 hover:border-steel"
             }`}
           >
+            {priority && (
+              <span className="absolute -top-2 -right-2 bg-urgent text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                Priorité
+              </span>
+            )}
             <span
-              className={`inline-flex items-center justify-center w-9 h-9 rounded-full shrink-0 transition-colors ${
-                isSelected ? "bg-steel text-white" : "bg-steel/10 text-steel"
+              className={`inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0 transition-colors ${
+                priority
+                  ? isSelected
+                    ? "bg-urgent text-white"
+                    : "bg-urgent/15 text-urgent"
+                  : isSelected
+                    ? "bg-steel text-white"
+                    : "bg-steel/10 text-steel"
               }`}
             >
               {Icon}
