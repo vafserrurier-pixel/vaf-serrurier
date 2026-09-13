@@ -114,7 +114,7 @@ const guideContent = (
       une carte ci-dessous pour aller directement à la section qui vous concerne.
     </p>
 
-    <div className="bg-cream rounded-2xl p-6 border border-navy/10">
+    <div className="bg-steel/10 rounded-2xl p-6 border border-navy/10">
       <p className="font-heading font-bold text-navy mb-4">Dans quelle situation êtes-vous ?</p>
       <SituationSelector situations={situations} />
     </div>
@@ -240,7 +240,7 @@ const guideContent = (
       </ul>
     </div>
 
-    <div className="bg-cream rounded-2xl p-6">
+    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
       <ArticleSectionHeading number={5} id="tarifs" level="h3" size="lg" numberStyle="plain">
         Tarifs indicatifs selon votre situation
       </ArticleSectionHeading>
@@ -312,6 +312,14 @@ const sectionsFr = [
     Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
       "J'adapte ma méthode sans jamais transiger sur la qualité de l'ouverture, ni forcer sur une porte blindée conçue justement pour résister. L'objectif reste le même : rester propre, respecter la structure du bâti, et ne pas transformer une ouverture en réparation lourde.",
+    ],
+  },
+  {
+    heading: "Cas prioritaire : personne ou animal à l'intérieur",
+    Icon: <HeartIcon className="w-4 h-4" />,
+    accent: "urgent" as const,
+    paragraphs: [
+      "Un enfant, une personne âgée ou un animal seul derrière une porte bloquée change l'ordre des priorités : signalez-le dès l'appel, je l'indique en premier au diagnostic pour adapter la méthode la plus rapide compatible avec la situation, plutôt que la moins destructrice par défaut.",
     ],
   },
   {

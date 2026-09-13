@@ -258,13 +258,13 @@ export default function ServicePageTemplate({
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
           {sectionsVariant === "cards" ? (
-            <div className="bg-cream rounded-2xl p-6 sm:p-8">
+            <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6 sm:p-8">
               {sectionsHeading && (
                 <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>
                   {sectionsHeading}
                 </h2>
               )}
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {sections.map((section) => (
                   <div
                     key={section.heading}
