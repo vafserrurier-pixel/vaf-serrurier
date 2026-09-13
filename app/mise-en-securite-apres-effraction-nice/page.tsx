@@ -5,6 +5,7 @@ import InsuranceBanner from "@/components/InsuranceBanner";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { AlertLockIcon, WrenchIcon, ClockIcon, HandshakeIcon, BoltIcon, ShieldIcon } from "@/components/Icons";
+import { fallbackReviews } from "@/lib/reviews";
 import { buildMetadata } from "@/lib/metadata";
 
 const troisEtapes = [
@@ -121,6 +122,16 @@ const guideContent = (
         façon fiable : dans ce cas, rester en mode provisoire prolonge
         inutilement le risque de récidive.
       </p>
+      <p className="text-slate leading-relaxed mt-3">
+        Une nuance importante selon ce qui a été touché : un remplacement de
+        cylindre suite à une simple perte ou un vol de clé, sans dégât
+        physique sur la porte, restaure immédiatement votre niveau de
+        sécurité d&apos;origine. En revanche, si le bâti, la gâche ou le
+        dormant ont été abîmés pendant la tentative, la porte peut refermer
+        normalement sans que sa résistance réelle soit retrouvée : c&apos;est
+        seulement une fois ces éléments réparés que la sécurité initiale est
+        pleinement rétablie, pas simplement quand la porte se referme.
+      </p>
     </div>
 
     <div>
@@ -138,6 +149,12 @@ const guideContent = (
         <li>
           <strong className="text-navy">Poignée blindée (349 € TTC)</strong> — masque et protège le
           cylindre, un premier effet dissuasif visible dès le palier.
+        </li>
+        <li>
+          <strong className="text-navy">Cornières anti-pince</strong> — profilés métalliques fixés
+          côté serrure qui recouvrent l&apos;interstice entre la porte et le dormant, empêchant
+          d&apos;y glisser un levier (pied-de-biche, tournevis long) pour écarter la porte et faire
+          sauter le pêne.
         </li>
         <li>
           <strong className="text-navy">Cylindre certifié{" "}
@@ -164,6 +181,37 @@ const guideContent = (
           ).
         </li>
       </ol>
+      <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 mt-4">
+        <p className="font-heading font-semibold text-navy text-sm mb-1.5">
+          Un duo souvent pertinent : poignée blindée + cornières anti-pince
+        </p>
+        <p className="text-slate text-sm leading-relaxed">
+          Ensemble, ces deux renforcements couvrent les deux vecteurs
+          d&apos;effraction les plus fréquents sur une porte standard :
+          l&apos;attaque directe du cylindre, et l&apos;arrachement au levier
+          entre porte et dormant. C&apos;est souvent le meilleur rapport
+          protection/investissement avant d&apos;envisager un blindage
+          complet — mais encore une fois, à confirmer selon l&apos;état réel
+          de votre porte, pas de façon systématique.
+        </p>
+      </div>
+      <p className="text-slate leading-relaxed mt-4">
+        Une option complémentaire, moins structurelle mais utile au
+        quotidien : le{" "}
+        <a
+          href="https://www.heracles.fr/heracles-micro-viseur-hispy-2_SKUM83697.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          judas optique numérique
+        </a>{" "}
+        remplace l&apos;œilleton classique par un petit écran : vous voyez
+        qui sonne sans avoir à entrouvrir la porte, un vrai plus après une
+        effraction pour reprendre confiance, ou simplement pour les
+        personnes qui reçoivent des visites à des horaires atypiques. Je
+        peux l&apos;installer en complément de vos autres renforcements.
+      </p>
     </div>
 
     <div>
@@ -176,10 +224,22 @@ const guideContent = (
       <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-2">
         <li>Devis annoncé avant toute intervention, même en pleine urgence.</li>
         <li>Intervention de mise en sécurité, puis réparation ou renforcement selon le diagnostic.</li>
-        <li>Facture détaillée décrivant la nature des dégâts constatés (cylindre, gâche, bâti) et les réparations effectuées, avec le niveau de certification posé si une nouvelle serrure ou porte a été installée.</li>
+        <li>
+          Facture détaillée décrivant la nature des dégâts constatés (cylindre, gâche, bâti) et les
+          réparations effectuées, avec le niveau de certification posé si une nouvelle serrure ou
+          porte a été installée. Cette description factuelle aide votre assureur à qualifier la
+          cause du sinistre (effraction, tentative, vétusté...), une qualification qui conditionne
+          souvent la prise en charge.
+        </li>
         <li>Je vous transmets cette facture, avec une vidéo de l&apos;intervention sur simple demande.</li>
         <li>Vous la joignez à votre déclaration de sinistre auprès de votre assureur.</li>
       </ol>
+      <p className="text-slate leading-relaxed mt-3">
+        Cette facture porte mon SIRET : j&apos;y engage ma responsabilité
+        professionnelle sur les faits constatés, sans me prononcer sur la
+        décision de prise en charge elle-même, qui reste celle de votre
+        assureur.
+      </p>
       <p className="text-slate leading-relaxed mt-3">
         Je ne vous annonce volontairement aucun plafond de remboursement ni
         aucun montant de franchise : ces éléments dépendent entièrement de
@@ -313,6 +373,25 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
               </a>
             </p>
           </section>
+          {(() => {
+            const review = fallbackReviews.find((r) => r.author === "Nadia F.");
+            if (!review) return null;
+            return (
+              <div className="mx-auto max-w-2xl px-4 pt-10">
+                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
+                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{review.text}&rdquo;</p>
+                  <p className="mt-3 text-xs text-slate">{review.author} · avis Google vérifié</p>
+                </div>
+              </div>
+            );
+          })()}
           <section className="mx-auto max-w-4xl px-4 py-10">
             <InsuranceBanner />
           </section>
