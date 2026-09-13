@@ -192,6 +192,7 @@ const sectionsFr = [
   },
   {
     heading: "Clé cassée dans la serrure",
+    id: "cle-cassee",
     paragraphs: [
       "C'est l'un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au pire moment. J'extrais le morceau resté à l'intérieur avec les outils adaptés, puis je vérifie l'état du cylindre avant de le remettre en service. Le perçage ne reste qu'une solution de tout dernier recours, si aucune autre méthode n'aboutit.",
       "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre. Résultat : un dépannage simple se transforme en remplacement complet.",
@@ -272,6 +273,7 @@ const sectionsEn = [
   },
   {
     heading: "A key broken off inside the lock",
+    id: "cle-cassee",
     paragraphs: [
       "This is one of the most common callouts: a worn key snaps clean off inside the cylinder, usually at the worst possible time. I extract the piece left inside with the right tools, then check the condition of the cylinder before putting it back into service. Drilling stays a last-resort solution, only if no other method works.",
       "One thing to avoid absolutely: pushing the broken key with a sharp object or trying to glue it back together. Both of these common reflexes almost always make extraction harder and damage the cylinder. The result: a simple repair turns into a full replacement.",

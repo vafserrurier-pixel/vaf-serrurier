@@ -150,7 +150,8 @@ const strings = {
     call: "Appeler",
     whatsapp: "Écrire sur WhatsApp",
     seePricing: "Voir les tarifs",
-    heroAlt: "Benoît, artisan serrurier, à côté d'une serrure moderne posée à Nice",
+    heroAlt: "Benoît, artisan serrurier, devant un mécanisme de porte à Nice",
+    heroCaption: "Benoît, artisan serrurier à Nice",
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
       "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Chez moi, pas de standard qui redirige votre appel vers un sous-traitant inconnu. C'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
@@ -217,7 +218,8 @@ const strings = {
     call: "Call",
     whatsapp: "Message on WhatsApp",
     seePricing: "See pricing",
-    heroAlt: "Benoît, locksmith, next to a modern lock fitted in Nice",
+    heroAlt: "Benoît, locksmith, in front of a door mechanism in Nice",
+    heroCaption: "Benoît, locksmith in Nice",
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [
       "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor. I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
@@ -327,16 +329,19 @@ export default function HomeBody() {
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-            <Image
-              src="/images/serrurier-nice-porte-cle.webp"
-              alt={t.heroAlt}
-              fill
-              sizes="(min-width: 640px) 40vw, 100vw"
-              className="object-cover"
-              priority
-              fetchPriority="high"
-            />
+          <div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
+              <Image
+                src="/images/pool/benoit-serrurier-mecanisme-porte-nice.webp"
+                alt={t.heroAlt}
+                fill
+                sizes="(min-width: 640px) 40vw, 100vw"
+                className="object-cover"
+                priority
+                fetchPriority="high"
+              />
+            </div>
+            <p className="mt-2 text-xs text-slate text-center sm:text-left">{t.heroCaption}</p>
           </div>
         </div>
       </section>

@@ -313,7 +313,7 @@ export default function ServicePageTemplate({
           ) : (
             <div className="flex flex-col gap-8">
               {sections.map((section) => (
-                <div key={section.heading}>
+                <div key={section.heading} id={section.id} className={section.id ? "scroll-mt-24" : undefined}>
                   <h2 className={`font-heading ${h2Size} font-bold text-navy mb-3`}>
                     {section.heading}
                   </h2>
