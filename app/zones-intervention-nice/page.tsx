@@ -4,10 +4,12 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyMap from "@/components/LazyMap";
 import CtaBlock from "@/components/CtaBlock";
 import ServiceGrid from "@/components/ServiceGrid";
+import JsonLd from "@/components/JsonLd";
 import { business, zones } from "@/lib/business";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
-import { communes, communeHref, isCommuneBuilt } from "@/lib/communes";
+import { communes, communeHref, isCommuneBuilt, builtCommunes } from "@/lib/communes";
 import { buildMetadata } from "@/lib/metadata";
+import { itemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   path: "/zones-intervention-nice/",
@@ -22,9 +24,49 @@ const sectors: { key: keyof typeof sectorPages; label: string; quartiers: readon
   { key: "ouest", label: "Ouest", quartiers: zones.ouest },
 ];
 
+// Phrases reprises telles quelles (ou legerement raccourcies) des intros deja
+// publiees sur chacune des 4 pages secteur : ne pas inventer de nouveau texte.
+const sectorDescriptions: Record<keyof typeof sectorPages, string> = {
+  centre:
+    "C'est un secteur dense, où se côtoient immeubles Belle Époque, grands ensembles plus récents comme le Brancolar voisin, et quartiers populaires au passé cosmopolite comme La Madeleine ou la Libération.",
+  est:
+    "C'est un secteur très contrasté, entre bâti historique du port, quartiers populaires denses et hauteurs résidentielles de standing.",
+  nord:
+    "C'est un secteur qui mêle grands ensembles d'habitat collectif, résidences familiales et villas sur les hauteurs.",
+  ouest:
+    "Portes de villas et de maisons individuelles, serrures multipoints de résidences plus récentes, zones plus isolées comme Lingostière ou Bellet : c'est le secteur le plus contrasté de la ville.",
+};
+
+const totalQuartiers = zones.centre.length + zones.est.length + zones.nord.length + zones.ouest.length;
+const builtQuartiersCount = [...zones.centre, ...zones.est, ...zones.nord, ...zones.ouest].filter(
+  isQuartierBuilt,
+).length;
+const builtCommunesCount = builtCommunes.length;
+const coverageSentence =
+  builtQuartiersCount === totalQuartiers
+    ? `Ce sont ${totalQuartiers} quartiers de Nice, tous avec leur page dédiée, plus ${builtCommunesCount} commune${builtCommunesCount > 1 ? "s" : ""} voisine${builtCommunesCount > 1 ? "s" : ""} déjà pourvue${builtCommunesCount > 1 ? "s" : ""} d'une page.`
+    : `Ce sont ${totalQuartiers} quartiers de Nice, dont ${builtQuartiersCount} avec leur page dédiée, plus ${builtCommunesCount} commune${builtCommunesCount > 1 ? "s" : ""} voisine${builtCommunesCount > 1 ? "s" : ""} déjà pourvue${builtCommunesCount > 1 ? "s" : ""} d'une page.`;
+
+// Schema.org ItemList : chaque quartier/commune deja affiche sur cette page,
+// avec l'URL de sa page dediee si elle existe, sinon celle du secteur/hub qui
+// le mentionne (jamais d'URL inventee).
+const itemListEntries = [
+  ...sectors.flatMap((sector) =>
+    sector.quartiers.map((quartier) => ({
+      name: quartier,
+      url: `${business.domain}${isQuartierBuilt(quartier) ? quartierHref(quartier) : sectorPages[sector.key].href}`,
+    })),
+  ),
+  ...communes.map((commune) => ({
+    name: commune,
+    url: `${business.domain}${isCommuneBuilt(commune) ? communeHref(commune) : "/zones-intervention-nice/"}`,
+  })),
+];
+
 export default function ZonesInterventionNicePage() {
   return (
     <>
+    <JsonLd data={itemListSchema(itemListEntries)} />
     <section className="mx-auto max-w-4xl px-4 py-10">
       <Breadcrumbs
         items={[
@@ -59,10 +101,9 @@ export default function ZonesInterventionNicePage() {
         <p>
           Pour faciliter la recherche, j&apos;ai organisé mes zones d&apos;intervention en
           quatre secteurs (Centre, Est, Nord et Ouest), chacun avec sa propre page
-          listant les quartiers couverts. Des pages dédiées à chaque quartier arrivent
-          progressivement ; les quartiers déjà pourvus d&apos;une page dédiée apparaissent
-          en lien ci-dessous, les autres restent couverts dès aujourd&apos;hui même sans
-          page individuelle : un simple appel suffit.
+          listant les quartiers couverts. {coverageSentence} Les communes voisines
+          restant à documenter sont d&apos;ores et déjà couvertes, même sans page
+          individuelle : un simple appel suffit.
         </p>
       </div>
 
@@ -77,14 +118,25 @@ export default function ZonesInterventionNicePage() {
         <LazyMap />
       </div>
 
+      <div className="mt-8">
+        <h2 className="font-heading text-lg font-bold text-navy mb-2">
+          Vue d&apos;ensemble de la zone couverte
+        </h2>
+        <p className="text-sm text-slate mb-3 max-w-2xl">
+          Nice et les communes voisines où j&apos;interviens, en un coup d&apos;œil.
+        </p>
+        <LazyMap zoom={11} showInfo={false} title="Nice et les communes voisines" />
+      </div>
+
       <div className="mt-10 grid gap-8 sm:grid-cols-2">
         {sectors.map((sector) => (
           <div key={sector.label}>
-            <h2 className="font-heading text-lg font-bold text-navy mb-2">
+            <h2 className="font-heading text-lg font-bold text-navy mb-1.5">
               <Link href={sectorPages[sector.key].href} className="hover:text-steel">
                 Nice {sector.label}
               </Link>
             </h2>
+            <p className="text-sm text-slate leading-snug mb-2.5">{sectorDescriptions[sector.key]}</p>
             <ul className="text-sm text-slate flex flex-wrap gap-x-1 gap-y-1">
               {sector.quartiers.map((quartier, index) => (
                 <li key={quartier}>

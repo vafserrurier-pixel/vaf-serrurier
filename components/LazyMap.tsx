@@ -38,48 +38,64 @@ function PinIcon({ className }: { className?: string }) {
   );
 }
 
-export default function LazyMap({ locale = "fr" }: { locale?: Locale }) {
+export default function LazyMap({
+  locale = "fr",
+  zoom = 13,
+  showInfo = true,
+  title,
+}: {
+  locale?: Locale;
+  /** Niveau de zoom Google Maps (plus bas = vue plus large). Défaut 13 (adresse précise). */
+  zoom?: number;
+  /** Affiche le bloc note/adresse/lien Google au-dessus de la carte. À désactiver pour une seconde carte complémentaire sur la même page, pour ne pas dupliquer ce bloc. */
+  showInfo?: boolean;
+  /** Titre de l'iframe (accessibilité), remplace le titre par défaut. */
+  title?: string;
+}) {
   const [loaded, setLoaded] = useState(false);
-  const src = `https://www.google.com/maps?q=${business.geo.latitude},${business.geo.longitude}&z=13&output=embed`;
+  const src = `https://www.google.com/maps?q=${business.geo.latitude},${business.geo.longitude}&z=${zoom}&output=embed`;
   const t = strings[locale];
+  const mapTitle = title ?? t.title;
 
   return (
     <div>
-      <div className="bg-white border border-navy/10 rounded-xl p-5 mb-3">
-        <div className="flex items-center gap-2">
-          <GoogleLogoIcon className="w-6 h-6 shrink-0" />
-          <span className="font-tabular-nums font-bold text-navy text-lg">
-            {business.reviews.rating.toFixed(1)}
-          </span>
-          <div className="flex items-center gap-0.5" aria-hidden="true">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <StarIcon key={i} className="w-4 h-4 text-amber-400" />
-            ))}
+      {showInfo && (
+        <div className="bg-white border border-navy/10 rounded-xl p-5 mb-3">
+          <div className="flex items-center gap-2">
+            <GoogleLogoIcon className="w-6 h-6 shrink-0" />
+            <span className="font-tabular-nums font-bold text-navy text-lg">
+              {business.reviews.rating.toFixed(1)}
+            </span>
+            <div className="flex items-center gap-0.5" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <StarIcon key={i} className="w-4 h-4 text-amber-400" />
+              ))}
+            </div>
+            <span className="text-sm text-slate">{t.reviews(business.reviews.count)}</span>
           </div>
-          <span className="text-sm text-slate">{t.reviews(business.reviews.count)}</span>
+          <p className="flex items-start gap-2 text-sm text-slate mt-3">
+            <PinIcon className="w-4 h-4 mt-0.5 shrink-0 text-steel" />
+            {business.address.full}
+          </p>
+          <a
+            href={business.googleMaps.shareLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-steel hover:underline mt-3"
+          >
+            {t.link}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </div>
-        <p className="flex items-start gap-2 text-sm text-slate mt-3">
-          <PinIcon className="w-4 h-4 mt-0.5 shrink-0 text-steel" />
-          {business.address.full}
-        </p>
-        <a
-          href={business.googleMaps.shareLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-sm font-semibold text-steel hover:underline mt-3"
-        >
-          {t.link}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path
-              d="M5 12h14M13 6l6 6-6 6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </a>
-      </div>
+      )}
       {!loaded ? (
         <button
           type="button"
@@ -91,7 +107,7 @@ export default function LazyMap({ locale = "fr" }: { locale?: Locale }) {
         </button>
       ) : (
         <iframe
-          title={t.title}
+          title={mapTitle}
           src={src}
           className="w-full aspect-video rounded-lg border border-navy/10"
           loading="lazy"

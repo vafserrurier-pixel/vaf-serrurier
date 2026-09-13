@@ -208,6 +208,19 @@ export function personSchema() {
   };
 }
 
+export function itemListSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
