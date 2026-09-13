@@ -155,7 +155,23 @@ const sectionsFr = [
     heading: "Cinq lignes selon votre style",
     Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "Lisseo (design épuré, 3 finitions), Solo (bois avec moulures), Ferro (panneaux acier, reproduction de l'existant possible), Vitréo (version vitrée sur mesure) et Designo (3 lignes design) : le détail de chaque ligne est dans mon guide complet. 1 ou 2 vantaux possibles, hauteur sur mesure jusqu'à 6 m.",
+      <>
+        Lisseo (design épuré, 3 finitions), Solo (bois avec moulures), Ferro
+        (panneaux acier, reproduction de l&apos;existant possible), Vitréo
+        (version vitrée sur mesure) et Designo (3 lignes design) : cinq
+        lignes de la gamme{" "}
+        <a
+          href="https://www.valentesecurystar.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          Valente Securystar
+        </a>
+        , fabricant français installé à Thiais depuis 1995. Le détail de
+        chaque ligne est dans mon guide complet. 1 ou 2 vantaux possibles,
+        hauteur sur mesure jusqu&apos;à 6 m.
+      </>,
     ],
   },
   {
@@ -183,7 +199,7 @@ const sectionsFr = [
     heading: "Fabrication et pose",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures sans travaux de maçonnerie. Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel.",
+      "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures sans travaux de maçonnerie. Garantie de pose de 2 ans de ma part, et garantie fabricant Valente Securystar de 15 ans sur le matériel.",
     ],
   },
 ];
@@ -211,7 +227,7 @@ const faqFr = [
   {
     question: "Quelle garantie sur un bloc-porte blindé ?",
     answer:
-      "Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel : deux garanties distinctes et cumulables.",
+      "Garantie de pose de 2 ans de ma part, et garantie fabricant Valente Securystar de 15 ans sur le matériel : deux garanties distinctes et cumulables.",
   },
   {
     question: "Peut-on avoir une porte vitrée ou sur mesure jusqu'à 6 mètres ?",
@@ -241,7 +257,23 @@ const sectionsEn = [
     heading: "Five lines depending on your style",
     Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "Lisseo (clean design, 3 finishes), Solo (wood with mouldings), Ferro (steel panels, reproduction of your existing door possible), Vitréo (custom glazed version) and Designo (3 design lines): full details for each line are in my complete guide. 1 or 2 leaves, custom heights up to 6 m.",
+      <>
+        Lisseo (clean design, 3 finishes), Solo (wood with mouldings), Ferro
+        (steel panels, reproduction of your existing door possible), Vitréo
+        (custom glazed version) and Designo (3 design lines): five lines
+        from the{" "}
+        <a
+          href="https://www.valentesecurystar.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          Valente Securystar
+        </a>{" "}
+        range, a French manufacturer based in Thiais since 1995. Full
+        details for each line are in my complete guide. 1 or 2 leaves,
+        custom heights up to 6 m.
+      </>,
     ],
   },
   {
@@ -269,7 +301,7 @@ const sectionsEn = [
     heading: "Manufacturing and fitting",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours with no masonry work. A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material.",
+      "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours with no masonry work. A 2-year fitting warranty from me, and a 15-year Valente Securystar manufacturer warranty on the material.",
     ],
   },
 ];
@@ -297,7 +329,7 @@ const faqEn = [
   {
     question: "What warranty comes with an armored door block?",
     answer:
-      "A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material: two separate, combinable warranties.",
+      "A 2-year fitting warranty from me, and a 15-year Valente Securystar manufacturer warranty on the material: two separate, combinable warranties.",
   },
   {
     question: "Can I get a glazed door, or a custom size up to 6 metres?",

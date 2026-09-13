@@ -183,7 +183,21 @@ const sectionsFr = [
     heading: "Trois modèles selon votre besoin",
     Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "Le Citadin (référence, certifié BP1), le Parisien (haut de gamme, certifiable jusqu'à BP3) et le Parisien Hermétic (version économique, isolation renforcée) : le détail de chaque modèle est dans mon guide complet.",
+      <>
+        Le Citadin (référence, certifié BP1), le Parisien (haut de gamme,
+        certifiable jusqu&apos;à BP3) et le Parisien Hermétic (version
+        économique, isolation renforcée) : trois modèles de la gamme{" "}
+        <a
+          href="https://www.valentesecurystar.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          Valente Securystar
+        </a>
+        , fabricant français installé à Thiais depuis 1995. Le détail de
+        chaque modèle est dans mon guide complet.
+      </>,
     ],
   },
   {
@@ -235,7 +249,7 @@ const faqFr = [
   {
     question: "Quelle garantie sur un blindage de porte ?",
     answer:
-      "Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel : deux garanties distinctes et cumulables.",
+      "Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel (gamme Valente Securystar, fabricant français) : deux garanties distinctes et cumulables.",
   },
   {
     question: "Combien de temps dure la pose d'un blindage ?",
@@ -244,7 +258,7 @@ const faqFr = [
   {
     question: "Le blindage résiste-t-il vraiment aux cambrioleurs ?",
     answer:
-      "Selon les données de mon fabricant, 95% des cambrioleurs abandonnent après 3 minutes de tentative infructueuse face à ce type de blindage. C'est une statistique du fabricant, pas une mesure indépendante, mais elle recoupe le constat général : un accès qui résiste plus de quelques minutes décourage la grande majorité des tentatives.",
+      "Selon les données de Valente Securystar, le fabricant de la gamme que je pose, 95% des cambrioleurs abandonnent après 3 minutes de tentative infructueuse face à ce type de blindage. C'est une statistique du fabricant, pas une mesure indépendante, mais elle recoupe le constat général : un accès qui résiste plus de quelques minutes décourage la grande majorité des tentatives.",
   },
 ];
 
@@ -260,7 +274,21 @@ const sectionsEn = [
     heading: "Three models depending on your needs",
     Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "The Citadin (reference model, BP1-certified), the Parisien (high-end, certifiable up to BP3) and the Parisien Hermétic (budget version, enhanced insulation): full details for each model are in my complete guide.",
+      <>
+        The Citadin (reference model, BP1-certified), the Parisien
+        (high-end, certifiable up to BP3) and the Parisien Hermétic (budget
+        version, enhanced insulation): three models from the{" "}
+        <a
+          href="https://www.valentesecurystar.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          Valente Securystar
+        </a>{" "}
+        range, a French manufacturer based in Thiais since 1995. Full
+        details for each model are in my complete guide.
+      </>,
     ],
   },
   {
@@ -311,7 +339,7 @@ const faqEn = [
   {
     question: "What warranty comes with door reinforcement?",
     answer:
-      "A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material: two separate, combinable warranties.",
+      "A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material (Valente Securystar range, a French manufacturer): two separate, combinable warranties.",
   },
   {
     question: "How long does fitting take?",
@@ -320,7 +348,7 @@ const faqEn = [
   {
     question: "Does reinforcement really hold off burglars?",
     answer:
-      "According to my manufacturer's data, 95% of burglars give up after 3 minutes of unsuccessful attempts against this type of reinforcement. That's a manufacturer statistic, not an independent measurement, but it matches the general pattern: an entry point that resists more than a few minutes discourages the vast majority of attempts.",
+      "According to Valente Securystar, the manufacturer of the range I fit, 95% of burglars give up after 3 minutes of unsuccessful attempts against this type of reinforcement. That's a manufacturer statistic, not an independent measurement, but it matches the general pattern: an entry point that resists more than a few minutes discourages the vast majority of attempts.",
   },
 ];
 
@@ -355,7 +383,8 @@ export default function BlindagePorteNicePage() {
                 </p>
                 <p className="text-sm text-slate leading-relaxed">
                   Garantie de pose de 2 ans de ma part sur l&apos;installation, et garantie fabricant
-                  de 15 ans sur le matériel, 5 ans de plus que la moyenne du marché.
+                  Valente Securystar de 15 ans sur le matériel, 5 ans de plus que la moyenne du
+                  marché.
                 </p>
               </div>
             </div>
@@ -425,8 +454,9 @@ export default function BlindagePorteNicePage() {
                   Two separate, combinable warranties
                 </p>
                 <p className="text-sm text-slate leading-relaxed">
-                  A 2-year fitting warranty from me on the installation, and a 15-year manufacturer
-                  warranty on the material, 5 years more than the market average.
+                  A 2-year fitting warranty from me on the installation, and a 15-year Valente
+                  Securystar manufacturer warranty on the material, 5 years more than the market
+                  average.
                 </p>
               </div>
             </div>
