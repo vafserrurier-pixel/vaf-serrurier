@@ -35,6 +35,15 @@ export type ServiceSection = {
    * applique partout, l'effet de hierarchie disparait.
    */
   accent?: "urgent";
+  /** Ancre optionnelle (id DOM) pour permettre un scroll direct vers cette carte, ex. depuis un selecteur de situations. */
+  id?: string;
+  /**
+   * Contenu additionnel affiche apres les paragraphes, HORS de la balise <p>
+   * qui les enveloppe (utile pour des listes <ul>/<ol> ou tout element de
+   * bloc : une liste ne peut pas etre imbriquee dans un <p>, ce qui casse
+   * l'hydratation React si on l'y met directement).
+   */
+  extra?: ReactNode;
 };
 export type ServiceImage = { src: string; alt: string };
 
@@ -268,9 +277,10 @@ export default function ServicePageTemplate({
                 {sections.map((section) => (
                   <div
                     key={section.heading}
+                    id={section.id}
                     className={`relative bg-white rounded-xl border shadow-sm p-4 ${
-                      section.accent === "urgent" ? "border-urgent/40" : "border-navy/10"
-                    }`}
+                      section.id ? "scroll-mt-24" : ""
+                    } ${section.accent === "urgent" ? "border-urgent/40" : "border-navy/10"}`}
                   >
                     {section.accent === "urgent" && (
                       <span className="absolute -top-2 -right-2 bg-urgent text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
@@ -294,6 +304,7 @@ export default function ServicePageTemplate({
                         {paragraph}
                       </p>
                     ))}
+                    {section.extra}
                   </div>
                 ))}
               </div>
@@ -310,6 +321,7 @@ export default function ServicePageTemplate({
                       {paragraph}
                     </p>
                   ))}
+                  {section.extra}
                 </div>
               ))}
             </div>

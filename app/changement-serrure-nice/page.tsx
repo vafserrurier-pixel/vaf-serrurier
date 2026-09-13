@@ -6,45 +6,57 @@ import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { DoorIcon, AlertLockIcon, KeyIcon, WrenchIcon, ShieldIcon, HandshakeIcon } from "@/components/Icons";
+import ArticleTable from "@/components/ArticleTable";
+import SituationSelector, { type Situation } from "@/components/SituationSelector";
+import { DoorIcon, AlertLockIcon, KeyIcon, WrenchIcon, ShieldIcon, HandshakeIcon, CheckIcon, StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { fallbackReviews } from "@/lib/reviews";
 import { buildMetadata } from "@/lib/metadata";
 
-const whyReasons = [
+const whyReasons: Situation[] = [
   {
-    Icon: DoorIcon,
+    Icon: <DoorIcon className="w-4 h-4" />,
     title: "Emménagement",
     text: "Vous ne savez jamais combien de doubles de l'ancien locataire ou propriétaire circulent encore.",
+    anchorId: "quand",
   },
   {
-    Icon: AlertLockIcon,
+    Icon: <AlertLockIcon className="w-4 h-4" />,
     title: "Tentative d'effraction",
     text: "Une serrure forcée ou marquée doit être remplacée, même si l'accès n'a pas cédé.",
+    anchorId: "effraction",
+    priority: true,
   },
   {
-    Icon: KeyIcon,
+    Icon: <KeyIcon className="w-4 h-4" />,
     title: "Clé perdue ou volée",
     text: "Le remplacement du seul cylindre suffit dans la grande majorité des cas.",
+    anchorId: "niveau",
   },
   {
-    Icon: WrenchIcon,
+    Icon: <WrenchIcon className="w-4 h-4" />,
     title: "Mécanisme usé",
     text: "Une clé qui force de plus en plus finit par lâcher, souvent au pire moment.",
+    anchorId: "diagnostic",
   },
   {
-    Icon: ShieldIcon,
+    Icon: <ShieldIcon className="w-4 h-4" />,
     title: "Renforcement volontaire",
     text: "Passer à un niveau A2P supérieur ou à une serrure multipoints, par choix plutôt que par urgence.",
+    anchorId: "evolution",
   },
   {
-    Icon: HandshakeIcon,
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     title: "Exigence d'assurance",
     text: "Certains contrats conditionnent une garantie vol à un niveau de serrure minimum.",
+    anchorId: "assurance",
   },
 ];
 
 const guideToc = [
   { id: "diagnostic", label: "Diagnostiquer sa serrure avant d'appeler" },
   { id: "niveau", label: "Cylindre, coffre complet ou porte entière : le bon niveau" },
+  { id: "tarifs", label: "Tarifs indicatifs selon le remplacement" },
   { id: "deroule", label: "Le déroulé technique d'une intervention" },
   { id: "assurance", label: "Assurance : qui paie, et sous quel délai" },
   { id: "evolution", label: "Faire évoluer sa sécurité sans se suréquiper" },
@@ -93,36 +105,85 @@ export const metadata: Metadata = buildMetadata({
 const sectionsFr = [
   {
     heading: "Quand faut-il changer une serrure à Nice",
+    Icon: <KeyIcon className="w-4 h-4" />,
+    id: "quand",
     paragraphs: [
       "Un déménagement, une perte de clés, un vol ou une effraction sont les cas les plus fréquents. Une clé qui force de plus en plus, un cylindre qui accroche, ou une fermeture de moins en moins franche sont aussi des signes d'usure à ne pas ignorer. Mieux vaut changer une serrure fatiguée avant qu'elle ne lâche complètement, souvent au pire moment.",
     ],
   },
   {
     heading: "Cylindre ou serrure complète, quelle différence",
+    Icon: <WrenchIcon className="w-4 h-4" />,
     paragraphs: [
       "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme. Son remplacement suffit souvent, et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même (le coffre encastré dans la porte) est endommagé ou instable, ou quand il s'agit d'un modèle trop ancien pour trouver un cylindre compatible.",
     ],
+    extra: (
+      <>
+        <p className="font-heading font-semibold text-navy text-sm mt-1">Cylindre seul :</p>
+        <ul className="list-disc pl-5 mt-1 flex flex-col gap-1 text-slate text-sm leading-relaxed">
+          <li>Clé qui accroche, mécanisme qui réagit normalement.</li>
+          <li>Neutraliser d&apos;anciennes clés (emménagement, perte, vol).</li>
+        </ul>
+        <p className="font-heading font-semibold text-navy text-sm mt-3">Serrure complète :</p>
+        <ul className="list-disc pl-5 mt-1 flex flex-col gap-1 text-slate text-sm leading-relaxed">
+          <li>Coffre encastré endommagé ou instable, même avec une clé neuve.</li>
+          <li>Modèle trop ancien pour un cylindre compatible.</li>
+        </ul>
+      </>
+    ),
   },
   {
     heading: "Serrure multipoints, confort et fiabilité au quotidien",
+    Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "Une serrure multipoints répartit la résistance sur plusieurs points d'ancrage (3, 5 voire 7 points selon les modèles), ce qui limite les déformations de la porte dans le temps. Elle demande en revanche un réglage précis : un mauvais alignement use la serrure prématurément et peut la faire forcer à chaque fermeture. C'est pourquoi je fais toujours un contrôle fin après la pose.",
+      <>
+        Une serrure multipoints répartit la résistance sur plusieurs points
+        d&apos;ancrage (3, 5 voire 7 points selon les modèles), ce qui limite
+        les déformations de la porte dans le temps. Elle demande en revanche
+        un réglage précis : un mauvais alignement use la serrure
+        prématurément et peut la faire forcer à chaque fermeture. C&apos;est
+        pourquoi je fais toujours un contrôle fin après la pose — voir mon
+        article sur{" "}
+        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
+          le choix entre 3, 5 ou 7 points
+        </Link>
+        .
+      </>,
     ],
   },
   {
     heading: "Certification A2P, utile ou pas",
+    Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "La certification A2P aide à comparer objectivement la résistance d'une serrure face à une tentative d'effraction. Je pose des serrures et cylindres certifiés A2P 1, 2 ou 3 étoiles selon le besoin réel de votre logement, sans viser systématiquement le niveau maximum. Ce n'est pas une obligation légale pour un logement standard. Je préfère donc vous orienter vers une sécurisation cohérente avec l'état réel de votre porte, plutôt que vers du suréquipement qui ne servira à rien si le bâti autour reste fragile.",
+      <>
+        La certification A2P aide à comparer objectivement la résistance
+        d&apos;une serrure face à une tentative d&apos;effraction — le détail
+        des niveaux et de leur utilité réelle est dans mon article sur{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+          la certification A2P
+        </Link>
+        . Je pose des serrures et cylindres certifiés A2P 1, 2 ou 3 étoiles
+        selon le besoin réel de votre logement, sans viser systématiquement
+        le niveau maximum. Ce n&apos;est pas une obligation légale pour un
+        logement standard. Je préfère donc vous orienter vers une
+        sécurisation cohérente avec l&apos;état réel de votre porte, plutôt
+        que vers du suréquipement qui ne servira à rien si le bâti autour
+        reste fragile.
+      </>,
     ],
   },
   {
     heading: "Changement de serrure après une effraction",
+    Icon: <AlertLockIcon className="w-4 h-4" />,
+    id: "effraction",
+    accent: "urgent" as const,
     paragraphs: [
       "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés (cylindre, gâche, parfois le coffre de serrure) et je stabilise l'ensemble pour éviter un nouveau risque. Je ne vous vends pas un remplacement complet si ce n'est pas nécessaire.",
     ],
   },
   {
     heading: "Ce que je fais concrètement chez vous",
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
       "J'identifie d'abord le modèle de serrure en place, puis je vérifie l'alignement de la porte et du cadre. Ensuite, je propose la solution la plus cohérente avec votre budget et votre niveau d'exigence en sécurité. Je termine par plusieurs tests de fermeture et un ajustement fin, pour éviter qu'une serrure neuve ne force dès la première semaine.",
     ],
@@ -143,7 +204,7 @@ const faqFr = [
   {
     question: "Comment faire constater un changement de serrure ?",
     answer:
-      "Un huissier de justice peut constater un refus d'accès ou un changement de serrure effectué sans accord, en cas de litige entre propriétaire et locataire.",
+      "Un huissier de justice (commissaire de justice) peut dresser un constat d'un refus d'accès ou d'un changement de serrure effectué sans accord, sur simple demande d'un particulier : c'est prévu par l'article 1 de l'ordonnance n°45-2592 du 2 novembre 1945. Ce constat a une valeur probante en cas de litige entre propriétaire et locataire.",
   },
   {
     question: "Quand dois-je changer ma serrure à Nice ?",
@@ -242,27 +303,15 @@ const guideContent = (
       un changement de serrure à Nice.
     </p>
 
-    <div className="bg-cream rounded-xl p-6 border border-navy/10">
+    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
       <p className="font-heading font-bold text-navy mb-4">
         Pourquoi changer de serrure à Nice : les cas les plus fréquents
       </p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {whyReasons.map(({ Icon, title, text }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
-              <Icon className="w-4 h-4" />
-            </span>
-            <div>
-              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <SituationSelector situations={whyReasons} />
     </div>
 
     <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg" numberStyle="plain">
         Diagnostiquer sa serrure avant d&apos;appeler
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -281,7 +330,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={2} id="niveau" level="h3">
+      <ArticleSectionHeading number={2} id="niveau" level="h3" size="lg" numberStyle="plain">
         Cylindre, coffre complet ou porte entière : le bon niveau
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -304,8 +353,16 @@ const guideContent = (
         </h4>
         <p className="text-slate leading-relaxed">
           La quasi-totalité des cylindres résidentiels posés en France suivent
-          le profil dit européen, encadré par la norme EN 1303 (qui teste
-          notamment la résistance à l&apos;arrachement, au perçage et à la
+          le profil dit européen, encadré par la{" "}
+          <a
+            href="https://www.france-cadenas.fr/a/118-la-norme-europeenne-en-1303"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-steel underline"
+          >
+            norme EN 1303
+          </a>{" "}
+          (qui teste notamment la résistance à l&apos;arrachement, au perçage et à la
           casse). Ce profil commun rend les cylindres interchangeables d&apos;une
           marque à l&apos;autre, à condition de reprendre les bonnes dimensions.
           Elles s&apos;expriment en millimètres, mesurées depuis l&apos;axe
@@ -332,16 +389,59 @@ const guideContent = (
           >
             Serial XPi de Bricard
           </a>
-          , pensée pour le résidentiel comme pour le tertiaire. L&apos;avantage :
-          vous seul décidez du nombre de clés en circulation. L&apos;inconvénient :
-          un remplacement de cylindre coûte généralement plus cher qu&apos;un
-          profil européen standard.
+          , de la gamme{" "}
+          <a
+            href="https://www.fichet-pointfort.com/fr/fr/products/serrure-de-securite/cylindre-et-cle/787-z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-steel underline"
+          >
+            787 Z de Fichet
+          </a>
+          , ou encore de la{" "}
+          <a
+            href="https://www.picard-serrures.com/global/fr/cle-cylindre-haute-securite"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-steel underline"
+          >
+            clé VAK Unik de Picard
+          </a>
+          . L&apos;avantage : vous seul décidez du nombre de clés en circulation.
+          L&apos;inconvénient : un remplacement de cylindre coûte généralement
+          plus cher qu&apos;un profil européen standard.
+        </p>
+        <p className="text-slate leading-relaxed mt-3">
+          [À CONFIRMER : PROPOSEZ-VOUS DES CYLINDRES ADAPTABLES ? — un cylindre
+          compatible moins cher qu&apos;une pièce d&apos;origine propriétaire,
+          quand le fabricant d&apos;origine ne peut ou ne veut plus fournir de
+          clé.]
         </p>
       </div>
     </div>
 
+    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
+      <ArticleSectionHeading number={3} id="tarifs" level="h3" size="lg" numberStyle="plain">
+        Tarifs indicatifs selon le remplacement
+      </ArticleSectionHeading>
+      <ArticleTable
+        caption="Majoration de 50% après 19h, le week-end et les jours fériés. Détail complet sur ma page tarifs."
+        headers={["Prestation", "Prix", "Durée indicative"]}
+        zebra="bold"
+        featuredRowIndex={0}
+        rows={[
+          ["Changement de cylindre standard", "à partir de 249 € TTC", "Moins d'une heure"],
+          ["Cylindre certifié A2P 1 étoile", "[PRIX À CONFIRMER AVEC BENOÎT]", "Moins d'une heure"],
+          ["Cylindre certifié A2P 2 ou 3 étoiles", "Sur devis", "Moins d'une heure"],
+          ["Serrure à larder (remplacement complet)", "[PRIX À CONFIRMER AVEC BENOÎT]", "Un peu plus qu'un cylindre, avec réglage fin"],
+          ["Serrure en applique 3 points", "[PRIX À CONFIRMER AVEC BENOÎT]", "[DURÉE À CONFIRMER]"],
+          ["Serrure en applique 5 points (carénée)", "1 490 € TTC", "Généralement une demi-journée"],
+        ]}
+      />
+    </div>
+
     <div>
-      <ArticleSectionHeading number={3} id="deroule" level="h3">
+      <ArticleSectionHeading number={4} id="deroule" level="h3" size="lg" numberStyle="plain">
         Le déroulé technique d&apos;une intervention
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -364,7 +464,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="assurance" level="h3">
+      <ArticleSectionHeading number={5} id="assurance" level="h3" size="lg" numberStyle="plain">
         Assurance : qui paie, et sous quel délai
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -389,7 +489,7 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={5} id="evolution" level="h3">
+      <ArticleSectionHeading number={6} id="evolution" level="h3" size="lg" numberStyle="plain">
         Faire évoluer sa sécurité sans se suréquiper
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -413,6 +513,22 @@ const guideContent = (
 );
 
 export default function ChangementSerrureNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const cylinderReview = fallbackReviews.find((r) => r.author === "Thomas G.");
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {business.reviews.rating.toFixed(1)}/5 sur {business.reviews.count}+ avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <LocalizedServicePage
       fr={{
@@ -426,6 +542,10 @@ export default function ChangementSerrureNicePage() {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
           alt: "Cylindre de serrure Heraclès neuf et poignée, changement de serrure à Nice",
         },
+        sectionsVariant: "cards",
+        sectionsHeading: "Ce qu'il faut savoir avant de changer votre serrure",
+        headingScale: "lg",
+        heroTrustNote,
         extra: (
           <>
             <div className="py-10">
@@ -434,6 +554,69 @@ export default function ChangementSerrureNicePage() {
                 locale="fr"
               />
             </div>
+            {cylinderReview && (
+              <div className="mx-auto max-w-2xl px-4 pb-10">
+                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
+                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
+                    {Array.from({ length: cylinderReview.rating }).map((_, i) => (
+                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{cylinderReview.text}&rdquo;</p>
+                  <p className="mt-3 text-xs text-slate">{cylinderReview.author} · avis Google vérifié</p>
+                </div>
+              </div>
+            )}
+            <section className="mx-auto max-w-4xl px-4 pb-10">
+              <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
+                <h2 className="font-heading text-xl font-bold text-navy mb-4">
+                  Ce que dit la loi sur le changement de serrure
+                </h2>
+                <ul className="flex flex-col gap-3 text-sm text-slate leading-relaxed">
+                  <li>
+                    <strong className="text-navy">Après une effraction :</strong> l&apos;
+                    <a
+                      href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-steel underline"
+                    >
+                      article L.113-2 du Code des assurances
+                    </a>{" "}
+                    impose un délai de 2 jours ouvrés pour déclarer le sinistre à votre assureur.
+                  </li>
+                  <li>
+                    <strong className="text-navy">Litige propriétaire/locataire :</strong> un huissier de justice
+                    (commissaire de justice) peut dresser un constat probant d&apos;un refus d&apos;accès ou d&apos;un
+                    changement de serrure effectué sans accord, sur simple demande, en vertu de l&apos;
+                    <a
+                      href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032626669"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-steel underline"
+                    >
+                      article 1 de l&apos;ordonnance n°45-2592 du 2 novembre 1945
+                    </a>
+                    .
+                  </li>
+                  <li>
+                    <strong className="text-navy">Niveau de sécurité :</strong> aucune obligation légale n&apos;impose
+                    un niveau de certification A2P minimum pour un logement standard — voir le détail dans mon article
+                    sur{" "}
+                    <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+                      la certification A2P
+                    </Link>
+                    .
+                  </li>
+                  <li>
+                    <strong className="text-navy">Copropriété :</strong> votre porte palière et sa serrure sont des
+                    parties privatives, vous pouvez la changer librement sans autorisation de la copropriété.
+                  </li>
+                </ul>
+              </div>
+            </section>
             <section className="mx-auto max-w-4xl px-4 py-10">
               <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
                 Marques de serrures que je pose
@@ -478,7 +661,7 @@ export default function ChangementSerrureNicePage() {
           label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={8} toc={guideToc} faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={9} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
