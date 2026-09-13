@@ -158,7 +158,12 @@ const guideContent = (
         <Link href="/changement-serrure-nice/" className="text-steel underline">
           changement de serrure
         </Link>
-        .
+        . Une fois le cylindre remplacé, une{" "}
+        <Link href="/poignee-blindee-nice/" className="text-steel underline">
+          poignée blindée
+        </Link>{" "}
+        reste une option simple pour le protéger d&apos;une nouvelle
+        tentative, sans attendre un renfort plus lourd.
       </p>
     </div>
   </>
@@ -353,6 +358,7 @@ export default function DepannageSerrurierNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
           { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
+          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
@@ -410,6 +416,7 @@ export default function DepannageSerrurierNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
           { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
+          { href: "/poignee-blindee-nice/", label: "Armored handle" },
           { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],
       }}

@@ -375,7 +375,13 @@ export default function QueFaireApresUnCambriolagePage() {
                 ou de tentative d&apos;intrusion dans les logements, loin devant les autres
                 points d&apos;accès. Une porte correctement équipée reste le moyen le plus
                 direct de limiter ce risque : la plupart des tentatives s&apos;arrêtent
-                face à une serrure qui résiste plus de quelques minutes.
+                face à une serrure qui résiste plus de quelques minutes. Quand le cylindre
+                exposé est le seul point faible, une{" "}
+                <Link href="/poignee-blindee-nice/" className="text-steel underline">
+                  poignée blindée
+                </Link>{" "}
+                le rend invisible et inaccessible de l&apos;extérieur, pour un coût bien
+                inférieur à un blindage complet.
               </p>
             </div>
 

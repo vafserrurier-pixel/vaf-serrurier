@@ -500,7 +500,12 @@ const guideContent = (
         <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
           A2P
         </Link>
-        , puis à une{" "}
+        , y ajouter si besoin une{" "}
+        <Link href="/poignee-blindee-nice/" className="text-steel underline">
+          poignée blindée
+        </Link>{" "}
+        pour protéger ce même cylindre à moindre coût quand la porte et le
+        bâti restent sains, puis à une{" "}
         <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
           serrure multipoints
         </Link>{" "}
@@ -654,6 +659,7 @@ export default function ChangementSerrureNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
           { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
+          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
           { href: "/agences-syndics-nice/", label: "Agences & syndics" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
@@ -723,6 +729,7 @@ export default function ChangementSerrureNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
           { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
+          { href: "/poignee-blindee-nice/", label: "Armored handle" },
           { href: "/agences-syndics-nice/", label: "Agencies & syndics" },
           { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],

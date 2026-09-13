@@ -163,7 +163,7 @@ const guideContent = (
           <strong className="text-navy">Budget serré et seul le cylindre est en cause</strong> — si
           le mécanisme et le bâti sont sains et que le point faible est uniquement le cylindre exposé,
           une{" "}
-          <Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">
+          <Link href="/poignee-blindee-nice/" className="text-steel underline">
             poignée blindée
           </Link>{" "}
           coûte moins cher pour un effet dissuasif réel. Je ne combine jamais poignée blindée et
@@ -363,6 +363,7 @@ export default function SerrureCareneeNicePage() {
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
         { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+        { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },

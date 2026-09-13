@@ -46,6 +46,11 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
         `Renfort intermédiaire entre cylindre standard et blindage complet à ${lieu}, sans reprendre toute la porte.`,
       Icon: KeyIcon,
     },
+    "/poignee-blindee-nice/": {
+      text: (lieu) =>
+        `Le cylindre exposé recouvert et protégé à ${lieu}, pour un renfort rapide et économique sans reprendre toute la serrure.`,
+      Icon: ShieldIcon,
+    },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
         `Bloc-porte blindé complet ou blindage d'une porte existante à ${lieu} : je vous aide à choisir selon l'état réel de votre porte et de votre bâti.`,
@@ -97,6 +102,11 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       text: (lieu) =>
         `An intermediate reinforcement between a standard cylinder and full armoring in ${lieu}, without redoing the whole door.`,
       Icon: KeyIcon,
+    },
+    "/poignee-blindee-nice/": {
+      text: (lieu) =>
+        `The exposed cylinder covered and protected in ${lieu}, a quick, affordable reinforcement without replacing the whole lock.`,
+      Icon: ShieldIcon,
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>

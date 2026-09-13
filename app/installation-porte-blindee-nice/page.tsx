@@ -159,7 +159,18 @@ const sectionsFr = [
   {
     heading: "Porte blindée ou blindage, que choisir",
     paragraphs: [
-      "Deux solutions existent : le bloc-porte blindé complet, ou le blindage qui renforce une porte existante. Le choix dépend de l'état actuel de votre porte et de votre bâti : un bloc-porte convient mieux quand l'ensemble est fatigué, le blindage quand la porte reste saine et robuste.",
+      <>
+        Deux solutions existent : le bloc-porte blindé complet, ou le
+        blindage qui renforce une porte existante. Le choix dépend de
+        l&apos;état actuel de votre porte et de votre bâti : un bloc-porte
+        convient mieux quand l&apos;ensemble est fatigué, le blindage quand
+        la porte reste saine et robuste. Si le seul point faible est le
+        cylindre exposé, sur une porte et un bâti par ailleurs sains, une{" "}
+        <Link href="/poignee-blindee-nice/" className="text-steel underline">
+          poignée blindée
+        </Link>{" "}
+        suffit souvent, à moindre coût qu&apos;un blindage complet.
+      </>,
     ],
   },
   {
@@ -375,6 +386,7 @@ export default function InstallationPorteBlindeeNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
           { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
+          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
@@ -431,6 +443,7 @@ export default function InstallationPorteBlindeeNicePage() {
           { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
           { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
+          { href: "/poignee-blindee-nice/", label: "Armored handle" },
           { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],
       }}

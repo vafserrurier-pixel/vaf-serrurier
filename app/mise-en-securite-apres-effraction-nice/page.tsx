@@ -147,8 +147,13 @@ const guideContent = (
       </p>
       <ol className="list-decimal pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
-          <strong className="text-navy">Poignée blindée (349 € TTC)</strong> — masque et protège le
-          cylindre, un premier effet dissuasif visible dès le palier.
+          <strong className="text-navy">
+            <Link href="/poignee-blindee-nice/" className="text-steel underline">
+              Poignée blindée
+            </Link>{" "}
+            (349 € TTC)
+          </strong>{" "}
+          — masque et protège le cylindre, un premier effet dissuasif visible dès le palier.
         </li>
         <li>
           <strong className="text-navy">Cornières anti-pince</strong> — profilés métalliques fixés
@@ -432,6 +437,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
         { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
+        { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
         { href: "/agences-syndics-nice/", label: "Agences & syndics" },
         { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
       ]}
