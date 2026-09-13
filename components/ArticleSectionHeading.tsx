@@ -17,14 +17,18 @@ export default function ArticleSectionHeading({
   number,
   id,
   level = "h2",
+  size = "default",
   children,
 }: {
   number: number;
   id: string;
   level?: "h2" | "h3";
+  /** "lg" agrandit le titre sur desktop (taille mobile inchangee). "default" preserve le rendu historique. */
+  size?: "default" | "lg";
   children: ReactNode;
 }) {
   const Heading = level;
+  const textSize = size === "lg" ? "text-xl sm:text-2xl" : "text-xl";
   return (
     <div className="flex items-center gap-3 mb-3">
       <span
@@ -33,7 +37,7 @@ export default function ArticleSectionHeading({
       >
         {String(number).padStart(2, "0")}
       </span>
-      <Heading id={id} className="font-heading text-xl font-bold text-navy scroll-mt-24">
+      <Heading id={id} className={`font-heading ${textSize} font-bold text-navy scroll-mt-24`}>
         {children}
       </Heading>
     </div>

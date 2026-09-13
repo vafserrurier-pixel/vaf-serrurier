@@ -4,46 +4,58 @@ import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { DoorIcon, KeyIcon, WrenchIcon, AlertLockIcon, ShieldIcon, HandshakeIcon } from "@/components/Icons";
+import ArticleTable from "@/components/ArticleTable";
+import SituationSelector, { type Situation } from "@/components/SituationSelector";
+import { DoorIcon, KeyIcon, WrenchIcon, AlertLockIcon, ShieldIcon, HandshakeIcon, StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { fallbackReviews } from "@/lib/reviews";
 import { buildMetadata } from "@/lib/metadata";
 
-const situations = [
+const situations: Situation[] = [
   {
-    Icon: DoorIcon,
+    Icon: <DoorIcon className="w-4 h-4" />,
     title: "Porte claquée",
     text: "Les clés sont restées à l'intérieur, mais la porte n'est pas verrouillée à clé.",
+    anchorId: "diagnostic",
   },
   {
-    Icon: KeyIcon,
+    Icon: <KeyIcon className="w-4 h-4" />,
     title: "Clé perdue ou volée",
     text: "Porte verrouillée, sans clé disponible pour l'ouvrir.",
+    anchorId: "situation-cle-perdue",
   },
   {
-    Icon: WrenchIcon,
+    Icon: <WrenchIcon className="w-4 h-4" />,
     title: "Clé cassée dans la serrure",
     text: "Le fragment reste coincé dans le cylindre, la clé ne tourne plus.",
+    anchorId: "situation-cle-cassee",
   },
   {
-    Icon: AlertLockIcon,
+    Icon: <AlertLockIcon className="w-4 h-4" />,
     title: "Serrure grippée ou bloquée",
     text: "Le mécanisme résiste, avec ou sans clé, souvent après une usure progressive.",
+    anchorId: "situation-serrure-grippee",
   },
   {
-    Icon: ShieldIcon,
+    Icon: <ShieldIcon className="w-4 h-4" />,
     title: "Porte verrouillée à double tour",
     text: "Le pêne dormant est engagé, la méthode radio ne fonctionne plus.",
+    anchorId: "situation-double-tour",
   },
   {
-    Icon: HandshakeIcon,
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     title: "Personne vulnérable à l'intérieur",
     text: "Enfant, personne âgée ou animal bloqué seul : situation prioritaire, à signaler dès l'appel.",
+    anchorId: "prioritaire",
   },
 ];
 
 const guideToc = [
   { id: "diagnostic", label: "Reconnaître sa situation avant d'appeler" },
-  { id: "technique", label: "Porte verrouillée sans clé : ouverture fine ou destructive" },
+  { id: "technique", label: "Porte verrouillée sans clé : quelle méthode selon votre cas" },
   { id: "prioritaire", label: "Cas prioritaires : personne ou animal à l'intérieur" },
+  { id: "criteres", label: "Quand une ouverture sans casse devient peu réaliste" },
+  { id: "tarifs", label: "Tarifs indicatifs selon votre situation" },
   { id: "apres", label: "Après l'ouverture : faut-il changer le cylindre ?" },
   { id: "faq", label: "Questions complémentaires" },
 ];
@@ -85,28 +97,17 @@ const guideContent = (
   <>
     <p className="text-slate leading-relaxed">
       Ce guide complète les informations déjà présentes plus haut sur cette page,
-      avec le détail des techniques utilisées selon votre situation.
+      avec le détail des techniques utilisées selon votre situation. Cliquez sur
+      une carte ci-dessous pour aller directement à la section qui vous concerne.
     </p>
 
     <div className="bg-cream rounded-xl p-6 border border-navy/10">
       <p className="font-heading font-bold text-navy mb-4">Dans quelle situation êtes-vous ?</p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {situations.map(({ Icon, title, text }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
-              <Icon className="w-4 h-4" />
-            </span>
-            <div>
-              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <SituationSelector situations={situations} />
     </div>
 
     <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
+      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg">
         Reconnaître sa situation avant d&apos;appeler
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -120,8 +121,8 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={2} id="technique" level="h3">
-        Porte verrouillée sans clé : ouverture fine ou destructive
+      <ArticleSectionHeading number={2} id="technique" level="h3" size="lg">
+        Porte verrouillée sans clé : quelle méthode selon votre cas
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
         Sur une porte réellement verrouillée, sans clé disponible, deux familles
@@ -142,10 +143,64 @@ const guideContent = (
         </Link>
         .
       </p>
+
+      <div className="mt-5">
+        <h4 id="situation-cle-perdue" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
+          Clé perdue ou volée : remplacer plutôt que reproduire
+        </h4>
+        <p className="text-slate leading-relaxed">
+          Si la clé est perdue ou volée plutôt que simplement oubliée à
+          l&apos;intérieur, un remplacement du cylindre reste la solution la
+          plus sûre une fois la porte ouverte : reproduire l&apos;ancienne clé
+          laisserait en circulation un double dont vous ne maîtrisez plus
+          l&apos;usage.
+        </p>
+      </div>
+
+      <div className="mt-5">
+        <h4 id="situation-cle-cassee" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
+          Clé cassée dans la serrure
+        </h4>
+        <p className="text-slate leading-relaxed">
+          Un fragment de clé resté dans le cylindre se retire avec un outil
+          d&apos;extraction adapté, sans forcer. Ne tentez jamais de le
+          repousser avec un objet pointu ou de le coller : ces réflexes
+          courants compliquent presque toujours l&apos;extraction et abîment
+          le cylindre, ce qui transforme un dépannage simple en remplacement
+          complet.
+        </p>
+      </div>
+
+      <div className="mt-5">
+        <h4 id="situation-serrure-grippee" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
+          Serrure grippée ou bloquée
+        </h4>
+        <p className="text-slate leading-relaxed">
+          Un mécanisme qui résiste vient le plus souvent d&apos;un cylindre
+          encrassé par la poussière et l&apos;humidité, ou d&apos;un léger
+          désalignement de la porte qui force le pêne à chaque fermeture. Le
+          diagnostic sur place permet de distinguer un simple nettoyage d&apos;un
+          mécanisme réellement en fin de vie.
+        </p>
+      </div>
+
+      <div className="mt-5">
+        <h4 id="situation-double-tour" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
+          Porte verrouillée à double tour (pêne dormant engagé)
+        </h4>
+        <p className="text-slate leading-relaxed">
+          Quand un ou plusieurs tours de clé ont été donnés, le pêne dormant
+          (ou les pênes d&apos;une serrure multipoints) est engagé profondément
+          dans la gâche : la méthode radio, efficace sur une porte simplement
+          claquée, ne s&apos;applique plus. Le diagnostic du cylindre devient
+          alors la première étape avant de choisir entre crochetage et
+          perçage.
+        </p>
+      </div>
     </div>
 
     <div>
-      <ArticleSectionHeading number={3} id="prioritaire" level="h3">
+      <ArticleSectionHeading number={3} id="prioritaire" level="h3" size="lg">
         Cas prioritaires : personne ou animal à l&apos;intérieur
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -158,7 +213,42 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="apres" level="h3">
+      <ArticleSectionHeading number={4} id="criteres" level="h3" size="lg">
+        Quand une ouverture sans casse devient peu réaliste
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Quelques critères concrets, tirés du diagnostic sur place, orientent
+        vers le perçage plutôt qu&apos;un crochetage prolongé :
+      </p>
+      <ul className="list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-2">
+        <li>Un cylindre certifié A2P ou un modèle récent à goupilles actives, plus résistant au crochetage.</li>
+        <li>Une serrure multipoints avec plusieurs pênes déjà engagés, qui multiplie les points à manipuler.</li>
+        <li>Un cylindre visiblement grippé par la rouille ou une tentative de forçage préalable.</li>
+        <li className="text-navy/60 italic">
+          [DÉTAIL TECHNIQUE À CONFIRMER AVEC BENOÎT : seuil de temps au-delà duquel je passe systématiquement au perçage plutôt que de prolonger le crochetage]
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={5} id="tarifs" level="h3" size="lg">
+        Tarifs indicatifs selon votre situation
+      </ArticleSectionHeading>
+      <ArticleTable
+        caption="Majoration de 50% après 19h, le week-end et les jours fériés, dans tous les cas. Détail complet sur ma page tarifs."
+        headers={["Situation", "Prix", "Durée indicative"]}
+        rows={[
+          ["Porte claquée (simple)", "149 € TTC", "Quelques minutes en général"],
+          ["Porte blindée claquée", "[À confirmer avec Benoît]", "[À confirmer avec Benoît]"],
+          ["Porte verrouillée standard (cylindre européen)", "149 € TTC", "Variable selon l'état du cylindre"],
+          ["Porte verrouillée haute sécurité (ex. Fichet)", "189 € TTC", "Diagnostic sur place, peut demander plus de temps"],
+          ["Clé cassée dans la serrure", "à partir de 149 € TTC", "Quelques minutes à quelques dizaines de minutes"],
+        ]}
+      />
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={6} id="apres" level="h3" size="lg">
         Après l&apos;ouverture : faut-il changer le cylindre ?
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -179,39 +269,63 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-porte-nice/",
-  title: "Porte claquée à Nice – Ouverture sans casse 24h/24 | VAF",
-  description: "Porte claquée ou verrouillée à Nice ? J'ouvre sans casse quand c'est possible, devis annoncé avant intervention. Disponible jour et nuit.",
+  title: "Ouverture de porte à Nice – Serrurier 24h/24 | VAF",
+  description: "Porte claquée, verrouillée ou clé cassée à Nice ? Diagnostic précis par téléphone, ouverture sans casse quand c'est possible, devis annoncé avant intervention.",
 });
 
 const sectionsFr = [
   {
     heading: "Porte claquée n'est pas porte verrouillée",
+    Icon: <DoorIcon className="w-5 h-5" />,
     paragraphs: [
       "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée (fermée par le simple mouvement du battant, sans tour de clé) se résout très souvent sans aucune casse. J'utilise le plus souvent la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage dans 99% des cas. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
     ],
   },
   {
     heading: "Porte verrouillée à clé",
+    Icon: <KeyIcon className="w-5 h-5" />,
     paragraphs: [
       "Ce cas demande davantage de précautions, selon le type de serrure installée : cylindre standard, serrure multipoints ou modèle plus ancien. Si vos clés sont perdues ou volées, j'en profite souvent pour vous proposer un remplacement de cylindre. Cette solution règle le problème d'accès et améliore la sécurité en même temps, plutôt que de reproduire une clé qui pourrait circuler ailleurs.",
     ],
   },
   {
     heading: "Clé cassée ou serrure bloquée",
+    Icon: <WrenchIcon className="w-5 h-5" />,
     paragraphs: [
       "J'extrais proprement le morceau de clé resté dans le cylindre, avec un outil d'extraction adapté, sans forcer ni abîmer le mécanisme. Le perçage du cylindre reste une solution de tout dernier recours, uniquement si aucune autre méthode n'aboutit. Une serrure bloquée peut aussi venir d'un cylindre grippé par l'humidité ou d'un frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours moins cher qu'un dépannage de nuit un week-end.",
     ],
   },
   {
     heading: "Porte blindée verrouillée",
+    Icon: <ShieldIcon className="w-5 h-5" />,
     paragraphs: [
       "J'adapte ma méthode sans jamais transiger sur la qualité de l'ouverture, ni forcer sur une porte blindée conçue justement pour résister. L'objectif reste le même : rester propre, respecter la structure du bâti, et ne pas transformer une ouverture en réparation lourde.",
     ],
   },
   {
     heading: "Une pièce d'identité toujours demandée",
+    Icon: <HandshakeIcon className="w-5 h-5" />,
     paragraphs: [
-      "Avant d'ouvrir une porte verrouillée, je dois vérifier votre identité et votre droit d'occupation du logement : pièce d'identité et document à votre nom à cette adresse (bail, facture, titre de propriété). Ce n'est pas de la paperasse inutile. La réglementation impose cette vérification à tout serrurier, sous peine de poursuites pour complicité de violation de domicile en cas de manquement. C'est une protection pour vous comme pour moi.",
+      <>
+        Avant d&apos;ouvrir une porte verrouillée, je vérifie votre identité et
+        votre droit d&apos;occupation du logement : pièce d&apos;identité et
+        document à votre nom à cette adresse (bail, facture, titre de
+        propriété). Ce n&apos;est pas de la paperasse inutile : introduire
+        quelqu&apos;un dans un logement qui n&apos;est pas le sien, sans droit
+        ni justification, est puni par{" "}
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047899987"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-steel underline"
+        >
+          l&apos;article 226-4 du Code pénal
+        </a>{" "}
+        (jusqu&apos;à 3 ans d&apos;emprisonnement et 45 000 € d&apos;amende), et
+        un professionnel qui faciliterait sciemment une telle intrusion
+        s&apos;expose à être poursuivi comme complice. Cette vérification
+        systématique est donc une protection pour vous comme pour moi.
+      </>,
     ],
   },
 ];
@@ -250,7 +364,7 @@ const faqFr = [
   {
     question: "Pourquoi un serrurier demande-t-il une pièce d'identité avant d'ouvrir une porte ?",
     answer:
-      "C'est une obligation réglementaire, pas un choix de ma part : je dois vérifier votre identité et votre droit d'occupation du logement avant toute ouverture de porte verrouillée, pour éviter de faciliter une intrusion. Gardez une pièce d'identité et un justificatif à votre nom à portée de main.",
+      "C'est une pratique que j'applique systématiquement, pas un simple choix commercial : un professionnel qui faciliterait sciemment l'accès à un logement sans vérifier qui y a droit s'expose à être poursuivi comme complice de violation de domicile (article 226-4 du Code pénal). Gardez une pièce d'identité et un justificatif à votre nom à portée de main.",
   },
 ];
 
@@ -282,7 +396,17 @@ const sectionsEn = [
   {
     heading: "ID is always required",
     paragraphs: [
-      "Before opening a locked door, I have to verify your identity and your right to occupy the property: an ID card plus a document in your name at that address (lease, bill, deed). This isn't unnecessary paperwork. Regulation requires this check from every locksmith, with legal liability for complicity in an unlawful entry if it's skipped. It protects you as much as it protects me.",
+      <>
+        Before opening a locked door, I verify your identity and your right to
+        occupy the property: an ID card plus a document in your name at that
+        address (lease, bill, deed). This isn&apos;t unnecessary paperwork:
+        entering someone&apos;s home without right or justification is
+        punishable under Article 226-4 of the French Penal Code (up to 3
+        years&apos; imprisonment and a €45,000 fine), and a professional who
+        knowingly facilitated such an entry could be prosecuted as an
+        accomplice. This systematic check protects you as much as it protects
+        me.
+      </>,
     ],
   },
 ];
@@ -321,16 +445,30 @@ const faqEn = [
   {
     question: "Why does a locksmith ask for ID before opening a door?",
     answer:
-      "It's a regulatory requirement, not my own choice: I must verify your identity and your right to occupy the property before opening any locked door, to avoid facilitating an unlawful entry. Keep an ID and proof in your name close at hand.",
+      "It's a practice I apply systematically, not just a business choice: a professional who knowingly facilitates access to a home without checking who has a right to it risks being prosecuted as an accomplice to unlawful entry (Article 226-4 of the French Penal Code). Keep an ID and proof in your name close at hand.",
   },
 ];
 
 export default function OuvertureDePorteNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const doorReview = fallbackReviews.find((r) => r.author === "Marine D.");
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {business.reviews.rating.toFixed(1)}/5 sur {business.reviews.count}+ avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+    </div>
+  );
+
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Porte claquée à Nice : ouverture 24h/24 et 7j/7",
-        lead: "Porte claquée ou fermée à clé, avec ou sans casse selon la situation : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement.",
+        h1: "Ouverture de porte à Nice : le bon diagnostic avant la bonne méthode",
+        lead: "Porte claquée, verrouillée, clé cassée ou porte blindée : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement, sans casse quand c'est possible.",
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Ouverture de porte",
@@ -339,11 +477,31 @@ export default function OuvertureDePorteNicePage() {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
           alt: "Porte d'entrée avec nouvelle serrure installée par un serrurier à Nice",
         },
+        sectionsVariant: "cards",
+        headingScale: "lg",
+        heroTrustNote,
         extra: (
-          <PriceReminder
-            priceLabel="149 € TTC (189 € TTC pour une serrure Fichet verrouillée)"
-            locale="fr"
-          />
+          <>
+            <PriceReminder
+              priceLabel="149 € TTC (189 € TTC pour une serrure Fichet verrouillée)"
+              locale="fr"
+            />
+            {doorReview && (
+              <div className="mx-auto max-w-2xl px-4 pb-10">
+                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
+                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
+                    {Array.from({ length: doorReview.rating }).map((_, i) => (
+                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{doorReview.text}&rdquo;</p>
+                  <p className="mt-3 text-xs text-slate">{doorReview.author} · avis Google vérifié</p>
+                </div>
+              </div>
+            )}
+          </>
         ),
         processSteps: [
           {
@@ -377,15 +535,15 @@ export default function OuvertureDePorteNicePage() {
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={7} toc={guideToc} faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
         guideFaqForSchema: guideFaq,
       }}
       en={{
-        h1: "Door slammed shut in Nice: opened 24/7",
-        lead: "Door slammed shut or locked with a key, with or without damage depending on the situation: I diagnose over the phone, quote a price, then get it done cleanly.",
+        h1: "Door opening in Nice: the right method for your lock",
+        lead: "Door slammed shut, locked, broken key or security door: I diagnose over the phone, quote a price, then get it done cleanly, without damage when possible.",
         sections: sectionsEn,
         faq: faqEn,
         breadcrumbLabel: "Door opening",

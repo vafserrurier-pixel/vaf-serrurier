@@ -17,7 +17,18 @@ import { contentDates } from "@/lib/contentDates.generated";
 import type { ReactNode } from "react";
 import type { Locale } from "@/lib/locale";
 
-export type ServiceSection = { heading: string; paragraphs: ReactNode[] };
+export type ServiceSection = {
+  heading: string;
+  paragraphs: ReactNode[];
+  /**
+   * Icone optionnelle affichee en tete de section quand sectionsVariant="cards".
+   * Passer un element deja instancie (ex. <DoorIcon className="w-5 h-5" />),
+   * pas une reference de composant : ce contenu traverse la frontiere
+   * serveur/client de LocalizedServicePage, qui ne peut serialiser que des
+   * elements React, pas des fonctions.
+   */
+  Icon?: ReactNode;
+};
 export type ServiceImage = { src: string; alt: string };
 
 const strings = {
@@ -78,6 +89,9 @@ export default function ServicePageTemplate({
   relatedArticle,
   guide,
   guideFaqForSchema,
+  sectionsVariant = "default",
+  headingScale = "default",
+  heroTrustNote,
 }: {
   h1: string;
   lead: string;
@@ -103,9 +117,26 @@ export default function ServicePageTemplate({
    * concurrents sur la meme page.
    */
   guideFaqForSchema?: FaqItem[];
+  /**
+   * Variante d'affichage des sections principales : "cards" transforme
+   * chaque section en carte avec icone/bordure/ombre. Reservee pour l'instant
+   * a une page pilote ; "default" preserve exactement le rendu historique
+   * pour toutes les autres pages qui ne passent pas cette prop.
+   */
+  sectionsVariant?: "default" | "cards";
+  /**
+   * Echelle typographique des titres H2 de la page (sections, "Comment se
+   * deroule", FAQ). "lg" agrandit ces titres sur desktop tout en gardant la
+   * taille historique sur mobile. "default" ne change rien pour les pages
+   * qui ne passent pas cette prop.
+   */
+  headingScale?: "default" | "lg";
+  /** Bandeau de confiance optionnel (avis/anciennete) affiche sous les boutons du hero. */
+  heroTrustNote?: ReactNode;
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
+  const h2Size = headingScale === "lg" ? "text-2xl sm:text-3xl" : "text-2xl";
 
   return (
     <>
@@ -191,6 +222,7 @@ export default function ServicePageTemplate({
                 </a>
               )}
             </div>
+            {heroTrustNote && <div className="mt-4">{heroTrustNote}</div>}
           </div>
           {image && (
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
@@ -209,31 +241,58 @@ export default function ServicePageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.howItWorks}</h2>
+        <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.howItWorks}</h2>
         <ProcessSteps locale={locale} steps={processSteps} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
-          {sections.map((section) => (
-            <div key={section.heading}>
-              <h2 className="font-heading text-2xl font-bold text-navy mb-3">
-                {section.heading}
-              </h2>
-              {section.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-slate leading-relaxed mb-2">
-                  {paragraph}
-                </p>
+        <div className="mx-auto max-w-4xl px-4 py-12">
+          {sectionsVariant === "cards" ? (
+            <div className="grid gap-5 sm:grid-cols-2">
+              {sections.map((section) => (
+                <div
+                  key={section.heading}
+                  className="bg-white rounded-xl border border-navy/10 shadow-sm p-6"
+                >
+                  {section.Icon && (
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel/10 text-steel mb-3">
+                      {section.Icon}
+                    </span>
+                  )}
+                  <h2 className={`font-heading ${h2Size} font-bold text-navy mb-2`}>
+                    {section.heading}
+                  </h2>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index} className="text-slate leading-relaxed mb-2">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               ))}
             </div>
-          ))}
+          ) : (
+            <div className="flex flex-col gap-8">
+              {sections.map((section) => (
+                <div key={section.heading}>
+                  <h2 className={`font-heading ${h2Size} font-bold text-navy mb-3`}>
+                    {section.heading}
+                  </h2>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index} className="text-slate leading-relaxed mb-2">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {extra}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.faqTitle}</h2>
+        <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.faqTitle}</h2>
         <FaqAccordion items={faq} />
       </section>
 
