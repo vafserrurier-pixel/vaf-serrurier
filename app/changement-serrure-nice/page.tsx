@@ -412,10 +412,11 @@ const guideContent = (
           plus cher qu&apos;un profil européen standard.
         </p>
         <p className="text-slate leading-relaxed mt-3">
-          [À CONFIRMER : PROPOSEZ-VOUS DES CYLINDRES ADAPTABLES ? — un cylindre
-          compatible moins cher qu&apos;une pièce d&apos;origine propriétaire,
-          quand le fabricant d&apos;origine ne peut ou ne veut plus fournir de
-          clé.]
+          Quand le fabricant d&apos;origine ne peut ou ne veut plus fournir de
+          clé pour un cylindre propriétaire, je propose, lorsqu&apos;il en
+          existe un pour le modèle concerné, un cylindre adaptable compatible :
+          une solution généralement moins chère qu&apos;une pièce d&apos;origine,
+          sans reproduire les mêmes garanties de reproduction contrôlée.
         </p>
       </div>
     </div>
