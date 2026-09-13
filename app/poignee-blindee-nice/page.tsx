@@ -234,8 +234,8 @@ export default function PoigneeBlindeeNicePage() {
       breadcrumbLabel="Poignée blindée"
       path="/poignee-blindee-nice/"
       image={{
-        src: "/images/pool/poignee-cylindre-dores-porte-beige-nice.webp",
-        alt: "Poignée blindée finition dorée protégeant le cylindre d'une porte à Nice",
+        src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
+        alt: "Poignée blindée finition argent protégeant le cylindre d'une porte à Nice",
       }}
       sectionsVariant="cards"
       sectionsHeading="Ce qu'il faut savoir sur la poignée blindée"
