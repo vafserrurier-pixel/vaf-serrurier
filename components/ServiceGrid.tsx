@@ -1,25 +1,50 @@
 import Link from "next/link";
 import { serviceCardsByLocale } from "@/lib/serviceCards";
-import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
+import { mainServicesByLocale, defaultFeaturedHrefs } from "@/lib/relatedServicesDefault";
 import type { Locale } from "@/lib/locale";
 
 const moreLabel = { fr: "En savoir plus", en: "Learn more" };
 
-const FEATURED_COUNT = 3;
-
 export default function ServiceGrid({
   locale = "fr",
   lieu,
+  variant = "featured",
 }: {
   locale?: Locale;
   /** Nom du lieu à injecter dans les descriptions ("à Nice Centre"). Par défaut "Nice". */
   lieu?: string;
+  /**
+   * "featured" (par défaut, pages secteur) : 3 cartes mises en avant + le
+   * reste en pastilles. "all-pills" (accueil) : les 10 services à égalité,
+   * en pastilles uniquement, sans mise en avant contextuelle.
+   */
+  variant?: "featured" | "all-pills";
 }) {
   const services = mainServicesByLocale[locale];
   const cards = serviceCardsByLocale[locale];
   const place = lieu ?? "Nice";
-  const featured = services.slice(0, FEATURED_COUNT);
-  const rest = services.slice(FEATURED_COUNT);
+
+  if (variant === "all-pills") {
+    return (
+      <div className="flex flex-wrap gap-2.5">
+        {services.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className="text-sm font-semibold text-cream bg-cream/10 hover:bg-cream/20 border border-cream/15 rounded-full px-4 py-2 transition-colors"
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
+  const featured = defaultFeaturedHrefs
+    .map((href) => services.find((item) => item.href === href))
+    .filter((item): item is { href: string; label: string } => Boolean(item));
+  const featuredSet = new Set(featured.map((item) => item.href));
+  const rest = services.filter((item) => !featuredSet.has(item.href));
 
   return (
     <div>

@@ -406,7 +406,7 @@ export default function HomeBody() {
       <section className="bg-navy py-14">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="font-heading text-2xl font-bold text-cream mb-6 text-center">{t.services}</h2>
-          <ServiceGrid locale={locale} />
+          <ServiceGrid locale={locale} variant="all-pills" />
         </div>
       </section>
 

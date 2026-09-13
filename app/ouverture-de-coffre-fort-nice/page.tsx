@@ -11,6 +11,7 @@ const guideToc = [
   { id: "destructif-ou-non", label: "Ce qui rend une ouverture non destructive possible" },
   { id: "heritage", label: "Coffre hérité : la procédure pas à pas" },
   { id: "apres", label: "Après l'ouverture : réparer, remplacer ou monter en gamme" },
+  { id: "certification", label: "Certification du coffre et de la serrure : ce qu'il faut savoir" },
   { id: "faq", label: "Questions complémentaires" },
 ];
 
@@ -34,6 +35,16 @@ const guideFaq = [
     question: "Puis-je garder le même modèle de coffre après une ouverture destructive ?",
     answer:
       "Oui si le corps du coffre n'a pas été touché, seul le mécanisme de verrouillage. Je vous le confirme après diagnostic, avant de proposer une réparation ou un changement de gamme.",
+  },
+  {
+    question: "Si je fais remplacer la serrure de mon coffre, dois-je vérifier sa norme ?",
+    answer:
+      "Oui, systématiquement. La norme EN 1300 de la nouvelle serrure doit être compatible avec la classe du coffre (EN 14450 ou EN 1143-1) : une serrure non conforme annule la certification globale de l'ensemble en cas d'expertise après sinistre, même si le corps du coffre reste physiquement intact.",
+  },
+  {
+    question: "Quelle est la différence entre la norme du coffre et celle de la serrure ?",
+    answer:
+      "La norme du coffre (EN 14450 pour le résidentiel, EN 1143-1 pour la haute sécurité) évalue la résistance de l'ensemble du corps. L'EN 1300, elle, classe uniquement la serrure (catégorie A, B ou C), indépendamment du coffre dans lequel elle est montée.",
   },
 ];
 
@@ -101,6 +112,52 @@ const guideContent = (
         niveau de protection si le coffre ouvert ne correspondait plus à vos
         besoins : le détail des certifications et de la fixation est sur ma
         page{" "}
+        <Link href="/installation-coffre-fort-nice/" className="text-steel underline">
+          installation de coffre-fort
+        </Link>
+        .
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={5} id="certification" level="h3">
+        Certification du coffre et de la serrure : ce qu&apos;il faut savoir
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed">
+        Deux normes européennes encadrent la résistance du coffre lui-même.
+        La norme EN 14450 couvre les coffres à usage résidentiel courant,
+        avec deux niveaux : S1 (valeur assurable jusqu&apos;à 1 500 €) et S2
+        (jusqu&apos;à 3 000-5 000 € selon les assureurs, avec une
+        construction à double paroi). La norme EN 1143-1, elle, s&apos;adresse
+        aux coffres haute sécurité : elle classe de 0 à VI, pour des valeurs
+        assurables allant de 8 000 € à plus de 200 000 € selon la classe.
+        C&apos;est la référence pour les professionnels et les particuliers
+        avec des biens de valeur importante.
+      </p>
+      <p className="text-slate leading-relaxed mt-3">
+        Une troisième norme, l&apos;EN 1300, classe spécifiquement la{" "}
+        <strong className="text-navy">serrure</strong> du coffre,
+        indépendamment du corps du coffre lui-même, en catégorie A, B ou C. Un
+        coffre de classe 1 (EN 1143-1) exige une serrure au minimum classe A ;
+        à partir de la classe 2, une serrure classe B est requise.
+      </p>
+      <p className="text-slate leading-relaxed mt-3">
+        Le point souvent ignoré : une serrure non conforme au niveau de
+        certification du coffre annule la certification globale de
+        l&apos;ensemble en cas d&apos;expertise après sinistre, même si le
+        corps du coffre reste physiquement intact et solide. C&apos;est cette
+        certification, pas seulement la robustesse physique constatée, qui
+        conditionne le plafond d&apos;indemnisation accepté par votre
+        assurance : un coffre non certifié, même robuste, peut être ignoré
+        par l&apos;assureur en cas de sinistre.
+      </p>
+      <p className="text-slate leading-relaxed mt-3">
+        C&apos;est pour ça que je vérifie toujours cette compatibilité de
+        norme avant de proposer un remplacement de serrure après une
+        ouverture : remettre en service un mécanisme qui ne correspond pas à
+        la classe du coffre reviendrait à vous faire perdre une certification
+        sans que vous le sachiez. Si le niveau de protection doit évoluer, le
+        détail des certifications est sur ma page{" "}
         <Link href="/installation-coffre-fort-nice/" className="text-steel underline">
           installation de coffre-fort
         </Link>
@@ -234,7 +291,7 @@ export default function OuvertureDeCoffreFortNicePage() {
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

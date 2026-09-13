@@ -33,3 +33,70 @@ export const mainServicesByLocale: Record<Locale, { href: string; label: string 
     { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
   ],
 };
+
+// Les 3 services mis en avant par defaut (page sans "sujet service" propre :
+// accueil version pastilles exceptee, secteur, quartier, commune, et toute
+// page service sans entree dans featuredOverridesByHref ci-dessous). Choix
+// des 3 interventions les plus demandees, proposees a Benoit.
+export const defaultFeaturedHrefs = [
+  "/urgence-serrurier-nice/",
+  "/ouverture-de-porte-nice/",
+  "/changement-serrure-nice/",
+];
+
+// Mise en avant contextuelle : pour la page dont l'URL est la cle, ces 3
+// hrefs (dans cet ordre) remplacent le defaut ci-dessus. Un href absent de
+// cette liste retombe sur defaultFeaturedHrefs. La page elle-meme est de
+// toute facon exclue via excludeHref (voir RelatedServicesGrid).
+export const featuredOverridesByHref: Record<string, string[]> = {
+  "/urgence-serrurier-nice/": [
+    "/ouverture-de-porte-nice/",
+    "/changement-serrure-nice/",
+    "/mise-en-securite-apres-effraction-nice/",
+  ],
+  "/ouverture-de-porte-nice/": [
+    "/urgence-serrurier-nice/",
+    "/changement-serrure-nice/",
+    "/mise-en-securite-apres-effraction-nice/",
+  ],
+  "/changement-serrure-nice/": [
+    "/serrure-carenee-nice/",
+    "/poignee-blindee-nice/",
+    "/urgence-serrurier-nice/",
+  ],
+  "/serrure-carenee-nice/": [
+    "/poignee-blindee-nice/",
+    "/blindage-porte-nice/",
+    "/installation-porte-blindee-nice/",
+  ],
+  "/poignee-blindee-nice/": [
+    "/serrure-carenee-nice/",
+    "/blindage-porte-nice/",
+    "/installation-porte-blindee-nice/",
+  ],
+  "/blindage-porte-nice/": [
+    "/installation-porte-blindee-nice/",
+    "/serrure-carenee-nice/",
+    "/poignee-blindee-nice/",
+  ],
+  "/installation-porte-blindee-nice/": [
+    "/blindage-porte-nice/",
+    "/serrure-carenee-nice/",
+    "/poignee-blindee-nice/",
+  ],
+  "/mise-en-securite-apres-effraction-nice/": [
+    "/poignee-blindee-nice/",
+    "/blindage-porte-nice/",
+    "/installation-porte-blindee-nice/",
+  ],
+  "/ouverture-de-coffre-fort-nice/": [
+    "/installation-coffre-fort-nice/",
+    "/urgence-serrurier-nice/",
+    "/mise-en-securite-apres-effraction-nice/",
+  ],
+  "/installation-coffre-fort-nice/": [
+    "/ouverture-de-coffre-fort-nice/",
+    "/urgence-serrurier-nice/",
+    "/mise-en-securite-apres-effraction-nice/",
+  ],
+};

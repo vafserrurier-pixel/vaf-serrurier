@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { serviceCardsByLocale } from "@/lib/serviceCards";
-import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
+import { mainServicesByLocale, defaultFeaturedHrefs, featuredOverridesByHref } from "@/lib/relatedServicesDefault";
 import type { Locale } from "@/lib/locale";
 
 const moreLabel = { fr: "En savoir plus", en: "Learn more" };
-
-const FEATURED_COUNT = 3;
 
 export default function RelatedServicesGrid({
   items,
@@ -24,8 +22,12 @@ export default function RelatedServicesGrid({
   const cards = serviceCardsByLocale[locale];
   const place = lieu ?? "Nice";
   const list = (items ?? mainServicesByLocale[locale]).filter((item) => item.href !== excludeHref);
-  const featured = list.slice(0, FEATURED_COUNT);
-  const rest = list.slice(FEATURED_COUNT);
+  const featuredHrefs = (excludeHref && featuredOverridesByHref[excludeHref]) || defaultFeaturedHrefs;
+  const featured = featuredHrefs
+    .map((href) => list.find((item) => item.href === href))
+    .filter((item): item is { href: string; label: string } => Boolean(item));
+  const featuredSet = new Set(featured.map((item) => item.href));
+  const rest = list.filter((item) => !featuredSet.has(item.href));
 
   return (
     <div>
