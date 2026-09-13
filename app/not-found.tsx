@@ -20,7 +20,7 @@ export default function NotFound() {
           Retour à l&apos;accueil
         </Link>
         <Link
-          href="/depannage-serrurier-nice/"
+          href="/urgence-serrurier-nice/"
           className="px-5 py-2.5 rounded-full border border-navy/20 text-navy text-sm font-semibold"
         >
           Dépannage serrurier

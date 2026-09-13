@@ -128,7 +128,7 @@ const guideContent = (
         barillet une à deux fois par an suffisent à préserver le
         fonctionnement dans la durée. Si la clé commence à forcer, mieux
         vaut intervenir tôt : voir ma page{" "}
-        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
           dépannage serrurier
         </Link>
         .

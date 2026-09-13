@@ -26,7 +26,7 @@ type ServiceCard = { text: (lieu: string) => string; Icon: ComponentType<IconPro
 
 export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> = {
   fr: {
-    "/depannage-serrurier-nice/": {
+    "/urgence-serrurier-nice/": {
       text: (lieu) =>
         `Serrure bloquée, cylindre grippé, clé qui force à ${lieu} : je diagnostique la panne avant d'intervenir, et je répare plutôt que je ne remplace quand c'est possible.`,
       Icon: WrenchIcon,
@@ -88,7 +88,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
   },
   en: {
-    "/depannage-serrurier-nice/": {
+    "/urgence-serrurier-nice/": {
       text: (lieu) =>
         `Jammed lock, stuck cylinder, key that won't turn in ${lieu}: I diagnose the fault before I intervene, and repair rather than replace whenever possible.`,
       Icon: WrenchIcon,

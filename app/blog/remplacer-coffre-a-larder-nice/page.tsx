@@ -327,7 +327,7 @@ export default function RemplacerCoffreALarderPage() {
                   bloc-porte neuf
                 </Link>
                 , mécanisme non standard), mieux vaut me{" "}
-                <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
                   contacter directement
                 </Link>{" "}
                 plutôt que de forcer une pièce qui ne correspond pas. Retrouvez mes{" "}

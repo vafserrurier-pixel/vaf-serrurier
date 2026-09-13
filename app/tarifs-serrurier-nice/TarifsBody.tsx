@@ -85,7 +85,7 @@ const strings = {
     faqTitle: "Questions fréquentes sur les tarifs",
     needSomething: "Besoin d'un service en particulier ?",
     links: [
-      { href: "/depannage-serrurier-nice/", label: "Dépannage" },
+      { href: "/urgence-serrurier-nice/", label: "Dépannage" },
       { href: "/ouverture-de-porte-nice/", label: "ouverture de porte" },
       { href: "/changement-serrure-nice/", label: "changement de serrure" },
       { href: "/blindage-porte-nice/", label: "blindage de porte" },
@@ -109,7 +109,7 @@ const strings = {
     faqTitle: "Frequently asked questions about pricing",
     needSomething: "Need a specific service?",
     links: [
-      { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
+      { href: "/urgence-serrurier-nice/", label: "Emergency callout" },
       { href: "/ouverture-de-porte-nice/", label: "door opening" },
       { href: "/changement-serrure-nice/", label: "lock change" },
       { href: "/blindage-porte-nice/", label: "door reinforcement" },

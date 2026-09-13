@@ -22,7 +22,7 @@ const paths = [
   "",
   "a-propos",
   "ouverture-de-porte-nice",
-  "depannage-serrurier-nice",
+  "urgence-serrurier-nice",
   "changement-serrure-nice",
   "serrure-carenee-nice",
   "poignee-blindee-nice",

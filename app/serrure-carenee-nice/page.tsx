@@ -202,7 +202,7 @@ const guideContent = (
         le réglage. Si la clé commence à forcer ou qu&apos;un point ne
         s&apos;engage plus correctement, mieux vaut intervenir tôt : voir ma
         page{" "}
-        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
           dépannage serrurier
         </Link>
         .

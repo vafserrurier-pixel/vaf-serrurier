@@ -297,7 +297,7 @@ export default function AgreeAssurancesPage() {
                   mon parcours complet
                 </Link>{" "}
                 ou me contacter directement pour un{" "}
-                <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
                   dépannage
                 </Link>
                 .

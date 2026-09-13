@@ -9,7 +9,7 @@ import type { Locale } from "./locale";
 
 export const mainServicesByLocale: Record<Locale, { href: string; label: string }[]> = {
   fr: [
-    { href: "/depannage-serrurier-nice/", label: "Dépannage" },
+    { href: "/urgence-serrurier-nice/", label: "Dépannage" },
     { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
     { href: "/changement-serrure-nice/", label: "Changement de serrure" },
     { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
@@ -21,7 +21,7 @@ export const mainServicesByLocale: Record<Locale, { href: string; label: string 
     { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
   ],
   en: [
-    { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
+    { href: "/urgence-serrurier-nice/", label: "Emergency callout" },
     { href: "/ouverture-de-porte-nice/", label: "Door opening" },
     { href: "/changement-serrure-nice/", label: "Lock change" },
     { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },

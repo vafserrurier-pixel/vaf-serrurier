@@ -20,7 +20,7 @@ const LEVEL1 = [
   { path: "/serrurier-nice-ouest/", label: "Secteur Nice Ouest" },
   { path: "/tarifs-serrurier-nice/", label: "Tarifs" },
   { path: "/agences-syndics-nice/", label: "Agences & syndics" },
-  { path: "/depannage-serrurier-nice/", label: "Service : Dépannage serrurier" },
+  { path: "/urgence-serrurier-nice/", label: "Service : Dépannage serrurier" },
   { path: "/ouverture-de-porte-nice/", label: "Service : Ouverture de porte" },
   { path: "/changement-serrure-nice/", label: "Service : Changement de serrure" },
   { path: "/installation-porte-blindee-nice/", label: "Service : Installation porte blindée" },

@@ -155,7 +155,7 @@ const guideContentFr = (
         contrôle visuel du jeu de fermeture suffisent la plupart du temps.
         Si la porte commence à résister ou à mal refermer, mieux vaut agir
         tôt : le détail des solutions selon le symptôme est sur ma page{" "}
-        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
+        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
           dépannage serrurier
         </Link>
         .
