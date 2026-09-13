@@ -22,6 +22,18 @@ import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
 import { useLocale } from "@/lib/locale";
 
+// Selection propre a la home (page la plus visitee) : 5 services avec une
+// vraie photo, couvrant chaque grande categorie (urgence, ouverture,
+// remplacement, renfort, coffre-fort) plutot que les 3 plus demandes
+// generiques utilises par defaut ailleurs sur le site.
+const homeFeaturedHrefs = [
+  "/urgence-serrurier-nice/",
+  "/ouverture-de-porte-nice/",
+  "/changement-serrure-nice/",
+  "/blindage-porte-nice/",
+  "/ouverture-de-coffre-fort-nice/",
+];
+
 const introPhoto = {
   src: "/images/pool/benoit-serrurier-pose-porte-nice.webp",
   alt: "Benoît, artisan serrurier, après la pose d'une porte à Nice",
@@ -412,7 +424,7 @@ export default function HomeBody() {
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="font-heading text-2xl font-bold text-cream mb-2 text-center">{t.services}</h2>
           <p className="text-cream/70 text-sm mb-8 text-center max-w-xl mx-auto">{t.servicesSubtitle}</p>
-          <ServiceGrid locale={locale} variant="all-pills" />
+          <ServiceGrid locale={locale} featuredHrefs={homeFeaturedHrefs} />
         </div>
       </section>
 

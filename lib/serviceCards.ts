@@ -7,6 +7,16 @@
 // permet d'injecter le nom réel du quartier/commune dans la phrase existante
 // (au lieu de réécrire une phrase différente par page, ce qui finirait par
 // ressembler à du contenu généré en série).
+//
+// `image` : reprend la MÊME photo réelle que le hero de la page du service
+// (jamais une photo différente ni une photo stock/générée), pour que la
+// carte de la grille et la page vers laquelle elle mène montrent le même
+// visuel. Deux services peuvent partager le même fichier quand leurs pages
+// respectives partagent déjà cette photo (serrure carénée / bloc-porte
+// blindé, ouverture / installation de coffre-fort) : c'est un cas existant,
+// pas une duplication introduite ici, mais un vrai candidat à une prise de
+// vue dédiée. Un service sans `image` (ex. tarifs) retombe sur le
+// traitement de secours (fond navy + icône) dans ServiceGrid/RelatedServicesGrid.
 
 import {
   WrenchIcon,
@@ -22,7 +32,11 @@ import type { Locale } from "./locale";
 import type { ComponentType } from "react";
 
 type IconProps = { className?: string };
-type ServiceCard = { text: (lieu: string) => string; Icon: ComponentType<IconProps> };
+type ServiceCard = {
+  text: (lieu: string) => string;
+  Icon: ComponentType<IconProps>;
+  image?: { src: string; alt: string };
+};
 
 export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> = {
   fr: {
@@ -30,56 +44,100 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       text: (lieu) =>
         `Serrure bloquée, cylindre grippé, clé qui force à ${lieu} : je diagnostique la panne avant d'intervenir, et je répare plutôt que je ne remplace quand c'est possible.`,
       Icon: WrenchIcon,
+      image: {
+        src: "/images/serrurier-nice-depannage-reparation.webp",
+        alt: "Réparation d'un mécanisme de serrure à Nice",
+      },
     },
     "/ouverture-de-porte-nice/": {
       text: (lieu) =>
         `Porte claquée ou fermée à clé à ${lieu} : ouverture sans casse quand la configuration le permet, prix annoncé avant le moindre outil sorti.`,
       Icon: DoorIcon,
+      image: {
+        src: "/images/serrurier-nice-ouverture-de-porte.webp",
+        alt: "Porte d'entrée rouverte par un serrurier à Nice",
+      },
     },
     "/changement-serrure-nice/": {
       text: (lieu) =>
         `Remplacement de cylindre ou de serrure complète à ${lieu}, multipoints compris. Pose réglée et testée, pas juste vissée.`,
       Icon: KeyIcon,
+      image: {
+        src: "/images/serrurier-nice-changement-de-serrure.webp",
+        alt: "Cylindre neuf posé lors d'un changement de serrure à Nice",
+      },
     },
     "/serrure-carenee-nice/": {
       text: (lieu) =>
         `Renfort intermédiaire entre cylindre standard et blindage complet à ${lieu}, sans reprendre toute la porte.`,
       Icon: KeyIcon,
+      image: {
+        src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+        alt: "Serrure carénée 5 points en applique à Nice",
+      },
     },
     "/poignee-blindee-nice/": {
       text: (lieu) =>
         `Le cylindre exposé recouvert et protégé à ${lieu}, pour un renfort rapide et économique sans reprendre toute la serrure.`,
       Icon: ShieldIcon,
+      image: {
+        src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
+        alt: "Poignée blindée posée sur une porte à Nice",
+      },
     },
     "/blindage-porte-nice/": {
       text: (lieu) =>
         `Renforcer votre porte existante à ${lieu} sans la remplacer : bâti acier et serrure en applique, pour un budget nettement inférieur à un bloc-porte neuf.`,
       Icon: ShieldIcon,
+      image: {
+        src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
+        alt: "Pose d'un blindage de porte à Nice",
+      },
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
         `Remplacement complet par un bloc-porte neuf sur mesure à ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
       Icon: DoorIcon,
+      image: {
+        src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+        alt: "Bloc-porte blindé neuf posé à Nice",
+      },
     },
     "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
         `Mise en sécurité immédiate 24h/24 à ${lieu}, puis solution durable une fois le diagnostic fait. Facture détaillée pour votre assurance.`,
       Icon: AlertLockIcon,
+      image: {
+        src: "/images/serrurier-nice-securite-apres-effraction.webp",
+        alt: "Cylindre percé après une tentative d'effraction à Nice",
+      },
     },
     "/agences-syndics-nice/": {
       text: (lieu) =>
         `Interlocuteur unique pour vos biens en gestion locative ou en copropriété à ${lieu}, tarif étudié selon le volume.`,
       Icon: HandshakeIcon,
+      image: {
+        src: "/images/agences-syndics-remise-de-cles.webp",
+        alt: "Remise de clés entre un serrurier et un client à Nice",
+      },
     },
     "/ouverture-de-coffre-fort-nice/": {
       text: (lieu) =>
         `Code oublié, clé perdue, coffre hérité à ${lieu} : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.`,
       Icon: SafeIcon,
+      image: {
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Coffre-fort diagnostiqué avant ouverture à Nice",
+      },
     },
     "/installation-coffre-fort-nice/": {
       text: (lieu) =>
         `Conseil sur le modèle, fixation sécurisée au sol ou au mur à ${lieu} : un coffre non fixé ne protège pas grand-chose.`,
       Icon: SafeIcon,
+      image: {
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Coffre-fort prêt pour une fixation sécurisée à Nice",
+      },
     },
     "/tarifs-serrurier-nice/": {
       text: (lieu) =>
@@ -92,56 +150,100 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       text: (lieu) =>
         `Jammed lock, stuck cylinder, key that won't turn in ${lieu}: I diagnose the fault before I intervene, and repair rather than replace whenever possible.`,
       Icon: WrenchIcon,
+      image: {
+        src: "/images/serrurier-nice-depannage-reparation.webp",
+        alt: "Repairing a lock mechanism in Nice",
+      },
     },
     "/ouverture-de-porte-nice/": {
       text: (lieu) =>
         `Slammed shut or locked with the key inside in ${lieu}: opened without damage when the setup allows it, price quoted before any tool comes out.`,
       Icon: DoorIcon,
+      image: {
+        src: "/images/serrurier-nice-ouverture-de-porte.webp",
+        alt: "Front door reopened by a locksmith in Nice",
+      },
     },
     "/changement-serrure-nice/": {
       text: (lieu) =>
         `Cylinder or full lock replacement in ${lieu}, multipoint locks included. Fitted, adjusted and tested, not just screwed in.`,
       Icon: KeyIcon,
+      image: {
+        src: "/images/serrurier-nice-changement-de-serrure.webp",
+        alt: "New cylinder fitted during a lock change in Nice",
+      },
     },
     "/serrure-carenee-nice/": {
       text: (lieu) =>
         `An intermediate reinforcement between a standard cylinder and full armoring in ${lieu}, without redoing the whole door.`,
       Icon: KeyIcon,
+      image: {
+        src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+        alt: "5-point shrouded lock fitted in Nice",
+      },
     },
     "/poignee-blindee-nice/": {
       text: (lieu) =>
         `The exposed cylinder covered and protected in ${lieu}, a quick, affordable reinforcement without replacing the whole lock.`,
       Icon: ShieldIcon,
+      image: {
+        src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
+        alt: "Armored handle fitted on a door in Nice",
+      },
     },
     "/blindage-porte-nice/": {
       text: (lieu) =>
         `Reinforcing your existing door in ${lieu} without replacing it: steel frame and rim lock, at a much lower cost than a new door block.`,
       Icon: ShieldIcon,
+      image: {
+        src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
+        alt: "Door reinforcement being fitted in Nice",
+      },
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
         `Full replacement with a custom-made, A2P-certified armored door block in ${lieu}, when the door or its frame no longer hold up.`,
       Icon: DoorIcon,
+      image: {
+        src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+        alt: "New armored door block fitted in Nice",
+      },
     },
     "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
         `Immediate securing 24/7 in ${lieu}, then a lasting solution once the diagnosis is done. Detailed invoice for your insurance.`,
       Icon: AlertLockIcon,
+      image: {
+        src: "/images/serrurier-nice-securite-apres-effraction.webp",
+        alt: "Cylinder pierced after an attempted break-in in Nice",
+      },
     },
     "/agences-syndics-nice/": {
       text: (lieu) =>
         `A single point of contact for your rental or co-ownership properties in ${lieu}, rate studied by volume.`,
       Icon: HandshakeIcon,
+      image: {
+        src: "/images/agences-syndics-remise-de-cles.webp",
+        alt: "Keys handed over between a locksmith and a client in Nice",
+      },
     },
     "/ouverture-de-coffre-fort-nice/": {
       text: (lieu) =>
         `Forgotten code, lost key, inherited safe in ${lieu}: mechanism diagnosis and opening using the least destructive method available.`,
       Icon: SafeIcon,
+      image: {
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Safe assessed before opening in Nice",
+      },
     },
     "/installation-coffre-fort-nice/": {
       text: (lieu) =>
         `Advice on the right model, secure fixing to floor or wall in ${lieu}: a safe that isn't bolted down doesn't protect much.`,
       Icon: SafeIcon,
+      image: {
+        src: "/images/serrurier-nice-coffre-fort.webp",
+        alt: "Safe ready for secure fixing in Nice",
+      },
     },
     "/tarifs-serrurier-nice/": {
       text: (lieu) => `Full price list for every callout in ${lieu}, always quoted before I travel.`,
