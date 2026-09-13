@@ -227,11 +227,11 @@ const faq = [
 export default function PoigneeBlindeeNicePage() {
   return (
     <ServicePageTemplate
-      h1="Poignée blindée à Nice"
+      h1="Installation de poignée blindée à Nice"
       lead="Un renfort rapide et économique quand le point faible de votre porte est le cylindre exposé : il est recouvert, protégé, et n'est plus visible ni accessible de l'extérieur."
       sections={sections}
       faq={faq}
-      breadcrumbLabel="Poignée blindée"
+      breadcrumbLabel="Installation poignée blindée"
       path="/poignee-blindee-nice/"
       image={{
         src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
