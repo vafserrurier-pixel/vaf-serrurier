@@ -61,17 +61,6 @@ export function localBusinessSchema(opts?: { reviews?: Review[] }) {
       { "@type": "City", name: "Nice" },
       ...builtCommunes.map((name) => ({ "@type": "City" as const, name })),
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: business.reviews.rating,
-      reviewCount: business.reviews.count,
-    },
-    review: reviews.map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.author },
-      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5 },
-      reviewBody: r.text,
-    })),
     sameAs: [
       business.googleMaps.shareLink,
       business.social.facebook,
