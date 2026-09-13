@@ -51,10 +51,15 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
         `Le cylindre exposé recouvert et protégé à ${lieu}, pour un renfort rapide et économique sans reprendre toute la serrure.`,
       Icon: ShieldIcon,
     },
+    "/blindage-porte-nice/": {
+      text: (lieu) =>
+        `Renforcer votre porte existante à ${lieu} sans la remplacer : bâti acier et serrure en applique, pour un budget nettement inférieur à un bloc-porte neuf.`,
+      Icon: ShieldIcon,
+    },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
-        `Bloc-porte blindé complet ou blindage d'une porte existante à ${lieu} : je vous aide à choisir selon l'état réel de votre porte et de votre bâti.`,
-      Icon: ShieldIcon,
+        `Remplacement complet par un bloc-porte neuf sur mesure à ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
+      Icon: DoorIcon,
     },
     "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
@@ -108,10 +113,15 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
         `The exposed cylinder covered and protected in ${lieu}, a quick, affordable reinforcement without replacing the whole lock.`,
       Icon: ShieldIcon,
     },
+    "/blindage-porte-nice/": {
+      text: (lieu) =>
+        `Reinforcing your existing door in ${lieu} without replacing it: steel frame and rim lock, at a much lower cost than a new door block.`,
+      Icon: ShieldIcon,
+    },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
-        `Full armored door block or reinforcing an existing door in ${lieu}: I help you choose based on the real condition of your door and building.`,
-      Icon: ShieldIcon,
+        `Full replacement with a custom-made, A2P-certified armored door block in ${lieu}, when the door or its frame no longer hold up.`,
+      Icon: DoorIcon,
     },
     "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>

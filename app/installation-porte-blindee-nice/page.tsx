@@ -1,342 +1,308 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
-import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon } from "@/components/Icons";
+import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
 
-const criteres = [
-  {
-    Icon: ShieldIcon,
-    title: "Cornières anti-pince",
-    text: "Empêchent d'introduire un pied-de-biche entre le dormant et le battant.",
-  },
-  {
-    Icon: WrenchIcon,
-    title: "Paumelles anti-dégondage",
-    text: "Bloquent le retrait de la porte par les gonds, même une fois les paumelles visibles dégagées.",
-  },
-  {
-    Icon: CheckIcon,
-    title: "Épaisseur et nature de la tôle",
-    text: "Un chiffre à demander précisément : elle conditionne la résistance réelle, au-delà du seul niveau de serrure.",
-  },
-  {
-    Icon: HandshakeIcon,
-    title: "Facture conforme aux assureurs",
-    text: "Mentionne le niveau de certification posé, document généralement demandé pour la réduction de prime.",
-  },
-];
-
 const guideToc = [
-  { id: "decision", label: "Bloc-porte ou blindage : la checklist de décision" },
-  { id: "verifier", label: "Ce qu'il faut vérifier au-delà du niveau de serrure" },
-  { id: "confort", label: "Isolation phonique et thermique : un effet secondaire réel" },
-  { id: "entretien", label: "Entretien : ce qui prolonge la durée de vie" },
+  { id: "lignes", label: "Les cinq lignes en détail" },
+  { id: "a2p", label: "Le niveau A2P BP, un critère de devis" },
+  { id: "options", label: "Les options qui influencent le devis" },
+  { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
   { id: "faq", label: "Questions complémentaires" },
 ];
 
 const guideFaq = [
   {
-    question: "Un devis moins cher avec le même niveau A2P est-il forcément équivalent ?",
+    question: "Puis-je reproduire l'aspect de ma porte actuelle sur un bloc-porte neuf ?",
     answer:
-      "Pas nécessairement. Le niveau A2P encadre la résistance de l'ensemble serrure-cylindre-porte testée, mais la qualité de pose (réglage du bâti, ajustement des paumelles) influence tout autant la résistance réelle. Un excellent produit mal posé perd une bonne partie de son intérêt.",
+      "Oui, notamment avec la ligne Ferro, qui permet une reproduction de l'existant sur mesure. Le diagnostic sur place permet de définir précisément la finition la plus proche de votre porte actuelle.",
   },
   {
-    question: "Le blindage réduit-il l'isolation phonique ou thermique ?",
+    question: "Un bloc-porte à 2 vantaux ou de grande hauteur est-il possible ?",
     answer:
-      "Non, généralement l'inverse : la plaque d'acier et la garniture ajoutées renforcent aussi l'isolation par rapport à une porte d'entrée standard, même si ce n'est pas leur fonction première.",
+      "Oui, 1 ou 2 vantaux sont possibles selon la configuration de votre entrée, avec des hauteurs sur mesure jusqu'à 6 mètres pour les configurations les plus importantes.",
   },
   {
-    question: "Faut-il graisser les paumelles d'une porte blindée ?",
+    question: "Combien de temps pour fabriquer et poser un bloc-porte sur mesure ?",
     answer:
-      "Un point de contrôle simple à faire soi-même une à deux fois par an, avec un lubrifiant adapté au métal, pour éviter le grincement et préserver le jeu de fermeture dans la durée.",
-  },
-  {
-    question: "Combien de temps dure l'installation d'une porte blindée ?",
-    answer:
-      "Comptez généralement une demi-journée pour un blindage, une journée complète pour un bloc-porte complet, selon l'état du bâti existant et les ajustements nécessaires.",
+      "La fabrication sur mesure prend généralement 24 à 48h (la ligne Ferro peut être fabriquée en 24h), puis la pose elle-même prend 2 à 3 heures, sans travaux de maçonnerie.",
   },
 ];
 
 const guideContent = (
   <>
     <p className="text-slate leading-relaxed">
-      Ce guide détaille les critères concrets à vérifier au-delà du seul
-      niveau A2P déjà présenté plus haut, pour comparer un devis à un autre en
-      toute connaissance de cause.
+      Ce guide détaille les cinq lignes disponibles, la manière dont le
+      niveau A2P et les options s&apos;intègrent à votre devis, et les cas où
+      un bloc-porte neuf n&apos;est pas la réponse la plus adaptée.
     </p>
 
-    <div className="bg-cream rounded-xl p-6 border border-navy/10">
-      <p className="font-heading font-bold text-navy mb-4">À vérifier sur un devis, au-delà du prix</p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {criteres.map(({ Icon, title, text }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
-              <Icon className="w-4 h-4" />
-            </span>
-            <div>
-              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
     <div>
-      <ArticleSectionHeading number={1} id="decision" level="h3">
-        Bloc-porte ou blindage : la checklist de décision
+      <ArticleSectionHeading number={1} id="lignes" level="h3" size="lg" numberStyle="plain">
+        Les cinq lignes en détail
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Trois questions suffisent la plupart du temps à orienter le choix :
-        le dormant actuel est-il sain (pas de bois pourri, pas de déformation
-        visible) ? Le règlement de copropriété impose-t-il une apparence
-        identique côté palier ? Le budget cible correspond-il plutôt à un
-        renfort ciblé ou à un remplacement complet ? Un dormant en bon état
-        et une contrainte esthétique forte orientent vers le blindage ; un
-        bâti fatigué ou un objectif de résistance maximale orientent vers un
-        bloc-porte complet.
+        Le <strong className="text-navy">Lisseo</strong> mise sur un design
+        épuré, avec trois finitions extérieures possibles : bois lisse,
+        acier époxy ou acier décor bois. Le{" "}
+        <strong className="text-navy">Solo</strong> propose du bois avec
+        moulures, encastrées, à motifs design ou en applique selon la ligne
+        choisie. Le <strong className="text-navy">Ferro</strong> associe des
+        panneaux acier à des moulures sur mesure, avec une reproduction de
+        l&apos;existant possible et une fabrication en 24h. Le{" "}
+        <strong className="text-navy">Vitréo</strong> propose une version
+        vitrée entièrement sur mesure. Le{" "}
+        <strong className="text-navy">Designo</strong> décline trois lignes
+        design distinctes : graphique, esthétique et authentique. Toutes ces
+        lignes existent en 1 ou 2 vantaux, avec des hauteurs sur mesure
+        jusqu&apos;à 6 mètres.
       </p>
     </div>
 
     <div>
-      <ArticleSectionHeading number={2} id="verifier" level="h3">
-        Ce qu&apos;il faut vérifier au-delà du niveau de serrure
+      <ArticleSectionHeading number={2} id="a2p" level="h3" size="lg" numberStyle="plain">
+        Le niveau A2P BP, un critère de devis
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Le niveau A2P (BP1, BP2, BP3) résume une résistance testée en
-        laboratoire, mais deux devis au même niveau ne se valent pas
-        forcément sur le terrain. Les cornières anti-pince, qui empêchent
-        d&apos;insérer un pied-de-biche entre le dormant et le battant, et les
-        paumelles anti-dégondage, qui empêchent de sortir la porte par les
-        gonds, comptent parmi les éléments qui font la différence en usage
-        réel. Je les inclus systématiquement sur mes installations, et je
-        recommande de les demander explicitement à tout professionnel.
+        Tous les blocs-portes que je pose sont certifiés A2P, du niveau BP1
+        (résiste 5 minutes) au BP3 (résiste 15 minutes), en passant par le
+        BP2 (10 minutes). Ce n&apos;est pas un tarif fixe mais un critère à
+        définir ensemble selon votre budget et le niveau de sécurité
+        recherché : un logement en rez-de-chaussée n&apos;a pas les mêmes
+        besoins qu&apos;un appartement en étage élevé.
       </p>
     </div>
 
     <div>
-      <ArticleSectionHeading number={3} id="confort" level="h3">
-        Isolation phonique et thermique : un effet secondaire réel
+      <ArticleSectionHeading number={3} id="options" level="h3" size="lg" numberStyle="plain">
+        Les options qui influencent le devis
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Ce n&apos;est pas l&apos;objectif premier d&apos;une porte blindée, mais
-        l&apos;épaisseur de la tôle et la garniture intérieure améliorent
-        presque toujours l&apos;isolation par rapport à une porte d&apos;entrée
-        standard, un vrai plus sur les paliers exposés au bruit des cages
-        d&apos;escalier du centre de Nice.
+        Trois options concrètes changent réellement le confort et le prix
+        final : l&apos;isolation phonique renforcée (utile sur un palier
+        bruyant), l&apos;isolation thermique renforcée (utile sur une entrée
+        exposée), et l&apos;option coupe-feu / pare-flammes (utile en
+        copropriété selon la configuration des parties communes). Ce sont de
+        vrais critères de devis, pas des cases accessoires : j&apos;en
+        discute avec vous selon votre logement réel.
       </p>
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="entretien" level="h3">
-        Entretien : ce qui prolonge la durée de vie
+      <ArticleSectionHeading number={4} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
+        Quand ce n&apos;est pas la bonne solution
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Un graissage léger des paumelles une à deux fois par an et un
-        contrôle visuel du jeu de fermeture suffisent la plupart du temps.
-        Si la porte commence à résister ou à mal refermer, mieux vaut agir
-        tôt : le détail des solutions selon le symptôme est sur ma page{" "}
-        <Link href="/depannage-serrurier-nice/" className="text-steel underline">
-          dépannage serrurier
-        </Link>
-        .
+        Un bloc-porte neuf est la solution la plus complète, pas
+        systématiquement la plus pertinente. Deux cas où je vous oriente
+        ailleurs :
       </p>
+      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
+        <li>
+          <strong className="text-navy">Votre porte actuelle reste saine</strong> — si le bois
+          n&apos;est ni pourri ni déformé, remplacer l&apos;ensemble de la menuiserie n&apos;est pas
+          nécessaire. Un{" "}
+          <Link href="/blindage-porte-nice/" className="text-steel underline">
+            blindage de porte
+          </Link>{" "}
+          renforce votre porte existante pour un coût nettement inférieur.
+        </li>
+        <li>
+          <strong className="text-navy">Budget contraint</strong> — un{" "}
+          <Link href="/blindage-porte-nice/" className="text-steel underline">
+            blindage
+          </Link>{" "}
+          ou une{" "}
+          <Link href="/serrure-carenee-nice/" className="text-steel underline">
+            serrure carénée
+          </Link>{" "}
+          apportent un vrai gain de résistance à un tarif nettement plus accessible qu&apos;un
+          remplacement complet.
+        </li>
+      </ul>
     </div>
   </>
 );
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Porte blindée Nice – Blindage & bloc-porte A2P | VAF",
-  description: "Porte blindée ou blindage d'une porte existante à Nice : diagnostic, devis annoncé, pose soignée. Certification A2P BP expliquée simplement.",
+  title: "Bloc-porte blindé neuf à Nice – Sur mesure A2P | VAF",
+  description: "Bloc-porte blindé neuf à Nice : 5 lignes sur mesure, certification A2P BP1 à BP3, isolation acoustique 41 dB. Devis 100% personnalisé, sans prix générique.",
 });
 
 const sectionsFr = [
   {
-    heading: "Porte blindée ou blindage, que choisir",
+    heading: "Qu'est-ce qu'un bloc-porte blindé",
+    Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
       <>
-        Deux solutions existent : le bloc-porte blindé complet, ou le
-        blindage qui renforce une porte existante. Le choix dépend de
-        l&apos;état actuel de votre porte et de votre bâti : un bloc-porte
-        convient mieux quand l&apos;ensemble est fatigué, le blindage quand
-        la porte reste saine et robuste. Si le seul point faible est le
-        cylindre exposé, sur une porte et un bâti par ailleurs sains, une{" "}
-        <Link href="/poignee-blindee-nice/" className="text-steel underline">
-          poignée blindée
+        Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie —
+        porte, dormant et serrure — d&apos;un seul tenant, fabriqué sur
+        mesure et livré en 24 à 48h. C&apos;est la solution la plus complète
+        quand votre porte actuelle ou son bâti ne tiennent plus la route. Si
+        votre porte reste saine, un{" "}
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
+          blindage de porte
         </Link>{" "}
-        suffit souvent, à moindre coût qu&apos;un blindage complet.
+        suffit souvent, pour un coût nettement inférieur.
       </>,
     ],
   },
   {
-    heading: "En copropriété à Nice",
+    heading: "Cinq lignes selon votre style",
+    Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      <>
-            Les règlements de{" "}
-            <Link href="/agences-syndics-nice/" className="text-steel underline">
-              copropriété
-            </Link>{" "}
-            imposent parfois une apparence extérieure identique sur le palier. Le blindage préserve souvent mieux l&apos;esthétique existante, tandis qu&apos;un bloc-porte doit respecter les finitions visibles imposées.
-          </>,
+      "Lisseo (design épuré, 3 finitions), Solo (bois avec moulures), Ferro (panneaux acier, reproduction de l'existant possible), Vitréo (version vitrée sur mesure) et Designo (3 lignes design) : le détail de chaque ligne est dans mon guide complet. 1 ou 2 vantaux possibles, hauteur sur mesure jusqu'à 6 m.",
     ],
   },
   {
-    heading: "Ce qui fait vraiment la sécurité d'une porte",
+    heading: "Le niveau A2P BP, un critère de devis",
+    Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "Une serrure solide ne suffit pas : le bâti, les points d'ancrage et les paumelles comptent tout autant. Une porte bien posée et bien réglée dure plus longtemps qu'une installation expédiée, je prends le temps nécessaire pour l'ajustement.",
-      "Un cambrioleur met en moyenne 90 secondes pour forcer une serrure classique. Une porte blindée bien posée peut résister près de 50 minutes.",
+      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes : je définis le niveau adapté avec vous selon votre budget et le niveau de sécurité recherché, ce n'est pas un tarif fixe.",
     ],
   },
   {
-    heading: "Comprendre la certification A2P BP",
+    heading: "Les options qui influencent le devis",
+    Icon: <WrenchIcon className="w-4 h-4" />,
     paragraphs: [
-      "La certification A2P classe les blocs-portes selon des niveaux de résistance : BP1, BP2, BP3. Une porte A2P BP1 possède une serrure 3 points minimum et résiste aux tentatives d'effraction pendant au moins 5 minutes. C'est un repère utile pour comparer, mais une excellente porte mal posée perd tout son intérêt.",
+      "Isolation phonique renforcée, isolation thermique renforcée, option coupe-feu / pare-flammes : trois vrais critères à discuter selon votre logement, pas des cases accessoires.",
     ],
   },
   {
-    heading: "Déroulé d'une installation",
+    heading: "Isolation acoustique, un vrai avantage du bloc-porte",
+    Icon: <DoubleLockIcon className="w-4 h-4" />,
     paragraphs: [
-      "Je prends le temps de comprendre le besoin, et j'observe l'entrée et ses contraintes. Je propose ensuite une solution cohérente, avec un devis annoncé avant tout engagement. Sur place, je protège les zones de passage, je dépose l'ancienne porte proprement, puis je prépare le support. Je pose et j'ajuste finement, je teste plusieurs fois la fermeture, et j'explique enfin l'entretien à prévoir.",
+      "41 dB d'isolation acoustique de base, un niveau supérieur à celui d'un blindage classique, encore améliorable selon les options choisies.",
     ],
   },
   {
-    heading: "Ce qui fait varier le prix d'une porte blindée",
+    heading: "Fabrication et pose",
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "Le choix entre blindage et bloc-porte complet est le facteur le plus déterminant. Viennent ensuite le niveau de serrure (multipoints, certification A2P), le cylindre, les finitions visibles côté palier, et la configuration du chantier. Un accès compliqué en étage élevé sans ascenseur, par exemple, rallonge la manutention. Un devis détaillé, annoncé avant tout engagement, tient compte de chacun de ces éléments.",
-    ],
-  },
-  {
-    heading: "Un impact réel sur votre assurance habitation",
-    paragraphs: [
-      "La certification A2P est reconnue par la quasi-totalité des assureurs français. Elle conditionne souvent la couverture vol de votre contrat, et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats : à vérifier directement auprès de votre assureur. Je vous fournis une facture détaillée mentionnant le niveau de certification posé. C'est le document généralement demandé pour faire valoir cette amélioration de sécurité auprès de votre assurance.",
+      "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures sans travaux de maçonnerie. Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel.",
     ],
   },
 ];
 
 const faqFr = [
   {
-    question: "Comment savoir si ma porte blindée est aux normes ?",
+    question: "Combien coûte un bloc-porte blindé à Nice ?",
     answer:
-      "Une serrure de porte blindée conforme comporte plusieurs points de fermeture (2, 3, 5 voire 7) associés à un cylindre et une serrure certifiés A2P.",
+      "Le tarif d'un bloc-porte blindé dépend entièrement de vos besoins réels — niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. C'est pourquoi je ne communique pas de prix générique : un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
   },
   {
-    question: "Qu'est-ce qu'une porte A2P BP1 ?",
+    question: "Quelle différence avec un blindage de porte ?",
     answer:
-      "Une porte A2P BP1 possède une serrure 3 points minimum et résiste aux tentatives d'effraction pendant au moins 5 minutes, selon un test normalisé.",
+      "Le bloc-porte remplace l'ensemble de la menuiserie (porte, dormant, serrure). Le blindage conserve votre porte existante et renforce son bâti, pour un coût nettement inférieur quand votre porte reste saine : voir ma page blindage de porte.",
   },
   {
-    question: "Quels sont les avantages réels d'une porte blindée ?",
+    question: "Quel niveau A2P BP choisir ?",
     answer:
-      "Là où une serrure classique cède en environ 90 secondes, une porte blindée bien posée peut résister près de 50 minutes à une tentative d'effraction.",
+      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes. Le choix dépend de votre budget et du niveau de sécurité recherché : j'en discute avec vous lors du diagnostic, ce n'est pas un tarif fixe.",
   },
   {
-    question: "Qui installe une porte blindée à Nice ?",
-    answer:
-      "J'interviens moi-même, du diagnostic à la pose finale, en tant qu'artisan serrurier spécialisé dans le blindage de porte.",
+    question: "Combien de temps pour fabriquer et poser un bloc-porte ?",
+    answer: "24 à 48h de fabrication sur mesure, puis 2 à 3 heures de pose, sans maçonnerie.",
   },
   {
-    question: "Quel est le poids d'une porte blindée ?",
+    question: "Quelle garantie sur un bloc-porte blindé ?",
     answer:
-      "Pour des dimensions courantes (largeur 1,10 m, hauteur 2,20 m), comptez entre 130 et 180 kg, davantage si la porte offre en plus une résistance au feu.",
+      "Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel : deux garanties distinctes et cumulables.",
   },
   {
-    question: "Puis-je installer une porte blindée en copropriété à Nice ?",
+    question: "Peut-on avoir une porte vitrée ou sur mesure jusqu'à 6 mètres ?",
     answer:
-      "Oui, dans la grande majorité des cas, mais le règlement de copropriété peut imposer une apparence extérieure identique sur le palier. Le blindage d'une porte existante est souvent la solution la plus simple à faire accepter, car il ne change pas l'aspect vu du couloir.",
-  },
-  {
-    question: "Une porte blindée fait-elle vraiment baisser ma prime d'assurance ?",
-    answer:
-      "Dans la majorité des cas, oui, à partir du niveau A2P BP2. Le montant de la réduction dépend de votre assureur et de votre contrat : je vous conseille de vérifier ce point directement auprès de lui, muni de la facture détaillée que je vous remets.",
+      "Oui, la ligne Vitréo propose une version vitrée sur mesure, et l'ensemble des lignes existe en 1 ou 2 vantaux avec des hauteurs sur mesure jusqu'à 6 mètres.",
   },
 ];
 
 const sectionsEn = [
   {
-    heading: "Security door or reinforcement: which to choose",
+    heading: "What an armored door block is",
+    Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
-      "Two solutions exist: a full armored door block, or reinforcement that strengthens an existing door. The choice depends on the current condition of your door and building: a full door block suits a tired setup better, reinforcement suits a door that's still sound and sturdy.",
+      <>
+        An armored door block replaces your entire door unit — door, frame
+        and lock — in one piece, custom-made and delivered in 24 to 48
+        hours. It&apos;s the most complete solution when your current door
+        or its frame no longer hold up. If your door is still sound, a{" "}
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
+          door reinforcement
+        </Link>{" "}
+        is often enough, at a much lower cost.
+      </>,
     ],
   },
   {
-    heading: "In an apartment building in Nice",
+    heading: "Five lines depending on your style",
+    Icon: <CheckIcon className="w-4 h-4" />,
     paragraphs: [
-      "Building bylaws sometimes require an identical exterior appearance on the landing. Reinforcement often preserves the existing look better, while a full door block has to respect the required visible finish.",
+      "Lisseo (clean design, 3 finishes), Solo (wood with mouldings), Ferro (steel panels, reproduction of your existing door possible), Vitréo (custom glazed version) and Designo (3 design lines): full details for each line are in my complete guide. 1 or 2 leaves, custom heights up to 6 m.",
     ],
   },
   {
-    heading: "What actually makes a door secure",
+    heading: "A2P BP level, a quote criterion",
+    Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "A solid lock isn't enough: the frame, the anchor points and the hinges matter just as much. A door fitted and adjusted properly lasts longer than a rushed install, I take the time needed to get the adjustment right.",
-      "A burglar takes about 90 seconds on average to force a standard lock. A well-fitted security door can hold out for nearly 50 minutes.",
+      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes: I define the right level with you based on your budget and the security level you're after, it isn't a fixed price.",
     ],
   },
   {
-    heading: "Understanding A2P BP certification",
+    heading: "Options that shape the quote",
+    Icon: <WrenchIcon className="w-4 h-4" />,
     paragraphs: [
-      "A2P certification ranks door blocks by resistance level: BP1, BP2, BP3. An A2P BP1 door has at least a 3-point lock and resists break-in attempts for at least 5 minutes. It's a useful benchmark for comparison, but an excellent door poorly fitted loses all its value.",
+      "Enhanced sound insulation, enhanced heat insulation, fire-resistant option: three real criteria to discuss based on your home, not add-on checkboxes.",
     ],
   },
   {
-    heading: "How an installation goes",
+    heading: "Sound insulation, a real advantage of the door block",
+    Icon: <DoubleLockIcon className="w-4 h-4" />,
     paragraphs: [
-      "I take the time to understand the need, and look at the entrance and its constraints. I then suggest a solution that fits, with a price quoted before any commitment. On site, I protect the walkways, remove the old door cleanly, then prepare the frame. I fit and fine-adjust, test the closing several times, and finish by explaining the upkeep to expect.",
+      "41 dB of sound insulation as standard, above what a classic reinforcement offers, and can be improved further with options.",
     ],
   },
   {
-    heading: "What makes the price of a security door vary",
+    heading: "Manufacturing and fitting",
+    Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "The choice between reinforcement and a full door block is the biggest factor. Next come the lock level (multipoint, A2P certification), the cylinder, the visible finish on the landing side, and the site setup. Awkward access on a high floor with no lift, for example, adds handling time. A detailed quote, given before any commitment, accounts for each of these factors.",
-    ],
-  },
-  {
-    heading: "A real impact on your home insurance",
-    paragraphs: [
-      "A2P certification is recognized by almost all French insurers. It often affects the theft cover in your contract, and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract: check directly with yours. I provide a detailed invoice stating the certification level fitted. It's the document usually required to claim this security upgrade with your insurer.",
+      "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours with no masonry work. A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material.",
     ],
   },
 ];
 
 const faqEn = [
   {
-    question: "How do I know if my security door meets current standards?",
+    question: "How much does an armored door block cost in Nice?",
     answer:
-      "A compliant security door lock has several locking points (2, 3, 5 or even 7) combined with an A2P-certified cylinder and lock.",
+      "The price of an armored door block depends entirely on your actual needs — the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. That's why I don't give a generic price: an on-site assessment lets me put together a precise, tailored quote, with no obligation.",
   },
   {
-    question: "What is an A2P BP1 door?",
+    question: "What's the difference with door reinforcement?",
     answer:
-      "An A2P BP1 door has at least a 3-point lock and resists break-in attempts for at least 5 minutes, under a standardized test.",
+      "A door block replaces the entire unit (door, frame, lock). Reinforcement keeps your existing door and strengthens its frame, at a much lower cost when your door is still sound: see my door reinforcement page.",
   },
   {
-    question: "What are the real benefits of a security door?",
+    question: "Which A2P BP level should I choose?",
     answer:
-      "Where a standard lock gives way in about 90 seconds, a well-fitted security door can resist a break-in attempt for nearly 50 minutes.",
+      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes. The choice depends on your budget and the security level you want: I discuss it with you during the assessment, it isn't a fixed price.",
   },
   {
-    question: "Who installs security doors in Nice?",
-    answer:
-      "I handle it myself, from diagnosis to final fitting, as a locksmith specialized in door reinforcement.",
+    question: "How long to manufacture and fit a door block?",
+    answer: "24 to 48 hours of custom manufacturing, then 2 to 3 hours of fitting, no masonry work.",
   },
   {
-    question: "How much does a security door weigh?",
+    question: "What warranty comes with an armored door block?",
     answer:
-      "For common dimensions (1.10 m wide, 2.20 m tall), expect between 130 and 180 kg, more if the door also offers fire resistance.",
+      "A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material: two separate, combinable warranties.",
   },
   {
-    question: "Can I install a security door in an apartment building in Nice?",
+    question: "Can I get a glazed door, or a custom size up to 6 metres?",
     answer:
-      "Yes, in most cases, though the building bylaws may require an identical exterior look on the landing. Reinforcing an existing door is often the easiest solution to get approved, since it doesn't change the appearance seen from the hallway.",
-  },
-  {
-    question: "Does a security door really lower my insurance premium?",
-    answer:
-      "In most cases, yes, from A2P BP2 level up. The size of the reduction depends on your insurer and contract: I'd recommend checking directly with them, with the detailed invoice I provide.",
+      "Yes, the Vitréo line offers a fully custom glazed version, and every line comes in 1 or 2 leaves with custom heights up to 6 metres.",
   },
 ];
 
@@ -344,23 +310,19 @@ export default function InstallationPorteBlindeeNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Installation de porte blindée à Nice",
-        lead: "Bloc-porte blindé complet ou blindage d'une porte existante : je vous aide à choisir la solution adaptée à votre porte et à votre bâti, devis annoncé avant intervention.",
+        h1: "Bloc-porte blindé neuf à Nice",
+        lead: "Remplacement complet par un bloc-porte neuf sur mesure, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Devis 100% personnalisé.",
         sections: sectionsFr,
         faq: faqFr,
-        breadcrumbLabel: "Installation porte blindée",
+        breadcrumbLabel: "Bloc-porte blindé",
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "Serrurier posant une serrure multipoints sur une porte à Nice",
+          alt: "Serrurier posant un bloc-porte blindé neuf à Nice",
         },
-        extra: (
-          <PriceReminder
-            priceLabel="à partir de 2 689 € TTC"
-            note="Prix pour une porte de taille standard avec serrure 5 points en applique, un devis sur place reste systématique avant tout engagement"
-            locale="fr"
-          />
-        ),
+        sectionsVariant: "cards",
+        sectionsHeading: "Ce qu'il faut savoir sur le bloc-porte blindé",
+        headingScale: "lg",
         processSteps: [
           {
             title: "Appel",
@@ -368,56 +330,50 @@ export default function InstallationPorteBlindeeNicePage() {
           },
           {
             title: "Rendez-vous",
-            text: "Ce n'est pas toujours une urgence : je fixe un rendez-vous pour évaluer votre porte sur place, à l'heure qui vous convient, tout en restant réactif si besoin.",
+            text: "Je fixe un rendez-vous pour évaluer votre porte et son bâti sur place, à l'heure qui vous convient.",
           },
           {
-            title: "Évaluation de la porte et du bâti",
-            text: "J'examine l'état du bâti et de la porte existante pour déterminer si un blindage suffit ou si un bloc-porte complet est nécessaire.",
+            title: "Choix de la ligne et devis",
+            text: "Je vous présente les cinq lignes disponibles et j'établis un devis sur-mesure selon le niveau A2P et les options retenues.",
           },
           {
-            title: "Règlement",
-            text: "Le devis détaillé est validé avant le début des travaux, facture conforme aux assureurs à l'appui.",
+            title: "Fabrication et pose",
+            text: "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures, facture conforme aux assureurs à l'appui.",
           },
         ],
         relatedServices: [
+          { href: "/blindage-porte-nice/", label: "Blindage de porte" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
           { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-          { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
           { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
         relatedArticle: {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={6} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
         guideFaqForSchema: guideFaq,
       }}
       en={{
-        h1: "Security door installation in Nice",
-        lead: "Full armored door block or reinforcing an existing door: I help you choose the solution suited to your door and your building, price quoted before the work starts.",
+        h1: "New armored door block in Nice",
+        lead: "Full replacement with a custom-made, A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. 100% tailored quote.",
         sections: sectionsEn,
         faq: faqEn,
-        breadcrumbLabel: "Security door installation",
+        breadcrumbLabel: "Armored door block",
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "Locksmith fitting a multipoint lock on a door in Nice",
+          alt: "Locksmith fitting a new armored door block in Nice",
         },
-        extra: (
-          <PriceReminder
-            priceLabel="from €2,689 incl. VAT"
-            note="Price for a standard door size with a 5-point rim lock, an on-site quote is always required before any commitment"
-            locale="en"
-          />
-        ),
+        sectionsVariant: "cards",
+        sectionsHeading: "What to know about the armored door block",
+        headingScale: "lg",
         processSteps: [
           {
             title: "Call",
@@ -425,26 +381,24 @@ export default function InstallationPorteBlindeeNicePage() {
           },
           {
             title: "Appointment",
-            text: "This isn't always urgent: I schedule a visit to assess your door on site, at a time that suits you, while staying responsive if needed.",
+            text: "I schedule a visit to assess your door and its frame on site, at a time that suits you.",
           },
           {
-            title: "Assessing the door and the building",
-            text: "I examine the condition of the building and the existing door to determine whether reinforcement is enough or a full armored door block is needed.",
+            title: "Line choice and quote",
+            text: "I show you the five available lines and put together a tailored quote based on the A2P level and options chosen.",
           },
           {
-            title: "Payment",
-            text: "The detailed quote is confirmed before work starts, with an invoice that meets insurer requirements.",
+            title: "Manufacturing and fitting",
+            text: "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours, with an invoice that meets insurer requirements.",
           },
         ],
         relatedServices: [
+          { href: "/blindage-porte-nice/", label: "Door reinforcement" },
           { href: "/changement-serrure-nice/", label: "Lock change" },
           { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
-          { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
           { href: "/poignee-blindee-nice/", label: "Armored handle" },
-          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],
       }}
     />

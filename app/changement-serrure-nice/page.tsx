@@ -338,9 +338,9 @@ const guideContent = (
         courante et la moins coûteuse : c&apos;est la pièce qui reçoit la clé.
         Un coffre complet devient nécessaire quand le mécanisme lui-même est
         endommagé, usé, ou trop ancien pour trouver un cylindre compatible. Un
-        niveau plus élevé encore, la{" "}
+        niveau plus élevé encore, le{" "}
         <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-          porte blindée complète
+          bloc-porte blindé
         </Link>
         , se justifie seulement quand le bâti autour de la porte (cadre,
         chambranle) est lui-même fragilisé : dans ce cas, une serrure neuve
@@ -509,10 +509,18 @@ const guideContent = (
         <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
           serrure multipoints
         </Link>{" "}
-        si la porte s&apos;y prête, et seulement en dernier lieu vers une porte
-        blindée complète si le bâti le justifie. Je vous oriente toujours vers
-        le niveau cohérent avec l&apos;état réel de votre porte, jamais vers le
-        plus cher par défaut.
+        si la porte s&apos;y prête, à un{" "}
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
+          blindage de porte
+        </Link>{" "}
+        si vous voulez renforcer l&apos;ensemble du bâti sans remplacer la
+        porte, et seulement en dernier lieu vers un{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          bloc-porte blindé neuf
+        </Link>{" "}
+        si le bâti lui-même ne tient plus la route. Je vous oriente toujours
+        vers le niveau cohérent avec l&apos;état réel de votre porte, jamais
+        vers le plus cher par défaut.
       </p>
     </div>
   </>
@@ -660,6 +668,8 @@ export default function ChangementSerrureNicePage() {
           { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
           { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
+          { href: "/blindage-porte-nice/", label: "Blindage de porte" },
+          { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
           { href: "/agences-syndics-nice/", label: "Agences & syndics" },
           { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
         ],
@@ -730,6 +740,8 @@ export default function ChangementSerrureNicePage() {
           { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
           { href: "/poignee-blindee-nice/", label: "Armored handle" },
+          { href: "/blindage-porte-nice/", label: "Door reinforcement" },
+          { href: "/installation-porte-blindee-nice/", label: "Armored door block" },
           { href: "/agences-syndics-nice/", label: "Agencies & syndics" },
           { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
         ],

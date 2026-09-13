@@ -313,9 +313,9 @@ export default function SerrureMultipointsPage() {
                 l&apos;état du cadre avant de recommander un niveau de serrure : parfois,
                 renforcer la gâche ou consolider le chambranle apporte plus de sécurité
                 réelle qu&apos;ajouter des points de fermeture. Dans les cas les plus dégradés,
-                une{" "}
+                un{" "}
                 <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-                  porte blindée complète
+                  bloc-porte blindé neuf
                 </Link>{" "}
                 reste la solution la plus fiable.
               </p>

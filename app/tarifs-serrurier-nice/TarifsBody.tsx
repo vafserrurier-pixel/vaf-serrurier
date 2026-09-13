@@ -88,7 +88,7 @@ const strings = {
       { href: "/depannage-serrurier-nice/", label: "Dépannage" },
       { href: "/ouverture-de-porte-nice/", label: "ouverture de porte" },
       { href: "/changement-serrure-nice/", label: "changement de serrure" },
-      { href: "/installation-porte-blindee-nice/", label: "installation de porte blindée" },
+      { href: "/blindage-porte-nice/", label: "blindage de porte" },
     ],
   },
   en: {
@@ -112,7 +112,7 @@ const strings = {
       { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
       { href: "/ouverture-de-porte-nice/", label: "door opening" },
       { href: "/changement-serrure-nice/", label: "lock change" },
-      { href: "/installation-porte-blindee-nice/", label: "security door installation" },
+      { href: "/blindage-porte-nice/", label: "door reinforcement" },
     ],
   },
 };

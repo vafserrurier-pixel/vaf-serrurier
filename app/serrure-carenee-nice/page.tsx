@@ -70,15 +70,19 @@ const guideContent = (
       </p>
       <p className="text-slate leading-relaxed mt-3">
         Attention à ne pas confondre ce combo avec un{" "}
-        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
           blindage complet
         </Link>{" "}
         : le blindage pivot ne renforce que le côté charnières de la porte,
         en complément de la carénée qui protège déjà le côté serrure. Un
-        blindage complet (bloc-porte blindé avec serrure 5 points en
-        applique) reprend l&apos;ensemble de la porte et démarre à 2 689 €
-        TTC — la solution cohérente si le bâti a besoin d&apos;être repris
-        dans sa globalité, pas seulement renforcé point par point.
+        blindage complet (bâti acier autour de l&apos;ensemble du dormant,
+        conservant votre porte existante) va plus loin et démarre à 2 689 €
+        TTC — la solution cohérente pour un renfort global sans remplacer la
+        porte. Si le bâti lui-même est fragilisé, c&apos;est plutôt un{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          bloc-porte neuf
+        </Link>{" "}
+        qu&apos;il faut envisager.
       </p>
       <p className="text-slate leading-relaxed mt-3">
         Garantie fabricant Héraclès de 10 ans sur le mécanisme. Comptez
@@ -181,8 +185,9 @@ const guideContent = (
         </li>
         <li>
           <strong className="text-navy">Besoin de résistance structurelle globale</strong> — face à
-          des attaques au levier ou un bâti déjà fragilisé, la réponse cohérente reste un blindage
-          complet ou un bloc-porte, pas un renfort ciblé sur la seule serrure.
+          des attaques au levier sur une porte par ailleurs saine, un blindage complet reste
+          cohérent ; si le bâti lui-même est déjà fragilisé, la réponse passe par un bloc-porte
+          neuf, pas un renfort ciblé sur la seule serrure.
         </li>
       </ul>
     </div>
@@ -262,7 +267,7 @@ const sections = [
     heading: "Cylindre standard, serrure carénée ou blindage : comment choisir",
     Icon: <KeyIcon className="w-4 h-4" />,
     paragraphs: [
-      "Un simple remplacement de cylindre suffit quand la porte et son bâti sont sains et que seul le mécanisme de verrouillage montre des signes de faiblesse. La serrure carénée intervient un cran au-dessus, quand vous voulez renforcer significativement la résistance à l'effraction sans reprendre toute la porte. Le blindage complet ou le bloc-porte neuf restent la solution quand la porte elle-même, ou le bâti autour, ne tiennent plus la route.",
+      "Un simple remplacement de cylindre suffit quand la porte et son bâti sont sains et que seul le mécanisme de verrouillage montre des signes de faiblesse. La serrure carénée intervient un cran au-dessus, quand vous voulez renforcer significativement la résistance à l'effraction sans reprendre toute la porte. Le blindage complet reste une bonne option tant que la porte est saine mais mérite un renfort global ; le bloc-porte neuf devient nécessaire quand la porte elle-même, ou le bâti autour, ne tiennent plus la route.",
       "Je vous conseille selon l'état réel constaté sur place, pas selon la solution la plus chère. Une bonne partie de mon travail consiste justement à éviter un suréquipement inutile sur une porte qui n'en a pas besoin.",
     ],
   },
@@ -277,7 +282,7 @@ const faq = [
   {
     question: "Une serrure carénée remplace-t-elle un blindage de porte ?",
     answer:
-      "Non, c'est un renfort intermédiaire. Si votre porte ou son bâti sont fragiles, un blindage complet reste plus adapté. Je vous conseille selon l'état réel de votre porte, pas systématiquement la solution la plus chère.",
+      "Non, c'est un renfort intermédiaire. Si votre porte reste saine mais mérite un renfort global, un blindage complet est plus adapté ; si le bâti lui-même est fragile, c'est plutôt un bloc-porte neuf qu'il faut envisager. Je vous conseille selon l'état réel de votre porte, pas systématiquement la solution la plus chère.",
   },
   {
     question: "Combien coûte une serrure 5 points en applique carénée à Nice ?",
@@ -362,7 +367,8 @@ export default function SerrureCareneeNicePage() {
       guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+        { href: "/blindage-porte-nice/", label: "Blindage de porte" },
+        { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
         { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },

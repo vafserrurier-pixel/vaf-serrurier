@@ -297,11 +297,15 @@ export default function QueFaireApresUnCambriolagePage() {
                   Une solution durable, après diagnostic
                 </h3>
                 <p className="text-slate leading-relaxed">
-                  Je vous propose ensuite une solution durable, éventuellement une{" "}
+                  Je vous propose ensuite une solution durable, éventuellement un{" "}
+                  <Link href="/blindage-porte-nice/" className="text-steel underline">
+                    blindage de porte
+                  </Link>{" "}
+                  si la porte reste saine, ou un{" "}
                   <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-                    porte blindée
-                  </Link>
-                  , une fois le diagnostic complet effectué. Je vous fournis systématiquement
+                    bloc-porte neuf
+                  </Link>{" "}
+                  si le bâti a été endommagé, une fois le diagnostic complet effectué. Je vous fournis systématiquement
                   une facture détaillée, le document généralement demandé pour votre
                   déclaration de sinistre — voir mes{" "}
                   <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
@@ -381,7 +385,11 @@ export default function QueFaireApresUnCambriolagePage() {
                   poignée blindée
                 </Link>{" "}
                 le rend invisible et inaccessible de l&apos;extérieur, pour un coût bien
-                inférieur à un blindage complet.
+                inférieur à un{" "}
+                <Link href="/blindage-porte-nice/" className="text-steel underline">
+                  blindage de porte
+                </Link>
+                .
               </p>
             </div>
 

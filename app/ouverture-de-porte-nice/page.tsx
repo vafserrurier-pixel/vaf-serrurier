@@ -563,7 +563,7 @@ export default function OuvertureDePorteNicePage() {
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
           { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-          { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+          { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
           { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
           { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
           { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
@@ -618,7 +618,7 @@ export default function OuvertureDePorteNicePage() {
         relatedServices: [
           { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
           { href: "/changement-serrure-nice/", label: "Lock change" },
-          { href: "/installation-porte-blindee-nice/", label: "Security door installation" },
+          { href: "/installation-porte-blindee-nice/", label: "Armored door block" },
           { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
           { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
           { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },

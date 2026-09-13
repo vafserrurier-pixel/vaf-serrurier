@@ -322,9 +322,9 @@ export default function RemplacerCoffreALarderPage() {
                 Quand faire appel à un professionnel
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
-                Si le remplacement révèle un problème plus large (bâti abîmé,{" "}
+                Si le remplacement révèle un problème plus large (bâti abîmé nécessitant un{" "}
                 <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-                  porte blindée
+                  bloc-porte neuf
                 </Link>
                 , mécanisme non standard), mieux vaut me{" "}
                 <Link href="/depannage-serrurier-nice/" className="text-steel underline">

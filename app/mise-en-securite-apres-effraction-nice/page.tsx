@@ -178,12 +178,16 @@ const guideContent = (
           ).
         </li>
         <li>
-          <strong className="text-navy">Blindage complet</strong> si le bâti a été fragilisé au
+          <strong className="text-navy">Bloc-porte complet</strong> si le bâti a été fragilisé au
           point de justifier une solution plus complète (voir{" "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            installation de porte blindée
+            bloc-porte blindé neuf
           </Link>
-          ).
+          ), ou un{" "}
+          <Link href="/blindage-porte-nice/" className="text-steel underline">
+            blindage de porte
+          </Link>{" "}
+          si la porte elle-même reste saine.
         </li>
       </ol>
       <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 mt-4">
@@ -195,8 +199,11 @@ const guideContent = (
           d&apos;effraction les plus fréquents sur une porte standard :
           l&apos;attaque directe du cylindre, et l&apos;arrachement au levier
           entre porte et dormant. C&apos;est souvent le meilleur rapport
-          protection/investissement avant d&apos;envisager un blindage
-          complet — mais encore une fois, à confirmer selon l&apos;état réel
+          protection/investissement avant d&apos;envisager un{" "}
+          <Link href="/blindage-porte-nice/" className="text-steel underline">
+            blindage complet
+          </Link>{" "}
+          — mais encore une fois, à confirmer selon l&apos;état réel
           de votre porte, pas de façon systématique.
         </p>
       </div>
@@ -285,7 +292,21 @@ const sections = [
     heading: "Mise en sécurité provisoire ou solution définitive",
     Icon: <ClockIcon className="w-4 h-4" />,
     paragraphs: [
-      "Selon l'ampleur des dégâts, une mise en sécurité provisoire (blocage temporaire, remplacement partiel) peut suffire dans un premier temps. Cela laisse le temps de planifier une solution durable dans de bonnes conditions, plutôt que dans la précipitation. Cette solution durable peut prendre la forme d'un remplacement de serrure, d'un renforcement des points d'ancrage, voire d'un blindage complet si l'état de la porte le justifie.",
+      <>
+        Selon l&apos;ampleur des dégâts, une mise en sécurité provisoire (blocage temporaire,
+        remplacement partiel) peut suffire dans un premier temps. Cela laisse le temps de
+        planifier une solution durable dans de bonnes conditions, plutôt que dans la
+        précipitation. Cette solution durable peut prendre la forme d&apos;un remplacement de
+        serrure, d&apos;un renforcement des points d&apos;ancrage, d&apos;un{" "}
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
+          blindage de porte
+        </Link>{" "}
+        si la porte reste saine, voire d&apos;un{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          bloc-porte neuf
+        </Link>{" "}
+        si le bâti lui-même a été fragilisé.
+      </>,
     ],
   },
   {
@@ -333,7 +354,7 @@ const faq = [
   {
     question: "Puis-je renforcer ma porte avec un blindage après une effraction ?",
     answer:
-      "Oui, selon l'état de votre porte et de votre bâti. Je peux vous orienter vers un blindage si la porte le permet, une fois la mise en sécurité immédiate effectuée.",
+      "Oui, selon l'état de votre porte et de votre bâti. Une fois la mise en sécurité immédiate effectuée, je peux vous orienter vers un blindage de porte si la porte le permet, ou vers un bloc-porte neuf si le bâti a été fragilisé.",
   },
   {
     question: "Mon assurance habitation prend-elle en charge l'intervention ?",
@@ -432,7 +453,8 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
       guideFaqForSchema={guideFaq}
       relatedServices={[
         { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
+        { href: "/blindage-porte-nice/", label: "Blindage de porte" },
+        { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
         { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
         { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
         { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },

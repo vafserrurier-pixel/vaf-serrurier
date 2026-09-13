@@ -287,12 +287,12 @@ export default function CertificationA2pPage() {
                 comme expliqué plus haut. Les blocs-portes blindés complets, eux, sont notés
                 BP1, BP2 ou BP3, une échelle qui évalue la porte entière (cadre, gonds,
                 panneau et serrure) et non la seule serrure. Un excellent cylindre 3
-                étoiles posé sur une{" "}
+                étoiles posé sur une porte standard non blindée n&apos;offre pas le même niveau de
+                résistance globale qu&apos;un{" "}
                 <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-                  porte standard non blindée
-                </Link>{" "}
-                n&apos;offre pas le même niveau de résistance globale qu&apos;un bloc-porte certifié BP, même
-                d&apos;entrée de gamme.
+                  bloc-porte certifié BP
+                </Link>
+                , même d&apos;entrée de gamme.
               </p>
             </div>
 
