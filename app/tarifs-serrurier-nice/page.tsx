@@ -36,7 +36,17 @@ const faq = [
   {
     question: "Comment éviter une arnaque de serrurier ?",
     answer:
-      "Méfiez-vous d'abord des prix d'appel affichés très bas (30 ou 40 € par exemple) : c'est presque toujours le signe que la facture va gonfler une fois le technicien sur place, avec des frais ajoutés sur le pas de la porte. Une intervention sérieuse, déplacement compris, descend rarement sous les 100 € tout compris. Un prix très inférieur à la réalité du marché doit alerter, pas rassurer. Exigez un prix ferme par téléphone avant tout déplacement, demandez toujours une facture détaillée, et vérifiez que l'entreprise a une adresse et un SIRET vérifiables, pas seulement un numéro de mobile. C'est exactement pour lutter contre ces pratiques que je me suis installé à mon compte : mes tarifs sont annoncés à l'avance et ne bougent pas une fois sur place, sauf pièce supplémentaire clairement identifiée et validée par vous.",
+      "Méfiez-vous des prix d'appel affichés très bas, du refus de donner un prix par téléphone, d'une annonce d'office de remplacement de cylindre avant diagnostic, de l'absence de SIREN ou d'adresse vérifiable, d'un paiement en espèces exigé sans facture, ou d'une majoration non annoncée à l'avance. Une intervention sérieuse, déplacement compris, descend rarement sous les 100 € tout compris. Exigez un prix ferme par téléphone avant tout déplacement et demandez toujours une facture détaillée. C'est exactement pour lutter contre ces pratiques que je me suis installé à mon compte : mes tarifs sont annoncés à l'avance et ne bougent pas une fois sur place, sauf pièce supplémentaire clairement identifiée et validée par vous.",
+  },
+  {
+    question: "Puis-je me rétracter après avoir signé un devis à mon domicile ?",
+    answer:
+      "En principe oui : un contrat conclu à domicile ouvre un droit de rétractation de 14 jours (article L.221-18 du Code de la consommation). Ce délai ne s'applique toutefois pas quand le client demande expressément une exécution immédiate de la prestation et renonce explicitement à ce droit, ce qui est le cas typique d'un dépannage d'urgence réalisé sur-le-champ (article L.221-28 du Code de la consommation).",
+  },
+  {
+    question: "Que faire en cas de litige avec un professionnel du dépannage ?",
+    answer:
+      "Tout litige avec un professionnel peut être signalé sur SignalConso (signal.conso.gouv.fr), le service de signalement gratuit de la DGCCRF : le professionnel concerné est notifié et dispose d'un délai pour répondre.",
   },
 ];
 

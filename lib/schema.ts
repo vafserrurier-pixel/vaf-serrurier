@@ -1,9 +1,23 @@
+import { isValidElement, type ReactNode } from "react";
 import { business } from "./business";
 import { fallbackReviews, type Review } from "./reviews";
 import { builtCommunes } from "./communes";
 
-type FaqItem = { question: string; answer: string };
+type FaqItem = { question: string; answer: ReactNode };
 type BreadcrumbItem = { name: string; url: string };
+
+// Un answer de FAQ peut contenir des liens (JSX) pour l'affichage : le schema
+// FAQPage n'accepte que du texte brut, donc on aplati le ReactNode en
+// concatenant son contenu textuel et en jetant le balisage.
+function reactNodeToText(node: ReactNode): string {
+  if (node === null || node === undefined || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(reactNodeToText).join("");
+  if (isValidElement(node)) {
+    return reactNodeToText((node.props as { children?: ReactNode }).children);
+  }
+  return "";
+}
 
 export function localBusinessSchema(opts?: { reviews?: Review[] }) {
   const reviews = opts?.reviews ?? fallbackReviews;
@@ -138,7 +152,7 @@ export function faqSchema(items: FaqItem[]) {
       name: item.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.answer,
+        text: reactNodeToText(item.answer),
       },
     })),
   };
