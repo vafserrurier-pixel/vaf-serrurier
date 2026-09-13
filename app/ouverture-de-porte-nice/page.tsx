@@ -104,6 +104,11 @@ const guideFaq = [
     answer:
       "Pas nécessairement une fois votre identité vérifiée : vous pouvez rester à proximité, mais je dois pouvoir accéder librement à la porte le temps du diagnostic et de l'ouverture.",
   },
+  {
+    question: "Le prix annoncé au téléphone peut-il changer une fois sur place ?",
+    answer:
+      "Non : je travaille au forfait, pas à la fourchette. Le prix annoncé selon votre situation est celui que vous payez, sauf pièce supplémentaire clairement identifiée sur place et validée par vous avant toute facturation.",
+  },
 ];
 
 const guideContent = (
@@ -234,7 +239,14 @@ const guideContent = (
         vers le perçage plutôt qu&apos;un crochetage prolongé :
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-2">
-        <li>Un cylindre certifié A2P ou un modèle récent à goupilles actives, plus résistant au crochetage.</li>
+        <li>
+          Un cylindre certifié A2P ou conforme aux classes de résistance les
+          plus élevées de la norme{" "}
+          <Link href="/changement-serrure-nice/#niveau" className="text-steel underline">
+            EN 1303
+          </Link>{" "}
+          (résistance au perçage et à l&apos;arrachement), plus résistant au crochetage.
+        </li>
         <li>Une serrure multipoints avec plusieurs pênes déjà engagés, qui multiplie les points à manipuler.</li>
         <li>Un cylindre visiblement grippé par la rouille ou une tentative de forçage préalable.</li>
       </ul>
@@ -386,6 +398,11 @@ const faqFr = [
     question: "Pourquoi un serrurier demande-t-il une pièce d'identité avant d'ouvrir une porte ?",
     answer:
       "C'est une pratique que j'applique systématiquement, pas un simple choix commercial : un professionnel qui faciliterait sciemment l'accès à un logement sans vérifier qui y a droit s'expose à être poursuivi comme complice de violation de domicile (article 226-4 du Code pénal). Gardez une pièce d'identité et un justificatif à votre nom à portée de main.",
+  },
+  {
+    question: "Un locataire peut-il faire appel à un serrurier sans l'accord de son propriétaire ?",
+    answer:
+      "Oui : en tant que locataire, votre bail suffit à prouver votre droit d'occupation du logement, au même titre qu'une facture ou un titre de propriété pour un propriétaire. Aucun accord préalable du propriétaire n'est nécessaire pour une ouverture de porte.",
   },
 ];
 

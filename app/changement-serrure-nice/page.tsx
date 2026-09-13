@@ -345,8 +345,15 @@ const guideContent = (
         Le déroulé technique d&apos;une intervention
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Au-delà des étapes déjà décrites plus haut (appel, arrivée, choix,
-        règlement), voici ce qui se passe concrètement une fois sur place :
+        Si vous êtes actuellement bloqué dehors sans clé, la priorité est
+        d&apos;abord l&apos;ouverture de la porte — voir ma page{" "}
+        <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
+          ouverture de porte
+        </Link>{" "}
+        — le changement de cylindre intervient ensuite, une fois la porte
+        rouverte. Au-delà des étapes déjà décrites plus haut (appel, arrivée,
+        choix, règlement), voici ce qui se passe concrètement une fois sur
+        place :
       </p>
       <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
         <li>Dépose de l&apos;ancien cylindre ou du coffre complet.</li>
