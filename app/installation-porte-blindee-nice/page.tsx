@@ -129,7 +129,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Bloc-porte blindé neuf à Nice – Sur mesure A2P | VAF",
+  title: "Porte blindée neuve à Nice – Bloc-porte sur mesure A2P | VAF",
   description: "Bloc-porte blindé neuf à Nice : 5 lignes sur mesure, certification A2P BP1 à BP3, isolation acoustique 41 dB. Devis 100% personnalisé, sans prix générique.",
 });
 
@@ -342,11 +342,11 @@ export default function InstallationPorteBlindeeNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Bloc-porte blindé neuf à Nice",
+        h1: "Installation de porte blindée neuve à Nice",
         lead: "Remplacement complet par un bloc-porte neuf sur mesure, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Devis 100% personnalisé.",
         sections: sectionsFr,
         faq: faqFr,
-        breadcrumbLabel: "Bloc-porte blindé",
+        breadcrumbLabel: "Installation porte blindée neuve",
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
@@ -393,11 +393,11 @@ export default function InstallationPorteBlindeeNicePage() {
         guideFaqForSchema: guideFaq,
       }}
       en={{
-        h1: "New armored door block in Nice",
+        h1: "New armored door installation in Nice",
         lead: "Full replacement with a custom-made, A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. 100% tailored quote.",
         sections: sectionsEn,
         faq: faqEn,
-        breadcrumbLabel: "Armored door block",
+        breadcrumbLabel: "Armored door installation",
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
