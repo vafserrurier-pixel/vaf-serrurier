@@ -11,16 +11,19 @@ export default function RelatedServicesGrid({
   items,
   locale = "fr",
   lieu,
+  excludeHref,
 }: {
   /** Liste de services à afficher. Par défaut (non fournie), affiche la liste canonique des 10 services (voir lib/relatedServicesDefault.ts) : ne passer une liste différente que pour un cas explicitement justifié. */
   items?: { href: string; label: string }[];
   locale?: Locale;
   /** Nom du quartier/commune à injecter dans les descriptions ("à Cagnes-sur-Mer"). */
   lieu?: string;
+  /** Href de la page courante, à exclure de la liste (une page service ne doit jamais se lister elle-même comme "autre intervention"). */
+  excludeHref?: string;
 }) {
   const cards = serviceCardsByLocale[locale];
   const place = lieu ?? "Nice";
-  const list = items ?? mainServicesByLocale[locale];
+  const list = (items ?? mainServicesByLocale[locale]).filter((item) => item.href !== excludeHref);
   const featured = list.slice(0, FEATURED_COUNT);
   const rest = list.slice(FEATURED_COUNT);
 

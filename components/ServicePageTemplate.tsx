@@ -358,7 +358,7 @@ export default function ServicePageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.otherServices}</h2>
-        <RelatedServicesGrid items={relatedServices} locale={locale} />
+        <RelatedServicesGrid items={relatedServices} locale={locale} excludeHref={path} />
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
