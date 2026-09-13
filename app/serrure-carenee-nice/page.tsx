@@ -69,6 +69,18 @@ const guideContent = (
         posé est confirmé après diagnostic sur place, pas avant.
       </p>
       <p className="text-slate leading-relaxed mt-3">
+        Attention à ne pas confondre ce combo avec un{" "}
+        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+          blindage complet
+        </Link>{" "}
+        : le blindage pivot ne renforce que le côté charnières de la porte,
+        en complément de la carénée qui protège déjà le côté serrure. Un
+        blindage complet (bloc-porte blindé avec serrure 5 points en
+        applique) reprend l&apos;ensemble de la porte et démarre à 2 689 €
+        TTC — la solution cohérente si le bâti a besoin d&apos;être repris
+        dans sa globalité, pas seulement renforcé point par point.
+      </p>
+      <p className="text-slate leading-relaxed mt-3">
         Garantie fabricant Héraclès de 10 ans sur le mécanisme. Comptez
         généralement 3 à 5 heures de pose : plutôt vers 5 heures sur un bâti
         bois ancien qui demande des ajustements fins, plutôt vers 3 heures
