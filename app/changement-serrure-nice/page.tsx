@@ -77,7 +77,7 @@ const guideFaq = [
   {
     question: "Un cylindre certifié A2P coûte-t-il plus cher qu'un cylindre standard ?",
     answer:
-      "Oui généralement, le supplément dépendant de la marque et du niveau choisi [DONNÉE À CONFIRMER pour un chiffre précis] : je vous le confirme au téléphone selon le modèle exact retenu.",
+      "Oui : un cylindre certifié A2P est toujours sur devis, le montant dépendant de la taille et de la marque retenue. Je vous le confirme au téléphone selon le modèle exact choisi.",
   },
   {
     question: "Que faire si ma porte est légèrement voilée ou mal alignée ?",
@@ -431,10 +431,10 @@ const guideContent = (
         featuredRowIndex={0}
         rows={[
           ["Changement de cylindre standard", "à partir de 249 € TTC", "Moins d'une heure"],
-          ["Cylindre certifié A2P 1 étoile", "[PRIX À CONFIRMER AVEC BENOÎT]", "Moins d'une heure"],
+          ["Cylindre certifié A2P 1 étoile", "Sur devis (selon taille et marque)", "Moins d'une heure"],
           ["Cylindre certifié A2P 2 ou 3 étoiles", "Sur devis", "Moins d'une heure"],
-          ["Serrure à larder (remplacement complet)", "[PRIX À CONFIRMER AVEC BENOÎT]", "Un peu plus qu'un cylindre, avec réglage fin"],
-          ["Serrure en applique 3 points", "[PRIX À CONFIRMER AVEC BENOÎT]", "[DURÉE À CONFIRMER]"],
+          ["Serrure à larder (coffre, remplacement complet)", "89 € TTC de main d'œuvre (coffre facturé en supplément selon le modèle)", "Un peu plus qu'un cylindre, avec réglage fin"],
+          ["Serrure en applique 3 points", "699 € TTC pose et fourniture", "Environ 3h"],
           ["Serrure en applique 5 points (carénée)", "1 490 € TTC", "Généralement une demi-journée"],
         ]}
       />
