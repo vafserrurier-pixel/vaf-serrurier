@@ -200,7 +200,7 @@ const faq = [
   {
     question: "Combien de temps dure la pose d'une poignée blindée ?",
     answer:
-      "C'est une intervention courte, réalisée en une seule visite, sans modification structurelle de la porte. La durée précise dépend de la configuration constatée sur place [DURÉE EXACTE À CONFIRMER AVEC BENOÎT].",
+      "Environ une heure, en une seule visite, sans modification structurelle de la porte.",
   },
   {
     question: "Quelle différence avec un simple changement de cylindre ?",
@@ -221,6 +221,11 @@ const faq = [
     question: "Une poignée blindée remet-elle en cause la certification A2P de mon cylindre ?",
     answer:
       "Non. La poignée blindée recouvre le cylindre sans intervenir sur son mécanisme : si votre cylindre est déjà certifié A2P, sa certification n'est pas affectée par la pose. Le point exact est confirmé lors du diagnostic sur votre modèle.",
+  },
+  {
+    question: "Puis-je combiner la poignée blindée avec les cornières anti-pince ?",
+    answer:
+      "Oui, c'est un combo cohérent : la poignée blindée neutralise l'attaque directe sur le cylindre, les cornières anti-pince neutralisent l'arrachement au levier entre la porte et le dormant. Deux vecteurs d'effraction différents traités ensemble. Les cornières sont proposées en option à 269 € TTC, en complément des 349 € TTC de la poignée blindée.",
   },
 ];
 
@@ -244,9 +249,33 @@ export default function PoigneeBlindeeNicePage() {
         <>
           <PriceReminder
             priceLabel="349 € TTC"
-            note="Pose et réglage inclus. Devis confirmé après diagnostic du cylindre en place."
+            note="Un seul modèle, un tarif clair, pas de gamme à décoder. Pose et réglage inclus, devis confirmé après diagnostic du cylindre en place."
             locale="fr"
           />
+          <div className="mx-auto max-w-4xl px-4 mt-4">
+            <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-4">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/15 text-steel shrink-0">
+                <ShieldIcon className="w-5 h-5" />
+              </span>
+              <div>
+                <p className="font-heading font-semibold text-navy mb-1">
+                  Option complémentaire : cornières anti-pince (269 € TTC)
+                </p>
+                <p className="text-sm text-slate leading-relaxed">
+                  Des profilés métalliques fixés côté serrure recouvrent
+                  l&apos;interstice entre la porte et le dormant, empêchant
+                  d&apos;y glisser un levier (pied-de-biche, tournevis long)
+                  pour écarter la porte et faire sauter le pêne. Combinées à
+                  la poignée blindée, elles couvrent un second vecteur
+                  d&apos;effraction : la poignée neutralise l&apos;attaque
+                  directe sur le cylindre, les cornières neutralisent
+                  l&apos;arrachement au levier entre porte et dormant.
+                  Comptez [DURÉE COMBINÉE À CONFIRMER AVEC BENOÎT] pour la
+                  pose des deux ensemble.
+                </p>
+              </div>
+            </div>
+          </div>
           <section className="mx-auto max-w-4xl px-4 py-10">
             <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
               Marques de serrures que je pose
@@ -266,7 +295,7 @@ export default function PoigneeBlindeeNicePage() {
         },
         {
           title: "Pose et réglage",
-          text: "Installation de l'ensemble de sécurité sans modifier la structure de votre porte, réglage fin pour un fonctionnement fluide de la clé.",
+          text: "Installation de l'ensemble de sécurité en environ une heure, sans modifier la structure de votre porte, réglage fin pour un fonctionnement fluide de la clé.",
         },
         {
           title: "Garantie",
