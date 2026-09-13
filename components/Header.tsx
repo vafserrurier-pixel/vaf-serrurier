@@ -114,7 +114,7 @@ export default function Header() {
         <div className="mx-auto max-w-6xl flex items-center justify-center sm:justify-between gap-3">
           <span className="hidden sm:flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-urgent" aria-hidden="true" />
               {t.available}
             </span>
             <span className="text-cream/50" aria-hidden="true">

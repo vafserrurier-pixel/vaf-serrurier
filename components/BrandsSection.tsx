@@ -129,7 +129,7 @@ export default function BrandsSection({ locale = "fr" }: { locale?: Locale }) {
             className="group block bg-white rounded-lg border border-navy/10 p-5 text-center hover:border-steel hover:shadow-sm hover:-translate-y-0.5 transition-all"
           >
             <span
-              className="flex items-center justify-center w-11 h-11 rounded-full bg-navy text-cream font-heading font-bold text-lg mx-auto mb-3 shadow-sm group-hover:bg-urgent transition-colors"
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-navy text-cream font-heading font-bold text-lg mx-auto mb-3 shadow-sm group-hover:bg-steel transition-colors"
               aria-hidden="true"
             >
               {brand.name[0]}

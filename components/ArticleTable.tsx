@@ -45,13 +45,13 @@ export default function ArticleTable({
                   ? "bg-white"
                   : "bg-cream/40";
             return (
-              <tr key={rowIndex} className={isFeatured ? "bg-urgent/5" : stripeClass}>
+              <tr key={rowIndex} className={isFeatured ? "bg-steel/10" : stripeClass}>
                 {row.map((cell, cellIndex) => (
                   <td key={cellIndex} className="px-4 py-2.5 text-slate align-top">
                     {cellIndex === 0 && isFeatured ? (
                       <span className="inline-flex flex-wrap items-center gap-2">
                         <span className="font-semibold text-navy">{cell}</span>
-                        <span className="bg-urgent text-white text-[10px] font-semibold px-2 py-0.5 rounded-full whitespace-nowrap">
+                        <span className="bg-navy text-cream text-[10px] font-semibold px-2 py-0.5 rounded-full whitespace-nowrap">
                           {featuredLabel}
                         </span>
                       </span>

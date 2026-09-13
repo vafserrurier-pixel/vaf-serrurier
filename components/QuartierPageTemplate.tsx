@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
+import AvailabilityBadge from "./AvailabilityBadge";
 import ProcessSteps from "./ProcessSteps";
 import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
@@ -84,10 +85,7 @@ export default function QuartierPageTemplate({
                 { name: quartier, href: path },
               ]}
             />
-            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              Disponible maintenant : devis gratuit par téléphone
-            </span>
+            <AvailabilityBadge />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
               Serrurier à {quartier}, Nice
             </h1>
@@ -165,9 +163,12 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">
           Services disponibles à {quartier}
         </h2>
+        <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
+          Le même artisan intervient pour l&apos;ensemble de ces services à {quartier}.
+        </p>
         <RelatedServicesGrid items={services} lieu={quartier} />
       </section>
 

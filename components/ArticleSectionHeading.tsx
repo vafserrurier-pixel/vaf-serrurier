@@ -42,7 +42,7 @@ export default function ArticleSectionHeading({
     <div className="flex items-center gap-3 mb-3">
       {numberStyle === "plain" ? (
         <span
-          className="font-heading text-2xl font-black text-urgent font-tabular-nums shrink-0"
+          className="font-heading text-2xl font-black text-steel font-tabular-nums shrink-0"
           aria-hidden="true"
         >
           {String(number).padStart(2, "0")}

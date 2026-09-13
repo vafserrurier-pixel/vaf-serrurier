@@ -110,7 +110,7 @@ export default function ContactForm({
           type="text"
           autoComplete="name"
           required
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel focus:outline-none focus:ring-2 focus:ring-steel/25 transition-colors"
         />
       </div>
       <div>
@@ -123,7 +123,7 @@ export default function ContactForm({
           type="tel"
           autoComplete="tel"
           required
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel focus:outline-none focus:ring-2 focus:ring-steel/25 transition-colors"
         />
       </div>
       {services && services.length > 0 && (
@@ -135,7 +135,7 @@ export default function ContactForm({
             id="service"
             name="service"
             defaultValue=""
-            className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
+            className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel focus:outline-none focus:ring-2 focus:ring-steel/25 transition-colors"
           >
             <option value="">{t.serviceEmpty}</option>
             {services.map((service) => (
@@ -156,7 +156,7 @@ export default function ContactForm({
           required
           rows={compact ? 3 : 4}
           placeholder={t.placeholder}
-          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel"
+          className="w-full rounded-md border border-navy/20 px-3 py-2 text-navy bg-white focus:border-steel focus:outline-none focus:ring-2 focus:ring-steel/25 transition-colors"
         />
       </div>
       <div role="alert">
@@ -166,7 +166,7 @@ export default function ContactForm({
         type="submit"
         disabled={status === "sending"}
         aria-busy={status === "sending"}
-        className="mt-1 bg-urgent text-white font-semibold rounded-md px-5 py-2.5 hover:opacity-90 disabled:opacity-60"
+        className="mt-1 bg-navy text-cream font-semibold rounded-md px-5 py-2.5 hover:opacity-90 disabled:opacity-60"
       >
         {status === "sending" ? t.sending : t.send}
       </button>

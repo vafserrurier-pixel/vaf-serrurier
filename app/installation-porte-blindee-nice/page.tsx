@@ -372,13 +372,13 @@ export default function InstallationPorteBlindeeNicePage() {
             title: "Fabrication et pose",
             text: "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures, facture conforme aux assureurs à l'appui.",
           },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
@@ -415,7 +415,7 @@ export default function InstallationPorteBlindeeNicePage() {
             title: "Manufacturing and fitting",
             text: "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours, with an invoice that meets insurer requirements.",
           },
-        ],
+        ],
       }}
     />
   );

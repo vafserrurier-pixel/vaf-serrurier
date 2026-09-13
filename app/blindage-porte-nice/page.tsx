@@ -407,13 +407,13 @@ export default function BlindagePorteNicePage() {
             title: "Garantie",
             text: "Facture détaillée à l'appui, avec la garantie de pose de 2 ans et la garantie fabricant de 15 ans.",
           },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideTocFr} tocAccentColor="urgent" faq={guideFaqFr}>
+          <ServiceGuideSection readingMinutes={6} toc={guideTocFr} faq={guideFaqFr}>
             {guideContentFr}
           </ServiceGuideSection>
         ),
@@ -471,7 +471,7 @@ export default function BlindagePorteNicePage() {
             title: "Warranty",
             text: "Detailed invoice provided, with the 2-year fitting warranty and the 15-year manufacturer warranty.",
           },
-        ],
+        ],
       }}
     />
   );

@@ -90,7 +90,7 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => choose("accepted")}
-            className="px-4 py-2 text-sm rounded bg-urgent text-white font-semibold hover:opacity-90"
+            className="px-4 py-2 text-sm rounded bg-cream text-navy font-semibold hover:opacity-90"
           >
             {t.accept}
           </button>

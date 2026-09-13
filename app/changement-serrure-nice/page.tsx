@@ -659,13 +659,13 @@ export default function ChangementSerrureNicePage() {
             title: "Règlement",
             text: "Le prix confirmé avant la pose est celui que vous payez, clés neuves et facture détaillée à l'appui.",
           },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/serrure-multipoints-3-5-7-nice/",
           label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={9} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={9} toc={guideToc} faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
@@ -718,7 +718,7 @@ export default function ChangementSerrureNicePage() {
             title: "Payment",
             text: "The price confirmed before fitting is what you pay, new keys and a detailed invoice included.",
           },
-        ],
+        ],
       }}
     />
   );

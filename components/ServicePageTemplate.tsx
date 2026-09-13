@@ -2,6 +2,7 @@ import Image from "next/image";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
 import ProcessSteps, { ProcessStep } from "./ProcessSteps";
+import AvailabilityBadge from "./AvailabilityBadge";
 import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
@@ -64,6 +65,7 @@ const strings = {
     ),
     seeAllAreas: "Voir tous les secteurs",
     otherServices: "Autres interventions",
+    otherServicesSubtitle: "Le même artisan, pour tout ce qui touche vos portes et vos serrures à Nice.",
     nearYou: "Ce service près de chez vous",
     seeAllQuartiers: "Voir les 46 quartiers couverts",
     nearbyTowns: "Villes voisines de Nice",
@@ -84,6 +86,7 @@ const strings = {
     ),
     seeAllAreas: "See all areas (in French)",
     otherServices: "Other services",
+    otherServicesSubtitle: "The same craftsman, for everything else that touches your doors and locks.",
     nearYou: "This service near you",
     seeAllQuartiers: "See all 46 neighborhoods covered (in French)",
     nearbyTowns: "Towns near Nice",
@@ -200,10 +203,7 @@ export default function ServicePageTemplate({
               ]}
             />
             {preTitleBadge && <div className="mb-2">{preTitleBadge}</div>}
-            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              {t.badge}
-            </span>
+            <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{h1}</h1>
             <p className="mt-4 text-slate leading-relaxed max-w-2xl">{lead}</p>
             <div className="flex flex-wrap items-center gap-3 mt-6">
@@ -361,7 +361,8 @@ export default function ServicePageTemplate({
       {guide}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.otherServices}</h2>
+        <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">{t.otherServices}</h2>
+        <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">{t.otherServicesSubtitle}</p>
         <RelatedServicesGrid items={relatedServices} locale={locale} excludeHref={path} />
       </section>
 

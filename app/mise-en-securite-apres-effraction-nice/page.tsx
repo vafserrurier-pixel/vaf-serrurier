@@ -446,11 +446,11 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         label: "Que faire après un cambriolage : les bons réflexes",
       }}
       guide={
-        <ServiceGuideSection readingMinutes={6} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+        <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

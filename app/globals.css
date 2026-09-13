@@ -19,6 +19,27 @@
   --font-tabular: var(--font-plex-mono);
 }
 
+/*
+ * Echelle typographique fluide (charte DA section 4/section 5 "hierarchie
+ * typographique tres claire") : les paliers text-lg et au-dessus deviennent
+ * des clamp() plutot que des tailles fixes, pour que les titres s'adaptent
+ * en douceur a la largeur d'ecran au lieu de sauter d'un palier a l'autre.
+ * L'ecart entre niveaux est volontairement croissant (2xl grandit de 0.375rem,
+ * 3xl/4xl/5xl/6xl de 0.75rem) pour renforcer la hierarchie sur grand ecran.
+ * text-xs/sm/base restent fixes (corps de texte, badges, libelles courts :
+ * pas concernes par la demande, risque de casse visuelle dans les petits
+ * elements si on les rend fluides).
+ */
+@theme {
+  --text-lg: clamp(1.125rem, 1.07rem + 0.23vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.14rem + 0.45vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.33rem + 0.68vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.59rem + 1.14vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.91rem + 1.36vw, 3rem);
+  --text-5xl: clamp(3rem, 2.66rem + 1.36vw, 3.75rem);
+  --text-6xl: clamp(3.75rem, 3.41rem + 1.36vw, 4.5rem);
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-navy);

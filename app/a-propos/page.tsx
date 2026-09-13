@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 import CtaBlock from "@/components/CtaBlock";
 import { HandshakeIcon, PriceTagIcon, ShieldIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
@@ -32,10 +33,7 @@ export default function AProposPage() {
         <div className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
           <div>
             <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Qui suis-je", href: "/a-propos/" }]} />
-            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              Disponible maintenant : devis gratuit par téléphone
-            </span>
+            <AvailabilityBadge />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
               Qui suis-je
             </h1>

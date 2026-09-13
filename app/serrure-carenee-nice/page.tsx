@@ -360,11 +360,11 @@ export default function SerrureCareneeNicePage() {
         label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
       }}
       guide={
-        <ServiceGuideSection readingMinutes={6} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+        <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

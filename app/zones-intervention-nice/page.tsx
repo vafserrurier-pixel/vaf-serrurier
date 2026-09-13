@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 import LazyMap from "@/components/LazyMap";
 import CtaBlock from "@/components/CtaBlock";
 import ServiceGrid from "@/components/ServiceGrid";
@@ -77,10 +78,7 @@ export default function ZonesInterventionNicePage() {
               { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
             ]}
           />
-          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            Disponible maintenant : devis gratuit par téléphone
-          </span>
+          <AvailabilityBadge />
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Zones d&apos;intervention à Nice
           </h1>
@@ -199,7 +197,10 @@ export default function ZonesInterventionNicePage() {
 
     <section className="bg-navy py-14">
       <div className="mx-auto max-w-4xl px-4">
-        <h2 className="font-heading text-xl font-bold text-cream mb-4">Mes services</h2>
+        <h2 className="font-heading text-xl font-bold text-cream mb-1.5">Mes services</h2>
+        <p className="text-cream/70 text-sm mb-6 max-w-xl">
+          Un seul numéro pour tout ce qui touche vos serrures et vos portes à Nice.
+        </p>
         <ServiceGrid />
       </div>
     </section>

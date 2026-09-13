@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 import PricingTable from "@/components/PricingTable";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -305,10 +306,7 @@ export default function TarifsBody() {
               { name: t.breadcrumb, href: "/tarifs-serrurier-nice/" },
             ]}
           />
-          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            {t.badge}
-          </span>
+          <AvailabilityBadge locale={locale} />
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{t.h1}</h1>
           <p className="mt-4 text-slate leading-relaxed max-w-2xl">{t.lead}</p>
           <a

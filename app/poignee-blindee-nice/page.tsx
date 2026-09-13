@@ -307,11 +307,11 @@ export default function PoigneeBlindeeNicePage() {
         label: "Que faire après un cambriolage : les bons réflexes",
       }}
       guide={
-        <ServiceGuideSection readingMinutes={5} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+        <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

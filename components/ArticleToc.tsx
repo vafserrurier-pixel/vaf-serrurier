@@ -1,17 +1,7 @@
 export type ArticleTocItem = { id: string; label: string };
 
-export default function ArticleToc({
-  items,
-  accentColor = "steel",
-}: {
-  items: ArticleTocItem[];
-  /** Couleur des numeros du sommaire. "urgent" pour rester coherent avec des titres en numberStyle="plain" utilisant le meme accent. */
-  accentColor?: "steel" | "urgent";
-}) {
-  const numberClass =
-    accentColor === "urgent"
-      ? "font-tabular-nums font-semibold text-urgent shrink-0"
-      : "font-tabular-nums font-semibold text-steel shrink-0";
+export default function ArticleToc({ items }: { items: ArticleTocItem[] }) {
+  const numberClass = "font-tabular-nums font-semibold text-steel shrink-0";
   return (
     <nav aria-label="Sommaire de l'article" className="bg-white border border-navy/10 rounded-xl p-5">
       <p className="font-heading font-bold text-navy mb-3">Sommaire</p>

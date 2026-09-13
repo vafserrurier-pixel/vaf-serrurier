@@ -559,13 +559,13 @@ export default function OuvertureDePorteNicePage() {
             title: "Règlement",
             text: "Le prix confirmé avant l'ouverture est celui que vous payez, sans supplément surprise une fois la porte rouverte.",
           },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/porte-qui-claque-serrurier-nice/",
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
         },
         guide: (
-          <ServiceGuideSection readingMinutes={7} toc={guideToc} tocAccentColor="urgent" faq={guideFaq}>
+          <ServiceGuideSection readingMinutes={7} toc={guideToc} faq={guideFaq}>
             {guideContent}
           </ServiceGuideSection>
         ),
@@ -605,7 +605,7 @@ export default function OuvertureDePorteNicePage() {
             title: "Payment",
             text: "The price confirmed before opening is what you pay, no surprise extra charge once the door is open again.",
           },
-        ],
+        ],
       }}
     />
   );

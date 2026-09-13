@@ -8,8 +8,6 @@ const featuredPosts = [
     excerpt:
       "Ne rien toucher, faire opposition, porter plainte sous 48h, prévenir l'assurance : l'ordre des démarches recommandé après une effraction.",
     category: "Sécurité",
-    accent: "border-t-urgent",
-    tagClass: "bg-urgent/10 text-urgent",
   },
   {
     href: "/blog/certification-a2p-serrure-nice/",
@@ -17,8 +15,6 @@ const featuredPosts = [
     excerpt:
       "Une, deux ou trois étoiles : ce que signifie réellement cette certification, et comment vérifier qu'elle est authentique avant de payer.",
     category: "Comprendre",
-    accent: "border-t-navy",
-    tagClass: "bg-navy/10 text-navy",
   },
   {
     href: "/blog/porte-qui-claque-serrurier-nice/",
@@ -26,8 +22,6 @@ const featuredPosts = [
     excerpt:
       "Vérifications à faire avant d'appeler, ce qu'il ne faut surtout pas tenter seul, et comment reconnaître une annonce à prix d'appel trop bas.",
     category: "Conseil pratique",
-    accent: "border-t-steel",
-    tagClass: "bg-steel/10 text-steel",
   },
 ];
 
@@ -57,11 +51,9 @@ export default function BlogPreview({ locale = "fr" }: { locale?: Locale }) {
           <Link
             key={post.href}
             href={post.href}
-            className={`block bg-white border border-navy/10 border-t-4 ${post.accent} rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow h-full`}
+            className="group block bg-white border border-navy/10 border-t-4 border-t-steel rounded-lg p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all h-full"
           >
-            <span
-              className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}
-            >
+            <span className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 bg-steel/10 text-steel">
               {post.category}
             </span>
             <p className="font-heading font-semibold text-navy">{post.title}</p>

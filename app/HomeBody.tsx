@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProcessSteps from "@/components/ProcessSteps";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
 import QuoteBlock from "@/components/QuoteBlock";
 import TrustBadges from "@/components/TrustBadges";
 import StatBar from "@/components/StatBar";
@@ -186,6 +187,7 @@ const strings = {
     howItWorksSubtitle: "De votre appel au règlement : un déroulement simple, sans zone d'ombre.",
     pricingTitle: "Mes tarifs à Nice",
     services: "Mes services de serrurerie à Nice",
+    servicesSubtitle: "De l'urgence à la sécurisation complète, un seul artisan pour tout, sans sous-traitance.",
     brands: "Marques de serrures que je pose à Nice",
     feature1Title: "Prix annoncé avant",
     feature1Text:
@@ -254,6 +256,7 @@ const strings = {
     howItWorksSubtitle: "From your call to payment: a simple process, no grey areas.",
     pricingTitle: "My pricing in Nice",
     services: "My locksmith services in Nice",
+    servicesSubtitle: "From emergency callouts to full security upgrades, one craftsman for everything, no subcontracting.",
     brands: "Lock brands I install in Nice",
     feature1Title: "Price quoted upfront",
     feature1Text:
@@ -292,16 +295,13 @@ export default function HomeBody() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-urgent/5 blur-3xl"
+          className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-navy/5 blur-3xl"
         />
         <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 items-center">
           <div className="text-center sm:text-left">
-            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              {t.badge}
-            </span>
+            <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy">
-              {t.h1a} <span className="text-urgent">Nice</span>
+              {t.h1a} <span className="text-steel">Nice</span>
               {t.h1b}
             </h1>
             <p className="mt-4 text-slate leading-relaxed max-w-xl mx-auto sm:mx-0">{t.lead}</p>
@@ -410,7 +410,8 @@ export default function HomeBody() {
 
       <section className="bg-navy py-14">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="font-heading text-2xl font-bold text-cream mb-6 text-center">{t.services}</h2>
+          <h2 className="font-heading text-2xl font-bold text-cream mb-2 text-center">{t.services}</h2>
+          <p className="text-cream/70 text-sm mb-8 text-center max-w-xl mx-auto">{t.servicesSubtitle}</p>
           <ServiceGrid locale={locale} variant="all-pills" />
         </div>
       </section>
