@@ -15,18 +15,21 @@ export default function NotFound() {
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link
           href="/"
+          prefetch={false}
           className="px-5 py-2.5 rounded-full bg-navy text-cream text-sm font-semibold"
         >
           Retour à l&apos;accueil
         </Link>
         <Link
           href="/urgence-serrurier-nice/"
+          prefetch={false}
           className="px-5 py-2.5 rounded-full border border-navy/20 text-navy text-sm font-semibold"
         >
           Dépannage serrurier
         </Link>
         <Link
           href="/tarifs-serrurier-nice/"
+          prefetch={false}
           className="px-5 py-2.5 rounded-full border border-navy/20 text-navy text-sm font-semibold"
         >
           Voir les tarifs

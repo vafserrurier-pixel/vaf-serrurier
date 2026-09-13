@@ -333,7 +333,7 @@ export default function SerrureMultipointsPage() {
                 suffit largement, et inversement, sous-équiper une grande porte de maison
                 individuelle serait une fausse économie. Le prix exact dépend toujours du
                 diagnostic ; retrouvez mes{" "}
-                <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs indicatifs
                 </Link>{" "}
                 à titre de repère.

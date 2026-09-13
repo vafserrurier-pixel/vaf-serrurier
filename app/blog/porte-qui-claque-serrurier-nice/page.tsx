@@ -252,7 +252,7 @@ export default function PorteQuiClaquePage() {
                   Une intervention sérieuse pour une porte claquée descend rarement sous
                   les 100 € tout compris. Chez moi, ce tarif est annoncé à l&apos;avance
                   et fixe, sans surprise une fois sur place. Voir mes{" "}
-                  <Link href="/tarifs-serrurier-nice/" className="underline">
+                  <Link href="/tarifs-serrurier-nice/" prefetch={false} className="underline">
                     tarifs détaillés
                   </Link>
                   .

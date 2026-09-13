@@ -331,7 +331,7 @@ export default function CertificationA2pPage() {
                 qu&apos;un rez-de-chaussée exposé ou un logement ayant déjà subi une
                 tentative d&apos;effraction. Le prix varie selon la marque et le niveau
                 choisi ; consultez mes{" "}
-                <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs indicatifs
                 </Link>
                 .

@@ -331,7 +331,7 @@ export default function RemplacerCoffreALarderPage() {
                   contacter directement
                 </Link>{" "}
                 plutôt que de forcer une pièce qui ne correspond pas. Retrouvez mes{" "}
-                <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs annoncés à l&apos;avance
                 </Link>{" "}
                 avant toute intervention.

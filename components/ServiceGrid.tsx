@@ -60,6 +60,7 @@ export default function ServiceGrid({
             <Link
               key={href}
               href={href}
+              prefetch={false}
               className="group relative block h-60 sm:h-64 overflow-hidden rounded-2xl border border-cream/15 hover:border-cream/40 hover:-translate-y-1 transition-all duration-200"
             >
               {card.image ? (
@@ -107,6 +108,7 @@ export default function ServiceGrid({
             <Link
               key={href}
               href={href}
+              prefetch={false}
               className="text-sm font-medium text-cream bg-cream/10 hover:bg-cream/20 border border-cream/15 hover:border-cream/35 hover:-translate-y-0.5 rounded-full px-4 py-2 transition-all duration-200"
             >
               {label}

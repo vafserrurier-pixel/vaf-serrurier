@@ -31,6 +31,7 @@ export default function PriceReminder({
         </div>
         <Link
           href="/tarifs-serrurier-nice/"
+          prefetch={false}
           className="text-sm font-semibold text-steel hover:underline shrink-0"
         >
           {t.seeAll}

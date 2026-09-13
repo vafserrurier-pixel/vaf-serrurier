@@ -24,7 +24,7 @@ export default function Breadcrumbs({
                 {item.name}
               </span>
             ) : (
-              <Link href={item.href} className="hover:underline">
+              <Link href={item.href} prefetch={false} className="hover:underline">
                 {item.name}
               </Link>
             )}

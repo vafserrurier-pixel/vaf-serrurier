@@ -325,7 +325,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                 nécessaires. Dans tous les cas, un devis détaillé, poste par poste, reste
                 la seule façon d&apos;avoir un prix fiable, pas une estimation
                 approximative au téléphone. Voir mes{" "}
-                <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs indicatifs
                 </Link>{" "}
                 ; j&apos;interviens dans tous les{" "}

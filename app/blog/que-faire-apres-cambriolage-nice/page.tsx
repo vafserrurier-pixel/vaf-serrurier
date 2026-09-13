@@ -308,7 +308,7 @@ export default function QueFaireApresUnCambriolagePage() {
                   si le bâti a été endommagé, une fois le diagnostic complet effectué. Je vous fournis systématiquement
                   une facture détaillée, le document généralement demandé pour votre
                   déclaration de sinistre — voir mes{" "}
-                  <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                  <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                     tarifs annoncés à l&apos;avance
                   </Link>
                   .

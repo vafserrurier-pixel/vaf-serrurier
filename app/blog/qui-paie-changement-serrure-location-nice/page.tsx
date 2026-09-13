@@ -333,7 +333,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
               </ul>
               <p className="text-slate leading-relaxed mt-4">
                 Retrouvez mes{" "}
-                <Link href="/tarifs-serrurier-nice/" className="text-steel underline">
+                <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs annoncés à l&apos;avance
                 </Link>
                 .

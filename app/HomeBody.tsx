@@ -335,6 +335,7 @@ export default function HomeBody() {
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"
+                prefetch={false}
                 className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-5 py-3 rounded-full hover:bg-white transition-colors"
               >
                 {t.seePricing}
@@ -503,6 +504,7 @@ export default function HomeBody() {
             <Link
               key={sector.key}
               href={sectorPages[sector.key].href}
+              prefetch={false}
               className="block rounded-xl border border-navy/10 bg-white p-5 shadow-sm hover:border-steel hover:shadow-md transition-all"
             >
               <h3 className="font-heading font-bold text-navy mb-1.5">
@@ -521,6 +523,7 @@ export default function HomeBody() {
               <Link
                 key={quartier}
                 href={quartierHref(quartier)}
+                prefetch={false}
                 className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
               >
                 {quartier}
@@ -543,6 +546,7 @@ export default function HomeBody() {
                 <Link
                   key={commune}
                   href={communeHref(commune)}
+                  prefetch={false}
                   className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
                 >
                   {commune}

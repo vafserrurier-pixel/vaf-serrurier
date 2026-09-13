@@ -55,10 +55,10 @@ export default function Footer() {
           <p className="text-sm text-cream/80 mt-1">{business.tagline}</p>
           <p className="text-sm mt-3">{business.address.full}</p>
           <p className="text-sm mt-1">SIRET {business.siret}</p>
-          <Link href="/a-propos/" className="block text-sm mt-3 hover:underline">
+          <Link href="/a-propos/" prefetch={false} className="block text-sm mt-3 hover:underline">
             {t.who}
           </Link>
-          <Link href="/agences-syndics-nice/" className="block text-sm mt-1 hover:underline">
+          <Link href="/agences-syndics-nice/" prefetch={false} className="block text-sm mt-1 hover:underline">
             {t.pros}
           </Link>
         </div>
@@ -88,14 +88,14 @@ export default function Footer() {
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">
-            <Link href="/zones-intervention-nice/" className="hover:underline">
+            <Link href="/zones-intervention-nice/" prefetch={false} className="hover:underline">
               {t.areas}
             </Link>
           </p>
           <ul className="text-sm space-y-1">
             {(Object.keys(sectorPages) as (keyof typeof sectorPages)[]).map((key) => (
               <li key={key}>
-                <Link href={sectorPages[key].href} className="hover:underline">
+                <Link href={sectorPages[key].href} prefetch={false} className="hover:underline">
                   {sectorPages[key].label}
                 </Link>
               </li>
@@ -106,22 +106,22 @@ export default function Footer() {
           <p className="font-heading font-semibold mb-2">{t.legal}</p>
           <ul className="text-sm space-y-1">
             <li>
-              <Link href="/mentions-legales/" className="hover:underline">
+              <Link href="/mentions-legales/" prefetch={false} className="hover:underline">
                 {t.legalNotice}
               </Link>
             </li>
             <li>
-              <Link href="/conditions-generales-dutilisation/" className="hover:underline">
+              <Link href="/conditions-generales-dutilisation/" prefetch={false} className="hover:underline">
                 {t.terms}
               </Link>
             </li>
             <li>
-              <Link href="/conditions-generales-de-vente/" className="hover:underline">
+              <Link href="/conditions-generales-de-vente/" prefetch={false} className="hover:underline">
                 {t.sales}
               </Link>
             </li>
             <li>
-              <Link href="/politique-de-confidentialite/" className="hover:underline">
+              <Link href="/politique-de-confidentialite/" prefetch={false} className="hover:underline">
                 {t.privacy}
               </Link>
             </li>

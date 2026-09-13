@@ -58,6 +58,7 @@ export default function RelatedServicesGrid({
             <Link
               key={item.href}
               href={item.href}
+              prefetch={false}
               className="group relative block h-60 sm:h-64 overflow-hidden rounded-2xl border border-navy/10 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
             >
               {card?.image ? (
@@ -105,6 +106,7 @@ export default function RelatedServicesGrid({
             <Link
               key={item.href}
               href={item.href}
+              prefetch={false}
               className="text-sm font-medium text-navy/85 bg-cream hover:bg-white hover:text-steel border border-navy/10 hover:border-steel/40 hover:shadow-sm hover:-translate-y-0.5 rounded-full px-4 py-2 transition-all duration-200"
             >
               {item.label}

@@ -12,7 +12,7 @@ const strings = {
       <>
         Ce site utilise des cookies techniques nécessaires à son fonctionnement, et,
         seulement avec votre accord, des cookies de mesure d&apos;audience. Voir la{" "}
-        <Link href="/politique-de-confidentialite/" className="underline">
+        <Link href="/politique-de-confidentialite/" prefetch={false} className="underline">
           politique de confidentialité
         </Link>
         .
@@ -27,7 +27,7 @@ const strings = {
       <>
         This site uses technical cookies required for it to function, and, only with
         your consent, audience measurement cookies. See the{" "}
-        <Link href="/politique-de-confidentialite/" className="underline">
+        <Link href="/politique-de-confidentialite/" prefetch={false} className="underline">
           privacy policy
         </Link>{" "}
         (in French).

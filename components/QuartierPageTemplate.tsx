@@ -112,6 +112,7 @@ export default function QuartierPageTemplate({
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"
+                prefetch={false}
                 className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
               >
                 Voir les tarifs

@@ -144,14 +144,14 @@ export default function Header() {
       </div>
       <header className="bg-white border-b border-navy/10">
         <div className="mx-auto max-w-6xl flex items-center justify-between px-4 py-3 gap-4">
-          <Link href="/" aria-label={t.home}>
+          <Link href="/" prefetch={false} aria-label={t.home}>
             <Logo />
           </Link>
           <nav
             id="main-nav"
             className="hidden lg:flex items-center gap-5 text-sm font-medium text-navy"
           >
-            <Link href={navLinks[0].href} className="hover:text-steel">
+            <Link href={navLinks[0].href} prefetch={false} className="hover:text-steel">
               {navLinks[0].label}
             </Link>
             <div className="relative" ref={servicesRef}>
@@ -189,6 +189,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      prefetch={false}
                       role="menuitem"
                       onClick={() => setServicesOpen(false)}
                       className="block px-4 py-2 text-sm text-navy hover:bg-cream hover:text-steel"
@@ -200,7 +201,7 @@ export default function Header() {
               )}
             </div>
             {navLinks.slice(1).map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-steel">
+              <Link key={link.href} href={link.href} prefetch={false} className="hover:text-steel">
                 {link.label}
               </Link>
             ))}
@@ -258,6 +259,7 @@ export default function Header() {
           >
             <Link
               href={navLinks[0].href}
+              prefetch={false}
               className="py-2 border-b border-navy/10"
               onClick={() => setOpen(false)}
             >
@@ -294,6 +296,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    prefetch={false}
                     className="py-2 border-b border-navy/10 text-sm"
                     onClick={() => {
                       setOpen(false);
@@ -309,6 +312,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className="py-2 border-b border-navy/10"
                 onClick={() => setOpen(false)}
               >
