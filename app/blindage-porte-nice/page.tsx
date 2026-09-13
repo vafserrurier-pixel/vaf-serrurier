@@ -407,15 +407,7 @@ export default function BlindagePorteNicePage() {
             title: "Garantie",
             text: "Facture détaillée à l'appui, avec la garantie de pose de 2 ans et la garantie fabricant de 15 ans.",
           },
-        ],
-        relatedServices: [
-          { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé neuf" },
-          { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
@@ -479,15 +471,7 @@ export default function BlindagePorteNicePage() {
             title: "Warranty",
             text: "Detailed invoice provided, with the 2-year fitting warranty and the 15-year manufacturer warranty.",
           },
-        ],
-        relatedServices: [
-          { href: "/installation-porte-blindee-nice/", label: "New armored door block" },
-          { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
-          { href: "/poignee-blindee-nice/", label: "Armored handle" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
-          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
-          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
-        ],
+        ],
       }}
     />
   );

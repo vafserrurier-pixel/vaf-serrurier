@@ -116,7 +116,8 @@ export default function ServicePageTemplate({
   faq: FaqItem[];
   breadcrumbLabel: string;
   path: string;
-  relatedServices: { href: string; label: string }[];
+  /** Par défaut (non fourni), affiche la liste canonique des 10 services (voir RelatedServicesGrid / lib/relatedServicesDefault.ts). */
+  relatedServices?: { href: string; label: string }[];
   image?: ServiceImage;
   /** Contenu additionnel optionnel, inséré après les sections principales (avant la FAQ). */
   extra?: ReactNode;

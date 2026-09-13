@@ -311,15 +311,7 @@ export default function PoigneeBlindeeNicePage() {
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

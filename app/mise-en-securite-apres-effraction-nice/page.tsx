@@ -450,19 +450,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/blindage-porte-nice/", label: "Blindage de porte" },
-        { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-        { href: "/agences-syndics-nice/", label: "Agences & syndics" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

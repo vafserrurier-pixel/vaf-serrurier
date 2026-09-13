@@ -149,14 +149,7 @@ export default function AgencesSyndicsNicePage() {
       relatedArticle={{
         href: "/blog/digicode-cles-hall-copropriete-nice/",
         label: "Clés de hall, digicode, organigramme : qui décide en copropriété ?",
-      }}
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      }}
     />
   );
 }

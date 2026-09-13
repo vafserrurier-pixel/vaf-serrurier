@@ -94,15 +94,6 @@ export default function SerrurierGairautNicePage() {
       travelEstimate="20 à 30 minutes selon la circulation"
       faq={faq}
       path="/serrurier-gairaut-nice/"
-      relatedServices={[
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
     />
   );
 }

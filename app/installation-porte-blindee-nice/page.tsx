@@ -372,15 +372,7 @@ export default function InstallationPorteBlindeeNicePage() {
             title: "Fabrication et pose",
             text: "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures, facture conforme aux assureurs à l'appui.",
           },
-        ],
-        relatedServices: [
-          { href: "/blindage-porte-nice/", label: "Blindage de porte" },
-          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-          { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/certification-a2p-serrure-nice/",
           label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
@@ -423,15 +415,7 @@ export default function InstallationPorteBlindeeNicePage() {
             title: "Manufacturing and fitting",
             text: "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours, with an invoice that meets insurer requirements.",
           },
-        ],
-        relatedServices: [
-          { href: "/blindage-porte-nice/", label: "Door reinforcement" },
-          { href: "/changement-serrure-nice/", label: "Lock change" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
-          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
-          { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
-          { href: "/poignee-blindee-nice/", label: "Armored handle" },
-        ],
+        ],
       }}
     />
   );

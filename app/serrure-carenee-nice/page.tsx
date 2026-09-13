@@ -364,16 +364,7 @@ export default function SerrureCareneeNicePage() {
           {guideContent}
         </ServiceGuideSection>
       }
-      guideFaqForSchema={guideFaq}
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/blindage-porte-nice/", label: "Blindage de porte" },
-        { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
-        { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      guideFaqForSchema={guideFaq}
     />
   );
 }

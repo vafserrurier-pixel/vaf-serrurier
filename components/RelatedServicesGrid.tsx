@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { serviceCardsByLocale } from "@/lib/serviceCards";
+import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import type { Locale } from "@/lib/locale";
 
 const moreLabel = { fr: "En savoir plus", en: "Learn more" };
@@ -9,16 +10,18 @@ export default function RelatedServicesGrid({
   locale = "fr",
   lieu,
 }: {
-  items: { href: string; label: string }[];
+  /** Liste de services à afficher. Par défaut (non fournie), affiche la liste canonique des 10 services (voir lib/relatedServicesDefault.ts) : ne passer une liste différente que pour un cas explicitement justifié. */
+  items?: { href: string; label: string }[];
   locale?: Locale;
   /** Nom du quartier/commune à injecter dans les descriptions ("à Cagnes-sur-Mer"). */
   lieu?: string;
 }) {
   const cards = serviceCardsByLocale[locale];
   const place = lieu ?? "Nice";
+  const list = items ?? mainServicesByLocale[locale];
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((item) => {
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      {list.map((item) => {
         const card = cards[item.href];
         return (
           <Link

@@ -96,15 +96,6 @@ export default function SerrurierSaintPierreDeFericNicePage() {
       travelEstimate="20 à 30 minutes selon la circulation"
       faq={faq}
       path="/serrurier-saint-pierre-de-feric-nice/"
-      relatedServices={[
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
     />
   );
 }

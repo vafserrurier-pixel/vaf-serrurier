@@ -93,17 +93,7 @@ export default function SerrurierLesMoulinsNicePage() {
       blocks={blocks}
       travelEstimate="20 à 30 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-les-moulins-nice/"
-      relatedServices={[
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      path="/serrurier-les-moulins-nice/"
     />
   );
 }

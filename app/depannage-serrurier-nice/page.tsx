@@ -350,17 +350,7 @@ export default function DepannageSerrurierNicePage() {
             title: "Règlement",
             text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois la panne réglée.",
           },
-        ],
-        relatedServices: [
-          { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
-          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-          { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-          { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/que-faire-apres-cambriolage-nice/",
           label: "Que faire après un cambriolage : les bons réflexes",
@@ -408,17 +398,7 @@ export default function DepannageSerrurierNicePage() {
             title: "Payment",
             text: "The price confirmed on site is what you pay, with a detailed invoice, no surprise extra charge once the fault is fixed.",
           },
-        ],
-        relatedServices: [
-          { href: "/ouverture-de-porte-nice/", label: "Door opening" },
-          { href: "/changement-serrure-nice/", label: "Lock change" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
-          { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
-          { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
-          { href: "/poignee-blindee-nice/", label: "Armored handle" },
-          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
-        ],
+        ],
       }}
     />
   );

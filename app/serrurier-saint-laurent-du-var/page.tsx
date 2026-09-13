@@ -83,18 +83,7 @@ export default function SerrurierSaintLaurentDuVarPage() {
       travelEstimate="15-20 min"
       safetyParagraph={safetyParagraph}
       faq={faq}
-      path="/serrurier-saint-laurent-du-var/"
-      relatedServices={[
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
+      path="/serrurier-saint-laurent-du-var/"
     />
   );
 }

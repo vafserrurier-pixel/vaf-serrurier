@@ -18,6 +18,7 @@ import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
+import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
 
@@ -42,7 +43,8 @@ export default function QuartierPageTemplate({
   travelEstimate: string;
   faq: FaqItem[];
   path: string;
-  relatedServices: { href: string; label: string }[];
+  /** Par défaut (non fourni), affiche la liste canonique des 10 services (voir RelatedServicesGrid / lib/relatedServicesDefault.ts). */
+  relatedServices?: { href: string; label: string }[];
   crimeIntro?: string;
   crimeClosing?: string;
 }) {
@@ -50,6 +52,7 @@ export default function QuartierPageTemplate({
   const sectorInfo = sectorPages[sector];
   const nearbyQuartiers = relatedQuartiers(sector, quartier);
   const photo = pickPortrait(quartier);
+  const services = relatedServices ?? mainServicesByLocale.fr;
 
   return (
     <>
@@ -165,7 +168,7 @@ export default function QuartierPageTemplate({
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Services disponibles à {quartier}
         </h2>
-        <RelatedServicesGrid items={relatedServices} lieu={quartier} />
+        <RelatedServicesGrid items={services} lieu={quartier} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
@@ -278,9 +281,7 @@ export default function QuartierPageTemplate({
           <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
             Prenez rendez-vous avec votre serrurier à {quartier}
           </h2>
-          <ContactForm
-            services={relatedServices.filter((service) => service.href !== "/tarifs-serrurier-nice/")}
-          />
+          <ContactForm services={services} />
         </div>
       </section>
 

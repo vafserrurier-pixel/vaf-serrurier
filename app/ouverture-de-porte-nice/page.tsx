@@ -559,16 +559,7 @@ export default function OuvertureDePorteNicePage() {
             title: "Règlement",
             text: "Le prix confirmé avant l'ouverture est celui que vous payez, sans supplément surprise une fois la porte rouverte.",
           },
-        ],
-        relatedServices: [
-          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-          { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-          { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-          { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-          { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/porte-qui-claque-serrurier-nice/",
           label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
@@ -614,16 +605,7 @@ export default function OuvertureDePorteNicePage() {
             title: "Payment",
             text: "The price confirmed before opening is what you pay, no surprise extra charge once the door is open again.",
           },
-        ],
-        relatedServices: [
-          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
-          { href: "/changement-serrure-nice/", label: "Lock change" },
-          { href: "/installation-porte-blindee-nice/", label: "Armored door block" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
-          { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
-          { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
-          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
-        ],
+        ],
       }}
     />
   );

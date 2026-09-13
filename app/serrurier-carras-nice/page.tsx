@@ -94,16 +94,6 @@ export default function SerrurierCarrasNicePage() {
       travelEstimate="15 à 25 minutes selon la circulation"
       faq={faq}
       path="/serrurier-carras-nice/"
-      relatedServices={[
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
     />
   );
 }

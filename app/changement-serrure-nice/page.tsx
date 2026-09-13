@@ -659,20 +659,7 @@ export default function ChangementSerrureNicePage() {
             title: "Règlement",
             text: "Le prix confirmé avant la pose est celui que vous payez, clés neuves et facture détaillée à l'appui.",
           },
-        ],
-        relatedServices: [
-          { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
-          { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-          { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-          { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-          { href: "/poignee-blindee-nice/", label: "Poignée blindée" },
-          { href: "/blindage-porte-nice/", label: "Blindage de porte" },
-          { href: "/installation-porte-blindee-nice/", label: "Bloc-porte blindé" },
-          { href: "/agences-syndics-nice/", label: "Agences & syndics" },
-          { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-        ],
+        ],
         relatedArticle: {
           href: "/blog/serrure-multipoints-3-5-7-nice/",
           label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
@@ -731,20 +718,7 @@ export default function ChangementSerrureNicePage() {
             title: "Payment",
             text: "The price confirmed before fitting is what you pay, new keys and a detailed invoice included.",
           },
-        ],
-        relatedServices: [
-          { href: "/ouverture-de-porte-nice/", label: "Door opening" },
-          { href: "/depannage-serrurier-nice/", label: "Emergency callout" },
-          { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
-          { href: "/ouverture-de-coffre-fort-nice/", label: "Safe opening" },
-          { href: "/installation-coffre-fort-nice/", label: "Safe installation" },
-          { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
-          { href: "/poignee-blindee-nice/", label: "Armored handle" },
-          { href: "/blindage-porte-nice/", label: "Door reinforcement" },
-          { href: "/installation-porte-blindee-nice/", label: "Armored door block" },
-          { href: "/agences-syndics-nice/", label: "Agencies & syndics" },
-          { href: "/tarifs-serrurier-nice/", label: "See all pricing" },
-        ],
+        ],
       }}
     />
   );

@@ -18,6 +18,7 @@ import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { communeHref, relatedCommunes } from "@/lib/communes";
+import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
 
@@ -40,11 +41,13 @@ export default function CommunePageTemplate({
   safetyParagraph: string;
   faq: FaqItem[];
   path: string;
-  relatedServices: { href: string; label: string }[];
+  /** Par défaut (non fourni), affiche la liste canonique des 10 services (voir RelatedServicesGrid / lib/relatedServicesDefault.ts). */
+  relatedServices?: { href: string; label: string }[];
 }) {
   const url = `${business.domain}${path}`;
   const nearbyCommunes = relatedCommunes(commune);
   const photo = pickPortrait(commune);
+  const services = relatedServices ?? mainServicesByLocale.fr;
 
   return (
     <>
@@ -161,7 +164,7 @@ export default function CommunePageTemplate({
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Services disponibles à {commune}
         </h2>
-        <RelatedServicesGrid items={relatedServices} lieu={commune} />
+        <RelatedServicesGrid items={services} lieu={commune} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
@@ -260,9 +263,7 @@ export default function CommunePageTemplate({
           <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
             Prenez rendez-vous avec votre serrurier à {commune}
           </h2>
-          <ContactForm
-            services={relatedServices.filter((service) => service.href !== "/tarifs-serrurier-nice/")}
-          />
+          <ContactForm services={services} />
         </div>
       </section>
 

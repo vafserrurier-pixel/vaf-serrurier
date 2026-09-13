@@ -92,15 +92,6 @@ export default function SerrurierPromenadeDesAnglaisNicePage() {
       travelEstimate="10 à 20 minutes selon la circulation"
       faq={faq}
       path="/serrurier-promenade-des-anglais-nice/"
-      relatedServices={[
-        { href: "/installation-porte-blindee-nice/", label: "Installation porte blindée" },
-        { href: "/depannage-serrurier-nice/", label: "Dépannage serrurier" },
-        { href: "/changement-serrure-nice/", label: "Changement de serrure" },
-        { href: "/ouverture-de-coffre-fort-nice/", label: "Ouverture de coffre-fort" },
-        { href: "/installation-coffre-fort-nice/", label: "Installation de coffre-fort" },
-        { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
-        { href: "/tarifs-serrurier-nice/", label: "Voir tous les tarifs" },
-      ]}
     />
   );
 }
