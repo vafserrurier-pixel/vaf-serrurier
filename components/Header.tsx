@@ -10,7 +10,6 @@ import { useLocale } from "@/lib/locale";
 const navServicesByLocale = {
   fr: [
     { href: "/urgence-serrurier-nice/", label: "Urgence serrurier Nice" },
-    { href: "/urgence-serrurier-nice/#cle-cassee", label: "Clé cassée" },
     { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
     { href: "/changement-serrure-nice/", label: "Changement de serrure" },
     { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },
@@ -23,7 +22,6 @@ const navServicesByLocale = {
   ],
   en: [
     { href: "/urgence-serrurier-nice/", label: "Emergency locksmith Nice" },
-    { href: "/urgence-serrurier-nice/#cle-cassee", label: "Broken key" },
     { href: "/ouverture-de-porte-nice/", label: "Door opening" },
     { href: "/changement-serrure-nice/", label: "Lock change" },
     { href: "/serrure-carenee-nice/", label: "5-point shrouded lock" },
