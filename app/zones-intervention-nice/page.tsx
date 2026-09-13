@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyMap from "@/components/LazyMap";
@@ -67,56 +68,71 @@ export default function ZonesInterventionNicePage() {
   return (
     <>
     <JsonLd data={itemListSchema(itemListEntries)} />
+    <section className="bg-white border-b border-navy/10">
+      <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
+        <div>
+          <Breadcrumbs
+            items={[
+              { name: "Accueil", href: "/" },
+              { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
+            ]}
+          />
+          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            Disponible maintenant : devis gratuit par téléphone
+          </span>
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
+            Zones d&apos;intervention à Nice
+          </h1>
+          <div className="mt-4 text-slate leading-relaxed flex flex-col gap-3">
+            <p>
+              J&apos;interviens dans l&apos;ensemble des quartiers de Nice, depuis mon point
+              de départ au 2 Rue Antoine Gautier. Que vous soyez dans le centre-ville, sur
+              les hauteurs du nord, du côté du Port à l&apos;est, ou dans les secteurs plus
+              résidentiels de l&apos;ouest, la méthode reste la même : un diagnostic par
+              téléphone, un prix annoncé avant intervention, et un déplacement organisé
+              selon l&apos;urgence de la situation.
+            </p>
+            <p>
+              Nice est une ville étendue, avec des quartiers très différents les uns des
+              autres : le bâti ancien du Vieux-Nice n&apos;a pas les mêmes besoins en
+              serrurerie que les grands ensembles du Brancolar ou les résidences
+              pavillonnaires de l&apos;ouest de la ville. C&apos;est pourquoi je m&apos;attache
+              à connaître les spécificités de chaque secteur plutôt que de proposer une
+              solution unique partout.
+            </p>
+            <p>
+              Pour faciliter la recherche, j&apos;ai organisé mes zones d&apos;intervention en
+              quatre secteurs (Centre, Est, Nord et Ouest), chacun avec sa propre page
+              listant les quartiers couverts. {coverageSentence} Les communes voisines
+              restant à documenter sont d&apos;ores et déjà couvertes, même sans page
+              individuelle : un simple appel suffit.
+            </p>
+          </div>
+
+          <a
+            href={business.phone.href}
+            className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
+          >
+            Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+          </a>
+        </div>
+        <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+          <Image
+            src="/images/pool/nice-vue-aerienne-baie-des-anges-unsplash.webp"
+            alt="Vue aérienne de la baie des Anges et de la Promenade des Anglais à Nice"
+            fill
+            sizes="(min-width: 640px) 40vw, 100vw"
+            className="object-cover"
+            priority
+            fetchPriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
     <section className="mx-auto max-w-4xl px-4 py-10">
-      <Breadcrumbs
-        items={[
-          { name: "Accueil", href: "/" },
-          { name: "Zones d'intervention", href: "/zones-intervention-nice/" },
-        ]}
-      />
-      <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-        Disponible maintenant : devis gratuit par téléphone
-      </span>
-      <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-        Zones d&apos;intervention à Nice
-      </h1>
-      <div className="mt-4 text-slate leading-relaxed max-w-2xl flex flex-col gap-3">
-        <p>
-          J&apos;interviens dans l&apos;ensemble des quartiers de Nice, depuis mon point
-          de départ au 2 Rue Antoine Gautier. Que vous soyez dans le centre-ville, sur
-          les hauteurs du nord, du côté du Port à l&apos;est, ou dans les secteurs plus
-          résidentiels de l&apos;ouest, la méthode reste la même : un diagnostic par
-          téléphone, un prix annoncé avant intervention, et un déplacement organisé
-          selon l&apos;urgence de la situation.
-        </p>
-        <p>
-          Nice est une ville étendue, avec des quartiers très différents les uns des
-          autres : le bâti ancien du Vieux-Nice n&apos;a pas les mêmes besoins en
-          serrurerie que les grands ensembles du Brancolar ou les résidences
-          pavillonnaires de l&apos;ouest de la ville. C&apos;est pourquoi je m&apos;attache
-          à connaître les spécificités de chaque secteur plutôt que de proposer une
-          solution unique partout.
-        </p>
-        <p>
-          Pour faciliter la recherche, j&apos;ai organisé mes zones d&apos;intervention en
-          quatre secteurs (Centre, Est, Nord et Ouest), chacun avec sa propre page
-          listant les quartiers couverts. {coverageSentence} Les communes voisines
-          restant à documenter sont d&apos;ores et déjà couvertes, même sans page
-          individuelle : un simple appel suffit.
-        </p>
-      </div>
-
-      <a
-        href={business.phone.href}
-        className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-      >
-        Appeler <span className="font-tabular-nums">{business.phone.display}</span>
-      </a>
-
-      <div className="mt-8">
-        <LazyMap />
-      </div>
+      <LazyMap />
 
       <div className="mt-8">
         <h2 className="font-heading text-lg font-bold text-navy mb-2">
