@@ -3,23 +3,49 @@
 // serviceSchema (dateModified). Priorite :
 //   1. content/freshness-overrides.json (defini a la main via
 //      `npm run update-freshness -- --page=/xxx/`) si present pour la page ;
-//   2. sinon, la date du dernier commit Git qui a modifie le fichier.
+//   2. la date du dernier commit Git qui a modifie le fichier, si trouvable ;
+//   3. sinon, la valeur deja presente dans le fichier .ts commite precedent
+//      (voir plus bas pourquoi) ;
+//   4. en tout dernier recours (page reellement nouvelle, jamais construite),
+//      l'heure actuelle.
 //
 // Execute au moment du build (npm run build), jamais au runtime : Git n'est
 // pas forcement disponible dans l'environnement serverless deploye, donc on
 // fige le resultat dans un fichier .ts commite plutot que d'appeler `git`
 // depuis une route qui pourrait re-executer en production (ISR).
+//
+// Vercel clone le depot en mode superficiel (shallow clone) par defaut : sur
+// ces builds, `git log -1 -- <fichier>` ne trouve souvent rien pour un
+// fichier modifie avant la fenetre d'historique disponible, et TOUTES les
+// pages concernees retombaient alors sur le meme fallback `now()` (calcule
+// une seule fois par build) - d'ou un <lastmod> identique sur des dizaines
+// de pages au lieu d'une date reelle par page. Reutiliser la derniere valeur
+// connue et commitee comme fallback intermediaire evite ce probleme : les
+// dates restent reelles et distinctes meme quand l'historique Git n'est pas
+// entierement disponible au moment du build.
 const { execSync } = require("child_process");
 const { readdirSync, writeFileSync, existsSync, readFileSync } = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OVERRIDES_PATH = path.join(ROOT, "content/freshness-overrides.json");
+const GENERATED_PATH = path.join(ROOT, "lib/contentDates.generated.ts");
 
 function loadOverrides() {
   if (!existsSync(OVERRIDES_PATH)) return {};
   try {
     return JSON.parse(readFileSync(OVERRIDES_PATH, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function loadPreviouslyGenerated() {
+  if (!existsSync(GENERATED_PATH)) return {};
+  try {
+    const src = readFileSync(GENERATED_PATH, "utf8");
+    const match = src.match(/contentDates:[^=]*=\s*(\{[\s\S]*\});?\s*$/);
+    return match ? JSON.parse(match[1]) : {};
   } catch {
     return {};
   }
@@ -57,12 +83,16 @@ function lastCommitDate(filePath) {
 
 const pages = walkPages(path.join(ROOT, "app"));
 const overrides = loadOverrides();
+const previous = loadPreviouslyGenerated();
 const now = new Date().toISOString();
 const entries = {};
 
 for (const file of pages) {
   const urlPath = urlPathFor(file);
-  const date = overrides[urlPath] ?? lastCommitDate(file) ?? now; // override manuel > commit Git > fallback
+  // override manuel > commit Git (historique complet) > derniere valeur reelle
+  // connue (build precedent, historique complet ou partiel) > page vraiment
+  // nouvelle, jamais datee auparavant.
+  const date = overrides[urlPath] ?? lastCommitDate(file) ?? previous[urlPath] ?? now;
   entries[urlPath] = date;
 }
 
