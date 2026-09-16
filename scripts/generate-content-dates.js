@@ -69,13 +69,39 @@ function urlPathFor(filePath) {
   return rel === "" ? "/" : `/${rel}/`;
 }
 
+// Un clone superficiel (celui que fait Vercel par defaut au build) greffe un
+// commit racine synthetique sans parent a la profondeur ou il s'arrete. Face
+// a `git log -1 -- <fichier>`, git ne peut alors plus prouver qu'un fichier
+// n'a PAS ete modifie par ce commit racine (rien a comparer avant lui), et
+// l'attribue par defaut a TOUS les fichiers du depot - meme ceux qu'il n'a
+// jamais touches. Resultat observe en production : 83 pages retombaient sur
+// la poignee de commits limites visibles dans le clone superficiel au lieu
+// de leur propre historique reel. Un resultat qui pointe vers un commit sans
+// parent est donc invérifiable dans ce contexte et doit etre ignore.
+const rootCommitCache = new Map();
+function isUnverifiableRootCommit(hash) {
+  if (rootCommitCache.has(hash)) return rootCommitCache.get(hash);
+  let isRoot = false;
+  try {
+    const parents = execSync(`git log -1 --format=%P ${hash}`, { cwd: ROOT, encoding: "utf8" }).trim();
+    isRoot = parents === "";
+  } catch {
+    isRoot = false;
+  }
+  rootCommitCache.set(hash, isRoot);
+  return isRoot;
+}
+
 function lastCommitDate(filePath) {
   try {
-    const out = execSync(`git log -1 --format=%cI -- "${filePath}"`, {
+    const out = execSync(`git log -1 --format=%H%x09%cI -- "${filePath}"`, {
       cwd: ROOT,
       encoding: "utf8",
     }).trim();
-    return out || null;
+    if (!out) return null;
+    const [hash, date] = out.split("\t");
+    if (!hash || !date || isUnverifiableRootCommit(hash)) return null;
+    return date;
   } catch {
     return null;
   }
