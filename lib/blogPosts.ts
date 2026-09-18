@@ -122,6 +122,19 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 7,
     image: "/images/pool/porte-immeuble-interphone-securisee-nice.webp",
   },
+  {
+    href: "/blog/changer-serrure-separation-divorce/",
+    title: "Séparation, divorce : qui a le droit de faire changer la serrure ?",
+    excerpt:
+      "Époux, pacsés, concubins : ce que dit vraiment la loi sur le changement de serrure pendant une séparation, et la procédure rapide en cas de violences conjugales.",
+    category: "Comprendre",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+    datePublished: "2026-09-18",
+    dateModified: "2026-09-18",
+    readingMinutes: 7,
+    image: "/images/pool/benoit-serrurier-serrure-posee-nice.webp",
+  },
 ];
 
 export function blogPostByHref(href: string): BlogPost | undefined {

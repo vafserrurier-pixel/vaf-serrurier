@@ -108,7 +108,19 @@ const sectionsFr = [
     Icon: <KeyIcon className="w-4 h-4" />,
     id: "quand",
     paragraphs: [
-      "Un déménagement, une perte de clés, un vol ou une effraction sont les cas les plus fréquents. Une clé qui force de plus en plus, un cylindre qui accroche, ou une fermeture de moins en moins franche sont aussi des signes d'usure à ne pas ignorer. Mieux vaut changer une serrure fatiguée avant qu'elle ne lâche complètement, souvent au pire moment.",
+      <>
+        Un déménagement, une perte de clés, un vol ou une effraction sont les cas
+        les plus fréquents. Une clé qui force de plus en plus, un cylindre qui
+        accroche, ou une fermeture de moins en moins franche sont aussi des
+        signes d&apos;usure à ne pas ignorer. Mieux vaut changer une serrure
+        fatiguée avant qu&apos;elle ne lâche complètement, souvent au pire
+        moment. Une séparation ou un divorce amène aussi à se poser la
+        question :{" "}
+        <Link href="/blog/changer-serrure-separation-divorce/" prefetch={false} className="text-steel underline">
+          j&apos;explique ce que dit la loi dans ce cas
+        </Link>
+        .
+      </>,
     ],
   },
   {

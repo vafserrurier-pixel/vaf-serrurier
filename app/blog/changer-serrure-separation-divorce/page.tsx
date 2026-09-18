@@ -1,23 +1,9 @@
-// BROUILLON — draft = true. Cette page n'apparait ni dans app/blog/page.tsx
-// (index du blog) ni dans app/sitemap.ts tant qu'elle n'y est pas ajoutee a
-// la main, et robots.noIndex empeche toute indexation. Ne JAMAIS retirer
-// "draft = true" ni le noIndex sans avoir : (1) fait relire le contenu par
-// Benoit, (2) ajoute ce post a la liste "posts" de app/blog/page.tsx et a
-// app/sitemap.ts, (3) ajoute blogPostingSchema + faqSchema comme les autres
-// articles publies (retirer alors la source manuelle de category/tagClass/
-// image ci-dessous, actuellement en dur car le post n'est pas encore dans
-// lib/blogPosts.ts — cet ajout diffuse l'article partout, y compris sur le
-// site public, donc a ne faire qu'au moment de la publication reelle),
-// (4) ajoute le lien retour depuis /changement-serrure-nice/ (et
-// eventuellement /urgence-serrurier-nice/) vers cet article — voir le
-// rapport de session pour l'emplacement exact propose.
-export const draft = true;
-
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBlock from "@/components/CtaBlock";
+import JsonLd from "@/components/JsonLd";
 import ArticleSummary from "@/components/ArticleSummary";
 import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
@@ -28,22 +14,17 @@ import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustBadges from "@/components/TrustBadges";
+import { business } from "@/lib/business";
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
+import { blogPostByHref } from "@/lib/blogPosts";
 
 const HREF = "/blog/changer-serrure-separation-divorce/";
-
-// Category/tagClass/accent repris a l'identique du format utilise par les
-// articles deja publies dans lib/blogPosts.ts (categorie "Comprendre") :
-// a supprimer et remplacer par post.category / post.tagClass une fois
-// l'entree ajoutee a blogPosts.ts, au moment de la publication.
-const category = "Comprendre";
-const tagClass = "bg-navy/10 text-navy";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Séparation, divorce : qui a le droit de faire changer la serrure ? | VAF",
   description: "Époux, pacsés, concubins : ce que dit vraiment la loi sur le changement de serrure pendant une séparation, et la procédure rapide en cas de violences conjugales.",
-  noIndex: true,
 });
 
 const toc = [
@@ -90,8 +71,29 @@ const faqItems = [
 ];
 
 export default function ChangerSerrureSeparationDivorcePage() {
+  const post = blogPostByHref(HREF)!;
   return (
     <article>
+      <JsonLd
+        data={blogPostingSchema({
+          headline: "Séparation, divorce : qui a le droit de faire changer la serrure ?",
+          description:
+            "Époux, pacsés, concubins : ce que dit vraiment la loi sur le changement de serrure pendant une séparation, et la procédure rapide en cas de violences conjugales.",
+          url: `${business.domain}${HREF}`,
+          datePublished: "2026-09-18",
+          dateModified: "2026-09-18",
+          image: post.image,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Accueil", url: business.domain },
+          { name: "Blog", url: `${business.domain}/blog/` },
+          { name: "Séparation, divorce : qui a le droit de changer la serrure", url: `${business.domain}${HREF}` },
+        ])}
+      />
+      <JsonLd data={faqSchema(faqItems)} />
+
       <section className="bg-white border-b border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
           <Breadcrumbs
@@ -101,8 +103,8 @@ export default function ChangerSerrureSeparationDivorcePage() {
               { name: "Séparation, divorce : qui a le droit de changer la serrure", href: HREF },
             ]}
           />
-          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${tagClass}`}>
-            {category}
+          <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ${post.tagClass}`}>
+            {post.category}
           </span>
 
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
