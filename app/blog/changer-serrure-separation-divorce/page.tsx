@@ -1,9 +1,8 @@
 // BROUILLON — draft = true. Cette page n'apparait ni dans app/blog/page.tsx
 // (index du blog) ni dans app/sitemap.ts tant qu'elle n'y est pas ajoutee a
 // la main, et robots.noIndex empeche toute indexation. Ne JAMAIS retirer
-// "draft = true" ni le noIndex sans avoir : (1) fait valider le contenu par
-// Benoit, en particulier les points signales [A CONFIRMER AVEC BENOIT],
-// (2) ajoute ce post a la liste "posts" de app/blog/page.tsx et a
+// "draft = true" ni le noIndex sans avoir : (1) fait relire le contenu par
+// Benoit, (2) ajoute ce post a la liste "posts" de app/blog/page.tsx et a
 // app/sitemap.ts, (3) ajoute blogPostingSchema + faqSchema comme les autres
 // articles publies (retirer alors la source manuelle de category/tagClass/
 // image ci-dessous, actuellement en dur car le post n'est pas encore dans
@@ -24,7 +23,6 @@ import ArticleByline from "@/components/ArticleByline";
 import ArticleLayout from "@/components/ArticleLayout";
 import ArticleTable from "@/components/ArticleTable";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import ArticleOpinion from "@/components/ArticleOpinion";
 import ArticleKeyTakeaways from "@/components/ArticleKeyTakeaways";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleNav from "@/components/ArticleNav";
@@ -54,7 +52,6 @@ const toc = [
   { id: "concubins-pacs", label: "Concubinage et PACS : une autre règle" },
   { id: "violences-conjugales", label: "Violences conjugales : une procédure rapide" },
   { id: "recap", label: "Récapitulatif selon votre situation" },
-  { id: "en-pratique", label: "Ce que je vérifie avant d'intervenir" },
   { id: "litige", label: "Ce qui protège en cas de litige" },
   { id: "faq", label: "Foire aux questions" },
 ];
@@ -86,11 +83,6 @@ const faqItems = [
       "L'ordonnance de protection permet au juge aux affaires familiales d'attribuer le logement à la victime et d'évincer l'auteur des violences, que vous soyez marié(e), pacsé(e) ou en concubinage. Une version d'urgence (ordonnance provisoire de protection immédiate) peut être rendue en 24h en cas de danger grave et immédiat. En cas de danger, appelez d'abord le 17 ou le 3919 (numéro national dédié) avant toute autre démarche.",
   },
   {
-    question: "Un serrurier peut-il refuser d'intervenir sans preuve d'un droit sur le logement ?",
-    answer:
-      "Oui, et c'est même une précaution normale de ma part dans ce type de contexte : voir la section dédiée plus bas sur ce que je vérifie avant d'intervenir.",
-  },
-  {
     question: "Combien coûte un changement de serrure dans ce contexte ?",
     answer:
       "Le tarif dépend du type de serrure et du cylindre choisi, pas du contexte de la demande : retrouvez ma grille de prix habituelle, toujours annoncée avant l'intervention.",
@@ -116,7 +108,7 @@ export default function ChangerSerrureSeparationDivorcePage() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Séparation, divorce : qui a le droit de faire changer la serrure ?
           </h1>
-          <ArticleByline readingMinutes={8} updatedLabel="Rédigé le 18 septembre 2026" />
+          <ArticleByline readingMinutes={7} updatedLabel="Rédigé le 18 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -306,22 +298,7 @@ export default function ChangerSerrureSeparationDivorcePage() {
             </div>
 
             <div>
-              <ArticleSectionHeading number={6} id="en-pratique">
-                Ce que je vérifie avant d&apos;intervenir
-              </ArticleSectionHeading>
-              <p className="text-slate leading-relaxed">
-                [À CONFIRMER AVEC BENOÎT : décrire ici la pratique réelle sur le terrain —
-                par exemple, quelles questions sont posées au téléphone dans ce contexte,
-                si un justificatif (ordonnance, jugement, bail, titre de propriété) est
-                systématiquement demandé avant de se déplacer, comment est gérée une
-                situation où aucun document ne peut être présenté, et si une intervention
-                est parfois refusée ou reportée pour cette raison. Ce paragraphe doit
-                refléter une pratique réelle, pas une politique générique inventée.]
-              </p>
-            </div>
-
-            <div>
-              <ArticleSectionHeading number={7} id="litige">
+              <ArticleSectionHeading number={6} id="litige">
                 Ce qui protège en cas de litige
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
@@ -348,8 +325,6 @@ export default function ChangerSerrureSeparationDivorcePage() {
               </p>
             </div>
 
-            <ArticleOpinion quote="[À CONFIRMER AVEC BENOÎT : remplacer par une prise de position personnelle authentique sur ce type d'intervention — par exemple sur l'équilibre entre rendre service rapidement et ne pas se substituer à une décision de justice. Le texte ci-présent est un point de départ, pas une citation à publier telle quelle.]" />
-
             <ArticleKeyTakeaways
               points={[
                 "Mariés : le logement familial est protégé par l'article 215 du Code civil, indépendamment de la propriété, tant que le divorce n'est pas prononcé.",
@@ -360,7 +335,7 @@ export default function ChangerSerrureSeparationDivorcePage() {
             />
 
             <div>
-              <ArticleSectionHeading number={8} id="faq">
+              <ArticleSectionHeading number={7} id="faq">
                 Foire aux questions
               </ArticleSectionHeading>
               <FaqAccordion items={faqItems} />
