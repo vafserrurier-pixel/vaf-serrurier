@@ -19,6 +19,7 @@ const blocks = [
     heading: "Autour de la chapelle Saint-Pancrace",
     paragraphs: [
       "Le secteur historique autour de la chapelle du XVIIe siècle conserve un caractère rural préservé, avec des villas et des propriétés parfois anciennes. Je privilégie une approche respectueuse du bâti d'origine pour toute intervention.",
+      "Un document daté du 27 février 1724 précise déjà l'étendue des pouvoirs de la confrérie Saint-Pancrace : habilitée à recevoir des legs et des aumônes, à vendre des terres et à ester en justice, elle avait notamment la charge d'entretenir la chapelle, un rôle qu'elle a conservé durant tout le XVIIIe siècle.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierSaintPancraceNicePage() {
       quartier="Saint-Pancrace"
       crimeIntro="Saint-Pancrace, secteur résidentiel au nord de Nice, suit la même évolution que le reste de la ville."
       crimeClosing="Sur ce mélange de résidences collectives et d'habitat pavillonnaire, chaque type de porte demande un diagnostic adapté."
+      brandsIntro="Sur le bâti rural préservé autour de la chapelle, je privilégie une approche respectueuse de la porte d'origine plutôt qu'un remplacement systématique."
       sector="nord"
       intro={intro}
       blocks={blocks}

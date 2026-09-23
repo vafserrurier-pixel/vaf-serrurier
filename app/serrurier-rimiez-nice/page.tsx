@@ -31,6 +31,7 @@ const blocks = [
     heading: "Villas et accès individuels",
     paragraphs: [
       "Pour les villas du secteur, j'interviens sur la porte d'entrée principale, avec des solutions allant de la simple réparation au renforcement complet selon l'état constaté.",
+      "La Villa Arson, bâtie vers 1710 sur la colline de Saint-Barthélemy à Rimiez, en est l'exemple le plus emblématique : propriété de la famille Arson de Saint-Joseph de 1812 à 1920, elle accueillit des hôtes prestigieux comme Talleyrand ou le prince Humbert, futur roi d'Italie, avant de devenir en 1972 un établissement public rattaché au ministère de la Culture.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierRimiezNicePage() {
       quartier="Rimiez"
       crimeIntro="Rimiez, sur les hauteurs proches de Cimiez, reste concerné par cette réalité malgré son cadre résidentiel arboré."
       crimeClosing="Sur le bâti parfois ancien de ce secteur, l'adaptation d'un cylindre compatible reste souvent la meilleure option."
+      brandsIntro="Sur les villas anciennes de Rimiez, je privilégie autant que possible l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'origine."
       sector="nord"
       intro={intro}
       blocks={blocks}

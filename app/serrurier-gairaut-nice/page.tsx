@@ -19,6 +19,7 @@ const blocks = [
     heading: "Autour de la cascade historique",
     paragraphs: [
       "Le secteur autour de la cascade de Gairaut, monument historique du XIXe siècle, conserve un cadre naturel préservé. Les villas alentour bénéficient de ce cadre remarquable, avec des besoins de serrurerie classiques que je diagnostique au cas par cas.",
+      "Le canal qui alimente la cascade, construit entre 1851 et 1885, capte l'eau à Saint-Jean-la-Rivière dans la vallée de la Vésubie pour la conduire sur 32 kilomètres, dont 10 km de tunnels, jusqu'au bassin terminal de Gairaut. Un ouvrage d'ingénierie discret qui explique encore aujourd'hui la présence de cette chute d'eau au cœur d'un secteur résidentiel.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierGairautNicePage() {
       quartier="Gairaut"
       crimeIntro="Gairaut, sur les hauteurs nord connues pour sa cascade, n'est pas à l'abri de cette évolution malgré son cadre verdoyant."
       crimeClosing="Sur les villas de ce secteur en pente, portails et portes de garage méritent la même attention que la porte d'entrée."
+      brandsIntro="Sur ces villas parfois difficiles d'accès, je privilégie des marques disponibles rapidement pour ne pas allonger le délai d'intervention."
       sector="nord"
       intro={intro}
       blocks={blocks}

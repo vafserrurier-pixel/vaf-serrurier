@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un lotissement né du domaine des Dames de l'Assomption",
     paragraphs: [
       "Les immeubles construits sur cet ancien domaine horticole depuis les années 1920 ont chacun leurs particularités de bâti. Je diagnostique systématiquement l'état réel de la porte et du cylindre avant de proposer une réparation ou un remplacement.",
+      "La congrégation des Dames de l'Assomption avait acquis cette propriété horticole en 1879, sur laquelle un couvent avait déjà été bâti en 1863. Elle y installait un pensionnat, avant que la congrégation ne soit dissoute en 1906 et ses religieuses exilées à Bordighera, en Italie. C'est sur cette même parcelle que s'est ensuite développé, dans les années 1920, le lotissement résidentiel que je connais aujourd'hui.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierPoetesNicePage() {
       quartier="Poètes"
       crimeIntro="Le quartier des Poètes, résidentiel et calme, suit la même évolution que le reste du nord de la ville."
       crimeClosing="Sur les immeubles de taille moyenne de ce secteur, l'entretien régulier des cylindres reste la meilleure prévention."
+      brandsIntro="Sur ces immeubles construits par vagues depuis les années 1920, je choisis la marque en fonction de l'âge réel de la porte plutôt que de l'adresse."
       sector="nord"
       intro={intro}
       blocks={blocks}
       travelEstimate="15 à 25 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-poetes-nice/"
+      path="/serrurier-poetes-nice/"
     />
   );
 }

@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un lotissement né d'un parc de plaisance du XIXe siècle",
     paragraphs: [
       "Les immeubles construits autour du parc Chambrun depuis le XXe siècle ont des profils variés selon leur date de construction. Je diagnostique chaque situation avant de proposer réparation ou remplacement.",
+      "Le « temple de l'Amour », kiosque à colonnes de marbre de Carrare qui orne toujours le parc, a été commandé par le comte à l'architecte niçois Philippe Randon : les travaux se sont étalés de 1885 à son inauguration le 28 mars 1890, en s'inspirant du temple de la Sibylle de Tivoli. La patinoire voisine, le Palais des Glaces, a quant à elle été bâtie avant 1914 sous un propriétaire suivant, le peintre Albert Marquet, ce qui en fait la toute première de la ville.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierChambrunNicePage() {
       quartier="Chambrun"
       crimeIntro="Chambrun, quartier résidentiel au nord de Nice, reste concerné par cette tendance comme le reste de la ville."
       crimeClosing="Sur les immeubles collectifs de ce secteur, la vigilance porte autant sur les portes palières que sur les accès communs."
+      brandsIntro="Sur les immeubles construits autour de cet ancien parc de plaisance, je privilégie des marques disponibles rapidement pour limiter le délai avant intervention."
       sector="nord"
       intro={intro}
       blocks={blocks}
       travelEstimate="15 à 25 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-chambrun-nice/"
+      path="/serrurier-chambrun-nice/"
     />
   );
 }

@@ -18,6 +18,7 @@ const blocks = [
     heading: "Un secteur de villas dans un cadre verdoyant",
     paragraphs: [
       "Sur la Corniche des Oliviers, l'essentiel du bâti est constitué de villas avec porte d'entrée individuelle. Je diagnostique la serrure en place et propose une solution cohérente, de la réparation au renforcement complet.",
+      "Cette vocation horticole n'était pas isolée : au début du XXe siècle, les œillets couvraient jusqu'à 1 000 hectares des collines niçoises, faisant de Nice la première ville productrice de fleurs coupées au monde. L'arrivée du chemin de fer en 1863 puis l'eau du canal de la Vésubie en 1885, qui permit d'irriguer ces hauteurs, ont porté cet essor avant que l'urbanisation ne prenne le relais.",
     ],
   },
   {
@@ -79,6 +80,7 @@ export default function SerrurierCornicheDesOliviersNicePage() {
       quartier="Corniche des Oliviers"
       crimeIntro="La Corniche des Oliviers, route résidentielle des hauteurs nord, reste concernée par cette tendance malgré son cadre préservé."
       crimeClosing="Sur les villas de ce secteur en pente, portails et portes de garage sont particulièrement exposés et méritent une attention régulière."
+      brandsIntro="Sur ces villas d'anciennes terres horticoles, je privilégie des marques capables d'équiper aussi bien le portail que la porte d'entrée principale."
       sector="nord"
       intro={intro}
       blocks={blocks}

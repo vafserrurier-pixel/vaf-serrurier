@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un bâti mêlant villas et résidences",
     paragraphs: [
       "Pessicart combine maisons individuelles et résidences collectives plus récentes. Le diagnostic reste systématique, qu'il s'agisse d'une serrure de villa ou d'un appartement en résidence.",
+      "Historiquement, le secteur statistique regroupant Pessicart et Saint-Pancrace est resté longtemps rural et peu peuplé, avec des activités agricoles et artisanales : il compte aujourd'hui 3 771 habitants sur 5,45 km², une densité qui reste plus faible que dans les quartiers du centre-ville.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierPessicartNicePage() {
       quartier="Pessicart"
       crimeIntro="Pessicart, sur les hauteurs nord recherchées pour leur vue, n'est pas à l'abri de cette évolution malgré son cadre résidentiel."
       crimeClosing="Sur les résidences de standing de ce secteur, un système de fermeture complet mérite une vérification régulière."
+      brandsIntro="Entre villas individuelles et résidences plus récentes de Pessicart, le choix de la marque dépend surtout du type de porte déjà en place."
       sector="nord"
       intro={intro}
       blocks={blocks}

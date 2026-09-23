@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un quartier en pleine transformation urbaine",
     paragraphs: [
       "La reconversion de l'ancien site Enedis par Covivio change progressivement le visage du Brancolar, avec l'arrivée de nouveaux programmes résidentiels aux normes de sécurité récentes. Pour ces logements neufs, les demandes portent surtout sur la personnalisation des accès : ajout d'un cylindre plus résistant, remplacement d'une serrure d'origine standard par un modèle mieux certifié, ou petits ajustements après une pose parfois un peu rapide en sortie de chantier.",
+      "Ce programme, baptisé « Les Panoramas Cimiez » et conçu par les agences Rougerie+Tangram, doit livrer environ 18 600 m² répartis en sept îlots d'ici fin 2028, avec près de la moitié de la parcelle laissée en espaces verts, dont un parc public de 3 000 m². Les premières livraisons de logements neufs s'accompagnent souvent d'un même besoin : vérifier et ajuster la serrurerie posée en série avant l'emménagement.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierBrancolarNicePage() {
       quartier="Brancolar"
       crimeIntro="Brancolar, sur les collines au nord de Nice, reste concerné par cette tendance malgré son cadre plus résidentiel."
       crimeClosing="Sur les villas comme sur les petites résidences du secteur, un diagnostic préventif reste le meilleur réflexe."
+      brandsIntro="Entre les logements neufs du programme Covivio et les grands ensembles plus anciens du Brancolar, je choisis la marque selon l'âge réel de la porte, pas selon l'adresse."
       sector="nord"
       intro={intro}
       blocks={blocks}
