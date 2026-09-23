@@ -74,7 +74,7 @@ export const business = {
 } as const;
 
 // Liste de référence confirmée par Benoît (remplace une première liste générique) :
-// 46 quartiers répartis en 4 secteurs. Place Masséna, Negresco et l'Acropolis ne sont
+// 47 quartiers répartis en 4 secteurs. Place Masséna, Negresco et l'Acropolis ne sont
 // pas des quartiers résidentiels : ils sont mentionnés comme repères géo dans le texte
 // des pages voisines (Jean-Médecin/Carré d'Or/Promenade des Anglais, secteur Est/Le Port)
 // plutôt que comme pages dédiées. "Méridas" a été définitivement écarté (2026-08-09) :
@@ -125,6 +125,7 @@ export const zones = {
     "Saint-Pancrace",
     "Corniche des Oliviers",
     "Pessicart",
+    "Mantega",
   ],
   ouest: [
     "L'Archet",

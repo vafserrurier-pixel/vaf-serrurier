@@ -1,5 +1,5 @@
 // Utilitaires de gabarit pour les pages de quartier.
-// `builtQuartiers` liste les 46 quartiers, tous publiés : voir `lib/business.ts`
+// `builtQuartiers` liste les 47 quartiers, tous publiés : voir `lib/business.ts`
 // (export `zones`) pour la répartition par secteur.
 
 import { zones } from "./business";
@@ -49,7 +49,7 @@ export const builtQuartiers = [
   "Mont Alban",
   "Le Port",
   "Bon Voyage",
-  // Nord (8)
+  // Nord (9)
   "Brancolar",
   "Poètes",
   "Chambrun",
@@ -58,6 +58,7 @@ export const builtQuartiers = [
   "Saint-Pancrace",
   "Corniche des Oliviers",
   "Pessicart",
+  "Mantega",
   // Ouest (11)
   "L'Archet",
   "Saint-Antoine",

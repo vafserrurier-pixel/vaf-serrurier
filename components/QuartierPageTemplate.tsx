@@ -25,6 +25,8 @@ import { contentDates } from "@/lib/contentDates.generated";
 
 export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
+export type QuartierTestimonial = { author: string; text: string };
+
 export default function QuartierPageTemplate({
   quartier,
   sector,
@@ -36,6 +38,7 @@ export default function QuartierPageTemplate({
   relatedServices,
   crimeIntro,
   crimeClosing,
+  testimonial,
 }: {
   quartier: string;
   sector: keyof typeof sectorPages;
@@ -48,6 +51,13 @@ export default function QuartierPageTemplate({
   relatedServices?: { href: string; label: string }[];
   crimeIntro?: string;
   crimeClosing?: string;
+  /**
+   * Avis client réel et vérifié mentionnant explicitement ce quartier (jamais
+   * inventé : uniquement si un avis Google réel existe pour ce quartier
+   * précis). Affiché en complément du carrousel générique ReviewsSection,
+   * pas à sa place, pour rester distinct d'un avis quelconque du site.
+   */
+  testimonial?: QuartierTestimonial;
 }) {
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
@@ -234,6 +244,26 @@ export default function QuartierPageTemplate({
         </h2>
         <FaqAccordion items={faq} />
       </section>
+
+      {testimonial && (
+        <section className="mx-auto max-w-3xl px-4 py-12">
+          <p className="text-center text-xs font-semibold text-steel uppercase tracking-wide mb-4">
+            Un avis client à {quartier}
+          </p>
+          <div className="relative bg-cream rounded-xl border border-navy/10 px-6 py-8 sm:px-10">
+            <span
+              className="block font-heading text-5xl text-steel/20 leading-none select-none"
+              aria-hidden="true"
+            >
+              &laquo;
+            </span>
+            <p className="font-heading italic font-medium text-lg text-navy leading-snug -mt-3">
+              {testimonial.text}
+            </p>
+            <p className="text-sm text-slate mt-4">{testimonial.author} · avis Google</p>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
