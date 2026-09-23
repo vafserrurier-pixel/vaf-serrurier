@@ -25,6 +25,7 @@ const blocks = [
     heading: "Dépannage près de la chapelle Saint-Philippe-Néri",
     paragraphs: [
       "Le secteur historique proche de la chapelle classée monument historique conserve un bâti ancien, où je privilégie la réparation d'une serrure existante plutôt qu'un remplacement systématique quand le mécanisme le permet.",
+      "La chapelle fut bâtie par un riche Niçois, Ponce Ceva, qui avait aussi fondé le premier collège jésuite de la ville en 1607, cinq ans avant l'achèvement de cet édifice en 1612. Un même souci du détail se retrouve sur les portes anciennes du quartier, où je privilégie systématiquement la réparation avant d'envisager un remplacement.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierSaintPhilippeNicePage() {
       quartier="Saint-Philippe"
       crimeIntro="Saint-Philippe, secteur résidentiel calme proche de Cimiez, suit la même évolution que le reste de la ville."
       crimeClosing="Un entretien préventif de la serrure reste le moyen le plus simple d'éviter une mauvaise surprise dans ce type de quartier."
+      brandsIntro="Sur les villas et propriétés avec jardin de Saint-Philippe, je privilégie des marques capables d'équiper aussi bien le portail que la porte principale."
       sector="centre"
       intro={intro}
       blocks={blocks}

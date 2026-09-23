@@ -18,6 +18,7 @@ const blocks = [
     heading: "Sécurisation des portails et grandes propriétés",
     paragraphs: [
       "L'héritage rural de Saint-Pierre-de-Féric se lit encore dans le tracé des routes ouvertes en 1922 et dans la végétation abondante du quartier. Les propriétés y sont souvent plus grandes qu'ailleurs à Nice, avec des portails et des accès qui demandent parfois un diagnostic spécifique en plus de la porte d'entrée elle-même.",
+      "Le tunnel de l'A8 qui traverse le quartier a été percé en deux temps : le tube sud a ouvert le 24 décembre 1976, fonctionnant seul et dans les deux sens jusqu'à l'ouverture du tube nord le 17 novembre 1983. Une infrastructure discrète mais bien présente pour les riverains, qui s'ajoute au relief marqué du secteur dans l'organisation de mes déplacements.",
     ],
   },
   {
@@ -90,6 +91,7 @@ export default function SerrurierSaintPierreDeFericNicePage() {
       quartier="Saint-Pierre-de-Féric"
       crimeIntro="Saint-Pierre-de-Féric, hameau perché dans les collines, n'est pas à l'abri de cette évolution malgré son caractère plus isolé."
       crimeClosing="Les propriétés isolées de ce secteur gagnent particulièrement à sécuriser portails et accès secondaires, pas seulement la porte principale."
+      brandsIntro="Sur ces grandes propriétés avec portail, je privilégie des marques capables d'équiper aussi bien l'accès principal que les entrées secondaires."
       sector="centre"
       intro={intro}
       blocks={blocks}

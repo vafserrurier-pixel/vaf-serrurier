@@ -24,6 +24,7 @@ const blocks = [
     heading: "Un bâti ancien qui demande une approche adaptée",
     paragraphs: [
       "Dans le Vieux-Nice, beaucoup de portes et de serrures sont anciennes, parfois artisanales, avec des dimensions non standards. Je privilégie systématiquement le diagnostic et la réparation quand c'est possible, pour respecter le cachet de ces portes plutôt que les remplacer par des modèles génériques.",
+      "La cathédrale Sainte-Réparate, bâtie entre 1650 et 1699 sur les plans de l'architecte Jean-André Guiberto, illustre bien ce patrimoine ancien : sa façade ne fut achevée qu'entre 1825 et 1830, et son dôme compte 14 000 tuiles vernissées de style génois. Sur ce type de bâti historique, je privilégie toujours la réparation d'une porte existante à un remplacement qui en changerait l'aspect.",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierVieuxNiceNicePage() {
       quartier="Vieux-Nice"
       crimeIntro="Le Vieux-Nice, avec ses ruelles étroites et son bâti ancien, reste concerné par cette tendance malgré l'animation permanente du quartier."
       crimeClosing="Sur les immeubles historiques comme sur les commerces du rez-de-chaussée, une serrure à jour reste la meilleure protection."
+      brandsIntro="Sur les portes artisanales et souvent non standards du Vieux-Nice, je privilégie des marques capables de fournir un cylindre sur-mesure sans dénaturer la porte."
       sector="centre"
       intro={intro}
       blocks={blocks}

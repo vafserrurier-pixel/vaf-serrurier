@@ -25,6 +25,7 @@ const blocks = [
     heading: "Réparation de serrures sur le patrimoine russe",
     paragraphs: [
       "Entre la cathédrale orthodoxe et les villas construites pour la clientèle russe du début du XXe siècle, le quartier conserve un cachet particulier. Je privilégie une approche respectueuse de ce patrimoine pour toute intervention sur une porte ou une serrure d'origine.",
+      "La cathédrale Saint-Nicolas elle-même, dont la construction a débuté en 1903 sur les plans de l'architecte russe Mikhaïl Préobrajenski, reprend le style « vieux russe » des églises moscovites du XVIe siècle, avec ses six coupoles bulbeuses colorées et une structure en béton armé, technique moderne pour l'époque. Un exemple du soin porté aux détails d'origine que je retrouve aussi sur les portes anciennes du quartier.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierParcImperialNicePage() {
       quartier="Parc Impérial"
       crimeIntro="Le secteur du Parc Impérial, résidentiel et de standing, reste concerné par cette tendance générale à Nice."
       crimeClosing="Sur les résidences de ce type, un système de fermeture complet (interphone, gâche, cylindre) mérite une vérification régulière."
+      brandsIntro="Sur ce patrimoine hérité de la clientèle russe du début du XXe siècle, je privilégie une approche qui respecte la porte et le cylindre d'origine."
       sector="centre"
       intro={intro}
       blocks={blocks}

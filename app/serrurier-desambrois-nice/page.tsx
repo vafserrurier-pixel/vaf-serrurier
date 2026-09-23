@@ -25,6 +25,7 @@ const blocks = [
     heading: "Dépannage sur les serrures Belle Époque",
     paragraphs: [
       "Les immeubles Belle Époque de l'avenue Desambrois ont souvent conservé leurs portes et serrures d'origine, ou des modèles installés il y a plusieurs décennies. Je privilégie systématiquement la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard qui dénaturerait une porte ancienne, sauf quand le mécanisme est trop endommagé pour être restauré.",
+      "Louis des Ambrois de Névache, qui donne son nom à l'avenue, fut nommé intendant général de la division de Nice en 1841 avant de devenir ministre de l'Intérieur du royaume de Sardaigne en 1844 : c'est à ce poste qu'il soutint la construction de nouvelles lignes ferroviaires et lança les premières études du tunnel du Fréjus, un projet d'infrastructure d'une tout autre échelle que mes interventions sur les portes du quartier qui porte son nom.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierDesambroisNicePage() {
       quartier="Desambrois"
       crimeIntro="Le secteur Desambrois, entre villas et petites résidences sur les hauteurs, suit la même évolution que le reste de la ville."
       crimeClosing="Les propriétés en pente de ce secteur gagnent à sécuriser aussi bien les accès secondaires que la porte principale."
+      brandsIntro="Entre le turnover locatif de l'avenue et les villas des hauteurs, je choisis la marque selon l'usage réel de la porte, pas selon le type de bien."
       sector="centre"
       intro={intro}
       blocks={blocks}

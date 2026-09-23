@@ -19,6 +19,7 @@ const blocks = [
     heading: "Dépannage sur le bâti varié du vallon",
     paragraphs: [
       "L'identité forte de La Madeleine, façonnée par des vagues successives d'habitants venus d'Italie, de Grèce, de Russie ou d'Arménie, se retrouve dans un bâti varié où je m'adapte à chaque configuration : petit immeuble ancien, maison de ville ou copropriété plus récente.",
+      "La paroisse est attestée dès la fin du XVIIe siècle, quand une simple « chapelle champêtre » desservait déjà ce vallon rural. Le nom de Marie-Madeleine a une telle importance dans le pays niçois que le mois de juillet y est traditionnellement appelé « lou mès de la Madalena », la sainte étant fêtée le 22 de ce mois.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierLaMadeleineNicePage() {
       quartier="La Madeleine"
       crimeIntro="La Madeleine, à l'extrême ouest de Nice, suit la même tendance que le reste de la ville malgré son caractère plus excentré."
       crimeClosing="Sur les grands ensembles de ce secteur, sécuriser les portes de hall reste aussi important que celle de chaque logement."
+      brandsIntro="Entre maisons de ville du vallon et grands ensembles des années 1970-1980, je choisis la marque selon le type de porte, pas selon le quartier."
       sector="centre"
       intro={intro}
       blocks={blocks}

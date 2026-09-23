@@ -25,6 +25,7 @@ const blocks = [
     heading: "Un ancien vallon agricole devenu résidentiel",
     paragraphs: [
       "L'histoire industrielle et agricole du vallon Magnan a laissé place à un urbanisme résidentiel dense depuis la fin du XIXe siècle. Ce passé se traduit aujourd'hui par un bâti varié, où je m'adapte à chaque configuration de porte et de serrure.",
+      "Le torrent actionnait autrefois une dizaine de moulins, dont le plus connu reste le moulin Alziary, une famille toujours présente dans le quartier aujourd'hui. Ce passé artisanal, aujourd'hui effacé par l'urbanisation, explique parfois la présence de vestiges ou de murs anciens sur certaines parcelles en bordure du vallon.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierMagnanNicePage() {
       quartier="Magnan"
       crimeIntro="Magnan, quartier résidentiel en bord de mer, reste concerné par cette réalité comme le reste de la façade littorale."
       crimeClosing="Sur les immeubles de ce secteur, l'entretien des cylindres exposés à l'air marin va souvent de pair avec la sécurisation des accès."
+      brandsIntro="Sur les résidences des années 1960-1970 de Magnan, exposées à l'air marin, je privilégie des marques offrant un bon compromis entre résistance et disponibilité rapide."
       sector="centre"
       intro={intro}
       blocks={blocks}

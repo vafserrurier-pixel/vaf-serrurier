@@ -19,6 +19,7 @@ const blocks = [
     heading: "Réparation de serrures sur les immeubles anciens",
     paragraphs: [
       "Autour de la place Garibaldi, les immeubles anciens ont souvent des portes et des serrures d'époque. Je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait ces portes historiques.",
+      "La place elle-même fut dessinée en 1773 par l'architecte Antonio Spinelli, avec ses arcades doriques sur pilastres inspirées des grandes places royales baroques italiennes. Le Palais Avigdor, au numéro 10, illustre bien ce style avec sa façade ornée d'un blason du XVIIIe siècle : ce type de porte cochère ancienne demande une approche différente d'une porte d'appartement standard.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierGaribaldiNicePage() {
       quartier="Garibaldi"
       crimeIntro="Autour de la place Garibaldi, le bâti ancien et parfois classé n'est pas à l'abri de cette évolution."
       crimeClosing="Une porte d'époque bien équipée reste tout aussi efficace qu'une porte récente, à condition d'un cylindre fiable."
+      brandsIntro="Sur les immeubles ocre du XVIIIe siècle qui bordent la place, je privilégie des marques capables de fournir un cylindre discret, fidèle à l'esprit de ces façades classées."
       sector="centre"
       intro={intro}
       blocks={blocks}

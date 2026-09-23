@@ -25,6 +25,7 @@ const blocks = [
     heading: "Réparation de cylindre sur le boulevard planté",
     paragraphs: [
       "Les immeubles construits le long du boulevard Carabacel dans la seconde moitié du XIXe siècle ont souvent conservé des éléments d'origine. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui dénaturerait ces façades.",
+      "Le Pont Vieux qui a donné son ancien nom au secteur, mentionné dès 1250 puis signalé en pierre en 1323, ne portait pourtant ce nom que depuis 1824, à l'ouverture du Pont-Neuf. Un second passage, le pont Barla, fut construit en 1899 entre la rue Barla et le boulevard Carabacel pour accompagner le développement des quartiers est de la ville.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierCarabacelNicePage() {
       quartier="Carabacel"
       crimeIntro="Carabacel, avec ses immeubles du XIXe siècle et ses villas, reste concerné par cette tendance comme le reste du centre."
       crimeClosing="Sur le bâti ancien du boulevard, l'adaptation d'un cylindre récent reste souvent suffisante pour combler l'écart de sécurité."
+      brandsIntro="Sur les immeubles bourgeois du boulevard planté comme sur les villas des hauteurs, je privilégie des marques capables de fournir un cylindre discret et compatible."
       sector="centre"
       intro={intro}
       blocks={blocks}

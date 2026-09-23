@@ -19,6 +19,7 @@ const blocks = [
     heading: "Digicodes et halls sécurisés en bord de mer",
     paragraphs: [
       "Les résidences de la Promenade des Anglais disposent souvent d'un hall d'entrée sécurisé, avec digicode, interphone et parfois gardien. J'interviens sur ces équipements comme sur les serrures d'appartement, avec un soin particulier pour ne pas dégrader des finitions haut de gamme.",
+      "La souscription lancée par Lewis Way en 1822 avait un but avant tout social : venir en aide à une population fragilisée par une mauvaise récolte, en employant 120 hommes, 99 femmes et 74 enfants sur les douze semaines de chantier. Le résultat, ce chemin poussiéreux de deux mètres de large complété en 1824, est devenu l'une des adresses les plus prisées de la ville, un contraste que je retrouve dans l'écart entre l'histoire modeste du site et le standing actuel des résidences.",
     ],
   },
   {
@@ -86,6 +87,7 @@ export default function SerrurierPromenadeDesAnglaisNicePage() {
       quartier="Promenade des Anglais"
       crimeIntro="Sur la Promenade des Anglais, entre résidences de prestige et immeubles de front de mer, la vigilance reste de mise malgré l'affluence touristique."
       crimeClosing="L'air marin use aussi les mécanismes plus vite ici, un facteur supplémentaire à surveiller en plus du risque d'effraction."
+      brandsIntro="Sur ce front de mer exposé au sel, je privilégie des marques proposant des finitions anticorrosion adaptées aux résidences de standing."
       sector="centre"
       intro={intro}
       blocks={blocks}
