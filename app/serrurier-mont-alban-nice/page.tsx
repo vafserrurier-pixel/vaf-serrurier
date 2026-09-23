@@ -18,6 +18,7 @@ const blocks = [
     heading: "Autour du fort du XVIe siècle",
     paragraphs: [
       "Le fort du Mont-Alban, ouvert au public depuis 2007, domine un secteur résidentiel au patrimoine militaire remarquable. Les villas alentour bénéficient d'un panorama exceptionnel, entre la baie des Anges et la Riviera italienne.",
+      "D'importants travaux de restauration ont été menés en 2010, pour le 450e anniversaire du fort, afin d'en achever l'ouverture au public : des visites guidées y sont organisées en été. Un repère solide pour situer les villas de ce secteur boisé.",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierMontAlbanNicePage() {
       quartier="Mont Alban"
       crimeIntro="Le Mont Alban, voisin du Mont Boron, suit la même tendance malgré son caractère résidentiel préservé."
       crimeClosing="Les propriétés arborées de ce secteur gagnent à sécuriser aussi bien les accès visibles depuis la route que les entrées secondaires."
+      brandsIntro="Sur ces villas boisées et parfois difficiles d'accès, je privilégie des marques disponibles rapidement pour ne pas retarder l'intervention."
       sector="est"
       intro={intro}
       blocks={blocks}

@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un héritage industriel et artisanal",
     paragraphs: [
       "L'ancien tissu industriel de Riquier (manufacture des tabacs, usine à gaz, ateliers mécaniques) a laissé place à des immeubles résidentiels construits pour la plupart dans les années 1920. Je diagnostique systématiquement l'état réel des serrures de ce bâti avant de proposer une réparation ou un remplacement.",
+      "L'église Saint-Martin, aussi appelée Saint-Augustin, compte parmi les plus anciennes de la ville basse : sa paroisse a été confiée aux pères augustins dès 1405, et l'édifice actuel a été rebâti à partir de 1636 sur une construction gothique antérieure. Ce repère ancien reste un point de passage pour situer mes interventions dans le quartier.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierRiquierNicePage() {
       quartier="Riquier"
       crimeIntro="Riquier, porte d'entrée historique et populaire à l'est de Nice, suit la même évolution que le reste de la ville."
       crimeClosing="Sur ce bâti mixte, ancien et récent, un diagnostic adapté à chaque type de porte reste la meilleure approche."
+      brandsIntro="Sur les immeubles populaires et industriels de Riquier, la résistance à un usage intensif prime sur le raffinement esthétique."
       sector="est"
       intro={intro}
       blocks={blocks}
       travelEstimate="15 à 20 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-riquier-nice/"
+      path="/serrurier-riquier-nice/"
     />
   );
 }

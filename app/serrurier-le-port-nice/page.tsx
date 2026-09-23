@@ -19,6 +19,7 @@ const blocks = [
     heading: "Autour du port Lympia et de ses anciens entrepôts",
     paragraphs: [
       "Les anciens entrepôts du port, aujourd'hui reconvertis en commerces et restaurants, côtoient des immeubles résidentiels du XIXe siècle. Je diagnostique chaque situation en tenant compte de la spécificité de ce bâti chargé d'histoire.",
+      "L'ingénieur militaire Antonio De Vincenti a dessiné le plan du port artificiel, dont la construction a débuté en 1750 avec l'immersion du premier caisson de la jetée ; le port Lympia est mis en service le 22 novembre 1752. L'ensemble architectural de la place Île-de-Beauté qui le prolonge, avec son escalier monumental depuis le quai Cassini, est classé monument historique depuis 1991.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierLePortNicePage() {
       quartier="Le Port"
       crimeIntro="Le quartier du Port, entre bâti ancien et proximité immédiate de la mer, reste concerné par cette réalité."
       crimeClosing="L'air marin y accélère aussi la corrosion des cylindres anciens, un point à surveiller en plus du risque d'effraction."
+      brandsIntro="Face à l'air marin et aux façades classées de ce secteur, je privilégie des cylindres résistants à la corrosion, sans dénaturer la porte d'origine."
       sector="est"
       intro={intro}
       blocks={blocks}
       travelEstimate="10 à 20 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-le-port-nice/"
+      path="/serrurier-le-port-nice/"
     />
   );
 }

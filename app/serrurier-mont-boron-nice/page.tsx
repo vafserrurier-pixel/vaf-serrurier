@@ -18,6 +18,7 @@ const blocks = [
     heading: "Un secteur au patrimoine militaire et préhistorique",
     paragraphs: [
       "Entre les vestiges de batteries du XIXe siècle et la proximité du fort du Mont Alban, ce secteur conserve un patrimoine remarquable. Les propriétés qui l'entourent bénéficient souvent d'un cadre naturel préservé, ce qui n'empêche pas les mêmes besoins classiques de serrurerie.",
+      "La colline, dénudée au Moyen Âge pour priver d'éventuels raids sarrasins de couvert, a été reboisée dans les années 1860 sous la direction de l'ingénieur des eaux et forêts Demontzey. Le Château de l'Anglais, bâtisse orientaliste construite vers 1856 par un colonel britannique de retour des Indes, reste l'une des propriétés les plus reconnaissables du secteur.",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierMontBoronNicePage() {
       quartier="Mont Boron"
       crimeIntro="Le Mont Boron, secteur résidentiel huppé aux villas isolées, n'est pas à l'abri de cette évolution malgré son cadre préservé."
       crimeClosing="Sur ce type de propriété individuelle, portails et grilles d'enceinte méritent la même attention que la porte d'entrée."
+      brandsIntro="Sur ces propriétés avec portail et accès secondaire, une marque capable d'équiper aussi bien l'extérieur que l'entrée principale simplifie l'ensemble."
       sector="est"
       intro={intro}
       blocks={blocks}

@@ -25,6 +25,7 @@ const blocks = [
     heading: "Autour de l'abbaye de Saint-Pons et du CHU",
     paragraphs: [
       "Le voisinage immédiat de l'ancienne abbaye baroque et du pôle hospitalier universitaire génère un passage important dans certaines rues, ce qui pousse parfois les résidents à vouloir renforcer leur porte d'entrée.",
+      "La ligne 1 du tramway, mise en service en 2007, a été prolongée en 2013 depuis Pont-Michel pour desservir directement le CHU Pasteur : un signe de l'accélération du désenclavement du quartier, qui accompagne aussi le renouvellement progressif du bâti que je constate sur le terrain.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierPasteurNicePage() {
       quartier="Pasteur"
       crimeIntro="Le quartier Pasteur, proche du CHU, reste concerné par cette tendance comme le reste de l'est niçois."
       crimeClosing="Pour les résidents aux horaires décalés de ce secteur, une serrure fiable jour et nuit compte double."
+      brandsIntro="Pour des résidents qui rentrent souvent à des horaires atypiques, la fiabilité du mécanisme jour et nuit compte autant que le prix."
       sector="est"
       intro={intro}
       blocks={blocks}

@@ -19,6 +19,7 @@ const blocks = [
     heading: "Autour de l'ancienne caserne Auvare",
     paragraphs: [
       "Le site de l'ancienne caserne, reconverti en campus universitaire depuis 2003, a transformé une partie du quartier. Les immeubles construits autour conservent des besoins classiques de serrurerie que je diagnostique au cas par cas.",
+      "L'église Saint-Roch, qui donne son nom actuel au quartier, est classée monument historique depuis un décret du 16 novembre 1984 : ses façades en trompe-l'œil ont été restaurées à l'occasion de son bicentenaire, en 1990. Un repère patrimonial qui contraste avec le passé industriel du secteur, marqué par l'usine à gaz de 1854 et la gare de Riquier construite en 1882.",
     ],
   },
   {
@@ -83,12 +84,13 @@ export default function SerrurierSaintRochNicePage() {
       quartier="Saint-Roch"
       crimeIntro="Saint-Roch, quartier dense de l'est-centre, suit la même évolution que le reste de la ville."
       crimeClosing="Sur les immeubles collectifs de ce secteur, la vigilance porte autant sur les accès communs que sur les logements eux-mêmes."
+      brandsIntro="Sur les immeubles denses de Saint-Roch, la fiabilité des cylindres de hall compte autant que celle des serrures d'appartement."
       sector="est"
       intro={intro}
       blocks={blocks}
       travelEstimate="15 à 20 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-saint-roch-nice/"
+      path="/serrurier-saint-roch-nice/"
     />
   );
 }

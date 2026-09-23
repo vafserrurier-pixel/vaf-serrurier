@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un grand ensemble en pleine rénovation urbaine",
     paragraphs: [
       "Le programme de renouvellement urbain engagé depuis 2008 transforme progressivement le bâti de l'Ariane, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des grands ensembles plus anciens des années 1960-1970. Je m'adapte à ces deux réalités très différentes.",
+      "La transformation se voit aussi dans les espaces communs : en 2017, un nouveau jardin d'enfants de 850 m² a été créé à l'angle des rues Saramito et Georges-Picard, dans le cadre de la rénovation du secteur Saramito. Ce type d'aménagement accompagne l'arrivée de nouveaux immeubles, dont les accès demandent parfois un diagnostic différent de celui des tours plus anciennes.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierArianeNicePage() {
       quartier="l'Ariane"
       crimeIntro="L'Ariane, grand ensemble de logements dans la vallée est, reste concerné par cette réalité comme le reste de la ville."
       crimeClosing="Sur ce type d'habitat collectif dense, sécuriser les portes de hall reste un enjeu partagé par l'ensemble des résidents."
+      brandsIntro="Entre les tours des années 1960-1970 et les constructions récentes du renouvellement urbain, le choix du bon cylindre dépend surtout de l'âge réel de la porte."
       sector="est"
       intro={intro}
       blocks={blocks}
       travelEstimate="15 à 25 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-l-ariane-nice/"
+      path="/serrurier-l-ariane-nice/"
     />
   );
 }

@@ -39,6 +39,7 @@ export default function QuartierPageTemplate({
   crimeIntro,
   crimeClosing,
   testimonial,
+  brandsIntro,
 }: {
   quartier: string;
   sector: keyof typeof sectorPages;
@@ -58,6 +59,9 @@ export default function QuartierPageTemplate({
    * pas à sa place, pour rester distinct d'un avis quelconque du site.
    */
   testimonial?: QuartierTestimonial;
+  /** Courte phrase de transition propre au quartier, affichée sous le titre
+   * "Marques de serrures que je pose" avant la liste générique des marques. */
+  brandsIntro?: string;
 }) {
   const url = `${business.domain}${path}`;
   const sectorInfo = sectorPages[sector];
@@ -201,9 +205,12 @@ export default function QuartierPageTemplate({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-3 text-center">
           Marques de serrures que je pose
         </h2>
+        {brandsIntro && (
+          <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">{brandsIntro}</p>
+        )}
         <BrandsSection />
       </section>
 

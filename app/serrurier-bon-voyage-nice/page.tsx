@@ -88,6 +88,7 @@ export default function SerrurierBonVoyageNicePage() {
       quartier="Bon Voyage"
       crimeIntro="Bon Voyage, secteur résidentiel proche du port, suit la même évolution que le reste de l'est niçois."
       crimeClosing="Sur les résidences collectives de ce secteur, la sécurisation des halls d'entrée reste un point de vigilance partagé."
+      brandsIntro="Entre un changement de serrure express pour un nouveau locataire et l'entretien d'un immeuble plus ancien, je m'adapte à chaque situation de ce quartier au turnover marqué."
       sector="est"
       intro={intro}
       blocks={blocks}
