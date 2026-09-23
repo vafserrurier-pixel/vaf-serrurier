@@ -19,6 +19,7 @@ const blocks = [
     heading: "Le premier quartier d'affaires de la Côte d'Azur",
     paragraphs: [
       "Les immeubles de bureaux du centre d'affaires de l'Arénas, créé en 1989, ont des exigences de sécurité spécifiques : accès contrôlés, portes de bureaux, cylindres professionnels. J'interviens sur ces équipements avec le même professionnalisme que sur un logement.",
+      "Le nom du quartier vient bien d'un ancien lieu de courses de taureaux, mais le mot niçois « arena » désigne plus largement, depuis le latin, les landes littorales sablonneuses et caillouteuses battues par les flots qui caractérisaient autrefois ce secteur. Aujourd'hui, plus de 3 000 personnes travaillent chaque jour dans les 11 bâtiments du centre d'affaires, un contraste total avec ce passé de terrain vague côtier.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierArenasNicePage() {
       quartier="Arénas"
       crimeIntro="L'Arénas, zone d'activité et de bureaux proche de l'aéroport, n'est pas à l'abri de cette évolution."
       crimeClosing="Les locaux professionnels de ce secteur ont tout intérêt à vérifier leurs systèmes de contrôle d'accès aussi régulièrement que les logements voisins."
+      brandsIntro="Entre immeubles de bureaux et résidences du secteur, je propose des marques professionnelles adaptées aux systèmes de contrôle d'accès comme aux logements classiques."
       sector="ouest"
       intro={intro}
       blocks={blocks}

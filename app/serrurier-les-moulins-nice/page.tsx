@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un grand ensemble en rénovation urbaine",
     paragraphs: [
       "Le programme de renouvellement urbain engagé depuis 2009 transforme progressivement le bâti des Moulins, avec de nouveaux immeubles aux normes de sécurité récentes aux côtés des ensembles plus anciens des années 1960-1970. Je m'adapte à ces deux réalités très différentes.",
+      "Sur les 63 hectares que compte ce quartier de près de 7 000 habitants, la Métropole et ses partenaires ont déjà investi environ 220 millions d'euros dans le cadre de l'ANRU, et un nouveau programme prévoit encore 92 millions d'euros de travaux d'ici 2030 : le renouvellement du bâti va donc se poursuivre pendant plusieurs années.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierLesMoulinsNicePage() {
       quartier="Les Moulins"
       crimeIntro="Les Moulins, grand ensemble résidentiel à l'ouest de Nice, suit la même évolution que le reste de la ville."
       crimeClosing="Sur ce type d'habitat collectif dense, la sécurisation des accès communs reste un enjeu partagé par l'ensemble des résidents."
+      brandsIntro="Entre bâtiments rénovés dans le cadre de l'ANRU et ensembles plus anciens des années 1960-1970, je choisis la marque selon l'âge réel de la porte."
       sector="ouest"
       intro={intro}
       blocks={blocks}
       travelEstimate="20 à 30 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-les-moulins-nice/"
+      path="/serrurier-les-moulins-nice/"
     />
   );
 }

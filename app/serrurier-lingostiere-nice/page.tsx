@@ -18,6 +18,7 @@ const blocks = [
     heading: "Entre vallée du Var et collines agricoles",
     paragraphs: [
       "Le double visage de Lingostière, entre la plaine du Var et les collines rurales, se traduit par un bâti varié : résidences proches des axes routiers, maisons plus isolées sur les hauteurs. Je m'adapte à chaque configuration avec le même soin de diagnostic.",
+      "La ligne de chemin de fer qui dessert Lingostière depuis son inauguration le 3 juillet 1911 emprunte un tracé volontairement escarpé à travers les collines niçoises plutôt que la route côtière plus directe, un choix fait à l'époque pour éviter l'exposition à l'artillerie navale en cas de conflit. Un détour stratégique qui a longtemps façonné l'isolement relatif de ce secteur.",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierLingostiereNicePage() {
       quartier="Lingostière"
       crimeIntro="Lingostière, à l'extrémité ouest de Nice, reste concernée par cette réalité malgré son caractère plus excentré."
       crimeClosing="Dans ce secteur plus isolé, un diagnostic préventif évite souvent un dépannage en urgence, plus long à organiser."
+      brandsIntro="Sur ce secteur excentré entre plaine et collines, je privilégie des marques disponibles rapidement pour ne pas allonger le délai d'intervention."
       sector="ouest"
       intro={intro}
       blocks={blocks}

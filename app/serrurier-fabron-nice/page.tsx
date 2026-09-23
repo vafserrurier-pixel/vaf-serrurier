@@ -19,6 +19,7 @@ const blocks = [
     heading: "Autour du parc Carol-de-Roumanie",
     paragraphs: [
       "Les villas construites dans le sillage des grandes propriétés du XIXe siècle, autour de l'actuel parc Carol-de-Roumanie, conservent souvent un cachet architectural remarquable. Je privilégie une approche respectueuse de ce patrimoine pour toute intervention sur une porte ou une serrure d'origine.",
+      "Le duc Ernest II de Saxe-Cobourg-Gotha, qui avait acquis la propriété en 1873, y fit transformer l'une des maisons en une folie de style mauresque flanquée d'une tour-belvédère offrant une vue remarquable sur la baie des Anges. Sa descendance mena, par les mariages successifs, jusqu'au roi Carol de Roumanie, qui donne aujourd'hui son nom au parc public après la démolition du château en 1978.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierFabronNicePage() {
       quartier="Fabron"
       crimeIntro="Fabron, colline résidentielle à l'ouest de Nice, reste concernée par cette tendance malgré la diversité de son bâti."
       crimeClosing="Entre villas et immeubles plus récents, ce secteur bénéficie d'un diagnostic au cas par cas plutôt que d'une solution unique."
+      brandsIntro="Sur les villas de caractère héritées des grandes propriétés du XIXe siècle, je privilégie une approche qui respecte la porte d'origine."
       sector="ouest"
       intro={intro}
       blocks={blocks}

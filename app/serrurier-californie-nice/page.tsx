@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un quartier né de l'histoire aéronautique niçoise",
     paragraphs: [
       "L'héritage aéronautique du quartier Californie, berceau du premier meeting aérien niçois en 1910, se lit dans sa proximité immédiate avec l'aéroport actuel. Les résidences construites depuis ont des profils variés que je diagnostique au cas par cas.",
+      "Ce premier terrain, un simple champ caillouteux avec un circuit de 1,5 kilomètre et un virage en épingle critiqué par certains pilotes de l'époque, n'est reconnu officiellement comme aérodrome par le ministère de l'Air qu'en 1929 : les dizaines de vols effectués sans incident lors du meeting de 1910 avaient pourtant déjà démontré la viabilité du site.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierCalifornieNicePage() {
       quartier="Californie"
       crimeIntro="Le quartier Californie, avec ses villas du début du XXe siècle, reste concerné par cette réalité malgré son cadre résidentiel."
       crimeClosing="Sur ce bâti ancien, l'adaptation d'un cylindre compatible reste préférable à un remplacement qui dénaturerait la porte d'origine."
+      brandsIntro="Entre villas historiques et résidences plus récentes du quartier Californie, je choisis la marque selon l'âge réel de la porte."
       sector="ouest"
       intro={intro}
       blocks={blocks}

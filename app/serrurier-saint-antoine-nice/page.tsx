@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un village niçois resté à part",
     paragraphs: [
       "L'ambiance villageoise de Saint-Antoine-de-Ginestière, préservée malgré l'expansion de Nice, se retrouve dans un bâti varié, entre maisons individuelles et petites résidences. Je m'adapte à chaque configuration avec le même soin de diagnostic.",
+      "Le cimetière du quartier, en contrebas de l'église sur un terrain en pente, illustre bien ce caractère de village à part : sa partie la plus ancienne s'organise autour d'une croix, prolongée par d'étroites terrasses à flanc de colline, un aménagement qu'on retrouve rarement ailleurs dans Nice.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierSaintAntoineNicePage() {
       quartier="Saint-Antoine"
       crimeIntro="Saint-Antoine, secteur résidentiel à l'ouest proche du Var, suit la même évolution que le reste de la ville."
       crimeClosing="Sur ce mélange d'immeubles collectifs et d'habitat individuel, chaque configuration demande un diagnostic adapté."
+      brandsIntro="Sur ce village niçois resté à l'écart, je choisis la marque selon le type réel de bâti, maison individuelle ou petite résidence."
       sector="ouest"
       intro={intro}
       blocks={blocks}

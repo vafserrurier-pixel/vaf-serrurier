@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un ancien village de pêcheurs devenu résidentiel",
     paragraphs: [
       "L'héritage du village de pêcheurs de Carras se lit encore dans le port-abri et les quelques embarcations conservées le long du front de mer. Les immeubles résidentiels construits depuis l'essor touristique du quartier ont des profils variés, que je diagnostique au cas par cas.",
+      "Ce port-abri, un plan d'eau rectangulaire d'environ 1 500 m², reste protégé par deux digues en enrochement, une rampe de mise à l'eau en béton et des treuils qui permettent encore de haler les petites embarcations à terre : un vestige concret de l'activité de pêche qui a longtemps caractérisé ce village.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierCarrasNicePage() {
       quartier="Carras"
       crimeIntro="Carras, entre zones commerciales et quartiers résidentiels, n'est pas à l'abri de cette évolution."
       crimeClosing="Les locaux professionnels de ce secteur gagnent à sécuriser leurs accès en dehors des heures d'ouverture, tout comme les logements."
+      brandsIntro="Entre immeubles résidentiels et locaux commerciaux de Carras, je choisis la marque selon l'usage réel de la porte, pas selon le quartier."
       sector="ouest"
       intro={intro}
       blocks={blocks}

@@ -19,6 +19,7 @@ const blocks = [
     heading: "D'un relais de diligences à un pôle sportif",
     paragraphs: [
       "L'héritage agricole de Saint-Isidore, ancien relais de diligences, cohabite aujourd'hui avec le stade Allianz Riviera et le Musée National du Sport. Les résidences construites autour de ces pôles d'attraction ont des profils variés que je diagnostique au cas par cas.",
+      "Au XIXe siècle, ce hameau niché dans la vaste plaine du Var était une étape indispensable sur une route longue et exigeante, où les chevaux pouvaient se reposer et être remplacés pendant que les voyageurs profitaient d'une pause méritée. La procession organisée chaque avril part encore aujourd'hui de la petite chapelle perchée sur la colline de la Ginestière, en hommage au saint patron laboureur du quartier.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierSaintIsidoreNicePage() {
       quartier="Saint-Isidore"
       crimeIntro="Saint-Isidore, secteur en développement proche du stade, suit la même tendance que le reste de la ville."
       crimeClosing="Sur les résidences récentes de ce secteur, l'usure normale des mécanismes reste le point de vigilance principal."
+      brandsIntro="Sur les résidences récentes de Saint-Isidore, je privilégie des marques offrant un bon compromis entre fiabilité et disponibilité rapide."
       sector="ouest"
       intro={intro}
       blocks={blocks}

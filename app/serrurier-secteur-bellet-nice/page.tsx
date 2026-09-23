@@ -18,6 +18,7 @@ const blocks = [
     heading: "Le seul vignoble AOC urbain de France",
     paragraphs: [
       "Les domaines viticoles de l'appellation Bellet, dont l'histoire remonte à l'Antiquité, comptent des bâtisses et des accès parfois anciens. Je diagnostique chaque situation en tenant compte de ce patrimoine rural unique à l'échelle de Nice.",
+      "L'attachement du secteur à la vigne est tel que le hameau de Saint-Roman-de-Bellet fut un temps rebaptisé Bacchus pendant la Révolution. En 1941, au moment de l'obtention de l'AOC, le vignoble s'était pourtant réduit à seulement 60 hectares morcelés, fragilisé par le phylloxéra de 1885 et les deux guerres mondiales : sa reconstitution progressive n'a vraiment débuté qu'à partir de 1946.",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierSecteurBelletNicePage() {
       quartier="Secteur Bellet"
       crimeIntro="Le secteur Bellet, sur les collines viticoles, n'est pas à l'abri de cette évolution malgré son caractère rural et isolé."
       crimeClosing="Les propriétés et domaines de ce secteur, parfois isolés, gagnent à sécuriser portails et dépendances autant que l'habitation principale."
+      brandsIntro="Sur les domaines viticoles et maisons isolées du secteur Bellet, je privilégie des marques capables d'équiper aussi bien les dépendances que l'habitation principale."
       sector="ouest"
       intro={intro}
       blocks={blocks}

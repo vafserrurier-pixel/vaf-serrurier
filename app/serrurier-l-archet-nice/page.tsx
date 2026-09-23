@@ -19,6 +19,7 @@ const blocks = [
     heading: "Un secteur résidentiel et institutionnel",
     paragraphs: [
       "Autour du pôle hospitalier de L'Archet, le tissu résidentiel mêle immeubles collectifs et quelques maisons individuelles. Le diagnostic reste systématique avant toute intervention.",
+      "La cérémonie de pose de la première pierre, le 18 février 1975, réunissait aussi le député-maire de Nice Jacques Médecin aux côtés de Simone Veil : le projet initial prévoyait un établissement de 380 lits, une échelle qui a depuis nettement grandi avec les extensions Archet 2 et Archet 3.",
     ],
   },
   {
@@ -82,6 +83,7 @@ export default function SerrurierArchetNicePage() {
       quartier="L'Archet"
       crimeIntro="Le secteur de l'Archet, développé autour de l'hôpital du même nom, reste concerné par cette tendance comme le reste de la ville."
       crimeClosing="Pour les résidents aux horaires décalés de ce secteur, une serrure fiable à toute heure compte particulièrement."
+      brandsIntro="Pour des résidents qui rentrent souvent à des horaires décalés, la fiabilité du mécanisme jour et nuit compte autant que le prix."
       sector="ouest"
       intro={intro}
       blocks={blocks}

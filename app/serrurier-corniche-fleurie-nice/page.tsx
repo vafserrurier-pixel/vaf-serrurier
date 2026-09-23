@@ -18,6 +18,7 @@ const blocks = [
     heading: "Un ancien terroir horticole devenu résidentiel",
     paragraphs: [
       "L'héritage floricole de la Corniche Fleurie, hérité de l'arrivée de l'eau en 1895, se retrouve encore dans le jardin botanique de Nice qui occupe le site des anciennes pépinières municipales. Les villas et résidences du secteur bénéficient de ce cadre verdoyant préservé.",
+      "Le projet du jardin botanique, initié en 1979 par le botaniste Gabriel Alziar à la tête de la division botanique des Espaces Verts, a pris forme sur ce terrain pentu à partir de 1983 : il conserve aujourd'hui plus de 3 500 espèces de plantes, dont plusieurs collections labellisées à l'échelle nationale (sauges, agaves, Callitris).",
     ],
   },
   {
@@ -85,6 +86,7 @@ export default function SerrurierCornicheFleurieNicePage() {
       quartier="Corniche Fleurie"
       crimeIntro="La Corniche Fleurie, route résidentielle des hauteurs ouest, reste concernée par cette tendance malgré son cadre préservé."
       crimeClosing="Sur les villas avec jardin de ce secteur, portails et portillons méritent autant d'attention que la porte d'entrée."
+      brandsIntro="Sur ces villas au cadre verdoyant, je privilégie des marques capables d'équiper aussi bien le portail que la porte d'entrée principale."
       sector="ouest"
       intro={intro}
       blocks={blocks}
