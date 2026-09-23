@@ -19,6 +19,7 @@ const blocks = [
     heading: "Dépannage des commerces et galeries de la place Wilson",
     paragraphs: [
       "Entre les immeubles d'habitation, les galeries et les commerces de quartier, la place Wilson connaît un passage important toute la journée. Rideau métallique, serrure de vitrine, porte de local : je diagnostique systématiquement l'état réel de la serrure avant de proposer une réparation ou un remplacement complet.",
+      "Au Moyen Âge, un unique pont de pierre permettait déjà de franchir le Paillon pour rejoindre ce faubourg alors appelé la Bourgade, qui abritait auberges et habitations avant de devenir, sous l'Ancien Régime, un couvent de pères augustins. C'est sur cet emplacement que l'église actuelle a été achevée en 1850, point de départ de l'urbanisation moderne de la place.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierQuartierWilsonNicePage() {
       quartier="Quartier Wilson"
       crimeIntro="Le quartier Wilson, dense et résidentiel, suit la même tendance que le reste du centre-ville de Nice."
       crimeClosing="Sur les immeubles collectifs comme celui-ci, la sécurisation des portes de hall compte autant que celle des appartements."
+      brandsIntro="Entre immeubles bourgeois d'époque et résidences plus récentes de la place Wilson, je choisis la marque en fonction de l'âge réel de la porte, pas de l'adresse."
       sector="centre"
       intro={intro}
       blocks={blocks}

@@ -18,6 +18,7 @@ const blocks = [
     heading: "Un quartier dense, des halls d'immeuble très sollicités",
     paragraphs: [
       "Le passage important autour de l'avenue Jean-Médecin use les serrures de hall plus vite qu'ailleurs. Digicodes, gâches électriques et cylindres de porte d'entrée collective font partie des interventions les plus fréquentes que je réalise dans ce secteur.",
+      "L'avenue a été tracée en 1864 dans la vallée du Saint-Michel selon le plan du Consiglio d'Ornato, en alignement avec le Pont-Neuf : son financement initial associait déjà les pouvoirs publics, une continuité que l'on retrouve aujourd'hui dans les grands chantiers de rénovation urbaine qui rythment régulièrement le renouvellement des façades et des halls d'immeuble de l'avenue.",
     ],
   },
   {
@@ -90,6 +91,7 @@ export default function SerrurierJeanMedecinNicePage() {
       quartier="Jean-Médecin"
       crimeIntro="Sur l'avenue Jean-Médecin et ses immeubles mixtes commerces-logements, la vigilance sur les accès reste importante malgré le passage constant."
       crimeClosing="Les rez-de-chaussée commerciaux comme les étages résidentiels gagnent à avoir une serrure à jour, pas seulement les logements isolés."
+      brandsIntro="Sur cet axe mêlant commerces et logements, je choisis la marque selon l'usage réel de la porte : passage intensif en rez-de-chaussée, ou usage plus classique à l'étage."
       sector="centre"
       intro={intro}
       blocks={blocks}

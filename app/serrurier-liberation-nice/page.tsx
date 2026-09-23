@@ -31,6 +31,7 @@ const blocks = [
     heading: "Serrures neuves et anciennes, un quartier en renouvellement",
     paragraphs: [
       "La revitalisation récente du secteur, portée par l'arrivée du tramway et l'ouverture de nouveaux commerces, s'accompagne d'un renouvellement progressif du bâti. Je m'adapte aussi bien aux vieux immeubles qu'aux constructions plus récentes.",
+      "La Gare du Sud elle-même illustre ce renouveau : fermée en 1991 après la suppression de la ligne vers Digne, elle est restée à l'abandon jusqu'à sa rénovation en 2013, transformée en médiathèque, puis complétée par un pôle commerces, restauration et cinéma sur le reste du site. Ce type de reconversion s'accompagne souvent de nouvelles copropriétés aux besoins de serrurerie encore récents.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierLiberationNicePage() {
       quartier="Libération"
       crimeIntro="Autour du marché de la Libération, entre commerces et logements, la sécurité des accès mérite la même attention qu'ailleurs à Nice."
       crimeClosing="Les portes d'immeuble au-dessus des commerces, souvent plus anciennes, sont un bon point de départ pour un diagnostic."
+      brandsIntro="Entre immeubles anciens autour du marché et constructions récentes issues de la rénovation de la Gare du Sud, je choisis la marque selon l'âge réel de la porte."
       sector="centre"
       intro={intro}
       blocks={blocks}

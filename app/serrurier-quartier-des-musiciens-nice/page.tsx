@@ -25,6 +25,7 @@ const blocks = [
     heading: "Réparation des serrures Belle Époque et Art déco",
     paragraphs: [
       "Les immeubles bourgeois des rues Verdi, Rossini ou Gounod ont souvent conservé des portes et des serrures d'origine ou installées il y a plusieurs décennies. Je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement standard qui dénaturerait ces façades soignées, sauf quand le mécanisme est trop endommagé pour être restauré.",
+      "Simone Veil elle-même situait précisément ce souvenir au 50 avenue Clémenceau, dans un bel immeuble bourgeois que ses parents durent quitter à la suite de la crise économique de la fin des années 1920 : un exemple concret du type de porte ancienne, aujourd'hui centenaire, que je suis régulièrement amené à diagnostiquer dans ce quartier.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierQuartierDesMusiciensNicePage() {
       quartier="Quartier des Musiciens"
       crimeIntro="Le quartier des Musiciens, proche de la gare, compte de nombreux immeubles anciens dont les serrures d'origine méritent une attention particulière."
       crimeClosing="Un cylindre récent adapté à une porte ancienne suffit souvent à combler l'écart de sécurité, sans tout remplacer."
+      brandsIntro="Sur ces immeubles bourgeois centenaires, je privilégie des marques capables de fournir un cylindre compatible sans dénaturer la porte d'origine."
       sector="centre"
       intro={intro}
       blocks={blocks}

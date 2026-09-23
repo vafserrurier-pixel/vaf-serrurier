@@ -33,6 +33,7 @@ const blocks = [
     heading: "Boutiques de luxe et sécurisation commerciale",
     paragraphs: [
       "Les commerces haut de gamme de la rue de France, de la rue du Maréchal-Joffre ou de la rue Masséna ont des exigences de sécurité élevées. J'interviens sur le renforcement de portes de boutique et de rideaux métalliques avec la même discrétion attendue dans ce quartier de standing.",
+      "L'hôtel Negresco lui-même illustre ce niveau d'exigence : inauguré le 4 janvier 1913 par l'hôtelier Henri Negresco sur un projet de l'architecte Édouard-Jean Niermans, il compte 450 chambres et sa célèbre coupole de verre, l'une des plus belles d'Europe, a été construite par Gustave Eiffel. Un tel patrimoine impose une sécurisation à la hauteur, sans jamais dénaturer la façade d'origine.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierCarreDorNicePage() {
       quartier="Carré d'Or"
       crimeIntro="Le Carré d'Or, secteur résidentiel prisé entre Masséna et la Promenade, n'échappe pas à cette réalité malgré son standing."
       crimeClosing="Sur ce type de bien, une serrure haute sécurité reste un investissement cohérent avec la valeur du logement."
+      brandsIntro="Sur les immeubles Belle Époque et les commerces de standing du Carré d'Or, je propose des marques haut de gamme qui respectent le niveau de finition attendu ici."
       sector="centre"
       intro={intro}
       blocks={blocks}

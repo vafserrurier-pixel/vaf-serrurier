@@ -19,6 +19,7 @@ const blocks = [
     heading: "Réparation des serrures d'immeubles Art déco",
     paragraphs: [
       "Les façades éclectiques et Art déco du quartier des Fleurs abritent des portes et serrures parfois anciennes, que je répare ou adapte plutôt que de remplacer systématiquement, pour préserver la cohérence esthétique de ces immeubles de caractère.",
+      "Le quartier compte plusieurs immeubles remarquables de cette époque : la Maison Ricardou, construite en 1906 par l'architecte François Aubert, le Palais des Orangers, réalisé en 1924 par Paul Orméa, ou encore le Palais Astoria, ancien hôtel du début du XXe siècle. Sur ce type de porte d'immeuble classé ou de grand standing, l'adaptation d'un cylindre compatible reste ma première option.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierQuartierDesFleursNicePage() {
       quartier="Quartier des Fleurs"
       crimeIntro="Le quartier des Fleurs, proche de la gare et à forte rotation locative, n'est pas épargné par cette tendance."
       crimeClosing="Changer la serrure entre deux locataires reste le geste le plus simple pour limiter ce risque dans ce type de logement."
+      brandsIntro="Sur les immeubles Art déco et Belle Époque du quartier des Fleurs, je privilégie des marques capables de fournir un cylindre discret et compatible avec une porte d'origine."
       sector="centre"
       intro={intro}
       blocks={blocks}

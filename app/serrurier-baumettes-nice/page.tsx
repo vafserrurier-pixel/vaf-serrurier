@@ -19,6 +19,7 @@ const blocks = [
     heading: "Sécurisation des villas et propriétés de caractère",
     paragraphs: [
       "Le secteur des Baumettes comprend des immeubles anciens et des villas héritées de son passé de lieu de villégiature, dont les portes et serrures méritent une attention particulière. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet.",
+      "La ville de Nice a racheté la villa de la princesse Kotschoubey en 1926, sa finition ayant été confiée à l'architecte Constantin Scala : le musée y a ouvert ses portes en 1928, avec des collections allant de la peinture flamande du XVIIe siècle aux œuvres de Fragonard, Dufy ou Rodin. Ce type de bâtisse patrimoniale demande le même soin sur les accès que sur les collections qu'elle abrite.",
     ],
   },
   {
@@ -88,6 +89,7 @@ export default function SerrurierBaumettesNicePage() {
       quartier="Baumettes"
       crimeIntro="Les Baumettes, secteur résidentiel plus calme à l'ouest du centre, restent concernées par cette évolution à l'échelle de la ville."
       crimeClosing="Sur les villas comme sur les petits immeubles du secteur, un diagnostic préventif reste le meilleur réflexe."
+      brandsIntro="Sur les villas et immeubles de caractère hérités du passé de villégiature des Baumettes, je privilégie une approche qui respecte la porte d'origine."
       sector="centre"
       intro={intro}
       blocks={blocks}

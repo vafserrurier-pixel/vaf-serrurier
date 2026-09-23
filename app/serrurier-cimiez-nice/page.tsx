@@ -19,6 +19,7 @@ const blocks = [
     heading: "Changement de serrure sur les portes anciennes de Cimiez",
     paragraphs: [
       "Les palaces Belle Époque reconvertis en copropriétés et les grands immeubles du quartier ont souvent conservé leurs portes et cylindres d'origine. Sur ce type de porte, je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet : ça évite de dénaturer une porte d'époque tout en retrouvant un fonctionnement fiable. Un remplacement intégral n'intervient que si le mécanisme est trop endommagé pour être conservé.",
+      "L'Excelsior Régina Palace, construit par Biasini pour la venue de la reine Victoria, comptait 400 chambres à son inauguration en 1897 : la souveraine y séjourna du 12 mars au 28 avril, dans une aile ouest dotée d'une entrée privée. Racheté en 1920 puis transformé en copropriété en 1937, l'immeuble compte aujourd'hui 98 appartements, un cas d'école pour l'adaptation de serrures modernes sur un bâti classé.",
     ],
   },
   {
@@ -93,6 +94,7 @@ export default function SerrurierCimiezNicePage() {
       quartier="Cimiez"
       crimeIntro="Cimiez, avec ses grands immeubles Belle Époque et ses villas, reste concerné par cette réalité malgré son cadre résidentiel recherché."
       crimeClosing="Sur ce type de patrimoine, une porte ancienne bien entretenue protège aussi bien qu'un modèle récent, à condition d'un cylindre à jour."
+      brandsIntro="Sur les anciens palaces reconvertis en copropriétés comme sur les villas de Cimiez, je choisis une marque capable de fournir un cylindre discret, fidèle à l'esprit du bâti d'origine."
       sector="centre"
       intro={intro}
       blocks={blocks}

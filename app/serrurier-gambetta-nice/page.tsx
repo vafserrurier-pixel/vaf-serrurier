@@ -31,6 +31,7 @@ const blocks = [
     heading: "Serrures d'époque sur l'immeuble Le Palladium et ses voisins",
     paragraphs: [
       "Les immeubles Art déco du secteur, comme Le Palladium à l'angle de l'avenue Tzarévitch, méritent une attention particulière : je privilégie systématiquement une solution qui respecte l'esthétique de ces façades remarquables.",
+      "L'avenue Tzarévitch tient son nom du jeune héritier russe Nicolas Alexandrovitch, mort à Nice en 1865, en mémoire duquel la famille impériale fit bâtir une chapelle commémorative en 1867 sur le boulevard resté ensuite une voie privée jusqu'en 1882. Un repère historique discret au milieu d'un bâti bien plus récent, issu de l'urbanisation de l'après-guerre.",
     ],
   },
   {
@@ -88,12 +89,13 @@ export default function SerrurierGambettaNicePage() {
       quartier="Gambetta"
       crimeIntro="Le quartier Gambetta, dense et résidentiel, suit la même tendance que le reste du centre-ville."
       crimeClosing="Sur les immeubles collectifs de ce type, la vigilance porte autant sur les portes de hall que sur celles des appartements."
+      brandsIntro="Sur le bâti de l'après-guerre qui compose l'essentiel de Gambetta, je choisis la marque selon l'état réel du cylindre plutôt que selon l'ancienneté supposée de l'immeuble."
       sector="centre"
       intro={intro}
       blocks={blocks}
       travelEstimate="10 à 20 minutes selon la circulation"
       faq={faq}
-      path="/serrurier-gambetta-nice/"
+      path="/serrurier-gambetta-nice/"
     />
   );
 }
