@@ -49,9 +49,11 @@ export const business = {
   domain: "https://vaf-serrurier.fr",
   googleMaps: {
     shareLink: "https://maps.app.goo.gl/an35iFRpf1MZTaQj7",
-    // Place ID non confirmé : à reconfirmer via l'API Google Places (Place Details)
-    // avant toute intégration en dur dans un composant qui en dépendrait.
-    placeIdConfirmed: false,
+    // Confirmé via l'intégration live des avis (lib/reviews.ts, GOOGLE_PLACE_ID) :
+    // en production, l'API Google Places retourne bien les avis réels de
+    // l'entreprise (noms d'auteurs et contenu cohérents avec l'activité) sur ce
+    // Place ID, ce qui vaut confirmation pratique sans appel séparé à Place Details.
+    placeIdConfirmed: true,
   },
   reviews: {
     rating: 5.0,
