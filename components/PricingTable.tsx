@@ -10,7 +10,7 @@ const strings = {
   fr: {
     mostRequested: "Le plus demandé",
     call: "Appeler pour ce tarif",
-    nightSurcharge: "+50% après 19h, le week-end et les jours fériés",
+    nightSurcharge: "+50% sur main-d'œuvre et déplacement (soir, week-end, jours fériés)",
     note: "Pièces remplacées facturées en supplément, toujours annoncées avant accord. Remplacement de serrure complète : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
     tabFeatured: "Les plus demandés",
     tabAll: "Tous les tarifs",
@@ -18,7 +18,7 @@ const strings = {
   en: {
     mostRequested: "Most requested",
     call: "Call for this rate",
-    nightSurcharge: "+50% after 7pm, on weekends and public holidays",
+    nightSurcharge: "+50% on labor and travel (evenings, weekends, public holidays)",
     note: "Replaced parts billed separately, always quoted before you agree. Full lock replacement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
     tabFeatured: "Most requested",
     tabAll: "All prices",

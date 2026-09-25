@@ -26,15 +26,19 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Combien coûte un serrurier à Nice ? Tarifs 2026 | VAF",
   description: "Déplacement, main d'œuvre, pièce, majoration : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
-  article: { author: business.firstName, readingTime: "9 min" },
+  article: { author: business.firstName, readingTime: "12 min" },
 });
 
 const toc = [
   { id: "compose-prix", label: "Ce qui compose vraiment un prix" },
   { id: "tarifs-annonces", label: "Mes tarifs annoncés à l'avance" },
-  { id: "majorations", label: "Majorations soir, week-end, jours fériés" },
+  { id: "majoration-perimetre", label: "Majoration : ce qu'elle couvre vraiment" },
   { id: "comparatif", label: "Ce qu'affichent d'autres serruriers à Nice" },
   { id: "prix-eleve", label: "Pourquoi un prix plus élevé reste parfois le bon choix" },
+  { id: "nice-vs-national", label: "Nice face au reste de la France" },
+  { id: "a2p", label: "Ce que change la certification A2P" },
+  { id: "engagement", label: "Mon engagement : ce qui est vérifiable" },
+  { id: "leviers", label: "Réduire le coût de votre intervention" },
   { id: "recap", label: "Tableau récapitulatif" },
   { id: "faq", label: "Foire aux questions" },
 ];
@@ -51,6 +55,11 @@ const faqItems = [
       "Dans la plupart des cas, oui, dès que l'intervention dépasse une heure : un tarif horaire affiché plus bas grimpe vite une fois la pièce, le déplacement et la main d'œuvre additionnés. Un forfait fixe vous met à l'abri d'un dépassement si le diagnostic se révèle plus long que prévu.",
   },
   {
+    question: "La majoration de 50% s'applique-t-elle aussi sur le prix d'un cylindre ou d'une serrure remplacée ?",
+    answer:
+      "Non, jamais. Elle porte uniquement sur le déplacement et la main d'œuvre. Un cylindre Heraclès ou Fichet coûte exactement le même prix un samedi soir qu'un mardi après-midi : seul le temps que je passe chez vous est majoré.",
+  },
+  {
     question: "Pourquoi votre majoration est-elle fixe à 50%, sans paliers horaires ?",
     answer:
       "Pour que vous puissiez calculer le prix final vous-même, à n'importe quelle heure, sans avoir à vérifier dans quelle tranche horaire vous tombez. C'est aussi ce qui évite qu'une intervention en pleine nuit coûte le double du tarif de jour, comme c'est le cas chez certains confrères au-delà d'un certain horaire.",
@@ -63,7 +72,7 @@ const faqItems = [
   {
     question: "Comment vérifier moi-même si un prix affiché en ligne est complet avant d'appeler ?",
     answer:
-      "Demandez explicitement si le prix annoncé inclut le déplacement et la main d'œuvre, ou seulement la pièce. Demandez aussi si la majoration soir/nuit/week-end est fixe ou à paliers. Ces deux questions suffisent à comparer deux devis sur des bases équivalentes.",
+      "Demandez explicitement si le prix annoncé inclut le déplacement et la main d'œuvre, ou seulement la pièce. Demandez aussi si la majoration soir/nuit/week-end est fixe ou à paliers, et si elle porte sur la pièce ou seulement sur l'intervention. Ces questions suffisent à comparer deux devis sur des bases équivalentes.",
   },
 ];
 
@@ -109,7 +118,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
             Combien coûte un serrurier à Nice ? Tarifs 2026
           </h1>
-          <ArticleByline readingMinutes={9} updatedLabel="Publié le 25 septembre 2026" />
+          <ArticleByline readingMinutes={12} updatedLabel="Publié le 25 septembre 2026" />
           <div className="mt-6">
             <TrustBadges />
           </div>
@@ -130,8 +139,10 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                   Un prix de serrurier se compose de trois éléments : <strong>déplacement, main d&apos;œuvre et pièce</strong>. Le prix affiché le plus bas n&apos;inclut pas toujours les trois.
                 </>,
                 "Mes tarifs sont fixes et annoncés avant tout déplacement, déplacement inclus sur toute la ville.",
-                "Ma majoration est unique (+50%), sans palier qui double le tarif en pleine nuit comme chez certains confrères.",
-                "Un prix d'appel très bas (30-40 €) affiché en ligne cache presque toujours une facture qui gonfle une fois sur place.",
+                <>
+                  Ma majoration de +50% ne porte <strong>jamais sur le prix d&apos;une pièce</strong>, uniquement sur le déplacement et la main d&apos;œuvre.
+                </>,
+                "SIRET vérifiable, adresse physique, assurance RC Pro, garantie décennale et garanties fabricant réelles (15 ans sur un blindage) : des engagements concrets, pas des arguments commerciaux.",
               ]}
             />
           </div>
@@ -146,8 +157,9 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               téléphone, et c&apos;est normal : personne n&apos;aime signer un chèque en
               blanc pour une porte claquée. Le problème, c&apos;est que la plupart des prix
               affichés en ligne par les serruriers ne représentent qu&apos;une partie de la
-              facture réelle. Voici comment je construis les miens, et ce que j&apos;ai pu
-              vérifier sur ce qu&apos;affichent d&apos;autres serruriers à Nice.
+              facture réelle. Voici comment je construis les miens, ce que j&apos;ai pu
+              vérifier sur ce qu&apos;affichent d&apos;autres serruriers à Nice, et les
+              engagements concrets qui vont avec, détaillés plus loin dans cet article.
             </p>
 
             <div>
@@ -194,7 +206,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               rows={[
                 ["Porte claquée / verrouillée (cylindre européen)", "149 € TTC"],
                 ["Changement de cylindre standard", "dès 249 € TTC"],
-                ["Majoration soir / week-end / jours fériés", "+50%, fixe, sans palier"],
+                ["Majoration soir / week-end / jours fériés", "+50% sur main-d'œuvre et déplacement uniquement"],
               ]}
               featuredRowIndex={0}
             />
@@ -219,17 +231,25 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             </div>
 
             <div>
-              <ArticleSectionHeading number={3} id="majorations">
-                Majorations soir, week-end, jours fériés
+              <ArticleSectionHeading number={3} id="majoration-perimetre">
+                Majoration soir, week-end, jours fériés : ce qu&apos;elle couvre vraiment
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
-                Après 19h, le week-end et les jours fériés, une majoration unique de{" "}
-                <strong>+50%</strong> s&apos;applique sur mes tarifs, sans palier
-                supplémentaire selon l&apos;heure exacte. Une intervention à 20h coûte donc
-                le même supplément qu&apos;une intervention à 3h du matin : c&apos;est un
-                choix délibéré de simplicité, pour que vous puissiez calculer le prix final
-                vous-même, à n&apos;importe quelle heure, sans avoir à vérifier dans quelle
-                tranche horaire vous tombez.
+                Un point souvent mal compris, et qui mérite d&apos;être précisé clairement :
+                ma majoration de <strong>+50%</strong> porte uniquement sur le{" "}
+                <strong>déplacement et la main d&apos;œuvre</strong>, jamais sur le prix
+                d&apos;une pièce remplacée. Un cylindre Heraclès ne coûte pas plus cher un
+                samedi soir qu&apos;un mardi après-midi : seul le temps que je passe chez
+                vous est majoré, pas le matériel posé.
+              </p>
+              <p className="text-slate leading-relaxed mt-4">
+                Après 19h, le week-end et les jours fériés, cette majoration unique
+                s&apos;applique donc à la partie main-d&apos;œuvre et déplacement de la
+                facture, sans palier supplémentaire selon l&apos;heure exacte. Une
+                intervention à 20h coûte le même supplément qu&apos;une intervention à 3h
+                du matin : c&apos;est un choix délibéré de simplicité, pour que vous
+                puissiez calculer le prix final vous-même, à n&apos;importe quelle heure,
+                sans avoir à vérifier dans quelle tranche horaire vous tombez.
               </p>
               <p className="text-slate leading-relaxed mt-4">
                 Ce n&apos;est pas la norme partout : plusieurs grilles tarifaires relevées à
@@ -329,7 +349,8 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                   ce créneau, comme j&apos;en ai relevé sur une grille tarifaire locale. En
                   clair : à tarif de base équivalent, une intervention en pleine nuit chez
                   moi ne double jamais le prix, contrairement à un système à paliers qui le
-                  fait au-delà d&apos;un certain horaire.
+                  fait au-delà d&apos;un certain horaire. Et dans les deux cas, cette
+                  majoration ne touche jamais le prix d&apos;une pièce remplacée.
                 </p>
               </div>
               <p className="text-slate leading-relaxed mt-4">
@@ -347,6 +368,167 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               </p>
             </div>
 
+            <div>
+              <ArticleSectionHeading number={6} id="nice-vs-national">
+                Nice face au reste de la France : pourquoi le niveau de prix diffère
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Je ne dispose pas d&apos;une moyenne officielle vérifiée spécifique à Nice à
+                vous communiquer, seulement des exemples concrets déjà cités plus haut. Mais
+                plusieurs facteurs réels et propres à la ville expliquent pourquoi le niveau
+                de prix y est rarement dans le bas de la fourchette nationale évoquée plus
+                haut (autour de 135 € TTC pour une ouverture simple) :
+              </p>
+              <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed mt-3">
+                <li>
+                  <strong>Le coût de la vie sur la Côte d&apos;Azur</strong> : loyer d&apos;un
+                  local professionnel, carburant, assurances, matériel. C&apos;est le même
+                  mécanisme, à une autre échelle, que l&apos;écart déjà cité entre Paris et
+                  une ville moyenne comme Lille.
+                </li>
+                <li>
+                  <strong>Une part importante de bâti ancien</strong> : Vieux-Nice, Cimiez,
+                  Carré d&apos;Or et d&apos;autres quartiers du centre comptent de nombreux
+                  immeubles avec des portes et des serrures d&apos;origine, parfois
+                  centenaires. Ce type d&apos;intervention demande souvent plus de temps et
+                  un savoir-faire spécifique pour ne pas abîmer une porte de caractère,
+                  plutôt qu&apos;un remplacement standard.
+                </li>
+                <li>
+                  <strong>Une demande saisonnière marquée</strong> : la part importante de
+                  logements loués en courte durée (Vieux-Nice, Carré d&apos;Or, bord de mer)
+                  génère des pics de demande concentrés, notamment l&apos;été, qui pèsent sur
+                  la disponibilité des artisans localement.
+                </li>
+              </ul>
+              <p className="text-slate leading-relaxed mt-4">
+                Ces facteurs jouent chez tous les serruriers installés à Nice, pas seulement
+                chez moi : ils font partie du contexte, pas d&apos;une justification propre à
+                mes tarifs.
+              </p>
+            </div>
+
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+              <Image
+                src="/images/pool/cylindre-fichet-boitier-demonte-etabli-nice.webp"
+                alt="Cylindre Fichet démonté sur établi par un serrurier à Nice"
+                fill
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="object-cover"
+              />
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={7} id="a2p">
+                Ce que change la certification A2P
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Un cylindre ou une serrure affichée « haute sécurité » n&apos;a de valeur
+                que si elle est réellement certifiée. La certification A2P, délivrée par le
+                CNPP après des tests en laboratoire, est le seul repère reconnu par les
+                assurances habitation pour un mécanisme renforcé : une étoile résiste 5
+                minutes aux outils d&apos;effraction courants, deux étoiles 10 minutes, trois
+                étoiles au moins 15 minutes. C&apos;est ce test, pas le prix affiché ni le
+                design, qui justifie l&apos;écart de tarif entre un cylindre standard et un
+                cylindre haute sécurité comme le Fichet proposé sur devis dans mes tarifs.
+              </p>
+              <p className="text-slate leading-relaxed mt-4">
+                J&apos;explique le détail de cette certification, la différence avec le
+                sigle A2P BP (qui note un bloc-porte complet plutôt qu&apos;une serrure
+                seule) et comment vérifier qu&apos;un produit est vraiment certifié dans mon
+                article dédié à la{" "}
+                <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
+                  certification A2P
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={8} id="engagement">
+                Mon engagement : ce qui est vérifiable
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Un tarif annoncé à l&apos;avance ne vaut que si l&apos;entreprise qui le
+                propose est elle-même vérifiable. Voici ce qui l&apos;est concrètement, pas
+                comme argument commercial, mais comme des points que vous pouvez contrôler
+                vous-même avant même que je me déplace :
+              </p>
+              <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed mt-3">
+                <li>
+                  <strong>SIRET vérifiable</strong> : {business.siret}, consultable
+                  publiquement en quelques secondes.
+                </li>
+                <li>
+                  <strong>Une adresse physique réelle</strong> : {business.address.full},
+                  pas seulement un numéro de mobile.
+                </li>
+                <li>
+                  <strong>Une assurance responsabilité civile professionnelle</strong> (
+                  {business.insurance.provider}) et une <strong>garantie décennale</strong>{" "}
+                  en cours de validité.
+                </li>
+                <li>
+                  <strong>Artisan serrurier depuis {business.professionSinceYear}</strong>,
+                  avant de m&apos;installer à mon compte à Nice.
+                </li>
+                <li>
+                  <strong>Des garanties fabricant réelles sur le matériel posé</strong>, pas
+                  seulement sur mon intervention : 15 ans sur un blindage de porte, 10 ans
+                  sur une poignée blindée gamme Héraclès Salomé — le détail complet est sur
+                  ma page{" "}
+                  <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
+                    tarifs
+                  </Link>
+                  .
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <ArticleSectionHeading number={9} id="leviers">
+                Réduire le coût de votre intervention : les leviers légaux
+              </ArticleSectionHeading>
+              <p className="text-slate leading-relaxed">
+                Avant de comparer des tarifs de serrurier, plusieurs leviers légaux
+                permettent souvent de réduire la facture finale, ou de vous faire rembourser
+                après coup :
+              </p>
+              <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed mt-3">
+                <li>
+                  <strong>Garantie assistance de votre assurance habitation</strong> : le
+                  plafond couvert est souvent modeste pour une simple ouverture de porte,
+                  mais nettement plus élevé en cas d&apos;effraction avérée, avec une
+                  franchise à vérifier selon votre contrat. Une facture détaillée reste le
+                  document indispensable pour toute déclaration.
+                </li>
+                <li>
+                  <strong>Garantie assistance de certaines cartes bancaires haut de gamme</strong>{" "}
+                  (Visa Premier, Gold Mastercard ou équivalent) : le plafond varie fortement
+                  selon la carte et l&apos;émetteur, à vérifier directement auprès de votre
+                  banque avant d&apos;en avoir besoin.
+                </li>
+                <li>
+                  <strong>Programmer une intervention plutôt que d&apos;attendre l&apos;urgence complète</strong>{" "}
+                  : un rendez-vous en journée évite la majoration de soir, de nuit, de
+                  week-end ou de jour férié — un cylindre qui commence à forcer se traite
+                  mieux avant la panne complète.
+                </li>
+                <li>
+                  <strong>Toujours demander un devis écrit</strong>, même pour une petite
+                  intervention : c&apos;est ce document, pas un simple reçu, qui facilite un
+                  remboursement d&apos;assurance a posteriori.
+                </li>
+              </ul>
+              <p className="text-slate leading-relaxed mt-4">
+                Le détail de ces garanties d&apos;assistance est expliqué sur ma page{" "}
+                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
+                  urgence serrurier
+                </Link>
+                .
+              </p>
+            </div>
+
             <ArticleTable
               caption="Récapitulatif : ce qui distingue mes tarifs des grilles à paliers relevées à Nice."
               headers={["Poste", "Chez moi", "Pratique courante relevée"]}
@@ -354,13 +536,13 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 ["Déplacement", "Toujours inclus", "Parfois facturé à part (ex. 45 €)"],
                 ["Ouverture de porte claquée", "149 € TTC, tout compris", "89 à 149 € selon l'heure, + déplacement possible"],
                 ["Changement de cylindre", "dès 249 € TTC, forfait unique", "Pièce seule dès 69 € + main d'œuvre + déplacement"],
-                ["Majoration soir/nuit/week-end", "+50% unique, sans palier", "+50% à +100% selon l'heure exacte"],
+                ["Majoration soir/nuit/week-end", "+50% unique, sur main-d'œuvre et déplacement, jamais les pièces", "+50% à +100% selon l'heure exacte"],
                 ["Devis", "Annoncé au téléphone, confirmé sur place", "Variable selon l'entreprise"],
               ]}
             />
 
             <div>
-              <ArticleSectionHeading number={6} id="recap">
+              <ArticleSectionHeading number={10} id="recap">
                 Tableau récapitulatif
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
@@ -376,19 +558,19 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               </p>
             </div>
 
-            <ArticleOpinion quote="Je ne prétends pas être systématiquement le moins cher de Nice, et ce n'est pas mon objectif. Mon objectif, c'est que vous puissiez calculer le prix final avant même que j'arrive, sans mauvaise surprise ni palier caché. C'est ça, la vraie différence entre un tarif annoncé et un tarif d'appel." />
+            <ArticleOpinion quote="Je ne prétends pas être systématiquement le moins cher de Nice, et ce n'est pas mon objectif. Mon objectif, c'est que vous puissiez calculer le prix final avant même que j'arrive, sans mauvaise surprise, sans palier caché et sans majoration qui déborde sur le prix du matériel. C'est ça, la vraie différence entre un tarif annoncé et un tarif d'appel." />
 
             <ArticleKeyTakeaways
               points={[
                 "Un prix de serrurier se compose du déplacement, de la main d'œuvre et de la pièce éventuelle : vérifiez ce qui est réellement inclus.",
                 "Mes tarifs sont fixes, déplacement et main d'œuvre toujours inclus, hors pièce remplacée.",
-                "Ma majoration unique de +50% évite les paliers qui peuvent doubler le tarif en pleine nuit chez certains confrères.",
-                "Un prix d'appel très bas affiché en ligne (30-40 €) est presque toujours un signal d'alerte.",
+                "Ma majoration unique de +50% ne porte que sur le déplacement et la main d'œuvre, jamais sur le prix d'une pièce.",
+                "SIRET, adresse, assurance RC Pro, garantie décennale et garanties fabricant sont vérifiables indépendamment, pas de simples arguments.",
               ]}
             />
 
             <div>
-              <ArticleSectionHeading number={7} id="faq">
+              <ArticleSectionHeading number={11} id="faq">
                 Foire aux questions
               </ArticleSectionHeading>
               <FaqAccordion items={faqItems} />

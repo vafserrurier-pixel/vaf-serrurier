@@ -15,7 +15,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Combien coûte un serrurier en urgence à Nice ?",
     answer:
-      "Le tarif de base dépend du service (ouverture, dépannage, remplacement) et une majoration de 50% s'applique après 19h, le week-end et les jours fériés. Le montant exact est toujours annoncé avant que j'intervienne.",
+      "Le tarif de base dépend du service (ouverture, dépannage, remplacement) et une majoration de 50% s'applique après 19h, le week-end et les jours fériés, uniquement sur le déplacement et la main-d'œuvre : le prix d'une pièce remplacée ne change jamais selon l'heure. Le montant exact est toujours annoncé avant que j'intervienne.",
   },
   {
     question: "Le devis est-il vraiment gratuit ?",
@@ -100,7 +100,7 @@ const faqEn: FaqItem[] = [
   {
     question: "How much does an emergency locksmith cost in Nice?",
     answer:
-      "The base price depends on the service (opening, callout, replacement), and a 50% surcharge applies after 7pm, on weekends and public holidays. The exact amount is always quoted before I intervene.",
+      "The base price depends on the service (opening, callout, replacement), and a 50% surcharge applies after 7pm, on weekends and public holidays, only on travel and labor: the price of a replaced part never changes with the time of day. The exact amount is always quoted before I intervene.",
   },
   {
     question: "Is the quote really free?",
@@ -245,7 +245,7 @@ const strings = {
     warningClosing: "Mes tarifs ci-dessus sont ceux que je facture réellement, pas un appât.",
     varyTitle: "Ce qui fait varier le prix",
     varyText:
-      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés. Les pièces remplacées sont toujours facturées à part et validées avec vous avant intervention.",
+      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés, mais uniquement sur le déplacement et la main-d'œuvre : elle ne porte jamais sur le prix d'une pièce remplacée. Les pièces remplacées sont toujours facturées à part et validées avec vous avant intervention.",
     devisLegalTitle: "Ce que la loi exige sur un devis de dépannage",
     leviersTitle: "Comment réduire le coût de votre intervention",
     faqTitle: "Questions fréquentes sur les tarifs",
@@ -273,7 +273,7 @@ const strings = {
     warningClosing: "My prices above are what I actually charge, not bait.",
     varyTitle: "What makes the price vary",
     varyText:
-      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A 50% surcharge applies after 7pm, on weekends and public holidays. Replaced parts are always billed separately and agreed with you before the work starts.",
+      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A 50% surcharge applies after 7pm, on weekends and public holidays, but only on travel and labor: it never applies to the price of a replaced part. Replaced parts are always billed separately and agreed with you before the work starts.",
     devisLegalTitle: "What French law requires on a repair quote",
     leviersTitle: "How to reduce the cost of your callout",
     faqTitle: "Frequently asked questions about pricing",
