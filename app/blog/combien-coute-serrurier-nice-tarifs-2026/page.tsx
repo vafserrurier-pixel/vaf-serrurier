@@ -35,21 +35,20 @@ const toc = [
   { id: "majorations", label: "Majorations soir, week-end, jours fériés" },
   { id: "comparatif", label: "Ce qu'affichent d'autres serruriers à Nice" },
   { id: "prix-eleve", label: "Pourquoi un prix plus élevé reste parfois le bon choix" },
-  { id: "signaux-alerte", label: "Les signaux qui doivent vous alerter" },
   { id: "recap", label: "Tableau récapitulatif" },
   { id: "faq", label: "Foire aux questions" },
 ];
 
 const faqItems = [
   {
-    question: "Le devis par téléphone est-il vraiment gratuit et sans engagement ?",
+    question: "Pourquoi deux serruriers à Nice peuvent-ils afficher des prix très différents pour la même intervention ?",
     answer:
-      "Oui. Je vous annonce un prix par téléphone selon votre description de la situation, sans aucun engagement de votre part. Ce prix est ensuite confirmé sur place avant que je commence le moindre travail.",
+      "Le plus souvent parce que le prix affiché ne couvre pas les mêmes postes : l'un inclut le déplacement et la main d'œuvre, l'autre affiche la pièce seule et ajoute le reste ensuite. Comparer deux prix « à partir de » sans vérifier ce qu'ils incluent chacun ne veut pas dire grand-chose.",
   },
   {
-    question: "Le prix annoncé au téléphone est-il le prix final ?",
+    question: "Le forfait de 249 € pour un cylindre est-il vraiment plus avantageux qu'un tarif horaire affiché plus bas ?",
     answer:
-      "Dans l'immense majorité des cas, oui : les tarifs de dépannage (porte claquée, verrouillée) sont fixes. Seul un remplacement de pièce (cylindre, serrure) peut ajouter un coût, mais il est toujours annoncé et validé avec vous avant d'être facturé.",
+      "Dans la plupart des cas, oui, dès que l'intervention dépasse une heure : un tarif horaire affiché plus bas grimpe vite une fois la pièce, le déplacement et la main d'œuvre additionnés. Un forfait fixe vous met à l'abri d'un dépassement si le diagnostic se révèle plus long que prévu.",
   },
   {
     question: "Pourquoi votre majoration est-elle fixe à 50%, sans paliers horaires ?",
@@ -57,14 +56,14 @@ const faqItems = [
       "Pour que vous puissiez calculer le prix final vous-même, à n'importe quelle heure, sans avoir à vérifier dans quelle tranche horaire vous tombez. C'est aussi ce qui évite qu'une intervention en pleine nuit coûte le double du tarif de jour, comme c'est le cas chez certains confrères au-delà d'un certain horaire.",
   },
   {
-    question: "Le déplacement est-il compris dans le prix affiché ?",
+    question: "Le déplacement est-il compris dans le prix affiché, ou facturé en supplément comme chez certains serruriers ?",
     answer:
-      "Oui, systématiquement, sur l'ensemble de Nice. Il n'y a pas de frais de déplacement à ajouter séparément à mes tarifs affichés, contrairement à certaines grilles où ce poste apparaît en supplément.",
+      "Compris, systématiquement, sur l'ensemble de Nice. Il n'y a pas de frais de déplacement à ajouter séparément à mes tarifs affichés, contrairement à certaines grilles où ce poste apparaît à part.",
   },
   {
-    question: "Que faire si le prix demandé sur place ne correspond pas au devis annoncé ?",
+    question: "Comment vérifier moi-même si un prix affiché en ligne est complet avant d'appeler ?",
     answer:
-      "Ça ne devrait jamais arriver : le prix confirmé sur place, avant travaux, est celui que vous payez. Si un professionnel change son prix après coup sans justification claire, vous pouvez le signaler sur SignalConso, le service de la DGCCRF dédié à ce type de litige.",
+      "Demandez explicitement si le prix annoncé inclut le déplacement et la main d'œuvre, ou seulement la pièce. Demandez aussi si la majoration soir/nuit/week-end est fixe ou à paliers. Ces deux questions suffisent à comparer deux devis sur des bases équivalentes.",
   },
 ];
 
@@ -184,27 +183,30 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 Mes tarifs annoncés à l&apos;avance
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
-                Voici mes tarifs standards, déplacement et main d&apos;œuvre inclus sur
-                l&apos;ensemble de Nice. Seules les pièces remplacées s&apos;ajoutent, et
-                toujours annoncées avant votre accord.
+                Pour comparer avec ce qu&apos;affichent d&apos;autres serruriers plus bas
+                dans cet article, voici les trois repères qui reviennent le plus souvent :
               </p>
             </div>
 
             <ArticleTable
               caption="Tarifs TTC, déplacement et main d'œuvre inclus, hors pièce éventuelle."
-              headers={["Intervention", "Prix", "Inclus"]}
+              headers={["Intervention", "Prix"]}
               rows={[
-                ["Porte claquée / verrouillée (cylindre européen)", "149 € TTC", "Déplacement + main d'œuvre"],
-                ["Porte verrouillée (serrure Fichet)", "189 € TTC", "Déplacement + main d'œuvre"],
-                ["Changement de cylindre standard", "dès 249 € TTC", "Déplacement + main d'œuvre + cylindre"],
-                ["Cylindre haute sécurité Fichet", "Sur devis", "Diagnostic sur place avant prix ferme"],
-                ["Serrure 5 points en applique carénée", "1 249 € TTC", "Fourniture posée"],
-                ["Blindage de porte", "2 689 € TTC", "Configuration de référence, devis confirmé"],
-                ["Poignée blindée", "349 € TTC", "Pose et réglage inclus"],
-                ["Coffre-fort (ouverture, installation)", "dès 299 € TTC", "Ajusté selon le modèle sur place"],
+                ["Porte claquée / verrouillée (cylindre européen)", "149 € TTC"],
+                ["Changement de cylindre standard", "dès 249 € TTC"],
+                ["Majoration soir / week-end / jours fériés", "+50%, fixe, sans palier"],
               ]}
               featuredRowIndex={0}
             />
+
+            <p className="text-slate leading-relaxed">
+              Le détail complet de toutes mes prestations (serrure Fichet, blindage,
+              poignée blindée, coffre-fort...) est sur ma page{" "}
+              <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
+                tarifs
+              </Link>
+              .
+            </p>
 
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
@@ -330,43 +332,11 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                   fait au-delà d&apos;un certain horaire.
                 </p>
               </div>
-            </div>
-
-            <div>
-              <ArticleSectionHeading number={6} id="signaux-alerte">
-                Les signaux qui doivent vous alerter
-              </ArticleSectionHeading>
-              <p className="text-slate leading-relaxed">
-                Au-delà de la comparaison de grilles tarifaires, certains signaux méritent
-                une vigilance particulière, quel que soit le serrurier contacté :
-              </p>
-              <ul className="list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-3">
-                <li>Un prix d&apos;appel très bas (30 à 40 €) qui refuse d&apos;être confirmé par téléphone.</li>
-                <li>Un remplacement de cylindre annoncé d&apos;office, avant même le diagnostic sur place.</li>
-                <li>Une majoration non annoncée à l&apos;avance, ou appliquée sans explication une fois sur place.</li>
-                <li>Aucun SIRET ni adresse physique vérifiable, seulement un numéro de mobile.</li>
-              </ul>
               <p className="text-slate leading-relaxed mt-4">
-                Ce ne sont pas des signaux anecdotiques : une enquête de la DGCCRF menée en
-                2024 sur 600 professionnels du dépannage à domicile en France a relevé des
-                anomalies chez 60% d&apos;entre eux, la serrurerie étant l&apos;un des
-                secteurs les plus concernés. En cas de litige avec un professionnel, vous
-                pouvez le signaler gratuitement sur{" "}
-                <a
-                  href="https://signal.conso.gouv.fr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-steel underline"
-                >
-                  SignalConso
-                </a>
-                , le service de la DGCCRF.
-              </p>
-              <p className="text-slate leading-relaxed mt-4">
-                Retrouvez la liste complète des signaux d&apos;alerte, ainsi que ce que la
-                loi exige sur un devis de dépannage, sur ma page{" "}
+                Comment repérer un prix d&apos;appel trompeur avant même de faire venir un
+                serrurier : le détail complet est sur ma page{" "}
                 <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
-                  tarifs serrurier à Nice
+                  tarifs
                 </Link>
                 . Sur un sujet proche, mon article sur{" "}
                 <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
@@ -390,7 +360,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             />
 
             <div>
-              <ArticleSectionHeading number={7} id="recap">
+              <ArticleSectionHeading number={6} id="recap">
                 Tableau récapitulatif
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
@@ -418,7 +388,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             />
 
             <div>
-              <ArticleSectionHeading number={8} id="faq">
+              <ArticleSectionHeading number={7} id="faq">
                 Foire aux questions
               </ArticleSectionHeading>
               <FaqAccordion items={faqItems} />
