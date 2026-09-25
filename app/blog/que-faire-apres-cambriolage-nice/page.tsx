@@ -333,7 +333,7 @@ export default function QueFaireApresUnCambriolagePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/porte-blindee-pose-serrurier-nice.webp"
-                alt="Pose d'une porte blindée par un serrurier à Nice"
+                alt="Renfort de porte avec bâti acier, une sécurisation après effraction à Nice"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

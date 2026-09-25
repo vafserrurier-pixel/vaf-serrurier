@@ -289,7 +289,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/agences-syndics-remise-de-cles.webp"
-                alt="Remise de clés entre un serrurier et un syndic à Nice"
+                alt="Remise d'un trousseau de clés, une étape courante en copropriété à Nice"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

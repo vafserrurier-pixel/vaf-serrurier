@@ -223,7 +223,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-mecanisme-porte-nice.webp"
-                alt="Diagnostic d'un mécanisme de porte par un serrurier à Nice"
+                alt="Serrurier examinant un mécanisme de porte avant d'annoncer un prix à Nice"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

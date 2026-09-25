@@ -185,7 +185,7 @@ export default function SerrureMultipointsPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/serrurier-nice-porte-blindee-multipoints.webp"
-                alt="Serrure multipoints posée sur une porte blindée à Nice"
+                alt="Serrurier installant un mécanisme multipoints encastré dans une porte en bois à Nice"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
