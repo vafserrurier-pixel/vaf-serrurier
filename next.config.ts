@@ -111,6 +111,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/digicode-cles-hall-copropriete-nice/",
         permanent: true,
       },
+      // Slug raccourci et aligne sur le mot-cle cible "prix serrurier Nice" (2026-09-25).
+      {
+        source: "/blog/combien-coute-serrurier-nice-tarifs-2026/",
+        destination: "/blog/prix-serrurier-nice-guide/",
+        permanent: true,
+      },
       {
         source: "/politique-de-cookies-ue/",
         destination: "/politique-de-confidentialite/",

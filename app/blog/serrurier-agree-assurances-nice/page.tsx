@@ -237,7 +237,7 @@ export default function AgreeAssurancesPage() {
                   tarifs annoncés à l&apos;avance
                 </Link>{" "}
                 à titre d&apos;exemple, ou mon{" "}
-                <Link href="/blog/combien-coute-serrurier-nice-tarifs-2026/" className="text-steel underline">
+                <Link href="/blog/prix-serrurier-nice-guide/" className="text-steel underline">
                   comparatif de tarifs 2026
                 </Link>{" "}
                 pour aller plus loin.

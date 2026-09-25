@@ -20,7 +20,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/combien-coute-serrurier-nice-tarifs-2026/";
+const HREF = "/blog/prix-serrurier-nice-guide/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,

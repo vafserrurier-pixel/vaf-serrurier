@@ -256,7 +256,7 @@ export default function PorteQuiClaquePage() {
                     tarifs détaillés
                   </Link>{" "}
                   et mon{" "}
-                  <Link href="/blog/combien-coute-serrurier-nice-tarifs-2026/" className="underline">
+                  <Link href="/blog/prix-serrurier-nice-guide/" className="underline">
                     comparatif de tarifs 2026
                   </Link>
                   .

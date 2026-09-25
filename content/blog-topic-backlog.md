@@ -54,7 +54,7 @@ publiés" ci-dessous pour vérifier avant d'ajouter).
 
 ## Déjà publiés (ne pas reproposer)
 
-- `combien-coute-serrurier-nice-tarifs-2026` (ajouté hors backlog initial le 2026-09-25, comparatif de tarifs sur demande directe de Benoît)
+- `prix-serrurier-nice-guide` (ajouté hors backlog initial le 2026-09-25, comparatif de tarifs sur demande directe de Benoît ; publié d'abord sous le slug `combien-coute-serrurier-nice-tarifs-2026`, renommé le 2026-09-25)
 - `certification-a2p-serrure`
 - `cles-hall-digicode-organigramme-copropriete`
 - `porte-qui-claque-avant-appeler-serrurier`
