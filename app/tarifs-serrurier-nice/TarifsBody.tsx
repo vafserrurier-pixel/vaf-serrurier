@@ -387,6 +387,10 @@ export default function TarifsBody() {
           {locale === "fr" && (
             <p className="text-sm text-slate mt-3">
               Pour aller plus loin :{" "}
+              <Link href="/blog/combien-coute-serrurier-nice-tarifs-2026/" className="text-steel underline">
+                combien coûte un serrurier à Nice, comparé à d&apos;autres grilles tarifaires
+              </Link>{" "}
+              et{" "}
               <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
                 « Agréé toutes assurances », ce que cette formule ne veut pas dire
               </Link>

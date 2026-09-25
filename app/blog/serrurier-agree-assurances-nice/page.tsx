@@ -236,7 +236,11 @@ export default function AgreeAssurancesPage() {
                 <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs annoncés à l&apos;avance
                 </Link>{" "}
-                à titre d&apos;exemple.
+                à titre d&apos;exemple, ou mon{" "}
+                <Link href="/blog/combien-coute-serrurier-nice-tarifs-2026/" className="text-steel underline">
+                  comparatif de tarifs 2026
+                </Link>{" "}
+                pour aller plus loin.
               </p>
             </div>
 

@@ -19,6 +19,19 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/combien-coute-serrurier-nice-tarifs-2026/",
+    title: "Combien coûte un serrurier à Nice ? Tarifs 2026",
+    excerpt:
+      "Déplacement, main d'œuvre, pièce, majoration : ce qui compose vraiment un prix de serrurier, et pourquoi le prix affiché le plus bas n'est pas toujours le bon calcul.",
+    category: "Tarifs",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+    datePublished: "2026-09-25",
+    dateModified: "2026-09-25",
+    readingMinutes: 9,
+    image: "/images/blog/serrurier-tarifs-2026-header.jpg",
+  },
+  {
     href: "/blog/que-faire-apres-cambriolage-nice/",
     title: "Que faire après un cambriolage : les bons réflexes",
     excerpt:
