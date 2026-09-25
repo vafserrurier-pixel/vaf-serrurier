@@ -263,7 +263,7 @@ export default function QueFaireApresUnCambriolagePage() {
                 <ArticleWarning title="Ne laissez pas passer le délai">
                   Un cambriolage découvert un vendredi doit être déclaré au plus tard le
                   mardi suivant. Certains contrats prévoient un délai plus favorable, mais
-                  aucun ne peut être plus strict que ce minimum légal — et un retard
+                  aucun ne peut être plus strict que ce minimum légal, et un retard
                   prouvé peut réduire votre indemnisation.
                 </ArticleWarning>
               </div>
@@ -307,7 +307,7 @@ export default function QueFaireApresUnCambriolagePage() {
                   </Link>{" "}
                   si le bâti a été endommagé, une fois le diagnostic complet effectué. Je vous fournis systématiquement
                   une facture détaillée, le document généralement demandé pour votre
-                  déclaration de sinistre — voir mes{" "}
+                  déclaration de sinistre. Voir mes{" "}
                   <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                     tarifs annoncés à l&apos;avance
                   </Link>
@@ -346,7 +346,7 @@ export default function QueFaireApresUnCambriolagePage() {
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
                 Une effraction sur une porte palière ou une tentative sur la porte de hall
-                concerne aussi les autres occupants de l&apos;immeuble — un point qui compte
+                concerne aussi les autres occupants de l&apos;immeuble, un point qui compte
                 particulièrement dans les grandes copropriétés du centre-ville, à Jean-Médecin
                 ou au Vieux-Nice, où plusieurs dizaines de logements partagent le même hall.
                 Signalez l&apos;incident au{" "}

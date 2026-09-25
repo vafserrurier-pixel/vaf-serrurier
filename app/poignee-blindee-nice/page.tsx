@@ -90,7 +90,7 @@ const guideContent = (
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
-          <strong className="text-navy">Porte ou bâti déjà fragilisés</strong> — si le dormant ou le
+          <strong className="text-navy">Porte ou bâti déjà fragilisés</strong> : si le dormant ou le
           cadre sont eux-mêmes affaiblis, protéger le seul cylindre ne suffit pas. Je vous oriente
           vers un{" "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
@@ -99,7 +99,7 @@ const guideContent = (
           , qui reprend l&apos;ensemble de la porte plutôt qu&apos;un seul point.
         </li>
         <li>
-          <strong className="text-navy">Besoin de renforcer plusieurs points de fermeture</strong> —
+          <strong className="text-navy">Besoin de renforcer plusieurs points de fermeture</strong> :
           si votre serrure n&apos;a qu&apos;un point d&apos;ancrage ou si vous cherchez une résistance
           répartie sur toute la hauteur de la porte, une{" "}
           <Link href="/serrure-carenee-nice/" className="text-steel underline">
@@ -108,7 +108,7 @@ const guideContent = (
           est plus adaptée que le seul renfort du cylindre.
         </li>
         <li>
-          <strong className="text-navy">Serrure carénée déjà installée</strong> — le protecteur de
+          <strong className="text-navy">Serrure carénée déjà installée</strong> : le protecteur de
           cylindre est déjà intégré au boîtier d&apos;une{" "}
           <Link href="/serrure-carenee-nice/" className="text-steel underline">
             serrure carénée

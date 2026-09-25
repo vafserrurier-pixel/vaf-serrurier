@@ -62,7 +62,7 @@ const faqFr: FaqItem[] = [
         </a>
         ). Mais ce délai ne s&apos;applique pas quand vous demandez
         expressément une exécution immédiate de la prestation et renoncez
-        explicitement à ce droit — le cas typique d&apos;un dépannage
+        explicitement à ce droit, le cas typique d&apos;un dépannage
         d&apos;urgence réalisé sur-le-champ (
         <a
           href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044563170"
@@ -137,7 +137,7 @@ const faqEn: FaqItem[] = [
           Article L.221-18 of the French Consumer Code
         </a>
         ). But this period doesn&apos;t apply once you&apos;ve expressly asked
-        for the work to start right away and explicitly waived that right —
+        for the work to start right away and explicitly waived that right,
         the typical case for an emergency callout handled on the spot (
         <a
           href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044563170"

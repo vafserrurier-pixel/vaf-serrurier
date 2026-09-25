@@ -167,8 +167,8 @@ export default function SerrureMultipointsPage() {
                   Le nombre de points ne dit rien sur la manière dont la serrure est
                   fixée à la porte. En applique, le boîtier reste visible sur la face
                   intérieure du battant. Carénée, c&apos;est une applique multipoints dont
-                  la tringlerie est protégée par un capot métallique sur toute la hauteur
-                  — plus discrète et plus résistante face à une tentative de sciage. Une{" "}
+                  la tringlerie est protégée par un capot métallique sur toute la hauteur,
+                  plus discrète et plus résistante face à une tentative de sciage. Une{" "}
                   <Link href="/serrure-carenee-nice/" className="text-steel underline">
                     serrure carénée 5 points
                   </Link>{" "}

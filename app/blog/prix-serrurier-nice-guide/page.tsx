@@ -475,7 +475,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 <li>
                   <strong>Des garanties fabricant réelles sur le matériel posé</strong>, pas
                   seulement sur mon intervention : 15 ans sur un blindage de porte, 10 ans
-                  sur une poignée blindée gamme Héraclès Salomé — le détail complet est sur
+                  sur une poignée blindée gamme Héraclès Salomé, le détail complet est sur
                   ma page{" "}
                   <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                     tarifs
@@ -511,7 +511,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 <li>
                   <strong>Programmer une intervention plutôt que d&apos;attendre l&apos;urgence complète</strong>{" "}
                   : un rendez-vous en journée évite la majoration de soir, de nuit, de
-                  week-end ou de jour férié — un cylindre qui commence à forcer se traite
+                  week-end ou de jour férié : un cylindre qui commence à forcer se traite
                   mieux avant la panne complète.
                 </li>
                 <li>

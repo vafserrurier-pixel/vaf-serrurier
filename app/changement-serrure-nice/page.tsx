@@ -154,7 +154,7 @@ const sectionsFr = [
         les déformations de la porte dans le temps. Elle demande en revanche
         un réglage précis : un mauvais alignement use la serrure
         prématurément et peut la faire forcer à chaque fermeture. C&apos;est
-        pourquoi je fais toujours un contrôle fin après la pose — voir mon
+        pourquoi je fais toujours un contrôle fin après la pose. Voir mon
         article sur{" "}
         <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
           le choix entre 3, 5 ou 7 points
@@ -169,7 +169,7 @@ const sectionsFr = [
     paragraphs: [
       <>
         La certification A2P aide à comparer objectivement la résistance
-        d&apos;une serrure face à une tentative d&apos;effraction — le détail
+        d&apos;une serrure face à une tentative d&apos;effraction : le détail
         des niveaux et de leur utilité réelle est dans mon article sur{" "}
         <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
           la certification A2P
@@ -459,11 +459,11 @@ const guideContent = (
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
         Si vous êtes actuellement bloqué dehors sans clé, la priorité est
-        d&apos;abord l&apos;ouverture de la porte — voir ma page{" "}
+        d&apos;abord l&apos;ouverture de la porte (voir ma page{" "}
         <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
           ouverture de porte
-        </Link>{" "}
-        — le changement de cylindre intervient ensuite, une fois la porte
+        </Link>
+        ) : le changement de cylindre intervient ensuite, une fois la porte
         rouverte. Au-delà des étapes déjà décrites plus haut (appel, arrivée,
         choix, règlement), voici ce qui se passe concrètement une fois sur
         place :
@@ -629,7 +629,7 @@ export default function ChangementSerrureNicePage() {
                   </li>
                   <li>
                     <strong className="text-navy">Niveau de sécurité :</strong> aucune obligation légale n&apos;impose
-                    un niveau de certification A2P minimum pour un logement standard — voir le détail dans mon article
+                    un niveau de certification A2P minimum pour un logement standard. Voir le détail dans mon article
                     sur{" "}
                     <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
                       la certification A2P

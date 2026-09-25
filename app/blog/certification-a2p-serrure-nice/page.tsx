@@ -237,7 +237,7 @@ export default function CertificationA2pPage() {
                 certification revient souvent dans les conditions demandées par les
                 assureurs pour les résidences secondaires. Je vous invite à vérifier les
                 conditions exactes de votre propre contrat plutôt que de vous fier à une
-                règle générale, chaque assureur fixant ses propres critères — voir aussi
+                règle générale, chaque assureur fixant ses propres critères. Voir aussi
                 mon article sur{" "}
                 <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
                   ce qui se vérifie réellement chez un serrurier

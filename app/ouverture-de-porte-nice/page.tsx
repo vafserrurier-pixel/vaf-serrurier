@@ -155,7 +155,7 @@ const guideContent = (
         . Passé ce délai, une méthode plus directe (perçage du cylindre) devient
         le choix pragmatique plutôt qu&apos;un forçage prolongé qui abîmerait
         davantage la porte. Dans les deux cas, le cylindre est ensuite remplacé
-        pour repartir sur une sécurité fiable — voir mon article sur{" "}
+        pour repartir sur une sécurité fiable. Voir mon article sur{" "}
         <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
           le choix du bon niveau de serrure
         </Link>

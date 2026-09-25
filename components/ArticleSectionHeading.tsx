@@ -11,7 +11,7 @@ import type { ReactNode } from "react";
  * les articles de blog ou ces sections sont directement sous le H1).
  * Dans un contexte deja emboite sous un H2 (ex. ServiceGuideSection,
  * dont le titre "Guide complet" est un H2), passer level="h3" pour ne
- * pas casser la hierarchie Hn — voir l'audit H1-H3 mene plus tot sur le
+ * pas casser la hierarchie Hn : voir l'audit H1-H3 mene plus tot sur le
  * site : ne pas reproduire une pile de H2 paralleles la ou un seul H2
  * suffit et le reste doit descendre d'un niveau.
  */

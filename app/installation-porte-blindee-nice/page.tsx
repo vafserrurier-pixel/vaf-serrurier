@@ -102,7 +102,7 @@ const guideContent = (
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
-          <strong className="text-navy">Votre porte actuelle reste saine</strong> — si le bois
+          <strong className="text-navy">Votre porte actuelle reste saine</strong> : si le bois
           n&apos;est ni pourri ni déformé, remplacer l&apos;ensemble de la menuiserie n&apos;est pas
           nécessaire. Un{" "}
           <Link href="/blindage-porte-nice/" className="text-steel underline">
@@ -111,7 +111,7 @@ const guideContent = (
           renforce votre porte existante pour un coût nettement inférieur.
         </li>
         <li>
-          <strong className="text-navy">Budget contraint</strong> — un{" "}
+          <strong className="text-navy">Budget contraint</strong> : un{" "}
           <Link href="/blindage-porte-nice/" className="text-steel underline">
             blindage
           </Link>{" "}
@@ -139,8 +139,8 @@ const sectionsFr = [
     Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
       <>
-        Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie —
-        porte, dormant et serrure — d&apos;un seul tenant, fabriqué sur
+        Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie
+        (porte, dormant et serrure) d&apos;un seul tenant, fabriqué sur
         mesure et livré en 24 à 48h. C&apos;est la solution la plus complète
         quand votre porte actuelle ou son bâti ne tiennent plus la route. Si
         votre porte reste saine, un{" "}
@@ -208,7 +208,7 @@ const faqFr = [
   {
     question: "Combien coûte un bloc-porte blindé à Nice ?",
     answer:
-      "Le tarif d'un bloc-porte blindé dépend entièrement de vos besoins réels — niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. C'est pourquoi je ne communique pas de prix générique : un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
+      "Le tarif d'un bloc-porte blindé dépend entièrement de vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. C'est pourquoi je ne communique pas de prix générique : un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
   },
   {
     question: "Quelle différence avec un blindage de porte ?",
@@ -242,8 +242,8 @@ const sectionsEn = [
     Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
       <>
-        An armored door block replaces your entire door unit — door, frame
-        and lock — in one piece, custom-made and delivered in 24 to 48
+        An armored door block replaces your entire door unit (door, frame
+        and lock) in one piece, custom-made and delivered in 24 to 48
         hours. It&apos;s the most complete solution when your current door
         or its frame no longer hold up. If your door is still sound, a{" "}
         <Link href="/blindage-porte-nice/" className="text-steel underline">
@@ -310,7 +310,7 @@ const faqEn = [
   {
     question: "How much does an armored door block cost in Nice?",
     answer:
-      "The price of an armored door block depends entirely on your actual needs — the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. That's why I don't give a generic price: an on-site assessment lets me put together a precise, tailored quote, with no obligation.",
+      "The price of an armored door block depends entirely on your actual needs: the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. That's why I don't give a generic price: an on-site assessment lets me put together a precise, tailored quote, with no obligation.",
   },
   {
     question: "What's the difference with door reinforcement?",

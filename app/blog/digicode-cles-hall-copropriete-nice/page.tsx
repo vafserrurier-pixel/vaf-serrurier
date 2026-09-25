@@ -228,7 +228,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
                 communes. Une exception fréquente : si la dégradation est causée par un
                 tiers identifié (un locataire, un prestataire), c&apos;est à cette personne
                 ou à son assurance de rembourser la copropriété, pas aux autres
-                copropriétaires de l&apos;absorber dans les charges — la même logique de
+                copropriétaires de l&apos;absorber dans les charges, la même logique de
                 responsabilité que pour une{" "}
                 <Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">
                   serrure privative en location

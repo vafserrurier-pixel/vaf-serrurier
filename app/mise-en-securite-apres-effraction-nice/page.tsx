@@ -153,10 +153,10 @@ const guideContent = (
             </Link>{" "}
             (349 € TTC)
           </strong>{" "}
-          — masque et protège le cylindre, un premier effet dissuasif visible dès le palier.
+          : masque et protège le cylindre, un premier effet dissuasif visible dès le palier.
         </li>
         <li>
-          <strong className="text-navy">Cornières anti-pince</strong> — profilés métalliques fixés
+          <strong className="text-navy">Cornières anti-pince</strong> : profilés métalliques fixés
           côté serrure qui recouvrent l&apos;interstice entre la porte et le dormant, empêchant
           d&apos;y glisser un levier (pied-de-biche, tournevis long) pour écarter la porte et faire
           sauter le pêne.
@@ -167,7 +167,7 @@ const guideContent = (
               A2P
             </Link>
           </strong>{" "}
-          — résistance mécanique renforcée face au perçage, au crochetage et à la casse.
+          : résistance mécanique renforcée face au perçage, au crochetage et à la casse.
         </li>
         <li>
           <strong className="text-navy">Serrure au bon niveau de points</strong> selon votre porte
@@ -202,8 +202,8 @@ const guideContent = (
           protection/investissement avant d&apos;envisager un{" "}
           <Link href="/blindage-porte-nice/" className="text-steel underline">
             blindage complet
-          </Link>{" "}
-          — mais encore une fois, à confirmer selon l&apos;état réel
+          </Link>
+          , mais encore une fois, à confirmer selon l&apos;état réel
           de votre porte, pas de façon systématique.
         </p>
       </div>

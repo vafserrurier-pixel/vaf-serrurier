@@ -127,7 +127,7 @@ const guideContentFr = (
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
-          <strong className="text-navy">Porte trop dégradée</strong> — le blindage renforce une porte
+          <strong className="text-navy">Porte trop dégradée</strong> : le blindage renforce une porte
           existante, il ne compense pas un bois pourri ou un bâti déformé. Dans ce cas, un{" "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
             bloc-porte neuf
@@ -135,7 +135,7 @@ const guideContentFr = (
           reprend l&apos;ensemble de la menuiserie plutôt que de renforcer une base fragile.
         </li>
         <li>
-          <strong className="text-navy">Besoin de personnalisation esthétique poussée</strong> — le
+          <strong className="text-navy">Besoin de personnalisation esthétique poussée</strong> : le
           blindage préserve l&apos;aspect de votre porte actuelle. Si vous cherchez un style neuf
           (vitrage, finitions design), la gamme{" "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">

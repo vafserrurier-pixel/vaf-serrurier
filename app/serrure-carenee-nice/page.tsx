@@ -77,7 +77,7 @@ const guideContent = (
         en complément de la carénée qui protège déjà le côté serrure. Un
         blindage complet (bâti acier autour de l&apos;ensemble du dormant,
         conservant votre porte existante) va plus loin et démarre à 2 689 €
-        TTC — la solution cohérente pour un renfort global sans remplacer la
+        TTC, la solution cohérente pour un renfort global sans remplacer la
         porte. Si le bâti lui-même est fragilisé, c&apos;est plutôt un{" "}
         <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
           bloc-porte neuf
@@ -155,7 +155,7 @@ const guideContent = (
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
-          <strong className="text-navy">Porte ou bâti trop fragile pour un ancrage fiable</strong> —
+          <strong className="text-navy">Porte ou bâti trop fragile pour un ancrage fiable</strong> :
           les points d&apos;ancrage d&apos;une carénée ont besoin d&apos;un support sain pour tenir
           dans la durée. Si le dormant ou le cadre sont eux-mêmes affaiblis, je vous oriente vers un{" "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
@@ -164,7 +164,7 @@ const guideContent = (
           , qui reprend l&apos;ensemble plutôt que de renforcer une base fragile.
         </li>
         <li>
-          <strong className="text-navy">Budget serré et seul le cylindre est en cause</strong> — si
+          <strong className="text-navy">Budget serré et seul le cylindre est en cause</strong> : si
           le mécanisme et le bâti sont sains et que le point faible est uniquement le cylindre exposé,
           une{" "}
           <Link href="/poignee-blindee-nice/" className="text-steel underline">
@@ -175,7 +175,7 @@ const guideContent = (
           ajouter une poignée blindée par-dessus n&apos;apporte rien de plus sur ce même point.
         </li>
         <li>
-          <strong className="text-navy">Locataire sans accord écrit du propriétaire</strong> — un
+          <strong className="text-navy">Locataire sans accord écrit du propriétaire</strong> : un
           renfort structurel comme la carénée modifie durablement l&apos;installation. Sans accord,
           mieux vaut une solution non définitive comme un{" "}
           <Link href="/changement-serrure-nice/" className="text-steel underline">
@@ -184,7 +184,7 @@ const guideContent = (
           , plus facile à justifier et à faire accepter.
         </li>
         <li>
-          <strong className="text-navy">Besoin de résistance structurelle globale</strong> — face à
+          <strong className="text-navy">Besoin de résistance structurelle globale</strong> : face à
           des attaques au levier sur une porte par ailleurs saine, un blindage complet reste
           cohérent ; si le bâti lui-même est déjà fragilisé, la réponse passe par un bloc-porte
           neuf, pas un renfort ciblé sur la seule serrure.
@@ -233,7 +233,7 @@ const sections = [
       "C'est une solution efficace quand votre porte reste saine mais que la serrure en place n'offre plus une résistance suffisante, sans passer par un blindage complet ou un bloc-porte neuf. Le coût reste nettement inférieur à une installation de porte blindée, pour un vrai gain de résistance sur l'accès.",
       <>
         Si le bâti ou la porte elle-même sont fatigués, en revanche, une
-        serrure carénée seule ne suffit pas — le détail des cas où je vous
+        serrure carénée seule ne suffit pas : le détail des cas où je vous
         oriente vers une autre solution est dans mon{" "}
         <Link href="#pas-la-solution" className="text-steel underline">
           guide complet

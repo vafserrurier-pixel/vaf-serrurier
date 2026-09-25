@@ -1,4 +1,4 @@
-# Backlog de sujets de blog — vaf-serrurier.fr
+# Backlog de sujets de blog : vaf-serrurier.fr
 
 Liste ordonnée de sujets candidats pour le prochain brouillon hebdomadaire
 (workflow `.github/workflows/blog-draft-weekly.yml`). Le workflow prend le
