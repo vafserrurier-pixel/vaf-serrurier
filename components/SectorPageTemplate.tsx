@@ -19,6 +19,65 @@ import { contentDates } from "@/lib/contentDates.generated";
 
 export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
+/**
+ * Lien contextuel vers le blindage de porte et/ou l'installation d'un
+ * bloc-porte neuf, adapte au profil de bati dominant de chaque secteur
+ * (maillage interne demande en 2026-09-28 : les pages secteur ne
+ * linkaient jusque-la que vers tarifs et zones-intervention). Texte
+ * distinct par secteur, pas un simple nom-swap.
+ */
+const doorReinforcementNotes: Record<keyof typeof sectorPages, ReactNode> = {
+  est: (
+    <>
+      Sur les portes anciennes du port et de Riquier comme sur les villas des hauteurs du Mont
+      Boron, un{" "}
+      <Link href="/blindage-porte-nice/" className="text-steel underline">
+        blindage de porte
+      </Link>{" "}
+      renforce l&apos;existant sans le dénaturer. Quand le bâti est trop abîmé pour ça, je propose
+      aussi l&apos;
+      <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+        installation d&apos;un bloc-porte blindé neuf
+      </Link>
+      , sur mesure.
+    </>
+  ),
+  centre: (
+    <>
+      Sur les façades classées ou soignées du Vieux-Nice, du Carré d&apos;Or ou de Cimiez, je
+      privilégie généralement un{" "}
+      <Link href="/blindage-porte-nice/" className="text-steel underline">
+        blindage de porte
+      </Link>
+      , qui renforce la porte existante sans en changer l&apos;aspect côté palier.
+    </>
+  ),
+  nord: (
+    <>
+      Sur les villas et maisons individuelles de Gairaut, Saint-Pancrace ou la Corniche des
+      Oliviers, un{" "}
+      <Link href="/blindage-porte-nice/" className="text-steel underline">
+        blindage de porte
+      </Link>{" "}
+      apporte un vrai gain de résistance sans remplacer la menuiserie existante.
+    </>
+  ),
+  ouest: (
+    <>
+      Sur les villas de caractère de Fabron ou de Carras, un{" "}
+      <Link href="/blindage-porte-nice/" className="text-steel underline">
+        blindage de porte
+      </Link>{" "}
+      suffit le plus souvent. Si le bâti lui-même est trop dégradé, je propose aussi
+      l&apos;
+      <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
+        installation d&apos;un bloc-porte blindé neuf
+      </Link>
+      , sur mesure.
+    </>
+  ),
+};
+
 export default function SectorPageTemplate({
   title,
   sectorKey,
@@ -161,6 +220,7 @@ export default function SectorPageTemplate({
               ))}
             </div>
           ))}
+          <p className="text-slate leading-relaxed">{doorReinforcementNotes[sectorKey]}</p>
         </div>
       </section>
 

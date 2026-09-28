@@ -176,7 +176,7 @@ const sectionsFr = [
     heading: "Qu'est-ce que le blindage de porte",
     Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "Le blindage renforce votre porte existante sans la remplacer : un système de bâti en acier vient habiller le dormant et recevoir une serrure en applique haute résistance. La porte en bois d'origine est conservée, ce qui préserve l'aspect extérieur côté palier.",
+      "Le blindage renforce votre porte existante sans la remplacer : un système de bâti en acier vient habiller le dormant et recevoir une serrure en applique haute résistance. La porte en bois d'origine est conservée, ce qui préserve l'aspect extérieur côté palier. Le résultat est une véritable porte blindée, sans changer de menuiserie ni de porte d'origine.",
     ],
   },
   {
@@ -267,7 +267,7 @@ const sectionsEn = [
     heading: "What door reinforcement is",
     Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "Reinforcement strengthens your existing door without replacing it: a steel frame system covers the door frame and receives a high-resistance rim lock. Your original wooden door is kept, preserving the exterior look on the landing.",
+      "Reinforcement strengthens your existing door without replacing it: a steel frame system covers the door frame and receives a high-resistance rim lock. Your original wooden door is kept, preserving the exterior look on the landing. The result is a genuine armored door, without changing your original door or frame.",
     ],
   },
   {
@@ -356,8 +356,8 @@ export default function BlindagePorteNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Blindage de porte à Nice",
-        lead: "Renforcer votre porte existante sans la remplacer : bâti acier, serrure en applique et cylindre haute sécurité. 2 689 € TTC pose comprise, devis confirmé avant intervention.",
+        h1: "Blindage de porte à Nice : renforcer une porte blindée existante",
+        lead: "Transformer votre porte existante en porte blindée sans la remplacer : bâti acier, serrure en applique et cylindre haute sécurité. 2 689 € TTC pose comprise, devis confirmé avant intervention.",
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Blindage de porte",
@@ -420,8 +420,8 @@ export default function BlindagePorteNicePage() {
         guideFaqForSchema: guideFaqFr,
       }}
       en={{
-        h1: "Door reinforcement in Nice",
-        lead: "Reinforce your existing door without replacing it: steel frame, rim lock and high-security cylinder. €2,689 incl. VAT fitted, quote confirmed before work.",
+        h1: "Door reinforcement in Nice: turning your door into an armored door",
+        lead: "Turn your existing door into an armored door without replacing it: steel frame, rim lock and high-security cylinder. €2,689 incl. VAT fitted, quote confirmed before work.",
         sections: sectionsEn,
         faq: faqEn,
         breadcrumbLabel: "Door reinforcement",

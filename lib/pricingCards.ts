@@ -110,6 +110,19 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       featured: true,
     },
     {
+      title: "Installation de porte blindée (bloc-porte neuf)",
+      seoTitle: "Prix installation de porte blindée à Nice",
+      price: "à partir de 3 490 €",
+      unit: "TTC",
+      priceValue: 3490,
+      priceType: "startingFrom",
+      features: [
+        "Bloc-porte neuf sur mesure, certifié A2P BP1 à BP3",
+        "Fabrication et pose incluses, garantie fabricant 15 ans",
+        "Devis 100% personnalisé selon la ligne et les options",
+      ],
+    },
+    {
       title: "Coffre-fort (ouverture et installation)",
       seoTitle: "Prix coffre-fort à Nice",
       price: "à partir de 299 €",
@@ -229,6 +242,19 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
         "On-site quote always required depending on the model chosen",
       ],
       featured: true,
+    },
+    {
+      title: "Armored door installation (new door block)",
+      seoTitle: "Armored door installation price in Nice",
+      price: "from €3,490",
+      unit: "incl. VAT",
+      priceValue: 3490,
+      priceType: "startingFrom",
+      features: [
+        "Custom-made door block, A2P BP1 to BP3 certified",
+        "Manufacturing and fitting included, 15-year manufacturer warranty",
+        "100% tailored quote based on the line and options chosen",
+      ],
     },
     {
       title: "Safe (opening and installation)",

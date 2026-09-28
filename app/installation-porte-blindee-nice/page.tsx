@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
+import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
@@ -129,8 +130,8 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Installation de porte blindée à Nice – Bloc-porte sur mesure A2P | VAF",
-  description: "Bloc-porte blindé neuf à Nice : 5 lignes sur mesure, certification A2P BP1 à BP3, isolation acoustique 41 dB. Devis 100% personnalisé, sans prix générique.",
+  title: "Installation de porte blindée à Nice – dès 3 490 € TTC | VAF",
+  description: "Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC. Bloc-porte sur mesure, 5 lignes, certification A2P BP1 à BP3, isolation acoustique 41 dB. Devis 100% personnalisé.",
 });
 
 const sectionsFr = [
@@ -140,10 +141,10 @@ const sectionsFr = [
     paragraphs: [
       <>
         Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie
-        (porte, dormant et serrure) d&apos;un seul tenant, fabriqué sur
-        mesure et livré en 24 à 48h. C&apos;est la solution la plus complète
-        quand votre porte actuelle ou son bâti ne tiennent plus la route. Si
-        votre porte reste saine, un{" "}
+        (porte, dormant et serrure) d&apos;un seul tenant par une véritable
+        porte blindée neuve, fabriquée sur mesure et livrée en 24 à 48h.
+        C&apos;est la solution la plus complète quand votre porte actuelle ou
+        son bâti ne tiennent plus la route. Si votre porte reste saine, un{" "}
         <Link href="/blindage-porte-nice/" className="text-steel underline">
           blindage de porte
         </Link>{" "}
@@ -208,7 +209,7 @@ const faqFr = [
   {
     question: "Combien coûte un bloc-porte blindé à Nice ?",
     answer:
-      "Le tarif d'un bloc-porte blindé dépend entièrement de vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. C'est pourquoi je ne communique pas de prix générique : un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
+      "Le tarif d'un bloc-porte blindé démarre à 3 490 € TTC pour la ligne d'entrée de gamme, pose comprise. Le montant final dépend de vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. Un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
   },
   {
     question: "Quelle différence avec un blindage de porte ?",
@@ -243,9 +244,10 @@ const sectionsEn = [
     paragraphs: [
       <>
         An armored door block replaces your entire door unit (door, frame
-        and lock) in one piece, custom-made and delivered in 24 to 48
-        hours. It&apos;s the most complete solution when your current door
-        or its frame no longer hold up. If your door is still sound, a{" "}
+        and lock) in one piece with a genuine new armored door, custom-made
+        and delivered in 24 to 48 hours. It&apos;s the most complete solution
+        when your current door or its frame no longer hold up. If your door
+        is still sound, a{" "}
         <Link href="/blindage-porte-nice/" className="text-steel underline">
           door reinforcement
         </Link>{" "}
@@ -310,7 +312,7 @@ const faqEn = [
   {
     question: "How much does an armored door block cost in Nice?",
     answer:
-      "The price of an armored door block depends entirely on your actual needs: the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. That's why I don't give a generic price: an on-site assessment lets me put together a precise, tailored quote, with no obligation.",
+      "An armored door block starts at €3,490 incl. VAT for the entry-level line, fitted. The final price depends on your actual needs: the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. An on-site assessment lets me put together a precise, tailored quote, with no obligation.",
   },
   {
     question: "What's the difference with door reinforcement?",
@@ -342,8 +344,8 @@ export default function InstallationPorteBlindeeNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Installation de porte blindée à Nice",
-        lead: "Remplacement complet par un bloc-porte neuf sur mesure, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Devis 100% personnalisé.",
+        h1: "Installation de porte blindée à Nice : prix et bloc-porte neuf sur mesure",
+        lead: "Remplacement complet par un bloc-porte neuf sur mesure, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC pose comprise, devis 100% personnalisé selon la ligne et les options retenues.",
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Installation porte blindée",
@@ -355,6 +357,13 @@ export default function InstallationPorteBlindeeNicePage() {
         sectionsVariant: "cards",
         sectionsHeading: "Ce qu'il faut savoir sur le bloc-porte blindé",
         headingScale: "lg",
+        extra: (
+          <PriceReminder
+            priceLabel="à partir de 3 490 € TTC"
+            note="Ligne d'entrée de gamme (Lisseo), pose comprise. Le tarif final dépend de la ligne choisie, du niveau A2P BP et des options (isolation, coupe-feu) : devis 100% personnalisé et confirmé avant tout engagement."
+            locale="fr"
+          />
+        ),
         processSteps: [
           {
             title: "Appel",
@@ -385,8 +394,8 @@ export default function InstallationPorteBlindeeNicePage() {
         guideFaqForSchema: guideFaq,
       }}
       en={{
-        h1: "Armored door installation in Nice",
-        lead: "Full replacement with a custom-made, A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. 100% tailored quote.",
+        h1: "Armored door installation in Nice: price and custom-made door block",
+        lead: "Full replacement with a custom-made, A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. Armored door price in Nice: from €3,490 incl. VAT fitted, 100% tailored quote based on the line and options chosen.",
         sections: sectionsEn,
         faq: faqEn,
         breadcrumbLabel: "Armored door installation",
@@ -398,6 +407,13 @@ export default function InstallationPorteBlindeeNicePage() {
         sectionsVariant: "cards",
         sectionsHeading: "What to know about the armored door block",
         headingScale: "lg",
+        extra: (
+          <PriceReminder
+            priceLabel="from €3,490 incl. VAT"
+            note="Entry-level line (Lisseo), fitted. Final price depends on the line chosen, the A2P BP level and options (insulation, fire resistance): 100% tailored quote confirmed before any commitment."
+            locale="en"
+          />
+        ),
         processSteps: [
           {
             title: "Call",
