@@ -25,8 +25,8 @@ const HREF = "/blog/que-faire-apres-cambriolage-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Que faire après un cambriolage : les bons réflexes | VAF",
-  description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut pas faire, et comment sécuriser votre porte avant de reconstituer votre dossier.",
+  title: "Que faire après un cambriolage à Nice : les étapes | VAF",
+  description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut jamais faire seul, et comment sécuriser votre porte en urgence avant de reconstituer le dossier.",
   article: { author: business.firstName, readingTime: "8 min" },
 });
 

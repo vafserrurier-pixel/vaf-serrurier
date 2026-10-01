@@ -293,8 +293,8 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-porte-nice/",
-  title: "Ouverture de porte à Nice – Serrurier 24h/24 | VAF",
-  description: "Porte claquée, verrouillée ou clé cassée à Nice ? Diagnostic précis par téléphone, ouverture sans casse quand c'est possible, devis annoncé avant intervention.",
+  title: "Ouverture de porte Nice – 149€ TTC, 24h/24 | VAF",
+  description: "Porte claquée ou verrouillée à Nice ? Ouverture sans casse dès 149€ TTC quand c'est possible, diagnostic par téléphone, prix annoncé avant intervention. 24h/24, 7j/7.",
 });
 
 const sectionsFr = [

@@ -27,6 +27,69 @@ export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
 export type QuartierTestimonial = { author: string; text: string };
 
+/**
+ * Le paragraphe de statistiques (chiffres ministere de l'Interieur) restait
+ * mot pour mot identique sur les 47 pages quartier, seul crimeIntro/crimeClosing
+ * variant. Ces 4 reformulations gardent exactement les memes chiffres et la
+ * meme source, seule la structure de phrase change, choisie de facon stable
+ * par quartier (pas aleatoire a chaque rendu).
+ */
+const crimeStatsVariants: ((quartier: string) => ReactNode)[] = [
+  (quartier) => (
+    <>
+      Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
+      taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
+      contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur à la
+      moyenne nationale (0,56%), et bien au-dessus de la moyenne du département
+      des Alpes-Maritimes (0,43%). Cette donnée concerne l&apos;ensemble de la
+      ville de Nice, qui ne compte pas d&apos;arrondissements officiels : il
+      n&apos;existe pas de statistique publique à l&apos;échelle du seul quartier de{" "}
+      {quartier}.
+    </>
+  ),
+  (quartier) => (
+    <>
+      À l&apos;échelle de Nice, le ministère de l&apos;Intérieur recensait un taux de
+      cambriolages de 0,61% des logements en 2025 (chiffres publiés en mars
+      2026), en hausse par rapport aux 0,54% de l&apos;année précédente. Ce taux
+      dépasse à la fois la moyenne nationale (0,56%) et celle du département
+      des Alpes-Maritimes (0,43%). Comme Nice ne compte pas d&apos;arrondissements
+      officiels, aucune statistique publique n&apos;isole le seul quartier de{" "}
+      {quartier} : la donnée porte sur la ville entière.
+    </>
+  ),
+  (quartier) => (
+    <>
+      Les derniers chiffres du ministère de l&apos;Intérieur (publiés en mars
+      2026) situent le taux de cambriolages à Nice à 0,61% des logements en
+      2025, contre 0,54% un an plus tôt, soit une hausse qui place la ville
+      au-dessus de la moyenne nationale (0,56%) et nettement au-dessus de
+      celle des Alpes-Maritimes (0,43%). Nice n&apos;ayant pas d&apos;arrondissements
+      officiels, ces chiffres couvrent l&apos;ensemble de la commune : aucune
+      donnée publique ne distingue {quartier} du reste de la ville.
+    </>
+  ),
+  (quartier) => (
+    <>
+      Nice n&apos;échappe pas à la tendance observée dans le département : 0,61%
+      des logements y ont été cambriolés en 2025 selon le ministère de
+      l&apos;Intérieur (données de mars 2026), contre 0,54% en 2024. La ville
+      dépasse ainsi la moyenne nationale (0,56%) et surtout celle des
+      Alpes-Maritimes (0,43%). Précision utile : ce chiffre s&apos;applique à Nice
+      dans son ensemble, {quartier} compris, aucune statistique publique
+      n&apos;existant pour ce seul quartier.
+    </>
+  ),
+];
+
+function crimeStatsVariant(quartier: string): (quartier: string) => ReactNode {
+  let hash = 0;
+  for (let i = 0; i < quartier.length; i++) {
+    hash = (hash * 31 + quartier.charCodeAt(i)) % crimeStatsVariants.length;
+  }
+  return crimeStatsVariants[hash];
+}
+
 export default function QuartierPageTemplate({
   quartier,
   sector,
@@ -221,14 +284,9 @@ export default function QuartierPageTemplate({
           </h2>
           <p className="text-slate leading-relaxed">
             {crimeIntro ?? `À ${quartier} comme ailleurs à Nice, la sécurité de la porte d'entrée reste un sujet à prendre au sérieux.`}
-            {" "}Selon les chiffres du ministère de l&apos;Intérieur publiés en mars 2026, le
-            taux de cambriolages à Nice est remonté à 0,61% des logements en 2025,
-            contre 0,54% l&apos;année précédente. Ce niveau est désormais supérieur
-            à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du
-            département des Alpes-Maritimes (0,43%). Cette donnée concerne
-            l&apos;ensemble de la ville de
-            Nice, qui ne compte pas d&apos;arrondissements officiels : il n&apos;existe
-            pas de statistique publique à l&apos;échelle du seul quartier de {quartier}.{" "}
+            {" "}
+            {crimeStatsVariant(quartier)(quartier)}
+            {" "}
             {crimeClosing ?? "Une porte correctement équipée reste le moyen le plus direct de limiter ce risque, où que vous soyez dans la ville."}
           </p>
           <p className="text-xs text-slate mt-2">

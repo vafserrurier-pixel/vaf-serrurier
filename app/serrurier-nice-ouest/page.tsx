@@ -5,8 +5,8 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-ouest/",
-  title: "Serrurier Nice Ouest – Tous quartiers | VAF",
-  description: "Serrurier dans l'ouest de Nice : Fabron, Saint-Isidore, l'Arénas, Carras et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+  title: "Serrurier Nice Ouest – Fabron, Carras | VAF",
+  description: "Serrurier dans l'ouest de Nice : Fabron, Saint-Isidore, l'Arénas, Carras et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
 });
 
 const intro = [

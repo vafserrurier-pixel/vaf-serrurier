@@ -98,8 +98,8 @@ const guideFaq = [
 
 export const metadata: Metadata = buildMetadata({
   path: "/changement-serrure-nice/",
-  title: "Changement de serrure Nice – Cylindre & multipoints | VAF",
-  description: "Remplacement de cylindre, serrure complète ou multipoints à Nice. Devis annoncé avant travaux, solution adaptée à votre porte. Appelez le 04 22 13 85 44.",
+  title: "Changement de serrure Nice – Cylindre dès 249€ | VAF",
+  description: "Remplacement de cylindre (dès 249€ TTC), serrure complète ou multipoints à Nice. Devis annoncé avant travaux, clés neuves remises sur place. Appelez le 04 22 13 85 44.",
 });
 
 const sectionsFr = [

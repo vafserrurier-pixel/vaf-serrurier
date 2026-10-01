@@ -5,8 +5,8 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-est/",
-  title: "Serrurier Nice Est – Tous quartiers | VAF",
-  description: "Serrurier dans l'est de Nice : Riquier, le Port, Mont Boron, l'Ariane et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+  title: "Serrurier Nice Est – Riquier, Mont Boron | VAF",
+  description: "Serrurier dans l'est de Nice : Riquier, le Port, Mont Boron, l'Ariane et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
 });
 
 const intro = [

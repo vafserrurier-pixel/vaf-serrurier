@@ -8,8 +8,8 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/tarifs-serrurier-nice/",
-  title: "Tarifs serrurier Nice – Prix sans surprise | VAF",
-  description: "Ouverture de porte, changement de serrure, porte blindée : mes tarifs à Nice, sans surprise. Devis annoncé avant chaque intervention, 24h/24.",
+  title: "Tarifs serrurier Nice 2026 – Dès 149€ TTC | VAF",
+  description: "Grille tarifaire complète du serrurier à Nice : porte claquée 149€, cylindre dès 249€, porte blindée dès 2 689€. Prix fixes annoncés avant intervention, zéro surprise.",
 });
 
 const faq = [

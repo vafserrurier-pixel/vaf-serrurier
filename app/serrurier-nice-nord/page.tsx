@@ -5,8 +5,8 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-nord/",
-  title: "Serrurier Nice Nord – Tous quartiers | VAF",
-  description: "Serrurier dans le nord de Nice : Brancolar, Gairaut, Rimiez, Pessicart et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+  title: "Serrurier Nice Nord – Gairaut, Rimiez | VAF",
+  description: "Serrurier dans le nord de Nice : Brancolar, Gairaut, Rimiez, Pessicart et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
 });
 
 const intro = [

@@ -3,11 +3,12 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import HomeBody from "./HomeBody";
 import { buildMetadata } from "@/lib/metadata";
+import { business } from "@/lib/business";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
-  title: "Serrurier Nice 24h/24 – Devis avant intervention | VAF",
-  description: "Serrurier à Nice, disponible 24h/24, 7j/7. Ouverture de porte, dépannage, changement de serrure, porte blindée. Prix annoncé avant intervention, sans surprise.",
+  title: "Serrurier Nice 24h/24 – Artisan direct, dès 149€ | VAF",
+  description: `Artisan serrurier à Nice, 24h/24, 7j/7. Prix annoncé avant intervention. Plus de ${business.reviews.count} avis Google ${business.reviews.rating.toFixed(1)}/5. Ouverture de porte, serrure, porte blindée.`,
 });
 
 const homeFaq = [

@@ -25,8 +25,8 @@ const HREF = "/blog/certification-a2p-serrure-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Certification A2P : ce que ça change pour votre serrure | VAF",
-  description: "A2P, une ou trois étoiles : ce que signifie réellement cette certification sur une serrure, un cylindre ou un blindage, et comment vérifier qu'elle est authentique.",
+  title: "Certification A2P : 1, 2 ou 3 étoiles, le guide | VAF",
+  description: "A2P 1, 2 ou 3 étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, comment la repérer et pourquoi elle compte pour votre assurance.",
   article: { author: business.firstName, readingTime: "8 min" },
 });
 

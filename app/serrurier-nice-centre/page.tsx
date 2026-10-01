@@ -6,8 +6,8 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-centre/",
-  title: "Serrurier Nice Centre – Tous quartiers | VAF",
-  description: "Serrurier dans tout le centre de Nice : Jean-Médecin, Libération, Cimiez, Vieux-Nice et plus. Ouverture de porte, dépannage, devis annoncé avant intervention.",
+  title: "Serrurier Nice Centre – Vieux-Nice, Cimiez | VAF",
+  description: "Serrurier dans tout le centre de Nice : Vieux-Nice, Jean-Médecin, Libération, Cimiez et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
 });
 
 const intro = [
