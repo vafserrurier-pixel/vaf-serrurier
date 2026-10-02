@@ -648,7 +648,7 @@ export default function ChangementSerrureNicePage() {
                 </ul>
               </div>
             </section>
-            <section className="mx-auto max-w-4xl px-4 py-10">
+            <section id="marques" className="mx-auto max-w-4xl px-4 py-10 scroll-mt-24">
               <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
                 Marques de serrures que je pose
               </h2>
@@ -707,7 +707,7 @@ export default function ChangementSerrureNicePage() {
                 locale="en"
               />
             </div>
-            <section className="mx-auto max-w-4xl px-4 py-10">
+            <section id="marques" className="mx-auto max-w-4xl px-4 py-10 scroll-mt-24">
               <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
                 Lock brands I install
               </h2>

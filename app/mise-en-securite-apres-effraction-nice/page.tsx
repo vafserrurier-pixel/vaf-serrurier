@@ -325,6 +325,7 @@ const sections = [
     ],
   },
   {
+    id: "cambriolages-nice",
     heading: "Les cambriolages à Nice, une réalité à prendre au sérieux",
     Icon: <BoltIcon className="w-4 h-4" />,
     paragraphs: [
