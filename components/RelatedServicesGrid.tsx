@@ -5,6 +5,7 @@ import { serviceCardsByLocale } from "@/lib/serviceCards";
 import { mainServicesByLocale, defaultFeaturedHrefs, featuredOverridesByHref } from "@/lib/relatedServicesDefault";
 import { CylinderMotif } from "./BrandMotif";
 import type { Locale } from "@/lib/locale";
+import { quartierLocative } from "@/lib/quartiers";
 
 const moreLabel = { fr: "En savoir plus", en: "Learn more" };
 // Complément d'ancre lu par les moteurs (et les lecteurs d'écran), invisible à l'écran :
@@ -50,7 +51,7 @@ export default function RelatedServicesGrid({
   excludeHref?: string;
 }) {
   const cards = serviceCardsByLocale[locale];
-  const place = lieu ?? "Nice";
+  const place = locale === "fr" ? quartierLocative(lieu ?? "Nice") : (lieu ?? "Nice");
   const list = (items ?? mainServicesByLocale[locale]).filter((item) => item.href !== excludeHref);
   const featuredHrefs = (excludeHref && featuredOverridesByHref[excludeHref]) || defaultFeaturedHrefs;
   const featured = featuredHrefs

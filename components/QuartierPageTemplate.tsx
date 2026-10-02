@@ -43,8 +43,7 @@ const crimeStatsVariants: ((quartier: string) => ReactNode)[] = [
       moyenne nationale (0,56%), et bien au-dessus de la moyenne du département
       des Alpes-Maritimes (0,43%). Cette donnée concerne l&apos;ensemble de la
       ville de Nice, qui ne compte pas d&apos;arrondissements officiels : il
-      n&apos;existe pas de statistique publique à l&apos;échelle du seul quartier de{" "}
-      {quartier}.
+      n&apos;existe pas de statistique publique à l&apos;échelle de ce seul quartier ({quartier}).
     </>
   ),
   (quartier) => (
@@ -54,8 +53,7 @@ const crimeStatsVariants: ((quartier: string) => ReactNode)[] = [
       2026), en hausse par rapport aux 0,54% de l&apos;année précédente. Ce taux
       dépasse à la fois la moyenne nationale (0,56%) et celle du département
       des Alpes-Maritimes (0,43%). Comme Nice ne compte pas d&apos;arrondissements
-      officiels, aucune statistique publique n&apos;isole le seul quartier de{" "}
-      {quartier} : la donnée porte sur la ville entière.
+      officiels, aucune statistique publique n&apos;isole ce seul quartier ({quartier}) : la donnée porte sur la ville entière.
     </>
   ),
   (quartier) => (

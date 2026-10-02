@@ -42,7 +42,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
   fr: {
     "/urgence-serrurier-nice/": {
       text: (lieu) =>
-        `Serrure bloquée, cylindre grippé, clé qui force à ${lieu} : je diagnostique la panne avant d'intervenir, et je répare plutôt que je ne remplace quand c'est possible.`,
+        `Serrure bloquée, cylindre grippé, clé qui force ${lieu} : je diagnostique la panne avant d'intervenir, et je répare plutôt que je ne remplace quand c'est possible.`,
       Icon: WrenchIcon,
       image: {
         src: "/images/serrurier-nice-depannage-reparation.webp",
@@ -51,7 +51,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/ouverture-de-porte-nice/": {
       text: (lieu) =>
-        `Porte claquée ou fermée à clé à ${lieu} : ouverture sans casse quand la configuration le permet, prix annoncé avant le moindre outil sorti.`,
+        `Porte claquée ou fermée à clé ${lieu} : ouverture sans casse quand la configuration le permet, prix annoncé avant le moindre outil sorti.`,
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-ouverture-de-porte.webp",
@@ -60,7 +60,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/changement-serrure-nice/": {
       text: (lieu) =>
-        `Remplacement de cylindre ou de serrure complète à ${lieu}, multipoints compris. Pose réglée et testée, pas juste vissée.`,
+        `Remplacement de cylindre ou de serrure complète ${lieu}, multipoints compris. Pose réglée et testée, pas juste vissée.`,
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-changement-de-serrure.webp",
@@ -69,7 +69,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/serrure-carenee-nice/": {
       text: (lieu) =>
-        `Renfort intermédiaire entre cylindre standard et blindage complet à ${lieu}, sans reprendre toute la porte.`,
+        `Renfort intermédiaire entre cylindre standard et blindage complet ${lieu}, sans reprendre toute la porte.`,
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
@@ -78,7 +78,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/poignee-blindee-nice/": {
       text: (lieu) =>
-        `Le cylindre exposé recouvert et protégé à ${lieu}, pour un renfort rapide et économique sans reprendre toute la serrure.`,
+        `Le cylindre exposé recouvert et protégé ${lieu}, pour un renfort rapide et économique sans reprendre toute la serrure.`,
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
@@ -87,7 +87,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/blindage-porte-nice/": {
       text: (lieu) =>
-        `Renforcer votre porte existante à ${lieu} sans la remplacer : bâti acier et serrure en applique, pour un budget nettement inférieur à un bloc-porte neuf.`,
+        `Renforcer votre porte existante ${lieu} sans la remplacer : bâti acier et serrure en applique, pour un budget nettement inférieur à un bloc-porte neuf.`,
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
@@ -96,7 +96,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
-        `Remplacement complet par un bloc-porte neuf sur mesure à ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
+        `Remplacement complet par un bloc-porte neuf sur mesure ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
@@ -105,7 +105,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/mise-en-securite-apres-effraction-nice/": {
       text: (lieu) =>
-        `Mise en sécurité immédiate 24h/24 à ${lieu}, puis solution durable une fois le diagnostic fait. Facture détaillée pour votre assurance.`,
+        `Mise en sécurité immédiate 24h/24 ${lieu}, puis solution durable une fois le diagnostic fait. Facture détaillée pour votre assurance.`,
       Icon: AlertLockIcon,
       image: {
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
@@ -114,7 +114,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/agences-syndics-nice/": {
       text: (lieu) =>
-        `Interlocuteur unique pour vos biens en gestion locative ou en copropriété à ${lieu}, tarif étudié selon le volume.`,
+        `Interlocuteur unique pour vos biens en gestion locative ou en copropriété ${lieu}, tarif étudié selon le volume.`,
       Icon: HandshakeIcon,
       image: {
         src: "/images/agences-syndics-remise-de-cles.webp",
@@ -123,7 +123,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/ouverture-de-coffre-fort-nice/": {
       text: (lieu) =>
-        `Code oublié, clé perdue, coffre hérité à ${lieu} : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.`,
+        `Code oublié, clé perdue, coffre hérité ${lieu} : diagnostic du mécanisme et ouverture en privilégiant la méthode la moins destructive.`,
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
@@ -132,7 +132,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/installation-coffre-fort-nice/": {
       text: (lieu) =>
-        `Conseil sur le modèle, fixation sécurisée au sol ou au mur à ${lieu} : un coffre non fixé ne protège pas grand-chose.`,
+        `Conseil sur le modèle, fixation sécurisée au sol ou au mur ${lieu} : un coffre non fixé ne protège pas grand-chose.`,
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
@@ -141,7 +141,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/tarifs-serrurier-nice/": {
       text: (lieu) =>
-        `Grille de prix complète pour chaque intervention à ${lieu}, toujours annoncée avant que je me déplace.`,
+        `Grille de prix complète pour chaque intervention ${lieu}, toujours annoncée avant que je me déplace.`,
       Icon: PriceTagIcon,
     },
   },
