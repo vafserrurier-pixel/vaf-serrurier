@@ -36,7 +36,7 @@ const faq = [
   {
     question: "Le tarif change-t-il selon le quartier de Nice ?",
     answer:
-      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (majoration de 50 % après 19h, le week-end et les jours fériés, sur le déplacement et la main-d'œuvre), le type de serrure et la pièce à remplacer, pas le quartier.",
+      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (un tarif majoré après 19h, le week-end et les jours fériés), le type de serrure et la pièce à remplacer, pas le quartier.",
   },
   {
     question: "Quel taux de TVA appliquez-vous ?",

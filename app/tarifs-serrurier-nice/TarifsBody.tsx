@@ -36,7 +36,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Le tarif change-t-il selon le quartier de Nice ?",
     answer:
-      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (majoration de 50 % après 19h, le week-end et les jours fériés, sur le déplacement et la main-d'œuvre), le type de serrure et la pièce à remplacer, pas le quartier.",
+      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (un tarif majoré après 19h, le week-end et les jours fériés), le type de serrure et la pièce à remplacer, pas le quartier.",
   },
   {
     question: "Quel taux de TVA appliquez-vous ?",
@@ -146,7 +146,7 @@ const faqEn: FaqItem[] = [
   {
     question: "Does the price change depending on the neighbourhood in Nice?",
     answer:
-      "No. My prices are the same in every neighbourhood of Nice, with no extra charge for a distant area. What changes the price is the time of day (a 50% surcharge after 7pm, on weekends and public holidays, on travel and labor), the type of lock and the part to replace, not the neighbourhood.",
+      "No. My prices are the same in every neighbourhood of Nice, with no extra charge for a distant area. What changes the price is the time of day (a higher rate after 7pm, on weekends and public holidays), the type of lock and the part to replace, not the neighbourhood.",
   },
   {
     question: "What VAT rate do you apply?",
@@ -393,8 +393,8 @@ export default function TarifsBody() {
         </h2>
         <p className="text-slate leading-relaxed mb-4">
           {locale === "fr"
-            ? "Le même problème coûte le même prix partout à Nice. Ce qui change, c'est l'heure : après 19h, le week-end et les jours fériés, une majoration de 50 % s'applique sur le déplacement et la main-d'œuvre."
-            : "The same problem costs the same anywhere in Nice. What changes is the time: after 7pm, on weekends and public holidays, a 50% surcharge applies to travel and labor."}
+            ? "Le même problème coûte le même prix partout à Nice. Ce qui change, c'est l'heure : après 19h, le week-end et les jours fériés, un tarif de nuit s'applique."
+            : "The same problem costs the same anywhere in Nice. What changes is the time: after 7pm, on weekends and public holidays, a night rate applies."}
         </p>
         <ArticleTable
           headers={
@@ -405,18 +405,18 @@ export default function TarifsBody() {
           rows={
             locale === "fr"
               ? [
-                  ["Porte claquée", "149 €", "223,50 €"],
-                  ["Porte verrouillée, cylindre européen", "149 €", "223,50 €"],
+                  ["Porte claquée", "149 €", "189 €"],
+                  ["Porte verrouillée, cylindre européen", "149 €", "209 €"],
                   ["Porte verrouillée, serrure Fichet", "Sur devis", "Sur devis"],
-                  ["Changement de cylindre standard", "À partir de 249 €, déplacement, main-d'œuvre et cylindre standard compris", "+ 50 % sur le déplacement et la main-d'œuvre, pièce au prix normal"],
+                  ["Changement de cylindre standard", "À partir de 249 €, déplacement, main-d'œuvre et cylindre standard compris", "Majoration sur le déplacement et la main-d'œuvre, pièce au prix normal"],
                   ["Cylindre haute sécurité, serrure multipoints", "Sur devis", "Sur devis"],
                   ["Porte de cave, de garage, boîte aux lettres", "Prix annoncé par téléphone avant déplacement", "Prix annoncé par téléphone avant déplacement"],
                 ]
               : [
-                  ["Door slammed shut", "€149", "€223.50"],
-                  ["Door locked, European cylinder", "€149", "€223.50"],
+                  ["Door slammed shut", "€149", "€189"],
+                  ["Door locked, European cylinder", "€149", "€209"],
                   ["Door locked, Fichet lock", "Quoted individually", "Quoted individually"],
-                  ["Standard cylinder replacement", "From €249, travel, labor and standard cylinder included", "+ 50% on travel and labor, part at the normal price"],
+                  ["Standard cylinder replacement", "From €249, travel, labor and standard cylinder included", "Surcharge on travel and labor, part at the normal price"],
                   ["High-security cylinder, multipoint lock", "Quoted individually", "Quoted individually"],
                   ["Cellar door, garage door, letterbox", "Price given by phone before I travel", "Price given by phone before I travel"],
                 ]
@@ -496,13 +496,13 @@ export default function TarifsBody() {
           {(locale === "fr"
             ? [
                 ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet, sur devis. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
-                ["L'horaire", "après 19h, le week-end et les jours fériés, la majoration de 50 % porte sur le déplacement et la main-d'œuvre. Elle ne s'applique jamais à une pièce."],
+                ["L'horaire", "après 19h, le week-end et les jours fériés, le tarif est majoré, sur le déplacement et la main-d'œuvre. La majoration ne s'applique jamais à une pièce."],
                 ["La pièce à remplacer", "le cylindre standard est compris dans le tarif de base ; pour une serrure complète, une gâche ou un cylindre haute sécurité, la pièce est annoncée et validée avec vous avant que je la pose."],
                 ["Ce qui ne varie pas", "le quartier et l'accessibilité du logement. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné ni pour l'accès."],
               ]
             : [
                 ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock, quoted individually. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
-                ["The time of day", "after 7pm, on weekends and public holidays, the 50% surcharge applies to travel and labor. It never applies to a part."],
+                ["The time of day", "after 7pm, on weekends and public holidays, the rate is higher, on travel and labor. The increase never applies to a part."],
                 ["The part to replace", "a standard cylinder is included in the base price; for a full lock, a strike plate or a high-security cylinder, the part is quoted and agreed with you before I fit it."],
                 ["What does not vary", "the neighbourhood and how easy the home is to reach. Prices are the same everywhere in Nice, with no extra charge for a distant area or for access."],
               ]
