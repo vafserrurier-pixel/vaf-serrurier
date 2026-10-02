@@ -36,24 +36,21 @@ publiés" ci-dessous pour vérifier avant d'ajouter).
    réellement (verrou additionnel, vitrage, volet), sans détail de méthode
    d'effraction.
 
-6. **slug: `entretien-annuel-serrure-eviter-panne`**
-   Entretien annuel d'une serrure : le geste simple (nettoyage, lubrifiant
-   adapté) qui évite la panne, et ce qu'il ne faut jamais utiliser.
-
-7. **slug: `cle-cassee-dans-serrure-que-faire`**
+6. **slug: `cle-cassee-dans-serrure-que-faire`**
    Clé cassée dans la serrure : que faire (et ne pas faire) avant l'arrivée
    du serrurier.
 
-8. **slug: `serrure-connectee-avantages-limites`**
+7. **slug: `serrure-connectee-avantages-limites`**
    Serrure connectée / électronique : ce qu'elle apporte vraiment, et ses
    limites réelles (batterie, dépendance au réseau, prix).
 
-9. **slug: `securiser-logement-avant-vacances`**
+8. **slug: `securiser-logement-avant-vacances`**
    Partir en vacances l'esprit tranquille : les vérifications de serrurerie
    à faire avant de partir plusieurs semaines.
 
 ## Déjà publiés (ne pas reproposer)
 
+- `entretien-serrure-eviter-panne` (sujet n°6 du backlog, slug sans "annuel" sur demande de Benoît, 2026-10-02)
 - `prix-serrurier-nice-guide` (ajouté hors backlog initial le 2026-09-25, comparatif de tarifs sur demande directe de Benoît ; publié d'abord sous le slug `combien-coute-serrurier-nice-tarifs-2026`, renommé le 2026-09-25)
 - `certification-a2p-serrure`
 - `cles-hall-digicode-organigramme-copropriete`

@@ -19,7 +19,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/entretien-annuel-serrure-eviter-panne/";
+const HREF = "/blog/entretien-serrure-eviter-panne/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -58,7 +58,7 @@ const faqItems = [
   },
 ];
 
-export default function EntretienAnnuelSerrurePage() {
+export default function EntretienSerrureEviterPannePage() {
   const post = blogPostByHref(HREF)!;
   return (
     <article>
@@ -150,7 +150,7 @@ export default function EntretienAnnuelSerrurePage() {
               </p>
               <ol className="list-decimal pl-5 mt-3 flex flex-col gap-1.5 text-slate leading-relaxed">
                 <li>Sortir le cylindre de la porte, de temps en temps.</li>
-                <li>Le nettoyer.</li>
+                <li>Le nettoyer et graisser autour de l&apos;entraîneur.</li>
                 <li>Le graisser au WD-40.</li>
               </ol>
 
@@ -185,11 +185,14 @@ export default function EntretienAnnuelSerrurePage() {
 
               <div className="mt-4">
                 <h3 className="font-heading font-semibold text-navy mb-1">
-                  Étape 2 : le nettoyer
+                  Étape 2 : le nettoyer et graisser autour de l&apos;entraîneur
                 </h3>
                 <p className="text-slate leading-relaxed">
                   Essuyez le cylindre avec un chiffon propre pour retirer la poussière et
                   les dépôts visibles, en particulier autour de l&apos;entrée de clé.
+                  Graissez aussi autour de l&apos;entraîneur, la came située à
+                  l&apos;extrémité du cylindre, celle qui actionne le mécanisme de la
+                  serrure.
                 </p>
               </div>
 

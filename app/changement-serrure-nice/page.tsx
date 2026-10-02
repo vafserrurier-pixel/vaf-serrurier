@@ -116,7 +116,7 @@ const sectionsFr = [
         fatiguée avant qu&apos;elle ne lâche complètement, souvent au pire
         moment. Avant d&apos;en arriver là, voici le geste d&apos;entretien que
         je recommande :{" "}
-        <Link href="/blog/entretien-annuel-serrure-eviter-panne/" prefetch={false} className="text-steel underline">
+        <Link href="/blog/entretien-serrure-eviter-panne/" prefetch={false} className="text-steel underline">
           entretien d&apos;une serrure, le geste qui évite la panne
         </Link>
         . Une séparation ou un divorce amène aussi à se poser la
