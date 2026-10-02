@@ -16,7 +16,7 @@ const faq = [
   {
     question: "Combien coûte un serrurier en urgence à Nice ?",
     answer:
-      "Le tarif de base dépend du service (ouverture, dépannage, remplacement) et une majoration de 50% s'applique après 19h, le week-end et les jours fériés. Le montant exact est toujours annoncé avant que j'intervienne.",
+      "Le tarif de base dépend du service (ouverture, dépannage, remplacement). Après 19h, le week-end et les jours fériés, une porte claquée est à 189 € et une porte verrouillée (cylindre européen) à 209 €. Le montant exact est toujours annoncé avant que j'intervienne.",
   },
   {
     question: "Le devis est-il vraiment gratuit ?",

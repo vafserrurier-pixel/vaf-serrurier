@@ -20,7 +20,7 @@ const homeFaq = [
   {
     question: "Combien coûte un serrurier en urgence à Nice ?",
     answer:
-      "À partir de 149 € TTC pour une ouverture de porte standard, avec une majoration de 50% après 19h, le week-end et les jours fériés. Le détail complet est sur ma page tarifs, et le prix exact est toujours annoncé avant que j'intervienne.",
+      "À partir de 149 € TTC pour une ouverture de porte standard. Après 19h, le week-end et les jours fériés : 189 € pour une porte claquée, 209 € pour une porte verrouillée. Le détail complet est sur ma page tarifs, et le prix exact est toujours annoncé avant que j'intervienne.",
   },
   {
     question: "Donnez-vous un devis avant l'intervention ?",

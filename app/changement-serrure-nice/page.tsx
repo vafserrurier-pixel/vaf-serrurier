@@ -443,7 +443,7 @@ const guideContent = (
         Tarifs indicatifs selon le remplacement
       </ArticleSectionHeading>
       <ArticleTable
-        caption="Majoration de 50% après 19h, le week-end et les jours fériés. Détail complet sur ma page tarifs."
+        caption="Un tarif de nuit s'applique après 19h, le week-end et les jours fériés, annoncé avant que j'intervienne. Détail complet sur ma page tarifs."
         headers={["Prestation", "Prix", "Durée indicative"]}
         zebra="bold"
         featuredRowIndex={0}

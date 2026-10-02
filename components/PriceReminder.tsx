@@ -4,11 +4,11 @@ import type { Locale } from "@/lib/locale";
 const strings = {
   fr: {
     seeAll: "Voir le détail des tarifs →",
-    defaultNote: "+50% après 19h, le week-end et les jours fériés",
+    defaultNote: "Tarif de nuit après 19h, le week-end et les jours fériés, annoncé avant intervention",
   },
   en: {
     seeAll: "See full pricing →",
-    defaultNote: "+50% after 7pm, on weekends and public holidays",
+    defaultNote: "Night rate after 7pm, on weekends and public holidays, given before I start",
   },
 };
 

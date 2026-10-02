@@ -9,6 +9,8 @@ export type PricingCard = {
   /** Montant numérique en euros, pour les schema.org Offer sur la page tarifs. Absent = "sur devis", pas d'Offer généré. */
   priceValue?: number;
   priceType?: "fixed" | "startingFrom";
+  /** Tarif après 19h, week-end et jours fériés quand il est fixe (sinon le texte générique "annoncé avant intervention" s'affiche). */
+  nightPrice?: string;
   features: string[];
   highlight?: boolean;
   featured?: boolean;
@@ -23,6 +25,7 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       unit: "TTC",
       priceValue: 149,
       priceType: "fixed",
+      nightPrice: "189 €",
       features: [
         "Ouverture sans casse quand c'est possible",
         "Contrôle de fermeture après intervention",
@@ -38,6 +41,7 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       unit: "TTC",
       priceValue: 149,
       priceType: "fixed",
+      nightPrice: "209 €",
       features: [
         "Configuration adaptée à votre serrure",
         "Tests finaux de fermeture",
@@ -154,6 +158,7 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       unit: "incl. VAT",
       priceValue: 149,
       priceType: "fixed",
+      nightPrice: "€189",
       features: [
         "Opened without damage when possible",
         "Closing checked after the callout",
@@ -169,6 +174,7 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       unit: "incl. VAT",
       priceValue: 149,
       priceType: "fixed",
+      nightPrice: "€209",
       features: [
         "Method matched to your lock",
         "Final closing tests",

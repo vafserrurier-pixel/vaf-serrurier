@@ -257,7 +257,7 @@ const guideContent = (
         Tarifs indicatifs selon votre situation
       </ArticleSectionHeading>
       <ArticleTable
-        caption="Majoration de 50% après 19h, le week-end et les jours fériés, dans tous les cas. Détail complet sur ma page tarifs."
+        caption="Après 19h, le week-end et les jours fériés : 189 € TTC pour une porte claquée, 209 € TTC pour une porte verrouillée (cylindre européen). Détail complet sur ma page tarifs."
         headers={["Situation", "Prix", "Durée indicative"]}
         zebra="bold"
         featuredRowIndex={0}
@@ -391,7 +391,7 @@ const faqFr = [
   {
     question: "Combien coûte une ouverture de porte verrouillée à Nice ?",
     answer:
-      "149 € TTC pour une situation standard (cylindre européen). Pour une serrure Fichet, le prix est établi sur devis. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés.",
+      "149 € TTC pour une situation standard (cylindre européen). Pour une serrure Fichet, le prix est établi sur devis. Après 19h, le week-end et les jours fériés : 189 € TTC pour une porte claquée, 209 € TTC pour une porte verrouillée (cylindre européen).",
   },
   {
     question: "Une ouverture de porte laisse-t-elle des traces ?",
@@ -477,7 +477,7 @@ const faqEn = [
   {
     question: "How much does opening a locked door cost in Nice?",
     answer:
-      "€149 incl. VAT for a standard situation (European cylinder). For a Fichet lock, the price is quoted individually. A 50% surcharge applies after 7pm, on weekends and public holidays.",
+      "€149 incl. VAT for a standard situation (European cylinder). For a Fichet lock, the price is quoted individually. After 7pm, on weekends and public holidays: €189 incl. VAT for a slammed door, €209 incl. VAT for a locked door (European cylinder).",
   },
   {
     question: "Does opening a door leave marks?",

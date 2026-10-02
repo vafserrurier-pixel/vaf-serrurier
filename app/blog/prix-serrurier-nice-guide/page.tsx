@@ -25,7 +25,7 @@ const HREF = "/blog/prix-serrurier-nice-guide/";
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Combien coûte un serrurier à Nice ? Tarifs 2026 | VAF",
-  description: "Déplacement, main d'œuvre, pièce, majoration : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
+  description: "Déplacement, main d'œuvre, pièce, tarif de nuit : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
   article: { author: business.firstName, readingTime: "12 min" },
   image: blogPostByHref(HREF)?.image,
 });
@@ -33,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 const toc = [
   { id: "compose-prix", label: "Ce qui compose vraiment un prix" },
   { id: "tarifs-annonces", label: "Mes tarifs annoncés à l'avance" },
-  { id: "majoration-perimetre", label: "Majoration : ce qu'elle couvre vraiment" },
+  { id: "majoration-perimetre", label: "Tarif de nuit : ce qu'il couvre vraiment" },
   { id: "comparatif", label: "Ce qu'affichent d'autres serruriers à Nice" },
   { id: "prix-eleve", label: "Pourquoi un prix plus élevé reste parfois le bon choix" },
   { id: "nice-vs-national", label: "Nice face au reste de la France" },
@@ -56,14 +56,14 @@ const faqItems = [
       "Dans la plupart des cas, oui, dès que l'intervention dépasse une heure : un tarif horaire affiché plus bas grimpe vite une fois la pièce, le déplacement et la main d'œuvre additionnés. Un forfait fixe vous met à l'abri d'un dépassement si le diagnostic se révèle plus long que prévu.",
   },
   {
-    question: "La majoration de 50% s'applique-t-elle aussi sur le prix d'un cylindre ou d'une serrure remplacée ?",
+    question: "Le tarif de nuit s'applique-t-il aussi sur le prix d'un cylindre ou d'une serrure remplacée ?",
     answer:
-      "Non, jamais. Elle porte uniquement sur le déplacement et la main d'œuvre. Un cylindre Heraclès ou Fichet coûte exactement le même prix un samedi soir qu'un mardi après-midi : seul le temps que je passe chez vous est majoré.",
+      "Non, jamais. Un cylindre Heraclès ou Fichet coûte exactement le même prix un samedi soir qu'un mardi après-midi : seule la prestation d'ouverture est au tarif de nuit (189 € pour une porte claquée, 209 € pour une porte verrouillée).",
   },
   {
-    question: "Pourquoi votre majoration est-elle fixe à 50%, sans paliers horaires ?",
+    question: "Pourquoi un tarif de nuit fixe, sans paliers horaires ?",
     answer:
-      "Pour que vous puissiez calculer le prix final vous-même, à n'importe quelle heure, sans avoir à vérifier dans quelle tranche horaire vous tombez. C'est aussi ce qui évite qu'une intervention en pleine nuit coûte le double du tarif de jour, comme c'est le cas chez certains confrères au-delà d'un certain horaire.",
+      "Pour que vous connaissiez le prix à l'avance, à n'importe quelle heure, sans avoir à vérifier dans quelle tranche horaire vous tombez : après 19h, le week-end et les jours fériés, c'est 189 € pour une porte claquée et 209 € pour une porte verrouillée. C'est aussi ce qui évite qu'une intervention en pleine nuit coûte le double du tarif de jour, comme c'est le cas chez certains confrères au-delà d'un certain horaire.",
   },
   {
     question: "Le déplacement est-il compris dans le prix affiché, ou facturé en supplément comme chez certains serruriers ?",
@@ -73,7 +73,7 @@ const faqItems = [
   {
     question: "Comment vérifier moi-même si un prix affiché en ligne est complet avant d'appeler ?",
     answer:
-      "Demandez explicitement si le prix annoncé inclut le déplacement et la main d'œuvre, ou seulement la pièce. Demandez aussi si la majoration soir/nuit/week-end est fixe ou à paliers, et si elle porte sur la pièce ou seulement sur l'intervention. Ces questions suffisent à comparer deux devis sur des bases équivalentes.",
+      "Demandez explicitement si le prix annoncé inclut le déplacement et la main d'œuvre, ou seulement la pièce. Demandez aussi si le tarif soir/nuit/week-end est fixe ou à paliers, et s'il porte sur la pièce ou seulement sur l'intervention. Ces questions suffisent à comparer deux devis sur des bases équivalentes.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
         data={blogPostingSchema({
           headline: "Combien coûte un serrurier à Nice ? Tarifs 2026",
           description:
-            "Déplacement, main d'œuvre, pièce, majoration : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
+            "Déplacement, main d'œuvre, pièce, tarif de nuit : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
           url: `${business.domain}${HREF}`,
           datePublished: "2026-09-25",
           dateModified: "2026-09-25",
@@ -141,7 +141,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 </>,
                 "Mes tarifs sont fixes et annoncés avant tout déplacement, déplacement inclus sur toute la ville.",
                 <>
-                  Ma majoration de +50% ne porte <strong>jamais sur le prix d&apos;une pièce</strong>, uniquement sur le déplacement et la main d&apos;œuvre.
+                  Mon tarif de nuit ne porte <strong>jamais sur le prix d&apos;une pièce</strong> : un cylindre coûte le même prix de jour comme de nuit.
                 </>,
                 "SIRET vérifiable, adresse physique, assurance RC Pro, garantie décennale et garanties fabricant réelles (15 ans sur un blindage) : des engagements concrets, pas des arguments commerciaux.",
               ]}
@@ -207,7 +207,8 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               rows={[
                 ["Porte claquée / verrouillée (cylindre européen)", "149 € TTC"],
                 ["Changement de cylindre standard", "dès 249 € TTC"],
-                ["Majoration soir / week-end / jours fériés", "+50% sur main-d'œuvre et déplacement uniquement"],
+                ["Porte claquée, soir / week-end / jours fériés", "189 € TTC"],
+                ["Porte verrouillée (cylindre européen), soir / week-end / jours fériés", "209 € TTC"],
               ]}
               featuredRowIndex={0}
             />
@@ -233,22 +234,20 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
 
             <div>
               <ArticleSectionHeading number={3} id="majoration-perimetre">
-                Majoration soir, week-end, jours fériés : ce qu&apos;elle couvre vraiment
+                Tarif de nuit, week-end, jours fériés : ce qu&apos;il couvre vraiment
               </ArticleSectionHeading>
               <p className="text-slate leading-relaxed">
                 Un point souvent mal compris, et qui mérite d&apos;être précisé clairement :
-                ma majoration de <strong>+50%</strong> porte uniquement sur le{" "}
-                <strong>déplacement et la main d&apos;œuvre</strong>, jamais sur le prix
-                d&apos;une pièce remplacée. Un cylindre Heraclès ne coûte pas plus cher un
-                samedi soir qu&apos;un mardi après-midi : seul le temps que je passe chez
-                vous est majoré, pas le matériel posé.
+                mon tarif de nuit (<strong>189 € pour une porte claquée, 209 € pour une
+                porte verrouillée</strong>) concerne la prestation, jamais le prix d&apos;une
+                pièce remplacée. Un cylindre Heraclès ne coûte pas plus cher un samedi soir
+                qu&apos;un mardi après-midi : le matériel posé garde le même prix.
               </p>
               <p className="text-slate leading-relaxed mt-4">
-                Après 19h, le week-end et les jours fériés, cette majoration unique
-                s&apos;applique donc à la partie main-d&apos;œuvre et déplacement de la
-                facture, sans palier supplémentaire selon l&apos;heure exacte. Une
-                intervention à 20h coûte le même supplément qu&apos;une intervention à 3h
-                du matin : c&apos;est un choix délibéré de simplicité, pour que vous
+                Après 19h, le week-end et les jours fériés, ce tarif de nuit est unique,
+                sans palier supplémentaire selon l&apos;heure exacte. Une intervention à 20h
+                coûte le même prix qu&apos;une intervention à 3h du matin : c&apos;est un
+                choix délibéré de simplicité, pour que vous
                 puissiez calculer le prix final vous-même, à n&apos;importe quelle heure,
                 sans avoir à vérifier dans quelle tranche horaire vous tombez.
               </p>
@@ -258,8 +257,8 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 +50% en soirée, puis un second seuil pouvant monter jusqu&apos;à{" "}
                 <strong>+100%</strong> (soit le double du tarif de jour) au cœur de la nuit,
                 généralement entre minuit et 7h du matin, ainsi que certains créneaux de
-                week-end. Sur une urgence à 2h du matin, la différence entre une majoration
-                fixe de 50% et un palier à 100% peut représenter plusieurs dizaines
+                week-end. Sur une urgence à 2h du matin, la différence entre un tarif de
+                nuit fixe et un palier à 100% peut représenter plusieurs dizaines
                 d&apos;euros d&apos;écart sur la même intervention.
               </p>
             </div>
@@ -342,16 +341,17 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               </div>
               <div className="mt-4">
                 <h3 className="font-heading font-semibold text-navy mb-1">
-                  La majoration de nuit : une règle simple contre un palier qui double
+                  Le tarif de nuit : une règle simple contre un palier qui double
                 </h3>
                 <p className="text-slate leading-relaxed">
-                  Sur une urgence entre minuit et 7h du matin, ma majoration fixe de +50%
-                  reste plus avantageuse qu&apos;un barème à paliers qui monte à +100% sur
-                  ce créneau, comme j&apos;en ai relevé sur une grille tarifaire locale. En
+                  Sur une urgence entre minuit et 7h du matin, mon tarif de nuit reste le
+                  même qu&apos;en soirée (189 € pour une porte claquée, 209 € pour une porte
+                  verrouillée). C&apos;est plus avantageux qu&apos;un barème à paliers qui monte
+                  à +100% sur ce créneau, comme j&apos;en ai relevé sur une grille tarifaire locale. En
                   clair : à tarif de base équivalent, une intervention en pleine nuit chez
                   moi ne double jamais le prix, contrairement à un système à paliers qui le
-                  fait au-delà d&apos;un certain horaire. Et dans les deux cas, cette
-                  majoration ne touche jamais le prix d&apos;une pièce remplacée.
+                  fait au-delà d&apos;un certain horaire. Et dans les deux cas, ce
+                  tarif ne touche jamais le prix d&apos;une pièce remplacée.
                 </p>
               </div>
               <p className="text-slate leading-relaxed mt-4">
@@ -511,7 +511,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 </li>
                 <li>
                   <strong>Programmer une intervention plutôt que d&apos;attendre l&apos;urgence complète</strong>{" "}
-                  : un rendez-vous en journée évite la majoration de soir, de nuit, de
+                  : un rendez-vous en journée évite le tarif de soir, de nuit, de
                   week-end ou de jour férié : un cylindre qui commence à forcer se traite
                   mieux avant la panne complète.
                 </li>
@@ -537,7 +537,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 ["Déplacement", "Toujours inclus", "Parfois facturé à part (ex. 45 €)"],
                 ["Ouverture de porte claquée", "149 € TTC, tout compris", "89 à 149 € selon l'heure, + déplacement possible"],
                 ["Changement de cylindre", "dès 249 € TTC, forfait unique", "Pièce seule dès 69 € + main d'œuvre + déplacement"],
-                ["Majoration soir/nuit/week-end", "+50% unique, sur main-d'œuvre et déplacement, jamais les pièces", "+50% à +100% selon l'heure exacte"],
+                ["Tarif soir/nuit/week-end", "Tarif de nuit unique (189 € porte claquée, 209 € porte verrouillée), jamais sur les pièces", "+50% à +100% selon l'heure exacte"],
                 ["Devis", "Annoncé au téléphone, confirmé sur place", "Variable selon l'entreprise"],
               ]}
             />
@@ -549,8 +549,8 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               <p className="text-slate leading-relaxed">
                 Le tableau ci-dessus résume l&apos;essentiel : à service comparable, la
                 différence entre les grilles tarifaires se joue surtout sur ce qui est
-                inclus dans le prix affiché, et sur la façon dont la majoration est
-                calculée. Retrouvez le détail complet de mes tarifs, service par service,
+                inclus dans le prix affiché, et sur la façon dont le tarif de nuit est
+                calculé. Retrouvez le détail complet de mes tarifs, service par service,
                 sur ma page{" "}
                 <Link href="/tarifs-serrurier-nice/" prefetch={false} className="text-steel underline">
                   tarifs
@@ -559,13 +559,13 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
               </p>
             </div>
 
-            <ArticleOpinion quote="Je ne prétends pas être systématiquement le moins cher de Nice, et ce n'est pas mon objectif. Mon objectif, c'est que vous puissiez calculer le prix final avant même que j'arrive, sans mauvaise surprise, sans palier caché et sans majoration qui déborde sur le prix du matériel. C'est ça, la vraie différence entre un tarif annoncé et un tarif d'appel." />
+            <ArticleOpinion quote="Je ne prétends pas être systématiquement le moins cher de Nice, et ce n'est pas mon objectif. Mon objectif, c'est que vous puissiez calculer le prix final avant même que j'arrive, sans mauvaise surprise, sans palier caché et sans supplément qui déborde sur le prix du matériel. C'est ça, la vraie différence entre un tarif annoncé et un tarif d'appel." />
 
             <ArticleKeyTakeaways
               points={[
                 "Un prix de serrurier se compose du déplacement, de la main d'œuvre et de la pièce éventuelle : vérifiez ce qui est réellement inclus.",
                 "Mes tarifs sont fixes, déplacement et main d'œuvre toujours inclus, hors pièce remplacée.",
-                "Ma majoration unique de +50% ne porte que sur le déplacement et la main d'œuvre, jamais sur le prix d'une pièce.",
+                "Mon tarif de nuit est unique (189 € la porte claquée, 209 € la porte verrouillée) et ne porte jamais sur le prix d'une pièce.",
                 "SIRET, adresse, assurance RC Pro, garantie décennale et garanties fabricant sont vérifiables indépendamment, pas de simples arguments.",
               ]}
             />

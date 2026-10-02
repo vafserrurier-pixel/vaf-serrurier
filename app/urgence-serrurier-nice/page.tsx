@@ -353,8 +353,8 @@ export default function UrgenceSerrurierNicePage() {
         extra: (
           <>
             <PriceReminder
-              priceLabel="149 € à 224 € TTC"
-              note="149 € TTC en journée ; jusqu'à 224 € TTC avec la majoration de 50% après 19h, le week-end et les jours fériés. Pièces remplacées facturées en supplément."
+              priceLabel="149 € à 209 € TTC"
+              note="149 € TTC en journée ; après 19h, le week-end et les jours fériés : 189 € TTC (porte claquée) ou 209 € TTC (porte verrouillée). Pièces remplacées facturées en supplément."
               locale="fr"
             />
             <div className="mx-auto max-w-4xl px-4 py-10">
@@ -405,8 +405,8 @@ export default function UrgenceSerrurierNicePage() {
         extra: (
           <>
             <PriceReminder
-              priceLabel="€149 to €224 incl. VAT"
-              note="€149 incl. VAT during the day; up to €224 incl. VAT with the 50% surcharge after 7pm, on weekends and public holidays. Replaced parts billed separately."
+              priceLabel="€149 to €209 incl. VAT"
+              note="€149 incl. VAT during the day; after 7pm, on weekends and public holidays: €189 incl. VAT (slammed door) or €209 incl. VAT (locked door). Replaced parts billed separately."
               locale="en"
             />
             <div className="mx-auto max-w-4xl px-4 py-10">

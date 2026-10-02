@@ -10,7 +10,8 @@ const strings = {
   fr: {
     mostRequested: "Le plus demandé",
     call: "Appeler pour ce tarif",
-    nightSurcharge: "+50% sur main-d'œuvre et déplacement (soir, week-end, jours fériés)",
+    nightWithPrice: (price: string) => `Après 19h, week-end, jours fériés : ${price}`,
+    nightGeneric: "Tarif de nuit annoncé avant intervention",
     note: "Cylindre standard compris dans le tarif de base, autres pièces facturées en supplément et toujours annoncées avant accord. Remplacement de serrure complète : sur devis, annoncé avant intervention. Prix indicatifs pour les situations standards.",
     tabFeatured: "Les plus demandés",
     tabAll: "Tous les tarifs",
@@ -18,7 +19,8 @@ const strings = {
   en: {
     mostRequested: "Most requested",
     call: "Call for this rate",
-    nightSurcharge: "+50% on labor and travel (evenings, weekends, public holidays)",
+    nightWithPrice: (price: string) => `After 7pm, weekends, public holidays: ${price}`,
+    nightGeneric: "Night rate given before I start",
     note: "Standard cylinder included in the base price, other parts billed separately and always quoted before you agree. Full lock replacement: quoted on assessment, announced before work starts. Indicative prices for standard situations.",
     tabFeatured: "Most requested",
     tabAll: "All prices",
@@ -117,7 +119,7 @@ export default function PricingTable({
             <p
               className={`text-xs mb-4 ${card.highlight ? "text-cream/70" : "text-slate"}`}
             >
-              {t.nightSurcharge}
+              {card.nightPrice ? t.nightWithPrice(card.nightPrice) : t.nightGeneric}
             </p>
             <ul className="flex flex-col gap-2 mb-5 flex-1">
               {card.features.map((feature) => (

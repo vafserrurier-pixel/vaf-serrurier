@@ -87,7 +87,7 @@ const homeFaqFr: FaqItem[] = [
   {
     question: "Combien coûte un serrurier en urgence à Nice ?",
     answer:
-      "À partir de 149 € TTC pour une ouverture de porte standard, avec une majoration de 50% après 19h, le week-end et les jours fériés. Le détail complet est sur ma page tarifs, et le prix exact est toujours annoncé avant que j'intervienne.",
+      "À partir de 149 € TTC pour une ouverture de porte standard. Après 19h, le week-end et les jours fériés : 189 € pour une porte claquée, 209 € pour une porte verrouillée. Le détail complet est sur ma page tarifs, et le prix exact est toujours annoncé avant que j'intervienne.",
   },
   {
     question: "Donnez-vous un devis avant l'intervention ?",
@@ -125,7 +125,7 @@ const homeFaqEn: FaqItem[] = [
   {
     question: "How much does an emergency locksmith cost in Nice?",
     answer:
-      "From €149 incl. VAT for a standard door opening, with a 50% surcharge after 7pm, on weekends and public holidays. Full details are on my pricing page, and the exact price is always given before I start any work.",
+      "From €149 incl. VAT for a standard door opening. After 7pm, on weekends and public holidays: €189 for a slammed door, €209 for a locked door. Full details are on my pricing page, and the exact price is always given before I start any work.",
   },
   {
     question: "Do you give a quote before the work starts?",
