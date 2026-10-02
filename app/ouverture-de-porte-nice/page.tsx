@@ -286,7 +286,7 @@ const guideContent = (
           changement de serrure
         </Link>
         . Pour garder un cylindre en bon état ensuite, voir mon article sur l&apos;
-        <Link href="/blog/entretien-serrure-eviter-panne/" className="text-steel underline">
+        <Link href="/blog/entretien-serrure/" className="text-steel underline">
           entretien d&apos;une serrure
         </Link>
         .

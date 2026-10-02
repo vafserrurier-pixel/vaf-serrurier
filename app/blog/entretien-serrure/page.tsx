@@ -19,7 +19,7 @@ import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { blogPostByHref } from "@/lib/blogPosts";
 
-const HREF = "/blog/entretien-serrure-eviter-panne/";
+const HREF = "/blog/entretien-serrure/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
@@ -58,7 +58,7 @@ const faqItems = [
   },
 ];
 
-export default function EntretienSerrureEviterPannePage() {
+export default function EntretienSerrurePage() {
   const post = blogPostByHref(HREF)!;
   return (
     <article>
@@ -190,7 +190,7 @@ export default function EntretienSerrureEviterPannePage() {
                 <p className="text-slate leading-relaxed">
                   Essuyez le cylindre avec un chiffon propre pour retirer la poussière et
                   les dépôts visibles, en particulier autour de l&apos;entrée de clé.
-                  Graissez aussi autour de l&apos;entraîneur, la came située à
+                  Graissez aussi au WD-40 autour de l&apos;entraîneur, la came située à
                   l&apos;extrémité du cylindre, celle qui actionne le mécanisme de la
                   serrure.
                 </p>

@@ -19,7 +19,7 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    href: "/blog/entretien-serrure-eviter-panne/",
+    href: "/blog/entretien-serrure/",
     title: "Entretien d'une serrure : le geste simple qui évite la panne",
     excerpt:
       "Démonter le cylindre, le nettoyer, le graisser au WD-40 : le geste que je recommande, et le produit à ne jamais utiliser, l'huile alimentaire.",
