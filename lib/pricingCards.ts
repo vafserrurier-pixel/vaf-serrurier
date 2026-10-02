@@ -48,14 +48,11 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
     {
       title: "Porte verrouillée (serrure Fichet)",
       seoTitle: "Prix porte verrouillée serrure Fichet à Nice",
-      price: "189 €",
-      unit: "TTC",
-      priceValue: 189,
-      priceType: "fixed",
+      price: "Sur devis",
       features: [
         "Méthode adaptée aux serrures renforcées",
         "Précautions pour limiter les dégâts",
-        "Déplacement inclus sur Nice",
+        "Prix confirmé avant toute intervention",
       ],
     },
     {
@@ -182,14 +179,11 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
     {
       title: "Door locked (Fichet lock)",
       seoTitle: "Locked door price (Fichet lock) in Nice",
-      price: "€189",
-      unit: "incl. VAT",
-      priceValue: 189,
-      priceType: "fixed",
+      price: "Quoted individually",
       features: [
         "Method suited to reinforced locks",
         "Precautions to limit damage",
-        "Travel included within Nice",
+        "Price confirmed before any work",
       ],
     },
     {

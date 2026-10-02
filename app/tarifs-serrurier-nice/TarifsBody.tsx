@@ -26,7 +26,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Les pièces remplacées sont-elles comprises dans le prix affiché ?",
     answer:
-      "Non, les pièces remplacées (cylindre, serrure, gâche...) sont facturées en supplément et toujours annoncées avant votre accord.",
+      "Le cylindre standard est compris dans le tarif « à partir de 249 € ». Les autres pièces remplacées (serrure complète, gâche, cylindre haute sécurité...) sont facturées en supplément et toujours annoncées avant votre accord.",
   },
   {
     question: "Pourquoi les prix varient-ils d'une intervention à l'autre ?",
@@ -136,7 +136,7 @@ const faqEn: FaqItem[] = [
   {
     question: "Are replaced parts included in the price shown?",
     answer:
-      "No, replaced parts (cylinder, lock, strike plate...) are billed separately and always quoted before you agree to them.",
+      "A standard cylinder is included in the \"from €249\" price. Other replaced parts (full lock, strike plate, high-security cylinder...) are billed separately and always quoted before you agree to them.",
   },
   {
     question: "Why do prices vary from one callout to another?",
@@ -296,7 +296,7 @@ const strings = {
     warningClosing: "Mes tarifs ci-dessus sont ceux que je facture réellement, pas un appât.",
     varyTitle: "Ce qui fait varier le prix",
     varyText:
-      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés, mais uniquement sur le déplacement et la main-d'œuvre : elle ne porte jamais sur le prix d'une pièce remplacée. Les pièces remplacées sont toujours facturées à part et validées avec vous avant intervention.",
+      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés, mais uniquement sur le déplacement et la main-d'œuvre : elle ne porte jamais sur le prix d'une pièce remplacée. Hors cylindre standard, compris dans le tarif de base, les pièces remplacées sont facturées à part et validées avec vous avant intervention.",
     devisLegalTitle: "Ce que la loi exige sur un devis de dépannage",
     leviersTitle: "Comment réduire le coût de votre intervention",
     faqTitle: "Questions fréquentes sur les tarifs",
@@ -324,7 +324,7 @@ const strings = {
     warningClosing: "My prices above are what I actually charge, not bait.",
     varyTitle: "What makes the price vary",
     varyText:
-      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A 50% surcharge applies after 7pm, on weekends and public holidays, but only on travel and labor: it never applies to the price of a replaced part. Replaced parts are always billed separately and agreed with you before the work starts.",
+      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A 50% surcharge applies after 7pm, on weekends and public holidays, but only on travel and labor: it never applies to the price of a replaced part. Apart from a standard cylinder, included in the base price, replaced parts are billed separately and agreed with you before the work starts.",
     devisLegalTitle: "What French law requires on a repair quote",
     leviersTitle: "How to reduce the cost of your callout",
     faqTitle: "Frequently asked questions about pricing",
@@ -407,16 +407,16 @@ export default function TarifsBody() {
               ? [
                   ["Porte claquée", "149 €", "223,50 €"],
                   ["Porte verrouillée, cylindre européen", "149 €", "223,50 €"],
-                  ["Porte verrouillée, serrure Fichet", "189 €", "283,50 €"],
-                  ["Changement de cylindre standard", "À partir de 249 €, déplacement et main-d'œuvre compris", "+ 50 % sur le déplacement et la main-d'œuvre, pièce au prix normal"],
+                  ["Porte verrouillée, serrure Fichet", "Sur devis", "Sur devis"],
+                  ["Changement de cylindre standard", "À partir de 249 €, déplacement, main-d'œuvre et cylindre standard compris", "+ 50 % sur le déplacement et la main-d'œuvre, pièce au prix normal"],
                   ["Cylindre haute sécurité, serrure multipoints", "Sur devis", "Sur devis"],
                   ["Porte de cave, de garage, boîte aux lettres", "Prix annoncé par téléphone avant déplacement", "Prix annoncé par téléphone avant déplacement"],
                 ]
               : [
                   ["Door slammed shut", "€149", "€223.50"],
                   ["Door locked, European cylinder", "€149", "€223.50"],
-                  ["Door locked, Fichet lock", "€189", "€283.50"],
-                  ["Standard cylinder replacement", "From €249, travel and labor included", "+ 50% on travel and labor, part at the normal price"],
+                  ["Door locked, Fichet lock", "Quoted individually", "Quoted individually"],
+                  ["Standard cylinder replacement", "From €249, travel, labor and standard cylinder included", "+ 50% on travel and labor, part at the normal price"],
                   ["High-security cylinder, multipoint lock", "Quoted individually", "Quoted individually"],
                   ["Cellar door, garage door, letterbox", "Price given by phone before I travel", "Price given by phone before I travel"],
                 ]
@@ -495,16 +495,16 @@ export default function TarifsBody() {
         <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-4">
           {(locale === "fr"
             ? [
-                ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet à 189 €. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
+                ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet, sur devis. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
                 ["L'horaire", "après 19h, le week-end et les jours fériés, la majoration de 50 % porte sur le déplacement et la main-d'œuvre. Elle ne s'applique jamais à une pièce."],
-                ["La pièce à remplacer", "cylindre, serrure ou gâche : la pièce est annoncée et validée avec vous avant que je la pose."],
-                ["Ce qui ne varie pas", "le quartier. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné."],
+                ["La pièce à remplacer", "le cylindre standard est compris dans le tarif de base ; pour une serrure complète, une gâche ou un cylindre haute sécurité, la pièce est annoncée et validée avec vous avant que je la pose."],
+                ["Ce qui ne varie pas", "le quartier et l'accessibilité du logement. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné ni pour l'accès."],
               ]
             : [
-                ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock €189. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
+                ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock, quoted individually. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
                 ["The time of day", "after 7pm, on weekends and public holidays, the 50% surcharge applies to travel and labor. It never applies to a part."],
-                ["The part to replace", "cylinder, lock or strike plate: the part is quoted and agreed with you before I fit it."],
-                ["What does not vary", "the neighbourhood. Prices are the same everywhere in Nice, with no extra charge for a distant area."],
+                ["The part to replace", "a standard cylinder is included in the base price; for a full lock, a strike plate or a high-security cylinder, the part is quoted and agreed with you before I fit it."],
+                ["What does not vary", "the neighbourhood and how easy the home is to reach. Prices are the same everywhere in Nice, with no extra charge for a distant area or for access."],
               ]
           ).map(([label, text]) => (
             <li key={label}>

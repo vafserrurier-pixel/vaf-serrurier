@@ -265,7 +265,7 @@ const guideContent = (
           ["Porte claquée (simple)", "149 € TTC", "Quelques minutes en général"],
           ["Porte blindée claquée", "149 € TTC", "Quelques minutes en général"],
           ["Porte verrouillée standard (cylindre européen)", "149 € TTC", "Variable selon l'état du cylindre"],
-          ["Porte verrouillée haute sécurité (ex. Fichet)", "189 € TTC", "Diagnostic sur place, peut demander plus de temps"],
+          ["Porte verrouillée haute sécurité (ex. Fichet)", "Sur devis", "Diagnostic sur place, peut demander plus de temps"],
           ["Clé cassée dans la serrure", "à partir de 149 € TTC", "Quelques minutes à quelques dizaines de minutes"],
         ]}
       />
@@ -391,7 +391,7 @@ const faqFr = [
   {
     question: "Combien coûte une ouverture de porte verrouillée à Nice ?",
     answer:
-      "149 € TTC pour une situation standard, 189 € TTC s'il s'agit d'une porte blindée verrouillée. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés.",
+      "149 € TTC pour une situation standard (cylindre européen). Pour une serrure Fichet, le prix est établi sur devis. Une majoration de 50% s'applique après 19h, le week-end et les jours fériés.",
   },
   {
     question: "Une ouverture de porte laisse-t-elle des traces ?",
@@ -477,7 +477,7 @@ const faqEn = [
   {
     question: "How much does opening a locked door cost in Nice?",
     answer:
-      "€149 incl. VAT for a standard situation, €189 incl. VAT for a locked security door. A 50% surcharge applies after 7pm, on weekends and public holidays.",
+      "€149 incl. VAT for a standard situation (European cylinder). For a Fichet lock, the price is quoted individually. A 50% surcharge applies after 7pm, on weekends and public holidays.",
   },
   {
     question: "Does opening a door leave marks?",
@@ -526,7 +526,7 @@ export default function OuvertureDePorteNicePage() {
         extra: (
           <>
             <PriceReminder
-              priceLabel="149 € TTC (189 € TTC pour une serrure Fichet verrouillée)"
+              priceLabel="149 € TTC (serrure Fichet verrouillée : sur devis)"
               locale="fr"
             />
             {doorReview && (
@@ -588,7 +588,7 @@ export default function OuvertureDePorteNicePage() {
         },
         extra: (
           <PriceReminder
-            priceLabel="€149 incl. VAT (€189 incl. VAT for a locked Fichet lock)"
+            priceLabel="€149 incl. VAT (locked Fichet lock: quoted individually)"
             locale="en"
           />
         ),

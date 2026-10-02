@@ -21,17 +21,42 @@ const faq = [
   {
     question: "Le devis est-il vraiment gratuit ?",
     answer:
-      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier.",
+      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier. Pour les gros travaux (blindage de porte, installation de porte blindée), la visite sur place et le devis sont gratuits, et le devis vous est remis sous 24h.",
   },
   {
     question: "Les pièces remplacées sont-elles comprises dans le prix affiché ?",
     answer:
-      "Non, les pièces remplacées (cylindre, serrure, gâche...) sont facturées en supplément et toujours annoncées avant votre accord.",
+      "Le cylindre standard est compris dans le tarif « à partir de 249 € ». Les autres pièces remplacées (serrure complète, gâche, cylindre haute sécurité...) sont facturées en supplément et toujours annoncées avant votre accord.",
   },
   {
     question: "Pourquoi les prix varient-ils d'une intervention à l'autre ?",
     answer:
       "Le type de serrure, la marque, l'état de la porte et l'heure d'intervention font varier le tarif final. Les prix affichés couvrent les situations standards.",
+  },
+  {
+    question: "Le tarif change-t-il selon le quartier de Nice ?",
+    answer:
+      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (majoration de 50 % après 19h, le week-end et les jours fériés, sur le déplacement et la main-d'œuvre), le type de serrure et la pièce à remplacer, pas le quartier.",
+  },
+  {
+    question: "Quel taux de TVA appliquez-vous ?",
+    answer:
+      "10 % pour les particuliers (logement de plus de 2 ans) et 20 % pour les professionnels. Les prix affichés sur cette page sont des prix TTC au taux de 10 %.",
+  },
+  {
+    question: "Quels moyens de paiement acceptez-vous ?",
+    answer:
+      "Carte bancaire, espèces ou virement. La facture détaillée vous est envoyée par e-mail.",
+  },
+  {
+    question: "Demandez-vous un acompte ?",
+    answer:
+      "Pour les gros travaux (blindage de porte, installation de porte blindée), un acompte de 30 % est demandé à la validation du devis.",
+  },
+  {
+    question: "Intervenez-vous sur une porte de cave, de garage ou une boîte aux lettres ?",
+    answer:
+      "Oui. Le prix vous est annoncé par téléphone avant que je me déplace, comme pour toute autre intervention.",
   },
   {
     question: "Comment éviter une arnaque de serrurier ?",
