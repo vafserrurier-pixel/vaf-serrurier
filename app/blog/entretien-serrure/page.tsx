@@ -206,6 +206,11 @@ export default function EntretienSerrurePage() {
                   clé et faites-la aller-retour plusieurs fois pour répartir le produit.
                   Essuyez l&apos;excédent.
                 </p>
+                <p className="text-slate leading-relaxed mt-3">
+                  Le graphite sec en poudre est une alternative tout aussi correcte, notamment
+                  si vous préférez un lubrifiant qui ne laisse aucune trace huileuse : une
+                  petite quantité dans l&apos;entrée de clé, puis quelques va-et-vient de la clé.
+                </p>
               </div>
 
               <div className="mt-4">

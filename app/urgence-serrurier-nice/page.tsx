@@ -47,7 +47,7 @@ const guideFaq = [
   {
     question: "Puis-je lubrifier moi-même une serrure qui résiste ?",
     answer:
-      "Oui, avec un lubrifiant adapté au mécanisme (graphite en poudre ou lubrifiant sec pour serrure), en petite quantité. Évitez les huiles ou dégrippants type WD-40 en usage régulier : ils apportent un soulagement immédiat mais retiennent ensuite la poussière, ce qui aggrave le grippage à moyen terme.",
+      "Oui, en petite quantité et avec un produit adapté au mécanisme : du WD-40, que je recommande de pulvériser une fois le cylindre démonté et nettoyé, ou du graphite en poudre (lubrifiant sec). Évitez en revanche l'huile de cuisine, qui devient collante et encrasse la serrure.",
   },
   {
     question: "Un devis est-il vraiment obligatoire avant une intervention ?",
@@ -113,11 +113,10 @@ const guideContent = (
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
         Un cylindre qui commence à résister peut souvent être soulagé avec un
-        lubrifiant sec (graphite en poudre ou lubrifiant spécial serrure), à
-        appliquer en petite quantité directement dans le cylindre. Les
-        dégrippants classiques type WD-40 soulagent sur l&apos;instant mais,
-        utilisés en continu, retiennent la poussière et finissent par aggraver
-        le grippage. Sur les portes plus anciennes du centre de Nice,
+        peu de WD-40, que je recommande de pulvériser une fois le cylindre
+        démonté et nettoyé, ou avec du graphite en poudre (lubrifiant sec), à
+        appliquer en petite quantité. L&apos;huile de cuisine est en revanche à
+        proscrire : elle devient collante et encrasse le mécanisme. Sur les portes plus anciennes du centre de Nice,
         l&apos;humidité fait aussi gonfler légèrement le bois : un simple
         réglage de la gâche évite parfois un dépannage complet.
       </p>
