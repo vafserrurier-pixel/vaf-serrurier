@@ -205,6 +205,10 @@ const guideContent = (
         <Link href="/urgence-serrurier-nice/" className="text-steel underline">
           dépannage serrurier
         </Link>
+        . Pour le cylindre de la serrure, voir mon article sur l&apos;
+        <Link href="/blog/entretien-annuel-serrure-eviter-panne/" className="text-steel underline">
+          entretien d&apos;une serrure
+        </Link>
         .
       </p>
     </div>

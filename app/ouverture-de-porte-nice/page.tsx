@@ -285,6 +285,10 @@ const guideContent = (
         <Link href="/changement-serrure-nice/" className="text-steel underline">
           changement de serrure
         </Link>
+        . Pour garder un cylindre en bon état ensuite, voir mon article sur l&apos;
+        <Link href="/blog/entretien-annuel-serrure-eviter-panne/" className="text-steel underline">
+          entretien d&apos;une serrure
+        </Link>
         .
       </p>
     </div>

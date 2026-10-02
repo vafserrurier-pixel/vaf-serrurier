@@ -20,7 +20,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     href: "/blog/entretien-annuel-serrure-eviter-panne/",
-    title: "Entretien annuel d'une serrure : le geste simple qui évite la panne",
+    title: "Entretien d'une serrure : le geste simple qui évite la panne",
     excerpt:
       "Démonter le cylindre, le nettoyer, le graisser au WD-40 : le geste que je recommande, et le produit à ne jamais utiliser, l'huile alimentaire.",
     category: "Conseil pratique",
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     tagClass: "bg-steel/10 text-steel",
     datePublished: "2026-10-02",
     dateModified: "2026-10-02",
-    readingMinutes: 3,
+    readingMinutes: 4,
     image: "/images/blog/entretien-serrure-cylindre-ancien-nice.webp",
   },
   {

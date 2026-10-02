@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Entretien d'une serrure : le geste qui évite la panne | VAF",
   description: "Démonter le cylindre, le nettoyer, le graisser au WD-40 : mon geste d'entretien, et pourquoi l'huile alimentaire est une mauvaise idée pour une serrure.",
-  article: { author: business.firstName, readingTime: "3 min" },
+  article: { author: business.firstName, readingTime: "4 min" },
 });
 
 const toc = [
@@ -64,7 +64,7 @@ export default function EntretienAnnuelSerrurePage() {
     <article>
       <JsonLd
         data={blogPostingSchema({
-          headline: "Entretien annuel d'une serrure : le geste simple qui évite la panne",
+          headline: "Entretien d'une serrure : le geste simple qui évite la panne",
           description:
             "Démonter le cylindre, le nettoyer, le graisser au WD-40 : mon geste d'entretien, et pourquoi l'huile alimentaire est une mauvaise idée pour une serrure.",
           url: `${business.domain}${HREF}`,
@@ -96,7 +96,7 @@ export default function EntretienAnnuelSerrurePage() {
           </span>
 
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-            Entretien annuel d&apos;une serrure : le geste simple qui évite la panne
+            Entretien d&apos;une serrure : le geste simple qui évite la panne
           </h1>
           <ArticleByline readingMinutes={post.readingMinutes} updatedLabel="Publié le 2 octobre 2026" />
           <div className="mt-6">
@@ -105,7 +105,7 @@ export default function EntretienAnnuelSerrurePage() {
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
-              alt="Cylindre ancien avec une clé à tête bleue sur une porte d'entrée grise, serrure en applique en bas"
+              alt="serrurier Nice entretien serrure"
               fill
               sizes="(min-width: 1024px) 760px, 100vw"
               className="object-cover object-[50%_35%]"
@@ -116,7 +116,7 @@ export default function EntretienAnnuelSerrurePage() {
             <ArticleSummary
               points={[
                 <>
-                  Je recommande de <strong>démonter le cylindre de temps en temps</strong>, de le nettoyer, puis de le graisser au WD-40.
+                  Je recommande de <strong>démonter le cylindre de temps en temps</strong> (le sortir de la porte), de le nettoyer, puis de le graisser au WD-40.
                 </>,
                 <>
                   Jamais d&apos;<strong>huile alimentaire</strong> : elle devient collante avec le temps et attire la saleté au lieu de protéger.
@@ -149,10 +149,70 @@ export default function EntretienAnnuelSerrurePage() {
                 plutôt que d&apos;attendre que la clé commence à forcer.
               </p>
               <ol className="list-decimal pl-5 mt-3 flex flex-col gap-1.5 text-slate leading-relaxed">
-                <li>Démonter le cylindre, de temps en temps.</li>
+                <li>Sortir le cylindre de la porte, de temps en temps.</li>
                 <li>Le nettoyer.</li>
                 <li>Le graisser au WD-40.</li>
               </ol>
+
+              <div className="mt-6">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Étape 1 : sortir le cylindre de la porte
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Démonter le cylindre, c&apos;est simplement le sortir de la porte. Sur un
+                  cylindre européen classique, voici comment faire :
+                </p>
+                <ol className="list-decimal pl-5 mt-2 flex flex-col gap-1.5 text-slate leading-relaxed">
+                  <li>
+                    Laissez la porte ouverte pendant toute l&apos;opération, pour ne pas
+                    vous retrouver enfermé dehors.
+                  </li>
+                  <li>
+                    Repérez la vis de fixation du cylindre, sur la tranche de la porte, au
+                    niveau de la serrure, et dévissez-la.
+                  </li>
+                  <li>
+                    Introduisez la clé et tournez-la légèrement, jusqu&apos;à la position où
+                    le cylindre coulisse librement. Cette position varie selon les modèles.
+                  </li>
+                  <li>Tirez le cylindre vers vous pour le sortir de la porte.</li>
+                </ol>
+                <p className="text-slate leading-relaxed mt-2">
+                  Si vous ne trouvez pas la vis ou si le cylindre ne sort pas, n&apos;insistez
+                  pas : appelez-moi.
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Étape 2 : le nettoyer
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Essuyez le cylindre avec un chiffon propre pour retirer la poussière et
+                  les dépôts visibles, en particulier autour de l&apos;entrée de clé.
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Étape 3 : le graisser au WD-40
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Pulvérisez un peu de WD-40 dans l&apos;entrée de clé, puis introduisez la
+                  clé et faites-la aller-retour plusieurs fois pour répartir le produit.
+                  Essuyez l&apos;excédent.
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <h3 className="font-heading font-semibold text-navy mb-1">
+                  Pour le remettre en place
+                </h3>
+                <p className="text-slate leading-relaxed">
+                  Replacez le cylindre dans son logement, revissez la vis de fixation, puis
+                  testez le verrouillage porte ouverte avant de la refermer.
+                </p>
+              </div>
             </div>
 
             <div>
@@ -197,6 +257,14 @@ export default function EntretienAnnuelSerrurePage() {
                 . Et si la porte est déjà bloquée ou la clé cassée, c&apos;est la page{" "}
                 <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
                   ouverture de porte à Nice
+                </Link>
+                . Pour une situation qui ne peut pas attendre, j&apos;interviens aussi en{" "}
+                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
+                  urgence 24h/24
+                </Link>{" "}
+                dans tous les{" "}
+                <Link href="/zones-intervention-nice/" className="text-steel underline">
+                  quartiers de Nice
                 </Link>
                 .
               </p>

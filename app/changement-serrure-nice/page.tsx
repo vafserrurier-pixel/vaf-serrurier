@@ -114,7 +114,12 @@ const sectionsFr = [
         accroche, ou une fermeture de moins en moins franche sont aussi des
         signes d&apos;usure à ne pas ignorer. Mieux vaut changer une serrure
         fatiguée avant qu&apos;elle ne lâche complètement, souvent au pire
-        moment. Une séparation ou un divorce amène aussi à se poser la
+        moment. Avant d&apos;en arriver là, voici le geste d&apos;entretien que
+        je recommande :{" "}
+        <Link href="/blog/entretien-annuel-serrure-eviter-panne/" prefetch={false} className="text-steel underline">
+          entretien d&apos;une serrure, le geste qui évite la panne
+        </Link>
+        . Une séparation ou un divorce amène aussi à se poser la
         question :{" "}
         <Link href="/blog/changer-serrure-separation-divorce/" prefetch={false} className="text-steel underline">
           j&apos;explique ce que dit la loi dans ce cas
