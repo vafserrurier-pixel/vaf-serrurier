@@ -26,6 +26,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Entretien d'une serrure : le geste qui évite la panne | VAF",
   description: "Démonter le cylindre, le nettoyer, le graisser au WD-40 : mon geste d'entretien, et pourquoi l'huile alimentaire est une mauvaise idée pour une serrure.",
   article: { author: business.firstName, readingTime: "4 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

@@ -28,6 +28,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Que faire après un cambriolage à Nice : les étapes | VAF",
   description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut jamais faire seul, et comment sécuriser votre porte en urgence avant de reconstituer le dossier.",
   article: { author: business.firstName, readingTime: "8 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

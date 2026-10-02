@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Clés de hall, digicode, organigramme : qui décide en copropriété ? | VAF",
   description: "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
   article: { author: business.firstName, readingTime: "7 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

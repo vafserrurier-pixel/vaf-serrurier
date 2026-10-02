@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Location : qui paie le changement de serrure ? | VAF",
   description: "Clés perdues, cambriolage, location saisonnière, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice.",
   article: { author: business.firstName, readingTime: "9 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

@@ -19,6 +19,11 @@ export function buildMetadata(opts: {
   /** Empêche l'indexation (robots noindex,nofollow) : réservé aux brouillons non publiés. */
   noIndex?: boolean;
   /**
+   * Image de partage (og:image, twitter:image), chemin relatif commençant par "/".
+   * Par défaut, la carte de marque générée par app/opengraph-image.tsx.
+   */
+  image?: string;
+  /**
    * Renseigne les champs twitter:label1/data1 (auteur) et
    * twitter:label2/data2 (temps de lecture) affichés sous une carte Twitter
    * d'article. Next.js n'a pas de champ type dédié pour ces balises : elles
@@ -30,6 +35,12 @@ export function buildMetadata(opts: {
   };
 }): Metadata {
   const url = `${business.domain}${opts.path}`;
+  // Un openGraph défini au niveau de la page remplace celui du layout, y compris
+  // l'image générée par le fichier opengraph-image : sans ces images explicites,
+  // seule la home gardait son aperçu de partage.
+  const shareImage = opts.image
+    ? { url: `${business.domain}${opts.image}`, alt: opts.title }
+    : { url: `${business.domain}/opengraph-image/`, width: 1200, height: 630, alt: opts.title };
   return {
     alternates: { canonical: url },
     title: opts.title,
@@ -44,11 +55,13 @@ export function buildMetadata(opts: {
       title: opts.title,
       description: opts.description,
       url,
+      images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
       title: opts.title,
       description: opts.description,
+      images: [shareImage.url],
     },
     ...(opts.article
       ? {

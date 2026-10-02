@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Combien coûte un serrurier à Nice ? Tarifs 2026 | VAF",
   description: "Déplacement, main d'œuvre, pièce, majoration : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
   article: { author: business.firstName, readingTime: "12 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

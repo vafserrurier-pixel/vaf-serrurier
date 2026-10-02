@@ -28,6 +28,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Certification A2P : 1, 2 ou 3 étoiles, le guide | VAF",
   description: "A2P 1, 2 ou 3 étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, comment la repérer et pourquoi elle compte pour votre assurance.",
   article: { author: business.firstName, readingTime: "8 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [

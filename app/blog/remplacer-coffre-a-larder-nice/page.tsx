@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Remplacer un coffre à larder : guide simple et propre | VAF",
   description: "Le coffre à larder semble simple à remplacer mais demande de la précision : mesures, mécanisme, fermeture. Mon guide étape par étape.",
   article: { author: business.firstName, readingTime: "7 min" },
+  image: blogPostByHref(HREF)?.image,
 });
 
 const toc = [
