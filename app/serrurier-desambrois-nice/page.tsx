@@ -73,11 +73,6 @@ const faq = [
       "Oui, c'est une demande fréquente à Desambrois où le turnover locatif est plus élevé que la moyenne. Je peux intervenir rapidement entre un état des lieux de sortie et d'entrée.",
   },
   {
-    question: "Les tarifs sont-ils différents à Desambrois par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous aussi sur des portes blindées à Desambrois ?",
     answer:
       "Oui, aussi bien pour l'ouverture d'une porte blindée verrouillée que pour l'installation ou le blindage d'une porte existante.",
@@ -86,11 +81,6 @@ const faq = [
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques des parties communes.",
-  },
-  {
-    question: "Donnez-vous un devis avant d'intervenir à Desambrois ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

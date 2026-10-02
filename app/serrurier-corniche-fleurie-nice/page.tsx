@@ -70,19 +70,9 @@ const faq = [
       "Oui, tout ce secteur résidentiel autour du jardin botanique fait partie de ma zone d'intervention habituelle.",
   },
   {
-    question: "Les tarifs sont-ils différents dans ce secteur par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Proposez-vous des solutions de blindage pour les villas de ce secteur ?",
     answer:
       "Oui, selon l'état de votre porte, je peux vous orienter vers un blindage ou une serrure haute sécurité.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce secteur ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

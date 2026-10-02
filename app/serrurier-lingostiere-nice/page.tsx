@@ -65,19 +65,9 @@ const faq = [
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration de la propriété.",
   },
   {
-    question: "Les tarifs sont-ils différents à Lingostière par rapport au centre de Nice ?",
-    answer:
-      "Non, mes tarifs de base sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous sur des locaux professionnels à Lingostière ?",
     answer:
       "Oui, pour la partie serrurerie de ces locaux, selon le même principe de diagnostic et de devis annoncé avant intervention.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Lingostière ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
   {
     question: "Combien de temps pour un serrurier à Lingostière ?",

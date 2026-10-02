@@ -10,8 +10,8 @@ const strings = {
     delayUnit: "à Nice",
     rating: "Note Google",
     ratingUnit: (count: number) => `sur ${count}+ avis`,
-    success: "Ouvertures",
-    successUnit: "sans dégât",
+    success: "Portes claquées",
+    successUnit: "ouvertes sans dégât",
   },
   en: {
     availability: "Available",
@@ -20,8 +20,8 @@ const strings = {
     delayUnit: "in Nice",
     rating: "Google rating",
     ratingUnit: (count: number) => `from ${count}+ reviews`,
-    success: "Door openings",
-    successUnit: "with no damage",
+    success: "Slammed doors",
+    successUnit: "opened with no damage",
   },
 };
 

@@ -166,6 +166,14 @@ export default function AgencesSyndicsNicePage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-sm text-slate mt-4">
+                Sur un changement de serrure en location, la question de qui paie revient souvent entre bailleur et
+                locataire : je l&apos;ai traitée dans{" "}
+                <Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">
+                  qui paie le changement de serrure en location
+                </Link>
+                .
+              </p>
             </div>
           </section>
         </>

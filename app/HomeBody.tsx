@@ -112,7 +112,7 @@ const homeFaqFr: FaqItem[] = [
   {
     question: "Comment ouvrez-vous une porte claquée sans l'abîmer ?",
     answer:
-      "Le plus souvent grâce à la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage dans 99% des cas. Pour une clé cassée, j'extrais le morceau avec un outil adapté ; le perçage ne reste qu'une solution de tout dernier recours.",
+      "Le plus souvent grâce à la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage : 99% des portes claquées sont ouvertes sans dégât. Pour une clé cassée, j'extrais le morceau avec un outil adapté ; le perçage ne reste qu'une solution de tout dernier recours.",
   },
 ];
 
@@ -150,7 +150,7 @@ const homeFaqEn: FaqItem[] = [
   {
     question: "How do you open a slammed door without damaging it?",
     answer:
-      "Most often with the radio method, also called the shim or by-pass technique: a thin rigid strip slid between the frame and the bolt, which releases the mechanism without damage in 99% of cases. For a broken key, I extract the piece with a proper tool; drilling stays a last-resort solution.",
+      "Most often with the radio method, also called the shim or by-pass technique: a thin rigid strip slid between the frame and the bolt, which releases the mechanism without damage: 99% of slammed doors are opened with no damage. For a broken key, I extract the piece with a proper tool; drilling stays a last-resort solution.",
   },
 ];
 
@@ -415,6 +415,15 @@ export default function HomeBody() {
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center text-center">{t.pricingTitle}</h2>
         <PricingTable locale={locale} />
+        {locale === "fr" && (
+          <p className="text-center text-sm text-slate mt-6">
+            Pour comprendre ce qui fait varier un prix, lisez{" "}
+            <Link href="/blog/prix-serrurier-nice-guide/" className="text-steel underline">
+              combien coûte un serrurier à Nice
+            </Link>
+            .
+          </p>
+        )}
       </section>
 
       <section className="mx-auto max-w-5xl px-4 pb-14">

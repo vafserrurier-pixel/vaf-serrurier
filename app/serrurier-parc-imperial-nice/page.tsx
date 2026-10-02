@@ -73,19 +73,9 @@ const faq = [
       "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle dans le centre de Nice.",
   },
   {
-    question: "Les tarifs sont-ils différents au Parc Impérial par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Travaillez-vous avec les syndics du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir au Parc Impérial ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

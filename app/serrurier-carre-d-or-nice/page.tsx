@@ -78,19 +78,9 @@ const faq = [
       "Oui, je m'adapte à la discrétion attendue dans ce quartier, sans camion visible ni intervention bruyante si ce n'est pas nécessaire.",
   },
   {
-    question: "Les tarifs sont-ils différents au Carré d'Or par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous près de la Promenade des Anglais et du Negresco ?",
     answer:
       "Oui, toute cette partie du Carré d'Or jusqu'à la Promenade des Anglais fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

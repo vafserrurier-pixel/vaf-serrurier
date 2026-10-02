@@ -73,16 +73,6 @@ const faq = [
     answer:
       "J'en tiens compte dès l'appel pour vous donner un délai réaliste, généralement 15 à 25 minutes selon la circulation.",
   },
-  {
-    question: "Les tarifs sont-ils différents à Mantega par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Mantega ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierMantegaNicePage() {

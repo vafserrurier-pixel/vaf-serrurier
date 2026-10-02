@@ -73,19 +73,9 @@ const faq = [
       "Oui, tout ce secteur résidentiel autour de la cascade et du canal de la Vésubie fait partie de ma zone d'intervention habituelle.",
   },
   {
-    question: "Les tarifs sont-ils différents à Gairaut par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Travaillez-vous avec les petites copropriétés du secteur ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Gairaut ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

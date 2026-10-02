@@ -72,19 +72,9 @@ const faq = [
       "Oui, c'est une demande fréquente à Bon Voyage où le turnover locatif est plus élevé que la moyenne. Je peux intervenir rapidement entre un état des lieux de sortie et d'entrée.",
   },
   {
-    question: "Les tarifs sont-ils différents à Bon Voyage par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Bon Voyage ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

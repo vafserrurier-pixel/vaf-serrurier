@@ -78,19 +78,9 @@ const faq = [
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
-    question: "Les tarifs sont-ils différents au quartier Wilson par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous en soirée place Wilson, secteur animé de commerces et restaurants ?",
     answer:
       "Oui, je reste disponible en soirée et la nuit, avec une majoration appliquée après 19h et le week-end, annoncée avant l'intervention.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

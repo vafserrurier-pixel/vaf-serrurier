@@ -73,11 +73,6 @@ const faq = [
       "Oui, tout le vallon fait partie de ma zone d'intervention habituelle, du carrefour Magnan jusqu'au secteur de la Costière.",
   },
   {
-    question: "Les tarifs sont-ils différents à La Madeleine par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Travaillez-vous avec les copropriétés du quartier ?",
     answer:
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
@@ -86,11 +81,6 @@ const faq = [
     question: "Que faire si ma porte ferme mal dans un immeuble ancien de La Madeleine ?",
     answer:
       "Je diagnostique en premier lieu si le problème vient de la serrure, du gond ou du bâti qui a pu bouger avec le temps, avant de proposer la réparation la plus adaptée.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à La Madeleine ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

@@ -74,16 +74,6 @@ const faq = [
     answer:
       "Oui, je peux intervenir tôt le matin comme à tout autre moment de la journée, en tenant compte de l'affluence du marché pour organiser mon accès.",
   },
-  {
-    question: "Les tarifs sont-ils différents dans le Vieux-Nice par rapport au reste de la ville ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans le Vieux-Nice ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierVieuxNiceNicePage() {

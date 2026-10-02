@@ -75,19 +75,9 @@ const faq = [
       "Oui, tout le tronçon de l'avenue Jean-Médecin jusqu'à la gare fait partie de ma zone d'intervention habituelle.",
   },
   {
-    question: "Les tarifs sont-ils différents avenue Jean-Médecin par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous en soirée sur cet axe commerçant très fréquenté ?",
     answer:
       "Oui, je reste disponible en soirée et la nuit, avec une majoration appliquée après 19h et le week-end, annoncée avant l'intervention.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

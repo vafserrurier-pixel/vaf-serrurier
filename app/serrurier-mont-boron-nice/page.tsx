@@ -75,16 +75,6 @@ const faq = [
     answer:
       "Oui, tout ce secteur résidentiel entre le fort et le Cap de Nice fait partie de ma zone d'intervention habituelle.",
   },
-  {
-    question: "Les tarifs sont-ils différents au Mont Boron par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir au Mont Boron ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierMontBoronNicePage() {

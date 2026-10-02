@@ -314,6 +314,14 @@ const sections = [
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
       "Après une effraction, votre assureur vous demandera généralement un justificatif d'intervention. Je vous fournis une facture détaillée mentionnant la nature des dégâts constatés et les réparations effectuées. Je ne vous annoncerai jamais de plafond de remboursement générique : cela dépend entièrement de votre contrat, et un chiffre standard serait trompeur. Ce que je peux confirmer : le déplacement et la main d'œuvre sont généralement pris en charge, sous réserve de vos conditions de contrat.",
+      <>
+        Si un dépanneur vous annonce qu&apos;il est « agréé toutes assurances », vérifiez ce que cette formule
+        signifie réellement avant de signer : j&apos;ai détaillé le sujet dans{" "}
+        <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
+          « Agréé toutes assurances », ce que cette formule ne veut pas dire
+        </Link>
+        .
+      </>,
     ],
   },
   {

@@ -77,16 +77,6 @@ const faq = [
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet de la serrure.",
   },
-  {
-    question: "Les tarifs sont-ils différents à Riquier par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Riquier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierRiquierNicePage() {

@@ -77,16 +77,6 @@ const faq = [
     answer:
       "Oui, je privilégie une solution qui respecte l'esthétique de ces façades remarquables plutôt qu'un remplacement standard.",
   },
-  {
-    question: "Les tarifs sont-ils différents au quartier Gambetta par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierGambettaNicePage() {

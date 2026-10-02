@@ -78,19 +78,9 @@ const faq = [
       "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
-    question: "Les tarifs sont-ils différents dans ce quartier par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Que faire si ma clé casse dans une serrure ancienne du quartier des Musiciens ?",
     answer:
       "J'extrais le morceau resté dans le cylindre et je vérifie s'il est compatible avec un remplacement simple, avant d'envisager un changement complet si le modèle est trop ancien.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce quartier ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

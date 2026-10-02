@@ -77,16 +77,6 @@ const faq = [
     answer:
       "Oui, c'est fréquent à Rimiez. Je privilégie systématiquement la réparation quand elle est possible plutôt qu'un remplacement complet.",
   },
-  {
-    question: "Les tarifs sont-ils différents à Rimiez par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Rimiez ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
-  },
 ];
 
 export default function SerrurierRimiezNicePage() {

@@ -73,19 +73,9 @@ const faq = [
       "Oui, tout ce secteur résidentiel autour du parc fait partie de ma zone d'intervention habituelle.",
   },
   {
-    question: "Les tarifs sont-ils différents à Chambrun par rapport au centre de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous après une effraction à Chambrun ?",
     answer:
       "Oui, je sécurise rapidement la porte concernée puis propose une solution durable une fois le diagnostic effectué.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Chambrun ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

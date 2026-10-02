@@ -70,19 +70,9 @@ const faq = [
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration du domaine.",
   },
   {
-    question: "Les tarifs sont-ils différents dans le secteur Bellet par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs de base sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous sur des maisons isolées ou des domaines viticoles ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration de la propriété.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans le secteur Bellet ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

@@ -73,11 +73,6 @@ const faq = [
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes des grands ensembles du quartier.",
   },
   {
-    question: "Les tarifs sont-ils différents au Brancolar par rapport au centre de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Que faire si ma clé casse dans une serrure ancienne au Brancolar ?",
     answer:
       "J'extrais le morceau resté dans le cylindre et je vérifie s'il est encore compatible avec un remplacement simple, avant d'envisager un changement complet si le modèle est trop ancien pour trouver une pièce correspondante.",
@@ -86,11 +81,6 @@ const faq = [
     question: "Intervenez-vous après une effraction au Brancolar ?",
     answer:
       "Oui, je sécurise rapidement la porte concernée 24h/24, puis je propose une solution durable une fois le diagnostic complet effectué sur place.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir au Brancolar ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux, urgence ou non.",
   },
 ];
 

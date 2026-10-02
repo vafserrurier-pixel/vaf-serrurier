@@ -306,7 +306,7 @@ const sectionsFr = [
     heading: "Porte claquée n'est pas porte verrouillée",
     Icon: <DoorIcon className="w-4 h-4" />,
     paragraphs: [
-      "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée (fermée par le simple mouvement du battant, sans tour de clé) se résout très souvent sans aucune casse. J'utilise le plus souvent la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage dans 99% des cas. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
+      "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée (fermée par le simple mouvement du battant, sans tour de clé) se résout très souvent sans aucune casse. J'utilise le plus souvent la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage : 99% des portes claquées sont ouvertes sans dégât. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
     ],
   },
   {
@@ -414,7 +414,7 @@ const sectionsEn = [
   {
     heading: "A slammed door is not the same as a locked door",
     paragraphs: [
-      "This is the first question I ask on the phone, because the method changes completely depending on the case. A door slammed shut (closed by the simple movement of the door itself, without turning a key) very often gets resolved with zero damage. I most often use the radio method, also called the shim or by-pass technique: a thin rigid strip slid between the frame and the bolt, which releases the mechanism without damage in 99% of cases. A misaligned strike plate, a slightly warped bolt or a worn handle frequently cause this kind of jam, especially on the older doors in central Nice.",
+      "This is the first question I ask on the phone, because the method changes completely depending on the case. A door slammed shut (closed by the simple movement of the door itself, without turning a key) very often gets resolved with zero damage. I most often use the radio method, also called the shim or by-pass technique: a thin rigid strip slid between the frame and the bolt, which releases the mechanism without damage: 99% of slammed doors are opened with no damage. A misaligned strike plate, a slightly warped bolt or a worn handle frequently cause this kind of jam, especially on the older doors in central Nice.",
     ],
   },
   {

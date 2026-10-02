@@ -71,19 +71,9 @@ const faq = [
       "Oui, le blindage d'une porte existante permet souvent de renforcer la sécurité tout en conservant l'aspect d'origine, ce qui convient bien aux règlements de copropriété stricts.",
   },
   {
-    question: "Les tarifs sont-ils différents sur la Promenade des Anglais ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous dans les grands hôtels historiques du front de mer ?",
     answer:
       "Pour la partie serrurerie de leurs locaux et bureaux, oui, avec la discrétion et le professionnalisme attendus dans ce type d'établissement.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir dans ce secteur ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

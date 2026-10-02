@@ -73,19 +73,9 @@ const faq = [
       "Oui, avec l'arrivée de nouveaux logements, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité si besoin.",
   },
   {
-    question: "Les tarifs sont-ils différents à l'Ariane par rapport au centre de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de Nice. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Intervenez-vous après une effraction à l'Ariane ?",
     answer:
       "Oui, je sécurise rapidement la porte concernée puis propose une solution durable une fois le diagnostic effectué.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à l'Ariane ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 

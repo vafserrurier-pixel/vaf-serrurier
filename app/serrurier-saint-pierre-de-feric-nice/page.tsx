@@ -70,11 +70,6 @@ const faq = [
       "Oui, ce type de configuration est fréquent à Saint-Pierre-de-Féric. Je diagnostique la porte d'entrée principale ainsi que les accès secondaires si besoin.",
   },
   {
-    question: "Les tarifs sont-ils différents à Saint-Pierre-de-Féric par rapport au reste de Nice ?",
-    answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
-  },
-  {
     question: "Proposez-vous des solutions de blindage pour les maisons du secteur ?",
     answer:
       "Oui, selon l'état de votre porte, je peux vous orienter vers un blindage ou une serrure haute sécurité.",
@@ -83,11 +78,6 @@ const faq = [
     question: "Comment estimez-vous le délai d'intervention sur ce secteur excentré ?",
     answer:
       "Je vous donne une estimation réaliste dès l'appel téléphonique, en tenant compte de votre adresse précise et des conditions de circulation du moment.",
-  },
-  {
-    question: "Proposez-vous un devis avant d'intervenir à Saint-Pierre-de-Féric ?",
-    answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
   },
 ];
 
