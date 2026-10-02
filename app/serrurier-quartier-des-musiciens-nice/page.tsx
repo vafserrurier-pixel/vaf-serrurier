@@ -54,6 +54,12 @@ const blocks = [
       "Quand une clé a servi pendant des décennies, ses reliefs s'usent. Un double fait à partir d'une clé usée reproduit cette usure, et une copie de copie finit par mal fonctionner : elle accroche, elle force, et elle use à son tour le cylindre. Dans des immeubles de la fin du XIXe siècle, où des clés ont parfois traversé plusieurs générations d'occupants, mieux vaut partir de la clé d'origine si elle existe, ou d'une clé en bon état, avant d'en faire une nouvelle. Et si c'est le cylindre qui est usé, le remplacer coûte moins cher que de multiplier des doubles qui forcent. Je regarde votre clé et votre cylindre ensemble, car l'un abîme l'autre.",
     ],
   },
+  {
+    heading: "Plus de quatre logements sur cinq datent d'avant 1971",
+    paragraphs: [
+      "D'après l'INSEE, 53 % des résidences principales du secteur « Musiciens » ont été construites avant 1946 et 82 % avant 1971, contre 54 % pour l'ensemble de Nice. Seules 2 % datent d'après 1991. Les portes, les gâches et les cylindres de ces immeubles ont donc le plus souvent plusieurs décennies de service, et les pannes rencontrées sont d'abord des pannes d'usure : clé qui force, pêne qui accroche, cylindre qui tourne mal. Mieux vaut y répondre avant le blocage complet : c'est à ce moment que le remplacement d'un cylindre coûte le moins cher et se planifie à l'heure qui vous arrange. Source : INSEE, recensement de la population 2021, secteur « Musiciens ».",
+    ],
+  },
 ];
 
 const faq = [

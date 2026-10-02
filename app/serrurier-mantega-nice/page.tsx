@@ -50,6 +50,12 @@ const blocks = [
       "Un cylindre neuf se contrôle avant la fin de l'intervention. Je vous invite à tester avec moi : verrouiller et déverrouiller plusieurs fois porte ouverte d'abord, puis porte fermée, de l'intérieur comme de l'extérieur, pour vérifier que la clé tourne sans forcer. Comptez ensuite les clés remises, et gardez la carte de propriété si le cylindre en est fourni : elle sert à en commander d'autres. Conservez enfin la facture, qui indique la référence posée. Cette vérification prend quelques minutes, et elle évite de découvrir un défaut le lendemain, une fois la porte fermée à clé. Si quelque chose ne va pas, c'est sur le moment que je le règle.",
     ],
   },
+  {
+    heading: "Trois types de logements dans un petit secteur",
+    paragraphs: [
+      "Dans le secteur « Mantega », 32 % des résidences principales sont des logements sociaux loués vides, 24 % des logements sont des maisons, et 45 % des résidences principales datent d'avant 1946 (INSEE, recensement 2021). Logement social, maisons et immeubles anciens se côtoient donc dans un même secteur, avec des portes et des serrures très différentes. C'est pourquoi je ne propose jamais de solution avant d'avoir vu la porte : un diagnostic sur place, ou au moins une photo envoyée par WhatsApp, permet de savoir si on a affaire à une porte ancienne, à une porte de maison ou à une porte d'ensemble collectif. Source : INSEE, recensement de la population 2021, secteur « Mantega ».",
+    ],
+  },
 ];
 
 const faq = [

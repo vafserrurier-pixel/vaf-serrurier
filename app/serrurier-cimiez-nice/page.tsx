@@ -54,6 +54,12 @@ const blocks = [
       <>{"Sur une porte ancienne en bois, la serrure est souvent encastrée dans l'épaisseur du battant : c'est le coffre à larder, la boîte qui contient le mécanisme et les pênes. Le cylindre n'en est que la partie qui reçoit la clé. Le remplacer suffit tant que le coffre fonctionne, mais un coffre usé ou faussé par les années donne une porte qui accroche ou un pêne qui ne sort plus complètement. Dans ce cas, changer le cylindre seul ne règle rien. Remplacer le coffre demande de retrouver un modèle aux bonnes cotes, pour ne pas agrandir la mortaise ni abîmer le bois. Je vous le dis franchement après diagnostic : si le cylindre suffit, je ne touche à rien d'autre. Le choix entre cylindre et serrure complète est expliqué sur la page "}<Link href="/changement-serrure-nice/" className="text-steel underline">changement de serrure</Link>{"."}</>,
     ],
   },
+  {
+    heading: "Près de trois foyers sur quatre sont propriétaires : choisir le bon niveau de serrure",
+    paragraphs: [
+      <>{"73 % des résidences principales du secteur « Cimiez » sont occupées par leur propriétaire, contre 48 % à l'échelle de Nice, et 61 % des foyers disposent d'une place de stationnement réservée. Quand on est propriétaire, la question n'est plus seulement de réparer mais de choisir : cylindre standard, cylindre certifié A2P, serrure multipoints. Le bon niveau dépend de la porte, de l'assurance et de l'usage, et un cylindre de très haute sécurité posé sur une porte fragile n'apporte presque rien. Je regarde la porte et son cadre avant de recommander, et je vous explique ce que change la "}<Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">certification A2P</Link>{". Source : INSEE, recensement de la population 2021, secteur « Cimiez »."}</>,
+    ],
+  },
 ];
 
 const faq = [

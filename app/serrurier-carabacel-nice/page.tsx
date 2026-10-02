@@ -54,6 +54,12 @@ const blocks = [
       "Une serrure solide ne sert à rien si la pièce qui la reçoit cède. Côté cadre, la gâche est la petite plaque métallique dans laquelle s'engage le pêne : sur une vieille porte, elle est parfois fixée par de simples vis courtes dans un bois fatigué. Un choc suffit alors à arracher la fixation, même avec un cylindre neuf. Quand le cadre est sain, la solution consiste à poser une contre-plaque plus robuste et des vis plus longues, qui vont chercher la structure en profondeur. L'aspect côté palier ne change pas, et le gain est réel pour peu de matériel. Je regarde systématiquement l'état de la gâche lors d'un changement de cylindre, et je ne vous propose un renfort que s'il est justifié.",
     ],
   },
+  {
+    heading: "Des propriétaires dans des immeubles anciens : la serrure et l'assurance",
+    paragraphs: [
+      "60 % des résidences principales du secteur « Carabacel » sont occupées par leur propriétaire, et 51 % datent d'avant 1946 (INSEE, recensement 2021). Quand on possède un appartement dans un immeuble ancien, la question de la serrure se pose aussi du côté de l'assurance habitation : certains contrats fixent des exigences sur les fermetures de la porte d'entrée, et d'autres prévoient des conditions en cas de vol. Avant d'engager une dépense, relisez le vôtre. Une facture détaillée de l'intervention, qui indique la référence posée, vous servira dans les deux cas. Source : INSEE, recensement de la population 2021, secteur « Carabacel ».",
+    ],
+  },
 ];
 
 const faq = [

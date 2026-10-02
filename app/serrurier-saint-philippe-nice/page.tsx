@@ -54,6 +54,12 @@ const blocks = [
       "Une rénovation implique du monde : plombier, peintre, menuisier, parfois un entrepreneur qui garde un jeu de clés pendant plusieurs semaines. Une fois le chantier terminé, ces clés ne vous reviennent pas toujours toutes, et certaines ont pu être dupliquées pour la commodité du chantier. Dans une villa avec jardin, entre la porte principale, un portillon et un accès secondaire, cela fait plusieurs accès concernés. Le plus sûr est de changer les cylindres concernés à la fin des travaux, puis de redistribuer des clés neuves. C'est une opération courte, bien moins pénible que de ne pas savoir qui détient quoi. Je peux faire le point sur les accès de la propriété et vous dire lesquels méritent d'être remplacés.",
     ],
   },
+  {
+    heading: "91 % d'appartements et 9 % de maisons : deux façons de traiter une porte",
+    paragraphs: [
+      "Le secteur « Saint-Philippe » compte 91 % d'appartements et 9 % de maisons, avec 55 % de foyers disposant d'une place de stationnement (recensement 2021). La différence compte pour la serrure. Une porte d'appartement est une porte palière, parfois soumise au règlement de copropriété, et partage son palier avec des voisins. Une porte de maison est seule, exposée de plusieurs côtés, avec souvent un portillon et un accès secondaire. Sur la première on soigne la discrétion et la finition, sur la seconde on vérifie tous les accès. Je vous pose la question au téléphone avant de venir. Source : INSEE, recensement de la population 2021, secteur « Saint-Philippe ».",
+    ],
+  },
 ];
 
 const faq = [

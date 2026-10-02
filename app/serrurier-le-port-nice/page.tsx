@@ -54,6 +54,12 @@ const blocks = [
       "Perdre ses clés ne justifie pas toujours de changer la serrure. Tout dépend des circonstances. Si vous les avez égarées chez vous ou dans un lieu précis que vous pouvez fouiller, il suffit souvent de les retrouver ou de refaire un double. Si elles ont disparu dehors, avec une adresse que quelqu'un peut deviner (un porte-clés portant votre nom, des papiers dans un sac volé), mieux vaut changer le cylindre : c'est la seule façon d'être sûr que l'ancienne clé n'ouvre plus rien. Entre les deux, je vous pose les questions qui permettent de trancher, quitte à vous dire que ce n'est pas nécessaire. Un cylindre se remplace rapidement, et vous repartez avec de nouvelles clés.",
     ],
   },
+  {
+    heading: "Un logement sur quatre est une résidence secondaire",
+    paragraphs: [
+      "Dans le secteur « Port », 25 % des logements sont des résidences secondaires ou occasionnelles, contre 14 % à Nice, et 44 % des résidences principales sont louées. 80 % des résidences principales datent d'avant 1971. Dans ces logements souvent anciens et occupés par intermittence, deux situations reviennent : la porte qui se ferme sur quelqu'un qui n'a pas les clés, et la serrure peu utilisée qui résiste au retour. Un cylindre qui tourne sans forcer avant de partir est le meilleur moyen d'éviter un appel à l'arrivée. Je suis disponible à toute heure, avec un prix annoncé avant l'intervention. Source : INSEE, recensement de la population 2021, secteur « Port ».",
+    ],
+  },
 ];
 
 const faq = [

@@ -54,6 +54,12 @@ const blocks = [
       <>{"Autour d'une place animée, les appels tardifs ne sont pas rares : porte claquée au retour d'un restaurant, clé perdue le dimanche. Je suis disponible à toute heure, avec une majoration de 50% le soir, le week-end et les jours fériés. Ce qu'il faut savoir : elle ne s'applique qu'à ma main-d'œuvre et à mon déplacement, jamais au prix d'une pièce. Un cylindre coûte exactement le même prix un dimanche à minuit qu'un mardi après-midi. Et vous connaissez le total avant que je me déplace, sans mauvaise surprise sur place. Si la situation peut attendre le lendemain, je vous le dis honnêtement au téléphone : parfois, sécuriser la porte pour la nuit suffit, et le remplacement peut se planifier en journée. Le détail figure sur la page des "}<Link href="/tarifs-serrurier-nice/" className="text-steel underline">tarifs</Link>{"."}</>,
     ],
   },
+  {
+    heading: "Moitié locataires, moitié propriétaires : qui décide de la serrure ?",
+    paragraphs: [
+      <>{"Dans le secteur « Garibaldi », 50 % des résidences principales sont occupées par des locataires et 47 % par leurs propriétaires. Les deux situations cohabitent souvent dans le même immeuble, et la question revient à chaque panne : qui décide, qui paie ? En règle générale, le remplacement d'une serrure usée relève du propriétaire, tandis que la perte ou la casse des clés est à la charge de l'occupant, sous réserve de ce que prévoit le bail. Mieux vaut en parler avant l'intervention. Je remets un devis détaillé, qui permet à chacun de s'y retrouver. Le sujet est traité dans l'article "}<Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">qui paie le changement de serrure en location</Link>{". Source : INSEE, recensement de la population 2021, secteur « Garibaldi »."}</>,
+    ],
+  },
 ];
 
 const faq = [

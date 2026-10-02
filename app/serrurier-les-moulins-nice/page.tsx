@@ -54,6 +54,12 @@ const blocks = [
       "Dans les ensembles construits entre 1965 et 1976, certaines serrures d'origine ne sont plus fabriquées. Quand un mécanisme tombe en panne, la pièce de rechange n'existe parfois plus. Deux solutions : trouver un cylindre ou un coffre compatible aux mêmes cotes, ce qui suffit si le mécanisme est sain, ou remplacer la serrure entière par un modèle moderne qui se fixe aux mêmes emplacements. Je commence par identifier la marque et les cotes de votre serrure, souvent lisibles sur la tranche de la porte ou sur le coffre. Le but est de ne pas percer ni modifier la porte inutilement. Une photo de la serrure me permet souvent de savoir avant de venir si une pièce compatible existe.",
     ],
   },
+  {
+    heading: "98 % de locataires : qui prévenir avant une intervention",
+    paragraphs: [
+      "Dans le secteur « Les Moulins », 98 % des résidences principales sont louées et 94 % sont des logements sociaux loués vides (INSEE, recensement 2021). Avec une grande partie des logements gérés par des bailleurs sociaux, la règle simple est de prévenir le bailleur avant toute intervention qui change la serrure d'une porte palière, sauf urgence. Pour une perte de clé, une porte qui ne ferme plus ou une effraction, je sécurise la porte dans l'heure et je remets une facture détaillée, que vous pourrez présenter au bailleur. Le prix est annoncé avant mon déplacement, de jour comme de nuit. Source : INSEE, recensement de la population 2021, secteur « Les Moulins ».",
+    ],
+  },
 ];
 
 const faq = [

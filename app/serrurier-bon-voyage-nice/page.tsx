@@ -53,6 +53,12 @@ const blocks = [
       "Dans un logement loué, les doubles se multiplient : locataire, conjoint, famille, agence. Avec une clé ordinaire, n'importe quel magasin peut en faire une copie en quelques minutes. Les cylindres à clé protégée changent cela : les clés sont fournies avec une carte de propriété, et seul le titulaire de la carte peut en commander d'autres. Pour un propriétaire bailleur, c'est un moyen de savoir combien de clés existent ; pour un locataire, de ne pas voir le nombre de doubles lui échapper. Un tel cylindre est plus coûteux qu'un modèle standard, et tout le monde n'en a pas besoin. Je vous dis, selon la porte et l'usage, si ce niveau d'équipement a un intérêt dans votre cas.",
     ],
   },
+  {
+    heading: "Logement social : ce qui change quand le bailleur est propriétaire",
+    paragraphs: [
+      "Dans le secteur « Bon Voyage », 75 % des foyers sont locataires et 57 % des résidences principales sont des logements sociaux loués vides, contre 12 % à l'échelle de Nice (INSEE, recensement 2021). Quand le logement appartient à un bailleur, la question de la serrure se règle avec lui : il peut exiger d'être prévenu avant un changement, et le bail précise en général ce qui est à la charge de l'occupant. En cas d'urgence, une porte qui ne ferme plus ou une clé perdue, je sécurise d'abord. Vous gardez ensuite la facture détaillée pour la présenter à votre bailleur. Source : INSEE, recensement de la population 2021, secteur « Bon Voyage ».",
+    ],
+  },
 ];
 
 const faq = [

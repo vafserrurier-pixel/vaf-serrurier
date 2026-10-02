@@ -54,6 +54,12 @@ const blocks = [
       "Quand on renforce une porte, on pense d'abord à la serrure. Or une porte peut aussi être attaquée côté charnières, en la soulevant ou en la forçant au levier. Les pivots anti-dégondage, de petites tiges fixées dans le battant et le cadre, empêchent la porte de sortir de son logement même si les charnières cèdent. Les cornières anti-pince, elles, protègent la tranche de la porte contre l'effet de levier. Ces renforts s'ajoutent à une porte existante, sans la remplacer, et conviennent surtout aux portes en bon état. Pour un logement d'immeuble proche de la gare, c'est une option raisonnable quand on veut renforcer sans changer de porte. Je vérifie d'abord que la porte et le cadre peuvent les recevoir, puis je vous dis lesquels valent la peine.",
     ],
   },
+  {
+    heading: "Deux générations d'immeubles dans le même secteur",
+    paragraphs: [
+      "Dans le secteur « Riquier », 36 % des résidences principales datent d'avant 1971 et 28 % d'après 1991 (INSEE, recensement 2021). Deux générations de portes cohabitent donc dans un même secteur : des portes anciennes, avec des cylindres d'époque, et des portes récentes, souvent multipoints. Elles ne se dépannent pas de la même façon. Pour que j'arrive avec le bon matériel, une photo de la serrure vue de face, envoyée par WhatsApp, suffit souvent à savoir à quelle génération on a affaire. Le prix est annoncé avant que je me déplace. Source : INSEE, recensement de la population 2021, secteur « Riquier ».",
+    ],
+  },
 ];
 
 const faq = [

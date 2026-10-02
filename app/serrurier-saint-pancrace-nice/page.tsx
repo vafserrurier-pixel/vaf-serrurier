@@ -54,6 +54,12 @@ const blocks = [
       "Autour d'une maison avec jardin, il y a souvent un abri, un cabanon ou un local à outils fermé par un cadenas acheté une fois pour toutes. Il est pourtant plus vulnérable que la porte de la maison : anse fine, corps léger, fixation faible. Un cadenas se choisit selon ce qu'il protège : pour des outils de valeur, un modèle à anse protégée et un moraillon fixé dans un support sain font la différence. Les vis du moraillon doivent rester cachées ou être rivetées côté extérieur, sinon le meilleur cadenas ne sert pas à grand-chose. Si la fermeture se fait par une serrure, vérifiez qu'elle tourne sans forcer. Je peux vous conseiller sur la fermeture d'un local extérieur, sans suréquipement.",
     ],
   },
+  {
+    heading: "Six logements sur dix sont des maisons, plus d'un tiers date d'après 1991",
+    paragraphs: [
+      "Pour le secteur statistique « Saint-Pancrace-Pessicart », l'INSEE compte 62 % de maisons, 37 % de résidences principales construites depuis 1991 et 87 % de foyers disposant d'une place de stationnement. Un bâti récent a souvent une porte d'entrée multipoints, plus complexe qu'une serrure ancienne : quand elle force, c'est souvent un défaut de réglage plus qu'une serrure à remplacer. Je commence par vérifier l'alignement de la porte et de la gâche avant de proposer un remplacement. C'est ce qui évite de changer une pièce qui fonctionne. Source : INSEE, recensement de la population 2021, secteur « Saint-Pancrace-Pessicart ».",
+    ],
+  },
 ];
 
 const faq = [

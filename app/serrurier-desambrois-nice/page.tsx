@@ -54,6 +54,12 @@ const blocks = [
       "Quand on achète un appartement dans un immeuble ancien, on reçoit les clés du vendeur, mais on ignore combien d'exemplaires existent : anciens occupants, famille, agence, artisans venus pour des travaux. Changer le cylindre avant de s'installer permet de repartir avec une seule série de clés, connue de vous seul. Dans un immeuble Belle Époque, c'est souvent une opération simple : si la serrure d'origine est en bon état, on remplace uniquement le cylindre par un modèle compatible, sans toucher à la porte ni à sa finition. J'en profite pour vérifier le coffre, la gâche et le fonctionnement du pêne, afin que vous sachiez ce qui est sain et ce qui devra être surveillé. Un seul passage, avant que les cartons n'arrivent.",
     ],
   },
+  {
+    heading: "Seuls 21 % des foyers ont une place de stationnement",
+    paragraphs: [
+      "Dans le secteur « Desambrois », 21 % des résidences principales seulement disposent d'un emplacement réservé de stationnement, contre 48 % à l'échelle de Nice, et 48 % des foyers n'ont pas de voiture. À Nice, se garer est de toute façon toujours compliqué : j'en tiens compte pour que mon délai de 30 minutes maximum reste tenable. Pour vous, la précision utile est simple : au téléphone, donnez le numéro dans la rue, le code d'entrée et l'étage. J'arrive ainsi directement à la bonne porte, sans chercher un autre accès. Source : INSEE, recensement de la population 2021, secteur « Desambrois ».",
+    ],
+  },
 ];
 
 const faq = [

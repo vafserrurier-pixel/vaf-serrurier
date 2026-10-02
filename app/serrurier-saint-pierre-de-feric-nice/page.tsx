@@ -51,6 +51,12 @@ const blocks = [
       "Toutes les portes d'entrée n'acceptent pas les mêmes serrures. Une porte en bois massif se perce et s'entaille facilement, alors qu'une porte en aluminium ou en PVC dispose d'un profil qui impose des serrures et des gâches compatibles. Poser un mécanisme inadapté sur un profil creux peut abîmer la porte, fixer mal la serrure ou donner une fermeture qui force. Quand je remplace une serrure dans une maison, je commence donc par identifier le matériau et la marque de la porte, puis je choisis un mécanisme conçu pour ce type de profil. C'est particulièrement utile dans les propriétés qui ont plusieurs accès, où chaque porte peut être différente. Une photo de la porte et de la serrure, envoyée avant ma venue, m'aide à préparer le bon matériel.",
     ],
   },
+  {
+    heading: "Un foyer sur trois en maison : l'entrée par le garage",
+    paragraphs: [
+      "Dans le secteur « Saint-Pierre de Féric », 34 % des logements sont des maisons et 89 % des foyers disposent d'une place de stationnement réservée, contre 48 % à l'échelle de Nice (INSEE, recensement 2021). Quand la voiture se gare chez soi, on rentre souvent par le garage ou par une porte de service, et cette porte est parfois moins bien fermée que la porte d'entrée. Vérifier qu'elle ferme à clé, que le cylindre ne dépasse pas et que la gâche est solide ne prend que quelques minutes. Je regarde tous les accès de la maison quand j'interviens sur l'un d'eux. Source : INSEE, recensement de la population 2021, secteur « Saint-Pierre de Féric ».",
+    ],
+  },
 ];
 
 const faq = [

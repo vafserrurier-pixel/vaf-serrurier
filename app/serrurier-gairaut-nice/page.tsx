@@ -54,6 +54,12 @@ const blocks = [
       "Sur une villa, le portillon est souvent le premier obstacle, et la serrure qui le ferme vit dehors : pluie, poussière, soleil. Au fil des mois, elle durcit, la clé force, le pêne accroche. Plutôt que d'attendre qu'elle bloque, mieux vaut la faire contrôler : une serrure de portillon mal alignée ou fatiguée se règle ou se remplace, et il existe des modèles conçus pour l'extérieur. Si le portail est motorisé, une serrure manuelle sert souvent de secours : elle doit donc fonctionner le jour où l'électricité manque. Je regarde l'état de la serrure et le jeu du portillon avant de proposer quoi que ce soit. Un portillon qui ne se verrouille plus laisse aussi le jardin accessible, donc la porte de la maison : mieux vaut le traiter tôt.",
     ],
   },
+  {
+    heading: "Des occupants installés depuis dix-neuf ans en moyenne",
+    paragraphs: [
+      "Dans le secteur « Gairaut », 71 % des logements sont des maisons, 77 % des résidences principales sont occupées par leur propriétaire, et les ménages y vivent depuis 19,1 ans en moyenne, contre 14 ans à l'échelle de Nice (INSEE, recensement 2021). Dans une maison que l'on occupe depuis près de vingt ans, la serrure de la porte d'entrée est souvent d'origine. Un cylindre remplacé n'est pas un luxe après autant d'années : il remet à zéro les clés données à des artisans, à des proches ou à d'anciens occupants. Je vous le propose uniquement si le cylindre le justifie. Source : INSEE, recensement de la population 2021, secteur « Gairaut ».",
+    ],
+  },
 ];
 
 const faq = [

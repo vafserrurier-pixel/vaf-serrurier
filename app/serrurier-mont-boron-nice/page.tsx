@@ -52,6 +52,12 @@ const blocks = [
       <>{"Sur une villa, la question se pose tôt ou tard : renforcer la porte actuelle ou la remplacer par un bloc-porte blindé ? Si la porte et son cadre sont sains, un blindage conserve l'existant, de l'extérieur comme de l'intérieur, et améliore nettement la résistance. Si le bois est fatigué, la menuiserie déformée, ou si vous voulez aussi une meilleure isolation, une "}<Link href="/installation-porte-blindee-nice/" className="text-steel underline">porte blindée neuve</Link>{", avec son huisserie, sera plus cohérente que d'empiler des renforts sur un support abîmé. Le bon choix dépend de l'état réel de la porte et du cadre, pas du budget seul : je regarde sur place et je vous dis lequel est justifié. Dans les deux cas, le devis est annoncé avant toute intervention."}</>,
     ],
   },
+  {
+    heading: "Propriétaire absent, porte fermée : comment je m'assure d'ouvrir pour la bonne personne",
+    paragraphs: [
+      "42 % des logements du secteur « Mont Boron » sont des résidences secondaires ou occasionnelles, et 70 % des résidences principales sont occupées par leur propriétaire (INSEE, recensement 2021). Il arrive donc qu'un propriétaire, ou son représentant, m'appelle pour une porte fermée alors qu'il est loin. J'ouvre une porte uniquement après m'être assuré que la personne présente est bien l'occupant, ou qu'elle est mandatée par lui : une pièce d'identité est toujours demandée. Cela protège le propriétaire autant que moi. Prévenez-moi dès l'appel si vous n'êtes pas sur place. Source : INSEE, recensement de la population 2021, secteur « Mont Boron ».",
+    ],
+  },
 ];
 
 const faq = [

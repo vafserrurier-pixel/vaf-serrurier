@@ -54,6 +54,12 @@ const blocks = [
       "Sur une porte d'immeuble de standing, on hésite parfois à intervenir lourdement. Il existe pourtant une option mesurée : ajouter un verrou de sûreté en complément de la serrure existante. Deux points de fermeture indépendants valent mieux qu'un seul, car il faut venir à bout des deux. Le choix dépend de la porte : un verrou en applique, fixé sur la face intérieure, se pose sans modifier l'aspect côté palier, alors qu'un système encastré demande d'entailler le battant. Je vous indique ce que la porte accepte, en tenant compte du règlement de copropriété s'il encadre l'équipement des portes, plutôt que de poser un matériel qui ne tiendrait pas. C'est souvent le compromis le plus simple entre sécurité et préservation de l'existant.",
     ],
   },
+  {
+    heading: "Un logement sur cinq est vacant : les vérifications avant une remise en location",
+    paragraphs: [
+      "Selon l'INSEE, 19 % des logements du secteur « Parc Impérial » sont vacants, contre 14 % à l'échelle de Nice. Un logement vacant est un logement dont personne ne surveille la porte : la serrure peu utilisée peut gripper, et les clés ont circulé entre l'agence, l'ancien occupant et d'éventuels artisans. Avant de louer ou de revendre, trois vérifications suffisent : faire tourner la clé plusieurs fois sans forcer, compter les exemplaires restants, et changer le cylindre si l'ancien occupant n'a pas rendu toutes ses clés. C'est rapide, et cela évite un appel le soir de la remise des clés. Source : INSEE, recensement de la population 2021, secteur « Parc Impérial ».",
+    ],
+  },
 ];
 
 const faq = [

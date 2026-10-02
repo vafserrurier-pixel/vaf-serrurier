@@ -54,6 +54,12 @@ const blocks = [
       "Une porte palière qui ferme de plus en plus difficilement n'est pas toujours un problème de serrure. Avec le temps, les charnières prennent du jeu, la porte s'affaisse de quelques millimètres et le pêne n'est plus en face de la gâche : on force pour fermer, et on finit par abîmer le mécanisme. Remplacer la serrure ne règle alors rien, c'est la porte qui doit être réglée. Je commence toujours par observer l'alignement : un réglage des charnières ou un léger décalage de la gâche suffit souvent à retrouver une fermeture douce. Si le problème vient bien du mécanisme, je le dis aussi. L'intérêt est d'éviter de payer une serrure neuve qui forcerait dès la première semaine.",
     ],
   },
+  {
+    heading: "Des logements plutôt grands : plusieurs clés, plusieurs occupants",
+    paragraphs: [
+      "Dans le secteur de l'Ariane (quatre secteurs statistiques « Ariane »), 37 % des résidences principales ont quatre pièces ou plus, contre 23 % à Nice, et 68 % sont des logements sociaux loués vides. Dans des logements familiaux, la porte est utilisée par plusieurs personnes aux horaires différents, et les clés se multiplient : enfants, conjoint, proches. Quand une clé disparaît, la question est de savoir qui l'avait et où elle a pu être perdue. Si c'est dehors, avec l'adresse, mieux vaut changer le cylindre. Si c'est à la maison, on peut souvent attendre. Je vous aide à trancher. Source : INSEE, recensement de la population 2021, secteurs « Ariane-Les Chênes » et « Ariane-Monzie » et « Ariane-Ripert » et « Ariane-Saramito ».",
+    ],
+  },
 ];
 
 const faq = [

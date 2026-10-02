@@ -51,6 +51,12 @@ const blocks = [
       "Dans un immeuble qui abrite des boutiques au rez-de-chaussée et des appartements aux étages, tout le monde n'a pas besoin des mêmes accès. Le commerçant doit entrer dans sa boutique et son arrière-boutique, les résidents dans le hall et chez eux, le syndic ou le gardien dans les parties communes. Un organigramme de clés répond à cela : chaque porte a son cylindre, certaines clés en ouvrent plusieurs, d'autres une seule. Concrètement, la clé d'un résident ouvre le hall et son appartement, mais pas la réserve d'un commerce. Quand un cylindre de hall est remplacé, c'est le bon moment pour remettre ces accès à plat, plutôt que de multiplier des doubles qui ouvrent tout. Je vous aide à définir ce plan avant de poser quoi que ce soit.",
     ],
   },
+  {
+    heading: "De petits logements, souvent loués ou occupés par intermittence",
+    paragraphs: [
+      "Selon le recensement 2021 de l'INSEE, 57 % des résidences principales du secteur « Jean Médecin » comptent une ou deux pièces et 37 % font moins de 40 m², contre 22 % à l'échelle de Nice. 57 % des foyers y sont locataires, et 31 % des logements sont des résidences secondaires ou occasionnelles. Dans de petits logements très occupés, ou au contraire occupés par intermittence, l'essentiel n'est pas de multiplier les points de fermeture : c'est d'avoir un cylindre en bon état et un nombre de clés connu. Un contrôle rapide de la serrure à chaque changement d'occupant évite bien des appels. Source : INSEE, recensement de la population 2021, secteur « Jean Médecin ».",
+    ],
+  },
 ];
 
 const faq = [

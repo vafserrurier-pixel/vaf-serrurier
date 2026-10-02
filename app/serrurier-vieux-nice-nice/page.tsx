@@ -51,6 +51,12 @@ const blocks = [
       "Se garer est toujours compliqué à Nice, et dans le Vieux-Nice il n'y a pas d'ascenseur dans les immeubles : je gère le stationnement de mon côté, puis je monte les étages à pied avec mon matériel jusqu'à votre porte. Dans tous les cas, mon délai est de 30 minutes maximum. Pour que la montée serve à quelque chose, trois précisions au téléphone me font gagner du temps : l'étage, le type de porte et ce qui s'est passé, porte claquée, clé cassée ou clé perdue. Je monte ainsi avec le bon matériel, y compris pour un remplacement de serrure, sans avoir à redescendre chercher une pièce. Le soin est le même pour un appartement en location saisonnière que pour un logement habité à l'année.",
     ],
   },
+  {
+    heading: "83 % de logements d'avant 1946 et 42 % de moins de 40 m²",
+    paragraphs: [
+      "Pour les secteurs « Vieux Nice-Sainte-Réparate » et « Vieux Nice-Visitation », l'INSEE compte 83 % de résidences principales construites avant 1946, 42 % de moins de 40 m² et 69 % de foyers locataires, avec 32 % de résidences secondaires ou occasionnelles. Des logements très anciens et très petits, avec des portes qui n'ont parfois ni les dimensions ni le mécanisme des modèles courants : c'est pourquoi un cylindre standard ne convient pas toujours. Je prends les mesures et je regarde la serrure en place avant de proposer quoi que ce soit, plutôt que de poser un modèle qui irait mal. Source : INSEE, recensement de la population 2021, secteurs « Vieux Nice-Sainte-Réparate » et « Vieux Nice-Visitation ».",
+    ],
+  },
 ];
 
 const faq = [

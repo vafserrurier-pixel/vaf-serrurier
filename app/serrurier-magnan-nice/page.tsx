@@ -54,6 +54,12 @@ const blocks = [
       "On soigne la porte d'entrée de l'appartement et on oublie la cave ou le box, qui ferment souvent avec un simple cadenas ou une serrure basique. Si votre résidence dispose de ce type de local, vérifiez ce qui le ferme. Un cadenas à anse longue se coupe facilement ; un cadenas à anse protégée ou une serrure de sûreté résiste mieux. Pour une porte de cave en bois, une serrure adaptée à l'épaisseur du battant et une gâche bien fixée font déjà la différence. Ces locaux sont parties privatives ou communes selon le règlement de copropriété : commencez par savoir de laquelle il s'agit avant d'engager des frais. Je peux ensuite vous conseiller une solution réaliste, sans suréquipement.",
     ],
   },
+  {
+    heading: "Près de quatre logements sur dix sont occupés à temps partiel",
+    paragraphs: [
+      "39 % des logements du secteur « Magnan » sont des résidences secondaires ou des logements occasionnels, contre 14 % à l'échelle de Nice, et 57 % des résidences principales sont louées (INSEE, recensement 2021). Un appartement occupé quelques semaines par an est un appartement dont la serrure sert peu, et dont les clés circulent entre propriétaires, locataires de passage et gestionnaires. Avant chaque remise des clés, faire tourner le cylindre et vérifier qu'il ferme bien est un geste rapide. Après un changement d'occupant, un cylindre neuf remet les clés à zéro. Je peux intervenir en 30 minutes maximum quand une porte claque entre deux séjours. Source : INSEE, recensement de la population 2021, secteur « Magnan ».",
+    ],
+  },
 ];
 
 const faq = [

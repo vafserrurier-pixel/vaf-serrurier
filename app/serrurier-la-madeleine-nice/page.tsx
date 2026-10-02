@@ -54,6 +54,12 @@ const blocks = [
       "Dans un appartement de résidence, la question du nombre de points revient souvent : trois, cinq, sept ? Une serrure multipoints verrouille la porte en plusieurs endroits à la fois : au centre, en haut et en bas. Plus il y a de points, plus la porte est tenue sur toute sa hauteur et moins elle se déforme sous l'effort. Mais plus de points ne veut pas dire plus de sécurité à tous les coups : la solidité du cadre, de la porte et du cylindre compte autant. Sur une porte palière de résidence collective, une serrure trois points avec un bon cylindre convient souvent ; je recommande davantage de points quand la porte et le cadre sont assez solides pour en profiter. Je vous dis ce qui est utile pour votre porte, pas ce qui coûte le plus cher.",
     ],
   },
+  {
+    heading: "41 % des logements font moins de 40 m² : éviter le suréquipement",
+    paragraphs: [
+      "Dans le secteur « Madeleine », 41 % des résidences principales ont moins de 40 m², contre 22 % à Nice, et 59 % sont louées. Pour un studio ou un deux-pièces, la tentation est de choisir la serrure la plus chère ou la moins chère : les deux sont rarement le bon choix. Un cylindre de bonne qualité, une gâche bien fixée et une porte qui ferme sans forcer suffisent le plus souvent, et le reste du budget est mieux employé ailleurs. Je vous dis honnêtement ce qui est utile pour votre porte. Le prix est annoncé avant l'intervention. Source : INSEE, recensement de la population 2021, secteur « Madeleine ».",
+    ],
+  },
 ];
 
 const faq = [

@@ -54,6 +54,12 @@ const blocks = [
       <>{"Après une tentative d'effraction ou un cambriolage, deux préoccupations se croisent : sécuriser la porte tout de suite et préserver ce qui servira au dossier. Avant que j'intervienne, évitez de toucher aux traces visibles, prenez quelques photos de la porte, du cylindre et du cadre, et prévenez votre assureur dans les délais prévus par votre contrat. Je sécurise la porte pour la nuit en protégeant l'accès, puis je propose une solution durable. Vous recevez une facture détaillée, qui sert de justificatif auprès de l'assurance. Je vous indique aussi ce que je constate sur la porte, ce qui aide à décrire le sinistre. La démarche est expliquée sur la page "}<Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">mise en sécurité après effraction</Link>{"."}</>,
     ],
   },
+  {
+    heading: "42 % des logements ont été construits depuis 1991",
+    paragraphs: [
+      "Dans le secteur « Pasteur », 42 % des résidences principales datent d'après 1991, contre 15 % à l'échelle de Nice, et 58 % des foyers sont locataires (recensement 2021 de l'INSEE). Dans un logement récent, la porte palière est le plus souvent équipée d'une serrure multipoints d'origine. Quand elle ferme mal ou qu'il faut forcer pour tourner la clé, la serrure elle-même est rarement en cause : l'alignement de la porte et de la gâche est le premier suspect. Je commence par là, ce qui évite de payer une serrure neuve qui forcerait aussi. Source : INSEE, recensement de la population 2021, secteur « Pasteur ».",
+    ],
+  },
 ];
 
 const faq = [

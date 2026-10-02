@@ -51,6 +51,12 @@ const blocks = [
       "Dans une villa, la porte d'entrée principale est soignée, mais d'autres accès existent : porte de cuisine, porte de service, accès au garage ou au sous-sol. On les ferme souvent avec une serrure plus simple, parce qu'on les voit moins. C'est pourtant un accès comme un autre, d'autant plus intéressant pour un intrus qu'il est souvent moins visible depuis la rue. Le réflexe : vérifier que chacune de ces portes ferme bien à clé, que la serrure n'est pas usée et que le cylindre ne dépasse pas. Pour une porte donnant sur un jardin boisé, une serrure de qualité et une gâche solide suffisent déjà à relever nettement le niveau. Je peux faire le tour des accès de la propriété et vous indiquer lesquels méritent d'être repris.",
     ],
   },
+  {
+    heading: "Des occupants installés depuis plus de seize ans",
+    paragraphs: [
+      "Dans le secteur « Mont Alban », les ménages occupent leur logement depuis 16,4 ans en moyenne, contre 14 ans à l'échelle de Nice, et 62 % des résidences principales sont occupées par leur propriétaire (INSEE, recensement 2021). Quand on reste aussi longtemps dans un logement, la serrure vieillit avec soi, et ses petits défauts deviennent une habitude : une clé qui force un peu, un pêne qui accroche. C'est pourtant le bon moment pour la faire contrôler. Un cylindre remplacé à froid se fait à l'heure qui vous convient, avec une clé neuve et un double pour un proche. Source : INSEE, recensement de la population 2021, secteur « Mont Alban ».",
+    ],
+  },
 ];
 
 const faq = [

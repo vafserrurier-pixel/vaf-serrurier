@@ -54,6 +54,12 @@ const blocks = [
       "Tourner la clé n'est pas un détail. Quand on tire simplement la porte, seul le pêne demi-tour la retient, ce qui n'offre qu'une protection limitée. Un tour de clé engage le pêne dormant, qui sort de la serrure et verrouille réellement la porte. Un second tour, quand la serrure en a deux, enfonce ce pêne plus loin. Prendre l'habitude de fermer à clé, y compris pour sortir cinq minutes, change vraiment le niveau de protection. Et si vous vous retrouvez dehors après avoir simplement tiré la porte, c'est le cas le plus simple pour une ouverture, souvent sans aucun dégât. Sur une porte multipoints, pensez aussi à relever la poignée avant de tourner la clé : c'est ce geste qui engage tous les points de fermeture.",
     ],
   },
+  {
+    heading: "Presque un logement sur deux a moins de trente ans",
+    paragraphs: [
+      "Dans le secteur « Saint-Antoine Ginestière », 48 % des résidences principales ont été construites depuis 1991 et 44 % des logements sont des maisons, avec 90 % de foyers disposant d'une place de stationnement (INSEE, recensement 2021). Le parc étant récent, on y rencontre moins d'anciens mécanismes : plutôt des portes d'entrée de série et des cylindres standard. Les interventions portent donc plus souvent sur un réglage, une clé perdue ou un renforcement choisi que sur l'usure. Je vous dis ce qui est nécessaire et ce qui est facultatif, avant de commencer. Source : INSEE, recensement de la population 2021, secteur « Saint-Antoine Ginestière ».",
+    ],
+  },
 ];
 
 const faq = [
