@@ -13,6 +13,7 @@ const strings = {
     whatsapp: "Écrire sur WhatsApp",
     email: "Écrire par email",
     areas: "Zones d'intervention",
+    services: "Services",
     pros: "Agences & syndics",
     legal: "Informations légales",
     legalNotice: "Mentions légales",
@@ -30,6 +31,7 @@ const strings = {
     whatsapp: "Message on WhatsApp",
     email: "Send an email",
     areas: "Areas covered",
+    services: "Services",
     pros: "Agencies & syndics",
     legal: "Legal information",
     legalNotice: "Legal notice",
@@ -41,6 +43,23 @@ const strings = {
     follow: "Follow along",
     rights: "All rights reserved.",
   },
+};
+
+const footerServices = {
+  fr: [
+    { href: "/urgence-serrurier-nice/", label: "Urgence serrurier" },
+    { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
+    { href: "/changement-serrure-nice/", label: "Changement de serrure" },
+    { href: "/blindage-porte-nice/", label: "Blindage de porte" },
+    { href: "/mise-en-securite-apres-effraction-nice/", label: "Après effraction" },
+  ],
+  en: [
+    { href: "/urgence-serrurier-nice/", label: "Emergency locksmith" },
+    { href: "/ouverture-de-porte-nice/", label: "Door opening" },
+    { href: "/changement-serrure-nice/", label: "Lock change" },
+    { href: "/blindage-porte-nice/", label: "Door reinforcement" },
+    { href: "/mise-en-securite-apres-effraction-nice/", label: "After a break-in" },
+  ],
 };
 
 export default function Footer() {
@@ -97,6 +116,16 @@ export default function Footer() {
               <li key={key}>
                 <Link href={sectorPages[key].href} prefetch={false} className="hover:underline">
                   {sectorPages[key].label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="font-heading font-semibold mt-5 mb-2">{t.services}</p>
+          <ul className="text-sm space-y-1">
+            {footerServices[locale].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} prefetch={false} className="hover:underline">
+                  {link.label}
                 </Link>
               </li>
             ))}

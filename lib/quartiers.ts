@@ -19,6 +19,37 @@ export function quartierHref(name: string): string {
   return `/serrurier-${slugifyQuartier(name)}-nice/`;
 }
 
+// Forme locative correcte (préposition + article) pour les titres : "Serrurier à Le Port"
+// serait fautif. Par défaut "à <nom>".
+const quartierLocatives: Record<string, string> = {
+  "Carré d'Or": "au Carré d'Or",
+  "Quartier Wilson": "dans le quartier Wilson",
+  "Quartier des Musiciens": "dans le quartier des Musiciens",
+  "Quartier des Fleurs": "dans le quartier des Fleurs",
+  Baumettes: "aux Baumettes",
+  Libération: "dans le quartier de la Libération",
+  "Parc Impérial": "au Parc Impérial",
+  "Promenade des Anglais": "sur la Promenade des Anglais",
+  "La Madeleine": "à la Madeleine",
+  "Vieux-Nice": "dans le Vieux-Nice",
+  "Mont Boron": "au Mont Boron",
+  "Mont Alban": "au Mont Alban",
+  "Le Port": "au Port",
+  Poètes: "dans le quartier des Poètes",
+  "L'Archet": "à l'Archet",
+  "l'Ariane": "à l'Ariane",
+  Californie: "à la Californie",
+  "Corniche des Oliviers": "sur la Corniche des Oliviers",
+  "Corniche Fleurie": "sur la Corniche Fleurie",
+  "Secteur Bellet": "dans le secteur de Bellet",
+  Arénas: "à l'Arénas",
+  "Les Moulins": "aux Moulins",
+};
+
+export function quartierLocative(name: string): string {
+  return quartierLocatives[name] ?? `à ${name}`;
+}
+
 export const builtQuartiers = [
   // Centre (19)
   "Jean-Médecin",

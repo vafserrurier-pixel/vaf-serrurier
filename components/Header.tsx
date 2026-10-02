@@ -180,25 +180,25 @@ export default function Header() {
                   />
                 </svg>
               </button>
-              {servicesOpen && (
-                <div
-                  role="menu"
-                  className="absolute left-0 top-full mt-2 w-64 bg-white border border-navy/10 rounded-lg shadow-lg py-2 z-50"
-                >
-                  {navServices.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      prefetch={false}
-                      role="menuitem"
-                      onClick={() => setServicesOpen(false)}
-                      className="block px-4 py-2 text-sm text-navy hover:bg-cream hover:text-steel"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {/* Toujours présent dans le HTML (masqué, pas supprimé) pour que les liens des services soient lisibles par les robots. */}
+              <div
+                role="menu"
+                hidden={!servicesOpen}
+                className="absolute left-0 top-full mt-2 w-64 bg-white border border-navy/10 rounded-lg shadow-lg py-2 z-50"
+              >
+                {navServices.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    prefetch={false}
+                    role="menuitem"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-sm text-navy hover:bg-cream hover:text-steel"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
             {navLinks.slice(1).map((link) => (
               <Link key={link.href} href={link.href} prefetch={false} className="hover:text-steel">

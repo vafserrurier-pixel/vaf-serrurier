@@ -18,7 +18,7 @@ import ContactForm from "./ContactForm";
 import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { quartierHref, relatedQuartiers, sectorPages } from "@/lib/quartiers";
+import { quartierHref, quartierLocative, relatedQuartiers, sectorPages } from "@/lib/quartiers";
 import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
@@ -127,6 +127,8 @@ export default function QuartierPageTemplate({
   brandsIntro?: string;
 }) {
   const url = `${business.domain}${path}`;
+  const lieu = quartierLocative(quartier);
+  const serrurierLieu = lieu.endsWith("Nice") ? `Serrurier ${lieu}` : `Serrurier ${lieu}, Nice`;
   const sectorInfo = sectorPages[sector];
   const nearbyQuartiers = relatedQuartiers(sector, quartier);
   const photo = pickPortrait(quartier);
@@ -136,7 +138,7 @@ export default function QuartierPageTemplate({
     <>
       <JsonLd
         data={serviceSchema({
-          name: `Serrurier à ${quartier}, Nice`,
+          name: serrurierLieu,
           description: intro[0],
           url,
           areaServed: { type: "Place", name: `${quartier}, Nice` },
@@ -164,7 +166,7 @@ export default function QuartierPageTemplate({
             />
             <AvailabilityBadge />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-              Serrurier à {quartier}, Nice
+              {serrurierLieu}
             </h1>
             {intro.map((paragraph, index) => (
               <p key={index} className="mt-4 text-slate leading-relaxed max-w-2xl">
@@ -223,7 +225,7 @@ export default function QuartierPageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-3 text-center">
-          Comment se déroule mon intervention à {quartier}
+          Comment se déroule mon intervention {lieu}
         </h2>
         <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
           De votre appel au règlement : un déroulement simple, sans zone d&apos;ombre.
@@ -234,7 +236,7 @@ export default function QuartierPageTemplate({
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
           <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
-            Mes tarifs à {quartier}
+            Mes tarifs {lieu}
           </h2>
           <PricingTable />
         </div>
@@ -242,10 +244,10 @@ export default function QuartierPageTemplate({
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">
-          Services disponibles à {quartier}
+          Services disponibles {lieu}
         </h2>
         <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
-          Le même artisan intervient pour l&apos;ensemble de ces services à {quartier}.
+          Le même artisan intervient pour l&apos;ensemble de ces services {lieu}.
         </p>
         <RelatedServicesGrid items={services} lieu={quartier} />
       </section>
@@ -313,7 +315,7 @@ export default function QuartierPageTemplate({
       {testimonial && (
         <section className="mx-auto max-w-3xl px-4 py-12">
           <p className="text-center text-xs font-semibold text-steel uppercase tracking-wide mb-4">
-            Un avis client à {quartier}
+            Un avis client {lieu}
           </p>
           <div className="relative bg-cream rounded-xl border border-navy/10 px-6 py-8 sm:px-10">
             <span
@@ -376,14 +378,14 @@ export default function QuartierPageTemplate({
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-2xl px-4 py-12">
           <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
-            Prenez rendez-vous avec votre serrurier à {quartier}
+            Prenez rendez-vous avec votre serrurier {lieu}
           </h2>
           <ContactForm services={services} />
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12 pb-14">
-        <CtaBlock title={`Besoin d'un serrurier à ${quartier} ?`} />
+        <CtaBlock title={`Besoin d'un serrurier ${lieu} ?`} />
       </section>
     </>
   );
