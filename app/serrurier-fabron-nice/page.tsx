@@ -51,7 +51,7 @@ const blocks = [
   {
     heading: "Porte vitrée ou avec grille : l'accès à la serrure par la vitre",
     paragraphs: [
-      "Sur une porte d'entrée comportant une partie vitrée près de la serrure, le risque est qu'on puisse atteindre le bouton ou la clé côté intérieur en cassant le verre. Pour ce type de porte, un cylindre qu'on ne peut pas actionner de l'intérieur sans clé, ou une serrure à clé des deux côtés, supprime cette faiblesse. Une grille décorative est un autre point à examiner : elle ne protège que si elle est solidement fixée. Je regarde, sur place, ce qu'on peut atteindre depuis l'extérieur, et je vous propose seulement ce qui est utile. Si la porte comporte une partie vitrée proche de la poignée, c'est le premier point que je regarde en arrivant. Dans une villa de caractère, le but reste de protéger sans défigurer l'entrée.",
+      "Sur une porte d'entrée comportant une partie vitrée près de la serrure, le risque est qu'on puisse atteindre le bouton ou la clé côté intérieur en cassant le verre. Pour ce type de porte, un cylindre qu'on ne peut pas actionner de l'intérieur sans clé, ou une serrure à clé des deux côtés, supprime cette faiblesse. Une grille décorative est un autre point à examiner : elle ne protège que si elle est solidement fixée. Je regarde, sur place, ce qu'on peut atteindre depuis l'extérieur, et je vous propose seulement ce qui est utile. Dans une villa de caractère, le but reste de protéger sans défigurer l'entrée.",
     ],
   },
 ];
