@@ -4,6 +4,7 @@ import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import ArticleTable from "@/components/ArticleTable";
 import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -11,7 +12,9 @@ const guideToc = [
   { id: "lignes", label: "Les cinq lignes en détail" },
   { id: "a2p", label: "Le niveau A2P BP, un critère de devis" },
   { id: "options", label: "Les options qui influencent le devis" },
+  { id: "comparatif", label: "Bloc-porte neuf ou blindage : le comparatif" },
   { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
+  { id: "devis", label: "Devis, acompte, délai et copropriété" },
   { id: "faq", label: "Questions complémentaires" },
 ];
 
@@ -19,17 +22,17 @@ const guideFaq = [
   {
     question: "Puis-je reproduire l'aspect de ma porte actuelle sur un bloc-porte neuf ?",
     answer:
-      "Oui, notamment avec la ligne Ferro, qui permet une reproduction de l'existant sur mesure. Le diagnostic sur place permet de définir précisément la finition la plus proche de votre porte actuelle.",
+      "Oui, notamment avec la ligne Ferro, qui permet une reproduction de l'existant possible. Le diagnostic sur place permet de définir précisément la finition la plus proche de votre porte actuelle.",
   },
   {
-    question: "Un bloc-porte à 2 vantaux ou de grande hauteur est-il possible ?",
+    question: "Un bloc-porte à 2 vantaux est-il possible ?",
     answer:
-      "Oui, 1 ou 2 vantaux sont possibles selon la configuration de votre entrée, avec des hauteurs sur mesure jusqu'à 6 mètres pour les configurations les plus importantes.",
+      "Oui, 1 ou 2 vantaux sont possibles selon la configuration de votre entrée. Les blocs-portes sont proposés en dimensions standard uniquement.",
   },
   {
-    question: "Combien de temps pour fabriquer et poser un bloc-porte sur mesure ?",
+    question: "Combien de temps faut-il pour avoir un bloc-porte ?",
     answer:
-      "La fabrication sur mesure prend généralement 24 à 48h (la ligne Ferro peut être fabriquée en 24h), puis la pose elle-même prend 2 à 3 heures, sans travaux de maçonnerie.",
+      "Le délai est d'environ 10 jours, sans travaux de maçonnerie.",
   },
 ];
 
@@ -52,14 +55,13 @@ const guideContent = (
         <strong className="text-navy">Solo</strong> propose du bois avec
         moulures, encastrées, à motifs design ou en applique selon la ligne
         choisie. Le <strong className="text-navy">Ferro</strong> associe des
-        panneaux acier à des moulures sur mesure, avec une reproduction de
-        l&apos;existant possible et une fabrication en 24h. Le{" "}
+        panneaux acier à des moulures, avec une reproduction de
+        l&apos;existant possible. Le{" "}
         <strong className="text-navy">Vitréo</strong> propose une version
-        vitrée entièrement sur mesure. Le{" "}
+        vitrée. Le{" "}
         <strong className="text-navy">Designo</strong> décline trois lignes
         design distinctes : graphique, esthétique et authentique. Toutes ces
-        lignes existent en 1 ou 2 vantaux, avec des hauteurs sur mesure
-        jusqu&apos;à 6 mètres.
+        lignes existent en 1 ou 2 vantaux, en dimensions standard.
       </p>
     </div>
 
@@ -73,7 +75,11 @@ const guideContent = (
         BP2 (10 minutes). Ce n&apos;est pas un tarif fixe mais un critère à
         définir ensemble selon votre budget et le niveau de sécurité
         recherché : un logement en rez-de-chaussée n&apos;a pas les mêmes
-        besoins qu&apos;un appartement en étage élevé.
+        besoins qu&apos;un appartement en étage élevé. Je recommande le niveau
+        en fonction du quartier et de la valeur des biens à protéger chez
+        vous. Le tarif de départ, 3 490 € TTC, correspond à un bloc-porte
+        certifié BP1 : les niveaux supérieurs et les autres lignes sont
+        chiffrés sur devis.
       </p>
     </div>
 
@@ -93,7 +99,38 @@ const guideContent = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
+      <ArticleSectionHeading number={4} id="comparatif" level="h3" size="lg" numberStyle="plain">
+        Bloc-porte neuf ou blindage : le comparatif
+      </ArticleSectionHeading>
+      <p className="text-slate leading-relaxed mb-4">
+        Les deux solutions protègent votre entrée, mais elles ne répondent pas à
+        la même situation. Voici ce qui les distingue, en chiffres et en
+        conditions :
+      </p>
+      <ArticleTable
+        headers={["Critère", "Blindage de porte", "Bloc-porte neuf"]}
+        rows={[
+          ["Votre porte", "Conservée, renforcée par un bâti acier", "Remplacée entièrement (porte, dormant, serrure)"],
+          ["Quand le choisir", "Porte viable : bois sain, bâti en état", "Porte ou bâti trop dégradés"],
+          ["Prix de départ (TTC)", "À partir de 2 689 € (modèle Citadin, pose comprise)", "À partir de 3 490 € (certifié BP1, pose comprise)"],
+          ["Délai", "Pose en environ 4 heures", "Délai d'environ 10 jours"],
+          ["Aspect extérieur", "Inchangé", "Peut changer selon la ligne choisie"],
+          ["Copropriété", "Aucune autorisation tant que l'aspect extérieur est inchangé", "Autorisation nécessaire seulement si l'aspect extérieur change"],
+          ["Visite et devis", "Gratuits, devis sous 24h", "Gratuits, devis sous 24h"],
+        ]}
+      />
+      <p className="text-slate leading-relaxed mt-4">
+        Le détail du blindage, de ses trois modèles et de ses critères est sur ma
+        page{" "}
+        <Link href="/blindage-porte-nice/" className="text-steel underline">
+          blindage de porte
+        </Link>
+        .
+      </p>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={5} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
         Quand ce n&apos;est pas la bonne solution
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -125,13 +162,40 @@ const guideContent = (
         </li>
       </ul>
     </div>
+
+    <div>
+      <ArticleSectionHeading number={6} id="devis" level="h3" size="lg" numberStyle="plain">
+        Devis, acompte, délai et copropriété
+      </ArticleSectionHeading>
+      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed">
+        <li>
+          <strong className="text-navy">Mesures et devis</strong> : la prise de mesures sur place et
+          le devis sont gratuits, et le devis vous est remis sous 24h.
+        </li>
+        <li>
+          <strong className="text-navy">Acompte</strong> : 30 % à la validation du devis.
+        </li>
+        <li>
+          <strong className="text-navy">Délai</strong> : environ 10 jours, sans travaux de
+          maçonnerie.
+        </li>
+        <li>
+          <strong className="text-navy">Paiement</strong> : carte bancaire, espèces ou virement,
+          avec une facture détaillée envoyée par e-mail.
+        </li>
+        <li>
+          <strong className="text-navy">Copropriété</strong> : une autorisation n&apos;est nécessaire
+          que si l&apos;aspect extérieur de la porte change.
+        </li>
+      </ul>
+    </div>
   </>
 );
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
   title: "Installation de porte blindée à Nice – dès 3 490 € TTC | VAF",
-  description: "Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC. Bloc-porte sur mesure, 5 lignes, certification A2P BP1 à BP3, isolation acoustique 41 dB. Devis 100% personnalisé.",
+  description: "Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC (certifié BP1), pose comprise. 5 lignes, certification A2P BP1 à BP3. Mesures et devis gratuits sur place.",
 });
 
 const sectionsFr = [
@@ -142,7 +206,7 @@ const sectionsFr = [
       <>
         Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie
         (porte, dormant et serrure) d&apos;un seul tenant par une véritable
-        porte blindée neuve, fabriquée sur mesure et livrée en 24 à 48h.
+        porte blindée neuve, avec un délai d&apos;environ 10 jours.
         C&apos;est la solution la plus complète quand votre porte actuelle ou
         son bâti ne tiennent plus la route. Si votre porte reste saine, un{" "}
         <Link href="/blindage-porte-nice/" className="text-steel underline">
@@ -159,7 +223,7 @@ const sectionsFr = [
       <>
         Lisseo (design épuré, 3 finitions), Solo (bois avec moulures), Ferro
         (panneaux acier, reproduction de l&apos;existant possible), Vitréo
-        (version vitrée sur mesure) et Designo (3 lignes design) : cinq
+        (version vitrée) et Designo (3 lignes design) : cinq
         lignes de la gamme{" "}
         <a
           href="https://www.valentesecurystar.com/"
@@ -171,7 +235,7 @@ const sectionsFr = [
         </a>
         , fabricant français installé à Thiais depuis 1995. Le détail de
         chaque ligne est dans mon guide complet. 1 ou 2 vantaux possibles,
-        hauteur sur mesure jusqu&apos;à 6 m.
+        dimensions standard.
       </>,
     ],
   },
@@ -179,7 +243,7 @@ const sectionsFr = [
     heading: "Le niveau A2P BP, un critère de devis",
     Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes : je définis le niveau adapté avec vous selon votre budget et le niveau de sécurité recherché, ce n'est pas un tarif fixe.",
+      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes : je recommande le niveau selon le quartier et la valeur des biens à protéger. Le tarif de départ correspond à un bloc-porte certifié BP1, les niveaux supérieurs sont sur devis.",
     ],
   },
   {
@@ -190,17 +254,17 @@ const sectionsFr = [
     ],
   },
   {
-    heading: "Isolation acoustique, un vrai avantage du bloc-porte",
+    heading: "Devis, acompte et copropriété",
     Icon: <DoubleLockIcon className="w-4 h-4" />,
     paragraphs: [
-      "41 dB d'isolation acoustique de base, un niveau supérieur à celui d'un blindage classique, encore améliorable selon les options choisies.",
+      "La prise de mesures sur place et le devis sont gratuits, le devis vous est remis sous 24h. Un acompte de 30 % est demandé à la validation du devis. En copropriété, une autorisation n'est nécessaire que si l'aspect extérieur de la porte change.",
     ],
   },
   {
     heading: "Fabrication et pose",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures sans travaux de maçonnerie. Garantie de pose de 2 ans de ma part, et garantie fabricant Valente Securystar de 15 ans sur le matériel.",
+      "Délai d'environ 10 jours, sans travaux de maçonnerie. Le matériel est couvert par la garantie fabricant Valente Securystar de 15 ans. Paiement par carte bancaire, espèces ou virement, facture envoyée par e-mail.",
     ],
   },
 ];
@@ -209,7 +273,7 @@ const faqFr = [
   {
     question: "Combien coûte un bloc-porte blindé à Nice ?",
     answer:
-      "Le tarif d'un bloc-porte blindé démarre à 3 490 € TTC pour la ligne d'entrée de gamme, pose comprise. Le montant final dépend de vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire, dimensions de votre porte. Un diagnostic sur place permet d'établir un devis précis et sur-mesure, sans engagement.",
+      "Le tarif d'un bloc-porte blindé démarre à 3 490 € TTC pour un bloc-porte certifié BP1 (ligne d'entrée de gamme), pose comprise. Les niveaux A2P supérieurs et les autres lignes sont chiffrés sur devis, selon vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire. La prise de mesures sur place est gratuite et le devis, sans engagement, vous est remis sous 24h.",
   },
   {
     question: "Quelle différence avec un blindage de porte ?",
@@ -219,21 +283,31 @@ const faqFr = [
   {
     question: "Quel niveau A2P BP choisir ?",
     answer:
-      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes. Le choix dépend de votre budget et du niveau de sécurité recherché : j'en discute avec vous lors du diagnostic, ce n'est pas un tarif fixe.",
+      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes. Je recommande le niveau en fonction du quartier et de la valeur des biens à protéger chez vous : j'en discute avec vous lors de la visite, ce n'est pas un tarif fixe.",
   },
   {
-    question: "Combien de temps pour fabriquer et poser un bloc-porte ?",
-    answer: "24 à 48h de fabrication sur mesure, puis 2 à 3 heures de pose, sans maçonnerie.",
+    question: "Combien de temps faut-il pour avoir un bloc-porte ?",
+    answer: "Le délai est d'environ 10 jours, sans maçonnerie.",
   },
   {
     question: "Quelle garantie sur un bloc-porte blindé ?",
     answer:
-      "Garantie de pose de 2 ans de ma part, et garantie fabricant Valente Securystar de 15 ans sur le matériel : deux garanties distinctes et cumulables.",
+      "Le matériel est couvert par la garantie fabricant Valente Securystar de 15 ans.",
   },
   {
-    question: "Peut-on avoir une porte vitrée ou sur mesure jusqu'à 6 mètres ?",
+    question: "Peut-on avoir une porte vitrée ou à deux vantaux ?",
     answer:
-      "Oui, la ligne Vitréo propose une version vitrée sur mesure, et l'ensemble des lignes existe en 1 ou 2 vantaux avec des hauteurs sur mesure jusqu'à 6 mètres.",
+      "Oui, la ligne Vitréo propose une version vitrée, et l'ensemble des lignes existe en 1 ou 2 vantaux. Les blocs-portes sont proposés en dimensions standard uniquement.",
+  },
+  {
+    question: "Faut-il l'accord de la copropriété pour changer ma porte d'entrée ?",
+    answer:
+      "Une autorisation n'est nécessaire que si l'aspect extérieur de la porte change.",
+  },
+  {
+    question: "La prise de mesures est-elle payante, et faut-il un acompte ?",
+    answer:
+      "La prise de mesures sur place est gratuite. Un acompte de 30 % est demandé une fois le devis validé. Le paiement se fait par carte bancaire, espèces ou virement, et la facture vous est envoyée par e-mail.",
   },
 ];
 
@@ -244,8 +318,8 @@ const sectionsEn = [
     paragraphs: [
       <>
         An armored door block replaces your entire door unit (door, frame
-        and lock) in one piece with a genuine new armored door, custom-made
-        and delivered in 24 to 48 hours. It&apos;s the most complete solution
+        and lock) in one piece with a genuine new armored door, with a lead
+        time of about 10 days. It&apos;s the most complete solution
         when your current door or its frame no longer hold up. If your door
         is still sound, a{" "}
         <Link href="/blindage-porte-nice/" className="text-steel underline">
@@ -262,7 +336,7 @@ const sectionsEn = [
       <>
         Lisseo (clean design, 3 finishes), Solo (wood with mouldings), Ferro
         (steel panels, reproduction of your existing door possible), Vitréo
-        (custom glazed version) and Designo (3 design lines): five lines
+        (glazed version) and Designo (3 design lines): five lines
         from the{" "}
         <a
           href="https://www.valentesecurystar.com/"
@@ -274,7 +348,7 @@ const sectionsEn = [
         </a>{" "}
         range, a French manufacturer based in Thiais since 1995. Full
         details for each line are in my complete guide. 1 or 2 leaves,
-        custom heights up to 6 m.
+        standard dimensions.
       </>,
     ],
   },
@@ -282,7 +356,7 @@ const sectionsEn = [
     heading: "A2P BP level, a quote criterion",
     Icon: <ShieldIcon className="w-4 h-4" />,
     paragraphs: [
-      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes: I define the right level with you based on your budget and the security level you're after, it isn't a fixed price.",
+      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes: I recommend the level based on your neighbourhood and the value of what needs protecting. The starting price is for a BP1-certified door block, higher levels are quoted individually.",
     ],
   },
   {
@@ -293,17 +367,17 @@ const sectionsEn = [
     ],
   },
   {
-    heading: "Sound insulation, a real advantage of the door block",
+    heading: "Quote, deposit and co-ownership",
     Icon: <DoubleLockIcon className="w-4 h-4" />,
     paragraphs: [
-      "41 dB of sound insulation as standard, above what a classic reinforcement offers, and can be improved further with options.",
+      "Measuring on site and the quote are free, and the quote is sent to you within 24 hours. A 30% deposit is requested when the quote is accepted. In a co-owned building, approval is only needed if the exterior look of the door changes.",
     ],
   },
   {
     heading: "Manufacturing and fitting",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours with no masonry work. A 2-year fitting warranty from me, and a 15-year Valente Securystar manufacturer warranty on the material.",
+      "Lead time of about 10 days, with no masonry work. The material is covered by the 15-year Valente Securystar manufacturer warranty. Payment by bank card, cash or bank transfer, invoice sent by e-mail.",
     ],
   },
 ];
@@ -312,7 +386,7 @@ const faqEn = [
   {
     question: "How much does an armored door block cost in Nice?",
     answer:
-      "An armored door block starts at €3,490 incl. VAT for the entry-level line, fitted. The final price depends on your actual needs: the security level you want, sound or heat insulation, fire-resistant options if needed, your door's dimensions. An on-site assessment lets me put together a precise, tailored quote, with no obligation.",
+      "An armored door block starts at €3,490 incl. VAT for a BP1-certified door block (entry-level line), fitted. Higher A2P levels and the other lines are quoted individually, based on your actual needs: the security level you want, sound or heat insulation, fire-resistant options if needed. Measuring on site is free, and the no-obligation quote is sent to you within 24 hours.",
   },
   {
     question: "What's the difference with door reinforcement?",
@@ -322,21 +396,31 @@ const faqEn = [
   {
     question: "Which A2P BP level should I choose?",
     answer:
-      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes. The choice depends on your budget and the security level you want: I discuss it with you during the assessment, it isn't a fixed price.",
+      "BP1 resists 5 minutes, BP2 10 minutes, BP3 15 minutes. I recommend the level based on your neighbourhood and the value of what you need to protect: I discuss it with you during the visit, it isn't a fixed price.",
   },
   {
-    question: "How long to manufacture and fit a door block?",
-    answer: "24 to 48 hours of custom manufacturing, then 2 to 3 hours of fitting, no masonry work.",
+    question: "How long does it take to get a door block?",
+    answer: "The lead time is about 10 days, with no masonry work.",
   },
   {
     question: "What warranty comes with an armored door block?",
     answer:
-      "A 2-year fitting warranty from me, and a 15-year Valente Securystar manufacturer warranty on the material: two separate, combinable warranties.",
+      "The material is covered by the 15-year Valente Securystar manufacturer warranty.",
   },
   {
-    question: "Can I get a glazed door, or a custom size up to 6 metres?",
+    question: "Can I get a glazed door, or a double door?",
     answer:
-      "Yes, the Vitréo line offers a fully custom glazed version, and every line comes in 1 or 2 leaves with custom heights up to 6 metres.",
+      "Yes, the Vitréo line offers a glazed version, and every line comes in 1 or 2 leaves. Door blocks are offered in standard dimensions only.",
+  },
+  {
+    question: "Do I need co-ownership approval to change my front door?",
+    answer:
+      "Approval is only needed if the exterior look of the door changes.",
+  },
+  {
+    question: "Is measuring charged, and is a deposit required?",
+    answer:
+      "Measuring on site is free. A 30% deposit is requested once the quote is accepted. You can pay by bank card, cash or bank transfer, and the invoice is sent to you by e-mail.",
   },
 ];
 
@@ -344,8 +428,8 @@ export default function InstallationPorteBlindeeNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Installation de porte blindée à Nice : prix et bloc-porte neuf sur mesure",
-        lead: "Remplacement complet par un bloc-porte neuf sur mesure, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC pose comprise, devis 100% personnalisé selon la ligne et les options retenues.",
+        h1: "Installation de porte blindée à Nice : prix et bloc-porte neuf",
+        lead: "Remplacement complet par un bloc-porte neuf, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC pose comprise (certifié BP1), devis personnalisé selon la ligne et les options retenues.",
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Installation porte blindée",
@@ -360,7 +444,7 @@ export default function InstallationPorteBlindeeNicePage() {
         extra: (
           <PriceReminder
             priceLabel="à partir de 3 490 € TTC"
-            note="Ligne d'entrée de gamme (Lisseo), pose comprise. Le tarif final dépend de la ligne choisie, du niveau A2P BP et des options (isolation, coupe-feu) : devis 100% personnalisé et confirmé avant tout engagement."
+            note="Bloc-porte certifié BP1, ligne d'entrée de gamme (Lisseo), pose comprise. Les niveaux supérieurs et les autres lignes sont sur devis, selon le niveau A2P BP et les options (isolation, coupe-feu) : mesures et devis gratuits, devis remis sous 24h."
             locale="fr"
           />
         ),
@@ -371,15 +455,15 @@ export default function InstallationPorteBlindeeNicePage() {
           },
           {
             title: "Rendez-vous",
-            text: "Je fixe un rendez-vous pour évaluer votre porte et son bâti sur place, à l'heure qui vous convient.",
+            text: "Je fixe un rendez-vous pour évaluer votre porte et son bâti sur place, à l'heure qui vous convient. La prise de mesures est gratuite.",
           },
           {
             title: "Choix de la ligne et devis",
-            text: "Je vous présente les cinq lignes disponibles et j'établis un devis sur-mesure selon le niveau A2P et les options retenues.",
+            text: "Je vous présente les cinq lignes disponibles et j'établis un devis personnalisé selon le niveau A2P et les options retenues, remis sous 24h. Un acompte de 30 % est demandé à sa validation.",
           },
           {
             title: "Fabrication et pose",
-            text: "Fabrication sur mesure livrée en 24 à 48h, pose en 2 à 3 heures, facture conforme aux assureurs à l'appui.",
+            text: "Délai d'environ 10 jours, pose sans maçonnerie, facture détaillée envoyée par e-mail.",
           },
         ],
         relatedArticle: {
@@ -394,8 +478,8 @@ export default function InstallationPorteBlindeeNicePage() {
         guideFaqForSchema: guideFaq,
       }}
       en={{
-        h1: "Armored door installation in Nice: price and custom-made door block",
-        lead: "Full replacement with a custom-made, A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. Armored door price in Nice: from €3,490 incl. VAT fitted, 100% tailored quote based on the line and options chosen.",
+        h1: "Armored door installation in Nice: price and new door block",
+        lead: "Full replacement with a new A2P-certified armored door block: the most complete solution when your door or its frame no longer hold up. Armored door price in Nice: from €3,490 incl. VAT fitted (BP1-certified), tailored quote based on the line and options chosen.",
         sections: sectionsEn,
         faq: faqEn,
         breadcrumbLabel: "Armored door installation",
@@ -410,7 +494,7 @@ export default function InstallationPorteBlindeeNicePage() {
         extra: (
           <PriceReminder
             priceLabel="from €3,490 incl. VAT"
-            note="Entry-level line (Lisseo), fitted. Final price depends on the line chosen, the A2P BP level and options (insulation, fire resistance): 100% tailored quote confirmed before any commitment."
+            note="BP1-certified door block, entry-level line (Lisseo), fitted. Higher levels and the other lines are quoted individually, based on the A2P BP level and options (insulation, fire resistance): free measuring, quote sent within 24 hours."
             locale="en"
           />
         ),
@@ -421,15 +505,15 @@ export default function InstallationPorteBlindeeNicePage() {
           },
           {
             title: "Appointment",
-            text: "I schedule a visit to assess your door and its frame on site, at a time that suits you.",
+            text: "I schedule a visit to assess your door and its frame on site, at a time that suits you. Measuring is free.",
           },
           {
             title: "Line choice and quote",
-            text: "I show you the five available lines and put together a tailored quote based on the A2P level and options chosen.",
+            text: "I show you the five available lines and put together a tailored quote based on the A2P level and options chosen, sent within 24 hours. A 30% deposit is requested when it is accepted.",
           },
           {
             title: "Manufacturing and fitting",
-            text: "Custom-made and delivered in 24 to 48 hours, fitted in 2 to 3 hours, with an invoice that meets insurer requirements.",
+            text: "Lead time of about 10 days, fitted with no masonry work, detailed invoice sent by e-mail.",
           },
         ],
       }}

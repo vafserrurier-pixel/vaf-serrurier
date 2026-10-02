@@ -96,7 +96,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
-        `Remplacement complet par un bloc-porte neuf sur mesure ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
+        `Remplacement complet par un bloc-porte neuf ${lieu}, certifié A2P, quand la porte ou son bâti ne tiennent plus la route.`,
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
@@ -202,7 +202,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
     },
     "/installation-porte-blindee-nice/": {
       text: (lieu) =>
-        `Full replacement with a custom-made, A2P-certified armored door block in ${lieu}, when the door or its frame no longer hold up.`,
+        `Full replacement with a new A2P-certified armored door block in ${lieu}, when the door or its frame no longer hold up.`,
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import PricingTable from "@/components/PricingTable";
+import ArticleTable from "@/components/ArticleTable";
 import FaqAccordion, { FaqItem } from "@/components/FaqAccordion";
 import ReviewsSection from "@/components/ReviewsSection";
 import CtaBlock from "@/components/CtaBlock";
@@ -20,7 +21,7 @@ const faqFr: FaqItem[] = [
   {
     question: "Le devis est-il vraiment gratuit ?",
     answer:
-      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier.",
+      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier. Pour les gros travaux (blindage de porte, installation de porte blindée), la visite sur place et le devis sont gratuits, et le devis vous est remis sous 24h.",
   },
   {
     question: "Les pièces remplacées sont-elles comprises dans le prix affiché ?",
@@ -31,6 +32,31 @@ const faqFr: FaqItem[] = [
     question: "Pourquoi les prix varient-ils d'une intervention à l'autre ?",
     answer:
       "Le type de serrure, la marque, l'état de la porte et l'heure d'intervention font varier le tarif final. Les prix affichés couvrent les situations standards.",
+  },
+  {
+    question: "Le tarif change-t-il selon le quartier de Nice ?",
+    answer:
+      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (majoration de 50 % après 19h, le week-end et les jours fériés, sur le déplacement et la main-d'œuvre), le type de serrure et la pièce à remplacer, pas le quartier.",
+  },
+  {
+    question: "Quel taux de TVA appliquez-vous ?",
+    answer:
+      "10 % pour les particuliers (logement de plus de 2 ans) et 20 % pour les professionnels. Les prix affichés sur cette page sont des prix TTC au taux de 10 %.",
+  },
+  {
+    question: "Quels moyens de paiement acceptez-vous ?",
+    answer:
+      "Carte bancaire, espèces ou virement. La facture détaillée vous est envoyée par e-mail.",
+  },
+  {
+    question: "Demandez-vous un acompte ?",
+    answer:
+      "Pour les gros travaux (blindage de porte, installation de porte blindée), un acompte de 30 % est demandé à la validation du devis.",
+  },
+  {
+    question: "Intervenez-vous sur une porte de cave, de garage ou une boîte aux lettres ?",
+    answer:
+      "Oui. Le prix vous est annoncé par téléphone avant que je me déplace, comme pour toute autre intervention.",
   },
   {
     question: "Comment éviter une arnaque de serrurier ?",
@@ -105,7 +131,7 @@ const faqEn: FaqItem[] = [
   {
     question: "Is the quote really free?",
     answer:
-      "Yes. I give you a price over the phone based on your description, and confirm it on site before starting any work, it's a legal requirement for a locksmith.",
+      "Yes. I give you a price over the phone based on your description, and confirm it on site before starting any work, it's a legal requirement for a locksmith. For major work (door reinforcement, armored door installation), the on-site visit and the quote are free, and the quote is sent to you within 24 hours.",
   },
   {
     question: "Are replaced parts included in the price shown?",
@@ -116,6 +142,31 @@ const faqEn: FaqItem[] = [
     question: "Why do prices vary from one callout to another?",
     answer:
       "The type of lock, the brand, the door's condition and the time of the callout all affect the final price. The prices shown cover standard situations.",
+  },
+  {
+    question: "Does the price change depending on the neighbourhood in Nice?",
+    answer:
+      "No. My prices are the same in every neighbourhood of Nice, with no extra charge for a distant area. What changes the price is the time of day (a 50% surcharge after 7pm, on weekends and public holidays, on travel and labor), the type of lock and the part to replace, not the neighbourhood.",
+  },
+  {
+    question: "What VAT rate do you apply?",
+    answer:
+      "10% for private individuals (home completed more than 2 years ago) and 20% for professionals. The prices shown on this page are VAT-inclusive prices at the 10% rate.",
+  },
+  {
+    question: "Which payment methods do you accept?",
+    answer:
+      "Bank card, cash or bank transfer. The detailed invoice is sent to you by e-mail.",
+  },
+  {
+    question: "Do you ask for a deposit?",
+    answer:
+      "For major work (door reinforcement, armored door installation), a 30% deposit is requested when the quote is accepted.",
+  },
+  {
+    question: "Do you work on cellar doors, garage doors or letterboxes?",
+    answer:
+      "Yes. The price is given to you over the phone before I travel, as for any other callout.",
   },
   {
     question: "How do I avoid a locksmith scam?",
@@ -336,6 +387,43 @@ export default function TarifsBody() {
         <PricingTable locale={locale} useSeoTitles />
       </section>
 
+      <section className="mx-auto max-w-4xl px-4 pb-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-2">
+          {locale === "fr" ? "Mes tarifs, situation par situation" : "My prices, situation by situation"}
+        </h2>
+        <p className="text-slate leading-relaxed mb-4">
+          {locale === "fr"
+            ? "Le même problème coûte le même prix partout à Nice. Ce qui change, c'est l'heure : après 19h, le week-end et les jours fériés, une majoration de 50 % s'applique sur le déplacement et la main-d'œuvre."
+            : "The same problem costs the same anywhere in Nice. What changes is the time: after 7pm, on weekends and public holidays, a 50% surcharge applies to travel and labor."}
+        </p>
+        <ArticleTable
+          headers={
+            locale === "fr"
+              ? ["Situation", "Tarif TTC", "Après 19h, week-end, jours fériés"]
+              : ["Situation", "Price incl. VAT", "After 7pm, weekends, public holidays"]
+          }
+          rows={
+            locale === "fr"
+              ? [
+                  ["Porte claquée", "149 €", "223,50 €"],
+                  ["Porte verrouillée, cylindre européen", "149 €", "223,50 €"],
+                  ["Porte verrouillée, serrure Fichet", "189 €", "283,50 €"],
+                  ["Changement de cylindre standard", "À partir de 249 €, déplacement et main-d'œuvre compris", "+ 50 % sur le déplacement et la main-d'œuvre, pièce au prix normal"],
+                  ["Cylindre haute sécurité, serrure multipoints", "Sur devis", "Sur devis"],
+                  ["Porte de cave, de garage, boîte aux lettres", "Prix annoncé par téléphone avant déplacement", "Prix annoncé par téléphone avant déplacement"],
+                ]
+              : [
+                  ["Door slammed shut", "€149", "€223.50"],
+                  ["Door locked, European cylinder", "€149", "€223.50"],
+                  ["Door locked, Fichet lock", "€189", "€283.50"],
+                  ["Standard cylinder replacement", "From €249, travel and labor included", "+ 50% on travel and labor, part at the normal price"],
+                  ["High-security cylinder, multipoint lock", "Quoted individually", "Quoted individually"],
+                  ["Cellar door, garage door, letterbox", "Price given by phone before I travel", "Price given by phone before I travel"],
+                ]
+          }
+        />
+      </section>
+
       <section className="mx-auto max-w-4xl px-4">
         <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
           <p className="font-heading font-bold text-navy mb-2">{t.tvaTitle}</p>
@@ -352,8 +440,9 @@ export default function TarifsBody() {
               >
                 article 279-0 bis du Code général des impôts
               </a>
-              ), et c&apos;est le taux que j&apos;applique sur toutes mes factures. Les prix affichés
-              ci-dessus sont donc bien TTC, sur cette base.
+              ), et c&apos;est le taux que j&apos;applique aux particuliers. Pour les
+              professionnels, la TVA est de 20%. Les prix affichés ci-dessus sont des prix TTC au taux
+              de 10%.
             </p>
           ) : (
             <p className="text-sm text-slate leading-relaxed">
@@ -368,7 +457,7 @@ export default function TarifsBody() {
               >
                 Article 279-0 bis of the French General Tax Code
               </a>
-              ), and it&apos;s the rate I apply on every invoice. The prices shown above are already tax-included on this basis.
+              ), and it&apos;s the rate I apply to private individuals. For professionals, VAT is 20%. The prices shown above are tax-included at the 10% rate.
             </p>
           )}
         </div>
@@ -403,6 +492,26 @@ export default function TarifsBody() {
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.varyTitle}</h2>
         <p className="text-slate leading-relaxed">{t.varyText}</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-4">
+          {(locale === "fr"
+            ? [
+                ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet à 189 €. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
+                ["L'horaire", "après 19h, le week-end et les jours fériés, la majoration de 50 % porte sur le déplacement et la main-d'œuvre. Elle ne s'applique jamais à une pièce."],
+                ["La pièce à remplacer", "cylindre, serrure ou gâche : la pièce est annoncée et validée avec vous avant que je la pose."],
+                ["Ce qui ne varie pas", "le quartier. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné."],
+              ]
+            : [
+                ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock €189. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
+                ["The time of day", "after 7pm, on weekends and public holidays, the 50% surcharge applies to travel and labor. It never applies to a part."],
+                ["The part to replace", "cylinder, lock or strike plate: the part is quoted and agreed with you before I fit it."],
+                ["What does not vary", "the neighbourhood. Prices are the same everywhere in Nice, with no extra charge for a distant area."],
+              ]
+          ).map(([label, text]) => (
+            <li key={label}>
+              <strong className="text-navy">{label}</strong> : {text}
+            </li>
+          ))}
+        </ul>
         <p className="text-sm text-slate mt-3">
           {locale === "fr" ? "Pour une porte neuve plutôt qu'un dépannage : " : "For a new door rather than a repair: "}
           <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
@@ -410,6 +519,32 @@ export default function TarifsBody() {
           </Link>
           .
         </p>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          {locale === "fr" ? "Devis, acompte et paiement" : "Quote, deposit and payment"}
+        </h2>
+        <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed">
+          {(locale === "fr"
+            ? [
+                ["Dépannage", "le prix est annoncé par téléphone, puis confirmé sur place avant que je commence."],
+                ["Gros travaux", "pour un blindage de porte ou une porte blindée neuve, la visite et le devis sont gratuits et le devis est remis sous 24h. Un acompte de 30 % est demandé à sa validation."],
+                ["Paiement", "carte bancaire, espèces ou virement."],
+                ["Facture", "détaillée, envoyée par e-mail."],
+              ]
+            : [
+                ["Callouts", "the price is given over the phone, then confirmed on site before I start."],
+                ["Major work", "for door reinforcement or a new armored door, the visit and the quote are free and the quote is sent within 24 hours. A 30% deposit is requested when it is accepted."],
+                ["Payment", "bank card, cash or bank transfer."],
+                ["Invoice", "detailed, sent by e-mail."],
+              ]
+          ).map(([label, text]) => (
+            <li key={label}>
+              <strong className="text-navy">{label}</strong> : {text}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

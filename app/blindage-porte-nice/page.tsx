@@ -26,8 +26,8 @@ const criteresFr = [
   },
   {
     Icon: HandshakeIcon,
-    title: "Facture conforme aux assureurs",
-    text: "Mentionne le niveau de certification posé, document généralement demandé pour la réduction de prime.",
+    title: "Facture détaillée",
+    text: "Mentionne le niveau de certification posé : le document à présenter à votre assureur.",
   },
 ];
 
@@ -36,6 +36,7 @@ const guideTocFr = [
   { id: "modeles", label: "Trois modèles selon votre besoin" },
   { id: "au-dela-du-prix", label: "Ce qu'il faut vérifier au-delà du prix" },
   { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
+  { id: "devis", label: "Prix, devis, acompte et paiement" },
   { id: "entretien", label: "Entretien : ce qui prolonge la durée de vie" },
   { id: "faq", label: "Questions complémentaires" },
 ];
@@ -122,8 +123,10 @@ const guideContentFr = (
         Quand ce n&apos;est pas la bonne solution
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
-        Le blindage est un excellent renfort, pas une réponse universelle.
-        Deux cas où je vous oriente ailleurs :
+        Le blindage est toujours possible tant que votre porte est viable :
+        bois sain, bâti en état. Il ne change pas l&apos;aspect extérieur de la
+        porte, ce qui compte en copropriété. Ce n&apos;est pas une réponse
+        universelle pour autant. Deux cas où je vous oriente ailleurs :
       </p>
       <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
         <li>
@@ -147,7 +150,35 @@ const guideContentFr = (
     </div>
 
     <div>
-      <ArticleSectionHeading number={4} id="entretien" level="h3" size="lg" numberStyle="plain">
+      <ArticleSectionHeading number={4} id="devis" level="h3" size="lg" numberStyle="plain">
+        Prix, devis, acompte et paiement
+      </ArticleSectionHeading>
+      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed">
+        <li>
+          <strong className="text-navy">Le prix</strong> : le modèle Citadin démarre à 2 689 € TTC,
+          pose comprise. Le Parisien et le Parisien Hermétic sont chiffrés sur devis.
+        </li>
+        <li>
+          <strong className="text-navy">Le devis</strong> : la visite sur place et le devis sont
+          gratuits, et le devis vous est remis sous 24h.
+        </li>
+        <li>
+          <strong className="text-navy">La pose</strong> : elle dure environ 4 heures, sans travaux
+          de maçonnerie.
+        </li>
+        <li>
+          <strong className="text-navy">L&apos;acompte</strong> : 30 % à la validation du devis,
+          pour ce type de travaux.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : carte bancaire, espèces ou virement,
+          avec une facture détaillée envoyée par e-mail.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ArticleSectionHeading number={5} id="entretien" level="h3" size="lg" numberStyle="plain">
         Entretien : ce qui prolonge la durée de vie
       </ArticleSectionHeading>
       <p className="text-slate leading-relaxed">
@@ -166,9 +197,9 @@ const guideContentFr = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/blindage-porte-nice/",
-  title: "Blindage de porte à Nice – 2 689 € TTC | VAF",
+  title: "Blindage de porte à Nice – dès 2 689 € TTC | VAF",
   description:
-    "Blindage de porte à Nice : renforcez votre porte existante sans la remplacer. Bâti acier, serrure en applique, certification A2P BP. 2 689 € TTC, devis sur place.",
+    "Blindage de porte à Nice : renforcez votre porte existante sans la remplacer. Bâti acier, serrure en applique, certification A2P BP. Dès 2 689 € TTC, visite et devis gratuits sur place.",
 });
 
 const sectionsFr = [
@@ -196,7 +227,8 @@ const sectionsFr = [
           Valente Securystar
         </a>
         , fabricant français installé à Thiais depuis 1995. Le détail de
-        chaque modèle est dans mon guide complet.
+        chaque modèle est dans mon guide complet. Le Citadin démarre à 2 689 €
+        TTC, pose comprise ; le Parisien et le Parisien Hermétic sont sur devis.
       </>,
     ],
   },
@@ -208,10 +240,10 @@ const sectionsFr = [
     ],
   },
   {
-    heading: "Un vrai impact sur votre assurance habitation",
+    heading: "Votre assurance habitation",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "La certification A2P est reconnue par la quasi-totalité des assureurs français et peut donner droit à une réduction de prime habitation, notamment à partir du niveau BP2. Les montants exacts varient selon les compagnies et les contrats : à vérifier directement auprès de votre assureur.",
+      "Certains assureurs tiennent compte de la certification A2P d'une porte, d'autres non : cela dépend de votre contrat, et je ne m'engage sur aucune réduction de prime. Je vous remets une facture détaillée qui mentionne le niveau de certification posé, à présenter à votre assureur.",
     ],
   },
   {
@@ -234,7 +266,7 @@ const faqFr = [
   {
     question: "Combien coûte un blindage de porte à Nice ?",
     answer:
-      "2 689 € TTC pour une configuration de référence (blindage avec serrure carénée 5 points). C'est un tarif confirmé, mais le montant final dépend du modèle choisi (Citadin, Parisien, Parisien Hermétic) et de l'état de votre porte : un devis sur place reste systématique avant tout engagement.",
+      "À partir de 2 689 € TTC avec le modèle Citadin, pose comprise. Le Parisien et le Parisien Hermétic sont chiffrés sur devis, et le montant final dépend du modèle choisi et de l'état de votre porte. La visite sur place et le devis sont gratuits, le devis vous est remis sous 24h, avant tout engagement.",
   },
   {
     question: "Quelle différence avec un bloc-porte neuf ?",
@@ -249,11 +281,26 @@ const faqFr = [
   {
     question: "Quelle garantie sur un blindage de porte ?",
     answer:
-      "Garantie de pose de 2 ans de ma part, et garantie fabricant de 15 ans sur le matériel (gamme Valente Securystar, fabricant français) : deux garanties distinctes et cumulables.",
+      "Le matériel posé est couvert par la garantie fabricant de 15 ans (gamme Valente Securystar, fabricant français).",
   },
   {
     question: "Combien de temps dure la pose d'un blindage ?",
-    answer: "Généralement 2 à 3 heures, sans travaux de maçonnerie.",
+    answer: "Environ 4 heures, sans travaux de maçonnerie.",
+  },
+  {
+    question: "Peut-on blinder n'importe quelle porte ?",
+    answer:
+      "Le blindage est toujours possible tant que la porte est viable, c'est-à-dire un bois sain et un bâti en état. Si le bois est pourri ou le bâti déformé, je vous oriente vers un bloc-porte neuf, qui reprend toute la menuiserie.",
+  },
+  {
+    question: "Le blindage change-t-il l'aspect de ma porte ?",
+    answer:
+      "Non. Votre porte d'origine est conservée : l'aspect extérieur, côté palier, ne change pas.",
+  },
+  {
+    question: "Faut-il verser un acompte et comment payer ?",
+    answer:
+      "Pour ce type de travaux, un acompte de 30 % est demandé à la validation du devis. Le paiement se fait par carte bancaire, espèces ou virement, et la facture détaillée vous est envoyée par e-mail.",
   },
   {
     question: "Le blindage résiste-t-il vraiment aux cambrioleurs ?",
@@ -287,7 +334,9 @@ const sectionsEn = [
           Valente Securystar
         </a>{" "}
         range, a French manufacturer based in Thiais since 1995. Full
-        details for each model are in my complete guide.
+        details for each model are in my complete guide. The Citadin starts at
+        €2,689 incl. VAT, fitted; the Parisien and the Parisien Hermétic are
+        quoted individually.
       </>,
     ],
   },
@@ -299,10 +348,10 @@ const sectionsEn = [
     ],
   },
   {
-    heading: "A real impact on your home insurance",
+    heading: "Your home insurance",
     Icon: <HandshakeIcon className="w-4 h-4" />,
     paragraphs: [
-      "A2P certification is recognized by almost all French insurers and can qualify you for a reduced home insurance premium, particularly from BP2 level up. Exact amounts vary by insurer and contract: check directly with yours.",
+      "Some insurers take a door's A2P certification into account, others don't: it depends on your contract, and I don't promise any premium reduction. I provide a detailed invoice stating the certification level fitted, to present to your insurer.",
     ],
   },
   {
@@ -325,7 +374,7 @@ const faqEn = [
   {
     question: "How much does door reinforcement cost in Nice?",
     answer:
-      "€2,689 incl. VAT for a reference configuration (reinforcement with a 5-point shrouded lock). This price is confirmed, but the final amount depends on the model chosen (Citadin, Parisien, Parisien Hermétic) and your door's condition: an on-site quote is always required beforehand.",
+      "From €2,689 incl. VAT with the Citadin model, fitted. The Parisien and the Parisien Hermétic are quoted individually, and the final amount depends on the model chosen and your door's condition. The on-site visit and the quote are free, and the quote is sent to you within 24 hours, before any commitment.",
   },
   {
     question: "What's the difference with a new armored door block?",
@@ -339,11 +388,26 @@ const faqEn = [
   {
     question: "What warranty comes with door reinforcement?",
     answer:
-      "A 2-year fitting warranty from me, and a 15-year manufacturer warranty on the material (Valente Securystar range, a French manufacturer): two separate, combinable warranties.",
+      "The material fitted is covered by the 15-year manufacturer warranty (Valente Securystar range, a French manufacturer).",
   },
   {
     question: "How long does fitting take?",
-    answer: "Generally 2 to 3 hours, with no masonry work.",
+    answer: "About 4 hours, with no masonry work.",
+  },
+  {
+    question: "Can any door be reinforced?",
+    answer:
+      "Reinforcement is always possible as long as the door is sound: healthy wood and a frame in good condition. If the wood is rotten or the frame warped, I steer you to a new door block, which replaces the whole unit.",
+  },
+  {
+    question: "Does reinforcement change the look of my door?",
+    answer:
+      "No. Your original door is kept: the exterior look, on the landing side, stays the same.",
+  },
+  {
+    question: "Is a deposit required and how do I pay?",
+    answer:
+      "For this type of work, a 30% deposit is requested when the quote is accepted. You can pay by bank card, cash or bank transfer, and the detailed invoice is sent to you by e-mail.",
   },
   {
     question: "Does reinforcement really hold off burglars?",
@@ -357,7 +421,7 @@ export default function BlindagePorteNicePage() {
     <LocalizedServicePage
       fr={{
         h1: "Blindage de porte à Nice : renforcer une porte blindée existante",
-        lead: "Transformer votre porte existante en porte blindée sans la remplacer : bâti acier, serrure en applique et cylindre haute sécurité. 2 689 € TTC pose comprise, devis confirmé avant intervention.",
+        lead: "Transformer votre porte existante en porte blindée sans la remplacer : bâti acier, serrure en applique et cylindre haute sécurité. À partir de 2 689 € TTC pose comprise (modèle Citadin), devis gratuit confirmé avant intervention.",
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Blindage de porte",
@@ -372,19 +436,17 @@ export default function BlindagePorteNicePage() {
         extra: (
           <>
             <PriceReminder
-              priceLabel="2 689 € TTC"
-              note="Configuration de référence : blindage avec serrure carénée 5 points. Le tarif final dépend du modèle (Citadin, Parisien, Parisien Hermétic) et de l'état de votre porte, devis sur place systématique."
+              priceLabel="à partir de 2 689 € TTC"
+              note="Modèle Citadin, pose comprise. Le Parisien et le Parisien Hermétic sont sur devis. Visite et devis gratuits, devis remis sous 24h."
               locale="fr"
             />
             <div className="mx-auto max-w-4xl px-4 mt-4">
               <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
                 <p className="font-heading font-semibold text-navy mb-1">
-                  Deux garanties distinctes, cumulables
+                  Garantie fabricant de 15 ans
                 </p>
                 <p className="text-sm text-slate leading-relaxed">
-                  Garantie de pose de 2 ans de ma part sur l&apos;installation, et garantie fabricant
-                  Valente Securystar de 15 ans sur le matériel, 5 ans de plus que la moyenne du
-                  marché.
+                  Le matériel posé est couvert par la garantie fabricant Valente Securystar de 15 ans.
                 </p>
               </div>
             </div>
@@ -397,15 +459,15 @@ export default function BlindagePorteNicePage() {
           },
           {
             title: "Rendez-vous",
-            text: "Je me déplace pour évaluer l'état de votre porte et de son bâti, à l'heure qui vous convient.",
+            text: "Je me déplace pour évaluer l'état de votre porte et de son bâti, à l'heure qui vous convient. La visite et le devis sont gratuits, le devis vous est remis sous 24h.",
           },
           {
             title: "Choix du modèle et pose",
-            text: "Je vous oriente vers le modèle adapté (Citadin, Parisien, Parisien Hermétic) et je pose l'ensemble en 2 à 3 heures, sans maçonnerie.",
+            text: "Je vous oriente vers le modèle adapté (Citadin, Parisien, Parisien Hermétic) et je pose l'ensemble en 4 heures environ, sans maçonnerie. Un acompte de 30 % est demandé à la validation du devis.",
           },
           {
             title: "Garantie",
-            text: "Facture détaillée à l'appui, avec la garantie de pose de 2 ans et la garantie fabricant de 15 ans.",
+            text: "Facture détaillée envoyée par e-mail, avec la garantie fabricant de 15 ans sur le matériel.",
           },
         ],
         relatedArticle: {
@@ -421,7 +483,7 @@ export default function BlindagePorteNicePage() {
       }}
       en={{
         h1: "Door reinforcement in Nice: turning your door into an armored door",
-        lead: "Turn your existing door into an armored door without replacing it: steel frame, rim lock and high-security cylinder. €2,689 incl. VAT fitted, quote confirmed before work.",
+        lead: "Turn your existing door into an armored door without replacing it: steel frame, rim lock and high-security cylinder. From €2,689 incl. VAT fitted (Citadin model), free quote confirmed before work.",
         sections: sectionsEn,
         faq: faqEn,
         breadcrumbLabel: "Door reinforcement",
@@ -436,19 +498,18 @@ export default function BlindagePorteNicePage() {
         extra: (
           <>
             <PriceReminder
-              priceLabel="€2,689 incl. VAT"
-              note="Reference configuration: reinforcement with a 5-point shrouded lock. Final price depends on the model (Citadin, Parisien, Parisien Hermétic) and your door's condition, on-site quote always required."
+              priceLabel="from €2,689 incl. VAT"
+              note="Citadin model, fitted. The Parisien and the Parisien Hermétic are quoted individually. Free visit and quote, quote sent within 24 hours."
               locale="en"
             />
             <div className="mx-auto max-w-4xl px-4 mt-4">
               <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
                 <p className="font-heading font-semibold text-navy mb-1">
-                  Two separate, combinable warranties
+                  15-year manufacturer warranty
                 </p>
                 <p className="text-sm text-slate leading-relaxed">
-                  A 2-year fitting warranty from me on the installation, and a 15-year Valente
-                  Securystar manufacturer warranty on the material, 5 years more than the market
-                  average.
+                  The material fitted is covered by the 15-year Valente Securystar manufacturer
+                  warranty.
                 </p>
               </div>
             </div>
@@ -461,15 +522,15 @@ export default function BlindagePorteNicePage() {
           },
           {
             title: "Appointment",
-            text: "I visit to assess your door and its frame, at a time that suits you.",
+            text: "I visit to assess your door and its frame, at a time that suits you. The visit and the quote are free, and the quote is sent to you within 24 hours.",
           },
           {
             title: "Model choice and fitting",
-            text: "I guide you to the right model (Citadin, Parisien, Parisien Hermétic) and fit it in 2 to 3 hours, with no masonry work.",
+            text: "I guide you to the right model (Citadin, Parisien, Parisien Hermétic) and fit it in about 4 hours, with no masonry work. A 30% deposit is requested when the quote is accepted.",
           },
           {
             title: "Warranty",
-            text: "Detailed invoice provided, with the 2-year fitting warranty and the 15-year manufacturer warranty.",
+            text: "Detailed invoice sent by e-mail, with the 15-year manufacturer warranty on the material.",
           },
         ],
       }}
