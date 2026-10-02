@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier Wilson, résidentiel et dense au cœur de Nice, compte de nombreux immeubles collectifs des années 1960-1970. Sur ce type de bâti, les pannes les plus fréquentes concernent les gâches électriques de hall et les digicodes, sollicités quotidiennement par un grand nombre de résidents. Je diagnostique le mécanisme avant de proposer réparation ou remplacement.",
     ],
   },
+  {
+    heading: "Clé cassée dans le cylindre : ce qu'il vaut mieux ne pas faire",
+    paragraphs: [
+      <>{"Quand une clé casse dans la serrure, le premier réflexe est d'essayer de récupérer le morceau avec une pince, une épingle ou de la colle. C'est le meilleur moyen d'enfoncer le fragment plus loin ou d'abîmer les goupilles du cylindre, ce qui transforme une simple extraction en remplacement. Le plus sage : ne pas forcer, ne pas introduire d'outil, et garder les deux morceaux de la clé, même abîmés, car ils servent à identifier le cylindre et à refaire un double. Si la porte est encore ouverte, ne la refermez pas avant d'avoir vérifié que vous pouvez la rouvrir. Si elle est fermée, appelez-moi avec ces détails : savoir de quel côté est resté le fragment m'aide à préparer le bon matériel. Les situations de ce type sont détaillées sur la page "}<Link href="/ouverture-de-porte-nice/" className="text-steel underline">ouverture de porte</Link>{"."}</>,
+    ],
+  },
 ];
 
 const faq = [

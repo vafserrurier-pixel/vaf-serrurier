@@ -47,6 +47,12 @@ const blocks = [
       "Bon Voyage, secteur résidentiel à l'est de Nice proche du port, compte plusieurs résidences collectives construites entre les années 1960 et 1980. J'y interviens couramment sur les portes de hall, les cylindres de porte palière et les boîtes aux lettres collectives, à la demande de résidents ou de syndics de copropriété.",
     ],
   },
+  {
+    heading: "Des clés qu'on ne duplique pas n'importe où : le cylindre à clé protégée",
+    paragraphs: [
+      "Dans un logement loué, les doubles se multiplient : locataire, conjoint, famille, agence. Avec une clé ordinaire, n'importe quel magasin peut en faire une copie en quelques minutes. Les cylindres à clé protégée changent cela : les clés sont fournies avec une carte de propriété, et seul le titulaire de la carte peut en commander d'autres. Pour un propriétaire bailleur, c'est un moyen de savoir combien de clés existent ; pour un locataire, de ne pas voir le nombre de doubles lui échapper. Un tel cylindre est plus coûteux qu'un modèle standard, et tout le monde n'en a pas besoin. Je vous dis, selon la porte et l'usage, si ce niveau d'équipement a un intérêt dans votre cas.",
+    ],
+  },
 ];
 
 const faq = [

@@ -48,6 +48,12 @@ const blocks = [
       "Chambrun, quartier résidentiel au nord de Nice, se compose principalement d'immeubles collectifs de taille moyenne. Comme sur les secteurs voisins des hauteurs nord, les interventions les plus fréquentes concernent les portes palières et les systèmes de fermeture des halls d'entrée. Je diagnostique la panne avant d'intervenir, urgence ou non.",
     ],
   },
+  {
+    heading: "Porte claquée ou porte verrouillée : la différence change l'intervention",
+    paragraphs: [
+      "Une porte claquée n'est pas une porte verrouillée. Quand elle se referme d'un coup, seul le pêne demi-tour, la partie biseautée qui rentre dans la gâche, la retient : la clé n'a pas été tournée. Dans ce cas, la porte s'ouvre souvent sans toucher au cylindre, ce qui limite les dégâts et le coût. Si la clé avait été tournée, c'est le pêne dormant qui verrouille la porte, et l'intervention est différente, plus longue selon le type de serrure. Pour que je sache à quoi m'attendre, dites-moi au téléphone si vous aviez tourné la clé avant de sortir. Le prix de base est le même pour une porte claquée et pour une porte verrouillée sur cylindre européen, annoncé avant que je me déplace.",
+    ],
+  },
 ];
 
 const faq = [

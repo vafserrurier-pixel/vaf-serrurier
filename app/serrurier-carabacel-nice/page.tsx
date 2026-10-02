@@ -48,6 +48,12 @@ const blocks = [
       "Au-delà de la réparation de cylindre déjà évoquée, les immeubles bourgeois du boulevard Carabacel posent parfois un autre défi : des portes d'entrée d'origine, plus lourdes et plus hautes que la moyenne, avec une serrure centrale qu'il faut savoir démonter sans abîmer le bois ancien. Je m'adapte à ce type de menuiserie plutôt que de forcer une solution standard.",
     ],
   },
+  {
+    heading: "La gâche, le point faible discret d'une belle porte bourgeoise",
+    paragraphs: [
+      "Une serrure solide ne sert à rien si la pièce qui la reçoit cède. Côté cadre, la gâche est la petite plaque métallique dans laquelle s'engage le pêne : sur une vieille porte, elle est parfois fixée par de simples vis courtes dans un bois fatigué. Un choc suffit alors à arracher la fixation, même avec un cylindre neuf. Quand le cadre est sain, la solution consiste à poser une contre-plaque plus robuste et des vis plus longues, qui vont chercher la structure en profondeur. L'aspect côté palier ne change pas, et le gain est réel pour peu de matériel. Je regarde systématiquement l'état de la gâche lors d'un changement de cylindre, et je ne vous propose un renfort que s'il est justifié.",
+    ],
+  },
 ];
 
 const faq = [

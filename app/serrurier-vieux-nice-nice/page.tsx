@@ -45,6 +45,12 @@ const blocks = [
       "Le Vieux-Nice, cœur historique aux ruelles étroites et aux immeubles de pierre parfois centenaires, cumule deux défis : des serrures et cylindres d'origine sur les étages résidentiels, et des rideaux métalliques ou portes de commerce très sollicités au rez-de-chaussée. J'adapte ma méthode selon qu'il s'agit d'un appartement ancien ou d'une devanture commerciale.",
     ],
   },
+  {
+    heading: "Sans ascenseur et sans place pour se garer : comment je m'organise",
+    paragraphs: [
+      "Se garer est toujours compliqué à Nice, et dans le Vieux-Nice il n'y a pas d'ascenseur dans les immeubles : je gère le stationnement de mon côté, puis je monte les étages à pied avec mon matériel jusqu'à votre porte. Dans tous les cas, mon délai est de 30 minutes maximum. Pour que la montée serve à quelque chose, trois précisions au téléphone me font gagner du temps : l'étage, le type de porte et ce qui s'est passé, porte claquée, clé cassée ou clé perdue. Je monte ainsi avec le bon matériel, y compris pour un remplacement de serrure, sans avoir à redescendre chercher une pièce. Le soin est le même pour un appartement en location saisonnière que pour un logement habité à l'année.",
+    ],
+  },
 ];
 
 const faq = [

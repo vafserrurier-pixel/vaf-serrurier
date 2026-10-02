@@ -48,6 +48,12 @@ const blocks = [
       "Gairaut, connu pour sa cascade, occupe les hauteurs au nord de Nice dans un environnement plutôt verdoyant fait de villas individuelles. Sur ce type de propriété, j'interviens aussi bien sur la porte d'entrée que sur un portail ou une porte de garage, souvent plus exposés aux intempéries que sur un appartement en centre-ville.",
     ],
   },
+  {
+    heading: "Portail et portillon : une serrure exposée qui demande de l'attention",
+    paragraphs: [
+      "Sur une villa, le portillon est souvent le premier obstacle, et la serrure qui le ferme vit dehors : pluie, poussière, soleil. Au fil des mois, elle durcit, la clé force, le pêne accroche. Plutôt que d'attendre qu'elle bloque, mieux vaut la faire contrôler : une serrure de portillon mal alignée ou fatiguée se règle ou se remplace, et il existe des modèles conçus pour l'extérieur. Si le portail est motorisé, une serrure manuelle sert souvent de secours : elle doit donc fonctionner le jour où l'électricité manque. Je regarde l'état de la serrure et le jeu du portillon avant de proposer quoi que ce soit. Un portillon qui ne se verrouille plus laisse aussi le jardin accessible, donc la porte de la maison : mieux vaut le traiter tôt.",
+    ],
+  },
 ];
 
 const faq = [

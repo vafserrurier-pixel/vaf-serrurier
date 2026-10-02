@@ -48,6 +48,12 @@ const blocks = [
       "Les Baumettes, à l'ouest du centre-ville près du musée des Beaux-Arts, restent un secteur résidentiel plutôt calme, mêlant villas et petits immeubles bourgeois. Les interventions y sont surtout programmées : changement de serrure vieillissante, renforcement d'une porte d'entrée, plutôt que des urgences à répétition. Le diagnostic reste le même quel que soit le contexte.",
     ],
   },
+  {
+    heading: "Partir plusieurs semaines : fermer à clé et ne rien laisser dehors",
+    paragraphs: [
+      "Avant un long départ, deux gestes comptent plus que tout. Le premier : fermer la porte à clé, et pas seulement la tirer. Une porte simplement claquée n'est tenue que par son pêne demi-tour, alors que le tour de clé engage le pêne dormant. Le second : ne laisser aucune clé de secours cachée sous un pot, un paillasson ou dans une boîte aux lettres, des endroits que tout le monde connaît. Si quelqu'un doit arroser les plantes ou relever le courrier, confiez-lui un double plutôt qu'une cachette. Profitez-en pour vérifier que la clé tourne sans forcer : une serrure qui résiste avant de partir risque de bloquer au retour. Un cylindre qui force se règle ou se change en avance, pas la veille du départ.",
+    ],
+  },
 ];
 
 const faq = [

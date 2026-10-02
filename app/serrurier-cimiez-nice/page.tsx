@@ -48,6 +48,12 @@ const blocks = [
       "Au-delà des immeubles anciens déjà évoqués, Cimiez compte aussi de nombreuses propriétés avec portail et grille d'enceinte, parfois d'origine. Ces équipements extérieurs, exposés aux intempéries, demandent un entretien différent d'une serrure de porte intérieure : je vérifie aussi bien la gâche que la fixation, avant de proposer un remplacement complet si nécessaire.",
     ],
   },
+  {
+    heading: "Quand le cylindre ne suffit plus : le coffre à larder d'une porte d'époque",
+    paragraphs: [
+      <>{"Sur une porte ancienne en bois, la serrure est souvent encastrée dans l'épaisseur du battant : c'est le coffre à larder, la boîte qui contient le mécanisme et les pênes. Le cylindre n'en est que la partie qui reçoit la clé. Le remplacer suffit tant que le coffre fonctionne, mais un coffre usé ou faussé par les années donne une porte qui accroche ou un pêne qui ne sort plus complètement. Dans ce cas, changer le cylindre seul ne règle rien. Remplacer le coffre demande de retrouver un modèle aux bonnes cotes, pour ne pas agrandir la mortaise ni abîmer le bois. Je vous le dis franchement après diagnostic : si le cylindre suffit, je ne touche à rien d'autre. Le choix entre cylindre et serrure complète est expliqué sur la page "}<Link href="/changement-serrure-nice/" className="text-steel underline">changement de serrure</Link>{"."}</>,
+    ],
+  },
 ];
 
 const faq = [

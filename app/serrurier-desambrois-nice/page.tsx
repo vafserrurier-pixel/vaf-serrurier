@@ -48,6 +48,12 @@ const blocks = [
       "Le secteur Desambrois, sur les hauteurs entre le centre-ville et Cimiez, mêle villas individuelles et petites résidences construites sur le site de l'ancien hôpital Saint-Roch. Sur ce type de bâti en pente, j'interviens aussi bien sur une porte d'entrée de villa que sur un portail ou une porte de garage exposée à l'extérieur.",
     ],
   },
+  {
+    heading: "Acheter dans un immeuble Belle Époque : changer le cylindre avant d'emménager",
+    paragraphs: [
+      "Quand on achète un appartement dans un immeuble ancien, on reçoit les clés du vendeur, mais on ignore combien d'exemplaires existent : anciens occupants, famille, agence, artisans venus pour des travaux. Changer le cylindre avant de s'installer permet de repartir avec une seule série de clés, connue de vous seul. Dans un immeuble Belle Époque, c'est souvent une opération simple : si la serrure d'origine est en bon état, on remplace uniquement le cylindre par un modèle compatible, sans toucher à la porte ni à sa finition. J'en profite pour vérifier le coffre, la gâche et le fonctionnement du pêne, afin que vous sachiez ce qui est sain et ce qui devra être surveillé. Un seul passage, avant que les cartons n'arrivent.",
+    ],
+  },
 ];
 
 const faq = [

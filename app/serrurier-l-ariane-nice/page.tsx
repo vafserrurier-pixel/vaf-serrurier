@@ -48,6 +48,12 @@ const blocks = [
       "L'Ariane, grand ensemble de logements dans la vallée à l'est de Nice, se compose principalement de tours et de barres d'immeubles collectifs. Sur ce type de bâti, les portes de hall et les gâches électriques subissent un usage intensif. J'interviens régulièrement pour ce type de panne, avec un diagnostic rapide pour limiter le temps d'immobilisation de l'accès collectif.",
     ],
   },
+  {
+    heading: "Quand la porte frotte ou que le pêne n'entre plus dans la gâche",
+    paragraphs: [
+      "Une porte palière qui ferme de plus en plus difficilement n'est pas toujours un problème de serrure. Avec le temps, les charnières prennent du jeu, la porte s'affaisse de quelques millimètres et le pêne n'est plus en face de la gâche : on force pour fermer, et on finit par abîmer le mécanisme. Remplacer la serrure ne règle alors rien, c'est la porte qui doit être réglée. Je commence toujours par observer l'alignement : un réglage des charnières ou un léger décalage de la gâche suffit souvent à retrouver une fermeture douce. Si le problème vient bien du mécanisme, je le dis aussi. L'intérêt est d'éviter de payer une serrure neuve qui forcerait dès la première semaine.",
+    ],
+  },
 ];
 
 const faq = [

@@ -48,6 +48,12 @@ const blocks = [
       "La place Garibaldi et ses immeubles ocre du XVIIIe siècle marquent la porte d'entrée entre la Vieille-Ville et les quartiers de Riquier et Cimiez. Ce bâti ancien, souvent classé ou protégé, demande une attention particulière : je privilégie systématiquement la réparation ou l'adaptation d'un cylindre existant avant d'envisager un remplacement qui changerait l'aspect d'une porte d'époque.",
     ],
   },
+  {
+    heading: "Appel le soir ou le week-end : ce qui est majoré et ce qui ne l'est pas",
+    paragraphs: [
+      <>{"Autour d'une place animée, les appels tardifs ne sont pas rares : porte claquée au retour d'un restaurant, clé perdue le dimanche. Je suis disponible à toute heure, avec une majoration de 50% le soir, le week-end et les jours fériés. Ce qu'il faut savoir : elle ne s'applique qu'à ma main-d'œuvre et à mon déplacement, jamais au prix d'une pièce. Un cylindre coûte exactement le même prix un dimanche à minuit qu'un mardi après-midi. Et vous connaissez le total avant que je me déplace, sans mauvaise surprise sur place. Si la situation peut attendre le lendemain, je vous le dis honnêtement au téléphone : parfois, sécuriser la porte pour la nuit suffit, et le remplacement peut se planifier en journée. Le détail figure sur la page des "}<Link href="/tarifs-serrurier-nice/" className="text-steel underline">tarifs</Link>{"."}</>,
+    ],
+  },
 ];
 
 const faq = [

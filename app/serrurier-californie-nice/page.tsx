@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier Californie, à l'ouest de Nice, tire son nom de villas construites au tournant du XXe siècle, aujourd'hui entourées d'immeubles plus récents. Sur les propriétés les plus anciennes, je privilégie l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui changerait l'aspect d'une porte d'origine, comme sur d'autres quartiers historiques de la ville.",
     ],
   },
+  {
+    heading: "Ouvrir sans casser : la méthode dépend de la serrure",
+    paragraphs: [
+      <>{"La plupart des portes claquées ou verrouillées peuvent s'ouvrir sans dommage, mais la méthode dépend de la serrure. Sur une porte simplement claquée, une technique douce suffit en général. Sur une porte verrouillée à clé, tout dépend du cylindre : un modèle standard se prête à une ouverture sans casse, alors qu'un cylindre haute sécurité ou une serrure renforcée demande plus de temps, et il arrive qu'une ouverture non destructive ne soit pas possible. Dans ce cas, je vous le dis clairement et j'annonce le coût avant de passer à une méthode destructive, le remplacement du cylindre étant alors à prévoir. Sur des portes de qualité, comme dans les résidences de standing, c'est la serrure qui décide de la méthode. Les cas courants sont décrits sur la page "}<Link href="/ouverture-de-porte-nice/" className="text-steel underline">ouverture de porte</Link>{"."}</>,
+    ],
+  },
 ];
 
 const faq = [

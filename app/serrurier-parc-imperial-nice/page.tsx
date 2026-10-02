@@ -48,6 +48,12 @@ const blocks = [
       "Le secteur du Parc Impérial, proche de Cimiez, doit son nom à l'ancien Grand Hôtel devenu résidence. Les immeubles de standing qui le composent ont souvent des systèmes de fermeture plus élaborés que la moyenne : interphones couplés à une gâche électrique, double cylindre. Je diagnostique l'ensemble du système avant d'intervenir, pas seulement la serrure.",
     ],
   },
+  {
+    heading: "Un second point de fermeture sans toucher à la porte d'origine",
+    paragraphs: [
+      "Sur une porte d'immeuble de standing, on hésite parfois à intervenir lourdement. Il existe pourtant une option mesurée : ajouter un verrou de sûreté en complément de la serrure existante. Deux points de fermeture indépendants valent mieux qu'un seul, car il faut venir à bout des deux. Le choix dépend de la porte : un verrou en applique, fixé sur la face intérieure, se pose sans modifier l'aspect côté palier, alors qu'un système encastré demande d'entailler le battant. Je vous indique ce que la porte accepte, en tenant compte du règlement de copropriété s'il encadre l'équipement des portes, plutôt que de poser un matériel qui ne tiendrait pas. C'est souvent le compromis le plus simple entre sécurité et préservation de l'existant.",
+    ],
+  },
 ];
 
 const faq = [

@@ -48,6 +48,12 @@ const blocks = [
       "Riquier, porte d'entrée historique et populaire à l'est de Nice, mélange immeubles anciens du centre-bourg et constructions plus récentes. Ce bâti mixte demande une approche différente selon les cas : adaptation d'un cylindre sur une porte ancienne, ou remplacement standard sur un immeuble plus récent. Je diagnostique systématiquement avant de proposer une solution.",
     ],
   },
+  {
+    heading: "Renforcer une porte côté charnières, pas seulement côté serrure",
+    paragraphs: [
+      "Quand on renforce une porte, on pense d'abord à la serrure. Or une porte peut aussi être attaquée côté charnières, en la soulevant ou en la forçant au levier. Les pivots anti-dégondage, de petites tiges fixées dans le battant et le cadre, empêchent la porte de sortir de son logement même si les charnières cèdent. Les cornières anti-pince, elles, protègent la tranche de la porte contre l'effet de levier. Ces renforts s'ajoutent à une porte existante, sans la remplacer, et conviennent surtout aux portes en bon état. Pour un logement d'immeuble proche de la gare, c'est une option raisonnable quand on veut renforcer sans changer de porte. Je vérifie d'abord que la porte et le cadre peuvent les recevoir, puis je vous dis lesquels valent la peine.",
+    ],
+  },
 ];
 
 const faq = [

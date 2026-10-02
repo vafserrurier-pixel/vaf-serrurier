@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier des Poètes, au nord de Nice, doit son nom aux rues qui portent des noms d'écrivains. Secteur résidentiel plutôt calme, il compte surtout des immeubles collectifs de taille moyenne. J'y interviens autant pour du dépannage classique (cylindre grippé, porte claquée) que pour des changements de serrure programmés à l'avance.",
     ],
   },
+  {
+    heading: "Confier un double à un proche : le faire dans les règles",
+    paragraphs: [
+      "Laisser une clé à un voisin, à un parent ou à un ami évite bien des urgences : porte claquée, clé oubliée au bureau, arrivée d'un artisan en votre absence. Quelques précautions rendent ce geste plus sûr. Choisissez une personne de confiance, évitez les porte-clés qui portent votre nom ou votre adresse, et notez à qui vous avez confié quoi. Si vous déménagez ou si la situation change, pensez à reprendre le double, ou à changer le cylindre. Dans un quartier résidentiel plutôt calme, ce réflexe fonctionne bien, mais il ne dispense pas de savoir précisément qui détient une clé de chez vous. Et si le double doit rester longtemps chez quelqu'un, demandez-vous s'il en a vraiment besoin : une clé de moins en circulation, c'est un risque de moins.",
+    ],
+  },
 ];
 
 const faq = [

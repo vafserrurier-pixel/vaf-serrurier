@@ -48,6 +48,12 @@ const blocks = [
       "Les Moulins, quartier résidentiel à l'ouest de Nice, se compose principalement de grands ensembles collectifs. Comme à l'Ariane, les portes de hall et les digicodes y subissent un usage intensif. J'interviens régulièrement pour ce type de panne, ainsi que pour la sécurisation des accès communs à la demande des syndics.",
     ],
   },
+  {
+    heading: "Quand une serrure d'origine n'est plus fabriquée",
+    paragraphs: [
+      "Dans les ensembles construits entre 1965 et 1976, certaines serrures d'origine ne sont plus fabriquées. Quand un mécanisme tombe en panne, la pièce de rechange n'existe parfois plus. Deux solutions : trouver un cylindre ou un coffre compatible aux mêmes cotes, ce qui suffit si le mécanisme est sain, ou remplacer la serrure entière par un modèle moderne qui se fixe aux mêmes emplacements. Je commence par identifier la marque et les cotes de votre serrure, souvent lisibles sur la tranche de la porte ou sur le coffre. Le but est de ne pas percer ni modifier la porte inutilement. Une photo de la serrure me permet souvent de savoir avant de venir si une pièce compatible existe.",
+    ],
+  },
 ];
 
 const faq = [

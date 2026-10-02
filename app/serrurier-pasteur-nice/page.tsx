@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier Pasteur, à l'est de Nice, doit une partie de son identité à la proximité du CHU Pasteur. Le secteur compte de nombreuses résidences collectives, occupées notamment par du personnel hospitalier aux horaires décalés. J'y interviens à toute heure pour les urgences comme pour l'entretien courant des portes de hall et digicodes.",
     ],
   },
+  {
+    heading: "Après une effraction : sécuriser d'abord, conserver les traces, garder la facture",
+    paragraphs: [
+      <>{"Après une tentative d'effraction ou un cambriolage, deux préoccupations se croisent : sécuriser la porte tout de suite et préserver ce qui servira au dossier. Avant que j'intervienne, évitez de toucher aux traces visibles, prenez quelques photos de la porte, du cylindre et du cadre, et prévenez votre assureur dans les délais prévus par votre contrat. Je sécurise la porte pour la nuit en protégeant l'accès, puis je propose une solution durable. Vous recevez une facture détaillée, qui sert de justificatif auprès de l'assurance. Je vous indique aussi ce que je constate sur la porte, ce qui aide à décrire le sinistre. La démarche est expliquée sur la page "}<Link href="/mise-en-securite-apres-effraction-nice/" className="text-steel underline">mise en sécurité après effraction</Link>{"."}</>,
+    ],
+  },
 ];
 
 const faq = [

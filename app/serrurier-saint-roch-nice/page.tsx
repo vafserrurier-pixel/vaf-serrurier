@@ -48,6 +48,12 @@ const blocks = [
       "Saint-Roch, quartier populaire et dense de l'est-centre niçois, compte une forte concentration d'immeubles collectifs. Les pannes les plus fréquentes touchent les gâches électriques et les digicodes de hall, sollicités par un nombre important de résidents. Je privilégie la réparation quand elle est possible, pour limiter le coût et le délai d'intervention.",
     ],
   },
+  {
+    heading: "Une serrure en applique carénée sur une porte d'appartement",
+    paragraphs: [
+      "Toutes les portes ne se prêtent pas à une serrure encastrée. Quand l'épaisseur du battant ou l'état du bois ne permettent pas d'entailler proprement, on peut poser une serrure en applique carénée : elle se fixe sur la face intérieure de la porte, dans un boîtier qui protège le mécanisme et le cylindre. Elle évite de creuser la porte comme pour une serrure encastrée, et elle offre plusieurs points de fermeture. En contrepartie, elle se voit côté intérieur, ce qui doit vous convenir. Pour un appartement dont la porte a beaucoup servi, c'est une solution à considérer avant d'envisager une porte neuve. Je regarde l'état de la porte avant de vous la proposer, car sur un bois trop abîmé, la fixation ne tiendrait pas.",
+    ],
+  },
 ];
 
 const faq = [

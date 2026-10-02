@@ -48,6 +48,12 @@ const blocks = [
       "Saint-Isidore, secteur en développement à l'ouest de Nice proche du stade, compte de nombreuses résidences construites ces dernières années. Sur ce type de bâti récent, les pannes concernent surtout l'usure normale des cylindres et des mécanismes de porte, plutôt que des serrures d'origine à adapter comme dans les quartiers plus anciens du centre.",
     ],
   },
+  {
+    heading: "Logement neuf : les clés d'origine ont déjà beaucoup circulé",
+    paragraphs: [
+      "Dans un logement neuf, on pense que tout est parfait et que personne d'autre n'a accès. Pourtant, pendant la construction et les finitions, plusieurs corps de métier sont entrés dans l'appartement, parfois avec des clés de chantier. À la remise des clés, il est raisonnable de se demander combien d'exemplaires existent. Remplacer le cylindre avant d'emménager vous assure d'être seul à posséder les clés, et le prix vous est annoncé avant l'intervention. Sur une serrure multipoints standard, comme on en trouve dans les résidences récentes, l'opération est simple et ne touche pas à la porte. C'est un geste que je recommande à l'emménagement, avant même de déballer les cartons.",
+    ],
+  },
 ];
 
 const faq = [

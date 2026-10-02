@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import QuartierPageTemplate from "@/components/QuartierPageTemplate";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -43,6 +44,12 @@ const blocks = [
     heading: "Villas de prestige et portails du Mont Boron",
     paragraphs: [
       "Le Mont Boron, colline résidentielle surplombant la baie des Anges, concentre des villas de prestige avec portails, grilles d'enceinte et systèmes de fermeture souvent plus élaborés que la moyenne. J'interviens sur ces équipements extérieurs comme sur la porte d'entrée elle-même, en recommandant des solutions robustes adaptées à ce type de propriété individuelle.",
+    ],
+  },
+  {
+    heading: "Renforcer la porte existante ou en installer une neuve : comment choisir",
+    paragraphs: [
+      <>{"Sur une villa, la question se pose tôt ou tard : renforcer la porte actuelle ou la remplacer par un bloc-porte blindé ? Si la porte et son cadre sont sains, un blindage conserve l'existant, de l'extérieur comme de l'intérieur, et améliore nettement la résistance. Si le bois est fatigué, la menuiserie déformée, ou si vous voulez aussi une meilleure isolation, une "}<Link href="/installation-porte-blindee-nice/" className="text-steel underline">porte blindée neuve</Link>{", avec son huisserie, sera plus cohérente que d'empiler des renforts sur un support abîmé. Le bon choix dépend de l'état réel de la porte et du cadre, pas du budget seul : je regarde sur place et je vous dis lequel est justifié. Dans les deux cas, le devis est annoncé avant toute intervention."}</>,
     ],
   },
 ];

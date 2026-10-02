@@ -45,6 +45,12 @@ const blocks = [
       "L'avenue Jean-Médecin concentre boutiques, immeubles mixtes et halls d'entrée à fort passage. Sur les rez-de-chaussée commerciaux, j'interviens aussi bien sur un rideau métallique bloqué que sur une serrure de vitrine forcée. Pour les étages, les halls d'immeubles anciens au-dessus des commerces demandent souvent un entretien régulier des gâches et digicodes, sollicités par un passage important.",
     ],
   },
+  {
+    heading: "Logements et commerces dans le même immeuble : qui doit pouvoir ouvrir quoi",
+    paragraphs: [
+      "Dans un immeuble qui abrite des boutiques au rez-de-chaussée et des appartements aux étages, tout le monde n'a pas besoin des mêmes accès. Le commerçant doit entrer dans sa boutique et son arrière-boutique, les résidents dans le hall et chez eux, le syndic ou le gardien dans les parties communes. Un organigramme de clés répond à cela : chaque porte a son cylindre, certaines clés en ouvrent plusieurs, d'autres une seule. Concrètement, la clé d'un résident ouvre le hall et son appartement, mais pas la réserve d'un commerce. Quand un cylindre de hall est remplacé, c'est le bon moment pour remettre ces accès à plat, plutôt que de multiplier des doubles qui ouvrent tout. Je vous aide à définir ce plan avant de poser quoi que ce soit.",
+    ],
+  },
 ];
 
 const faq = [

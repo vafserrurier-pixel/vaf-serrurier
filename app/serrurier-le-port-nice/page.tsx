@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier du Port, autour du bassin Lympia, cumule un bâti ancien et une exposition directe à l'air marin. Les deux facteurs se combinent : les cylindres d'origine, déjà plus fragiles, corrodent aussi plus vite à proximité immédiate de l'eau. Je surveille particulièrement ce point lors de mes diagnostics dans ce secteur.",
     ],
   },
+  {
+    heading: "Clés perdues : changer le cylindre ou simplement refaire un double ?",
+    paragraphs: [
+      "Perdre ses clés ne justifie pas toujours de changer la serrure. Tout dépend des circonstances. Si vous les avez égarées chez vous ou dans un lieu précis que vous pouvez fouiller, il suffit souvent de les retrouver ou de refaire un double. Si elles ont disparu dehors, avec une adresse que quelqu'un peut deviner (un porte-clés portant votre nom, des papiers dans un sac volé), mieux vaut changer le cylindre : c'est la seule façon d'être sûr que l'ancienne clé n'ouvre plus rien. Entre les deux, je vous pose les questions qui permettent de trancher, quitte à vous dire que ce n'est pas nécessaire. Un cylindre se remplace rapidement, et vous repartez avec de nouvelles clés.",
+    ],
+  },
 ];
 
 const faq = [

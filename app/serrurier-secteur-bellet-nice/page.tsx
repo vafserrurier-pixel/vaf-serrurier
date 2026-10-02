@@ -45,6 +45,12 @@ const blocks = [
       "Le secteur Bellet, sur les collines qui portent l'appellation viticole du même nom, reste rural et peu dense, avec des propriétés et domaines parfois isolés. J'y interviens sur des portails d'accès longs, des portes de dépendance ou d'habitation principale, en tenant compte d'un délai plus long que dans le centre-ville pour organiser le déplacement.",
     ],
   },
+  {
+    heading: "Une seule clé pour la maison, les dépendances et le portail",
+    paragraphs: [
+      "Dans une propriété avec une maison, des dépendances et un portail, on finit souvent avec un trousseau de clés différentes. Il est pourtant possible de faire fonctionner plusieurs cylindres avec une seule clé : c'est la mise en passe, ou clé unique. Les cylindres sont fabriqués pour s'ouvrir avec le même profil, et un seul jeu de clés suffit pour tout ouvrir. L'inconvénient est qu'une clé perdue donne accès à l'ensemble : à décider selon l'usage. Pour une propriété de campagne où l'on passe d'un bâtiment à l'autre, c'est souvent pratique, à condition de bien gérer les doubles. Je peux vous dire quels accès gagneraient à être regroupés et lesquels à rester séparés.",
+    ],
+  },
 ];
 
 const faq = [

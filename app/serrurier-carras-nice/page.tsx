@@ -48,6 +48,12 @@ const blocks = [
       "Carras, à l'ouest de Nice, combine zones commerciales et quartiers résidentiels. J'y interviens aussi bien sur des serrures de local commercial ou de rideau métallique que sur des portes d'appartement classiques. La proximité de zones d'activité signifie aussi des demandes régulières pour sécuriser des accès professionnels en dehors des heures d'ouverture.",
     ],
   },
+  {
+    heading: "Vérifier un prestataire avant de le faire monter chez soi",
+    paragraphs: [
+      "Dans l'urgence, on appelle le premier numéro trouvé en ligne. C'est là que se glissent les mauvaises surprises : prix d'appel qui explose sur place, faux artisans, numéros qui changent. Quelques vérifications prennent une minute : l'entreprise a-t-elle un SIRET et une adresse réelle, vérifiables sur Internet ? Le prix total est-il annoncé au téléphone, avant le déplacement ? La personne qui répond est-elle celle qui interviendra ? Chez moi, je réponds moi-même, mon SIRET est affiché sur le site et le prix vous est annoncé avant que je parte. Dans un secteur qui mêle commerces et logements, ces vérifications valent autant pour un local professionnel que pour un appartement.",
+    ],
+  },
 ];
 
 const faq = [

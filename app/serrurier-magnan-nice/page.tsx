@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier de Magnan, résidentiel en bord de mer à l'ouest du centre, compte de nombreux immeubles des années 1960-1970 exposés à l'air marin. Comme sur toute la façade littorale de Nice, les cylindres extérieurs y vieillissent plus vite qu'ailleurs en ville : un entretien ou un remplacement anticipé évite le blocage complet un jour d'urgence.",
     ],
   },
+  {
+    heading: "Cave, box, local à vélos : les portes qu'on oublie de sécuriser",
+    paragraphs: [
+      "On soigne la porte d'entrée de l'appartement et on oublie la cave ou le box, qui ferment souvent avec un simple cadenas ou une serrure basique. Si votre résidence dispose de ce type de local, vérifiez ce qui le ferme. Un cadenas à anse longue se coupe facilement ; un cadenas à anse protégée ou une serrure de sûreté résiste mieux. Pour une porte de cave en bois, une serrure adaptée à l'épaisseur du battant et une gâche bien fixée font déjà la différence. Ces locaux sont parties privatives ou communes selon le règlement de copropriété : commencez par savoir de laquelle il s'agit avant d'engager des frais. Je peux ensuite vous conseiller une solution réaliste, sans suréquipement.",
+    ],
+  },
 ];
 
 const faq = [

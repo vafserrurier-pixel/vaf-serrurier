@@ -48,6 +48,12 @@ const blocks = [
       "Brancolar, secteur résidentiel sur les collines au nord de Nice, mêle villas individuelles et petites résidences. Le relief du quartier signifie que je m'organise différemment selon l'accès : certaines propriétés sont visibles depuis la route, d'autres nécessitent de remonter une allée privée. J'en tiens compte pour annoncer un délai réaliste au téléphone.",
     ],
   },
+  {
+    heading: "Comparer deux devis de serrurerie : ce que le prix doit inclure",
+    paragraphs: [
+      <>{"Quand on compare deux devis, le plus bas n'est pas toujours le moins cher. Avant de décider, vérifiez ce que chacun comprend : le déplacement est-il inclus ? la main-d'œuvre ? la pièce ? Une majoration de nuit ou de week-end est-elle prévue, et sur quoi porte-t-elle ? Un devis sérieux détaille ces postes et indique le prix total avant que le professionnel ne se déplace. Chez moi, le prix est annoncé au téléphone avant l'intervention, le déplacement est compris sur Nice, et la majoration éventuelle ne porte jamais sur les pièces. Pour ceux qui s'installent dans les nouveaux programmes du quartier et cherchent un artisan en ligne, poser ces questions à n'importe quel professionnel est un bon réflexe. Ma "}<Link href="/tarifs-serrurier-nice/" className="text-steel underline">grille de tarifs</Link>{" détaille les prix."}</>,
+    ],
+  },
 ];
 
 const faq = [

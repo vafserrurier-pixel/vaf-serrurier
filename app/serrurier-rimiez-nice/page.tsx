@@ -48,6 +48,12 @@ const blocks = [
       "Rimiez, sur les hauteurs proches de Cimiez et de son monastère, conserve un cadre résidentiel arboré fait de villas et de petites résidences. Le secteur partage certains traits avec Cimiez voisin : un bâti parfois ancien, où je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet quand la porte le permet.",
     ],
   },
+  {
+    heading: "Quand la clé tourne mais que rien ne bouge",
+    paragraphs: [
+      "Vous tournez la clé, elle fait un tour complet, et pourtant le pêne ne sort pas ou ne rentre pas. Dans ce cas, ce n'est généralement pas la clé qui est en cause : c'est la pièce du cylindre qui transmet le mouvement au mécanisme, l'entraîneur, qui s'est usée ou cassée. Plus une serrure est ancienne, plus cette panne est possible, d'où l'intérêt de ne pas attendre un blocage complet quand le tour de clé devient irrégulier. N'insistez pas : forcer risque d'aggraver la panne. Un cylindre dont l'entraîneur est cassé se remplace, et la porte redevient utilisable. Dites-moi au téléphone si la clé tourne dans le vide : c'est un bon indicateur.",
+    ],
+  },
 ];
 
 const faq = [

@@ -45,6 +45,12 @@ const blocks = [
       "Voisin du Mont Boron, le secteur du Mont Alban conserve un caractère résidentiel préservé, entre villas et propriétés arborées, à proximité de l'ancien fort. Comme sur les hauteurs voisines, l'essentiel de mon activité y concerne les portes d'entrée individuelles et les portails, avec un délai d'intervention à anticiper selon l'accès de la propriété.",
     ],
   },
+  {
+    heading: "La porte de service, ce deuxième accès qu'on ferme moins bien",
+    paragraphs: [
+      "Dans une villa, la porte d'entrée principale est soignée, mais d'autres accès existent : porte de cuisine, porte de service, accès au garage ou au sous-sol. On les ferme souvent avec une serrure plus simple, parce qu'on les voit moins. C'est pourtant un accès comme un autre, d'autant plus intéressant pour un intrus qu'il est souvent moins visible depuis la rue. Le réflexe : vérifier que chacune de ces portes ferme bien à clé, que la serrure n'est pas usée et que le cylindre ne dépasse pas. Pour une porte donnant sur un jardin boisé, une serrure de qualité et une gâche solide suffisent déjà à relever nettement le niveau. Je peux faire le tour des accès de la propriété et vous indiquer lesquels méritent d'être repris.",
+    ],
+  },
 ];
 
 const faq = [

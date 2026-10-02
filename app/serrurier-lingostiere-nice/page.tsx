@@ -45,6 +45,12 @@ const blocks = [
       "Lingostière, à l'extrémité ouest de Nice, reste plus excentré et moins dense que les quartiers centraux. Le secteur mêle habitat résidentiel et proximité de zones d'activité. Compte tenu de la distance depuis mon point de départ, j'annonce systématiquement un délai réaliste au téléphone, ajusté selon la circulation sur cet axe.",
     ],
   },
+  {
+    heading: "Réparer ou remplacer : comment je décide",
+    paragraphs: [
+      "Face à une serrure qui pose problème, je préfère réparer quand c'est raisonnable. Plusieurs critères me guident. L'état du mécanisme d'abord : si seul le cylindre est usé, on le change et le reste continue de servir. L'âge ensuite : une serrure très ancienne dont les pièces ne se trouvent plus devient difficile à entretenir. Le niveau de sécurité souhaité enfin : une serrure en bon état peut rester insuffisante pour une porte exposée. Quand le remplacement s'impose, je vous explique pourquoi, avec le prix annoncé avant de commencer. Dans un secteur plus isolé comme Lingostière, je préfère faire une seule intervention qui règle vraiment le problème. Quand je repars, vous savez précisément ce qui a été fait, pourquoi, et ce qu'il reste éventuellement à surveiller.",
+    ],
+  },
 ];
 
 const faq = [

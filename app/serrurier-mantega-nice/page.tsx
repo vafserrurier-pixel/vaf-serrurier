@@ -44,6 +44,12 @@ const blocks = [
       "J'interviens régulièrement à Mantega, notamment pour des changements de cylindre sur des serrures d'immeuble ou de résidence. Le diagnostic sur place détermine si un simple remplacement de cylindre suffit ou si la serrure complète doit être changée.",
     ],
   },
+  {
+    heading: "Après un changement de cylindre : ce qu'il faut vérifier avant que je reparte",
+    paragraphs: [
+      "Un cylindre neuf se contrôle avant la fin de l'intervention. Je vous invite à tester avec moi : verrouiller et déverrouiller plusieurs fois porte ouverte d'abord, puis porte fermée, de l'intérieur comme de l'extérieur, pour vérifier que la clé tourne sans forcer. Comptez ensuite les clés remises, et gardez la carte de propriété si le cylindre en est fourni : elle sert à en commander d'autres. Conservez enfin la facture, qui indique la référence posée. Cette vérification prend quelques minutes, et elle évite de découvrir un défaut le lendemain, une fois la porte fermée à clé. Si quelque chose ne va pas, c'est sur le moment que je le règle.",
+    ],
+  },
 ];
 
 const faq = [

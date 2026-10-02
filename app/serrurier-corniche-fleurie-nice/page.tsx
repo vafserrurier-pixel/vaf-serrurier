@@ -45,6 +45,12 @@ const blocks = [
       "La Corniche Fleurie, route résidentielle des hauteurs ouest, dessert principalement des villas individuelles avec jardin. Sur ce type de propriété, j'interviens sur la porte d'entrée comme sur les portails et portillons, plus exposés aux intempéries qu'une porte d'appartement. Un entretien anticipé évite souvent un blocage complet en pleine urgence.",
     ],
   },
+  {
+    heading: "Les portes intérieures aussi : serrure de chambre ou de salle de bain bloquée",
+    paragraphs: [
+      "On parle de la porte d'entrée, mais les portes intérieures se bloquent aussi : chambre, salle de bain, bureau. Une serrure de chambre qui se coince avec quelqu'un à l'intérieur, surtout un enfant, demande une réaction calme et rapide. Beaucoup de serrures de salle de bain disposent d'un dégagement d'urgence, un petit orifice qui permet de les ouvrir depuis l'extérieur : renseignez-vous sur celui de votre porte. Sinon, j'interviens pour ouvrir sans abîmer la porte, puis je répare ou remplace le mécanisme. Évitez de forcer sur la poignée en attendant : un mécanisme de chambre est fragile, et forcer risque de casser le carré qui relie la poignée au pêne. Dans une villa qui compte plusieurs pièces, c'est une panne qu'on oublie de prévoir, et qui se règle vite.",
+    ],
+  },
 ];
 
 const faq = [

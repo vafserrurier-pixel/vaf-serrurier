@@ -48,6 +48,12 @@ const blocks = [
       "Saint-Pancrace, secteur résidentiel au nord de Nice, mêle petites résidences collectives et habitat pavillonnaire. Les demandes y sont assez équilibrées entre urgences classiques (porte claquée, clé cassée) et projets programmés comme un changement de serrure avant l'été ou l'installation d'un cylindre plus résistant sur une porte d'entrée individuelle.",
     ],
   },
+  {
+    heading: "Cabanon, abri de jardin, local à outils : les cadenas qu'on ne regarde plus",
+    paragraphs: [
+      "Autour d'une maison avec jardin, il y a souvent un abri, un cabanon ou un local à outils fermé par un cadenas acheté une fois pour toutes. Il est pourtant plus vulnérable que la porte de la maison : anse fine, corps léger, fixation faible. Un cadenas se choisit selon ce qu'il protège : pour des outils de valeur, un modèle à anse protégée et un moraillon fixé dans un support sain font la différence. Les vis du moraillon doivent rester cachées ou être rivetées côté extérieur, sinon le meilleur cadenas ne sert pas à grand-chose. Si la fermeture se fait par une serrure, vérifiez qu'elle tourne sans forcer. Je peux vous conseiller sur la fermeture d'un local extérieur, sans suréquipement.",
+    ],
+  },
 ];
 
 const faq = [

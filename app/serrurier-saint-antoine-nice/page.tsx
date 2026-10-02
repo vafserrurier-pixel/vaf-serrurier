@@ -48,6 +48,12 @@ const blocks = [
       "Saint-Antoine, secteur résidentiel à l'ouest de Nice proche du Var, compte un mélange d'immeubles collectifs et d'habitat individuel. Les interventions y couvrent tout le spectre habituel : porte claquée, changement de cylindre, sécurisation après une tentative d'effraction. Le prix annoncé reste identique à celui pratiqué sur le reste de la ville.",
     ],
   },
+  {
+    heading: "Fermer à double tour : ce que ça change vraiment",
+    paragraphs: [
+      "Tourner la clé n'est pas un détail. Quand on tire simplement la porte, seul le pêne demi-tour la retient, ce qui n'offre qu'une protection limitée. Un tour de clé engage le pêne dormant, qui sort de la serrure et verrouille réellement la porte. Un second tour, quand la serrure en a deux, enfonce ce pêne plus loin. Prendre l'habitude de fermer à clé, y compris pour sortir cinq minutes, change vraiment le niveau de protection. Et si vous vous retrouvez dehors après avoir simplement tiré la porte, c'est le cas le plus simple pour une ouverture, souvent sans aucun dégât. Sur une porte multipoints, pensez aussi à relever la poignée avant de tourner la clé : c'est ce geste qui engage tous les points de fermeture.",
+    ],
+  },
 ];
 
 const faq = [

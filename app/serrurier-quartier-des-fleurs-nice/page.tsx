@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier des Fleurs, proche de la gare, compte une forte proportion de logements locatifs dans des immeubles anciens. Entre deux locataires, changer le cylindre ou toute la serrure est la solution la plus fiable pour éviter qu'une ancienne clé reste en circulation. J'interviens régulièrement pour ce type de remplacement, à la demande de propriétaires ou d'agences.",
     ],
   },
+  {
+    heading: "Logement partagé : quand un colocataire part, ses clés restent",
+    paragraphs: [
+      <>{"Dans un appartement partagé, chaque occupant reçoit sa clé. Quand l'un d'eux déménage, il repart en général avec la sienne, et personne ne sait vraiment combien d'exemplaires circulent encore, doubles compris. Le plus simple pour reprendre la main est de "}<Link href="/changement-serrure-nice/" className="text-steel underline">changer le cylindre</Link>{" au départ du colocataire, puis de remettre une clé neuve à chacun : une opération courte, qui évite de se demander pendant des mois qui peut encore entrer. Dans un quartier où beaucoup de logements sont loués, c'est un geste que propriétaires et locataires gagnent à anticiper. Mettez-vous d'accord à l'avance sur qui paie et qui garde les clés. Je prévois le nombre de clés selon le nombre d'occupants qui restent."}</>,
+    ],
+  },
 ];
 
 const faq = [

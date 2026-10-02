@@ -39,6 +39,12 @@ const blocks = [
       "La Corniche des Oliviers, route des hauteurs nord bordée d'oliviers, dessert principalement des villas individuelles avec vue sur la ville. Sur ce type de propriété en pente, les portails et portes de garage sont particulièrement exposés aux éléments. Je vérifie systématiquement l'état de la gâche et de la fixation avant de proposer une réparation ou un remplacement.",
     ],
   },
+  {
+    heading: "Installer un coffre-fort à domicile : où et comment le fixer",
+    paragraphs: [
+      "Dans une villa, un coffre-fort protège papiers, bijoux ou documents de valeur, mais un coffre mal installé est un coffre qu'on emporte. Quand je l'installe, je le fixe au sol ou au mur selon son poids et la structure disponible. Le choix de l'emplacement compte autant que le coffre : un endroit discret, où l'on peut le fixer dans un support solide, et pas dans une cloison légère. Je détermine sur place si le mur ou la dalle peuvent le recevoir, et quel type de fixation convient. Pour un coffre déjà en place dont la clé ou le code est perdu, je peux aussi l'ouvrir, sans destruction quand c'est possible.",
+    ],
+  },
 ];
 
 const faq = [

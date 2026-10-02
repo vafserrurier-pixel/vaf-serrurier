@@ -48,6 +48,12 @@ const blocks = [
       "À l'extrême ouest de Nice, en bord de mer, La Madeleine se compose surtout de grands ensembles résidentiels construits dans les années 1970-1980. Sur ce type de copropriété, j'interviens souvent sur les portes de hall, les digicodes et les boîtes aux lettres collectives, à la demande d'un syndic ou d'un résident mandaté.",
     ],
   },
+  {
+    heading: "Serrure 3 points ou 5 points : ce qu'ajoutent vraiment les points en plus",
+    paragraphs: [
+      "Dans un appartement de résidence, la question du nombre de points revient souvent : trois, cinq, sept ? Une serrure multipoints verrouille la porte en plusieurs endroits à la fois : au centre, en haut et en bas. Plus il y a de points, plus la porte est tenue sur toute sa hauteur et moins elle se déforme sous l'effort. Mais plus de points ne veut pas dire plus de sécurité à tous les coups : la solidité du cadre, de la porte et du cylindre compte autant. Sur une porte palière de résidence collective, une serrure trois points avec un bon cylindre convient souvent ; je recommande davantage de points quand la porte et le cadre sont assez solides pour en profiter. Je vous dis ce qui est utile pour votre porte, pas ce qui coûte le plus cher.",
+    ],
+  },
 ];
 
 const faq = [

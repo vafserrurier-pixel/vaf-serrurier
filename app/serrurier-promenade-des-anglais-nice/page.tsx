@@ -46,6 +46,12 @@ const blocks = [
       "Sur la Promenade des Anglais, les résidences et hôtels de prestige font directement face à la mer. L'air chargé en sel y accélère la corrosion des mécanismes métalliques exposés, en particulier sur les portes donnant sur une terrasse ou un balcon. Je recommande souvent un cylindre en inox ou traité anticorrosion pour ce type d'exposition directe.",
     ],
   },
+  {
+    heading: "La poignée aussi mérite d'être protégée",
+    paragraphs: [
+      "On pense au cylindre et à la serrure, rarement à la poignée. Sur certaines portes, c'est pourtant elle qui est la plus exposée : une poignée standard peut être tirée, tordue ou arrachée avec un peu d'effort. Une poignée blindée est conçue pour résister à ces sollicitations et protège aussi le cylindre selon le modèle. Elle se pose sur la porte existante, sans en changer l'aspect général, ce qui compte dans les résidences dont le règlement encadre l'apparence des parties visibles. Elle s'adapte à la plupart des portes ; je vérifie avant de la proposer, et la pose, réglage compris, est facturée à prix annoncé. L'intérêt est surtout sensible pour les portes les plus exposées, celles d'un rez-de-chaussée ou d'un logement souvent vide entre deux occupants.",
+    ],
+  },
 ];
 
 const faq = [

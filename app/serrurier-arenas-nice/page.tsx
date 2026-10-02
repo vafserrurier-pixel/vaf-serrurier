@@ -48,6 +48,12 @@ const blocks = [
       "L'Arénas, zone d'activité et de bureaux à l'ouest de Nice proche de l'aéroport, présente des besoins différents des secteurs résidentiels : portes de bureaux, systèmes de contrôle d'accès, serrures multipoints sur les locaux professionnels. J'interviens aussi bien pour une entreprise que pour un particulier résidant dans ce secteur mixte.",
     ],
   },
+  {
+    heading: "Un salarié part, une clé disparaît : renouveler les accès d'un bureau",
+    paragraphs: [
+      "Dans une entreprise, les clés circulent : salariés, prestataires de ménage, anciens collaborateurs. Quand quelqu'un quitte la société ou qu'une clé est perdue, la question est la même qu'à la maison : combien de copies existent encore ? Un cylindre à clé protégée limite les doubles non autorisés, et un registre simple de qui détient quoi évite de se poser la question des mois plus tard. Quand un accès change de mains, remplacer le cylindre concerné reste plus sûr que d'espérer récupérer toutes les clés. Je vous aide à faire le tri entre les accès à renouveler et ceux qui peuvent rester en place. Pour un local qui reste vide la nuit et le week-end, c'est aussi le moment de vérifier que chaque porte donnant sur l'extérieur ferme bien à clé.",
+    ],
+  },
 ];
 
 const faq = [

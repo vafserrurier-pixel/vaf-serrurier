@@ -48,6 +48,12 @@ const blocks = [
       "Pessicart, sur les hauteurs nord de Nice, offre un cadre résidentiel recherché pour sa vue panoramique, entre villas et résidences de standing. Comme sur les autres secteurs en altitude, j'anticipe le temps de trajet dans le délai annoncé au téléphone, et j'interviens aussi bien sur une porte d'entrée que sur un portail d'accès.",
     ],
   },
+  {
+    heading: "Les signes qu'un cylindre fatigue, avant la panne",
+    paragraphs: [
+      "Un cylindre prévient rarement par un grand signal, mais plusieurs petits signes doivent alerter : la clé entre ou sort avec un point dur, il faut tourner un peu plus fort qu'avant, la clé a du jeu une fois engagée, ou il faut la présenter sous un certain angle pour qu'elle tourne. Si l'un de ces signes apparaît, le cylindre est à surveiller. Le remplacer à ce stade se fait à l'heure qui vous arrange, alors qu'une panne complète arrive souvent au mauvais moment, clé coincée ou porte bloquée. Faire contrôler sa serrure dès qu'on remarque l'un de ces signes évite de l'apprendre en urgence. Un cylindre qui force use aussi la clé, qui peut finir par casser dans la serrure, un incident plus pénible à régler qu'un remplacement préventif.",
+    ],
+  },
 ];
 
 const faq = [

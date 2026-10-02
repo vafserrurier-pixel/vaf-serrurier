@@ -45,6 +45,12 @@ const blocks = [
       "Saint-Pierre-de-Féric, hameau perché dans les collines au nord-ouest de Nice, reste plus excentré et moins dense que les quartiers du centre. Les propriétés y sont souvent isolées, avec portail d'entrée et long accès privé. Je m'organise en conséquence pour annoncer un délai réaliste, tenant compte de la distance et de l'accès.",
     ],
   },
+  {
+    heading: "Porte en bois, en aluminium ou en PVC : la serrure doit suivre le matériau",
+    paragraphs: [
+      "Toutes les portes d'entrée n'acceptent pas les mêmes serrures. Une porte en bois massif se perce et s'entaille facilement, alors qu'une porte en aluminium ou en PVC dispose d'un profil qui impose des serrures et des gâches compatibles. Poser un mécanisme inadapté sur un profil creux peut abîmer la porte, fixer mal la serrure ou donner une fermeture qui force. Quand je remplace une serrure dans une maison, je commence donc par identifier le matériau et la marque de la porte, puis je choisis un mécanisme conçu pour ce type de profil. C'est particulièrement utile dans les propriétés qui ont plusieurs accès, où chaque porte peut être différente. Une photo de la porte et de la serrure, envoyée avant ma venue, m'aide à préparer le bon matériel.",
+    ],
+  },
 ];
 
 const faq = [

@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier de la Libération vit au rythme de son marché couvert, avec de nombreux commerces en rez-de-chaussée surmontés d'appartements. J'y interviens aussi bien sur des rideaux métalliques ou des serrures de boutique que sur les portes d'entrée des immeubles au-dessus, souvent plus anciennes que la moyenne du centre-ville.",
     ],
   },
+  {
+    heading: "Décrire sa porte au téléphone pour que j'arrive avec le bon matériel",
+    paragraphs: [
+      "Plus je comprends votre situation avant de partir, plus l'intervention est rapide. Au téléphone, trois informations m'aident beaucoup : la porte est-elle simplement claquée ou fermée à clé ? La clé est-elle restée dans la serrure, côté intérieur ? Quel type de porte avez-vous, en bois, blindée, avec une ou plusieurs serrures ? Une photo de la serrure vue de face, envoyée par WhatsApp, permet souvent d'identifier le cylindre avant même de venir. Mon délai est de 30 minutes maximum, mais à Nice le stationnement est toujours compliqué : ces précisions me permettent de monter directement avec ce qu'il faut, sans aller-retour. Le prix, lui, vous est annoncé avant que je me déplace.",
+    ],
+  },
 ];
 
 const faq = [

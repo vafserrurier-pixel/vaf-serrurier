@@ -42,6 +42,12 @@ const blocks = [
       "Le secteur de l'Archet, au nord-ouest de Nice, s'est développé autour de l'hôpital du même nom. Les résidences collectives qui l'entourent accueillent notamment du personnel soignant aux horaires décalés. J'y interviens à toute heure, de jour comme de nuit, pour les urgences liées à une porte claquée ou une clé perdue.",
     ],
   },
+  {
+    heading: "Porte palière ou porte de hall : à qui revient la réparation ?",
+    paragraphs: [
+      "En résidence, la question se pose dès qu'une serrure pose problème : est-ce au syndic ou à l'occupant de payer ? En règle générale, la porte d'entrée de votre appartement est une partie privative, alors que la porte de hall, les digicodes et les gâches communes relèvent de la copropriété. Mais le règlement de copropriété peut préciser autrement, notamment sur la porte palière elle-même, parfois traitée comme élément commun pour son aspect extérieur. Avant d'engager des frais, un coup d'œil au règlement ou un mot au syndic évite les mauvaises surprises. Si la panne ne peut pas attendre, j'interviens d'abord, et vous gardez la facture pour la présenter ensuite à qui de droit.",
+    ],
+  },
 ];
 
 const faq = [

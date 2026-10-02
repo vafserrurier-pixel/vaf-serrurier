@@ -48,6 +48,12 @@ const blocks = [
       "Le quartier Gambetta, résidentiel et dense entre le centre et la Promenade des Anglais, compte majoritairement des immeubles collectifs. Les pannes les plus courantes concernent les cylindres de porte palière et les gâches de hall. Je diagnostique l'origine du blocage avant d'intervenir, pour ne réparer que ce qui doit l'être.",
     ],
   },
+  {
+    heading: "Clé laissée dans la serrure côté intérieur : pourquoi la porte ne s'ouvre plus de l'extérieur",
+    paragraphs: [
+      <>{"Cela arrive facilement : vous rentrez, vous laissez la clé dans la serrure, et quelqu'un d'autre arrive avec la sienne sans pouvoir ouvrir. Sur beaucoup de cylindres, une clé engagée à l'intérieur bloque le mécanisme côté extérieur. Il existe pourtant des cylindres dits débrayables, qui permettent d'ouvrir de l'extérieur même si une clé est restée dans la serrure. C'est utile dans un appartement où plusieurs personnes rentrent à des heures différentes. Avant de remplacer un cylindre, je vous demande donc comment votre porte est utilisée au quotidien, pour vous proposer le bon modèle. Si vous êtes déjà dehors, la page "}<Link href="/ouverture-de-porte-nice/" className="text-steel underline">ouverture de porte</Link>{" détaille ce que je fais dans ce cas."}</>,
+    ],
+  },
 ];
 
 const faq = [

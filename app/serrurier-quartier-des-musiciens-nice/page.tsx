@@ -48,6 +48,12 @@ const blocks = [
       "Proche de la gare, le quartier des Musiciens doit son nom aux rues portant des noms de compositeurs. Les immeubles de la fin du XIXe siècle qui le composent ont souvent gardé leurs portes et cylindres d'origine. Je privilégie l'adaptation d'un cylindre compatible plutôt qu'un remplacement complet, pour préserver l'aspect de ces façades anciennes.",
     ],
   },
+  {
+    heading: "Une clé usée donne des doubles qui fonctionnent mal",
+    paragraphs: [
+      "Quand une clé a servi pendant des décennies, ses reliefs s'usent. Un double fait à partir d'une clé usée reproduit cette usure, et une copie de copie finit par mal fonctionner : elle accroche, elle force, et elle use à son tour le cylindre. Dans des immeubles de la fin du XIXe siècle, où des clés ont parfois traversé plusieurs générations d'occupants, mieux vaut partir de la clé d'origine si elle existe, ou d'une clé en bon état, avant d'en faire une nouvelle. Et si c'est le cylindre qui est usé, le remplacer coûte moins cher que de multiplier des doubles qui forcent. Je regarde votre clé et votre cylindre ensemble, car l'un abîme l'autre.",
+    ],
+  },
 ];
 
 const faq = [

@@ -48,6 +48,12 @@ const blocks = [
       "Saint-Philippe, secteur résidentiel proche de Cimiez, mêle villas et petites résidences dans un cadre plutôt calme. Les demandes y concernent surtout l'entretien préventif : un cylindre qui commence à forcer, une porte qui ferme mal après plusieurs années. Intervenir avant la panne complète coûte toujours moins cher qu'un dépannage en urgence.",
     ],
   },
+  {
+    heading: "Après des travaux, pensez aux clés confiées aux artisans",
+    paragraphs: [
+      "Une rénovation implique du monde : plombier, peintre, menuisier, parfois un entrepreneur qui garde un jeu de clés pendant plusieurs semaines. Une fois le chantier terminé, ces clés ne vous reviennent pas toujours toutes, et certaines ont pu être dupliquées pour la commodité du chantier. Dans une villa avec jardin, entre la porte principale, un portillon et un accès secondaire, cela fait plusieurs accès concernés. Le plus sûr est de changer les cylindres concernés à la fin des travaux, puis de redistribuer des clés neuves. C'est une opération courte, bien moins pénible que de ne pas savoir qui détient quoi. Je peux faire le point sur les accès de la propriété et vous dire lesquels méritent d'être remplacés.",
+    ],
+  },
 ];
 
 const faq = [

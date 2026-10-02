@@ -48,6 +48,12 @@ const blocks = [
       "Le Carré d'Or, entre la Promenade des Anglais et la place Masséna, concentre boutiques haut de gamme et résidences de standing. Sur ce secteur, je propose plus souvent des cylindres et serrures haute sécurité, en cohérence avec la valeur des biens protégés, sans que le tarif de base change : le prix dépend du matériel choisi, jamais du quartier.",
     ],
   },
+  {
+    heading: "Un cylindre trop long abîme l'élégance de la porte et l'affaiblit",
+    paragraphs: [
+      <>{"Sur une porte soignée, on remarque tout de suite un cylindre qui dépasse de la plaque ou de la rosace. Ce n'est pas qu'une question d'aspect : un cylindre trop long offre plus de prise à celui qui voudrait l'arracher, et il est plus exposé aux chocs. Le bon cylindre est celui dont la longueur est ajustée à l'épaisseur de la porte, de façon à affleurer la finition sans la dépasser. Lors d'un "}<Link href="/changement-serrure-nice/" className="text-steel underline">changement de cylindre</Link>{", je mesure donc la porte côté palier et côté appartement avant de choisir, plutôt que de poser un modèle standard. Sur une porte laquée ou vernie, c'est aussi ce qui évite les marques et préserve la finition d'origine."}</>,
+    ],
+  },
 ];
 
 const faq = [
