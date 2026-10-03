@@ -61,16 +61,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au Mont Alban en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au Mont Alban comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
-    question: "Intervenez-vous sur les villas du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous près du fort du Mont-Alban ?",
     answer:
       "Oui, tout ce secteur boisé autour du fort du XVIe siècle fait partie de ma zone d'intervention habituelle.",

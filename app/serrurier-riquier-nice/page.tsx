@@ -64,19 +64,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Riquier en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Riquier comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Pouvez-vous renforcer la sécurité d'un logement proche de la gare de Riquier ?",
     answer:
       "Oui, je propose des solutions adaptées selon l'état de votre porte : cylindre haute sécurité, serrure multipoints, ou blindage complet si nécessaire.",
-  },
-  {
-    question: "Intervenez-vous sur les portes de hall d'immeuble à Riquier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous sur les immeubles des années 1920 typiques de Riquier ?",

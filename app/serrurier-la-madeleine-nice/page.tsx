@@ -64,24 +64,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à La Madeleine en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à La Madeleine comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
-  },
-  {
-    question: "Intervenez-vous sur les maisons individuelles du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous aussi bien sur le boulevard de la Madeleine que dans les ruelles adjacentes ?",
     answer:
       "Oui, tout le vallon fait partie de ma zone d'intervention habituelle, du carrefour Magnan jusqu'au secteur de la Costière.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Que faire si ma porte ferme mal dans un immeuble ancien de La Madeleine ?",

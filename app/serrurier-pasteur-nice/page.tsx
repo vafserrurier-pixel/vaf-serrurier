@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Pasteur en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au quartier Pasteur comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les immeubles proches de l'hôpital Pasteur ?",
     answer:
       "Oui, je diagnostique chaque situation avant de proposer réparation, remplacement de cylindre ou renforcement de la porte.",
@@ -77,11 +72,6 @@ const faq = [
     question: "Intervenez-vous près de l'ancienne abbaye de Saint-Pons ?",
     answer:
       "Oui, tout ce secteur autour du monastère intégré à l'hôpital Pasteur fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du secteur ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

@@ -41,6 +41,7 @@ export default function RelatedServicesGrid({
   locale = "fr",
   lieu,
   excludeHref,
+  showText = true,
 }: {
   /** Liste de services à afficher. Par défaut (non fournie), affiche la liste canonique des 10 services (voir lib/relatedServicesDefault.ts) : ne passer une liste différente que pour un cas explicitement justifié. */
   items?: { href: string; label: string }[];
@@ -49,6 +50,8 @@ export default function RelatedServicesGrid({
   lieu?: string;
   /** Href de la page courante, à exclure de la liste (une page service ne doit jamais se lister elle-même comme "autre intervention"). */
   excludeHref?: string;
+  /** Masque le texte descriptif des cartes (identique d'une page à l'autre) : seuls le titre et le lien restent. */
+  showText?: boolean;
 }) {
   const cards = serviceCardsByLocale[locale];
   const place = locale === "fr" ? quartierLocative(lieu ?? "Nice") : (lieu ?? "Nice");
@@ -107,7 +110,7 @@ export default function RelatedServicesGrid({
                         <span className="sr-only">{anchorSuffix[locale]}</span>
                       </Link>
                     </h3>
-                    <p className="text-sm text-cream/70 leading-relaxed">{card.text(place)}</p>
+                    {showText && <p className="text-sm text-cream/70 leading-relaxed">{card.text(place)}</p>}
                     <div className="mt-auto text-cream">
                       <ArrowLink>{moreLabel[locale]}</ArrowLink>
                     </div>

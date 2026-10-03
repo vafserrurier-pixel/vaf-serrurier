@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier du Port en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au quartier du Port comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Savez-vous intervenir sur les immeubles anciens du Port ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'époque.",

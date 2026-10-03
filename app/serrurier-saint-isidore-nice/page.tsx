@@ -63,19 +63,9 @@ const faq = [
       "Oui, je me déplace 24h/24 et 7j/7 à Saint-Isidore comme sur le reste de Nice, avec un délai habituel de 25 à 35 minutes selon la circulation.",
   },
   {
-    question: "Intervenez-vous sur des résidences récentes du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous près du stade Allianz Riviera ou du Musée National du Sport ?",
     answer:
       "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle à l'extrême ouest de Nice.",
-  },
-  {
-    question: "Travaillez-vous avec les résidences du secteur ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

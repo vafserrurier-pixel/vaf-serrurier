@@ -69,19 +69,9 @@ const faq = [
       "Oui, je me déplace 24h/24 et 7j/7 à Saint-Pancrace comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
   },
   {
-    question: "Intervenez-vous sur les villas individuelles du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous près de la chapelle Saint-Pancrace ?",
     answer:
       "Oui, tout ce secteur historique entre le vallon de Magnan et Gairaut fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Travaillez-vous avec les petites résidences du secteur ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

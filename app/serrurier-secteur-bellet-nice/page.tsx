@@ -60,11 +60,6 @@ const faq = [
       "Oui, je couvre l'ensemble du secteur Bellet, avec un délai d'intervention plus long que dans le centre-ville compte tenu de la distance et du relief.",
   },
   {
-    question: "Intervenez-vous rapidement dans le secteur Bellet en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7, avec un délai habituel de 30 à 45 minutes selon la circulation et l'accès exact du hameau concerné.",
-  },
-  {
     question: "Intervenez-vous sur les domaines viticoles de l'appellation Bellet ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration du domaine.",

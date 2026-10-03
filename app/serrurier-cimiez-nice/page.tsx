@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Cimiez en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Cimiez comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
-  },
-  {
     question: "Savez-vous intervenir sur des serrures anciennes de type Belle Époque ?",
     answer:
       "Oui, c'est une situation fréquente à Cimiez. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement qui changerait l'aspect d'une porte d'origine.",

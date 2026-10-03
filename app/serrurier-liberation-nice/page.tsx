@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Libération en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 dans le quartier Libération comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les immeubles proches du marché de la Libération ?",
     answer:
       "Oui, c'est un secteur où j'interviens régulièrement, notamment sur les cylindres de porte d'entrée et les serrures de hall soumis à un usage intensif.",

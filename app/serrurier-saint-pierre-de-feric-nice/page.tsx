@@ -61,16 +61,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Saint-Pierre-de-Féric en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Saint-Pierre-de-Féric comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
-    question: "Intervenez-vous sur les maisons individuelles du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous sur des propriétés avec portail et grand jardin ?",
     answer:
       "Oui, ce type de configuration est fréquent à Saint-Pierre-de-Féric. Je diagnostique la porte d'entrée principale ainsi que les accès secondaires si besoin.",

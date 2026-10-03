@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Carabacel en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Carabacel comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les villas individuelles du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, comme pour tout type de porte.",

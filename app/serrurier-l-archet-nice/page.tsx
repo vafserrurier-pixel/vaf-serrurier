@@ -52,19 +52,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à L'Archet en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à L'Archet comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur des logements proches du pôle hospitalier ?",
     answer:
       "Oui, je diagnostique chaque situation avant de proposer réparation, remplacement de cylindre ou renforcement de la porte.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés de L'Archet ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous près des bâtiments Archet 1, 2 et 3 ?",

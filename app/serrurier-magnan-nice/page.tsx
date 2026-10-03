@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Magnan en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Magnan comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur des résidences des années 1960-1970 ?",
     answer:
       "Oui, c'est un profil de bâti fréquent à Magnan. Un remplacement de cylindre suffit souvent à retrouver un fonctionnement fiable.",

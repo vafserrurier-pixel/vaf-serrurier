@@ -55,11 +55,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Lingostière en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Lingostière comme sur le reste de Nice, avec un délai habituel de 30 à 40 minutes selon la circulation, ce secteur étant le plus excentré que je couvre.",
-  },
-  {
     question: "Intervenez-vous sur les propriétés isolées des collines de Lingostière ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement, quelle que soit la configuration de la propriété.",

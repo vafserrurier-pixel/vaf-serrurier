@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à l'Ariane en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à l'Ariane comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur la porte d'entrée d'un immeuble à l'Ariane ?",
     answer:
       "Oui, j'interviens aussi bien sur les portes d'appartement que sur les portes de hall, digicodes et gâches électriques des parties communes.",

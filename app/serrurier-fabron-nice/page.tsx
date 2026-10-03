@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Fabron en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Fabron comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les portes de villas individuelles à Fabron ?",
     answer:
       "Oui, c'est une configuration fréquente dans le quartier. Je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement.",

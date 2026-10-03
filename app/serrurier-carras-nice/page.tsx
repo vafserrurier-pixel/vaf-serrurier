@@ -58,19 +58,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Carras en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Carras comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les immeubles résidentiels de Carras ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement de cylindre ou serrure complète selon l'état constaté.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous près du port-abri et du front de mer de Carras ?",

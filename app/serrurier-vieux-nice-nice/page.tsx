@@ -61,11 +61,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement dans le Vieux-Nice en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 dans le Vieux-Nice, en tenant compte des contraintes d'accès des ruelles piétonnes pour organiser mon intervention.",
-  },
-  {
     question: "Travaillez-vous sur les portes anciennes typiques du Vieux-Nice ?",
     answer:
       "Oui, c'est une grande partie de mon activité dans ce quartier. Je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte ancienne.",

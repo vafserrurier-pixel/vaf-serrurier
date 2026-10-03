@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au Carré d'Or en cas d'urgence ?",
-    answer:
-      "Oui, le secteur est central : le délai d'intervention y est généralement court, de l'ordre de 10 à 15 minutes selon la circulation.",
-  },
-  {
     question: "Savez-vous intervenir dans des immeubles Belle Époque avec des halls soignés ?",
     answer:
       "Oui, je m'adapte aux exigences esthétiques de ces copropriétés pour toute intervention sur les équipements des parties communes.",

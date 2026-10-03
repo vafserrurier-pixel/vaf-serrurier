@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Saint-Philippe en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Saint-Philippe comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les villas et maisons individuelles du secteur ?",
     answer:
       "Oui, Saint-Philippe compte de nombreuses propriétés avec jardin. Je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement.",
@@ -77,11 +72,6 @@ const faq = [
     question: "Intervenez-vous près du parc Estienne-d'Orves ?",
     answer:
       "Oui, tout le secteur autour du parc et de la chapelle Saint-Philippe-Néri fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Proposez-vous des solutions de blindage pour les villas du secteur ?",

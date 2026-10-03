@@ -67,11 +67,6 @@ const faq = [
     answer:
       "Oui, je peux sécuriser rapidement une porte après une tentative d'effraction, puis proposer une solution durable une fois le diagnostic effectué.",
   },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
-  },
 ];
 
 export default function SerrurierSaintRochNicePage() {

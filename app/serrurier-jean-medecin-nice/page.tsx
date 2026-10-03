@@ -61,11 +61,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement avenue Jean-Médecin en cas d'urgence ?",
-    answer:
-      "Oui, le quartier est central : le délai d'intervention y est généralement court, de l'ordre de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les halls d'immeuble très fréquentés du secteur ?",
     answer:
       "Oui, digicodes, gâches électriques et cylindres de porte de hall font partie des interventions courantes dans ce quartier dense.",

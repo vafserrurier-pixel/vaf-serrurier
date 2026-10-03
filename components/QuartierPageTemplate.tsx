@@ -9,7 +9,7 @@ import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
-import PricingTable from "./PricingTable";
+import { cardsByLocale } from "@/lib/pricingCards";
 import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
 import RelatedServicesGrid from "./RelatedServicesGrid";
@@ -27,6 +27,12 @@ import {
 import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
+
+const keyPriceTitles = [
+  "Porte claquée",
+  "Porte verrouillée (cylindre européen)",
+  "Changement de cylindre standard",
+];
 
 export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
 
@@ -181,7 +187,28 @@ export default function QuartierPageTemplate({
           <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
             Mes tarifs {lieu}
           </h2>
-          <PricingTable />
+          <div className="grid gap-3 sm:grid-cols-3">
+            {cardsByLocale.fr
+              .filter((card) => keyPriceTitles.includes(card.title))
+              .map((card) => (
+                <div
+                  key={card.title}
+                  className="bg-cream border border-navy/10 rounded-xl px-4 py-4 text-center"
+                >
+                  <p className="font-heading font-semibold text-navy text-sm mb-1">{card.title}</p>
+                  <p className="font-tabular-nums text-xl font-bold text-navy">
+                    {card.price}
+                    {card.unit && <span className="text-sm font-normal text-slate ml-1">{card.unit}</span>}
+                  </p>
+                </div>
+              ))}
+          </div>
+          <p className="text-slate text-sm mt-5 text-center">
+            Mes tarifs sont les mêmes dans tous les quartiers de Nice, déplacement inclus.{" "}
+            <Link href="/tarifs-serrurier-nice/" className="text-steel underline font-medium">
+              Voir la grille complète des tarifs →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -192,7 +219,7 @@ export default function QuartierPageTemplate({
         <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
           Le même artisan intervient pour l&apos;ensemble de ces services {lieu}.
         </p>
-        <RelatedServicesGrid items={services} lieu={quartier} />
+        <RelatedServicesGrid items={services} lieu={quartier} showText={false} />
       </section>
 
       <section className="bg-white border-y border-navy/10">

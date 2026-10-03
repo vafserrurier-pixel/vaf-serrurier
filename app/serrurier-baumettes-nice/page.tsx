@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement aux Baumettes en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 aux Baumettes comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur des immeubles anciens de caractère ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'origine.",
@@ -71,11 +66,6 @@ const faq = [
     question: "Intervenez-vous près du musée des Beaux-Arts Jules-Chéret ?",
     answer:
       "Oui, tout ce secteur résidentiel autour du musée fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés des Baumettes ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

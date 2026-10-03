@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au Brancolar en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au Brancolar comme sur le reste de Nice, avec un délai habituel de 15 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les nouveaux programmes résidentiels du quartier ?",
     answer:
       "Oui, avec l'arrivée de nouveaux logements sur l'ancien site Enedis, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité si besoin.",

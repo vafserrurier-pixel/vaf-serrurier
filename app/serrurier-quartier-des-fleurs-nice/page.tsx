@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier des Fleurs en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 dans ce quartier central, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Travaillez-vous sur les portes des immeubles bourgeois de l'avenue des Fleurs ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet qui dénaturerait ces façades de caractère.",
@@ -71,11 +66,6 @@ const faq = [
     question: "Intervenez-vous sur les immeubles résidentiels du secteur ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement de cylindre ou serrure complète.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier des Fleurs ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

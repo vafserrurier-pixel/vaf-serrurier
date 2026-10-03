@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Garibaldi en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Garibaldi comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Savez-vous intervenir sur les portes anciennes autour de la place Garibaldi ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte d'époque.",
@@ -77,11 +72,6 @@ const faq = [
     question: "Intervenez-vous aussi entre Garibaldi et le quartier du port ?",
     answer:
       "Oui, tout ce secteur de transition entre la place Garibaldi et le port fait partie de ma zone d'intervention habituelle.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du secteur ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous en soirée près des restaurants de la place Garibaldi ?",

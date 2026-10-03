@@ -58,19 +58,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Rimiez en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à Rimiez comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les villas individuelles du quartier ?",
     answer:
       "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte.",
-  },
-  {
-    question: "Travaillez-vous avec les résidences collectives de Rimiez ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous sur des serrures anciennes chez des propriétaires installés depuis longtemps ?",

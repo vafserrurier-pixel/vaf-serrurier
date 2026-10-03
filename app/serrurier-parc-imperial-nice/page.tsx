@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au Parc Impérial en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au Parc Impérial comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur les immeubles de standing du secteur ?",
     answer:
       "Oui, je m'adapte aux exigences de ces copropriétés pour toute intervention sur les équipements des parties communes.",
@@ -77,11 +72,6 @@ const faq = [
     question: "Intervenez-vous près de la cathédrale orthodoxe russe ou du lycée du Parc-Impérial ?",
     answer:
       "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle dans le centre de Nice.",
-  },
-  {
-    question: "Travaillez-vous avec les syndics du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

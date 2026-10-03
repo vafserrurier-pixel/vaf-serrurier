@@ -58,19 +58,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à l'Arénas en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 à l'Arénas comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous sur des locaux professionnels dans ce secteur ?",
     answer:
       "Oui, pour la partie serrurerie de ces locaux (porte d'entrée, cylindre, renforcement), selon le même principe de diagnostic et de devis annoncé.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés de l'Arénas ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous près de la gare TGV de Saint-Augustin ?",

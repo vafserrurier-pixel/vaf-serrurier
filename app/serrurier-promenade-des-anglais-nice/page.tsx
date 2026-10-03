@@ -56,11 +56,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement sur la Promenade des Anglais en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 sur ce secteur, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Intervenez-vous pour des locations saisonnières en bord de mer ?",
     answer:
       "Oui, je peux intervenir rapidement en cas de porte claquée ou de problème de serrure entre deux locations, pour des propriétaires ou des gestionnaires de biens.",

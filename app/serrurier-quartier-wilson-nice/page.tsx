@@ -58,11 +58,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement place Wilson en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 dans ce quartier central, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Travaillez-vous sur les serrures anciennes des immeubles bourgeois de la place Wilson ?",
     answer:
       "Oui, c'est une configuration fréquente dans ce secteur. Je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet qui dénaturerait la porte.",
@@ -71,11 +66,6 @@ const faq = [
     question: "Intervenez-vous aussi sur les commerces du quartier Wilson ?",
     answer:
       "Oui, en plus des logements, j'interviens sur les rideaux métalliques, serrures de vitrine et portes de locaux commerciaux du secteur.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier Wilson ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous en soirée place Wilson, secteur animé de commerces et restaurants ?",

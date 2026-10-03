@@ -49,16 +49,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à la Corniche des Oliviers en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 dans ce secteur comme sur le reste de Nice, avec un délai habituel de 20 à 30 minutes selon la circulation.",
-  },
-  {
-    question: "Intervenez-vous sur les villas du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous sur tout le tracé de la Corniche des Oliviers, de Saint-Pierre-de-Féric à Saint-Pancrace ?",
     answer:
       "Oui, tout ce secteur fait partie de ma zone d'intervention habituelle sur les hauteurs nord de Nice.",

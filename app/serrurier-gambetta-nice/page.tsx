@@ -58,19 +58,9 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement au quartier Gambetta en cas d'urgence ?",
-    answer:
-      "Oui, je me déplace 24h/24 et 7j/7 au quartier Gambetta comme sur le reste de Nice, avec un délai habituel de 10 à 20 minutes selon la circulation.",
-  },
-  {
     question: "Travaillez-vous sur des serrures anciennes typiques du quartier ?",
     answer:
       "Oui, je privilégie la réparation ou l'adaptation d'un cylindre compatible avant d'envisager un remplacement complet de la serrure.",
-  },
-  {
-    question: "Intervenez-vous pour les copropriétés de Gambetta ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
   {
     question: "Intervenez-vous sur les immeubles Art déco du boulevard Gambetta ?",

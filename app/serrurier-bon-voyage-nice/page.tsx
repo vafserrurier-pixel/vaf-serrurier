@@ -68,19 +68,9 @@ const faq = [
       "Oui, je me déplace 24h/24 et 7j/7 à Bon Voyage comme sur le reste de Nice, avec un délai habituel de 15 à 25 minutes selon la circulation.",
   },
   {
-    question: "Intervenez-vous sur les villas du secteur ?",
-    answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement ou renforcement de la porte d'entrée.",
-  },
-  {
     question: "Intervenez-vous pour un changement de serrure entre deux locataires ?",
     answer:
       "Oui, c'est une demande fréquente à Bon Voyage où le turnover locatif est plus élevé que la moyenne. Je peux intervenir rapidement entre un état des lieux de sortie et d'entrée.",
-  },
-  {
-    question: "Travaillez-vous avec les copropriétés du quartier ?",
-    answer:
-      "Oui, sur demande d'un syndic ou d'un résident mandaté, pour les portes de hall, digicodes et gâches électriques.",
   },
 ];
 

@@ -64,11 +64,6 @@ const blocks = [
 
 const faq = [
   {
-    question: "Intervenez-vous rapidement à Desambrois en cas d'urgence ?",
-    answer:
-      "Oui, Desambrois est très proche de mon point de départ : le délai d'intervention y est généralement parmi les plus courts sur Nice, de l'ordre de 10 à 15 minutes.",
-  },
-  {
     question: "Travaillez-vous sur les serrures anciennes des immeubles Belle Époque de Desambrois ?",
     answer:
       "Oui, c'est une situation fréquente dans ce quartier. Je privilégie la réparation ou le remplacement de cylindre quand c'est possible, plutôt qu'un changement complet systématique.",
