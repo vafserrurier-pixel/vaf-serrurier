@@ -17,7 +17,13 @@ import ContactForm from "./ContactForm";
 import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { quartierHref, quartierLocative, relatedQuartiers, sectorPages } from "@/lib/quartiers";
+import {
+  otherSectorQuartiers,
+  quartierHref,
+  quartierLocative,
+  relatedQuartiers,
+  sectorPages,
+} from "@/lib/quartiers";
 import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
@@ -67,6 +73,7 @@ export default function QuartierPageTemplate({
   const serrurierLieu = lieu.endsWith("Nice") ? `Serrurier ${lieu}` : `Serrurier ${lieu}, Nice`;
   const sectorInfo = sectorPages[sector];
   const nearbyQuartiers = relatedQuartiers(sector, quartier);
+  const popularQuartiers = otherSectorQuartiers(quartier);
   const photo = pickPortrait(quartier);
   const services = relatedServices ?? mainServicesByLocale.fr;
 
@@ -297,6 +304,23 @@ export default function QuartierPageTemplate({
             </p>
             <ul className="flex flex-wrap gap-2">
               {nearbyQuartiers.map((name) => (
+                <li key={name}>
+                  <Link
+                    href={quartierHref(name)}
+                    className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {popularQuartiers.length > 0 && (
+          <div className="mt-6">
+            <p className="text-sm text-slate mb-2">Quartiers populaires à Nice :</p>
+            <ul className="flex flex-wrap gap-2">
+              {popularQuartiers.map((name) => (
                 <li key={name}>
                   <Link
                     href={quartierHref(name)}

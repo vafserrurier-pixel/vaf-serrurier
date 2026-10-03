@@ -141,6 +141,64 @@ export function relatedQuartiers(
   return related;
 }
 
+// Quartiers d'AUTRES secteurs à lier depuis une page de quartier : un maillage
+// transversal en plus du bloc "même secteur". L'attribution est calculée une
+// fois, de façon déterministe (pas de hasard à chaque rendu) : chaque page
+// reçoit 6 quartiers, au moins 1 et au plus 3 par autre secteur, choisis parmi
+// ceux qui ont le moins de liens entrants à ce stade. Le secteur Centre compte
+// 19 quartiers contre 8 à 11 ailleurs : sans cet équilibrage, les liens se
+// concentrent sur les quelques pages des petits secteurs.
+let otherSectorAssignment: Map<string, string[]> | null = null;
+
+function computeOtherSectorAssignment(count: number): Map<string, string[]> {
+  const all = builtQuartiers as readonly string[];
+  const sectorOf = new Map<string, string>();
+  for (const [sector, list] of Object.entries(zones)) {
+    for (const name of list as readonly string[]) sectorOf.set(name, sector);
+  }
+  const inbound = new Map(all.map((name) => [name, 0]));
+  const assignment = new Map<string, string[]>();
+  all.forEach((current, position) => {
+    const others = Object.keys(zones).filter((sector) => sector !== sectorOf.get(current));
+    const picked: string[] = [];
+    const perSector = new Map(others.map((sector) => [sector, 0]));
+    const take = (sector?: string) => {
+      const best = all
+        .map((name, index) => ({ name, index }))
+        .filter(
+          ({ name }) =>
+            !picked.includes(name) &&
+            (sector ? sectorOf.get(name) === sector : true) &&
+            others.includes(sectorOf.get(name) ?? "") &&
+            (perSector.get(sectorOf.get(name) ?? "") ?? 0) < 3,
+        )
+        .sort(
+          (x, y) =>
+            (inbound.get(x.name) ?? 0) - (inbound.get(y.name) ?? 0) ||
+            ((x.index + position * 7) % all.length) - ((y.index + position * 7) % all.length),
+        )[0];
+      if (!best) return;
+      picked.push(best.name);
+      inbound.set(best.name, (inbound.get(best.name) ?? 0) + 1);
+      const s = sectorOf.get(best.name) ?? "";
+      perSector.set(s, (perSector.get(s) ?? 0) + 1);
+    };
+    for (const sector of others) take(sector);
+    while (picked.length < count) {
+      const before = picked.length;
+      take();
+      if (picked.length === before) break;
+    }
+    assignment.set(current, picked);
+  });
+  return assignment;
+}
+
+export function otherSectorQuartiers(current: string): string[] {
+  otherSectorAssignment ??= computeOtherSectorAssignment(6);
+  return otherSectorAssignment.get(current) ?? [];
+}
+
 export const sectorPages = {
   centre: { href: "/serrurier-nice-centre/", label: "Nice Centre" },
   est: { href: "/serrurier-nice-est/", label: "Nice Est" },
