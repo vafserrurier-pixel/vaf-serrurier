@@ -10,7 +10,6 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import PricingTable from "./PricingTable";
-import BrandsSection from "./BrandsSection";
 import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
 import RelatedServicesGrid from "./RelatedServicesGrid";
@@ -190,7 +189,13 @@ export default function CommunePageTemplate({
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
           Marques de serrures que je pose
         </h2>
-        <BrandsSection />
+        <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center">
+          Je travaille avec les grandes marques du marché, quel que soit le modèle déjà installé
+          chez vous : Fichet, Picard, Heraclès et d&apos;autres.{" "}
+          <Link href="/changement-serrure-nice/#marques" className="text-steel underline font-medium">
+            Voir le détail des marques que je pose →
+          </Link>
+        </p>
       </section>
 
       <section className="bg-white border-y border-navy/10">

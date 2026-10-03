@@ -25,7 +25,7 @@ const HREF = "/blog/serrurier-agree-assurances-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "« Agréé toutes assurances » : la vérité sur cette formule | VAF",
+  title: "« Agréé toutes assurances » : la vérité sur la formule | VAF",
   description: "Vous avez déjà vu ce sigle sur une camionnette ou une annonce. Voici ce qu'il signifie réellement, et ce qu'il faut vérifier à la place.",
   article: { author: business.firstName, readingTime: "6 min" },
   image: blogPostByHref(HREF)?.image,

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-laurent-du-var/",
-  title: "Serrurier à Saint-Laurent-du-Var – Vieux-Village & Cap 3000 | VAF",
+  title: "Serrurier Saint-Laurent-du-Var – Vieux-Village | VAF",
   description: "Serrurier à Saint-Laurent-du-Var (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
 });
 
