@@ -3,6 +3,7 @@
 // (export `zones`) pour la répartition par secteur.
 
 import { zones } from "./business";
+import { builtCommunes } from "./communes";
 
 const DIACRITICS_RE = /[̀-ͯ]/g;
 
@@ -158,7 +159,7 @@ function computeOtherSectorAssignment(count: number): Map<string, string[]> {
   }
   const inbound = new Map(all.map((name) => [name, 0]));
   const assignment = new Map<string, string[]>();
-  all.forEach((current, position) => {
+  [...all, ...builtCommunes].forEach((current, position) => {
     const others = Object.keys(zones).filter((sector) => sector !== sectorOf.get(current));
     const picked: string[] = [];
     const perSector = new Map(others.map((sector) => [sector, 0]));

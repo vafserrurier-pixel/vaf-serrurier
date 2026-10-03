@@ -10,6 +10,7 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import { cardsByLocale } from "@/lib/pricingCards";
+import PopularQuartiers from "./PopularQuartiers";
 import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
 import RelatedServicesGrid from "./RelatedServicesGrid";
@@ -343,23 +344,7 @@ export default function QuartierPageTemplate({
             </ul>
           </div>
         )}
-        {popularQuartiers.length > 0 && (
-          <div className="mt-6">
-            <p className="text-sm text-slate mb-2">Quartiers populaires à Nice :</p>
-            <ul className="flex flex-wrap gap-2">
-              {popularQuartiers.map((name) => (
-                <li key={name}>
-                  <Link
-                    href={quartierHref(name)}
-                    className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
-                  >
-                    {name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <PopularQuartiers names={popularQuartiers} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
