@@ -194,8 +194,8 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Installation de porte blindée à Nice – dès 3 490 € TTC | VAF",
-  description: "Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC (certifié BP1), pose comprise. 5 lignes, certification A2P BP1 à BP3. Mesures et devis gratuits sur place.",
+  title: "Installation de porte blindée à Nice – Devis gratuit | VAF",
+  description: "Installation d'une porte blindée neuve à Nice, pose comprise : 5 lignes, certification A2P BP1 à BP3. Mesures et devis gratuits sur place.",
 });
 
 const sectionsFr = [

@@ -197,9 +197,9 @@ const guideContentFr = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/blindage-porte-nice/",
-  title: "Blindage de porte à Nice – dès 2 689 € TTC | VAF",
+  title: "Blindage de porte à Nice – Garantie fabricant 15 ans | VAF",
   description:
-    "Blindage de porte à Nice : renforcez votre porte existante sans la remplacer. Bâti acier, serrure en applique, certification A2P BP. Dès 2 689 € TTC, visite et devis gratuits sur place.",
+    "Blindage de porte à Nice : renforcez votre porte existante sans la remplacer. Bâti acier, serrure en applique, certification A2P BP. Visite et devis gratuits sur place.",
 });
 
 const sectionsFr = [
