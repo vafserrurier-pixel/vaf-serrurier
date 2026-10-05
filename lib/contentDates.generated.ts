@@ -37,6 +37,7 @@ export const contentDates: Record<string, string> = {
   "/serrure-carenee-nice/": "2026-10-02T14:08:35+02:00",
   "/serrurier-arenas-nice/": "2026-10-03T11:11:08+02:00",
   "/serrurier-baumettes-nice/": "2026-10-03T11:11:08+02:00",
+  "/serrurier-beaulieu-sur-mer/": "2026-10-05T11:58:01+02:00",
   "/serrurier-bon-voyage-nice/": "2026-10-03T11:11:08+02:00",
   "/serrurier-brancolar-nice/": "2026-10-03T11:11:08+02:00",
   "/serrurier-cagnes-sur-mer/": "2026-09-13T16:44:49+02:00",
