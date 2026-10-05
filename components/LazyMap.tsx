@@ -43,6 +43,7 @@ export default function LazyMap({
   zoom = 13,
   showInfo = true,
   title,
+  query,
 }: {
   locale?: Locale;
   /** Niveau de zoom Google Maps (plus bas = vue plus large). Défaut 13 (adresse précise). */
@@ -51,9 +52,13 @@ export default function LazyMap({
   showInfo?: boolean;
   /** Titre de l'iframe (accessibilité), remplace le titre par défaut. */
   title?: string;
+  /** Centre la carte sur un lieu (ex. "Beaulieu-sur-Mer, 06310") au lieu de l'adresse de l'entreprise. */
+  query?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
-  const src = `https://www.google.com/maps?q=${business.geo.latitude},${business.geo.longitude}&z=${zoom}&output=embed`;
+  const src = `https://www.google.com/maps?q=${
+    query ? encodeURIComponent(query) : `${business.geo.latitude},${business.geo.longitude}`
+  }&z=${zoom}&output=embed`;
   const t = strings[locale];
   const mapTitle = title ?? t.title;
 

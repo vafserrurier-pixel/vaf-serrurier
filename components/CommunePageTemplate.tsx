@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
 import AvailabilityBadge from "./AvailabilityBadge";
-import ProcessSteps from "./ProcessSteps";
+import ProcessSteps, { type ProcessStep } from "./ProcessSteps";
 import ReviewsSection from "./ReviewsSection";
 import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
@@ -35,6 +35,11 @@ export default function CommunePageTemplate({
   faq,
   path,
   relatedServices,
+  testimonial,
+  processSteps,
+  mapQuery,
+  mapTitle,
+  photoAlt,
 }: {
   commune: string;
   intro: string[];
@@ -45,6 +50,15 @@ export default function CommunePageTemplate({
   path: string;
   /** Par défaut (non fourni), affiche la liste canonique des 10 services (voir RelatedServicesGrid / lib/relatedServicesDefault.ts). */
   relatedServices?: { href: string; label: string }[];
+  /** Avis géolocalisé réel : remplace la section d'avis génériques de l'entreprise. Texte affiché tel quel. */
+  testimonial?: { text: string; attribution: string };
+  /** Remplace les 4 étapes génériques par un texte propre à la commune. */
+  processSteps?: ProcessStep[];
+  /** Centre la carte sur la commune (ex. "Beaulieu-sur-Mer, 06310"). */
+  mapQuery?: string;
+  mapTitle?: string;
+  /** Texte alternatif de la photo d'en-tête quand la valeur par défaut ne convient pas. */
+  photoAlt?: string;
 }) {
   const url = `${business.domain}${path}`;
   const nearbyCommunes = relatedCommunes(commune);
@@ -123,7 +137,7 @@ export default function CommunePageTemplate({
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
             <Image
               src={photo.src}
-              alt={photo.alt}
+              alt={photoAlt ?? photo.alt}
               fill
               sizes="(min-width: 640px) 40vw, 100vw"
               className="object-cover"
@@ -149,7 +163,7 @@ export default function CommunePageTemplate({
         <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
           De votre appel au règlement : un déroulement simple, sans zone d&apos;ombre.
         </p>
-        <ProcessSteps place={commune} delayEstimate={travelEstimate} />
+        <ProcessSteps place={commune} delayEstimate={travelEstimate} steps={processSteps} />
       </section>
 
       <section className="bg-white border-y border-navy/10">
@@ -228,11 +242,33 @@ export default function CommunePageTemplate({
         <FaqAccordion items={faq} />
       </section>
 
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12">
-          <ReviewsSection />
-        </div>
-      </section>
+      {testimonial ? (
+        <section className="bg-white border-y border-navy/10">
+          <div className="mx-auto max-w-3xl px-4 py-12">
+            <p className="text-center text-xs font-semibold text-steel uppercase tracking-wide mb-4">
+              Un avis client à {commune}
+            </p>
+            <div className="relative bg-cream rounded-xl border border-navy/10 px-6 py-8 sm:px-10">
+              <span
+                className="block font-heading text-5xl text-steel/20 leading-none select-none"
+                aria-hidden="true"
+              >
+                &laquo;
+              </span>
+              <p className="font-heading italic font-medium text-lg text-navy leading-snug -mt-3">
+                {testimonial.text}
+              </p>
+              <p className="text-sm text-slate mt-4">{testimonial.attribution}</p>
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section className="bg-white border-y border-navy/10">
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <ReviewsSection />
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
@@ -246,7 +282,7 @@ export default function CommunePageTemplate({
           </Link>
           .
         </p>
-        <LazyMap />
+        <LazyMap query={mapQuery} zoom={mapQuery ? 14 : undefined} title={mapTitle} />
         {nearbyCommunes.length > 0 && (
           <div className="mt-6">
             <p className="text-sm text-slate mb-2">
