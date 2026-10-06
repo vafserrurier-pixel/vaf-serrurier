@@ -203,7 +203,7 @@ export default function InstallationCoffreFortNicePage() {
       path="/installation-coffre-fort-nice/"
       image={{
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Coffre-fort à installer, prêt pour la fixation, à Nice",
+        alt: "Installation coffre-fort Nice",
       }}
       extra={
         <PriceReminder

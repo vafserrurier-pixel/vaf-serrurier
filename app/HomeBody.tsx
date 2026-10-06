@@ -36,7 +36,7 @@ const homeFeaturedHrefs = [
 
 const introPhoto = {
   src: "/images/pool/benoit-serrurier-pose-porte-nice.webp",
-  alt: "Benoît, artisan serrurier, après la pose d'une porte à Nice",
+  alt: "Benoît, serrurier à Nice",
 };
 
 const sectorCards = {
@@ -163,7 +163,7 @@ const strings = {
     call: "Appeler",
     whatsapp: "Écrire sur WhatsApp",
     seePricing: "Voir les tarifs",
-    heroAlt: "Benoît, artisan serrurier, devant un mécanisme de porte à Nice",
+    heroAlt: "Serrurier Nice",
     heroCaption: "Benoît, artisan serrurier à Nice",
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
@@ -232,7 +232,7 @@ const strings = {
     call: "Call",
     whatsapp: "Message on WhatsApp",
     seePricing: "See pricing",
-    heroAlt: "Benoît, locksmith, in front of a door mechanism in Nice",
+    heroAlt: "Locksmith Nice",
     heroCaption: "Benoît, locksmith in Nice",
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [

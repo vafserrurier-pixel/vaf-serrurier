@@ -175,7 +175,7 @@ export default function AgreeAssurancesPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-artisan-serrurier-nice.webp"
-                alt="Benoît, artisan serrurier à Nice, sur une intervention"
+                alt="Benoît, serrurier à Nice"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -280,7 +280,7 @@ export default function AgreeAssurancesPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-porte-ancienne-nice.webp"
-                alt="Benoît, artisan serrurier, intervenant sur une porte ancienne à Nice"
+                alt="Intervention sur porte ancienne"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

@@ -210,7 +210,7 @@ export default function PorteQuiClaquePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/serrurier-nice-ouverture-de-porte.webp"
-                alt="Mécanisme de serrure multipoints avec clé sur une porte d'entrée à Nice"
+                alt="Serrure multipoints avec clé"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -293,7 +293,7 @@ export default function PorteQuiClaquePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/poignee-porte-serrurier-nice.webp"
-                alt="Poignée de porte examinée par un serrurier à Nice"
+                alt="Poignée de porte examinée"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

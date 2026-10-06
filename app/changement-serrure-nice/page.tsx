@@ -571,7 +571,7 @@ export default function ChangementSerrureNicePage() {
         path: "/changement-serrure-nice/",
         image: {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
-          alt: "Cylindre de serrure Heraclès neuf et poignée, changement de serrure à Nice",
+          alt: "Changement de serrure Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "Ce qu'il faut savoir avant de changer votre serrure",
@@ -697,7 +697,7 @@ export default function ChangementSerrureNicePage() {
         path: "/changement-serrure-nice/",
         image: {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
-          alt: "New Heraclès lock cylinder and handle, lock change in Nice",
+          alt: "Lock change Nice",
         },
         extra: (
           <>

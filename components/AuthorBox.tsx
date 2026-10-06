@@ -9,7 +9,7 @@ export default function AuthorBox() {
       <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0">
         <Image
           src="/images/serrurier-nice-a-propos.webp"
-          alt={`${business.firstName}, artisan serrurier à Nice`}
+          alt={`${business.firstName}, serrurier à Nice`}
           fill
           sizes="64px"
           className="object-cover"

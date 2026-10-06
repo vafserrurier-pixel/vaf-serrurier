@@ -356,7 +356,7 @@ export default function UrgenceSerrurierNicePage() {
         path: "/urgence-serrurier-nice/",
         image: {
           src: "/images/serrurier-nice-depannage-reparation.webp",
-          alt: "Réparation d'un mécanisme de serrure par un serrurier à Nice",
+          alt: "Serrurier urgence Nice",
         },
         extra: (
           <>
@@ -408,7 +408,7 @@ export default function UrgenceSerrurierNicePage() {
         path: "/urgence-serrurier-nice/",
         image: {
           src: "/images/serrurier-nice-depannage-reparation.webp",
-          alt: "A locksmith repairing a lock mechanism in Nice",
+          alt: "Emergency locksmith Nice",
         },
         extra: (
           <>

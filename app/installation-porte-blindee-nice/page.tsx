@@ -436,7 +436,7 @@ export default function InstallationPorteBlindeeNicePage() {
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "Serrurier posant un bloc-porte blindé neuf à Nice",
+          alt: "Installation porte blindée Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "Ce qu'il faut savoir sur le bloc-porte blindé",
@@ -486,7 +486,7 @@ export default function InstallationPorteBlindeeNicePage() {
         path: "/installation-porte-blindee-nice/",
         image: {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-          alt: "Locksmith fitting a new armored door block in Nice",
+          alt: "Armored door installation Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "What to know about the armored door block",

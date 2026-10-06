@@ -132,7 +132,7 @@ export default function CleCasseeSerrurePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src={post.image}
-                alt="Illustration d'une clé cassée à côté d'une serrure dont l'entrée contient le morceau resté coincé"
+                alt="Illustration : clé cassée dans une serrure"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

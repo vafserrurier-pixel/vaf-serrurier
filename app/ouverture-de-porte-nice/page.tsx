@@ -527,7 +527,7 @@ export default function OuvertureDePorteNicePage() {
         path: "/ouverture-de-porte-nice/",
         image: {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
-          alt: "Porte d'entrée avec nouvelle serrure installée par un serrurier à Nice",
+          alt: "Ouverture de porte Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "Ce qu'il faut savoir avant votre intervention",
@@ -594,7 +594,7 @@ export default function OuvertureDePorteNicePage() {
         path: "/ouverture-de-porte-nice/",
         image: {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
-          alt: "Front door with a newly installed lock, locksmith in Nice",
+          alt: "Door opening Nice",
         },
         extra: (
           <PriceReminder

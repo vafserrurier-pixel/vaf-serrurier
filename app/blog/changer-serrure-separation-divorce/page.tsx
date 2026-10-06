@@ -178,7 +178,7 @@ export default function ChangerSerrureSeparationDivorcePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-serrure-posee-nice.webp"
-                alt="Benoît, artisan serrurier, à côté d'une serrure posée à Nice"
+                alt="Serrure posée"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

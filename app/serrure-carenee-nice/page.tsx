@@ -321,7 +321,7 @@ export default function SerrureCareneeNicePage() {
       path="/serrure-carenee-nice/"
       image={{
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "Serrure carénée 5 points en applique posée sur une porte à Nice",
+        alt: "Serrure carénée Nice",
       }}
       sectionsVariant="cards"
       sectionsHeading="Ce qu'il faut savoir sur la serrure carénée"

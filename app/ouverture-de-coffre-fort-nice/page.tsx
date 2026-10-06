@@ -255,7 +255,7 @@ export default function OuvertureDeCoffreFortNicePage() {
       path="/ouverture-de-coffre-fort-nice/"
       image={{
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Coffre-fort à serrure électronique diagnostiqué par un serrurier à Nice",
+        alt: "Ouverture coffre-fort Nice",
       }}
       extra={
         <PriceReminder

@@ -119,7 +119,7 @@ export default function AgencesSyndicsNicePage() {
       path="/agences-syndics-nice/"
       image={{
         src: "/images/agences-syndics-remise-de-cles.webp",
-        alt: "Remise d'un trousseau de clés entre deux personnes",
+        alt: "Serrurier agences et syndics Nice",
       }}
       extra={
         <>

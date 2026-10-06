@@ -126,7 +126,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
-              alt="Tarifs serrurier à Nice 2026 : devis annoncé au téléphone, prix clés"
+              alt="Tarifs serrurier Nice 2026"
               fill
               sizes="(min-width: 1024px) 760px, 100vw"
               className="object-cover"
@@ -225,7 +225,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-mecanisme-porte-nice.webp"
-                alt="Serrurier examinant un mécanisme de porte avant d'annoncer un prix à Nice"
+                alt="Mécanisme de porte examiné"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -412,7 +412,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/cylindre-fichet-boitier-demonte-etabli-nice.webp"
-                alt="Cylindre Fichet démonté sur établi par un serrurier à Nice"
+                alt="Cylindre Fichet démonté sur établi"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

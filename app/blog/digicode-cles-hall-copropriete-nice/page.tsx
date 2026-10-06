@@ -211,7 +211,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/porte-immeuble-interphone-securisee-nice.webp"
-                alt="Porte d'immeuble sécurisée avec interphone à Nice"
+                alt="Porte d'immeuble avec interphone"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -290,7 +290,7 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/agences-syndics-remise-de-cles.webp"
-                alt="Remise d'un trousseau de clés, une étape courante en copropriété à Nice"
+                alt="Remise de clés en copropriété"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

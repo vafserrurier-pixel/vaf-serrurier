@@ -118,7 +118,7 @@ export default function ZonesInterventionNicePage() {
         <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
           <Image
             src="/images/pool/nice-vue-aerienne-baie-des-anges-unsplash.webp"
-            alt="Vue aérienne de la baie des Anges et de la Promenade des Anglais à Nice"
+            alt="Baie des Anges Nice"
             fill
             sizes="(min-width: 640px) 40vw, 100vw"
             className="object-cover"

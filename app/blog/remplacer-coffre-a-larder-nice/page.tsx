@@ -182,7 +182,7 @@ export default function RemplacerCoffreALarderPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/reparation-mecanisme-serrure-nice.webp"
-                alt="Réparation d'un mécanisme de serrure par un serrurier à Nice"
+                alt="Mécanisme de serrure en réparation"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -284,7 +284,7 @@ export default function RemplacerCoffreALarderPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/percage-nouveau-cylindre-porte-nice.webp"
-                alt="Perçage pour un nouveau cylindre de porte à Nice"
+                alt="Perçage pour nouveau cylindre"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

@@ -46,7 +46,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: WrenchIcon,
       image: {
         src: "/images/serrurier-nice-depannage-reparation.webp",
-        alt: "Réparation d'un mécanisme de serrure à Nice",
+        alt: "Dépannage serrurier Nice",
       },
     },
     "/ouverture-de-porte-nice/": {
@@ -55,7 +55,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-ouverture-de-porte.webp",
-        alt: "Porte d'entrée rouverte par un serrurier à Nice",
+        alt: "Ouverture de porte Nice",
       },
     },
     "/changement-serrure-nice/": {
@@ -64,7 +64,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-changement-de-serrure.webp",
-        alt: "Cylindre neuf posé lors d'un changement de serrure à Nice",
+        alt: "Changement de serrure Nice",
       },
     },
     "/serrure-carenee-nice/": {
@@ -73,7 +73,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "Serrure carénée 5 points en applique à Nice",
+        alt: "Serrure carénée Nice",
       },
     },
     "/poignee-blindee-nice/": {
@@ -82,7 +82,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
-        alt: "Poignée blindée posée sur une porte à Nice",
+        alt: "Poignée blindée Nice",
       },
     },
     "/blindage-porte-nice/": {
@@ -91,7 +91,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
-        alt: "Pose d'un blindage de porte à Nice",
+        alt: "Blindage de porte Nice",
       },
     },
     "/installation-porte-blindee-nice/": {
@@ -100,7 +100,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "Bloc-porte blindé neuf posé à Nice",
+        alt: "Installation porte blindée Nice",
       },
     },
     "/mise-en-securite-apres-effraction-nice/": {
@@ -109,7 +109,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: AlertLockIcon,
       image: {
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
-        alt: "Cylindre percé après une tentative d'effraction à Nice",
+        alt: "Mise en sécurité après effraction Nice",
       },
     },
     "/agences-syndics-nice/": {
@@ -118,7 +118,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: HandshakeIcon,
       image: {
         src: "/images/agences-syndics-remise-de-cles.webp",
-        alt: "Remise de clés entre un serrurier et un client à Nice",
+        alt: "Serrurier agences et syndics Nice",
       },
     },
     "/ouverture-de-coffre-fort-nice/": {
@@ -127,7 +127,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Coffre-fort diagnostiqué avant ouverture à Nice",
+        alt: "Ouverture coffre-fort Nice",
       },
     },
     "/installation-coffre-fort-nice/": {
@@ -136,7 +136,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Coffre-fort prêt pour une fixation sécurisée à Nice",
+        alt: "Installation coffre-fort Nice",
       },
     },
     "/tarifs-serrurier-nice/": {
@@ -152,7 +152,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: WrenchIcon,
       image: {
         src: "/images/serrurier-nice-depannage-reparation.webp",
-        alt: "Repairing a lock mechanism in Nice",
+        alt: "Lock repair Nice",
       },
     },
     "/ouverture-de-porte-nice/": {
@@ -161,7 +161,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-ouverture-de-porte.webp",
-        alt: "Front door reopened by a locksmith in Nice",
+        alt: "Door opening Nice",
       },
     },
     "/changement-serrure-nice/": {
@@ -170,7 +170,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-changement-de-serrure.webp",
-        alt: "New cylinder fitted during a lock change in Nice",
+        alt: "Lock change Nice",
       },
     },
     "/serrure-carenee-nice/": {
@@ -179,7 +179,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: KeyIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "5-point shrouded lock fitted in Nice",
+        alt: "Shrouded lock Nice",
       },
     },
     "/poignee-blindee-nice/": {
@@ -188,7 +188,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
-        alt: "Armored handle fitted on a door in Nice",
+        alt: "Armored handle Nice",
       },
     },
     "/blindage-porte-nice/": {
@@ -197,7 +197,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: ShieldIcon,
       image: {
         src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
-        alt: "Door reinforcement being fitted in Nice",
+        alt: "Door reinforcement Nice",
       },
     },
     "/installation-porte-blindee-nice/": {
@@ -206,7 +206,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: DoorIcon,
       image: {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
-        alt: "New armored door block fitted in Nice",
+        alt: "Armored door installation Nice",
       },
     },
     "/mise-en-securite-apres-effraction-nice/": {
@@ -215,7 +215,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: AlertLockIcon,
       image: {
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
-        alt: "Cylinder pierced after an attempted break-in in Nice",
+        alt: "Break-in securing Nice",
       },
     },
     "/agences-syndics-nice/": {
@@ -224,7 +224,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: HandshakeIcon,
       image: {
         src: "/images/agences-syndics-remise-de-cles.webp",
-        alt: "Keys handed over between a locksmith and a client in Nice",
+        alt: "Property managers Nice",
       },
     },
     "/ouverture-de-coffre-fort-nice/": {
@@ -233,7 +233,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Safe assessed before opening in Nice",
+        alt: "Safe opening Nice",
       },
     },
     "/installation-coffre-fort-nice/": {
@@ -242,7 +242,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: SafeIcon,
       image: {
         src: "/images/serrurier-nice-coffre-fort.webp",
-        alt: "Safe ready for secure fixing in Nice",
+        alt: "Safe installation Nice",
       },
     },
     "/tarifs-serrurier-nice/": {

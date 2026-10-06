@@ -185,7 +185,7 @@ export default function CertificationA2pPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/cylindre-fichet-demonte-serrurier-nice.webp"
-                alt="Cylindre Fichet démonté par un serrurier à Nice"
+                alt="Cylindre Fichet démonté"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -271,7 +271,7 @@ export default function CertificationA2pPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/cylindre-fichet-main-serrurier-nice.webp"
-                alt="Cylindre Fichet tenu en main par un serrurier à Nice"
+                alt="Cylindre Fichet en main"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

@@ -166,7 +166,7 @@ export default function SectorPageTemplate({
         <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
           <Image
             src={photo.src}
-            alt={photo.alt}
+            alt={`Serrurier ${sectorPages[sectorKey].label}`}
             fill
             sizes="(min-width: 640px) 40vw, 100vw"
             className="object-cover"

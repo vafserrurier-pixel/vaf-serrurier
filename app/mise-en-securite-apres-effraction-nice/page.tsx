@@ -388,7 +388,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
       path="/mise-en-securite-apres-effraction-nice/"
       image={{
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
-        alt: "Cylindre de serrure percé après une tentative d'effraction à Nice",
+        alt: "Mise en sécurité après effraction Nice",
       }}
       sectionsVariant="cards"
       sectionsHeading="Ce qu'il faut savoir après une effraction"

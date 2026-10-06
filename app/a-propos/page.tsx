@@ -62,7 +62,7 @@ export default function AProposPage() {
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
             <Image
               src="/images/serrurier-nice-a-propos.webp"
-              alt="Benoît, artisan serrurier à Nice, à côté d'une serrure qu'il vient de réparer"
+              alt="Benoît, serrurier à Nice"
               fill
               sizes="(min-width: 640px) 40vw, 100vw"
               className="object-cover"

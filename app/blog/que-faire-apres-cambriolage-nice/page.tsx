@@ -177,7 +177,7 @@ export default function QueFaireApresUnCambriolagePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-avant-intervention-nice.webp"
-                alt="Diagnostic d'une porte avant intervention par un serrurier à Nice"
+                alt="Diagnostic d'une porte"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -334,7 +334,7 @@ export default function QueFaireApresUnCambriolagePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/porte-blindee-pose-serrurier-nice.webp"
-                alt="Renfort de porte avec bâti acier, une sécurisation après effraction à Nice"
+                alt="Renfort de porte en acier"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

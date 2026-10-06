@@ -19,7 +19,7 @@ export default function ArticleByline({
       <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0">
         <Image
           src="/images/serrurier-nice-a-propos.webp"
-          alt={`${business.firstName}, artisan serrurier à Nice`}
+          alt=""
           fill
           sizes="36px"
           className="object-cover"

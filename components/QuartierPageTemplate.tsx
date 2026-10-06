@@ -154,7 +154,7 @@ export default function QuartierPageTemplate({
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
             <Image
               src={photo.src}
-              alt={photo.alt}
+              alt={`Serrurier ${quartier}${/nice/i.test(quartier) ? "" : " Nice"}`}
               fill
               sizes="(min-width: 640px) 40vw, 100vw"
               className="object-cover"

@@ -428,7 +428,7 @@ export default function BlindagePorteNicePage() {
         path: "/blindage-porte-nice/",
         image: {
           src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
-          alt: "Pose d'un blindage de porte avec bâti acier par un serrurier à Nice",
+          alt: "Blindage de porte Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "Ce qu'il faut savoir sur le blindage de porte",
@@ -490,7 +490,7 @@ export default function BlindagePorteNicePage() {
         path: "/blindage-porte-nice/",
         image: {
           src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
-          alt: "Fitting a steel-frame door reinforcement by a locksmith in Nice",
+          alt: "Door reinforcement Nice",
         },
         sectionsVariant: "cards",
         sectionsHeading: "What to know about door reinforcement",

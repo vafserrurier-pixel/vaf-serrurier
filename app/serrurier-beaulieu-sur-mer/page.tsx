@@ -191,7 +191,6 @@ export default function SerrurierBeaulieuSurMerPage() {
       processSteps={processSteps}
       mapQuery="Beaulieu-sur-Mer, 06310"
       mapTitle="Zone d'intervention à Beaulieu-sur-Mer"
-      photoAlt="Benoît, artisan serrurier basé à Nice, intervient à Beaulieu-sur-Mer"
     />
   );
 }

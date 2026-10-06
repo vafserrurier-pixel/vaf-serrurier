@@ -106,7 +106,7 @@ export default function EntretienSerrurePage() {
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
-              alt="serrurier Nice entretien serrure"
+              alt="Entretien serrure Nice"
               fill
               sizes="(min-width: 1024px) 760px, 100vw"
               className="object-cover object-[50%_35%]"
