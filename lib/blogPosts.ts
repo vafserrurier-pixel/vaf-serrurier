@@ -19,6 +19,20 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/cle-cassee-serrure-que-faire-nice/",
+    title: "Clé cassée dans la serrure à Nice : que faire et quand appeler un serrurier",
+    excerpt:
+      "Ne forcez pas : ce que vous pouvez tenter selon la situation, ce qu'il vaut mieux éviter, et ce qui se passe quand j'interviens.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-10-06",
+    dateModified: "2026-10-06",
+    readingMinutes: 3,
+    // TODO : fichier cle-cassee-serrure-nice.webp (illustration originale, 1200 x 675) à fournir par Benoît.
+    image: "/images/blog/cle-cassee-serrure-nice.webp",
+  },
+  {
     href: "/blog/entretien-serrure/",
     title: "Entretien d'une serrure : le geste simple qui évite la panne",
     excerpt:

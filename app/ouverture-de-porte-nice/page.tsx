@@ -320,7 +320,17 @@ const sectionsFr = [
     heading: "Clé cassée ou serrure bloquée",
     Icon: <WrenchIcon className="w-4 h-4" />,
     paragraphs: [
-      "J'extrais proprement le morceau de clé resté dans le cylindre, avec un outil d'extraction adapté, sans forcer ni abîmer le mécanisme. Le perçage du cylindre reste une solution de tout dernier recours, uniquement si aucune autre méthode n'aboutit. Une serrure bloquée peut aussi venir d'un cylindre grippé par l'humidité ou d'un frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours moins cher qu'un dépannage de nuit un week-end.",
+      <>
+        J&apos;extrais proprement le morceau de clé resté dans le cylindre, avec un outil d&apos;extraction adapté,
+        sans forcer ni abîmer le mécanisme (voir{" "}
+        <Link href="/blog/cle-cassee-serrure-que-faire-nice/" className="text-steel underline">
+          que faire quand une clé casse dans la serrure
+        </Link>
+        ). Le perçage du cylindre reste une solution de tout dernier recours, uniquement si aucune autre méthode
+        n&apos;aboutit. Une serrure bloquée peut aussi venir d&apos;un cylindre grippé par l&apos;humidité ou d&apos;un
+        frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours
+        moins cher qu&apos;un dépannage de nuit un week-end.
+      </>,
     ],
   },
   {

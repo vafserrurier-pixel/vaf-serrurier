@@ -193,7 +193,15 @@ const sectionsFr = [
     heading: "Clé cassée dans la serrure",
     id: "cle-cassee",
     paragraphs: [
-      "C'est l'un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au pire moment. J'extrais le morceau resté à l'intérieur avec les outils adaptés, puis je vérifie l'état du cylindre avant de le remettre en service. Le perçage ne reste qu'une solution de tout dernier recours, si aucune autre méthode n'aboutit.",
+      <>
+        C&apos;est l&apos;un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au
+        pire moment. J&apos;extrais le morceau resté à l&apos;intérieur avec les outils adaptés, puis je vérifie
+        l&apos;état du cylindre avant de le remettre en service (voir{" "}
+        <Link href="/blog/cle-cassee-serrure-que-faire-nice/" className="text-steel underline">
+          que faire quand une clé casse dans la serrure
+        </Link>
+        ). Le perçage ne reste qu&apos;une solution de tout dernier recours, si aucune autre méthode n&apos;aboutit.
+      </>,
       "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre. Résultat : un dépannage simple se transforme en remplacement complet.",
     ],
   },
