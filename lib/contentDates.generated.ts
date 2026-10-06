@@ -11,6 +11,7 @@ export const contentDates: Record<string, string> = {
   "/blindage-porte-nice/": "2026-10-03T09:39:43+02:00",
   "/blog/certification-a2p-serrure-nice/": "2026-10-02T16:10:23+02:00",
   "/blog/changer-serrure-separation-divorce/": "2026-10-03T11:03:49+02:00",
+  "/blog/cle-cassee-serrure-que-faire-nice/": "2026-10-06T14:59:05+02:00",
   "/blog/digicode-cles-hall-copropriete-nice/": "2026-10-03T11:03:49+02:00",
   "/blog/entretien-serrure/": "2026-10-02T18:35:24+02:00",
   "/blog/": "2026-09-12T16:33:21+02:00",
@@ -30,7 +31,7 @@ export const contentDates: Record<string, string> = {
   "/mentions-legales/": "2026-09-12T12:47:15+02:00",
   "/mise-en-securite-apres-effraction-nice/": "2026-10-02T19:39:03+02:00",
   "/ouverture-de-coffre-fort-nice/": "2026-09-13T18:02:20+02:00",
-  "/ouverture-de-porte-nice/": "2026-10-03T09:39:43+02:00",
+  "/ouverture-de-porte-nice/": "2026-10-06T14:51:43+02:00",
   "/": "2026-10-03T09:39:43+02:00",
   "/poignee-blindee-nice/": "2026-10-03T09:39:43+02:00",
   "/politique-de-confidentialite/": "2026-09-12T12:47:15+02:00",
@@ -92,6 +93,6 @@ export const contentDates: Record<string, string> = {
   "/serrurier-vieux-nice-nice/": "2026-10-03T11:11:08+02:00",
   "/serrurier-villefranche-sur-mer/": "2026-10-03T11:03:49+02:00",
   "/tarifs-serrurier-nice/": "2026-10-03T09:39:43+02:00",
-  "/urgence-serrurier-nice/": "2026-10-02T19:14:35+02:00",
+  "/urgence-serrurier-nice/": "2026-10-06T14:51:43+02:00",
   "/zones-intervention-nice/": "2026-09-13T21:17:07+02:00"
 };
