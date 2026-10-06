@@ -29,7 +29,6 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-10-06",
     dateModified: "2026-10-06",
     readingMinutes: 3,
-    // TODO : fichier cle-cassee-serrure-nice.webp (illustration originale, 1200 x 675) à fournir par Benoît.
     image: "/images/blog/cle-cassee-serrure-nice.webp",
   },
   {

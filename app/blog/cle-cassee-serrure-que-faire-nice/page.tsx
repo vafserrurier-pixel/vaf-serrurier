@@ -21,7 +21,7 @@ import { blogPostByHref } from "@/lib/blogPosts";
 const HREF = "/blog/cle-cassee-serrure-que-faire-nice/";
 const TITLE = "Clé cassée dans la serrure à Nice : que faire et quand appeler un serrurier";
 const DESCRIPTION =
-  "Clé cassée dans la serrure : ne forcez pas. Ce que vous pouvez tenter, ce qu'il faut éviter et quand appeler un serrurier à Nice.";
+  "Clé cassée dans la serrure : ne forcez pas. Ce que vous pouvez tenter, ce qu'il faut éviter et quand appeler un serrurier. Extraction à 149 € TTC.";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
