@@ -127,6 +127,26 @@ const nextConfig: NextConfig = {
         destination: "/politique-de-confidentialite/",
         permanent: true,
       },
+      // Anciennes pages du site WordPress (indexees par Google avant la refonte d'aout 2026) :
+      // redirection 301 vers la page la plus proche (Next.js ajoute d'abord le slash final aux URLs sans slash).
+      { source: "/serrurier-de-nuit-nice/", destination: "/urgence-serrurier-nice/", permanent: true },
+      { source: "/serrurier-residentiel-nice/", destination: "/", permanent: true },
+      { source: "/serrurier-professionnel-nice/", destination: "/agences-syndics-nice/", permanent: true },
+      { source: "/installation-serrure-a2p-nice/", destination: "/changement-serrure-nice/", permanent: true },
+      { source: "/installation-verrou-nice/", destination: "/changement-serrure-nice/", permanent: true },
+      { source: "/devis/", destination: "/contact/", permanent: true },
+      { source: "/avis-clients/", destination: "/", permanent: true },
+      { source: "/locksmith-nice/", destination: "/", permanent: true },
+      { source: "/category/uncategorized/", destination: "/blog/", permanent: true },
+      { source: "/feed/", destination: "/blog/", permanent: true },
+      // www -> domaine principal en un seul saut. Les URLs HTML gardent leur slash final
+      // (sinon : www -> sans slash -> avec slash, deux sauts).
+      {
+        source: "/:path([^.]*)",
+        has: [{ type: "host", value: "www.vaf-serrurier.fr" }],
+        destination: "https://vaf-serrurier.fr/:path",
+        permanent: true,
+      },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.vaf-serrurier.fr" }],
