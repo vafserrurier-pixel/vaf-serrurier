@@ -170,7 +170,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/urgence-serrurier-nice/",
-  title: "Urgence serrurier Nice 24h/24 – Dépannage rapide | VAF",
+  title: "Urgence serrurier Nice 24h/24 – Dépannage rapide",
   description: "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention.",
 });
 

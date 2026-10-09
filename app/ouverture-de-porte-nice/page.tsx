@@ -297,7 +297,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-porte-nice/",
-  title: "Ouverture de porte Nice – Sans casse, 24h/24 | VAF",
+  title: "Ouverture de porte Nice – Sans casse, 24h/24",
   description: "Porte claquée ou verrouillée à Nice ? Ouverture sans casse quand c'est possible, diagnostic par téléphone, prix annoncé avant intervention. 24h/24, 7j/7.",
 });
 

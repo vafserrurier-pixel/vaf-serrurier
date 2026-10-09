@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/contact/",
-  title: `Contact serrurier Nice – ${business.phone.display} | VAF`,
+  title: `Contact serrurier Nice – ${business.phone.display}`,
   description: `Un devis ou une urgence à Nice ? Appelez le ${business.phone.display}, j'interviens 24h/24 et 7j/7. Réponse directe, pas de standard ni de sous-traitant.`,
 });
 

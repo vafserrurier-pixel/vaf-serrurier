@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-quartier-des-fleurs-nice/",
-  title: "Serrurier Quartier des Fleurs – Urgence 24h/24 | VAF",
+  title: "Serrurier Quartier des Fleurs – Urgence 24h/24",
   description: "Serrurier au quartier des Fleurs, Nice : dépannage et changement de serrure sur immeubles Art déco et anciens palais. Devis annoncé, 24h/24.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-magnan-nice/",
-  title: "Serrurier Magnan Nice – Intervention en 30 min | VAF",
+  title: "Serrurier Magnan Nice – Intervention en 30 min",
   description: "Serrurier au quartier Magnan, Nice : remplacement de cylindre sur résidences des années 1960-1970, serrure multipoints pour familles. Devis annoncé, 24h/24.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-antoine-nice/",
-  title: "Serrurier Saint-Antoine Nice – Dépannage rapide | VAF",
+  title: "Serrurier Saint-Antoine Nice – Dépannage rapide",
   description: "Serrurier à Saint-Antoine-de-Ginestière, Nice : dépannage sur bâti villageois, sécurisation près de l'aéroport. Devis annoncé, 24h/24.",
 });
 

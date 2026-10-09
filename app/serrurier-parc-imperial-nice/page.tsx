@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-parc-imperial-nice/",
-  title: "Serrurier Parc Impérial Nice – Intervention rapide | VAF",
+  title: "Serrurier Parc Impérial Nice – Intervention rapide",
   description: "Serrurier au Parc Impérial, Nice : dépannage et sécurisation sur immeubles Belle Époque et copropriétés de standing. Devis annoncé, 24h/24.",
 });
 

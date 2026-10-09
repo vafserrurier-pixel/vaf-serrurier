@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-cimiez-nice/",
-  title: "Serrurier Cimiez Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Cimiez Nice – Urgence 24h/24",
   description: "Serrurier à Cimiez, Nice : changement de serrure et dépannage sur portes anciennes, ouverture de porte pour villas et copropriétés. Devis annoncé, 24h/24.",
 });
 

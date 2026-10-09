@@ -25,7 +25,7 @@ const HREF = "/blog/certification-a2p-serrure-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Certification A2P : 1, 2 ou 3 étoiles, le guide | VAF",
+  title: "Certification A2P : 1, 2 ou 3 étoiles, le guide",
   description: "A2P 1, 2 ou 3 étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, comment la repérer et pourquoi elle compte pour votre assurance.",
   article: { author: business.firstName, readingTime: "8 min" },
   image: blogPostByHref(HREF)?.image,

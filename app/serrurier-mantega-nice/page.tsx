@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-mantega-nice/",
-  title: "Serrurier Mantega Nice – Changement de cylindre | VAF",
+  title: "Serrurier Mantega Nice – Changement de cylindre",
   description: "Serrurier à Mantega, Nice : intervention sur immeubles et résidences de ce quartier-village en hauteur. Devis annoncé, intervention 24h/24.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-quartier-des-musiciens-nice/",
-  title: "Serrurier Quartier des Musiciens – Urgence 24h/24 | VAF",
+  title: "Serrurier Quartier des Musiciens – Urgence 24h/24",
   description: "Serrurier au quartier des Musiciens, Nice, près de la gare de Nice-Ville : dépannage, changement de serrure sur immeubles Belle Époque. Devis annoncé, 24h/24.",
 });
 

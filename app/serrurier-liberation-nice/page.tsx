@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-liberation-nice/",
-  title: "Serrurier Libération Nice – Dépannage rapide | VAF",
+  title: "Serrurier Libération Nice – Dépannage rapide",
   description: "Serrurier au quartier Libération, Nice : dépannage rapide près du marché couvert et de la Gare du Sud, changement de serrure. Devis annoncé, 24h/24.",
 });
 

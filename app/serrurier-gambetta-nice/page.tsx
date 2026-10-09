@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-gambetta-nice/",
-  title: "Serrurier Gambetta Nice – Dépannage rapide | VAF",
+  title: "Serrurier Gambetta Nice – Dépannage rapide",
   description: "Serrurier au quartier Gambetta, Nice : changement de serrure et dépannage sur immeubles du XXe siècle, sécurisation après cambriolage. Devis annoncé, 24h/24.",
 });
 

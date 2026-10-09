@@ -75,7 +75,7 @@ export default async function OpengraphImage() {
             display: "flex",
           }}
         >
-          {business.legalName}
+          {business.brandName}
         </div>
       </div>
     ),

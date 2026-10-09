@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-carabacel-nice/",
-  title: "Serrurier Carabacel Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Carabacel Nice – Urgence 24h/24",
   description: "Serrurier au quartier Carabacel, Nice : dépannage sur villas et immeubles anciens du boulevard planté, changement de serrure. Devis annoncé, 24h/24.",
 });
 

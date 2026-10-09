@@ -2,7 +2,11 @@
 // Ne jamais dupliquer ces valeurs en dur ailleurs dans le code.
 
 export const business = {
+  // Dénomination juridique (mentions légales, CGU, CGV, confidentialité, À propos).
   legalName: "Votre Artisan Français",
+  // Nom affiché et déclaré partout ailleurs : identique à la fiche Google Maps
+  // (même casse, même tiret entouré d'espaces, mêmes accents). Ne jamais reformuler.
+  brandName: "Serrurier Nice - Votre Artisan Français",
   // Le nom complet existe pour référence interne (facturation, KBis) mais n'est
   // affiché nulle part sur le site public, y compris sur les pages légales : choix
   // explicite de Benoît, malgré le risque de non-conformité LCEN art. 6-III qui

@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-corniche-fleurie-nice/",
-  title: "Serrurier Corniche Fleurie Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Corniche Fleurie Nice – Urgence 24h/24",
   description: "Serrurier à la Corniche Fleurie, Nice : sécurisation de villas près du jardin botanique, blindage. Devis annoncé, 24h/24.",
 });
 

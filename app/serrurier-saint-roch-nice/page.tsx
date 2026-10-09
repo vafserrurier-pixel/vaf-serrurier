@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-roch-nice/",
-  title: "Serrurier Saint-Roch Nice – Après effraction | VAF",
+  title: "Serrurier Saint-Roch Nice – Après effraction",
   description: "Serrurier au quartier Saint-Roch, Nice : mise en sécurité après effraction, dépannage sur immeubles populaires. Devis annoncé, 24h/24.",
 });
 

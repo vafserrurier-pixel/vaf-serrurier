@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-chambrun-nice/",
-  title: "Serrurier Chambrun Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Chambrun Nice – Dépannage 24h/24",
   description: "Serrurier à Chambrun, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 });
 

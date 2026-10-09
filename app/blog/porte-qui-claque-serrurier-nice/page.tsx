@@ -25,7 +25,7 @@ const HREF = "/blog/porte-qui-claque-serrurier-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Porte qui claque à Nice : que faire avant d'appeler | VAF",
+  title: "Porte qui claque à Nice : que faire avant d'appeler",
   description: "Porte qui claque à Nice : les vérifications à faire avant d'appeler, les gestes à éviter, et comment repérer une annonce à prix d'appel trompeuse.",
   article: { author: business.firstName, readingTime: "7 min" },
   image: blogPostByHref(HREF)?.image,

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-mont-boron-nice/",
-  title: "Serrurier Mont Boron Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Mont Boron Nice – Dépannage 24h/24",
   description: "Serrurier au Mont Boron, Nice : sécurisation de villas de standing, systèmes de sécurité avancés. Devis annoncé, intervention 24h/24.",
 });
 

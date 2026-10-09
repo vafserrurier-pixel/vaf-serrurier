@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-quartier-wilson-nice/",
-  title: "Serrurier Quartier Wilson Nice – Dépannage rapide | VAF",
+  title: "Serrurier Quartier Wilson Nice – Dépannage rapide",
   description: "Serrurier place Wilson, Nice : dépannage de commerce, serrures d'immeubles bourgeois Belle Époque, sécurisation de vitrine. Devis annoncé, 24h/24.",
 });
 

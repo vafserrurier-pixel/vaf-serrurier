@@ -7,7 +7,7 @@ import { business } from "@/lib/business";
 
 export const metadata: Metadata = buildMetadata({
   path: "/",
-  title: "Serrurier Nice 24h/24 – Artisan direct, devis gratuit | VAF",
+  title: "Serrurier Nice 24h/24 – Artisan direct, devis gratuit",
   description: `Artisan serrurier à Nice, 24h/24, 7j/7. Prix annoncé avant intervention. Plus de ${business.reviews.count} avis Google ${business.reviews.rating.toFixed(1)}/5. Ouverture de porte, serrure, porte blindée.`,
 });
 

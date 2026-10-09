@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-pessicart-nice/",
-  title: "Serrurier Pessicart Nice – Dépannage rapide | VAF",
+  title: "Serrurier Pessicart Nice – Dépannage rapide",
   description: "Serrurier à Pessicart, Nice : dépannage sur villas et résidences collectives des hauteurs. Devis annoncé, intervention 24h/24.",
 });
 

@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-mont-alban-nice/",
-  title: "Serrurier Mont Alban Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Mont Alban Nice – Urgence 24h/24",
   description: "Serrurier au Mont Alban, Nice : blindage et sécurisation de villas sur secteur boisé près du fort. Devis annoncé, intervention 24h/24.",
 });
 

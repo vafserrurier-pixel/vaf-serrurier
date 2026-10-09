@@ -217,7 +217,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrure-carenee-nice/",
-  title: "Serrure carénée 5 points à Nice – En applique | VAF",
+  title: "Serrure carénée 5 points à Nice – En applique",
   description: "Installation d'une serrure carénée 5 points en applique à Nice : renfort intermédiaire entre cylindre standard et blindage complet. Devis annoncé, 24h/24.",
 });
 

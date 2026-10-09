@@ -24,7 +24,8 @@ export function localBusinessSchema(opts?: { reviews?: Review[] }) {
   return {
     "@context": "https://schema.org",
     "@type": "Locksmith",
-    name: business.legalName,
+    name: business.brandName,
+    legalName: business.legalName,
     image: `${business.domain}/logo-full.png`,
     "@id": business.domain,
     url: business.domain,
@@ -90,7 +91,7 @@ export function serviceSchema(opts: {
     ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
     provider: {
       "@type": "Locksmith",
-      name: business.legalName,
+      name: business.brandName,
       telephone: business.phone.href.replace("tel:", ""),
     },
     areaServed: {
@@ -172,7 +173,7 @@ export function blogPostingSchema(opts: {
     },
     publisher: {
       "@type": "Organization",
-      name: business.legalName,
+      name: business.brandName,
       logo: {
         "@type": "ImageObject",
         url: `${business.domain}/logo-full.png`,
@@ -195,7 +196,7 @@ export function personSchema() {
     image: `${business.domain}/images/serrurier-nice-a-propos.webp`,
     worksFor: {
       "@type": "Locksmith",
-      name: business.legalName,
+      name: business.brandName,
       url: business.domain,
     },
     knowsAbout: [

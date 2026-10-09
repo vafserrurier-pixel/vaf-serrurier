@@ -25,7 +25,7 @@ const HREF = "/blog/que-faire-apres-cambriolage-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Que faire après un cambriolage à Nice : les étapes | VAF",
+  title: "Que faire après un cambriolage à Nice : les étapes",
   description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut jamais faire seul, et comment sécuriser votre porte en urgence avant de reconstituer le dossier.",
   article: { author: business.firstName, readingTime: "8 min" },
   image: blogPostByHref(HREF)?.image,

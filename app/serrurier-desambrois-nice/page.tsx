@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-desambrois-nice/",
-  title: "Serrurier Desambrois Nice – Changement de serrure | VAF",
+  title: "Serrurier Desambrois Nice – Changement de serrure",
   description: "Serrurier à Desambrois, Nice : changement de serrure entre deux locataires, dépannage sur portes Belle Époque, intervention en 10-15 min. Devis annoncé, 24h/24.",
 });
 

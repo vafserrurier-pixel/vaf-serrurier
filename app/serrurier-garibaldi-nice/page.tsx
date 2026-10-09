@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-garibaldi-nice/",
-  title: "Serrurier Garibaldi Nice – Ouverture de porte rapide | VAF",
+  title: "Serrurier Garibaldi Nice – Ouverture de porte rapide",
   description: "Serrurier place Garibaldi, Nice : ouverture de porte, dépannage sur immeubles anciens entre Vieux-Nice et le port. Devis annoncé, 24h/24.",
 });
 

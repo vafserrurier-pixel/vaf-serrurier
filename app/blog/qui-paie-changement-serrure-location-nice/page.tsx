@@ -24,7 +24,7 @@ const HREF = "/blog/qui-paie-changement-serrure-location-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Location : qui paie le changement de serrure ? | VAF",
+  title: "Location : qui paie le changement de serrure ?",
   description: "Clés perdues, cambriolage, location saisonnière, changement de locataire : qui du propriétaire ou du locataire paie le changement de serrure à Nice.",
   article: { author: business.firstName, readingTime: "9 min" },
   image: blogPostByHref(HREF)?.image,

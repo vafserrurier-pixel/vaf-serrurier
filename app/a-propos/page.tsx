@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/a-propos/",
-  title: "Qui suis-je – Benoît, artisan serrurier à Nice | VAF",
+  title: "Qui suis-je – Benoît, artisan serrurier à Nice",
   description: "Serrurier depuis 2011, installé seul à Nice pour remettre de la transparence dans ce métier. Mon parcours, ma formation, mes engagements.",
 });
 

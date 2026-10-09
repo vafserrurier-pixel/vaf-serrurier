@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-carre-d-or-nice/",
-  title: "Serrurier Carré d'Or Nice – Intervention en 30 min | VAF",
+  title: "Serrurier Carré d'Or Nice – Intervention en 30 min",
   description: "Serrurier au Carré d'Or, Nice : sécurisation discrète de boutiques de luxe et copropriétés Belle Époque. Devis annoncé, intervention rapide 24h/24.",
 });
 

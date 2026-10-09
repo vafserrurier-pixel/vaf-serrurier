@@ -139,7 +139,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/poignee-blindee-nice/",
-  title: "Poignée blindée à Nice – Protection du cylindre | VAF",
+  title: "Poignée blindée à Nice – Protection du cylindre",
   description:
     "Installation d'une poignée blindée à Nice : protège et masque le cylindre exposé, garantie fabricant 10 ans (gamme Héraclès Salomé). Pose et réglage inclus.",
 });

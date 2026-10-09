@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-la-madeleine-nice/",
-  title: "Serrurier La Madeleine Nice – Intervention rapide | VAF",
+  title: "Serrurier La Madeleine Nice – Intervention rapide",
   description: "Serrurier à La Madeleine, Nice : dépannage sur maisons de ville et immeubles anciens du vallon, changement de serrure. Devis annoncé, 24h/24.",
 });
 

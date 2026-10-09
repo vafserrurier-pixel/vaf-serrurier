@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/tarifs-serrurier-nice/",
-  title: "Tarifs serrurier Nice 2026 – Devis gratuit | VAF",
+  title: "Tarifs serrurier Nice 2026 – Devis gratuit",
   description: "Grille tarifaire complète du serrurier à Nice : ouverture de porte, changement de cylindre, blindage, porte blindée. Prix fixes annoncés avant intervention, zéro surprise.",
 });
 

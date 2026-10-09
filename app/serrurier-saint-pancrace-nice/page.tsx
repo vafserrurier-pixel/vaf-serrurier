@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-pancrace-nice/",
-  title: "Serrurier Saint-Pancrace Nice – Intervention rapide | VAF",
+  title: "Serrurier Saint-Pancrace Nice – Intervention rapide",
   description: "Serrurier à Saint-Pancrace, Nice : sécurisation de villas sur secteur rural préservé, dépannage. Devis annoncé, 24h/24.",
 });
 

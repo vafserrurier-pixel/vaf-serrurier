@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-fabron-nice/",
-  title: "Serrurier Fabron Nice – Ouverture de porte 24h/24 | VAF",
+  title: "Serrurier Fabron Nice – Ouverture de porte 24h/24",
   description: "Serrurier à Fabron, Nice : sécurisation de villas héritées du patrimoine XIXe, dépannage sur résidences. Devis annoncé, 24h/24.",
 });
 

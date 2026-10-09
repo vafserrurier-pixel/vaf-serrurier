@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-pasteur-nice/",
-  title: "Serrurier Pasteur Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Pasteur Nice – Urgence 24h/24",
   description: "Serrurier au quartier Pasteur, Nice : dépannage près du pôle hospitalier, changement de serrure sur bâti mêlant ancien et récent. Devis annoncé, 24h/24.",
 });
 

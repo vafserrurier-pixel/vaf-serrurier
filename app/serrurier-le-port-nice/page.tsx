@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-le-port-nice/",
-  title: "Serrurier Le Port Nice – Ouvert tard le soir | VAF",
+  title: "Serrurier Le Port Nice – Ouvert tard le soir",
   description: "Serrurier au quartier du Port, Nice : dépannage tardif, sécurisation après effraction dans ce secteur animé jour et nuit. Devis annoncé, 24h/24.",
 });
 

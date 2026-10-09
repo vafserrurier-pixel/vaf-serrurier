@@ -116,7 +116,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-coffre-fort-nice/",
-  title: "Installation de coffre-fort Nice – Serrurier | VAF",
+  title: "Installation de coffre-fort Nice – Serrurier",
   description: "Installation et fixation de coffre-fort à Nice : conseil sur le modèle, pose sécurisée au sol ou au mur. Devis annoncé avant intervention.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-arenas-nice/",
-  title: "Serrurier Arénas Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Arénas Nice – Urgence 24h/24",
   description: "Serrurier à l'Arénas, Nice : sécurisation de bureaux et locaux professionnels, accès contrôlés. Devis annoncé, intervention 24h/24.",
 });
 

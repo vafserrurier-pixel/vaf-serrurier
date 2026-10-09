@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-corniche-des-oliviers-nice/",
-  title: "Serrurier Corniche des Oliviers – Urgence 24h/24 | VAF",
+  title: "Serrurier Corniche des Oliviers – Urgence 24h/24",
   description: "Serrurier à la Corniche des Oliviers, Nice : blindage et renforcement de villas sur les hauteurs. Devis annoncé, intervention 24h/24.",
 });
 

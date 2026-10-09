@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-secteur-bellet-nice/",
-  title: "Serrurier Secteur Bellet Nice – Intervention rapide | VAF",
+  title: "Serrurier Secteur Bellet Nice – Intervention rapide",
   description: "Serrurier au secteur Bellet, Nice (Crémat, Saint-Roman-de-Bellet, Ventabren) : sécurisation de maisons isolées et domaines viticoles. Devis annoncé, 24h/24.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-bon-voyage-nice/",
-  title: "Serrurier Bon Voyage Nice – Changement de locataire | VAF",
+  title: "Serrurier Bon Voyage Nice – Changement de locataire",
   description: "Serrurier au quartier Bon Voyage, Nice : changement de serrure entre deux locataires, dépannage sur immeubles collectifs. Devis annoncé, 24h/24.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-promenade-des-anglais-nice/",
-  title: "Serrurier Promenade des Anglais – Urgence 24h/24 | VAF",
+  title: "Serrurier Promenade des Anglais – Urgence 24h/24",
   description: "Serrurier Promenade des Anglais, Nice : porte claquée entre deux locations, sécurisation discrète en copropriété de standing. Devis annoncé, 24h/24.",
 });
 

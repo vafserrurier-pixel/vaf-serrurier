@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/agences-syndics-nice/",
-  title: "Serrurier partenaire agences & syndics à Nice | VAF",
+  title: "Serrurier partenaire agences & syndics à Nice",
   description: "Serrurier partenaire d'agences immobilières à Nice : changement de serrure entre locataires, dépannage, remise de clés. Ouvert aux syndics de copropriété.",
 });
 

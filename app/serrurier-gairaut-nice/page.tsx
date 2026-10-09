@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-gairaut-nice/",
-  title: "Serrurier Gairaut Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Gairaut Nice – Urgence 24h/24",
   description: "Serrurier à Gairaut, Nice : sécurisation de villas près de la cascade historique, renforcement de porte. Devis annoncé, 24h/24.",
 });
 

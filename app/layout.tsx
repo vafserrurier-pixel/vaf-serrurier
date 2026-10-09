@@ -28,7 +28,7 @@ const plexMono = IBM_Plex_Mono({
   weight: ["500", "600"],
 });
 
-const defaultTitle = "Serrurier Nice 24h/24 | Votre Artisan Français";
+const defaultTitle = business.brandName;
 const defaultDescription =
   "Serrurier artisan à Nice, disponible 24h/24 et 7j/7. Prix annoncé avant intervention.";
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: business.legalName,
+    siteName: business.brandName,
     title: defaultTitle,
     description: defaultDescription,
     url: business.domain,

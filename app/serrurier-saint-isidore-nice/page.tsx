@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-isidore-nice/",
-  title: "Serrurier Saint-Isidore Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Saint-Isidore Nice – Urgence 24h/24",
   description: "Serrurier à Saint-Isidore, Nice : dépannage sur résidences récentes près du stade Allianz Riviera. Devis annoncé, intervention 24h/24.",
 });
 

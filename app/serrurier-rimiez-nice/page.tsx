@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-rimiez-nice/",
-  title: "Serrurier Rimiez Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Rimiez Nice – Urgence 24h/24",
   description: "Serrurier à Rimiez, Nice : réparation de serrures anciennes, dépannage sur villas et résidences. Devis annoncé, 24h/24.",
 });
 

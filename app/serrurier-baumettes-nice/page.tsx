@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-baumettes-nice/",
-  title: "Serrurier Baumettes Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier Baumettes Nice – Dépannage 24h/24",
   description: "Serrurier aux Baumettes, Nice : sécurisation de villas, réparation de serrures anciennes près du musée Jules-Chéret. Devis annoncé, 24h/24.",
 });
 

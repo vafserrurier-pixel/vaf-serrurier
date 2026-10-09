@@ -70,7 +70,7 @@ export default function Footer() {
     <footer className="bg-navy text-cream mt-16">
       <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
         <div>
-          <p className="font-heading font-bold text-lg">{business.legalName}</p>
+          <p className="font-heading font-bold text-lg">{business.brandName}</p>
           <p className="text-sm text-cream/80 mt-1">{business.tagline}</p>
           <p className="text-sm mt-3">{business.address.full}</p>
           <p className="text-sm mt-1">SIRET {business.siret}</p>
@@ -180,7 +180,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-cream/10 text-center text-xs text-cream/60 py-4">
-        © {new Date().getFullYear()} {business.legalName}. {t.rights}
+        © {new Date().getFullYear()} {business.brandName}. {t.rights}
       </div>
     </footer>
   );

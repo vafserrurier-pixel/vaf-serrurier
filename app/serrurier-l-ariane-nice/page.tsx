@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-l-ariane-nice/",
-  title: "Serrurier l'Ariane Nice – Dépannage 24h/24 | VAF",
+  title: "Serrurier l'Ariane Nice – Dépannage 24h/24",
   description: "Serrurier à l'Ariane, Nice : dépannage sur portes palières de grands ensembles, sécurisation après effraction. Devis annoncé, 24h/24.",
 });
 

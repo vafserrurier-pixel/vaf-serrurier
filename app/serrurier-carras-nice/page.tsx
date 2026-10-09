@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-carras-nice/",
-  title: "Serrurier Carras Nice – Dépannage rapide | VAF",
+  title: "Serrurier Carras Nice – Dépannage rapide",
   description: "Serrurier à Carras, Nice : dépannage sur immeubles résidentiels en bord de mer, intervention rapide. Devis annoncé, 24h/24.",
 });
 

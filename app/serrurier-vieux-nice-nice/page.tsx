@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-vieux-nice-nice/",
-  title: "Serrurier Vieux-Nice – Ouverture de porte 24h/24 | VAF",
+  title: "Serrurier Vieux-Nice – Ouverture de porte 24h/24",
   description: "Serrurier dans le Vieux-Nice : réparation de portes anciennes non standards, dépannage pour locations saisonnières près du cours Saleya. Devis annoncé, 24h/24.",
 });
 

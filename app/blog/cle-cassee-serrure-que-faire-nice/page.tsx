@@ -25,7 +25,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Clé cassée dans la serrure à Nice : que faire | VAF",
+  title: "Clé cassée dans la serrure à Nice : que faire",
   description: DESCRIPTION,
   article: { author: business.firstName, readingTime: "3 min" },
   image: blogPostByHref(HREF)?.image,

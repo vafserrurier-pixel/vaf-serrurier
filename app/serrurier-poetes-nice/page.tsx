@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-poetes-nice/",
-  title: "Serrurier Quartier des Poètes Nice – Urgence 24h/24 | VAF",
+  title: "Serrurier Quartier des Poètes Nice – Urgence 24h/24",
   description: "Serrurier au quartier des Poètes, Nice : dépannage sur portes palières, sécurisation après effraction. Devis annoncé, 24h/24.",
 });
 

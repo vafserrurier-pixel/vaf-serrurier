@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-cagnes-sur-mer/",
-  title: "Serrurier à Cagnes-sur-Mer – Urgence 24h/24 | VAF",
+  title: "Serrurier à Cagnes-sur-Mer – Urgence 24h/24",
   description: "Serrurier à Cagnes-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
 });
 

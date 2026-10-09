@@ -169,7 +169,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-coffre-fort-nice/",
-  title: "Ouverture de coffre-fort Nice – Serrurier | VAF",
+  title: "Ouverture de coffre-fort Nice – Serrurier",
   description: "Coffre-fort bloqué, code oublié, clé perdue à Nice ? J'ouvre le coffre sans le détruire quand c'est possible. Devis annoncé avant intervention.",
 });
 

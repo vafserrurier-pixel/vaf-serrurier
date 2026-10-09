@@ -194,7 +194,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Installation de porte blindée à Nice – Devis gratuit | VAF",
+  title: "Installation de porte blindée à Nice – Devis gratuit",
   description: "Installation d'une porte blindée neuve à Nice, pose comprise : 5 lignes, certification A2P BP1 à BP3. Mesures et devis gratuits sur place.",
 });
 

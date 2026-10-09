@@ -1,4 +1,5 @@
 import { KeyIcon } from "./Icons";
+import { business } from "@/lib/business";
 
 /**
  * Prise de position personnelle de l'artisan sur le sujet de l'article
@@ -19,7 +20,7 @@ export default function ArticleOpinion({ quote }: { quote: string }) {
       </p>
       <div className="flex items-center gap-2 mt-4">
         <KeyIcon className="w-3.5 h-3.5 text-steel" />
-        <p className="text-sm text-slate">Benoît, Votre Artisan Français</p>
+        <p className="text-sm text-slate">Benoît, {business.brandName}</p>
       </div>
     </div>
   );

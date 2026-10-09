@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-jean-medecin-nice/",
-  title: "Serrurier Jean-Médecin Nice – Intervention 24h/24 | VAF",
+  title: "Serrurier Jean-Médecin Nice – Intervention 24h/24",
   description: "Serrurier avenue Jean-Médecin, Nice : digicodes et halls d'immeuble très sollicités, sécurisation de commerces et bureaux. Devis annoncé, 24h/24.",
 });
 

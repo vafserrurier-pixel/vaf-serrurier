@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-lingostiere-nice/",
-  title: "Serrurier Lingostière Nice – Dépannage rapide | VAF",
+  title: "Serrurier Lingostière Nice – Dépannage rapide",
   description: "Serrurier à Lingostière, Nice : dépannage sur propriétés isolées, délai réaliste pour ce secteur éloigné. Devis annoncé, 24h/24.",
 });
 

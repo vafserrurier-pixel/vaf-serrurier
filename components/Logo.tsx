@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { business } from "@/lib/business";
+
+// Le nom complet est coupé sur deux lignes à son tiret, sans en changer le texte.
+const [brandLine1, brandLine2] = business.brandName.split(" - ");
 
 export default function Logo({ className = "" }: { className?: string }) {
   return (
@@ -11,10 +15,10 @@ export default function Logo({ className = "" }: { className?: string }) {
         priority
         className="shrink-0"
       />
-      <span className="font-heading font-bold leading-tight text-navy">
-        Votre Artisan
+      <span className="font-heading font-bold leading-tight text-navy whitespace-nowrap">
+        {brandLine1} -
         <br />
-        Français
+        {brandLine2}
       </span>
     </span>
   );

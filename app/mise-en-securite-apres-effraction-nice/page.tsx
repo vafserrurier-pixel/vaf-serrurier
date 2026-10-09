@@ -269,7 +269,7 @@ const guideContent = (
 
 export const metadata: Metadata = buildMetadata({
   path: "/mise-en-securite-apres-effraction-nice/",
-  title: "Mise en sécurité après effraction à Nice 24h/24 | VAF",
+  title: "Mise en sécurité après effraction à Nice 24h/24",
   description: "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, puis je propose une réparation définitive. Devis annoncé avant travaux.",
 });
 

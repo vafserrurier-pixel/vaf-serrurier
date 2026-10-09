@@ -23,7 +23,7 @@ const HREF = "/blog/changer-serrure-separation-divorce/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Séparation, divorce : qui peut changer la serrure ? | VAF",
+  title: "Séparation, divorce : qui peut changer la serrure ?",
   description: "Époux, pacsés, concubins : ce que dit vraiment la loi sur le changement de serrure pendant une séparation, et la procédure rapide en cas de violences conjugales.",
   image: blogPostByHref(HREF)?.image,
 });

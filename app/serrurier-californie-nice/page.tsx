@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-californie-nice/",
-  title: "Serrurier Californie Nice – Ouverture 24h/24 | VAF",
+  title: "Serrurier Californie Nice – Ouverture 24h/24",
   description: "Serrurier au quartier Californie, Nice : sécurisation de villas familiales, dépannage près de l'aéroport. Devis annoncé, 24h/24.",
 });
 

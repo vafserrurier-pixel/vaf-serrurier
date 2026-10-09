@@ -1,4 +1,5 @@
 import { KeyIcon } from "./Icons";
+import { business } from "@/lib/business";
 import type { Locale } from "@/lib/locale";
 
 const content = {
@@ -6,13 +7,13 @@ const content = {
     mark: "«",
     quote:
       "Artisan serrurier, je ne me contente pas d'ouvrir une porte : je conseille, je dépanne, et je protège votre confiance autant que votre sécurité.",
-    attribution: "Benoît, Votre Artisan Français",
+    attribution: `Benoît, ${business.brandName}`,
   },
   en: {
     mark: "“",
     quote:
       "As a locksmith craftsman, I don't just open a door: I advise, I fix, and I protect your trust as much as your security.",
-    attribution: "Benoît, Votre Artisan Français",
+    attribution: `Benoît, ${business.brandName}`,
   },
 };
 

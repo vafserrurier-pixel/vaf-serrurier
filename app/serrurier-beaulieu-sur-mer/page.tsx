@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-beaulieu-sur-mer/",
-  title: "Serrurier Beaulieu-sur-Mer – Dépannage 24h/24 | VAF",
+  title: "Serrurier Beaulieu-sur-Mer – Dépannage 24h/24",
   description:
     "Serrurier à Beaulieu-sur-Mer : ouverture de porte, changement de serrure, dépannage 24h/24, 7j/7. Arrivée en 20 à 30 minutes, prix annoncé avant intervention.",
 });

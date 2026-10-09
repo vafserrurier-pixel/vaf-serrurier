@@ -24,7 +24,7 @@ const HREF = "/blog/digicode-cles-hall-copropriete-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Clés de hall, digicode : qui décide en copropriété ? | VAF",
+  title: "Clés de hall, digicode : qui décide en copropriété ?",
   description: "Serrure de hall, digicode, organigramme de clés en copropriété à Nice : qui décide, qui paie, et ce qui détermine le prix d'une intervention.",
   article: { author: business.firstName, readingTime: "7 min" },
   image: blogPostByHref(HREF)?.image,

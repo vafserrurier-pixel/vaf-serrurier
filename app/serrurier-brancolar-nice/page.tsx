@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-brancolar-nice/",
-  title: "Serrurier Brancolar Nice – Intervention rapide | VAF",
+  title: "Serrurier Brancolar Nice – Intervention rapide",
   description: "Serrurier au Brancolar, Nice : personnalisation de cylindre sur logements neufs, dépannage sur grands ensembles. Devis annoncé, 24h/24.",
 });
 

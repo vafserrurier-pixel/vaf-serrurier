@@ -24,7 +24,7 @@ const HREF = "/blog/serrure-multipoints-3-5-7-nice/";
 
 export const metadata: Metadata = buildMetadata({
   path: HREF,
-  title: "Serrure 3, 5 ou 7 points : laquelle choisir ? | VAF",
+  title: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
   description: "Différence réelle entre une serrure 3, 5 et 7 points, et comment choisir le bon niveau selon votre porte. Explications claires, sans survendre.",
   article: { author: business.firstName, readingTime: "7 min" },
   image: blogPostByHref(HREF)?.image,

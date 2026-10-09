@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-pierre-de-feric-nice/",
-  title: "Serrurier Saint-Pierre-de-Féric – Urgence 24h/24 | VAF",
+  title: "Serrurier Saint-Pierre-de-Féric – Urgence 24h/24",
   description: "Serrurier à Saint-Pierre-de-Féric, Nice : sécurisation de villas avec portail et grand jardin, blindage de porte. Devis annoncé, 24h/24.",
 });
 

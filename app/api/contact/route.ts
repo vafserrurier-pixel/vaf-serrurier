@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(apiKey);
   // Expéditeur par défaut Resend (sandbox) tant que le domaine vaf-serrurier.fr
   // n'est pas vérifié sur Resend (nécessite un accès DNS, prévu en phase hébergement).
-  const fromAddress = process.env.RESEND_FROM_EMAIL || "Site VAF Serrurier <onboarding@resend.dev>";
+  const fromAddress = process.env.RESEND_FROM_EMAIL || `${business.brandName} <onboarding@resend.dev>`;
 
   try {
     await resend.emails.send({

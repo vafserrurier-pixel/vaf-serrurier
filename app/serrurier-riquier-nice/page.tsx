@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-riquier-nice/",
-  title: "Serrurier Riquier Nice – Ouverture de porte 24h/24 | VAF",
+  title: "Serrurier Riquier Nice – Ouverture de porte 24h/24",
   description: "Serrurier à Riquier, Nice : renforcement de porte près de la gare, dépannage sur immeubles des années 1920. Devis annoncé, 24h/24.",
 });
 
