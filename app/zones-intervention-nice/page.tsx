@@ -15,7 +15,7 @@ import { itemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
   path: "/zones-intervention-nice/",
-  title: "Zones d'intervention à Nice | Votre Artisan Français",
+  title: "Zones d'intervention à Nice",
   description: "Je me déplace dans tous les quartiers de Nice : centre, est, nord et ouest. Retrouvez tous les secteurs et quartiers couverts.",
 });
 

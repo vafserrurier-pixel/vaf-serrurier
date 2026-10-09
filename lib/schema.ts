@@ -73,6 +73,19 @@ export function localBusinessSchema(opts?: { reviews?: Review[] }) {
   };
 }
 
+// Balisage WebSite de la page d'accueil : Google s'en sert pour le nom de site affiché
+// dans les résultats. Le nom est celui de la fiche Google Maps ; le nom légal est
+// déclaré comme nom alternatif (c'est la dénomination juridique de l'entreprise).
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: business.brandName,
+    alternateName: business.legalName,
+    url: `${business.domain}/`,
+  };
+}
+
 export function serviceSchema(opts: {
   name: string;
   description: string;

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/conditions-generales-de-vente/",
-  title: "Conditions générales de vente | Votre Artisan Français",
+  title: "Conditions générales de vente",
   description: "CGV des prestations de serrurerie proposées par Votre Artisan Français à Nice.",
 });
 

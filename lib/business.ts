@@ -29,8 +29,8 @@ export const business = {
     full: "2 Rue Antoine Gautier, 06300 Nice",
   },
   geo: {
-    latitude: 43.69866574948938,
-    longitude: 7.279763975999522,
+    latitude: 43.6986619,
+    longitude: 7.2823389,
   },
   phone: {
     display: "04 22 13 85 44",

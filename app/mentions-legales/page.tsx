@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/mentions-legales/",
-  title: "Mentions légales | Votre Artisan Français",
+  title: "Mentions légales",
   description: "Mentions légales du site vaf-serrurier.fr, édité par Votre Artisan Français.",
 });
 

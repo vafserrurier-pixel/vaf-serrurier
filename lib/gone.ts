@@ -7,7 +7,7 @@ export function goneResponse(): Response {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Page supprimée | Votre Artisan Français</title>
+<title>Page supprimée</title>
 </head>
 <body style="font-family:system-ui,sans-serif;max-width:36rem;margin:4rem auto;padding:0 1rem;line-height:1.6">
 <h1>Cette page n'existe plus</h1>

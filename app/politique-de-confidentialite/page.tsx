@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/politique-de-confidentialite/",
-  title: "Politique de confidentialité | Votre Artisan Français",
+  title: "Politique de confidentialité",
   description: "Comment vos données personnelles sont traitées sur vaf-serrurier.fr : formulaire de contact, cookies, droits RGPD.",
 });
 

@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/conditions-generales-dutilisation/",
-  title: "Conditions générales d'utilisation | Votre Artisan Français",
+  title: "Conditions générales d'utilisation",
   description: "Conditions générales d'utilisation du site vaf-serrurier.fr : accès au site, propriété intellectuelle, responsabilité.",
 });
 

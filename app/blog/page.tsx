@@ -7,7 +7,7 @@ import { blogPosts as posts } from "@/lib/blogPosts";
 
 export const metadata: Metadata = buildMetadata({
   path: "/blog/",
-  title: "Blog serrurerie | Votre Artisan Français, Nice",
+  title: "Blog serrurerie Nice",
   description: "Astuces simples, explications claires et conseils d'artisan sur la serrurerie à Nice.",
 });
 
