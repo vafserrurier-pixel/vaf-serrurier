@@ -19,6 +19,19 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/serrure-bloquee-diagnostic-nice/",
+    title: "Serrure bloquée à Nice : comment identifier la panne avant d'appeler un serrurier ?",
+    excerpt:
+      "Clé qui ne tourne plus, qui tourne dans le vide, pêne coincé : deux tests simples pour savoir si le problème vient de la clé, du cylindre, du mécanisme ou de la porte, et quand appeler.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-10-10",
+    dateModified: "2026-10-10",
+    readingMinutes: 8,
+    image: "/images/blog/serrure-bloquee-diagnostic-nice.webp",
+  },
+  {
     href: "/blog/cle-cassee-serrure-que-faire-nice/",
     title: "Clé cassée dans la serrure à Nice : que faire et quand appeler un serrurier",
     excerpt:
