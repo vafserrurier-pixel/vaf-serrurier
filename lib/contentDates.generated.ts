@@ -20,6 +20,7 @@ export const contentDates: Record<string, string> = {
   "/blog/que-faire-apres-cambriolage-nice/": "2026-10-09T08:23:26+02:00",
   "/blog/qui-paie-changement-serrure-location-nice/": "2026-10-09T08:23:26+02:00",
   "/blog/remplacer-coffre-a-larder-nice/": "2026-10-09T08:23:26+02:00",
+  "/blog/serrure-bloquee-diagnostic-nice/": "2026-10-10T11:12:18+02:00",
   "/blog/serrure-multipoints-3-5-7-nice/": "2026-10-09T08:23:26+02:00",
   "/blog/serrurier-agree-assurances-nice/": "2026-10-09T08:23:26+02:00",
   "/changement-serrure-nice/": "2026-10-09T08:23:26+02:00",
