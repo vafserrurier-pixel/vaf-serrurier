@@ -7,15 +7,21 @@ import { builtCommunes, communeHref } from "@/lib/communes";
 import { contentDates } from "@/lib/contentDates.generated";
 
 /**
- * Date de derniere modification reelle d'une page (dernier commit Git du
- * fichier page.tsx, calcule au build par scripts/generate-content-dates.js).
- * Retombe sur la date actuelle si la page n'est pas encore dans la table
- * (jamais le cas normalement, mais evite un sitemap casse si le fichier
- * genere n'a pas ete regenere).
+ * Date de derniere modification reelle du contenu d'une page (dernier commit Git de la page et de
+ * ses fichiers de contenu, ou date de mise a jour d'un article de blog), calculee au build par
+ * scripts/generate-content-dates.js. Si aucune date fiable n'existe pour la page : pas de
+ * <lastmod> (undefined), jamais une date inventee comme l'heure du build.
  */
-function lastModifiedFor(urlPath: string): Date {
+function lastModifiedFor(urlPath: string): Date | undefined {
   const iso = contentDates[urlPath];
-  return iso ? new Date(iso) : new Date();
+  return iso ? new Date(iso) : undefined;
+}
+
+// Une entree du sitemap : l'URL, et son <lastmod> seulement s'il est fiable. Pas de
+// <priority> ni de <changefreq> (Google les ignore).
+function entry(urlPath: string): MetadataRoute.Sitemap[number] {
+  const lastModified = lastModifiedFor(urlPath);
+  return { url: `${business.domain}${urlPath}`, ...(lastModified ? { lastModified } : {}) };
 }
 
 const paths = [
@@ -68,35 +74,11 @@ function blogSlugs(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: MetadataRoute.Sitemap = [...paths, ...blogSlugs()].map((path) => {
-    const urlPath = path ? `/${path}/` : "/";
-    return {
-      url: `${business.domain}${urlPath}`,
-      lastModified: lastModifiedFor(urlPath),
-      changeFrequency: path === "" ? "daily" : "monthly",
-      priority: path === "" ? 1 : 0.7,
-    };
-  });
-
-  const quartierEntries: MetadataRoute.Sitemap = builtQuartiers.map((quartier) => {
-    const urlPath = quartierHref(quartier);
-    return {
-      url: `${business.domain}${urlPath}`,
-      lastModified: lastModifiedFor(urlPath),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    };
-  });
-
-  const communeEntries: MetadataRoute.Sitemap = builtCommunes.map((commune) => {
-    const urlPath = communeHref(commune);
-    return {
-      url: `${business.domain}${urlPath}`,
-      lastModified: lastModifiedFor(urlPath),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    };
-  });
+  const staticEntries: MetadataRoute.Sitemap = [...paths, ...blogSlugs()].map((path) =>
+    entry(path ? `/${path}/` : "/"),
+  );
+  const quartierEntries: MetadataRoute.Sitemap = builtQuartiers.map((quartier) => entry(quartierHref(quartier)));
+  const communeEntries: MetadataRoute.Sitemap = builtCommunes.map((commune) => entry(communeHref(commune)));
 
   return [...staticEntries, ...quartierEntries, ...communeEntries];
 }

@@ -3,11 +3,15 @@
 // serviceSchema (dateModified). Priorite :
 //   1. content/freshness-overrides.json (defini a la main via
 //      `npm run update-freshness -- --page=/xxx/`) si present pour la page ;
-//   2. la date du dernier commit Git qui a modifie le fichier, si trouvable ;
-//   3. sinon, la valeur deja presente dans le fichier .ts commite precedent
-//      (voir plus bas pourquoi) ;
-//   4. en tout dernier recours (page reellement nouvelle, jamais construite),
-//      l'heure actuelle.
+//   2. articles de blog : le champ `dateModified` deja renseigne dans lib/blogPosts.ts
+//      (c'est la date affichee au lecteur et dans le JSON-LD de l'article) ;
+//   3. sinon la date du dernier commit Git du fichier de la page ET de ses fichiers de
+//      contenu (composant voisin comme TarifsBody.tsx, HomeBody.tsx pour l'accueil,
+//      lib/blogPosts.ts pour l'index du blog), en prenant la plus recente ;
+//   4. si git ne peut pas la prouver (clone superficiel), la valeur deja presente dans le
+//      fichier .ts commite precedent (voir plus bas pourquoi) ;
+//   5. sinon AUCUNE date : la page n'a pas de <lastmod> dans le sitemap. Une date inventee
+//      (heure du build) est pire que pas de date : Google ignore un <lastmod> peu fiable.
 //
 // Execute au moment du build (npm run build), jamais au runtime : Git n'est
 // pas forcement disponible dans l'environnement serverless deploye, donc on
@@ -107,19 +111,70 @@ function lastCommitDate(filePath) {
   }
 }
 
+// Fichiers de contenu supplementaires, en plus de page.tsx, dont la modification change le contenu
+// de la page. Pour les autres pages, les fichiers voisins de page.tsx (ex. TarifsBody.tsx,
+// ContactBody.tsx) sont ajoutes automatiquement. Les gabarits partages (ServicePageTemplate...) ne
+// comptent pas : un changement de gabarit ne change pas le contenu d'une page precise.
+const EXTRA_CONTENT_FILES = {
+  "/": ["app/HomeBody.tsx"],
+  "/blog/": ["lib/blogPosts.ts"],
+};
+const NOT_CONTENT = /^(page|route|layout|loading|error|not-found|sitemap|robots|manifest|opengraph-image|twitter-image|icon)\.(tsx?|jsx?)$/;
+
+function contentFilesFor(file, urlPath) {
+  const files = [path.relative(ROOT, file).split(path.sep).join("/")];
+  if (urlPath !== "/") {
+    const dir = path.dirname(file);
+    for (const name of readdirSync(dir)) {
+      if (/\.(tsx?|jsx?)$/.test(name) && !NOT_CONTENT.test(name)) {
+        files.push(path.relative(ROOT, path.join(dir, name)).split(path.sep).join("/"));
+      }
+    }
+  }
+  files.push(...(EXTRA_CONTENT_FILES[urlPath] ?? []));
+  return files;
+}
+
+// Date de contenu d'une page : la plus recente des dates de commit de ses fichiers. Si l'une
+// d'elles n'est pas prouvable (null), on ne devine pas : la page retombe sur la valeur precedente.
+function contentCommitDate(files) {
+  let latest = null;
+  for (const f of files) {
+    const d = lastCommitDate(f);
+    if (!d) return null;
+    if (!latest || new Date(d) > new Date(latest)) latest = d;
+  }
+  return latest;
+}
+
+// Articles de blog : champ dateModified de lib/blogPosts.ts (href -> date).
+function loadBlogDates() {
+  const p = path.join(ROOT, "lib/blogPosts.ts");
+  if (!existsSync(p)) return {};
+  const src = readFileSync(p, "utf8");
+  const out = {};
+  for (const m of src.matchAll(/href:\s*"([^"]+)"[\s\S]*?dateModified:\s*"([^"]+)"/g)) out[m[1]] = m[2];
+  return out;
+}
+
 const pages = walkPages(path.join(ROOT, "app"));
 const overrides = loadOverrides();
 const previous = loadPreviouslyGenerated();
-const now = new Date().toISOString();
+const blogDates = loadBlogDates();
 const entries = {};
+const undated = [];
 
 for (const file of pages) {
   const urlPath = urlPathFor(file);
-  // override manuel > commit Git (historique complet) > derniere valeur reelle
-  // connue (build precedent, historique complet ou partiel) > page vraiment
-  // nouvelle, jamais datee auparavant.
-  const date = overrides[urlPath] ?? lastCommitDate(file) ?? previous[urlPath] ?? now;
-  entries[urlPath] = date;
+  // override manuel > date de blog renseignee > dernier commit Git des fichiers de contenu
+  // (historique complet) > derniere valeur reelle connue (build precedent) > pas de date.
+  const date =
+    overrides[urlPath] ??
+    blogDates[urlPath] ??
+    contentCommitDate(contentFilesFor(file, urlPath)) ??
+    previous[urlPath];
+  if (date) entries[urlPath] = date;
+  else undated.push(urlPath);
 }
 
 const fileContent = `// Fichier genere automatiquement par scripts/generate-content-dates.js
@@ -127,10 +182,13 @@ const fileContent = `// Fichier genere automatiquement par scripts/generate-cont
 // ecrases au prochain build. Mappe chaque chemin de page a la date ISO de sa
 // derniere fraicheur reelle (override manuel dans
 // content/freshness-overrides.json en priorite, sinon dernier commit Git du
-// fichier), utilisee comme signal de fraicheur (sitemap <lastmod>,
-// schema.org dateModified).
+// fichier et de ses fichiers de contenu), utilisee comme signal de fraicheur (sitemap
+// <lastmod>, schema.org dateModified). Une page absente de cette table n'a pas de date fiable.
 export const contentDates: Record<string, string> = ${JSON.stringify(entries, null, 2)};
 `;
 
 writeFileSync(path.join(ROOT, "lib/contentDates.generated.ts"), fileContent);
-console.log(`contentDates.generated.ts : ${pages.length} pages`);
+console.log(
+  `contentDates.generated.ts : ${Object.keys(entries).length} pages datees sur ${pages.length}` +
+    (undated.length ? ` | sans date fiable (pas de lastmod) : ${undated.join(", ")}` : ""),
+);
