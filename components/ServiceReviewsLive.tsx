@@ -1,5 +1,5 @@
 import { getGoogleReviews, pickReviewsForService } from "@/lib/reviews";
-import { serviceReviewKeywords, type ServiceReviewPath } from "@/lib/serviceReviewKeywords";
+import { offTradeReviewKeywords, serviceReviewKeywords, type ServiceReviewPath } from "@/lib/serviceReviewKeywords";
 import ServiceReviews from "./ServiceReviews";
 
 /**
@@ -9,6 +9,6 @@ import ServiceReviews from "./ServiceReviews";
  */
 export default async function ServiceReviewsLive({ path }: { path: ServiceReviewPath }) {
   const { reviews, live } = await getGoogleReviews();
-  const picked = pickReviewsForService(reviews, [...serviceReviewKeywords[path]]);
+  const picked = pickReviewsForService(reviews, [...serviceReviewKeywords[path]], 3, offTradeReviewKeywords);
   return <ServiceReviews reviews={picked} live={live} />;
 }

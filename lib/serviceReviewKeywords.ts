@@ -15,3 +15,8 @@ export const serviceReviewKeywords = {
 } as const;
 
 export type ServiceReviewPath = keyof typeof serviceReviewKeywords;
+
+// Avis écartés d'office sur ce site (serrurier) : ceux dont le texte parle d'un autre métier.
+// Même mécanisme sur le site plombier avec la liste inverse : serrur, cylindre, porte claquée, blindage.
+// Comparaison sans casse, sans accents, par fragment de mot.
+export const offTradeReviewKeywords = ["plomb", "fuite", "chauffe-eau", "canalisation", "wc", "sanibroyeur"];

@@ -128,8 +128,20 @@ export type PickedReview = Review & { matchedKeywords: string[] };
  * au moins un mot-clé du service (sans tenir compte des majuscules ni des accents, par
  * fragment de mot : « claqu » trouve « claquée »), classés par nombre de mots-clés trouvés
  * puis du plus récent au plus ancien ; ensuite les autres, du plus récent au plus ancien.
+ * Les avis dont le texte contient un mot de excludeKeywords (autre métier) sont écartés avant
+ * tout classement : s'il en reste moins de `limit`, on n'en affiche que ces quelques-uns.
  */
-export function pickReviewsForService(reviews: Review[], keywords: string[], limit = 3): PickedReview[] {
+export function pickReviewsForService(
+  allReviews: Review[],
+  keywords: string[],
+  limit = 3,
+  excludeKeywords: string[] = []
+): PickedReview[] {
+  const excluded = excludeKeywords.map(normalize);
+  const reviews = allReviews.filter((r) => {
+    const text = normalize(r.text);
+    return !excluded.some((word) => text.includes(word));
+  });
   const keys = keywords.map((raw) => ({ raw, norm: normalize(raw) }));
   const byRecent = (a: Review, b: Review) => (b.publishTime ?? "").localeCompare(a.publishTime ?? "");
 
