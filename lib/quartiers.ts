@@ -1,9 +1,6 @@
-// Utilitaires de gabarit pour les pages de quartier.
-// `builtQuartiers` liste les 47 quartiers, tous publiés : voir `lib/business.ts`
-// (export `zones`) pour la répartition par secteur.
-
-import { zones } from "./business";
-import { builtCommunes } from "./communes";
+// Utilitaires de gabarit pour les pages locales de Nice.
+// Depuis le regroupement d'octobre 2026, seuls les 4 secteurs et Jean-Médecin ont une page : voir
+// `lib/business.ts` (export `zones`) pour la répartition des 47 quartiers par secteur.
 
 const DIACRITICS_RE = /[̀-ͯ]/g;
 
@@ -51,153 +48,13 @@ export function quartierLocative(name: string): string {
   return quartierLocatives[name] ?? `à ${name}`;
 }
 
-export const builtQuartiers = [
-  // Centre (19)
-  "Jean-Médecin",
-  "Carré d'Or",
-  "Quartier Wilson",
-  "Quartier des Musiciens",
-  "Quartier des Fleurs",
-  "Baumettes",
-  "Libération",
-  "Gambetta",
-  "Cimiez",
-  "Desambrois",
-  "Carabacel",
-  "Garibaldi",
-  "Parc Impérial",
-  "Saint-Philippe",
-  "Promenade des Anglais",
-  "Magnan",
-  "La Madeleine",
-  "Saint-Pierre-de-Féric",
-  "Vieux-Nice",
-  // Est (8)
-  "Riquier",
-  "Pasteur",
-  "Saint-Roch",
-  "l'Ariane",
-  "Mont Boron",
-  "Mont Alban",
-  "Le Port",
-  "Bon Voyage",
-  // Nord (9)
-  "Brancolar",
-  "Poètes",
-  "Chambrun",
-  "Gairaut",
-  "Rimiez",
-  "Saint-Pancrace",
-  "Corniche des Oliviers",
-  "Pessicart",
-  "Mantega",
-  // Ouest (11)
-  "L'Archet",
-  "Saint-Antoine",
-  "Fabron",
-  "Carras",
-  "Californie",
-  "Les Moulins",
-  "Corniche Fleurie",
-  "Arénas",
-  "Saint-Isidore",
-  "Lingostière",
-  "Secteur Bellet",
-] as const;
-
-// Sélection courte pour le maillage service → quartier (un par secteur environ),
-// plutôt que de linker les 46 pages depuis chaque page service : Google
-// déconseille les gros blocs de liens internes uniformes vers des pages très
-// proches les unes des autres (risque "doorway pages"). Le lien vers le hub
-// complet reste disponible pour la découverte des autres quartiers.
-export const featuredQuartiers = [
-  "Cimiez",
-  "Jean-Médecin",
-  "Brancolar",
-  "Riquier",
-  "Fabron",
-  "Vieux-Nice",
-] as const;
+// Seul Jean-Médecin garde une page de quartier. Les 46 autres n'ont plus de page : leurs anciennes
+// adresses redirigent en 301 vers leur secteur (next.config.ts) et leur nom est affiché en texte simple
+// sur la page du secteur et sur /zones-intervention-nice/.
+export const builtQuartiers = ["Jean-Médecin"] as const;
 
 export function isQuartierBuilt(name: string): boolean {
   return (builtQuartiers as readonly string[]).includes(name);
-}
-
-// Autres quartiers du même secteur à mettre en avant sur une page de quartier
-// donnée : favorise le maillage interne entre pages proches sans reproduire
-// un bloc de liens identique sur les 46 pages (chaque page pointe vers un
-// sous-ensemble différent, décalé selon sa position dans la liste du secteur).
-export function relatedQuartiers(
-  sector: keyof typeof zones,
-  current: string,
-  count = 4,
-): string[] {
-  const list = zones[sector] as readonly string[];
-  const currentIndex = list.indexOf(current);
-  const related: string[] = [];
-  for (let offset = 1; related.length < count && offset < list.length; offset++) {
-    const candidate = list[(currentIndex + offset + list.length) % list.length];
-    if (candidate !== current) related.push(candidate);
-  }
-  return related;
-}
-
-// Quartiers d'AUTRES secteurs à lier depuis une page de quartier : un maillage
-// transversal en plus du bloc "même secteur". L'attribution est calculée une
-// fois, de façon déterministe (pas de hasard à chaque rendu) : chaque page
-// reçoit 6 quartiers, au moins 1 et au plus 3 par autre secteur, choisis parmi
-// ceux qui ont le moins de liens entrants à ce stade. Le secteur Centre compte
-// 19 quartiers contre 8 à 11 ailleurs : sans cet équilibrage, les liens se
-// concentrent sur les quelques pages des petits secteurs.
-let otherSectorAssignment: Map<string, string[]> | null = null;
-
-function computeOtherSectorAssignment(count: number): Map<string, string[]> {
-  const all = builtQuartiers as readonly string[];
-  const sectorOf = new Map<string, string>();
-  for (const [sector, list] of Object.entries(zones)) {
-    for (const name of list as readonly string[]) sectorOf.set(name, sector);
-  }
-  const inbound = new Map(all.map((name) => [name, 0]));
-  const assignment = new Map<string, string[]>();
-  [...all, ...builtCommunes].forEach((current, position) => {
-    const others = Object.keys(zones).filter((sector) => sector !== sectorOf.get(current));
-    const picked: string[] = [];
-    const perSector = new Map(others.map((sector) => [sector, 0]));
-    const take = (sector?: string) => {
-      const best = all
-        .map((name, index) => ({ name, index }))
-        .filter(
-          ({ name }) =>
-            !picked.includes(name) &&
-            (sector ? sectorOf.get(name) === sector : true) &&
-            others.includes(sectorOf.get(name) ?? "") &&
-            (perSector.get(sectorOf.get(name) ?? "") ?? 0) < 3,
-        )
-        .sort(
-          (x, y) =>
-            (inbound.get(x.name) ?? 0) - (inbound.get(y.name) ?? 0) ||
-            ((x.index + position * 7) % all.length) - ((y.index + position * 7) % all.length),
-        )[0];
-      if (!best) return;
-      picked.push(best.name);
-      inbound.set(best.name, (inbound.get(best.name) ?? 0) + 1);
-      const s = sectorOf.get(best.name) ?? "";
-      perSector.set(s, (perSector.get(s) ?? 0) + 1);
-    };
-    for (const sector of others) take(sector);
-    while (picked.length < count) {
-      const before = picked.length;
-      take();
-      if (picked.length === before) break;
-    }
-    assignment.set(current, picked);
-  });
-  return assignment;
-}
-
-export function otherSectorQuartiers(current: string): string[] {
-  otherSectorAssignment ??= computeOtherSectorAssignment(6);
-  return otherSectorAssignment.get(current) ?? [];
 }
 
 export const sectorPages = {
@@ -206,3 +63,13 @@ export const sectorPages = {
   nord: { href: "/serrurier-nice-nord/", label: "Nice Nord" },
   ouest: { href: "/serrurier-nice-ouest/", label: "Nice Ouest" },
 } as const;
+
+// Pages locales de Nice mises en avant dans les blocs de maillage (accueil, pages de service, pages commune) :
+// les 4 secteurs et Jean-Médecin. Pas de bloc de liens vers de nombreuses pages très proches les unes des autres.
+export const featuredLocalPages: { href: string; label: string }[] = [
+  { href: sectorPages.centre.href, label: sectorPages.centre.label },
+  { href: sectorPages.est.href, label: sectorPages.est.label },
+  { href: sectorPages.nord.href, label: sectorPages.nord.label },
+  { href: sectorPages.ouest.href, label: sectorPages.ouest.label },
+  { href: quartierHref("Jean-Médecin"), label: "Jean-Médecin" },
+];

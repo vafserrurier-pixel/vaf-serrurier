@@ -18,7 +18,7 @@ import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { communeHref, relatedCommunes } from "@/lib/communes";
-import { otherSectorQuartiers } from "@/lib/quartiers";
+import { featuredLocalPages } from "@/lib/quartiers";
 import PopularQuartiers from "./PopularQuartiers";
 import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
@@ -62,7 +62,6 @@ export default function CommunePageTemplate({
 }) {
   const url = `${business.domain}${path}`;
   const nearbyCommunes = relatedCommunes(commune);
-  const niceQuartiers = otherSectorQuartiers(commune);
   const photo = pickPortrait(commune);
   const services = relatedServices ?? mainServicesByLocale.fr;
 
@@ -303,8 +302,8 @@ export default function CommunePageTemplate({
           </div>
         )}
         <PopularQuartiers
-          names={niceQuartiers}
-          label="J'interviens aussi à Nice, notamment dans ces quartiers :"
+          items={featuredLocalPages}
+          label="J'interviens aussi à Nice, notamment dans ces secteurs :"
         />
       </section>
 

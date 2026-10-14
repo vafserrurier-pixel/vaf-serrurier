@@ -31,6 +31,69 @@ const securityHeaders = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
 ];
 
+// Regroupement des pages quartier (octobre 2026) : les 46 anciennes pages quartier redirigent vers
+// leur page secteur. statusCode 301 et non permanent: true, qui renverrait un 308.
+const quartierRedirectsBySector: Record<string, string[]> = {
+  "/serrurier-nice-centre/": [
+    "carre-d-or",
+    "quartier-wilson",
+    "quartier-des-musiciens",
+    "quartier-des-fleurs",
+    "baumettes",
+    "liberation",
+    "gambetta",
+    "desambrois",
+    "carabacel",
+    "garibaldi",
+    "parc-imperial",
+    "saint-philippe",
+    "promenade-des-anglais",
+    "vieux-nice",
+    "cimiez",
+    "magnan",
+    "la-madeleine",
+    "saint-pierre-de-feric",
+  ],
+  "/serrurier-nice-est/": [
+    "riquier",
+    "pasteur",
+    "saint-roch",
+    "l-ariane",
+    "mont-boron",
+    "mont-alban",
+    "le-port",
+    "bon-voyage",
+  ],
+  "/serrurier-nice-nord/": [
+    "brancolar",
+    "poetes",
+    "chambrun",
+    "gairaut",
+    "rimiez",
+    "saint-pancrace",
+    "corniche-des-oliviers",
+    "pessicart",
+    "mantega",
+  ],
+  "/serrurier-nice-ouest/": [
+    "l-archet",
+    "saint-antoine",
+    "fabron",
+    "carras",
+    "californie",
+    "les-moulins",
+    "corniche-fleurie",
+    "arenas",
+    "saint-isidore",
+    "lingostiere",
+    "secteur-bellet",
+  ],
+};
+
+const quartierRedirects = Object.entries(quartierRedirectsBySector).flatMap(([destination, slugs]) =>
+  slugs.map((slug) => ({ source: `/serrurier-${slug}-nice/`, destination, statusCode: 301 })),
+);
+
 const nextConfig: NextConfig = {
   // Toutes les URLs du site (liens internes, sitemap) utilisent un slash final,
   // pour matcher la structure de l'ancien WordPress et éviter une redirection
@@ -139,6 +202,7 @@ const nextConfig: NextConfig = {
       { source: "/locksmith-nice/", destination: "/", permanent: true },
       { source: "/category/uncategorized/", destination: "/blog/", permanent: true },
       { source: "/feed/", destination: "/blog/", permanent: true },
+      ...quartierRedirects,
       // www -> domaine principal en un seul saut. Les URLs HTML gardent leur slash final
       // (sinon : www -> sans slash -> avec slash, deux sauts).
       {

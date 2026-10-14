@@ -88,10 +88,9 @@ export const business = {
 // plutôt que comme pages dédiées. "Méridas" a été définitivement écarté (2026-08-09) :
 // aucune correspondance ne parle à Benoît sur le terrain : ne pas y revenir.
 //
-// Ordre de création prioritaire pour les pages de quartier (Phase 2/3) :
-// 1. Brancolar, Desambrois (avis clients déjà en main)
-// 2. Cimiez, Riquier, Fabron, Jean-Médecin, Libération, Vieux-Nice (fort volume de recherche)
-// 3. Reste des quartiers ci-dessous
+// Regroupement d'octobre 2026 : seules les 4 pages secteur et la page Jean-Médecin existent.
+// Les 46 autres quartiers sont listés en texte simple sur la page de leur secteur, et leurs
+// anciennes adresses redirigent en 301 vers ce secteur (voir next.config.ts).
 export const zones = {
   centre: [
     "Jean-Médecin",

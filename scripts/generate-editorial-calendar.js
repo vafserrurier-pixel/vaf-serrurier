@@ -18,7 +18,7 @@ const { LEVEL1, LEVEL2 } = require("./editorial-pages");
 const ROOT = path.join(__dirname, "..");
 
 if (LEVEL1.length !== 14) throw new Error(`Niveau 1 attendu 14, trouve ${LEVEL1.length}`);
-if (LEVEL2.length !== 50) throw new Error(`Niveau 2 attendu 50, trouve ${LEVEL2.length}`);
+if (LEVEL2.length !== 6) throw new Error(`Niveau 2 attendu 6, trouve ${LEVEL2.length}`);
 
 // --- Generation des dates de cycle (lundi/mercredi/vendredi) ---
 function nextCycleDay(d) {
@@ -88,7 +88,7 @@ rappel ; ce Markdown est la version pour consultation humaine.
 - **Niveau 1** (priorite haute, ${LEVEL1.length} pages) : accueil, 4 secteurs,
   tarifs, agences-syndics, 7 pages service. 2 pages proposees a chaque cycle
   -> rotation complete tous les ~7 cycles (~2-3 semaines).
-- **Niveau 2** (priorite normale, ${LEVEL2.length} pages) : 46 quartiers + 4
+- **Niveau 2** (priorite normale, ${LEVEL2.length} pages) : Jean-Medecin + 5
   communes voisines. 1 page proposee a chaque cycle -> rotation complete tous
   les ~50 cycles (~3-4 mois).
 - **Cycle** : chaque lundi/mercredi/vendredi (3 par semaine).

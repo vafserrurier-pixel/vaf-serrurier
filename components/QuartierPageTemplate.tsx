@@ -19,10 +19,7 @@ import { WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import {
-  otherSectorQuartiers,
-  quartierHref,
   quartierLocative,
-  relatedQuartiers,
   sectorPages,
 } from "@/lib/quartiers";
 import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
@@ -79,8 +76,7 @@ export default function QuartierPageTemplate({
   const lieu = quartierLocative(quartier);
   const serrurierLieu = lieu.endsWith("Nice") ? `Serrurier ${lieu}` : `Serrurier ${lieu}, Nice`;
   const sectorInfo = sectorPages[sector];
-  const nearbyQuartiers = relatedQuartiers(sector, quartier);
-  const popularQuartiers = otherSectorQuartiers(quartier);
+  const sectorKeys = Object.keys(sectorPages) as (keyof typeof sectorPages)[];
   const photo = pickPortrait(quartier);
   const services = relatedServices ?? mainServicesByLocale.fr;
 
@@ -325,26 +321,10 @@ export default function QuartierPageTemplate({
           .
         </p>
         <LazyMap />
-        {nearbyQuartiers.length > 0 && (
-          <div className="mt-6">
-            <p className="text-sm text-slate mb-2">
-              J&apos;interviens aussi dans ces quartiers du secteur {sectorInfo.label} :
-            </p>
-            <ul className="flex flex-wrap gap-2">
-              {nearbyQuartiers.map((name) => (
-                <li key={name}>
-                  <Link
-                    href={quartierHref(name)}
-                    className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
-                  >
-                    {name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-        <PopularQuartiers names={popularQuartiers} />
+        <PopularQuartiers
+          items={sectorKeys.map((key) => ({ href: sectorPages[key].href, label: sectorPages[key].label }))}
+          label="J'interviens aussi dans les secteurs de Nice :"
+        />
       </section>
 
       <section className="bg-white border-y border-navy/10">

@@ -12,7 +12,7 @@ import { WhatsAppIcon } from "./Icons";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { featuredQuartiers, quartierHref } from "@/lib/quartiers";
+import { featuredLocalPages } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
 import { contentDates } from "@/lib/contentDates.generated";
 import type { ReactNode } from "react";
@@ -69,7 +69,7 @@ const strings = {
     otherServices: "Autres interventions",
     otherServicesSubtitle: "Le même artisan, pour tout ce qui touche vos portes et vos serrures à Nice.",
     nearYou: "Ce service près de chez vous",
-    seeAllQuartiers: "Voir les 46 quartiers couverts",
+    seeAllQuartiers: "Voir tous les secteurs",
     nearbyTowns: "Villes voisines de Nice",
   },
   en: {
@@ -90,7 +90,7 @@ const strings = {
     otherServices: "Other services",
     otherServicesSubtitle: "The same craftsman, for everything else that touches your doors and locks.",
     nearYou: "This service near you",
-    seeAllQuartiers: "See all 46 neighborhoods covered (in French)",
+    seeAllQuartiers: "See all areas (in French)",
     nearbyTowns: "Towns near Nice",
   },
 };
@@ -392,13 +392,13 @@ export default function ServicePageTemplate({
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">{t.nearYou}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {featuredQuartiers.map((quartier) => (
+          {featuredLocalPages.map((page) => (
             <Link
-              key={quartier}
-              href={quartierHref(quartier)}
+              key={page.href}
+              href={page.href}
               className="bg-white border border-navy/10 rounded-lg px-4 py-3 text-sm text-navy hover:border-steel hover:shadow-sm transition-all"
             >
-              {quartier}
+              {page.label}
             </Link>
           ))}
         </div>

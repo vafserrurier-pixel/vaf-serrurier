@@ -31,11 +31,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carre-d-or-nice/",
-        "label": "Quartier : Carré d'Or",
-        "level": 2
       }
     ]
   },
@@ -51,11 +46,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-wilson-nice/",
-        "label": "Quartier : Quartier Wilson",
-        "level": 2
       }
     ]
   },
@@ -71,11 +61,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-musiciens-nice/",
-        "label": "Quartier : Quartier des Musiciens",
-        "level": 2
       }
     ]
   },
@@ -91,11 +76,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-fleurs-nice/",
-        "label": "Quartier : Quartier des Fleurs",
-        "level": 2
       }
     ]
   },
@@ -108,14 +88,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-baumettes-nice/",
-        "label": "Quartier : Baumettes",
-        "level": 2
       }
     ]
   },
@@ -131,11 +106,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-liberation-nice/",
-        "label": "Quartier : Libération",
-        "level": 2
       }
     ]
   },
@@ -151,11 +121,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gambetta-nice/",
-        "label": "Quartier : Gambetta",
-        "level": 2
       }
     ]
   },
@@ -171,11 +136,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-cimiez-nice/",
-        "label": "Quartier : Cimiez",
-        "level": 2
       }
     ]
   },
@@ -191,11 +151,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-desambrois-nice/",
-        "label": "Quartier : Desambrois",
-        "level": 2
       }
     ]
   },
@@ -211,11 +166,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carabacel-nice/",
-        "label": "Quartier : Carabacel",
-        "level": 2
       }
     ]
   },
@@ -231,11 +181,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-garibaldi-nice/",
-        "label": "Quartier : Garibaldi",
-        "level": 2
       }
     ]
   },
@@ -248,14 +193,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-parc-imperial-nice/",
-        "label": "Quartier : Parc Impérial",
-        "level": 2
       }
     ]
   },
@@ -271,11 +211,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-philippe-nice/",
-        "label": "Quartier : Saint-Philippe",
-        "level": 2
       }
     ]
   },
@@ -291,11 +226,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-promenade-des-anglais-nice/",
-        "label": "Quartier : Promenade des Anglais",
-        "level": 2
       }
     ]
   },
@@ -311,11 +241,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-magnan-nice/",
-        "label": "Quartier : Magnan",
-        "level": 2
       }
     ]
   },
@@ -331,11 +256,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-la-madeleine-nice/",
-        "label": "Quartier : La Madeleine",
-        "level": 2
       }
     ]
   },
@@ -351,11 +271,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pierre-de-feric-nice/",
-        "label": "Quartier : Saint-Pierre-de-Féric",
-        "level": 2
       }
     ]
   },
@@ -371,11 +286,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-vieux-nice-nice/",
-        "label": "Quartier : Vieux-Nice",
-        "level": 2
       }
     ]
   },
@@ -388,14 +298,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-riquier-nice/",
-        "label": "Quartier : Riquier",
-        "level": 2
       }
     ]
   },
@@ -411,11 +316,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pasteur-nice/",
-        "label": "Quartier : Pasteur",
-        "level": 2
       }
     ]
   },
@@ -431,11 +331,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-roch-nice/",
-        "label": "Quartier : Saint-Roch",
-        "level": 2
       }
     ]
   },
@@ -451,11 +346,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-ariane-nice/",
-        "label": "Quartier : l'Ariane",
-        "level": 2
       }
     ]
   },
@@ -471,11 +361,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-boron-nice/",
-        "label": "Quartier : Mont Boron",
-        "level": 2
       }
     ]
   },
@@ -491,11 +376,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-alban-nice/",
-        "label": "Quartier : Mont Alban",
-        "level": 2
       }
     ]
   },
@@ -511,11 +391,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-le-port-nice/",
-        "label": "Quartier : Le Port",
-        "level": 2
       }
     ]
   },
@@ -528,14 +403,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-bon-voyage-nice/",
-        "label": "Quartier : Bon Voyage",
-        "level": 2
       }
     ]
   },
@@ -551,11 +421,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-brancolar-nice/",
-        "label": "Quartier : Brancolar",
-        "level": 2
       }
     ]
   },
@@ -571,11 +436,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-poetes-nice/",
-        "label": "Quartier : Poètes",
-        "level": 2
       }
     ]
   },
@@ -591,11 +451,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-chambrun-nice/",
-        "label": "Quartier : Chambrun",
-        "level": 2
       }
     ]
   },
@@ -611,11 +466,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gairaut-nice/",
-        "label": "Quartier : Gairaut",
-        "level": 2
       }
     ]
   },
@@ -631,11 +481,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-rimiez-nice/",
-        "label": "Quartier : Rimiez",
-        "level": 2
       }
     ]
   },
@@ -651,11 +496,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pancrace-nice/",
-        "label": "Quartier : Saint-Pancrace",
-        "level": 2
       }
     ]
   },
@@ -668,14 +508,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-des-oliviers-nice/",
-        "label": "Quartier : Corniche des Oliviers",
-        "level": 2
       }
     ]
   },
@@ -691,11 +526,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pessicart-nice/",
-        "label": "Quartier : Pessicart",
-        "level": 2
       }
     ]
   },
@@ -711,11 +541,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-archet-nice/",
-        "label": "Quartier : L'Archet",
-        "level": 2
       }
     ]
   },
@@ -731,11 +556,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-antoine-nice/",
-        "label": "Quartier : Saint-Antoine",
-        "level": 2
       }
     ]
   },
@@ -751,11 +571,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-fabron-nice/",
-        "label": "Quartier : Fabron",
-        "level": 2
       }
     ]
   },
@@ -771,11 +586,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carras-nice/",
-        "label": "Quartier : Carras",
-        "level": 2
       }
     ]
   },
@@ -791,11 +601,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-californie-nice/",
-        "label": "Quartier : Californie",
-        "level": 2
       }
     ]
   },
@@ -808,14 +613,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-les-moulins-nice/",
-        "label": "Quartier : Les Moulins",
-        "level": 2
       }
     ]
   },
@@ -831,11 +631,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-fleurie-nice/",
-        "label": "Quartier : Corniche Fleurie",
-        "level": 2
       }
     ]
   },
@@ -851,11 +646,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-arenas-nice/",
-        "label": "Quartier : Arénas",
-        "level": 2
       }
     ]
   },
@@ -871,11 +661,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-isidore-nice/",
-        "label": "Quartier : Saint-Isidore",
-        "level": 2
       }
     ]
   },
@@ -891,11 +676,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-lingostiere-nice/",
-        "label": "Quartier : Lingostière",
-        "level": 2
       }
     ]
   },
@@ -913,8 +693,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-secteur-bellet-nice/",
-        "label": "Quartier : Secteur Bellet",
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
         "level": 2
       }
     ]
@@ -948,7 +728,7 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
       },
@@ -1031,11 +811,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carre-d-or-nice/",
-        "label": "Quartier : Carré d'Or",
-        "level": 2
       }
     ]
   },
@@ -1051,11 +826,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-wilson-nice/",
-        "label": "Quartier : Quartier Wilson",
-        "level": 2
       }
     ]
   },
@@ -1071,11 +841,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-musiciens-nice/",
-        "label": "Quartier : Quartier des Musiciens",
-        "level": 2
       }
     ]
   },
@@ -1088,14 +853,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-fleurs-nice/",
-        "label": "Quartier : Quartier des Fleurs",
-        "level": 2
       }
     ]
   },
@@ -1111,11 +871,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-baumettes-nice/",
-        "label": "Quartier : Baumettes",
-        "level": 2
       }
     ]
   },
@@ -1131,11 +886,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-liberation-nice/",
-        "label": "Quartier : Libération",
-        "level": 2
       }
     ]
   },
@@ -1151,11 +901,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gambetta-nice/",
-        "label": "Quartier : Gambetta",
-        "level": 2
       }
     ]
   },
@@ -1171,11 +916,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-cimiez-nice/",
-        "label": "Quartier : Cimiez",
-        "level": 2
       }
     ]
   },
@@ -1191,11 +931,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-desambrois-nice/",
-        "label": "Quartier : Desambrois",
-        "level": 2
       }
     ]
   },
@@ -1211,11 +946,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carabacel-nice/",
-        "label": "Quartier : Carabacel",
-        "level": 2
       }
     ]
   },
@@ -1228,14 +958,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-garibaldi-nice/",
-        "label": "Quartier : Garibaldi",
-        "level": 2
       }
     ]
   },
@@ -1251,11 +976,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-parc-imperial-nice/",
-        "label": "Quartier : Parc Impérial",
-        "level": 2
       }
     ]
   },
@@ -1271,11 +991,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-philippe-nice/",
-        "label": "Quartier : Saint-Philippe",
-        "level": 2
       }
     ]
   },
@@ -1291,11 +1006,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-promenade-des-anglais-nice/",
-        "label": "Quartier : Promenade des Anglais",
-        "level": 2
       }
     ]
   },
@@ -1311,11 +1021,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-magnan-nice/",
-        "label": "Quartier : Magnan",
-        "level": 2
       }
     ]
   },
@@ -1331,11 +1036,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-la-madeleine-nice/",
-        "label": "Quartier : La Madeleine",
-        "level": 2
       }
     ]
   },
@@ -1351,11 +1051,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pierre-de-feric-nice/",
-        "label": "Quartier : Saint-Pierre-de-Féric",
-        "level": 2
       }
     ]
   },
@@ -1368,14 +1063,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-vieux-nice-nice/",
-        "label": "Quartier : Vieux-Nice",
-        "level": 2
       }
     ]
   },
@@ -1391,11 +1081,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-riquier-nice/",
-        "label": "Quartier : Riquier",
-        "level": 2
       }
     ]
   },
@@ -1411,11 +1096,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pasteur-nice/",
-        "label": "Quartier : Pasteur",
-        "level": 2
       }
     ]
   },
@@ -1431,11 +1111,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-roch-nice/",
-        "label": "Quartier : Saint-Roch",
-        "level": 2
       }
     ]
   },
@@ -1451,11 +1126,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-ariane-nice/",
-        "label": "Quartier : l'Ariane",
-        "level": 2
       }
     ]
   },
@@ -1471,11 +1141,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-boron-nice/",
-        "label": "Quartier : Mont Boron",
-        "level": 2
       }
     ]
   },
@@ -1491,11 +1156,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-alban-nice/",
-        "label": "Quartier : Mont Alban",
-        "level": 2
       }
     ]
   },
@@ -1508,14 +1168,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-le-port-nice/",
-        "label": "Quartier : Le Port",
-        "level": 2
       }
     ]
   },
@@ -1531,11 +1186,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-bon-voyage-nice/",
-        "label": "Quartier : Bon Voyage",
-        "level": 2
       }
     ]
   },
@@ -1551,11 +1201,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-brancolar-nice/",
-        "label": "Quartier : Brancolar",
-        "level": 2
       }
     ]
   },
@@ -1571,11 +1216,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-poetes-nice/",
-        "label": "Quartier : Poètes",
-        "level": 2
       }
     ]
   },
@@ -1591,11 +1231,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-chambrun-nice/",
-        "label": "Quartier : Chambrun",
-        "level": 2
       }
     ]
   },
@@ -1611,11 +1246,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gairaut-nice/",
-        "label": "Quartier : Gairaut",
-        "level": 2
       }
     ]
   },
@@ -1631,11 +1261,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-rimiez-nice/",
-        "label": "Quartier : Rimiez",
-        "level": 2
       }
     ]
   },
@@ -1648,14 +1273,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pancrace-nice/",
-        "label": "Quartier : Saint-Pancrace",
-        "level": 2
       }
     ]
   },
@@ -1671,11 +1291,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-des-oliviers-nice/",
-        "label": "Quartier : Corniche des Oliviers",
-        "level": 2
       }
     ]
   },
@@ -1691,11 +1306,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pessicart-nice/",
-        "label": "Quartier : Pessicart",
-        "level": 2
       }
     ]
   },
@@ -1711,11 +1321,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-archet-nice/",
-        "label": "Quartier : L'Archet",
-        "level": 2
       }
     ]
   },
@@ -1731,11 +1336,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-antoine-nice/",
-        "label": "Quartier : Saint-Antoine",
-        "level": 2
       }
     ]
   },
@@ -1751,11 +1351,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-fabron-nice/",
-        "label": "Quartier : Fabron",
-        "level": 2
       }
     ]
   },
@@ -1771,11 +1366,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carras-nice/",
-        "label": "Quartier : Carras",
-        "level": 2
       }
     ]
   },
@@ -1788,14 +1378,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-californie-nice/",
-        "label": "Quartier : Californie",
-        "level": 2
       }
     ]
   },
@@ -1811,11 +1396,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-les-moulins-nice/",
-        "label": "Quartier : Les Moulins",
-        "level": 2
       }
     ]
   },
@@ -1831,11 +1411,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-fleurie-nice/",
-        "label": "Quartier : Corniche Fleurie",
-        "level": 2
       }
     ]
   },
@@ -1851,11 +1426,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-arenas-nice/",
-        "label": "Quartier : Arénas",
-        "level": 2
       }
     ]
   },
@@ -1871,11 +1441,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-isidore-nice/",
-        "label": "Quartier : Saint-Isidore",
-        "level": 2
       }
     ]
   },
@@ -1891,11 +1456,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-lingostiere-nice/",
-        "label": "Quartier : Lingostière",
-        "level": 2
       }
     ]
   },
@@ -1913,8 +1473,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-secteur-bellet-nice/",
-        "label": "Quartier : Secteur Bellet",
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
         "level": 2
       }
     ]
@@ -1928,7 +1488,7 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
       },
@@ -2031,11 +1591,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carre-d-or-nice/",
-        "label": "Quartier : Carré d'Or",
-        "level": 2
       }
     ]
   },
@@ -2051,11 +1606,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-wilson-nice/",
-        "label": "Quartier : Quartier Wilson",
-        "level": 2
       }
     ]
   },
@@ -2068,14 +1618,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-musiciens-nice/",
-        "label": "Quartier : Quartier des Musiciens",
-        "level": 2
       }
     ]
   },
@@ -2091,11 +1636,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-fleurs-nice/",
-        "label": "Quartier : Quartier des Fleurs",
-        "level": 2
       }
     ]
   },
@@ -2111,11 +1651,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-baumettes-nice/",
-        "label": "Quartier : Baumettes",
-        "level": 2
       }
     ]
   },
@@ -2131,11 +1666,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-liberation-nice/",
-        "label": "Quartier : Libération",
-        "level": 2
       }
     ]
   },
@@ -2151,11 +1681,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gambetta-nice/",
-        "label": "Quartier : Gambetta",
-        "level": 2
       }
     ]
   },
@@ -2171,11 +1696,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-cimiez-nice/",
-        "label": "Quartier : Cimiez",
-        "level": 2
       }
     ]
   },
@@ -2191,11 +1711,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-desambrois-nice/",
-        "label": "Quartier : Desambrois",
-        "level": 2
       }
     ]
   },
@@ -2208,14 +1723,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carabacel-nice/",
-        "label": "Quartier : Carabacel",
-        "level": 2
       }
     ]
   },
@@ -2231,11 +1741,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-garibaldi-nice/",
-        "label": "Quartier : Garibaldi",
-        "level": 2
       }
     ]
   },
@@ -2251,11 +1756,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-parc-imperial-nice/",
-        "label": "Quartier : Parc Impérial",
-        "level": 2
       }
     ]
   },
@@ -2271,11 +1771,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-philippe-nice/",
-        "label": "Quartier : Saint-Philippe",
-        "level": 2
       }
     ]
   },
@@ -2291,11 +1786,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-promenade-des-anglais-nice/",
-        "label": "Quartier : Promenade des Anglais",
-        "level": 2
       }
     ]
   },
@@ -2311,11 +1801,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-magnan-nice/",
-        "label": "Quartier : Magnan",
-        "level": 2
       }
     ]
   },
@@ -2331,11 +1816,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-la-madeleine-nice/",
-        "label": "Quartier : La Madeleine",
-        "level": 2
       }
     ]
   },
@@ -2348,14 +1828,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pierre-de-feric-nice/",
-        "label": "Quartier : Saint-Pierre-de-Féric",
-        "level": 2
       }
     ]
   },
@@ -2371,11 +1846,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-vieux-nice-nice/",
-        "label": "Quartier : Vieux-Nice",
-        "level": 2
       }
     ]
   },
@@ -2391,11 +1861,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-riquier-nice/",
-        "label": "Quartier : Riquier",
-        "level": 2
       }
     ]
   },
@@ -2411,11 +1876,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pasteur-nice/",
-        "label": "Quartier : Pasteur",
-        "level": 2
       }
     ]
   },
@@ -2431,11 +1891,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-roch-nice/",
-        "label": "Quartier : Saint-Roch",
-        "level": 2
       }
     ]
   },
@@ -2451,11 +1906,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-ariane-nice/",
-        "label": "Quartier : l'Ariane",
-        "level": 2
       }
     ]
   },
@@ -2471,11 +1921,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-boron-nice/",
-        "label": "Quartier : Mont Boron",
-        "level": 2
       }
     ]
   },
@@ -2488,14 +1933,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-mont-alban-nice/",
-        "label": "Quartier : Mont Alban",
-        "level": 2
       }
     ]
   },
@@ -2511,11 +1951,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-le-port-nice/",
-        "label": "Quartier : Le Port",
-        "level": 2
       }
     ]
   },
@@ -2531,11 +1966,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-bon-voyage-nice/",
-        "label": "Quartier : Bon Voyage",
-        "level": 2
       }
     ]
   },
@@ -2551,11 +1981,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-brancolar-nice/",
-        "label": "Quartier : Brancolar",
-        "level": 2
       }
     ]
   },
@@ -2571,11 +1996,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-poetes-nice/",
-        "label": "Quartier : Poètes",
-        "level": 2
       }
     ]
   },
@@ -2591,11 +2011,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-chambrun-nice/",
-        "label": "Quartier : Chambrun",
-        "level": 2
       }
     ]
   },
@@ -2611,11 +2026,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-gairaut-nice/",
-        "label": "Quartier : Gairaut",
-        "level": 2
       }
     ]
   },
@@ -2628,14 +2038,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-rimiez-nice/",
-        "label": "Quartier : Rimiez",
-        "level": 2
       }
     ]
   },
@@ -2651,11 +2056,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-pancrace-nice/",
-        "label": "Quartier : Saint-Pancrace",
-        "level": 2
       }
     ]
   },
@@ -2671,11 +2071,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-des-oliviers-nice/",
-        "label": "Quartier : Corniche des Oliviers",
-        "level": 2
       }
     ]
   },
@@ -2691,11 +2086,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-pessicart-nice/",
-        "label": "Quartier : Pessicart",
-        "level": 2
       }
     ]
   },
@@ -2711,11 +2101,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-l-archet-nice/",
-        "label": "Quartier : L'Archet",
-        "level": 2
       }
     ]
   },
@@ -2731,11 +2116,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-antoine-nice/",
-        "label": "Quartier : Saint-Antoine",
-        "level": 2
       }
     ]
   },
@@ -2751,11 +2131,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-fabron-nice/",
-        "label": "Quartier : Fabron",
-        "level": 2
       }
     ]
   },
@@ -2768,14 +2143,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carras-nice/",
-        "label": "Quartier : Carras",
-        "level": 2
       }
     ]
   },
@@ -2791,11 +2161,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-californie-nice/",
-        "label": "Quartier : Californie",
-        "level": 2
       }
     ]
   },
@@ -2811,11 +2176,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-les-moulins-nice/",
-        "label": "Quartier : Les Moulins",
-        "level": 2
       }
     ]
   },
@@ -2831,11 +2191,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-corniche-fleurie-nice/",
-        "label": "Quartier : Corniche Fleurie",
-        "level": 2
       }
     ]
   },
@@ -2851,11 +2206,6 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
-      },
-      {
-        "path": "/serrurier-arenas-nice/",
-        "label": "Quartier : Arénas",
-        "level": 2
       }
     ]
   },
@@ -2871,11 +2221,6 @@
         "path": "/depannage-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
-      },
-      {
-        "path": "/serrurier-saint-isidore-nice/",
-        "label": "Quartier : Saint-Isidore",
-        "level": 2
       }
     ]
   },
@@ -2891,11 +2236,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-lingostiere-nice/",
-        "label": "Quartier : Lingostière",
-        "level": 2
       }
     ]
   },
@@ -2908,13 +2248,13 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
       },
       {
-        "path": "/serrurier-secteur-bellet-nice/",
-        "label": "Quartier : Secteur Bellet",
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
         "level": 2
       }
     ]
@@ -3031,11 +2371,6 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
-      },
-      {
-        "path": "/serrurier-carre-d-or-nice/",
-        "label": "Quartier : Carré d'Or",
-        "level": 2
       }
     ]
   },
@@ -3048,14 +2383,9 @@
         "level": 1
       },
       {
-        "path": "/mis-en-securite-apres-effraction-nice/",
+        "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-wilson-nice/",
-        "label": "Quartier : Quartier Wilson",
-        "level": 2
       }
     ]
   },
@@ -3071,11 +2401,6 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-musiciens-nice/",
-        "label": "Quartier : Quartier des Musiciens",
-        "level": 2
       }
     ]
   },
@@ -3091,11 +2416,6 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
-      },
-      {
-        "path": "/serrurier-quartier-des-fleurs-nice/",
-        "label": "Quartier : Quartier des Fleurs",
-        "level": 2
       }
     ]
   },
@@ -3111,11 +2431,6 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
-      },
-      {
-        "path": "/serrurier-baumettes-nice/",
-        "label": "Quartier : Baumettes",
-        "level": 2
       }
     ]
   }

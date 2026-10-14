@@ -18,7 +18,7 @@ import BlogPreview from "@/components/BlogPreview";
 import InsuranceBanner from "@/components/InsuranceBanner";
 import { PriceTagIcon, HandshakeIcon, StarIcon, WhatsAppIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
+import { sectorPages, featuredLocalPages } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
 import { useLocale } from "@/lib/locale";
 import { formatRating } from "@/lib/reviewFormat";
@@ -220,8 +220,8 @@ const strings = {
         habituel.
       </>
     ),
-    quartiersSubtitle: "Quelques quartiers où j'interviens régulièrement",
-    seeAllQuartiers: "Voir tous les quartiers couverts →",
+    quartiersSubtitle: "Les secteurs où j'interviens",
+    seeAllQuartiers: "Voir tous les secteurs →",
     contactTitle: "Un devis ou une intervention ?",
     contactText: "Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le moyen le plus rapide.",
     faqTitle: "Questions fréquentes",
@@ -286,8 +286,8 @@ const strings = {
         see the neighborhoods covered and the usual response time.
       </>
     ),
-    quartiersSubtitle: "Some of the neighborhoods I regularly work in",
-    seeAllQuartiers: "See all neighborhoods covered (in French) →",
+    quartiersSubtitle: "The areas I work in",
+    seeAllQuartiers: "See all areas (in French) →",
     contactTitle: "Need a quote or a callout?",
     contactText: "Describe your situation and I'll reply quickly. For an emergency, calling remains the fastest way to reach me.",
     faqTitle: "Frequently asked questions",
@@ -534,14 +534,14 @@ export default function HomeBody() {
             {t.quartiersSubtitle}
           </h3>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {featuredQuartiers.map((quartier) => (
+            {featuredLocalPages.map((page) => (
               <Link
-                key={quartier}
-                href={quartierHref(quartier)}
+                key={page.href}
+                href={page.href}
                 prefetch={false}
                 className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
               >
-                {quartier}
+                {page.label}
               </Link>
             ))}
           </div>

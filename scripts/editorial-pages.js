@@ -1,4 +1,4 @@
-// Source unique de verite pour les 64 pages du calendrier editorial
+// Source unique de verite pour les 20 pages du calendrier editorial
 // (Niveau 1 + Niveau 2), partagee par generate-editorial-calendar.js et
 // content-freshness-report.js. Si une page est ajoutee/retiree du site,
 // mettre a jour ce fichier puis relancer les deux scripts.
@@ -24,35 +24,17 @@ const LEVEL1 = [
   { path: "/ouverture-de-porte-nice/", label: "Service : Ouverture de porte" },
   { path: "/changement-serrure-nice/", label: "Service : Changement de serrure" },
   { path: "/installation-porte-blindee-nice/", label: "Service : Installation porte blindée" },
-  { path: "/mis-en-securite-apres-effraction-nice/", label: "Service : Après effraction" },
+  { path: "/mise-en-securite-apres-effraction-nice/", label: "Service : Après effraction" },
   { path: "/ouverture-de-coffre-fort-nice/", label: "Service : Ouverture de coffre-fort" },
   { path: "/installation-coffre-fort-nice/", label: "Service : Installation de coffre-fort" },
 ];
 
-const QUARTIERS_CENTRE = [
-  "Jean-Médecin", "Carré d'Or", "Quartier Wilson", "Quartier des Musiciens",
-  "Quartier des Fleurs", "Baumettes", "Libération", "Gambetta", "Cimiez",
-  "Desambrois", "Carabacel", "Garibaldi", "Parc Impérial", "Saint-Philippe",
-  "Promenade des Anglais", "Magnan", "La Madeleine", "Saint-Pierre-de-Féric",
-  "Vieux-Nice",
-];
-const QUARTIERS_EST = [
-  "Riquier", "Pasteur", "Saint-Roch", "l'Ariane", "Mont Boron", "Mont Alban",
-  "Le Port", "Bon Voyage",
-];
-const QUARTIERS_NORD = [
-  "Brancolar", "Poètes", "Chambrun", "Gairaut", "Rimiez", "Saint-Pancrace",
-  "Corniche des Oliviers", "Pessicart",
-];
-const QUARTIERS_OUEST = [
-  "L'Archet", "Saint-Antoine", "Fabron", "Carras", "Californie", "Les Moulins",
-  "Corniche Fleurie", "Arénas", "Saint-Isidore", "Lingostière", "Secteur Bellet",
-];
-const COMMUNES = ["Èze", "Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer"];
+// Regroupement d'octobre 2026 : seul Jean-Medecin garde une page de quartier. Les autres quartiers n'ont
+// plus de page (redirection 301 vers leur secteur, voir next.config.ts) et ne sont plus dans le calendrier.
+const QUARTIERS = ["Jean-Médecin"];
+const COMMUNES = ["Èze", "Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"];
 
-const LEVEL2 = [
-  ...QUARTIERS_CENTRE, ...QUARTIERS_EST, ...QUARTIERS_NORD, ...QUARTIERS_OUEST,
-].map((name) => ({ path: `/serrurier-${slugify(name)}-nice/`, label: `Quartier : ${name}` }));
+const LEVEL2 = QUARTIERS.map((name) => ({ path: `/serrurier-${slugify(name)}-nice/`, label: `Quartier : ${name}` }));
 
 for (const commune of COMMUNES) {
   LEVEL2.push({ path: `/serrurier-${slugify(commune)}/`, label: `Commune : ${commune}` });

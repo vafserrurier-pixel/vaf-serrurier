@@ -1,26 +1,25 @@
 import Link from "next/link";
-import { quartierHref } from "@/lib/quartiers";
 
-/** Liens sobres vers des quartiers d'autres secteurs de Nice (liste calculée par otherSectorQuartiers). */
+/** Liens sobres vers des pages locales de Nice (secteurs, Jean-Médecin). */
 export default function PopularQuartiers({
-  names,
-  label = "Quartiers populaires à Nice :",
+  items,
+  label = "Secteurs de Nice :",
 }: {
-  names: string[];
+  items: { href: string; label: string }[];
   label?: string;
 }) {
-  if (names.length === 0) return null;
+  if (items.length === 0) return null;
   return (
     <div className="mt-6">
       <p className="text-sm text-slate mb-2">{label}</p>
       <ul className="flex flex-wrap gap-2">
-        {names.map((name) => (
-          <li key={name}>
+        {items.map((item) => (
+          <li key={item.href}>
             <Link
-              href={quartierHref(name)}
+              href={item.href}
               className="block bg-white border border-navy/10 rounded-full px-3 py-1 text-sm text-steel hover:border-steel"
             >
-              {name}
+              {item.label}
             </Link>
           </li>
         ))}
