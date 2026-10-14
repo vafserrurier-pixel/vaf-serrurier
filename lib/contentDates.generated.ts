@@ -28,7 +28,7 @@ export const contentDates: Record<string, string> = {
   "/conditions-generales-dutilisation/": "2026-10-09T08:52:52+02:00",
   "/contact/": "2026-10-09T08:23:26+02:00",
   "/installation-coffre-fort-nice/": "2026-10-14T19:20:00+02:00",
-  "/installation-porte-blindee-nice/": "2026-10-14T19:20:00+02:00",
+  "/installation-porte-blindee-nice/": "2026-10-14T19:59:05+02:00",
   "/mentions-legales/": "2026-10-09T08:52:52+02:00",
   "/mise-en-securite-apres-effraction-nice/": "2026-10-14T19:20:00+02:00",
   "/ouverture-de-coffre-fort-nice/": "2026-10-14T19:20:00+02:00",
