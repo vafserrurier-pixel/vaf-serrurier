@@ -5,7 +5,7 @@ import InsuranceBanner from "@/components/InsuranceBanner";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { AlertLockIcon, WrenchIcon, ClockIcon, HandshakeIcon, BoltIcon, ShieldIcon } from "@/components/Icons";
-import { fallbackReviews } from "@/lib/reviews";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 import { buildMetadata } from "@/lib/metadata";
 
 const troisEtapes = [
@@ -408,25 +408,7 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
               </a>
             </p>
           </section>
-          {(() => {
-            const review = fallbackReviews.find((r) => r.author === "Nadia F.");
-            if (!review) return null;
-            return (
-              <div className="mx-auto max-w-2xl px-4 pt-10">
-                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
-                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
-                    {Array.from({ length: review.rating }).map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{review.text}&rdquo;</p>
-                  <p className="mt-3 text-xs text-slate">{review.author} · avis Google vérifié</p>
-                </div>
-              </div>
-            );
-          })()}
+          <ServiceReviewsLive path="/mise-en-securite-apres-effraction-nice/" />
           <section className="mx-auto max-w-4xl px-4 py-10">
             <InsuranceBanner />
           </section>

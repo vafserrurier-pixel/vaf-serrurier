@@ -21,6 +21,8 @@ import { business } from "@/lib/business";
 import { sectorPages, featuredQuartiers, quartierHref } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
 import { useLocale } from "@/lib/locale";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "@/components/ReviewStatsProvider";
 
 // Selection propre a la home (page la plus visitee) : 5 services avec une
 // vraie photo, couvrant chaque grande categorie (urgence, ouverture,
@@ -168,7 +170,7 @@ const strings = {
     introTitle: "Un serrurier artisan, pas une plateforme d'intermédiaires",
     intro: [
       "Je m'appelle Benoît, artisan serrurier installé au 2 Rue Antoine Gautier à Nice. Chez moi, pas de standard qui redirige votre appel vers un sous-traitant inconnu. C'est moi qui décroche, moi qui diagnostique au téléphone, et moi qui viens sur place.",
-      `J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron. Mon métier couvre tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Dans tous les cas, j'annonce le prix avant de commencer. Résultat : sur les ${business.reviews.count} avis 5 étoiles laissés sur ma fiche Google, un point revient sans cesse : aucune mauvaise surprise sur la facture.`,
+      `J'interviens sur toute la ville, du Vieux-Nice à la Promenade des Anglais, en passant par Cimiez, Riquier ou Fabron. Mon métier couvre tout ce qui touche à la serrurerie : ouverture de porte, dépannage d'une serrure bloquée, changement de cylindre, installation ou blindage de porte, et mise en sécurité après une effraction. Dans tous les cas, j'annonce le prix avant de commencer. Résultat : sur les {count} avis 5 étoiles laissés sur ma fiche Google, un point revient sans cesse : aucune mauvaise surprise sur la facture.`,
       "Toutes les situations ne se ressemblent pas. Certaines demandent une réponse immédiate (une porte claquée avec les clés à l'intérieur, un cambriolage à sécuriser dans l'heure). D'autres se préparent calmement, comme le remplacement d'une serrure vieillissante ou l'installation d'une porte blindée avant l'été. Dans les deux cas, la méthode reste la même : je diagnostique d'abord, j'annonce un prix ensuite, et je n'interviens qu'une fois que vous avez dit oui.",
       "Cette approche vaut aussi bien pour un particulier dans son appartement du centre-ville que pour un syndic ou une agence immobilière gérant plusieurs biens sur Nice. Concrètement, vous avez les mêmes explications claires, le même devis annoncé avant travaux, et un seul interlocuteur à qui vous référer d'une intervention à l'autre.",
     ],
@@ -207,7 +209,7 @@ const strings = {
     feature2Title: "Un artisan, pas un centre d'appel",
     feature2Text:
       "Vous parlez directement à la personne qui va intervenir chez vous, du premier appel jusqu'à la fin du chantier.",
-    feature3Title: `${business.reviews.rating.toFixed(1)}/5 sur plus de ${business.reviews.count} avis`,
+    feature3Title: "{rating}/5 sur {count} avis",
     feature3Text:
       "Des avis Google vérifiés, pas des témoignages mis en scène. Vous pouvez les consulter avant de m'appeler.",
     areaTitle: "Zone d'intervention à Nice",
@@ -237,7 +239,7 @@ const strings = {
     introTitle: "A locksmith craftsman, not a platform of middlemen",
     intro: [
       "My name is Benoît, a locksmith based at 2 Rue Antoine Gautier in Nice. There's no switchboard here redirecting your call to an unknown subcontractor. I'm the one who picks up, the one who diagnoses over the phone, and the one who comes to you.",
-      `I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron. My work covers everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. In every case, I quote the price before I start. The result: across ${business.reviews.count} five-star reviews on my Google listing, one point comes up again and again: no bad surprises on the bill.`,
+      `I work across the whole city, from the Old Town to the Promenade des Anglais, through Cimiez, Riquier or Fabron. My work covers everything locksmithing-related: door opening, fixing a stuck lock, cylinder replacement, fitting or reinforcing a door, and securing a home after a break-in. In every case, I quote the price before I start. The result: across {count} five-star reviews on my Google listing, one point comes up again and again: no bad surprises on the bill.`,
       "Not every situation is the same. Some need an immediate response (a door slammed shut with the keys inside, a break-in to secure within the hour). Others get planned calmly, like replacing an aging lock or fitting a security door before summer. Either way, the method stays the same: I diagnose first, quote a price second, and only start once you've said yes.",
       "This approach applies just as much to someone in their city-center apartment as to a property manager or letting agency handling several properties in Nice. In practice, that means the same clear explanations, the same price quoted before work starts, and a single point of contact from one callout to the next.",
     ],
@@ -275,7 +277,7 @@ const strings = {
       "You get the quote before I touch anything, it's a legal requirement I always follow, emergency or not.",
     feature2Title: "A craftsman, not a call center",
     feature2Text: "You speak directly to the person who'll show up at your place, from the first call to the end of the job.",
-    feature3Title: `${business.reviews.rating.toFixed(1)}/5 from over ${business.reviews.count} reviews`,
+    feature3Title: "{rating}/5 from {count} reviews",
     feature3Text: "Verified Google reviews, not staged testimonials. You can check them before you call.",
     areaTitle: "Service area in Nice",
     areaText: (address: string) => (
@@ -294,6 +296,10 @@ const strings = {
 
 export default function HomeBody() {
   const { locale } = useLocale();
+  const { rating, count } = useReviewStats();
+  // Les textes contiennent {count} et {rating} : on les remplit avec les valeurs lues en direct.
+  const fill = (text: string) =>
+    text.replace("{count}", String(count)).replace("{rating}", formatRating(rating, locale));
   const t = strings[locale];
   const cards = sectorCards[locale];
   const homeFaq = locale === "en" ? homeFaqEn : homeFaqFr;
@@ -371,7 +377,7 @@ export default function HomeBody() {
             <h2 className="font-heading text-2xl font-bold text-navy mb-4">{t.introTitle}</h2>
             <div className="text-slate leading-relaxed flex flex-col gap-3">
               {t.intro.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index}>{fill(paragraph)}</p>
               ))}
               <p>
                 <Link href="/a-propos/" className="text-steel underline font-semibold">
@@ -463,7 +469,7 @@ export default function HomeBody() {
             <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
               <StarIcon className="w-5 h-5" />
             </span>
-            <p className="font-heading font-semibold text-navy mb-2">{t.feature3Title}</p>
+            <p className="font-heading font-semibold text-navy mb-2">{fill(t.feature3Title)}</p>
             <p className="text-sm text-slate leading-relaxed">{t.feature3Text}</p>
           </div>
         </div>

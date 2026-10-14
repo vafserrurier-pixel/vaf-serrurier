@@ -1,5 +1,9 @@
+"use client";
+
 import { ShieldIcon, HandshakeIcon, CheckIcon, StarIcon, WrenchIcon, VideoIcon } from "./Icons";
 import { business } from "@/lib/business";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "./ReviewStatsProvider";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
@@ -8,7 +12,7 @@ const strings = {
     siret: (siret: string) => `SIRET vérifiable : ${siret}`,
     insurance: (provider: string) => `RC Pro ${provider} & garantie décennale`,
     invoice: "Facture conforme aux assureurs",
-    reviews: (rating: string, count: number) => `${rating}/5 sur ${count}+ avis Google`,
+    reviews: (rating: string, count: number) => `${rating}/5 sur ${count} avis Google`,
     video: "Vidéo avant/après sur demande",
   },
   en: {
@@ -16,13 +20,14 @@ const strings = {
     siret: (siret: string) => `Verifiable SIRET: ${siret}`,
     insurance: (provider: string) => `${provider} liability & 10-year insurance`,
     invoice: "Invoice compliant with insurers",
-    reviews: (rating: string, count: number) => `${rating}/5 from ${count}+ Google reviews`,
+    reviews: (rating: string, count: number) => `${rating}/5 from ${count} Google reviews`,
     video: "Before/after video on request",
   },
 };
 
 export default function TrustBadges({ locale = "fr" }: { locale?: Locale }) {
   const t = strings[locale];
+  const { rating, count } = useReviewStats();
   const experienceYears = new Date().getFullYear() - business.professionSinceYear;
   const badges = [
     { Icon: WrenchIcon, label: t.experience(experienceYears) },
@@ -31,7 +36,7 @@ export default function TrustBadges({ locale = "fr" }: { locale?: Locale }) {
     { Icon: CheckIcon, label: t.invoice },
     {
       Icon: StarIcon,
-      label: t.reviews(business.reviews.rating.toFixed(1), business.reviews.count),
+      label: t.reviews(formatRating(rating, locale), count),
     },
     { Icon: VideoIcon, label: t.video },
   ];

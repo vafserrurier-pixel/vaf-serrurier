@@ -6,6 +6,8 @@ import Logo from "./Logo";
 import { StarIcon, PhoneIcon, WhatsAppIcon } from "./Icons";
 import { business } from "@/lib/business";
 import { useLocale } from "@/lib/locale";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "./ReviewStatsProvider";
 
 const navServicesByLocale = {
   fr: [
@@ -84,6 +86,7 @@ export default function Header() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
   const { locale, toggleLocale } = useLocale();
+  const { rating, count } = useReviewStats();
   const navLinks = navLinksByLocale[locale];
   const navServices = navServicesByLocale[locale];
   const t = strings[locale];
@@ -123,7 +126,7 @@ export default function Header() {
           <span className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1 font-tabular-nums">
               <StarIcon className="w-3.5 h-3.5 text-amber-400" />
-              {business.reviews.rating.toFixed(1)} ({business.reviews.count}+ {t.reviewsSuffix})
+              {formatRating(rating, locale)} ({count} {t.reviewsSuffix})
             </span>
             <button
               type="button"

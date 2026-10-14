@@ -10,7 +10,9 @@ import ArticleTable from "@/components/ArticleTable";
 import SituationSelector, { type Situation } from "@/components/SituationSelector";
 import { DoorIcon, AlertLockIcon, KeyIcon, WrenchIcon, ShieldIcon, HandshakeIcon, CheckIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { fallbackReviews } from "@/lib/reviews";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 import { buildMetadata } from "@/lib/metadata";
 
 const whyReasons: Situation[] = [
@@ -543,15 +545,15 @@ const guideContent = (
   </>
 );
 
-export default function ChangementSerrureNicePage() {
+export default async function ChangementSerrureNicePage() {
   const experienceYears = new Date().getFullYear() - business.professionSinceYear;
-  const cylinderReview = fallbackReviews.find((r) => r.author === "Thomas G.");
+  const { rating, count } = await getGoogleReviews();
 
   const heroTrustNote = (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
       <span className="inline-flex items-center gap-1.5 font-semibold">
         <StarIcon className="w-4 h-4 text-amber-400" />
-        {business.reviews.rating.toFixed(1)}/5 sur {business.reviews.count}+ avis Google
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
       </span>
       <span className="text-navy/30" aria-hidden="true">·</span>
       <span>{experienceYears} ans d&apos;expérience à Nice</span>
@@ -585,21 +587,7 @@ export default function ChangementSerrureNicePage() {
                 locale="fr"
               />
             </div>
-            {cylinderReview && (
-              <div className="mx-auto max-w-2xl px-4 pb-10">
-                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
-                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
-                    {Array.from({ length: cylinderReview.rating }).map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{cylinderReview.text}&rdquo;</p>
-                  <p className="mt-3 text-xs text-slate">{cylinderReview.author} · avis Google vérifié</p>
-                </div>
-              </div>
-            )}
+            <ServiceReviewsLive path="/changement-serrure-nice/" />
             <section className="mx-auto max-w-4xl px-4 pb-10">
               <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
                 <h2 className="font-heading text-xl font-bold text-navy mb-4">

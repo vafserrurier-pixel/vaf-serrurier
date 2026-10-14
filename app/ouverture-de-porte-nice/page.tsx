@@ -2,421 +2,345 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
-import SituationSelector, { type Situation } from "@/components/SituationSelector";
-import {
-  DoorIcon,
-  KeyIcon,
-  WrenchIcon,
-  ShieldIcon,
-  HandshakeIcon,
-  StarIcon,
-  KeyQuestionIcon,
-  BrokenKeyIcon,
-  GearIcon,
-  DoubleLockIcon,
-  HeartIcon,
-} from "@/components/Icons";
+import { StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
-import { fallbackReviews } from "@/lib/reviews";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 import { buildMetadata } from "@/lib/metadata";
-
-const situations: Situation[] = [
-  {
-    Icon: <DoorIcon className="w-4 h-4" />,
-    title: "Porte claquée",
-    text: "Les clés sont restées à l'intérieur, mais la porte n'est pas verrouillée à clé.",
-    anchorId: "diagnostic",
-  },
-  {
-    Icon: <KeyQuestionIcon className="w-4 h-4" />,
-    title: "Clé perdue ou volée",
-    text: "Porte verrouillée, sans clé disponible pour l'ouvrir.",
-    anchorId: "situation-cle-perdue",
-  },
-  {
-    Icon: <BrokenKeyIcon className="w-4 h-4" />,
-    title: "Clé cassée dans la serrure",
-    text: "Le fragment reste coincé dans le cylindre, la clé ne tourne plus.",
-    anchorId: "situation-cle-cassee",
-  },
-  {
-    Icon: <GearIcon className="w-4 h-4" />,
-    title: "Serrure grippée ou bloquée",
-    text: "Le mécanisme résiste, avec ou sans clé, souvent après une usure progressive.",
-    anchorId: "situation-serrure-grippee",
-  },
-  {
-    Icon: <DoubleLockIcon className="w-4 h-4" />,
-    title: "Porte verrouillée à double tour",
-    text: "Le pêne dormant est engagé, la méthode radio ne fonctionne plus.",
-    anchorId: "situation-double-tour",
-  },
-  {
-    Icon: <HeartIcon className="w-4 h-4" />,
-    title: "Personne vulnérable à l'intérieur",
-    text: "Enfant, personne âgée ou animal bloqué seul : situation prioritaire, à signaler dès l'appel.",
-    anchorId: "prioritaire",
-    priority: true,
-  },
-];
-
-const guideToc = [
-  { id: "diagnostic", label: "Reconnaître sa situation avant d'appeler" },
-  { id: "technique", label: "Porte verrouillée sans clé : quelle méthode selon votre cas" },
-  { id: "prioritaire", label: "Cas prioritaires : personne ou animal à l'intérieur" },
-  { id: "criteres", label: "Quand une ouverture sans casse devient peu réaliste" },
-  { id: "tarifs", label: "Tarifs indicatifs selon votre situation" },
-  { id: "apres", label: "Après l'ouverture : faut-il changer le cylindre ?" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Le crochetage (ouverture fine, sans aucune casse) est-il toujours possible ?",
-    answer:
-      "Non. C'est une technique réelle, utilisée par les serruriers professionnels, mais elle demande du temps et ne fonctionne pas sur tous les cylindres selon leur niveau de sécurité. Passé un certain temps sans résultat, une méthode plus directe (perçage du cylindre) devient plus raisonnable qu'un forçage prolongé.",
-  },
-  {
-    question: "Combien de temps prend une ouverture de porte verrouillée sans clé ?",
-    answer:
-      "Cela dépend entièrement du type de cylindre et de son état. Une porte claquée se résout en quelques minutes ; une porte verrouillée sur un cylindre résistant peut demander plus de temps, sans que je puisse garantir un délai avant d'avoir vu la serrure.",
-  },
-  {
-    question: "Le cylindre est-il toujours remplacé après une ouverture destructive ?",
-    answer:
-      "Oui, dans la quasi-totalité des cas : un cylindre percé ou forcé ne remplit plus correctement sa fonction de sécurité une fois l'opération terminée. Le remplacement est inclus dans l'intervention, jamais annoncé après coup.",
-  },
-  {
-    question: "Que faire si une personne âgée, un enfant ou un animal est seul à l'intérieur ?",
-    answer:
-      "Signalez-le dès l'appel : c'est traité en priorité absolue. Selon la situation, une coordination avec les pompiers reste possible en complément de mon intervention.",
-  },
-  {
-    question: "Une porte verrouillée à double tour est-elle plus longue à ouvrir qu'une porte à simple tour ?",
-    answer:
-      "Généralement oui, puisque le pêne dormant est engagé plus profondément et que la méthode radio, efficace sur une porte simplement claquée, ne s'applique plus.",
-  },
-  {
-    question: "Dois-je rester dehors pendant toute l'intervention ?",
-    answer:
-      "Pas nécessairement une fois votre identité vérifiée : vous pouvez rester à proximité, mais je dois pouvoir accéder librement à la porte le temps du diagnostic et de l'ouverture.",
-  },
-  {
-    question: "Le prix annoncé au téléphone peut-il changer une fois sur place ?",
-    answer:
-      "Non : je travaille au forfait, pas à la fourchette. Le prix annoncé selon votre situation est celui que vous payez, sauf pièce supplémentaire clairement identifiée sur place et validée par vous avant toute facturation.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide complète les informations déjà présentes plus haut sur cette page,
-      avec le détail des techniques utilisées selon votre situation. Cliquez sur
-      une carte ci-dessous pour aller directement à la section qui vous concerne.
-    </p>
-
-    <div className="bg-steel/10 rounded-2xl p-6 border border-navy/10">
-      <p className="font-heading font-bold text-navy mb-4">Dans quelle situation êtes-vous ?</p>
-      <SituationSelector situations={situations} />
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg" numberStyle="plain">
-        Reconnaître sa situation avant d&apos;appeler
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un seul geste change tout le diagnostic : essayez la poignée. Si elle
-        s&apos;actionne normalement, seul le pêne demi-tour est engagé, la porte
-        est simplement claquée. Si elle résiste complètement, un ou plusieurs
-        tours de clé ont été donnés : le pêne dormant (ou les pênes d&apos;une
-        serrure multipoints) est sorti dans la gâche, et la méthode change
-        radicalement.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="technique" level="h3" size="lg" numberStyle="plain">
-        Porte verrouillée sans clé : quelle méthode selon votre cas
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Sur une porte réellement verrouillée, sans clé disponible, deux familles
-        de méthodes existent. Le crochetage (une manipulation fine des goupilles
-        du cylindre, sans aucune casse) est une technique réelle, utilisée par
-        les serruriers professionnels, mais elle demande de la dextérité et ne
-        fonctionne pas sur tous les cylindres dans un temps raisonnable, en
-        particulier sur les modèles récents ou{" "}
-        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-          certifiés A2P
-        </Link>
-        . Passé ce délai, une méthode plus directe (perçage du cylindre) devient
-        le choix pragmatique plutôt qu&apos;un forçage prolongé qui abîmerait
-        davantage la porte. Dans les deux cas, le cylindre est ensuite remplacé
-        pour repartir sur une sécurité fiable. Voir mon article sur{" "}
-        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
-          le choix du bon niveau de serrure
-        </Link>
-        .
-      </p>
-
-      <div className="mt-5">
-        <h4 id="situation-cle-perdue" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
-          Clé perdue ou volée : remplacer plutôt que reproduire
-        </h4>
-        <p className="text-slate leading-relaxed">
-          Si la clé est perdue ou volée plutôt que simplement oubliée à
-          l&apos;intérieur, un remplacement du cylindre reste la solution la
-          plus sûre une fois la porte ouverte : reproduire l&apos;ancienne clé
-          laisserait en circulation un double dont vous ne maîtrisez plus
-          l&apos;usage.
-        </p>
-      </div>
-
-      <div className="mt-5">
-        <h4 id="situation-cle-cassee" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
-          Clé cassée dans la serrure
-        </h4>
-        <p className="text-slate leading-relaxed">
-          Un fragment de clé resté dans le cylindre se retire avec un outil
-          d&apos;extraction adapté, sans forcer. Ne tentez jamais de le
-          repousser avec un objet pointu ou de le coller : ces réflexes
-          courants compliquent presque toujours l&apos;extraction et abîment
-          le cylindre, ce qui transforme un dépannage simple en remplacement
-          complet.
-        </p>
-      </div>
-
-      <div className="mt-5">
-        <h4 id="situation-serrure-grippee" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
-          Serrure grippée ou bloquée
-        </h4>
-        <p className="text-slate leading-relaxed">
-          Un mécanisme qui résiste vient le plus souvent d&apos;un cylindre
-          encrassé par la poussière et l&apos;humidité, ou d&apos;un léger
-          désalignement de la porte qui force le pêne à chaque fermeture. Le
-          diagnostic sur place permet de distinguer un simple nettoyage d&apos;un
-          mécanisme réellement en fin de vie.
-        </p>
-      </div>
-
-      <div className="mt-5">
-        <h4 id="situation-double-tour" className="font-heading font-semibold text-navy mb-1 scroll-mt-24">
-          Porte verrouillée à double tour (pêne dormant engagé)
-        </h4>
-        <p className="text-slate leading-relaxed">
-          Quand un ou plusieurs tours de clé ont été donnés, le pêne dormant
-          (ou les pênes d&apos;une serrure multipoints) est engagé profondément
-          dans la gâche : la méthode radio, efficace sur une porte simplement
-          claquée, ne s&apos;applique plus. Le diagnostic du cylindre devient
-          alors la première étape avant de choisir entre crochetage et
-          perçage.
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="prioritaire" level="h3" size="lg" numberStyle="plain">
-        Cas prioritaires : personne ou animal à l&apos;intérieur
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un enfant, une personne âgée ou un animal seul derrière une porte
-        bloquée change l&apos;ordre des priorités : signalez-le dès l&apos;appel,
-        je l&apos;indique en premier au diagnostic pour adapter la méthode la
-        plus rapide compatible avec la situation, plutôt que la moins
-        destructrice par défaut.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="criteres" level="h3" size="lg" numberStyle="plain">
-        Quand une ouverture sans casse devient peu réaliste
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Quelques critères concrets, tirés du diagnostic sur place, orientent
-        vers le perçage plutôt qu&apos;un crochetage prolongé :
-      </p>
-      <ul className="list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-2">
-        <li>
-          Un cylindre certifié A2P ou conforme aux classes de résistance les
-          plus élevées de la norme{" "}
-          <Link href="/changement-serrure-nice/#niveau" className="text-steel underline">
-            EN 1303
-          </Link>{" "}
-          (résistance au perçage et à l&apos;arrachement), plus résistant au crochetage.
-        </li>
-        <li>Une serrure multipoints avec plusieurs pênes déjà engagés, qui multiplie les points à manipuler.</li>
-        <li>Un cylindre visiblement grippé par la rouille ou une tentative de forçage préalable.</li>
-      </ul>
-    </div>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-      <ArticleSectionHeading number={5} id="tarifs" level="h3" size="lg" numberStyle="plain">
-        Tarifs indicatifs selon votre situation
-      </ArticleSectionHeading>
-      <ArticleTable
-        caption="Après 19h, le week-end et les jours fériés : 189 € TTC pour une porte claquée, 209 € TTC pour une porte verrouillée (cylindre européen). Détail complet sur ma page tarifs."
-        headers={["Situation", "Prix", "Durée indicative"]}
-        zebra="bold"
-        featuredRowIndex={0}
-        rows={[
-          ["Porte claquée (simple)", "149 € TTC", "Quelques minutes en général"],
-          ["Porte blindée claquée", "149 € TTC", "Quelques minutes en général"],
-          ["Porte verrouillée standard (cylindre européen)", "149 € TTC", "Variable selon l'état du cylindre"],
-          ["Porte verrouillée haute sécurité (ex. Fichet)", "Sur devis", "Diagnostic sur place, peut demander plus de temps"],
-          ["Clé cassée dans la serrure", "à partir de 149 € TTC", "Quelques minutes à quelques dizaines de minutes"],
-        ]}
-      />
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={6} id="apres" level="h3" size="lg" numberStyle="plain">
-        Après l&apos;ouverture : faut-il changer le cylindre ?
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Après une ouverture non destructive (méthode radio ou crochetage
-        réussi), rien n&apos;oblige à remplacer quoi que ce soit. Après une
-        ouverture destructive, le remplacement du cylindre est nécessaire et
-        inclus dans l&apos;intervention. C&apos;est aussi l&apos;occasion de
-        revoir le niveau de sécurité si vous le souhaitez : le détail complet
-        est sur ma page{" "}
-        <Link href="/changement-serrure-nice/" className="text-steel underline">
-          changement de serrure
-        </Link>
-        . Pour garder un cylindre en bon état ensuite, voir mon article sur l&apos;
-        <Link href="/blog/entretien-serrure/" className="text-steel underline">
-          entretien d&apos;une serrure
-        </Link>
-        .
-      </p>
-    </div>
-  </>
-);
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-porte-nice/",
-  title: "Ouverture de porte Nice – Sans casse, 24h/24",
-  description: "Porte claquée ou verrouillée à Nice ? Ouverture sans casse quand c'est possible, diagnostic par téléphone, prix annoncé avant intervention. 24h/24, 7j/7.",
+  title: "Ouverture de porte Nice 24h/24 : claquée, clé cassée",
+  description:
+    "Porte claquée, fermée à clé ou clé cassée à Nice ? Sur place en 30 min, ouverture sans dégât à la feuille Mika, prix annoncé avant. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const h3Class = "font-heading text-xl font-bold text-navy mt-6 mb-2";
 
 const sectionsFr = [
   {
-    heading: "Porte claquée n'est pas porte verrouillée",
-    Icon: <DoorIcon className="w-4 h-4" />,
-    paragraphs: [
-      "C'est la première question que je pose au téléphone, car la méthode change complètement selon le cas. Une porte claquée (fermée par le simple mouvement du battant, sans tour de clé) se résout très souvent sans aucune casse. J'utilise le plus souvent la méthode radio, aussi appelée technique de la feuille Mika ou du by-pass : une fine plaque rigide glissée entre le cadre et le pêne, qui libère le mécanisme sans dommage : 99% des portes claquées sont ouvertes sans dégât. Une gâche mal réglée, un pêne un peu voilé ou une poignée usée provoquent fréquemment ce genre de blocage, surtout sur les portes plus anciennes du centre de Nice.",
-    ],
+    heading: "Ce que je vous demande au téléphone",
+    paragraphs: ["Deux choses, pour arriver avec le bon outil :"],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">une photo de la serrure</strong>, envoyée par WhatsApp ou SMS ;
+        </li>
+        <li>
+          <strong className="text-navy">la marque inscrite sur la clé</strong>, si vous en avez une d&apos;origine.
+          C&apos;est elle qui me dit à quelle serrure j&apos;ai affaire.
+        </li>
+      </ul>
+    ),
   },
   {
-    heading: "Porte verrouillée à clé",
-    Icon: <KeyIcon className="w-4 h-4" />,
+    heading: "Les trois situations que je rencontre",
     paragraphs: [
-      "Ce cas demande davantage de précautions, selon le type de serrure installée : cylindre standard, serrure multipoints ou modèle plus ancien. Si vos clés sont perdues ou volées, j'en profite souvent pour vous proposer un remplacement de cylindre. Cette solution règle le problème d'accès et améliore la sécurité en même temps, plutôt que de reproduire une clé qui pourrait circuler ailleurs.",
+      "Sur 10 appels pour une ouverture, 6 sont des portes claquées, 2 des portes fermées à clé et 2 des clés cassées dans la serrure.",
     ],
-  },
-  {
-    heading: "Clé cassée ou serrure bloquée",
-    Icon: <WrenchIcon className="w-4 h-4" />,
-    paragraphs: [
+    extra: (
       <>
-        J&apos;extrais proprement le morceau de clé resté dans le cylindre, avec un outil d&apos;extraction adapté,
-        sans forcer ni abîmer le mécanisme (voir{" "}
-        <Link href="/blog/cle-cassee-serrure-que-faire-nice/" className="text-steel underline">
-          que faire quand une clé casse dans la serrure
-        </Link>
-        ). Le perçage du cylindre reste une solution de tout dernier recours, uniquement si aucune autre méthode
-        n&apos;aboutit. Une serrure bloquée peut aussi venir d&apos;un cylindre grippé par l&apos;humidité ou d&apos;un
-        frottement de la porte sur son cadre. Dans tous les cas, une intervention préventive coûte presque toujours
-        moins cher qu&apos;un dépannage de nuit un week-end.
-      </>,
-    ],
+        <div className="mb-4">
+          <ArticleTable
+            headers={["Situation", "Ce que je fais", "Durée", "Prix en journée", "Après 19 h, week-end, jours fériés"]}
+            rows={[
+              ["Porte claquée (pas de tour de clé)", "Feuille Mika (radio), sans dégât", "2 à 15 minutes", "149 €", "189 €"],
+              [
+                "Porte fermée à clé, sans la clé",
+                "Perçage du cylindre, jamais de la porte",
+                "10 à 60 minutes selon le cylindre",
+                "149 € + cylindre (dès 249 €)",
+                "209 € + cylindre",
+              ],
+              [
+                "Clé cassée dans la serrure",
+                "Extraction du morceau avec un outil adapté, perçage en dernier recours",
+                "selon le morceau resté dedans",
+                "149 €",
+                "189 €",
+              ],
+            ]}
+          />
+        </div>
+
+        <h3 className={h3Class}>
+          <Link href="/blog/porte-qui-claque-serrurier-nice/" className={linkClass}>
+            Porte claquée
+          </Link>
+        </h3>
+        <p className={pClass}>
+          La porte s&apos;est refermée derrière vous mais personne n&apos;a donné de tour de clé : seul le pêne demi-tour
+          la retient. Je glisse une feuille Mika (on dit aussi « radio »), une plaque fine et souple, entre la porte et
+          le cadre pour repousser ce pêne. Ça prend de 2 à 15 minutes et la porte n&apos;est pas abîmée.
+        </p>
+        <p className={pClass}>
+          Si au bout de 20 minutes la porte ne cède pas, je m&apos;arrête et je vous propose deux solutions, avec leur
+          prix, avant de toucher à quoi que ce soit :
+        </p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">percer le cylindre</strong>, qu&apos;il faudra ensuite remplacer ;
+          </li>
+          <li>
+            <strong className="text-navy">sur une porte en bois uniquement</strong>, faire un petit trou au niveau de la
+            poignée pour l&apos;actionner de l&apos;intérieur, puis le reboucher à la pâte à bois. Le cylindre est
+            conservé.
+          </li>
+        </ul>
+
+        <h3 className={h3Class}>Porte fermée à clé</h3>
+        <p className={pClass}>
+          Quelqu&apos;un a donné un tour de clé, ou deux : la feuille Mika ne sert plus à rien. J&apos;ouvre en perçant le
+          cylindre : de 10 minutes pour un cylindre courant à une heure pour un cylindre renforcé. Je ne m&apos;attaque
+          jamais à la porte elle-même : la porte et son cadre restent intacts, seul le cylindre est{" "}
+          <Link href="/changement-serrure-nice/" className={linkClass}>
+            remplacé
+          </Link>{" "}
+          (à partir de 249 € TTC en plus de l&apos;ouverture, clés neuves remises sur place).
+        </p>
+
+        <h3 className={h3Class}>
+          <Link href="/blog/cle-cassee-serrure-que-faire-nice/" className={linkClass}>
+            Clé cassée
+          </Link>{" "}
+          dans la serrure
+        </h3>
+        <p className={pClass}>
+          Le but est de sortir le morceau sans abîmer le cylindre, pour ne pas avoir à le remplacer. L&apos;extraction
+          coûte 149 € TTC en journée.
+        </p>
+        <p className={pClass}>En attendant que j&apos;arrive :</p>
+        <ul className={listClass}>
+          <li>
+            laissez le morceau en place et n&apos;introduisez plus rien dans la serrure, ni une autre clé, ni une pince,
+            ni une aiguille : ça l&apos;enfonce davantage ;
+          </li>
+          <li>
+            envoyez-moi une photo de l&apos;avant du cylindre, pour que je vous annonce le prix avant de partir.
+          </li>
+        </ul>
+        <p className={pClass}>Sur place, je procède dans cet ordre :</p>
+        <ol className={olClass}>
+          <li>je remets le cylindre en position droite, pour libérer le morceau ;</li>
+          <li>je l&apos;extrais avec un extracteur de clé ou un crochet ;</li>
+          <li>
+            j&apos;essaie la serrure devant vous avec une autre clé en bon état : si elle tourne bien, je la nettoie et je la graisse, et
+            on s&apos;arrête là ;
+          </li>
+          <li>
+            si le morceau ne sort pas ou si le cylindre est abîmé, je perce et je remplace le cylindre, au prix annoncé
+            avant.
+          </li>
+        </ol>
+      </>
+    ),
   },
   {
-    heading: "Porte blindée verrouillée",
-    Icon: <ShieldIcon className="w-4 h-4" />,
-    paragraphs: [
-      "J'adapte ma méthode sans jamais transiger sur la qualité de l'ouverture, ni forcer sur une porte blindée conçue justement pour résister. L'objectif reste le même : rester propre, respecter la structure du bâti, et ne pas transformer une ouverture en réparation lourde.",
-    ],
-  },
-  {
-    heading: "Cas prioritaire : personne ou animal à l'intérieur",
-    Icon: <HeartIcon className="w-4 h-4" />,
-    accent: "urgent" as const,
-    paragraphs: [
-      "Un enfant, une personne âgée ou un animal seul derrière une porte bloquée change l'ordre des priorités : signalez-le dès l'appel, je l'indique en premier au diagnostic pour adapter la méthode la plus rapide compatible avec la situation, plutôt que la moins destructrice par défaut.",
-    ],
-  },
-  {
-    heading: "Une pièce d'identité toujours demandée",
-    Icon: <HandshakeIcon className="w-4 h-4" />,
-    accent: "urgent" as const,
-    paragraphs: [
+    heading: "Serrure bloquée ou grippée",
+    headingNode: (
       <>
-        Avant d&apos;ouvrir une porte verrouillée, je vérifie votre identité et
-        votre droit d&apos;occupation du logement : pièce d&apos;identité et
-        document à votre nom à cette adresse (bail, facture, titre de
-        propriété). Ce n&apos;est pas de la paperasse inutile : introduire
-        quelqu&apos;un dans un logement qui n&apos;est pas le sien, sans droit
-        ni justification, est puni par{" "}
-        <a
-          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047899987"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          l&apos;article 226-4 du Code pénal
-        </a>{" "}
-        (jusqu&apos;à 3 ans d&apos;emprisonnement et 45 000 € d&apos;amende), et
-        un professionnel qui faciliterait sciemment une telle intrusion
-        s&apos;expose à être poursuivi comme complice. Cette vérification
-        systématique est donc une protection pour vous comme pour moi.
-      </>,
+        <Link href="/blog/serrure-bloquee-diagnostic-nice/" className={linkClass}>
+          Serrure bloquée
+        </Link>{" "}
+        ou grippée
+      </>
+    ),
+    paragraphs: [
+      "La clé rentre dans la serrure mais refuse de tourner, ou elle force de plus en plus depuis quelques semaines. Ce n'est pas une porte claquée : le mécanisme lui-même résiste. Les causes que je trouve le plus souvent :",
     ],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">un cylindre encrassé ou oxydé</strong>, surtout près de la mer ;
+          </li>
+          <li>
+            <strong className="text-navy">une gâche mal réglée</strong> : la porte s&apos;est affaissée, le pêne frotte
+            contre la gâche et bloque ;
+          </li>
+          <li>
+            <strong className="text-navy">des goupilles usées</strong> dans un cylindre ancien, ou une clé elle-même
+            usée.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Je commence toujours par le moins destructeur : je dégrippe et je lubrifie le cylindre (WD-40, puis graphite
+          sec), et je soulage la porte pour libérer le pêne. Dans la plupart des cas, la serrure repart et je règle la
+          gâche pour que ça ne recommence pas. Si le cylindre est hors d&apos;usage, je le perce et je le remplace, au
+          prix annoncé avant.
+        </p>
+        <p className={pClass}>
+          <strong className="text-navy">Ne forcez pas avec une pince sur la clé</strong> : elle finit par casser dans la
+          serrure, et l&apos;intervention devient plus longue.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Porte blindée ou serrure multipoints",
+    paragraphs: [
+      "Une porte blindée claquée, sans tour de clé, peut souvent s'ouvrir à la feuille Mika comme une porte classique. Une fois fermée à clé, c'est différent : les points de fermeture sont sortis en haut, en bas et sur le côté, et seul le cylindre donne accès au mécanisme.",
+      "J'ouvre alors en perçant le cylindre, jamais le blindage ni le cadre. Ces cylindres sont renforcés contre le perçage : comptez jusqu'à une heure. Le cylindre de remplacement dépend de la marque et du modèle de la serrure : son prix est annoncé sur devis, avant l'ouverture. Pour Fichet, Picard et Muel, voir plus bas.",
+    ],
+  },
+  {
+    heading: "Une personne enfermée à l'intérieur",
+    paragraphs: [
+      "Un enfant, une personne âgée, un animal, ou une plaque de cuisson restée allumée : dites-le dès le début de l'appel, ces interventions passent avant les autres. Si quelqu'un est en danger (malaise, fumée, personne qui ne répond plus), appelez d'abord les pompiers au 18 ou le 112 : ils peuvent entrer plus vite que n'importe quel serrurier.",
+    ],
+  },
+  {
+    heading: "Ce que je n'utilise pas, et pourquoi",
+    paragraphs: [
+      "On voit beaucoup de vidéos de crochetage. En dépannage réel, sur un cylindre de porte d'entrée verrouillé, je ne l'utilise pas : c'est long et le résultat n'est pas garanti, alors que le client attend devant sa porte.",
+      "Je préfère vous annoncer clairement le perçage et le remplacement du cylindre, avec leur prix, plutôt que de vous facturer une heure d'essais.",
+    ],
+  },
+  {
+    heading: "Fichet, Picard, Muel : toujours sur devis",
+    paragraphs: [
+      "Ce sont des serrures chères, et le prix varie beaucoup d'un modèle à l'autre. Je ne peux donc pas donner un prix fixe : avec la photo et la marque inscrite sur la clé, je vous annonce le prix au téléphone, avant de me déplacer.",
+    ],
+  },
+  {
+    heading: "Ce que je vois souvent à Nice",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Près de la mer</strong> (le port, la Promenade, le Mont Boron), l&apos;air salé
+          encrasse et oxyde les cylindres : la clé force, puis finit par casser dedans.
+        </li>
+        <li>
+          <strong className="text-navy">Dans les vieux immeubles du centre</strong> (Vieux-Nice, Libération,
+          Jean-Médecin), les portes en bois ont pris du jeu : elles claquent plus facilement, et la feuille Mika passe
+          bien.
+        </li>
+        <li>
+          <strong className="text-navy">Dans les locations saisonnières</strong>, beaucoup de voyageurs claquent la
+          porte en sortant avec la clé restée à l&apos;intérieur.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Après l'ouverture : changer le cylindre ou pas",
+    paragraphs: [
+      "Je ne change le cylindre que s'il est hors service ou trop vétuste. S'il fonctionne bien, je le vérifie et je le graisse, c'est tout. Vous ne repartez pas avec une pièce neuve dont vous n'aviez pas besoin.",
+    ],
+  },
+  {
+    heading: "Quand je refuse d'ouvrir",
+    paragraphs: [
+      "J'ouvre la porte de chez vous, pas celle d'un autre. Avec l'expérience, certains signes ne trompent pas, et dans ces cas je refuse :",
+    ],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>la serrure porte des traces d&apos;une tentative d&apos;ouverture ;</li>
+          <li>la personne hésite quand je lui demande l&apos;adresse ;</li>
+          <li>l&apos;appel vient d&apos;un numéro masqué et la personne veut payer en espèces, sans facture.</li>
+        </ul>
+        <p className={pClass}>
+          Si j&apos;ai un doute, je vous demande un justificatif de domicile : une facture, le bail ou une pièce
+          d&apos;identité à cette adresse. Sinon, je ne vous demande rien.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Exemple type d'intervention",
+    paragraphs: [
+      <em key="note">
+        Situation reconstituée à partir des cas les plus fréquents, pas le récit d&apos;un client réel.
+      </em>,
+      "Un soir vers 21 h, une locataire descend ses poubelles et la porte de son appartement claque derrière elle, clés à l'intérieur. Au téléphone, elle m'envoie une photo de la serrure : pas de tour de clé, une serrure courante. Je lui annonce 189 €, le tarif du soir, et j'arrive en moins de 30 minutes. La feuille Mika passe en quelques minutes, sans une trace sur la porte. Le cylindre tourne bien : je le graisse, je vérifie la fermeture, et elle est chez elle.",
+    ],
+  },
+  {
+    heading: "Avant d'appeler un serrurier : 4 réflexes",
+    paragraphs: [
+      "Les arnaques au dépannage de serrurerie sont fréquentes, à Nice comme ailleurs. Quelques réflexes suffisent à les éviter, quel que soit le serrurier que vous appelez.",
+    ],
+    extra: (
+      <>
+        <ol className={olClass}>
+          <li>
+            <strong className="text-navy">Demandez le prix au téléphone.</strong> Un artisan qui connaît son métier peut
+            vous donner un prix dès qu&apos;il sait s&apos;il y a eu un tour de clé ou non.
+          </li>
+          <li>
+            <strong className="text-navy">Méfiez-vous des prix d&apos;appel très bas</strong> affichés sur des annonces
+            : le déplacement, la « main-d&apos;œuvre d&apos;urgence » et les pièces s&apos;ajoutent une fois la porte
+            ouverte.
+          </li>
+          <li>
+            <strong className="text-navy">Exigez un document écrit avant les travaux.</strong> Pour un dépannage à
+            domicile, la loi impose un document détaillé avant tous travaux, dès le premier euro, puis une facture
+            au-delà de 25 € TTC (arrêté du 24 janvier 2017). On signe avant, pas après.
+          </li>
+          <li>
+            <strong className="text-navy">Vérifiez l&apos;entreprise.</strong> Un vrai numéro SIRET, une adresse réelle
+            et des avis Google sur une fiche ancienne. Les miens : SIRET 980 385 868 00032, 2 rue Antoine Gautier à
+            Nice.
+          </li>
+        </ol>
+        <p className={pClass}>
+          Vous recevez une facture détaillée. Certains contrats d&apos;assurance habitation remboursent tout ou partie
+          d&apos;une ouverture de porte :{" "}
+          <Link href="/blog/serrurier-agree-assurances-nice/" className={linkClass}>
+            voir ce que couvre votre assurance
+          </Link>
+          .
+        </p>
+      </>
+    ),
   },
 ];
 
 const faqFr = [
   {
-    question: "Comment ouvrir une porte claquée sans serrurier ?",
+    question: "Combien coûte une ouverture de porte à Nice ?",
     answer:
-      "Selon le modèle, une fine feuille rigide (type radiographie ou carte) glissée entre le cadre et le pêne peut parfois suffire à libérer le mécanisme. Si ça résiste, mieux vaut éviter de forcer : vous risquez d'abîmer la gâche ou le battant, ce qui coûtera plus cher à réparer qu'un simple déplacement.",
+      "149 € TTC en journée pour une porte claquée, déplacement compris. 189 € après 19 h, le week-end et les jours fériés. Une porte fermée à clé coûte 149 € (209 € le soir et le week-end), plus le cylindre à remplacer (à partir de 249 €).",
   },
   {
-    question: "Comment ouvrir une porte avec la clé restée à l'intérieur ?",
-    answer:
-      "Avec un double de clé, on peut parfois pousser doucement le mécanisme pour faire tomber la clé restée sur le barillet. Ce n'est pas garanti selon le modèle de serrure, et j'interviens directement si cette méthode ne fonctionne pas.",
+    question: "En combien de temps pouvez-vous arriver ?",
+    answer: "En urgence, en 30 minutes partout à Nice, jour et nuit.",
   },
   {
-    question: "C'est quoi le pêne d'une porte ?",
+    question: "Pouvez-vous ouvrir sans casser ?",
     answer:
-      "Le pêne est la pièce mobile de la serrure, située sur le chant de la porte, qui vient s'insérer dans la gâche du cadre pour maintenir la porte fermée. C'est cette pièce qui bloque (ou débloque) l'ouverture selon sa position.",
+      "Sur une porte claquée, oui : 99 % des portes claquées que j'ouvre le sont sans dégât, à la feuille Mika. Sur une porte fermée à clé, il faut percer le cylindre, mais jamais la porte.",
   },
   {
-    question: "Combien coûte une ouverture de porte claquée à Nice ?",
+    question: "Faut-il changer la serrure après une ouverture ?",
     answer:
-      "149 € TTC pour une ouverture standard en journée. Le détail complet des tarifs, y compris les majorations de nuit et de week-end, est disponible sur ma page tarifs.",
+      "Pas forcément. Après une porte claquée, le cylindre est intact : je le vérifie et je le graisse. Après une perte ou un vol de clés, je conseille de le changer, puisque quelqu'un d'autre peut avoir vos clés.",
   },
   {
-    question: "Combien coûte une ouverture de porte verrouillée à Nice ?",
-    answer:
-      "149 € TTC pour une situation standard (cylindre européen). Pour une serrure Fichet, le prix est établi sur devis. Après 19h, le week-end et les jours fériés : 189 € TTC pour une porte claquée, 209 € TTC pour une porte verrouillée (cylindre européen).",
+    question: "Qui paie l'ouverture quand on est locataire ?",
+    schemaText:
+      "En général, le locataire, puisque la perte ou l'oubli des clés vient de lui. Le détail est dans mon guide sur les locations.",
+    answer: (
+      <>
+        En général, le locataire, puisque la perte ou l&apos;oubli des clés vient de lui. Le détail est dans{" "}
+        <Link href="/blog/qui-paie-changement-serrure-location-nice/" className={linkClass}>
+          mon guide sur les locations
+        </Link>
+        .
+      </>
+    ),
   },
   {
-    question: "Une ouverture de porte laisse-t-elle des traces ?",
-    answer:
-      "Pas dans la majorité des cas de porte claquée : je privilégie toujours une méthode sans casse quand la configuration le permet. Pour une porte verrouillée sur un modèle de serrure très résistant, une intervention plus technique peut parfois être nécessaire, je vous préviens avant d'agir.",
-  },
-  {
-    question: "Pourquoi un serrurier demande-t-il une pièce d'identité avant d'ouvrir une porte ?",
-    answer:
-      "C'est une pratique que j'applique systématiquement, pas un simple choix commercial : un professionnel qui faciliterait sciemment l'accès à un logement sans vérifier qui y a droit s'expose à être poursuivi comme complice de violation de domicile (article 226-4 du Code pénal). Gardez une pièce d'identité et un justificatif à votre nom à portée de main.",
-  },
-  {
-    question: "Un locataire peut-il faire appel à un serrurier sans l'accord de son propriétaire ?",
-    answer:
-      "Oui : en tant que locataire, votre bail suffit à prouver votre droit d'occupation du logement, au même titre qu'une facture ou un titre de propriété pour un propriétaire. Aucun accord préalable du propriétaire n'est nécessaire pour une ouverture de porte.",
+    question: "Comment peut-on payer ?",
+    answer: "Par carte bancaire, en espèces ou par virement, avec une facture détaillée dans tous les cas.",
   },
 ];
 
@@ -501,15 +425,15 @@ const faqEn = [
   },
 ];
 
-export default function OuvertureDePorteNicePage() {
+export default async function OuvertureDePorteNicePage() {
   const experienceYears = new Date().getFullYear() - business.professionSinceYear;
-  const doorReview = fallbackReviews.find((r) => r.author === "Marine D.");
+  const { rating, count } = await getGoogleReviews();
 
   const heroTrustNote = (
     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
       <span className="inline-flex items-center gap-1.5 font-semibold">
         <StarIcon className="w-4 h-4 text-amber-400" />
-        {business.reviews.rating.toFixed(1)}/5 sur {business.reviews.count}+ avis Google
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
       </span>
       <span className="text-navy/30" aria-hidden="true">·</span>
       <span>{experienceYears} ans d&apos;expérience à Nice</span>
@@ -519,8 +443,19 @@ export default function OuvertureDePorteNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Ouverture de porte à Nice : le bon diagnostic avant la bonne méthode",
-        lead: "Porte claquée, verrouillée, clé cassée ou porte blindée : je diagnostique par téléphone, j'annonce un prix, puis j'interviens proprement, sans casse quand c'est possible.",
+        h1: "Ouverture de porte à Nice : porte claquée, fermée à clé ou clé cassée",
+        lead: "En urgence, j'arrive en 30 minutes partout à Nice. Une porte claquée coûte 149 € TTC en journée, déplacement compris, et le prix est annoncé au téléphone, avant que je parte.",
+        leadContent: (
+          <>
+            En urgence, j&apos;arrive en 30 minutes partout à Nice. Une porte claquée coûte 149 € TTC en journée,
+            déplacement compris, et le prix est{" "}
+            <Link href="/tarifs-serrurier-nice/" prefetch={false} className={linkClass}>
+              annoncé au téléphone
+            </Link>
+            , avant que je parte.
+          </>
+        ),
+        hideProcessSteps: true,
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Ouverture de porte",
@@ -529,8 +464,6 @@ export default function OuvertureDePorteNicePage() {
           src: "/images/serrurier-nice-ouverture-de-porte.webp",
           alt: "Ouverture de porte Nice",
         },
-        sectionsVariant: "cards",
-        sectionsHeading: "Ce qu'il faut savoir avant votre intervention",
         headingScale: "lg",
         heroTrustNote,
         extra: (
@@ -539,51 +472,9 @@ export default function OuvertureDePorteNicePage() {
               priceLabel="149 € TTC (serrure Fichet verrouillée : sur devis)"
               locale="fr"
             />
-            {doorReview && (
-              <div className="mx-auto max-w-2xl px-4 pb-10">
-                <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6">
-                  <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
-                    {Array.from({ length: doorReview.rating }).map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3-5.4 3 1.3-6L1.3 7.7l6.1-.6L10 1.5Z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="mt-3 text-navy leading-relaxed">&ldquo;{doorReview.text}&rdquo;</p>
-                  <p className="mt-3 text-xs text-slate">{doorReview.author} · avis Google vérifié</p>
-                </div>
-              </div>
-            )}
+            <ServiceReviewsLive path="/ouverture-de-porte-nice/" />
           </>
         ),
-        processSteps: [
-          {
-            title: "Appel",
-            text: "Vous m'indiquez si la porte est claquée ou verrouillée à clé, et le type de serrure si vous le connaissez, pour que j'arrive déjà préparé.",
-          },
-          {
-            title: "Délai d'arrivée",
-            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
-          },
-          {
-            title: "Diagnostic de la porte",
-            text: "Je vérifie le type de serrure et l'état du cadre pour choisir la méthode d'ouverture la moins destructrice, sans forcer si une alternative existe.",
-          },
-          {
-            title: "Règlement",
-            text: "Le prix confirmé avant l'ouverture est celui que vous payez, sans supplément surprise une fois la porte rouverte.",
-          },
-        ],
-        relatedArticle: {
-          href: "/blog/porte-qui-claque-serrurier-nice/",
-          label: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
-        },
-        guide: (
-          <ServiceGuideSection readingMinutes={7} toc={guideToc} faq={guideFaq}>
-            {guideContent}
-          </ServiceGuideSection>
-        ),
-        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Door opening in Nice: the right method for your lock",
@@ -609,7 +500,7 @@ export default function OuvertureDePorteNicePage() {
           },
           {
             title: "Time to arrival",
-            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+            text: "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
           },
           {
             title: "Diagnosing the door",

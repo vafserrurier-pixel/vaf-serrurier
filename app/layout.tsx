@@ -8,7 +8,8 @@ import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { localBusinessSchema } from "@/lib/schema";
-import { fetchReviews } from "@/lib/reviews";
+import { getGoogleReviews } from "@/lib/reviews";
+import { ReviewStatsProvider } from "@/components/ReviewStatsProvider";
 import { LocaleProvider } from "@/lib/locale";
 
 const archivo = Archivo({
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { reviews } = await fetchReviews();
+  const { rating, count } = await getGoogleReviews();
 
   return (
     <html
@@ -69,7 +70,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     >
       <body className="min-h-full flex flex-col bg-cream">
         <LocaleProvider>
-          <JsonLd data={localBusinessSchema({ reviews })} />
+          <ReviewStatsProvider rating={rating} count={count}>
+          <JsonLd data={localBusinessSchema()} />
           <a
             href="#main-content"
             className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-navy focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
@@ -83,6 +85,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
           <StickyCallButton />
           <CookieConsent />
+          </ReviewStatsProvider>
         </LocaleProvider>
       </body>
     </html>

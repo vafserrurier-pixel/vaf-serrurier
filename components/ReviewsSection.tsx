@@ -1,6 +1,9 @@
-import { business } from "@/lib/business";
+"use client";
+
 import ReviewsCarousel from "./ReviewsCarousel";
 import { GoogleLogoIcon } from "./Icons";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "./ReviewStatsProvider";
 import type { Locale } from "@/lib/locale";
 
 function Stars({ size = 16 }: { size?: number }) {
@@ -16,23 +19,24 @@ function Stars({ size = 16 }: { size?: number }) {
 }
 
 const strings = {
-  fr: { ariaLabel: "Avis clients", suffix: (count: number) => `sur plus de ${count} avis Google` },
-  en: { ariaLabel: "Customer reviews", suffix: (count: number) => `from over ${count} Google reviews` },
+  fr: { ariaLabel: "Avis clients", suffix: (count: number) => `sur ${count} avis Google` },
+  en: { ariaLabel: "Customer reviews", suffix: (count: number) => `from ${count} Google reviews` },
 };
 
 export default function ReviewsSection({ locale = "fr" }: { locale?: Locale }) {
   const t = strings[locale];
+  const { rating, count } = useReviewStats();
   return (
     <section aria-label={t.ariaLabel} className="max-w-xl mx-auto">
       <div className="flex items-center justify-center gap-4 mb-6">
         <GoogleLogoIcon className="w-9 h-9 shrink-0" />
         <div className="w-px h-9 bg-navy/10" aria-hidden="true" />
         <span className="font-heading text-4xl font-bold text-navy font-tabular-nums">
-          {business.reviews.rating.toFixed(1)}
+          {formatRating(rating, locale)}
         </span>
         <div>
           <Stars size={18} />
-          <p className="text-sm text-slate mt-0.5">{t.suffix(business.reviews.count)}</p>
+          <p className="text-sm text-slate mt-0.5">{t.suffix(count)}</p>
         </div>
       </div>
       <ReviewsCarousel locale={locale} />

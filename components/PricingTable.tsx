@@ -49,8 +49,9 @@ export default function PricingTable({
   useSeoTitles?: boolean;
 }) {
   const [showAll, setShowAll] = useState(false);
+  const visibleCards = cardsByLocale[locale].filter((card) => useSeoTitles || !card.tarifsOnly);
   const cards = travelLabel
-    ? cardsByLocale[locale].map((card) => ({
+    ? visibleCards.map((card) => ({
         ...card,
         features: card.features.map((f) =>
           f === travelNotes[locale]
@@ -58,7 +59,7 @@ export default function PricingTable({
             : f
         ),
       }))
-    : cardsByLocale[locale];
+    : visibleCards;
   const t = strings[locale];
   return (
     <div>

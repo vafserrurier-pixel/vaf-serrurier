@@ -3,19 +3,21 @@
 import { useState } from "react";
 import { business } from "@/lib/business";
 import { GoogleLogoIcon, StarIcon } from "./Icons";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "./ReviewStatsProvider";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
   fr: {
     show: "Afficher la carte",
     title: "Zone d'intervention à Nice",
-    reviews: (count: number) => `sur plus de ${count} avis Google`,
+    reviews: (count: number) => `sur ${count} avis Google`,
     link: "Voir la fiche Google Maps",
   },
   en: {
     show: "Show the map",
     title: "Service area in Nice",
-    reviews: (count: number) => `from over ${count} Google reviews`,
+    reviews: (count: number) => `from ${count} Google reviews`,
     link: "View the Google Maps listing",
   },
 };
@@ -60,6 +62,7 @@ export default function LazyMap({
     query ? encodeURIComponent(query) : `${business.geo.latitude},${business.geo.longitude}`
   }&z=${zoom}&output=embed`;
   const t = strings[locale];
+  const { rating, count } = useReviewStats();
   const mapTitle = title ?? t.title;
 
   return (
@@ -69,14 +72,14 @@ export default function LazyMap({
           <div className="flex items-center gap-2">
             <GoogleLogoIcon className="w-6 h-6 shrink-0" />
             <span className="font-tabular-nums font-bold text-navy text-lg">
-              {business.reviews.rating.toFixed(1)}
+              {formatRating(rating, locale)}
             </span>
             <div className="flex items-center gap-0.5" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} className="w-4 h-4 text-amber-400" />
               ))}
             </div>
-            <span className="text-sm text-slate">{t.reviews(business.reviews.count)}</span>
+            <span className="text-sm text-slate">{t.reviews(count)}</span>
           </div>
           <p className="flex items-start gap-2 text-sm text-slate mt-3">
             <PinIcon className="w-4 h-4 mt-0.5 shrink-0 text-steel" />

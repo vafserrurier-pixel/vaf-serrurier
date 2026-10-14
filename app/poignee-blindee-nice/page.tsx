@@ -7,6 +7,7 @@ import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { ShieldIcon, DoorIcon, WrenchIcon, CheckIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const guideToc = [
   { id: "differences", label: "Ce qui distingue une poignée blindée d'un simple cache-cylindre" },
@@ -252,6 +253,7 @@ export default function PoigneeBlindeeNicePage() {
             note="Un seul modèle, un tarif clair, pas de gamme à décoder. Pose et réglage inclus, devis confirmé après diagnostic du cylindre en place."
             locale="fr"
           />
+          <ServiceReviewsLive path="/poignee-blindee-nice/" />
           <div className="mx-auto max-w-4xl px-4 mt-4">
             <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-4">
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/15 text-steel shrink-0">

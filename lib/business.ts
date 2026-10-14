@@ -59,10 +59,12 @@ export const business = {
     // Place ID, ce qui vaut confirmation pratique sans appel séparé à Place Details.
     placeIdConfirmed: true,
   },
+  // Valeurs de REPLI uniquement : le site lit la note et le nombre d'avis en direct (getGoogleReviews,
+  // lib/reviews.ts) et ne retombe sur ces chiffres que si la clé Google manque ou si l'appel échoue.
+  // Dernière valeur lue en direct : 5,0 sur 188 avis, le 14/10/2026.
   reviews: {
     rating: 5.0,
-    count: 150,
-    ratingText: "5,0/5 sur plus de 150 avis Google",
+    count: 188,
   },
   social: {
     youtube: "https://www.youtube.com/@v.a.f-Serrurier",

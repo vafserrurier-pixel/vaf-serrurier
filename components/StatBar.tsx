@@ -1,5 +1,8 @@
-import { business } from "@/lib/business";
+"use client";
+
 import { ClockIcon, BoltIcon, GoogleLogoIcon, CheckIcon } from "./Icons";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "./ReviewStatsProvider";
 import type { Locale } from "@/lib/locale";
 
 const strings = {
@@ -9,7 +12,7 @@ const strings = {
     delay: "Délai moyen",
     delayUnit: "à Nice",
     rating: "Note Google",
-    ratingUnit: (count: number) => `sur ${count}+ avis`,
+    ratingUnit: (count: number) => `sur ${count} avis`,
     success: "Portes claquées",
     successUnit: "ouvertes sans dégât",
   },
@@ -19,7 +22,7 @@ const strings = {
     delay: "Average delay",
     delayUnit: "in Nice",
     rating: "Google rating",
-    ratingUnit: (count: number) => `from ${count}+ reviews`,
+    ratingUnit: (count: number) => `from ${count} reviews`,
     success: "Slammed doors",
     successUnit: "opened with no damage",
   },
@@ -35,13 +38,14 @@ export default function StatBar({
   delayUnit?: string;
 }) {
   const t = strings[locale];
+  const { rating, count } = useReviewStats();
   const stats = [
     { value: "24h/24", label: t.availability, unit: t.availabilityUnit, icon: ClockIcon },
     { value: delay, label: t.delay, unit: delayUnit ?? t.delayUnit, icon: BoltIcon },
     {
-      value: `${business.reviews.rating.toFixed(1)}/5`,
+      value: `${formatRating(rating, locale)}/5`,
       label: t.rating,
-      unit: t.ratingUnit(business.reviews.count),
+      unit: t.ratingUnit(count),
       icon: GoogleLogoIcon,
     },
     { value: "99%", label: t.success, unit: t.successUnit, icon: CheckIcon },

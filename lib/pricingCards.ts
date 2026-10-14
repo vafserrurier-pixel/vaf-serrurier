@@ -11,6 +11,8 @@ export type PricingCard = {
   priceType?: "fixed" | "startingFrom";
   /** Tarif après 19h, week-end et jours fériés quand il est fixe (sinon le texte générique "annoncé avant intervention" s'affiche). */
   nightPrice?: string;
+  /** Ligne affichée uniquement sur /tarifs-serrurier-nice/ (PricingTable avec useSeoTitles), pas sur l'accueil ni les pages quartier/commune. */
+  tarifsOnly?: boolean;
   features: string[];
   highlight?: boolean;
   featured?: boolean;
@@ -57,6 +59,19 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
         "Méthode adaptée aux serrures renforcées",
         "Précautions pour limiter les dégâts",
         "Prix confirmé avant toute intervention",
+      ],
+    },
+    {
+      title: "Clé cassée dans la serrure",
+      price: "149 €",
+      unit: "TTC",
+      priceValue: 149,
+      priceType: "fixed",
+      nightPrice: "189 €",
+      tarifsOnly: true,
+      features: [
+        "Extraction du morceau avec un outil adapté",
+        "Perçage du cylindre en dernier recours",
       ],
     },
     {

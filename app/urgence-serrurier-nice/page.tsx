@@ -7,6 +7,7 @@ import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { AlertLockIcon, WrenchIcon, KeyIcon, BoltIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const symptoms = [
   {
@@ -365,6 +366,7 @@ export default function UrgenceSerrurierNicePage() {
               note="149 € TTC en journée ; après 19h, le week-end et les jours fériés : 189 € TTC (porte claquée) ou 209 € TTC (porte verrouillée). Pièces remplacées facturées en supplément."
               locale="fr"
             />
+            <ServiceReviewsLive path="/urgence-serrurier-nice/" />
             <div className="mx-auto max-w-4xl px-4 py-10">
               <QuoteBlock locale="fr" />
             </div>

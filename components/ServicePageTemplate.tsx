@@ -20,6 +20,8 @@ import type { Locale } from "@/lib/locale";
 
 export type ServiceSection = {
   heading: string;
+  /** Titre enrichi (ex. avec un lien) affiche a la place de heading ; heading reste la cle React et le texte de reference. */
+  headingNode?: ReactNode;
   paragraphs: ReactNode[];
   /**
    * Icone optionnelle affichee en tete de section quand sectionsVariant="cards".
@@ -96,6 +98,8 @@ const strings = {
 export default function ServicePageTemplate({
   h1,
   lead,
+  leadContent,
+  hideProcessSteps = false,
   sections,
   faq,
   breadcrumbLabel,
@@ -116,6 +120,10 @@ export default function ServicePageTemplate({
 }: {
   h1: string;
   lead: string;
+  /** Version enrichie du chapeau (liens) affichee a la place de lead ; lead reste utilise pour le schema Service. */
+  leadContent?: ReactNode;
+  /** Masque le bloc "Comment se deroule mon intervention" (et ses delais) quand le texte de la page le remplace. */
+  hideProcessSteps?: boolean;
   sections: ServiceSection[];
   faq: FaqItem[];
   breadcrumbLabel: string;
@@ -205,7 +213,7 @@ export default function ServicePageTemplate({
             {preTitleBadge && <div className="mb-2">{preTitleBadge}</div>}
             <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{h1}</h1>
-            <p className="mt-4 text-slate leading-relaxed max-w-2xl">{lead}</p>
+            <p className="mt-4 text-slate leading-relaxed max-w-2xl">{leadContent ?? lead}</p>
             <div className="flex flex-wrap items-center gap-3 mt-6">
               <a
                 href={business.phone.href}
@@ -265,10 +273,12 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.howItWorks}</h2>
-        <ProcessSteps locale={locale} steps={processSteps} />
-      </section>
+      {!hideProcessSteps && (
+        <section className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.howItWorks}</h2>
+          <ProcessSteps locale={locale} steps={processSteps} />
+        </section>
+      )}
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12">
@@ -303,7 +313,7 @@ export default function ServicePageTemplate({
                       </span>
                     )}
                     <h2 className="font-heading text-lg font-bold text-navy mb-1.5">
-                      {section.heading}
+                      {section.headingNode ?? section.heading}
                     </h2>
                     {section.paragraphs.map((paragraph, index) => (
                       <p key={index} className="text-slate text-sm leading-relaxed mb-2">
@@ -320,7 +330,7 @@ export default function ServicePageTemplate({
               {sections.map((section) => (
                 <div key={section.heading} id={section.id} className={section.id ? "scroll-mt-24" : undefined}>
                   <h2 className={`font-heading ${h2Size} font-bold text-navy mb-3`}>
-                    {section.heading}
+                    {section.headingNode ?? section.heading}
                   </h2>
                   {section.paragraphs.map((paragraph, index) => (
                     <p key={index} className="text-slate leading-relaxed mb-2">

@@ -7,6 +7,7 @@ import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
 import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const criteresFr = [
   {
@@ -440,6 +441,7 @@ export default function BlindagePorteNicePage() {
               note="Modèle Citadin, pose comprise. Le Parisien et le Parisien Hermétic sont sur devis. Visite et devis gratuits, devis remis sous 24h."
               locale="fr"
             />
+            <ServiceReviewsLive path="/blindage-porte-nice/" />
             <div className="mx-auto max-w-4xl px-4 mt-4">
               <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
                 <p className="font-heading font-semibold text-navy mb-1">

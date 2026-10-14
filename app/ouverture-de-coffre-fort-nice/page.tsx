@@ -5,6 +5,7 @@ import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const guideToc = [
   { id: "mecanismes", label: "Trois familles de mécanismes, trois approches" },
@@ -258,11 +259,14 @@ export default function OuvertureDeCoffreFortNicePage() {
         alt: "Ouverture coffre-fort Nice",
       }}
       extra={
-        <PriceReminder
+        <>
+          <PriceReminder
           priceLabel="À partir de 299 € TTC"
           note="Prix ajusté selon le modèle et la méthode nécessaire"
           locale="fr"
         />
+          <ServiceReviewsLive path="/ouverture-de-coffre-fort-nice/" />
+        </>
       }
       processSteps={[
         {

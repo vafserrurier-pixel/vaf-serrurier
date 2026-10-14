@@ -10,6 +10,8 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CtaBlock from "@/components/CtaBlock";
 import { ShieldIcon, StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
+import { formatRating } from "@/lib/reviewFormat";
+import { useReviewStats } from "@/components/ReviewStatsProvider";
 import { useLocale } from "@/lib/locale";
 
 const faqFr: FaqItem[] = [
@@ -288,7 +290,7 @@ const strings = {
     call: "Appeler",
     trustSiret: (siret: string) => `SIRET vérifiable : ${siret}`,
     trustInsurance: "Assurance RC Pro et garantie décennale",
-    trustReviews: (rating: string, count: number) => `${rating}/5 sur plus de ${count} avis Google`,
+    trustReviews: (rating: string, count: number) => `${rating}/5 sur ${count} avis Google`,
     tvaTitle: "TVA applicable : mes prix sont déjà TTC",
     warningTitle: "Les signaux qui doivent vous alerter",
     warningIntro:
@@ -316,7 +318,7 @@ const strings = {
     call: "Call",
     trustSiret: (siret: string) => `Verifiable SIRET: ${siret}`,
     trustInsurance: "Professional liability and 10-year insurance",
-    trustReviews: (rating: string, count: number) => `${rating}/5 from over ${count} Google reviews`,
+    trustReviews: (rating: string, count: number) => `${rating}/5 from ${count} Google reviews`,
     tvaTitle: "VAT: my prices are already tax-included",
     warningTitle: "Warning signs to watch for",
     warningIntro:
@@ -340,6 +342,7 @@ const strings = {
 
 export default function TarifsBody() {
   const { locale } = useLocale();
+  const { rating, count } = useReviewStats();
   const t = strings[locale];
   const faq = locale === "en" ? faqEn : faqFr;
   const warningSignals = locale === "en" ? warningSignalsEn : warningSignalsFr;
@@ -377,7 +380,7 @@ export default function TarifsBody() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <StarIcon className="w-4 h-4 text-steel" />
-              {t.trustReviews(business.reviews.rating.toFixed(1), business.reviews.count)}
+              {t.trustReviews(formatRating(rating, locale), count)}
             </span>
           </div>
         </div>

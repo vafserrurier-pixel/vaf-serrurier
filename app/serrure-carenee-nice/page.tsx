@@ -8,6 +8,7 @@ import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
 import { ShieldIcon, WrenchIcon, DoorIcon, CheckIcon, KeyIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const guideToc = [
   { id: "qualite", label: "Reconnaître un carénage de qualité" },
@@ -333,6 +334,7 @@ export default function SerrureCareneeNicePage() {
             note="Forfait unique, gamme Héraclès Sésame, fournie posée. Combo blindage pivot + carénée : à partir de 1 890 € TTC. Devis confirmé avant intervention."
             locale="fr"
           />
+          <ServiceReviewsLive path="/serrure-carenee-nice/" />
           <section className="mx-auto max-w-4xl px-4 py-10">
             <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
               Marques de serrures que je pose

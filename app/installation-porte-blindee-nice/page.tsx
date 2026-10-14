@@ -7,6 +7,7 @@ import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
 import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const guideToc = [
   { id: "lignes", label: "Les cinq lignes en détail" },
@@ -442,11 +443,14 @@ export default function InstallationPorteBlindeeNicePage() {
         sectionsHeading: "Ce qu'il faut savoir sur le bloc-porte blindé",
         headingScale: "lg",
         extra: (
-          <PriceReminder
+          <>
+            <PriceReminder
             priceLabel="à partir de 3 490 € TTC"
             note="Bloc-porte certifié BP1, ligne d'entrée de gamme (Lisseo), pose comprise. Les niveaux supérieurs et les autres lignes sont sur devis, selon le niveau A2P BP et les options (isolation, coupe-feu) : mesures et devis gratuits, devis remis sous 24h."
             locale="fr"
           />
+            <ServiceReviewsLive path="/installation-porte-blindee-nice/" />
+          </>
         ),
         processSteps: [
           {

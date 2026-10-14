@@ -3,7 +3,12 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 
-export type FaqItem = { question: string; answer: ReactNode };
+export type FaqItem = {
+  question: string;
+  answer: ReactNode;
+  /** Texte brut de la reponse pour le schema FAQPage, quand answer contient du JSX (liens) qui ne se laisse pas aplatir cote client. */
+  schemaText?: string;
+};
 
 export default function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

@@ -1,9 +1,8 @@
 import { isValidElement, type ReactNode } from "react";
 import { business } from "./business";
-import { fallbackReviews, type Review } from "./reviews";
 import { builtCommunes } from "./communes";
 
-type FaqItem = { question: string; answer: ReactNode };
+type FaqItem = { question: string; answer: ReactNode; schemaText?: string };
 type BreadcrumbItem = { name: string; url: string };
 
 // Un answer de FAQ peut contenir des liens (JSX) pour l'affichage : le schema
@@ -19,8 +18,9 @@ function reactNodeToText(node: ReactNode): string {
   return "";
 }
 
-export function localBusinessSchema(opts?: { reviews?: Review[] }) {
-  const reviews = opts?.reviews ?? fallbackReviews;
+// Pas d'aggregateRating ni de review ici : Google n'accepte pas qu'une entreprise balise
+// elle-même les avis qu'elle affiche sur ses propres pages.
+export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Locksmith",
@@ -155,7 +155,7 @@ export function faqSchema(items: FaqItem[]) {
       name: item.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: reactNodeToText(item.answer),
+        text: item.schemaText ?? reactNodeToText(item.answer),
       },
     })),
   };

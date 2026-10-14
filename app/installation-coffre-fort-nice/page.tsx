@@ -5,6 +5,7 @@ import PriceReminder from "@/components/PriceReminder";
 import ServiceGuideSection from "@/components/ServiceGuideSection";
 import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import { buildMetadata } from "@/lib/metadata";
+import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
 const guideToc = [
   { id: "usage", label: "Quel usage, quel niveau de protection" },
@@ -206,11 +207,14 @@ export default function InstallationCoffreFortNicePage() {
         alt: "Installation coffre-fort Nice",
       }}
       extra={
-        <PriceReminder
+        <>
+          <PriceReminder
           priceLabel="À partir de 299 € TTC"
           note="Prix ajusté selon le modèle et la fixation nécessaire"
           locale="fr"
         />
+          <ServiceReviewsLive path="/installation-coffre-fort-nice/" />
+        </>
       }
       processSteps={[
         {
