@@ -2,313 +2,305 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
 import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
 import { buildMetadata } from "@/lib/metadata";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
-const guideToc = [
-  { id: "lignes", label: "Les cinq lignes en détail" },
-  { id: "a2p", label: "Le niveau A2P BP, un critère de devis" },
-  { id: "options", label: "Les options qui influencent le devis" },
-  { id: "comparatif", label: "Bloc-porte neuf ou blindage : le comparatif" },
-  { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
-  { id: "devis", label: "Devis, acompte, délai et copropriété" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Puis-je reproduire l'aspect de ma porte actuelle sur un bloc-porte neuf ?",
-    answer:
-      "Oui, notamment avec la ligne Ferro, qui permet une reproduction de l'existant possible. Le diagnostic sur place permet de définir précisément la finition la plus proche de votre porte actuelle.",
-  },
-  {
-    question: "Un bloc-porte à 2 vantaux est-il possible ?",
-    answer:
-      "Oui, 1 ou 2 vantaux sont possibles selon la configuration de votre entrée. Les blocs-portes sont proposés en dimensions standard uniquement.",
-  },
-  {
-    question: "Combien de temps faut-il pour avoir un bloc-porte ?",
-    answer:
-      "Le délai est d'environ 10 jours, sans travaux de maçonnerie.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille les cinq lignes disponibles, la manière dont le
-      niveau A2P et les options s&apos;intègrent à votre devis, et les cas où
-      un bloc-porte neuf n&apos;est pas la réponse la plus adaptée.
-    </p>
-
-    <div>
-      <ArticleSectionHeading number={1} id="lignes" level="h3" size="lg" numberStyle="plain">
-        Les cinq lignes en détail
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le <strong className="text-navy">Lisseo</strong> mise sur un design
-        épuré, avec trois finitions extérieures possibles : bois lisse,
-        acier époxy ou acier décor bois. Le{" "}
-        <strong className="text-navy">Solo</strong> propose du bois avec
-        moulures, encastrées, à motifs design ou en applique selon la ligne
-        choisie. Le <strong className="text-navy">Ferro</strong> associe des
-        panneaux acier à des moulures, avec une reproduction de
-        l&apos;existant possible. Le{" "}
-        <strong className="text-navy">Vitréo</strong> propose une version
-        vitrée. Le{" "}
-        <strong className="text-navy">Designo</strong> décline trois lignes
-        design distinctes : graphique, esthétique et authentique. Toutes ces
-        lignes existent en 1 ou 2 vantaux, en dimensions standard.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="a2p" level="h3" size="lg" numberStyle="plain">
-        Le niveau A2P BP, un critère de devis
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Tous les blocs-portes que je pose sont certifiés A2P, du niveau BP1
-        (résiste 5 minutes) au BP3 (résiste 15 minutes), en passant par le
-        BP2 (10 minutes). Ce n&apos;est pas un tarif fixe mais un critère à
-        définir ensemble selon votre budget et le niveau de sécurité
-        recherché : un logement en rez-de-chaussée n&apos;a pas les mêmes
-        besoins qu&apos;un appartement en étage élevé. Je recommande le niveau
-        en fonction du quartier et de la valeur des biens à protéger chez
-        vous. Le tarif de départ, 3 490 € TTC, correspond à un bloc-porte
-        certifié BP1 : les niveaux supérieurs et les autres lignes sont
-        chiffrés sur devis.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="options" level="h3" size="lg" numberStyle="plain">
-        Les options qui influencent le devis
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Trois options concrètes changent réellement le confort et le prix
-        final : l&apos;isolation phonique renforcée (utile sur un palier
-        bruyant), l&apos;isolation thermique renforcée (utile sur une entrée
-        exposée), et l&apos;option coupe-feu / pare-flammes (utile en
-        copropriété selon la configuration des parties communes). Ce sont de
-        vrais critères de devis, pas des cases accessoires : j&apos;en
-        discute avec vous selon votre logement réel.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="comparatif" level="h3" size="lg" numberStyle="plain">
-        Bloc-porte neuf ou blindage : le comparatif
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed mb-4">
-        Les deux solutions protègent votre entrée, mais elles ne répondent pas à
-        la même situation. Voici ce qui les distingue, en chiffres et en
-        conditions :
-      </p>
-      <ArticleTable
-        headers={["Critère", "Blindage de porte", "Bloc-porte neuf"]}
-        rows={[
-          ["Votre porte", "Conservée, renforcée par un bâti acier", "Remplacée entièrement (porte, dormant, serrure)"],
-          ["Quand le choisir", "Porte viable : bois sain, bâti en état", "Porte ou bâti trop dégradés"],
-          ["Prix de départ (TTC)", "À partir de 2 689 € (modèle Citadin, pose comprise)", "À partir de 3 490 € (certifié BP1, pose comprise)"],
-          ["Délai", "Pose en environ 4 heures", "Délai d'environ 10 jours"],
-          ["Aspect extérieur", "Inchangé", "Peut changer selon la ligne choisie"],
-          ["Copropriété", "Aucune autorisation tant que l'aspect extérieur est inchangé", "Autorisation nécessaire seulement si l'aspect extérieur change"],
-          ["Visite et devis", "Gratuits, devis sous 24h", "Gratuits, devis sous 24h"],
-        ]}
-      />
-      <p className="text-slate leading-relaxed mt-4">
-        Le détail du blindage, de ses trois modèles et de ses critères est sur ma
-        page{" "}
-        <Link href="/blindage-porte-nice/" className="text-steel underline">
-          blindage de porte
-        </Link>
-        .
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={5} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
-        Quand ce n&apos;est pas la bonne solution
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un bloc-porte neuf est la solution la plus complète, pas
-        systématiquement la plus pertinente. Deux cas où je vous oriente
-        ailleurs :
-      </p>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
-        <li>
-          <strong className="text-navy">Votre porte actuelle reste saine</strong> : si le bois
-          n&apos;est ni pourri ni déformé, remplacer l&apos;ensemble de la menuiserie n&apos;est pas
-          nécessaire. Un{" "}
-          <Link href="/blindage-porte-nice/" className="text-steel underline">
-            blindage de porte
-          </Link>{" "}
-          renforce votre porte existante pour un coût nettement inférieur.
-        </li>
-        <li>
-          <strong className="text-navy">Budget contraint</strong> : un{" "}
-          <Link href="/blindage-porte-nice/" className="text-steel underline">
-            blindage
-          </Link>{" "}
-          ou une{" "}
-          <Link href="/serrure-carenee-nice/" className="text-steel underline">
-            serrure carénée
-          </Link>{" "}
-          apportent un vrai gain de résistance à un tarif nettement plus accessible qu&apos;un
-          remplacement complet.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={6} id="devis" level="h3" size="lg" numberStyle="plain">
-        Devis, acompte, délai et copropriété
-      </ArticleSectionHeading>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed">
-        <li>
-          <strong className="text-navy">Mesures et devis</strong> : la prise de mesures sur place et
-          le devis sont gratuits, et le devis vous est remis sous 24h.
-        </li>
-        <li>
-          <strong className="text-navy">Acompte</strong> : 30 % à la validation du devis.
-        </li>
-        <li>
-          <strong className="text-navy">Délai</strong> : environ 10 jours, sans travaux de
-          maçonnerie.
-        </li>
-        <li>
-          <strong className="text-navy">Paiement</strong> : carte bancaire, espèces ou virement,
-          avec une facture détaillée envoyée par e-mail.
-        </li>
-        <li>
-          <strong className="text-navy">Copropriété</strong> : une autorisation n&apos;est nécessaire
-          que si l&apos;aspect extérieur de la porte change.
-        </li>
-      </ul>
-    </div>
-  </>
-);
-
 export const metadata: Metadata = buildMetadata({
   path: "/installation-porte-blindee-nice/",
-  title: "Installation de porte blindée à Nice – Devis gratuit",
-  description: "Installation d'une porte blindée neuve à Nice, pose comprise : 5 lignes, certification A2P BP1 à BP3. Mesures et devis gratuits sur place.",
+  title: "Porte blindée Nice : bloc-porte neuf certifié A2P",
+  description:
+    "Porte blindée à Nice : bloc-porte Valente Securystar certifié A2P BP1 à BP3, pose sans maçonnerie, garantie 15 ans. Devis gratuit sous 24 h. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sectionsFr = [
   {
-    heading: "Qu'est-ce qu'un bloc-porte blindé",
-    Icon: <DoorIcon className="w-4 h-4" />,
+    heading: "Bloc-porte ou blindage : ce qui change",
     paragraphs: [
+      "Avec un bloc-porte, on ne renforce rien : on change tout. C'est une porte neuve : le vantail, le cadre (le dormant), la serrure et le cylindre sont fabriqués ensemble et testés ensemble. L'ancienne porte et son cadre partent.",
       <>
-        Un bloc-porte blindé remplace l&apos;ensemble de votre menuiserie
-        (porte, dormant et serrure) d&apos;un seul tenant par une véritable
-        porte blindée neuve, avec un délai d&apos;environ 10 jours.
-        C&apos;est la solution la plus complète quand votre porte actuelle ou
-        son bâti ne tiennent plus la route. Si votre porte reste saine, un{" "}
-        <Link href="/blindage-porte-nice/" className="text-steel underline">
+        Le{" "}
+        <Link href="/blindage-porte-nice/" className={linkClass}>
           blindage de porte
-        </Link>{" "}
-        suffit souvent, pour un coût nettement inférieur.
+        </Link>
+        , lui, garde votre porte et la renforce avec une tôle d&apos;acier et un cadre métallique. Les deux protègent,
+        mais pas dans la même situation.
       </>,
     ],
+    extra: (
+      <ArticleTable
+        headers={["Critère", "Blindage de porte", "Bloc-porte neuf"]}
+        rows={[
+          ["Votre porte", "Conservée et renforcée", "Remplacée entièrement (porte, cadre, serrure)"],
+          ["Quand le choisir", "Porte saine : bois en bon état, cadre droit", "Porte ou cadre trop abîmés, ou niveau BP élevé exigé"],
+          ["Prix de départ (TTC, pose comprise)", "2 689 € (modèle Citadin)", "3 490 € (certifié BP1)"],
+          ["Délai", "Pose en 4 heures environ", "10 jours environ"],
+          ["Aspect côté palier", "Inchangé", "Peut changer selon la ligne choisie"],
+          ["Copropriété", "Pas d'autorisation tant que l'aspect ne change pas", "Autorisation seulement si l'aspect change"],
+        ]}
+      />
+    ),
   },
   {
-    heading: "Cinq lignes selon votre style",
-    Icon: <CheckIcon className="w-4 h-4" />,
+    heading: "Quand un bloc-porte neuf se justifie",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">La porte ou son cadre sont trop abîmés</strong> : bois fendu ou pourri, porte
+          voilée, cadre fissuré ou qui a bougé. Un blindage ne tiendrait pas sur une base pareille.
+        </li>
+        <li>
+          <strong className="text-navy">Votre assureur exige un niveau A2P BP élevé</strong> (BP2 ou BP3) : le
+          bloc-porte neuf est la façon la plus directe d&apos;y répondre. Vérifiez le niveau exigé dans votre contrat.
+        </li>
+        <li>
+          <strong className="text-navy">Après une effraction</strong> qui a détruit la porte. En attendant la
+          fabrication, je fais une{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            mise en sécurité provisoire
+          </Link>{" "}
+          pour que vous puissiez fermer chez vous.
+        </li>
+        <li>
+          <strong className="text-navy">Vous voulez aussi gagner en isolation.</strong> Un bloc-porte neuf est isolé dès
+          la fabrication, contre le bruit du palier et contre le froid ; une vieille porte palière, même blindée, ne
+          l&apos;est pas.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Les niveaux A2P BP1, BP2, BP3",
+    paragraphs: [
+      "La certification A2P BP est délivrée par le CNPP, un organisme indépendant. Elle teste la porte entière (vantail, cadre, serrure, paumelles) face à un cambrioleur outillé :",
+    ],
+    extra: (
+      <>
+        <div className="mb-4">
+          <ArticleTable
+            headers={["Niveau", "Résistance à l'effraction", "Pour qui"]}
+            rows={[
+              ["BP1", "5 minutes", "La plupart des appartements en étage"],
+              ["BP2", "10 minutes", "Rez-de-chaussée, porte peu visible, biens de valeur"],
+              ["BP3", "15 minutes", "Exigence d'assurance élevée, objets de grande valeur"],
+            ]}
+          />
+        </div>
+        <p className={pClass}>
+          Je recommande le niveau selon votre quartier, l&apos;étage, l&apos;exposition de la porte et ce que vous avez à
+          protéger. Le prix de départ correspond au BP1 ; les niveaux supérieurs sont sur devis. Plus de détails dans mon{" "}
+          <Link href="/blog/certification-a2p-serrure-nice/" className={linkClass}>
+            article sur la certification A2P
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Les cinq lignes que je pose",
     paragraphs: [
       <>
-        Lisseo (design épuré, 3 finitions), Solo (bois avec moulures), Ferro
-        (panneaux acier, reproduction de l&apos;existant possible), Vitréo
-        (version vitrée) et Designo (3 lignes design) : cinq
-        lignes de la gamme{" "}
+        Je pose la gamme{" "}
         <a
           href="https://www.valentesecurystar.com/"
           target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
+          rel="noopener"
+          className={linkClass}
         >
           Valente Securystar
         </a>
-        , fabricant français installé à Thiais depuis 1995. Le détail de
-        chaque ligne est dans mon guide complet. 1 ou 2 vantaux possibles,
-        dimensions standard.
+        , un fabricant français installé à Thiais depuis 1995. Cinq lignes, toutes en 1 ou 2 vantaux, en dimensions
+        standard :
       </>,
     ],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Lisseo</strong> : design épuré, trois finitions (bois lisse, acier époxy, acier
+          décor bois). C&apos;est la ligne du prix de départ.
+        </li>
+        <li>
+          <strong className="text-navy">Solo</strong> : bois avec moulures, encastrées, à motifs ou en applique.
+        </li>
+        <li>
+          <strong className="text-navy">Ferro</strong> : panneaux acier et moulures ; permet de reproduire l&apos;aspect
+          de votre porte actuelle.
+        </li>
+        <li>
+          <strong className="text-navy">Vitréo</strong> : version vitrée.
+        </li>
+        <li>
+          <strong className="text-navy">Designo</strong> : trois lignes design, graphique, esthétique et authentique.
+        </li>
+      </ul>
+    ),
   },
   {
-    heading: "Le niveau A2P BP, un critère de devis",
-    Icon: <ShieldIcon className="w-4 h-4" />,
+    heading: "Les options qui changent le devis",
     paragraphs: [
-      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes : je recommande le niveau selon le quartier et la valeur des biens à protéger. Le tarif de départ correspond à un bloc-porte certifié BP1, les niveaux supérieurs sont sur devis.",
+      "Trois options font varier le prix, et je vous les propose seulement si votre logement en a besoin :",
+    ],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">isolation phonique renforcée</strong>, pour un palier bruyant ou une cage
+          d&apos;escalier qui résonne ;
+        </li>
+        <li>
+          <strong className="text-navy">isolation thermique renforcée</strong>, pour une entrée exposée ou un palier non
+          chauffé ;
+        </li>
+        <li>
+          <strong className="text-navy">coupe-feu / pare-flammes</strong>, selon la configuration des parties communes
+          de votre immeuble.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Comment se passe un projet",
+    paragraphs: [],
+    extra: (
+      <>
+        <ol className={olClass}>
+          <li>
+            <strong className="text-navy">L&apos;appel.</strong> Vous me décrivez votre porte actuelle et ce qui compte
+            pour vous : sécurité, bruit, aspect. Je vous donne un premier avis au téléphone.
+          </li>
+          <li>
+            <strong className="text-navy">La visite.</strong> Je viens mesurer la porte et contrôler le cadre, le mur, le
+            seuil et le sens d&apos;ouverture. Gratuit, à l&apos;heure qui vous arrange.
+          </li>
+          <li>
+            <strong className="text-navy">Le devis.</strong> Remis sous 24 heures, avec la ligne, le niveau BP et les
+            options. Un acompte de 30 % est demandé à sa validation.
+          </li>
+          <li>
+            <strong className="text-navy">La fabrication.</strong> Environ 10 jours.
+          </li>
+          <li>
+            <strong className="text-navy">La pose.</strong> Sans travaux de maçonnerie. Je dépose l&apos;ancienne porte,
+            je pose le bloc neuf, je règle la fermeture et je vous remets les clés.
+          </li>
+        </ol>
+        <p className={pClass}>
+          Tous mes prix sont sur ma page{" "}
+          <Link href="/tarifs-serrurier-nice/" prefetch={false} className={linkClass}>
+            tarifs
+          </Link>
+          . La facture détaillée vous est envoyée par e-mail. Le matériel est couvert par la garantie fabricant Valente
+          Securystar de 15 ans. Pour un logement de plus de 2 ans, la TVA est à 10 %.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Quand ce n'est pas la bonne solution",
+    paragraphs: [
+      "Un bloc-porte est la solution la plus complète, pas toujours la plus utile. Je vous oriente ailleurs dans trois cas :",
+    ],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Votre porte est saine</strong> : un blindage de porte la renforce pour moins
+          cher, et elle garde son aspect.
+        </li>
+        <li>
+          <strong className="text-navy">Le problème est localisé</strong> : un{" "}
+          <Link href="/changement-serrure-nice/" className={linkClass}>
+            cylindre usé
+          </Link>
+          , une serrure fatiguée ou une porte mal réglée se réparent sans changer toute la porte.
+        </li>
+        <li>
+          <strong className="text-navy">Votre budget est serré</strong> : une{" "}
+          <Link href="/serrure-carenee-nice/" className={linkClass}>
+            serrure carénée
+          </Link>{" "}
+          ou une{" "}
+          <Link href="/poignee-blindee-nice/" className={linkClass}>
+            poignée blindée
+          </Link>{" "}
+          apportent déjà un vrai gain de résistance, pour une fraction du prix.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Copropriété : ce qu'il faut vérifier",
+    paragraphs: [
+      "Votre porte d'entrée fait partie de l'aspect des parties communes côté palier. Si la ligne choisie change cet aspect (couleur, moulures, finition), il faut l'autorisation de la copropriété avant de commander. Si l'aspect reste le même, aucune autorisation n'est nécessaire. Je peux reproduire l'aspect de votre porte actuelle avec la ligne Ferro.",
     ],
   },
   {
-    heading: "Les options qui influencent le devis",
-    Icon: <WrenchIcon className="w-4 h-4" />,
+    heading: "Avant de signer un devis de porte blindée : 4 vérifications",
     paragraphs: [
-      "Isolation phonique renforcée, isolation thermique renforcée, option coupe-feu / pare-flammes : trois vrais critères à discuter selon votre logement, pas des cases accessoires.",
+      "Une porte blindée est un achat de plusieurs milliers d'euros. Quel que soit l'artisan, vérifiez ces quatre points avant de signer :",
     ],
-  },
-  {
-    heading: "Devis, acompte et copropriété",
-    Icon: <DoubleLockIcon className="w-4 h-4" />,
-    paragraphs: [
-      "La prise de mesures sur place et le devis sont gratuits, le devis vous est remis sous 24h. Un acompte de 30 % est demandé à la validation du devis. En copropriété, une autorisation n'est nécessaire que si l'aspect extérieur de la porte change.",
-    ],
-  },
-  {
-    heading: "Fabrication et pose",
-    Icon: <HandshakeIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Délai d'environ 10 jours, sans travaux de maçonnerie. Le matériel est couvert par la garantie fabricant Valente Securystar de 15 ans. Paiement par carte bancaire, espèces ou virement, facture envoyée par e-mail.",
-    ],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Le niveau de certification est écrit sur le devis</strong> (BP1, BP2 ou BP3),
+          avec la marque et la ligne de la porte. « Porte blindée » seul ne veut rien dire.
+        </li>
+        <li>
+          <strong className="text-navy">Le prix comprend la pose et la dépose</strong> de l&apos;ancienne porte, et le
+          devis dit si des options sont incluses ou non.
+        </li>
+        <li>
+          <strong className="text-navy">L&apos;acompte reste raisonnable.</strong> Chez moi, 30 % à la validation du
+          devis.
+        </li>
+        <li>
+          <strong className="text-navy">La garantie du fabricant est indiquée</strong> sur le devis ou la facture, avec
+          sa durée.
+        </li>
+      </ol>
+    ),
   },
 ];
 
 const faqFr = [
   {
-    question: "Combien coûte un bloc-porte blindé à Nice ?",
+    question: "Combien coûte une porte blindée à Nice ?",
     answer:
-      "Le tarif d'un bloc-porte blindé démarre à 3 490 € TTC pour un bloc-porte certifié BP1 (ligne d'entrée de gamme), pose comprise. Les niveaux A2P supérieurs et les autres lignes sont chiffrés sur devis, selon vos besoins réels : niveau de sécurité recherché, isolation phonique ou thermique souhaitée, options anti-feu si nécessaire. La prise de mesures sur place est gratuite et le devis, sans engagement, vous est remis sous 24h.",
+      "À partir de 3 490 € TTC pose comprise, pour un bloc-porte certifié BP1 de la ligne Lisseo. Les niveaux BP2 et BP3, les autres lignes et les options sont sur devis. Mesures et devis sont gratuits.",
   },
   {
     question: "Quelle différence avec un blindage de porte ?",
     answer:
-      "Le bloc-porte remplace l'ensemble de la menuiserie (porte, dormant, serrure). Le blindage conserve votre porte existante et renforce son bâti, pour un coût nettement inférieur quand votre porte reste saine : voir ma page blindage de porte.",
+      "Le bloc-porte remplace toute la porte et son cadre. Le blindage garde votre porte et la renforce, à partir de 2 689 € TTC, quand elle est encore saine.",
   },
   {
-    question: "Quel niveau A2P BP choisir ?",
+    question: "Quel niveau A2P choisir ?",
     answer:
-      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes. Je recommande le niveau en fonction du quartier et de la valeur des biens à protéger chez vous : j'en discute avec vous lors de la visite, ce n'est pas un tarif fixe.",
+      "BP1 résiste 5 minutes, BP2 10 minutes, BP3 15 minutes. Je vous conseille selon l'étage, le quartier et ce que vous avez à protéger, et selon ce qu'exige votre assureur.",
   },
   {
-    question: "Combien de temps faut-il pour avoir un bloc-porte ?",
-    answer: "Le délai est d'environ 10 jours, sans maçonnerie.",
-  },
-  {
-    question: "Quelle garantie sur un bloc-porte blindé ?",
+    question: "Combien de temps faut-il pour avoir la porte ?",
     answer:
-      "Le matériel est couvert par la garantie fabricant Valente Securystar de 15 ans.",
+      "Environ 10 jours de fabrication, puis la pose, sans maçonnerie. Si votre porte a été forcée, je la sécurise en attendant.",
   },
   {
-    question: "Peut-on avoir une porte vitrée ou à deux vantaux ?",
-    answer:
-      "Oui, la ligne Vitréo propose une version vitrée, et l'ensemble des lignes existe en 1 ou 2 vantaux. Les blocs-portes sont proposés en dimensions standard uniquement.",
+    question: "Faut-il l'accord de la copropriété ?",
+    answer: "Seulement si l'aspect extérieur de la porte change.",
   },
   {
-    question: "Faut-il l'accord de la copropriété pour changer ma porte d'entrée ?",
-    answer:
-      "Une autorisation n'est nécessaire que si l'aspect extérieur de la porte change.",
+    question: "Quelle garantie ?",
+    answer: "La garantie fabricant Valente Securystar de 15 ans sur le matériel.",
   },
   {
-    question: "La prise de mesures est-elle payante, et faut-il un acompte ?",
+    question: "Faut-il verser un acompte ?",
     answer:
-      "La prise de mesures sur place est gratuite. Un acompte de 30 % est demandé une fois le devis validé. Le paiement se fait par carte bancaire, espèces ou virement, et la facture vous est envoyée par e-mail.",
+      "Oui, 30 % à la validation du devis. Le reste se règle par carte bancaire, espèces ou virement, avec une facture détaillée.",
   },
 ];
 
@@ -429,8 +421,9 @@ export default function InstallationPorteBlindeeNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Installation de porte blindée à Nice : prix et bloc-porte neuf",
-        lead: "Remplacement complet par un bloc-porte neuf, certifié A2P : la solution la plus complète quand votre porte ou son bâti ne tiennent plus la route. Prix d'une porte blindée neuve à Nice : à partir de 3 490 € TTC pose comprise (certifié BP1), devis personnalisé selon la ligne et les options retenues.",
+        h1: "Porte blindée à Nice : un bloc-porte neuf, certifié A2P",
+        lead: "Quand votre porte ou son cadre ne tiennent plus, je remplace l'ensemble par un bloc-porte blindé neuf, certifié A2P. À partir de 3 490 € TTC pose comprise pour un bloc-porte certifié BP1. La prise de mesures et le devis sont gratuits, et le devis vous est remis sous 24 heures.",
+        hideProcessSteps: true,
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Installation porte blindée",
@@ -439,47 +432,17 @@ export default function InstallationPorteBlindeeNicePage() {
           src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
           alt: "Installation porte blindée Nice",
         },
-        sectionsVariant: "cards",
-        sectionsHeading: "Ce qu'il faut savoir sur le bloc-porte blindé",
         headingScale: "lg",
         extra: (
           <>
             <PriceReminder
-            priceLabel="à partir de 3 490 € TTC"
-            note="Bloc-porte certifié BP1, ligne d'entrée de gamme (Lisseo), pose comprise. Les niveaux supérieurs et les autres lignes sont sur devis, selon le niveau A2P BP et les options (isolation, coupe-feu) : mesures et devis gratuits, devis remis sous 24h."
-            locale="fr"
-          />
+              priceLabel="à partir de 3 490 € TTC"
+              note="Bloc-porte certifié BP1, ligne Lisseo, pose comprise. Autres lignes et niveaux BP2, BP3 sur devis. Mesures et devis gratuits."
+              locale="fr"
+            />
             <ServiceReviewsLive path="/installation-porte-blindee-nice/" />
           </>
         ),
-        processSteps: [
-          {
-            title: "Appel",
-            text: "Vous me décrivez votre porte actuelle et vos priorités (sécurité, isolation, esthétique) pour un premier avis dès le téléphone.",
-          },
-          {
-            title: "Rendez-vous",
-            text: "Je fixe un rendez-vous pour évaluer votre porte et son bâti sur place, à l'heure qui vous convient. La prise de mesures est gratuite.",
-          },
-          {
-            title: "Choix de la ligne et devis",
-            text: "Je vous présente les cinq lignes disponibles et j'établis un devis personnalisé selon le niveau A2P et les options retenues, remis sous 24h. Un acompte de 30 % est demandé à sa validation.",
-          },
-          {
-            title: "Fabrication et pose",
-            text: "Délai d'environ 10 jours, pose sans maçonnerie, facture détaillée envoyée par e-mail.",
-          },
-        ],
-        relatedArticle: {
-          href: "/blog/certification-a2p-serrure-nice/",
-          label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
-        },
-        guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
-            {guideContent}
-          </ServiceGuideSection>
-        ),
-        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Armored door installation in Nice: price and new door block",
