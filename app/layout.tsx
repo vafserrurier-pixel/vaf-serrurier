@@ -8,7 +8,7 @@ import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import { business } from "@/lib/business";
 import { localBusinessSchema } from "@/lib/schema";
-import { getGoogleReviews } from "@/lib/reviews";
+import { excludeOffTradeReviews, getGoogleReviews } from "@/lib/reviews";
 import { ReviewStatsProvider } from "@/components/ReviewStatsProvider";
 import { LocaleProvider } from "@/lib/locale";
 
@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     >
       <body className="min-h-full flex flex-col bg-cream">
         <LocaleProvider>
-          <ReviewStatsProvider rating={rating} count={count} reviews={reviews.slice(0, 6)} live={live}>
+          <ReviewStatsProvider rating={rating} count={count} reviews={excludeOffTradeReviews(reviews).slice(0, 6)} live={live}>
           <JsonLd data={localBusinessSchema()} />
           <a
             href="#main-content"

@@ -1,4 +1,5 @@
 import { business } from "./business";
+import { offTradeReviewKeywords } from "./serviceReviewKeywords";
 
 export type Review = {
   author: string;
@@ -109,10 +110,10 @@ export async function getGoogleReviews(): Promise<GoogleReviews> {
   }
 }
 
-// Utilisé par le carrousel (route /api/reviews) : s'appuie sur getGoogleReviews, donc sur le même appel et le même cache.
+// Utilisé par la route /api/reviews : s'appuie sur getGoogleReviews, donc sur le même appel et le même cache.
 export async function fetchReviews(): Promise<{ reviews: Review[]; live: boolean }> {
   const { reviews, live } = await getGoogleReviews();
-  return { reviews: reviews.slice(0, 6), live };
+  return { reviews: excludeOffTradeReviews(reviews).slice(0, 6), live };
 }
 
 const normalize = (s: string) =>
@@ -120,6 +121,21 @@ const normalize = (s: string) =>
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
+
+/**
+ * Écarte les avis dont le texte contient un mot d'un autre métier (offTradeReviewKeywords :
+ * plomberie, etc.). Même comparaison que pickReviewsForService : sans casse, sans accents, par fragment de mot.
+ */
+export function excludeOffTradeReviews(
+  allReviews: Review[],
+  excludeKeywords: string[] = offTradeReviewKeywords
+): Review[] {
+  const excluded = excludeKeywords.map(normalize);
+  return allReviews.filter((r) => {
+    const text = normalize(r.text);
+    return !excluded.some((word) => text.includes(word));
+  });
+}
 
 export type PickedReview = Review & { matchedKeywords: string[] };
 
@@ -137,11 +153,7 @@ export function pickReviewsForService(
   limit = 3,
   excludeKeywords: string[] = []
 ): PickedReview[] {
-  const excluded = excludeKeywords.map(normalize);
-  const reviews = allReviews.filter((r) => {
-    const text = normalize(r.text);
-    return !excluded.some((word) => text.includes(word));
-  });
+  const reviews = excludeOffTradeReviews(allReviews, excludeKeywords);
   const keys = keywords.map((raw) => ({ raw, norm: normalize(raw) }));
   const byRecent = (a: Review, b: Review) => (b.publishTime ?? "").localeCompare(a.publishTime ?? "");
 

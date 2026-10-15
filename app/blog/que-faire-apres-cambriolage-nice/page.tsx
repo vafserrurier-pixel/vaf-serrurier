@@ -248,7 +248,7 @@ export default function QueFaireApresUnCambriolagePage() {
                 Contrairement à une idée reçue, le délai n&apos;est pas laissé à
                 l&apos;appréciation de chaque assureur : l&apos;
                 <a
-                  href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
+                  href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035731302"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-steel underline"
