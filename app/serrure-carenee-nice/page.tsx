@@ -3,319 +3,365 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
 import BrandsSection from "@/components/BrandsSection";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import QuoteBlock from "@/components/QuoteBlock";
 import ArticleTable from "@/components/ArticleTable";
-import { ShieldIcon, WrenchIcon, DoorIcon, CheckIcon, KeyIcon } from "@/components/Icons";
-import { buildMetadata } from "@/lib/metadata";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import { buildMetadata } from "@/lib/metadata";
 
-const guideToc = [
-  { id: "qualite", label: "Reconnaître un carénage de qualité" },
-  { id: "5-points", label: "Le vrai rôle des 5 points d'ancrage" },
-  { id: "a2p", label: "Serrure carénée et certification A2P : ce qu'il faut vérifier" },
-  { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
-  { id: "entretien", label: "Entretien : ce qui prolonge la résistance" },
-  { id: "faq", label: "Questions complémentaires" },
-];
+export const metadata: Metadata = buildMetadata({
+  path: "/serrure-carenee-nice/",
+  title: "Serrure carénée 5 points Nice : Héraclès, 1 249 € posée",
+  description:
+    "Serrure carénée 5 points à Nice : Héraclès Sésame A2P 1 étoile à 1 249 € TTC posée, pose garantie 2 ans, fabricant 10 ans. Tél. 04 22 13 85 44",
+});
 
-const guideFaq = [
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+
+const sections = [
   {
-    question: "Toutes les serrures carénées 5 points sont-elles équivalentes ?",
-    answer:
-      "Non. Le nombre de points annoncé ne dit rien de l'épaisseur du carénage, de la qualité de l'acier ni de la précision du réglage des points d'ancrage, qui font la vraie différence sur la résistance réelle.",
+    heading: "Ce que change une serrure carénée",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Sur beaucoup de portes niçoises, la serrure d&apos;origine ne ferme que sur un point, au niveau de la
+          poignée. Le haut et le bas de la porte restent libres : avec un levier, on peut écarter la porte du cadre et
+          faire sauter ce point unique.
+        </p>
+        <p className={pClass}>La serrure carénée répond à ce problème de deux façons :</p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">5 points de fermeture</strong> : un pêne au centre, des points en haut et
+            en bas, et des points intermédiaires. L&apos;effort d&apos;une attaque se répartit sur toute la hauteur du
+            cadre, au lieu de se concentrer au milieu.
+          </li>
+          <li>
+            <strong className="text-navy">Un carénage en acier</strong> : le boîtier et les tringles sont couverts par
+            un capot métallique. Une serrure en applique sans capot laisse son mécanisme exposé à la pince ou à la
+            perceuse ; le carénage supprime ce point faible.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Elle se pose sur la face intérieure de la porte, sans entaille dans le bois : elle convient aux portes en
+          bois comme aux portes métalliques. Pour choisir le nombre de points, voir mon article sur les serrures{" "}
+          <Link href="/blog/serrure-multipoints-3-5-7-nice/" className={linkClass}>
+            3, 5 ou 7 points
+          </Link>
+          .
+        </p>
+      </>
+    ),
   },
   {
-    question: "Une serrure carénée non certifiée A2P protège-t-elle quand même ?",
-    answer:
-      "Oui, le carénage seul apporte déjà un vrai gain par rapport à une serrure en applique classique exposée. La certification A2P est surtout déterminante si vous voulez faire valoir ce renfort auprès de votre assurance.",
+    heading: "Le prix : un forfait, pas une fourchette",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Prestation", "Ce qui est compris", "Prix TTC"]}
+          rows={[
+            [
+              "Serrure carénée Héraclès Sésame, A2P 1 étoile",
+              "Serrure, cylindre, pose et réglage des 5 points",
+              "1 249 €",
+            ],
+            [
+              "Serrure carénée A2P 3 étoiles",
+              "Un niveau de résistance supérieur, ou une exigence de votre assureur",
+              "Sur devis",
+            ],
+            ["Combo blindage pivot + serrure carénée", "La carénée, plus un renfort acier côté charnières", "Dès 1 890 €"],
+            [
+              "Blindage complet (pour comparaison)",
+              "Bâti acier sur tout le dormant, serrure en applique, porte conservée",
+              "Dès 2 689 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Le forfait couvre toute la gamme Héraclès Sésame, notamment les modèles Y8C et HXR. Le modèle exact est
+          choisi après avoir vu votre porte, pas au téléphone : le prix, lui, ne change pas.
+        </p>
+        <p className={pClass}>
+          Attention à ne pas confondre le combo avec un{" "}
+          <Link href="/blindage-porte-nice/" className={linkClass}>
+            blindage complet
+          </Link>
+          . Le blindage pivot ne renforce que le côté charnières, la carénée protégeant déjà le côté serrure. Le
+          blindage complet habille tout le dormant d&apos;un bâti acier : c&apos;est la solution pour un renfort
+          global sans changer la porte. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
   },
   {
-    question: "Puis-je changer uniquement le cylindre d'une serrure carénée A2P sans perdre la certification ?",
-    answer:
-      "Non, pas avec n'importe quel cylindre. Pour conserver la certification A2P, le cylindre et les accessoires posés doivent eux-mêmes être certifiés A2P et compatibles avec le boîtier installé.",
+    heading: "Carénée, poignée ou blindage : laquelle pour votre porte",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Ce que vous constatez", "Ce que je propose", "Prix TTC posé"]}
+          rows={[
+            [
+              "Porte et serrure saines, seul le cylindre dépasse et paraît fragile",
+              <Link key="poignee" href="/poignee-blindee-nice/" className={linkClass}>
+                Poignée blindée
+              </Link>,
+              "349 €",
+            ],
+            [
+              "Clés perdues ou cylindre usé, serrure en bon état",
+              <Link key="cylindre" href="/changement-serrure-nice/" className={linkClass}>
+                Cylindre neuf
+              </Link>,
+              "Dès 249 €",
+            ],
+            ["Porte saine qui ne ferme que sur un point", "Serrure carénée 5 points", "1 249 €"],
+            ["Porte saine, mais vous voulez une vraie porte blindée", "Blindage complet", "Dès 2 689 €"],
+            [
+              "Porte ou cadre abîmés, déformés ou pourris",
+              <Link key="bloc" href="/installation-porte-blindee-nice/" className={linkClass}>
+                Bloc-porte blindé neuf
+              </Link>,
+              "Dès 3 490 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Je vous conseille selon l&apos;état réel de votre porte, pas selon la solution la plus chère.
+        </p>
+      </>
+    ),
   },
   {
-    question: "Faut-il entretenir une serrure carénée particulièrement ?",
-    answer:
-      "Un contrôle du jeu de fermeture et un léger lubrifiant sec sur les points d'ancrage, une à deux fois par an, suffisent à préserver le réglage dans la durée.",
+    heading: "Ce que je vérifie avant la pose",
+    paragraphs: [],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Le support</strong> : les points haut et bas s&apos;ancrent dans le cadre et
+          dans le sol ou le linteau. Ils ont besoin d&apos;un bois ou d&apos;une maçonnerie sains pour tenir.
+        </li>
+        <li>
+          <strong className="text-navy">La porte</strong> : son épaisseur, sa planéité, et le jeu avec le cadre. Une
+          porte voilée se règle d&apos;abord, sinon les points ne s&apos;engagent pas.
+        </li>
+        <li>
+          <strong className="text-navy">L&apos;ancienne serrure</strong> : ses trous et ses entailles, qu&apos;il
+          faut parfois reboucher ou recouvrir.
+        </li>
+        <li>
+          <strong className="text-navy">Le sens d&apos;ouverture et la place côté intérieur</strong>, pour le capot
+          et les tringles.
+        </li>
+      </ol>
+    ),
   },
   {
-    question: "Si je fais réparer ma serrure carénée A2P ailleurs, est-ce que je risque quelque chose ?",
-    answer:
-      "Oui, potentiellement : la certification A2P couvre l'ensemble carénage + cylindre + accessoires tel que testé en laboratoire. Un cylindre non compatible posé après coup, même par un autre professionnel, peut faire perdre cette certification d'ensemble sans que le carénage lui-même soit endommagé.",
+    heading: "Combien de temps dure la pose",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>Comptez 3 à 5 heures. Le temps dépend surtout du cadre :</p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">vers 5 heures sur un bâti en bois ancien</strong>, comme beaucoup de portes
+            palières du Vieux-Nice ou de Cimiez : le réglage des points d&apos;ancrage demande plus de finesse ;
+          </li>
+          <li>
+            <strong className="text-navy">vers 3 heures sur un bâti en béton ou en acier</strong>, plus régulier,
+            comme dans la plupart des immeubles récents.
+          </li>
+        </ul>
+        <p className={pClass}>
+          La pose se fait sur rendez-vous, à l&apos;heure qui vous convient. Le soir même, vous fermez chez vous avec
+          vos nouvelles clés.
+        </p>
+      </>
+    ),
   },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille les critères techniques qui distinguent une bonne
-      installation d&apos;une autre, au-delà du simple nombre de points
-      annoncé.
-    </p>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-      <p className="font-heading font-bold text-navy mb-4">Le forfait, en un coup d&apos;œil</p>
-      <ArticleTable
-        headers={["Prestation", "Prix"]}
-        rows={[
-          ["Serrure carénée Héraclès Sésame, fournie posée", "1 249 € TTC"],
-          ["Combo blindage pivot + serrure carénée, fourni posé", "à partir de 1 890 € TTC"],
-        ]}
-      />
-      <p className="text-slate leading-relaxed mt-4">
-        Un forfait unique couvre l&apos;ensemble de la gamme Héraclès Sésame
-        (notamment Y8C, HXR), pour simplifier votre choix : le modèle exact
-        posé est confirmé après diagnostic sur place, pas avant.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Attention à ne pas confondre ce combo avec un{" "}
-        <Link href="/blindage-porte-nice/" className="text-steel underline">
-          blindage complet
-        </Link>{" "}
-        : le blindage pivot ne renforce que le côté charnières de la porte,
-        en complément de la carénée qui protège déjà le côté serrure. Un
-        blindage complet (bâti acier autour de l&apos;ensemble du dormant,
-        conservant votre porte existante) va plus loin et démarre à 2 689 €
-        TTC, la solution cohérente pour un renfort global sans remplacer la
-        porte. Si le bâti lui-même est fragilisé, c&apos;est plutôt un{" "}
-        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-          bloc-porte neuf
-        </Link>{" "}
-        qu&apos;il faut envisager.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Garantie fabricant Héraclès de 10 ans sur le mécanisme. Comptez
-        généralement 3 à 5 heures de pose : plutôt vers 5 heures sur un bâti
-        bois ancien qui demande des ajustements fins, plutôt vers 3 heures
-        sur un bâti béton ou acier plus régulier.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        À Nice, cette différence de bâti se retrouve concrètement d&apos;un
-        quartier à l&apos;autre : les portes palières anciennes en bois du
-        Vieux-Nice ou de Cimiez demandent souvent un réglage plus minutieux
-        des points d&apos;ancrage, tandis que les bâtis plus récents, par
-        exemple à Fabron, offrent généralement un support plus régulier pour
-        la pose.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={1} id="qualite" level="h3" size="lg" numberStyle="plain">
-        Reconnaître un carénage de qualité
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Trois éléments comptent bien plus que la marque affichée : l&apos;épaisseur
-        réelle de la tôle de carénage, la qualité de l&apos;acier utilisé pour
-        les points d&apos;ancrage, et surtout la précision du réglage lors de
-        la pose. Un boîtier haut de gamme mal réglé cède parfois plus vite
-        qu&apos;un modèle plus simple correctement ajusté au dormant.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="5-points" level="h3" size="lg" numberStyle="plain">
-        Le vrai rôle des 5 points d&apos;ancrage
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Les 5 points ne s&apos;ajoutent pas au hasard : un pêne central assure
-        la fermeture principale, des points hauts et bas limitent l&apos;arrachement
-        aux extrémités de la porte, et des points intermédiaires répartissent
-        l&apos;effort sur toute la hauteur du dormant. C&apos;est cette
-        répartition, pas seulement le nombre affiché, qui empêche la porte de
-        céder par déformation plutôt que par la serrure elle-même.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="a2p" level="h3" size="lg" numberStyle="plain">
-        Serrure carénée et certification A2P : ce qu&apos;il faut vérifier
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Certains modèles carénés, notamment chez Héraclès, existent en
-        version certifiée{" "}
-        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-          A2P
+  {
+    heading: "A2P : ce qui fait garder ou perdre la certification",
+    paragraphs: [
+      <>
+        Les Sésame que je pose sont{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className={linkClass}>
+          certifiées A2P 1 étoile
         </Link>
-        . Un point souvent ignoré : pour conserver cette certification,
-        l&apos;ensemble du cylindre et des accessoires posés doit lui-même
-        être certifié A2P et compatible avec le boîtier. Un cylindre
-        générique posé sur un boîtier certifié fait perdre la certification
-        d&apos;ensemble, même si le carénage seul reste physiquement solide.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
-        Quand ce n&apos;est pas la bonne solution
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        La serrure carénée est un bon renfort intermédiaire, pas une réponse
-        universelle. Quatre cas où je vous oriente ailleurs :
-      </p>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
+        . Pour un niveau supérieur, je pose aussi des carénées certifiées A2P 3 étoiles, sur devis. La certification
+        porte sur l&apos;ensemble testé : le boîtier, le cylindre et leurs accessoires. Si vous changez plus tard le
+        cylindre pour un modèle non certifié ou non compatible, l&apos;ensemble perd sa certification, même si le
+        carénage reste intact.
+      </>,
+      "C'est un point à garder en tête si votre assureur demande une serrure certifiée : ce jour-là, faites remplacer le cylindre par un modèle compatible, certifié au même niveau.",
+    ],
+  },
+  {
+    heading: "Ce que je refuse de faire",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
         <li>
-          <strong className="text-navy">Porte ou bâti trop fragile pour un ancrage fiable</strong> :
-          les points d&apos;ancrage d&apos;une carénée ont besoin d&apos;un support sain pour tenir
-          dans la durée. Si le dormant ou le cadre sont eux-mêmes affaiblis, je vous oriente vers un{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            bloc-porte blindé
-          </Link>
-          , qui reprend l&apos;ensemble plutôt que de renforcer une base fragile.
+          <strong className="text-navy">Poser une poignée blindée sur une serrure carénée</strong> : le carénage
+          protège déjà le cylindre, une poignée blindée par-dessus n&apos;apporte rien de plus.
         </li>
         <li>
-          <strong className="text-navy">Budget serré et seul le cylindre est en cause</strong> : si
-          le mécanisme et le bâti sont sains et que le point faible est uniquement le cylindre exposé,
-          une{" "}
-          <Link href="/poignee-blindee-nice/" className="text-steel underline">
-            poignée blindée
+          <strong className="text-navy">Poser une carénée sur un cadre fragile</strong> : les points d&apos;ancrage ne
+          tiendraient pas. Je vous oriente alors vers un bloc-porte neuf.
+        </li>
+        <li>
+          <strong className="text-navy">Vous vendre une carénée quand un cylindre neuf suffit</strong> : si seul le
+          cylindre est en cause, je change le cylindre.
+        </li>
+        <li>
+          <strong className="text-navy">Poser une carénée en urgence</strong>{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            après une effraction
           </Link>{" "}
-          coûte moins cher pour un effet dissuasif réel. Je ne combine jamais poignée blindée et
-          serrure carénée sur le même point : la carénée protège déjà le cylindre par construction,
-          ajouter une poignée blindée par-dessus n&apos;apporte rien de plus sur ce même point.
-        </li>
-        <li>
-          <strong className="text-navy">Locataire sans accord écrit du propriétaire</strong> : un
-          renfort structurel comme la carénée modifie durablement l&apos;installation. Sans accord,
-          mieux vaut une solution non définitive comme un{" "}
-          <Link href="/changement-serrure-nice/" className="text-steel underline">
-            changement de cylindre
-          </Link>
-          , plus facile à justifier et à faire accepter.
-        </li>
-        <li>
-          <strong className="text-navy">Besoin de résistance structurelle globale</strong> : face à
-          des attaques au levier sur une porte par ailleurs saine, un blindage complet reste
-          cohérent ; si le bâti lui-même est déjà fragilisé, la réponse passe par un bloc-porte
-          neuf, pas un renfort ciblé sur la seule serrure.
+          : le soir même, je remets la porte en état de fermer ; la carénée se pose ensuite, sur rendez-vous.
         </li>
       </ul>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={5} id="entretien" level="h3" size="lg" numberStyle="plain">
-        Entretien : ce qui prolonge la résistance
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un contrôle visuel du jeu de fermeture et un lubrifiant sec sur les
-        points d&apos;ancrage, une à deux fois par an, suffisent à préserver
-        le réglage. Si la clé commence à forcer ou qu&apos;un point ne
-        s&apos;engage plus correctement, mieux vaut intervenir tôt : voir ma
-        page{" "}
-        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-          dépannage serrurier
-        </Link>
-        . Pour le cylindre de la serrure, voir mon article sur l&apos;
-        <Link href="/blog/entretien-serrure/" className="text-steel underline">
+    ),
+  },
+  {
+    heading: "Exemple type",
+    paragraphs: [
+      "Exemple type, une situation fréquente et non un client précis : un appartement au deuxième étage d'un immeuble ancien, porte palière en bois massif, serrure d'origine à un point, voisin cambriolé le mois précédent. Le bois est sain, le cadre tient bien. Ici, la serrure carénée est cohérente : la porte ferme désormais en haut, au milieu et en bas, l'aspect côté palier ne change pas, et la pose prend environ 5 heures sur ce bâti en bois.",
+    ],
+  },
+  {
+    heading: "Copropriété et location",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Copropriété</strong> : la serrure se pose côté intérieur, l&apos;aspect de la
+          porte vu du palier ne change pas. Dans la grande majorité des cas, aucune autorisation n&apos;est
+          nécessaire. Si vous êtes{" "}
+          <Link href="/agences-syndics-nice/" className={linkClass}>
+            syndic
+          </Link>{" "}
+          ou gestionnaire, je travaille aussi pour les parties communes.
+        </li>
+        <li>
+          <strong className="text-navy">Location</strong> : la carénée modifie durablement la porte. Si vous êtes
+          locataire, demandez l&apos;accord écrit de votre propriétaire. Sans accord, un changement de cylindre reste
+          la solution la plus simple.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Garantie, devis et paiement",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">La garantie</strong> : ma pose est garantie 2 ans, et le mécanisme est
+          couvert par la garantie fabricant Héraclès de 10 ans.
+        </li>
+        <li>
+          <strong className="text-navy">Le devis</strong> : le prix est confirmé avant que je commence, et c&apos;est
+          celui que vous payez.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : par carte bancaire, en espèces ou par virement, avec
+          une facture détaillée.
+        </li>
+        <li>
+          <strong className="text-navy">La vidéo</strong> : si vous n&apos;êtes pas sur place, je vous envoie sur
+          demande une courte vidéo avant/après, par WhatsApp ou par e-mail.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Entretien",
+    paragraphs: [],
+    extra: (
+      <p className={pClass}>
+        Un coup d&apos;œil au jeu de fermeture et un lubrifiant sec sur les points d&apos;ancrage, une à deux fois par
+        an, suffisent à garder le réglage. Si la clé commence à forcer ou qu&apos;un point ne s&apos;engage plus,
+        appelez-moi tôt. Pour le cylindre, voir mon article sur l&apos;
+        <Link href="/blog/entretien-serrure/" className={linkClass}>
           entretien d&apos;une serrure
         </Link>
         .
       </p>
-    </div>
-  </>
-);
-
-export const metadata: Metadata = buildMetadata({
-  path: "/serrure-carenee-nice/",
-  title: "Serrure carénée 5 points à Nice – En applique",
-  description: "Installation d'une serrure carénée 5 points en applique à Nice : renfort intermédiaire entre cylindre standard et blindage complet. Devis annoncé, 24h/24.",
-});
-
-const sections = [
-  {
-    heading: "Qu'est-ce qu'une serrure carénée",
-    Icon: <ShieldIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Une serrure carénée est une serrure en applique, posée sur la face intérieure de la porte plutôt qu'encastrée dedans. Son boîtier est protégé par un carénage métallique qui empêche un cambrioleur de s'attaquer directement au mécanisme à la pince ou à la perceuse. C'est justement cette exposition du boîtier qui fait la faiblesse classique d'une serrure en applique non protégée.",
-      "Le modèle à 5 points répartit la résistance sur plusieurs points d'ancrage dans le dormant. Cela limite le risque de faire céder la porte par arrachement plutôt que par la serrure elle-même, un mode d'effraction fréquent sur les portes équipées d'une simple serrure à un point.",
-    ],
-  },
-  {
-    heading: "Un renfort intermédiaire, pas un blindage complet",
-    Icon: <WrenchIcon className="w-4 h-4" />,
-    paragraphs: [
-      "C'est une solution efficace quand votre porte reste saine mais que la serrure en place n'offre plus une résistance suffisante, sans passer par un blindage complet ou un bloc-porte neuf. Le coût reste nettement inférieur à une installation de porte blindée, pour un vrai gain de résistance sur l'accès.",
-      <>
-        Si le bâti ou la porte elle-même sont fatigués, en revanche, une
-        serrure carénée seule ne suffit pas : le détail des cas où je vous
-        oriente vers une autre solution est dans mon{" "}
-        <Link href="#pas-la-solution" className="text-steel underline">
-          guide complet
-        </Link>
-        .
-      </>,
-    ],
-  },
-  {
-    heading: "Compatible avec la plupart des portes existantes",
-    Icon: <DoorIcon className="w-4 h-4" />,
-    paragraphs: [
-      <>
-            La pose en applique ne nécessite pas de modifier la structure de la porte, contrairement à une serrure encastrée. Elle convient aussi bien à une porte en bois qu&apos;à une porte métallique, en résidence principale comme en{" "}
-            <Link href="/agences-syndics-nice/" className="text-steel underline">
-              copropriété
-            </Link>{" "}
-            où le règlement impose parfois de préserver l&apos;aspect extérieur du palier.
-          </>,
-    ],
-  },
-  {
-    heading: "Les marques que je pose à Nice",
-    Icon: <CheckIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Je travaille avec des marques reconnues pour leurs serrures carénées, en particulier Héraclès, référence française sur ce type de mécanisme et courante sur les portes d'entrée à Nice. Vachette et Bricard proposent également des modèles fiables selon la configuration de votre porte.",
-      "Le choix de la marque compte moins que le diagnostic préalable : l'épaisseur du carénage, la qualité de l'acier et la précision du réglage des points d'ancrage font la vraie différence sur la résistance finale, bien plus qu'une référence commerciale à elle seule.",
-    ],
-  },
-  {
-    heading: "Cylindre standard, serrure carénée ou blindage : comment choisir",
-    Icon: <KeyIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Un simple remplacement de cylindre suffit quand la porte et son bâti sont sains et que seul le mécanisme de verrouillage montre des signes de faiblesse. La serrure carénée intervient un cran au-dessus, quand vous voulez renforcer significativement la résistance à l'effraction sans reprendre toute la porte. Le blindage complet reste une bonne option tant que la porte est saine mais mérite un renfort global ; le bloc-porte neuf devient nécessaire quand la porte elle-même, ou le bâti autour, ne tiennent plus la route.",
-      "Je vous conseille selon l'état réel constaté sur place, pas selon la solution la plus chère. Une bonne partie de mon travail consiste justement à éviter un suréquipement inutile sur une porte qui n'en a pas besoin.",
-    ],
+    ),
   },
 ];
 
 const faq = [
   {
+    question: "Combien coûte une serrure carénée 5 points à Nice ?",
+    answer:
+      "1 249 € TTC, fournie et posée, pour toute la gamme Héraclès Sésame. Le combo blindage pivot + serrure carénée démarre à 1 890 € TTC. Une carénée A2P 3 étoiles est possible sur devis.",
+  },
+  {
     question: "Quelle différence entre une serrure carénée et une serrure en applique classique ?",
     answer:
-      "Le carénage protège le boîtier du mécanisme, exposé et vulnérable sur une serrure en applique classique. C'est ce carénage qui apporte l'essentiel du gain de résistance.",
+      "Sur une serrure en applique classique, le mécanisme est exposé. Sur une carénée, il est caché sous un capot en acier, et la porte ferme sur plusieurs points de haut en bas.",
   },
   {
-    question: "Une serrure carénée remplace-t-elle un blindage de porte ?",
+    question: "Une serrure carénée remplace-t-elle un blindage ?",
     answer:
-      "Non, c'est un renfort intermédiaire. Si votre porte reste saine mais mérite un renfort global, un blindage complet est plus adapté ; si le bâti lui-même est fragile, c'est plutôt un bloc-porte neuf qu'il faut envisager. Je vous conseille selon l'état réel de votre porte, pas systématiquement la solution la plus chère.",
-  },
-  {
-    question: "Combien coûte une serrure 5 points en applique carénée à Nice ?",
-    answer:
-      "1 249 € TTC en forfait unique, fournie posée, pour la gamme Héraclès Sésame. Le combo blindage pivot + serrure carénée démarre à 1 890 € TTC. Le modèle exact est confirmé après diagnostic sur place.",
-  },
-  {
-    question: "Peut-on poser une serrure carénée en copropriété ?",
-    answer:
-      "Oui, dans la grande majorité des cas, puisqu'elle se pose côté intérieur et ne modifie pas l'aspect extérieur de la porte vu du couloir.",
+      "Non. Elle renforce la fermeture de la porte, pas la porte elle-même. Pour une vraie porte blindée sans changer la porte, il faut un blindage complet ; si le cadre est abîmé, un bloc-porte neuf.",
   },
   {
     question: "Combien de temps dure la pose ?",
     answer:
-      "Généralement 3 à 5 heures : plutôt vers 5 heures sur un bâti bois ancien qui demande des ajustements fins, plutôt vers 3 heures sur un bâti béton ou acier plus régulier.",
+      "3 à 5 heures : plutôt 5 heures sur un bâti en bois ancien, plutôt 3 heures sur un bâti en béton ou en acier.",
   },
   {
-    question: "Quelles marques de serrures carénées installez-vous ?",
+    question: "Peut-on poser une serrure carénée en copropriété ?",
     answer:
-      "Principalement Héraclès, référence sur ce type de mécanisme, ainsi que Vachette et Bricard selon la configuration de votre porte. Je vous oriente vers le modèle adapté après diagnostic, pas vers une marque par défaut.",
+      "Oui, dans la grande majorité des cas : elle se pose côté intérieur et ne change pas l'aspect de la porte vu du palier.",
+  },
+  {
+    question: "Peut-on ajouter une poignée blindée sur une serrure carénée ?",
+    answer: "Non, c'est inutile : le carénage protège déjà le cylindre.",
+  },
+  {
+    question: "Quelle garantie sur une serrure carénée ?",
+    answer:
+      "Ma pose est garantie 2 ans, et le mécanisme est couvert par la garantie fabricant Héraclès de 10 ans. Le paiement se fait par carte bancaire, en espèces ou par virement, avec une facture détaillée.",
   },
 ];
 
-export default function SerrureCareneeNicePage() {
+export default async function SerrureCareneeNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <ServicePageTemplate
-      h1="Serrure carénée 5 points en applique à Nice"
-      lead="Un renfort intermédiaire entre la serrure standard et le blindage complet : boîtier protégé, 5 points d'ancrage, sans modifier la structure de votre porte."
+      h1="Serrure carénée 5 points à Nice : 1 249 € fournie posée"
+      lead="Une serrure carénée ferme votre porte sur 5 points, de haut en bas, avec un mécanisme caché sous un capot en acier côté intérieur. Je pose la gamme Héraclès Sésame, certifiée A2P 1 étoile, à 1 249 € TTC, matériel et pose compris, sans toucher à l'aspect de votre porte côté palier. Comptez 3 à 5 heures de pose, sur rendez-vous, avec un devis confirmé avant que je commence."
+      hideProcessSteps
       sections={sections}
       faq={faq}
       breadcrumbLabel="Serrure carénée 5 points"
@@ -324,9 +370,8 @@ export default function SerrureCareneeNicePage() {
         src: "/images/serrurier-nice-porte-blindee-multipoints.webp",
         alt: "Serrure carénée Nice",
       }}
-      sectionsVariant="cards"
-      sectionsHeading="Ce qu'il faut savoir sur la serrure carénée"
       headingScale="lg"
+      heroTrustNote={heroTrustNote}
       extra={
         <>
           <PriceReminder
@@ -341,36 +386,11 @@ export default function SerrureCareneeNicePage() {
             </h2>
             <BrandsSection locale="fr" />
           </section>
+          <div className="mx-auto max-w-4xl px-4 pb-10">
+            <QuoteBlock locale="fr" />
+          </div>
         </>
       }
-      processSteps={[
-        {
-          title: "Appel",
-          text: "Vous me décrivez votre porte et votre serrure actuelle, je vous indique si une serrure carénée est adaptée à votre situation.",
-        },
-        {
-          title: "Rendez-vous",
-          text: "Je fixe un rendez-vous pour évaluer votre porte sur place, à l'heure qui vous convient.",
-        },
-        {
-          title: "Évaluation de la porte",
-          text: "J'examine l'état du bâti et de la porte pour confirmer qu'un renfort suffit, plutôt qu'un blindage complet.",
-        },
-        {
-          title: "Règlement",
-          text: "Le devis confirmé sur place est celui que vous payez, facture détaillée à l'appui.",
-        },
-      ]}
-      relatedArticle={{
-        href: "/blog/serrure-multipoints-3-5-7-nice/",
-        label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
-      }}
-      guide={
-        <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
-          {guideContent}
-        </ServiceGuideSection>
-      }
-      guideFaqForSchema={guideFaq}
     />
   );
 }
