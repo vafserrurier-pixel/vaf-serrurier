@@ -48,6 +48,6 @@ export const contentDates: Record<string, string> = {
   "/serrurier-saint-laurent-du-var/": "2026-10-09T08:23:26+02:00",
   "/serrurier-villefranche-sur-mer/": "2026-10-09T08:23:26+02:00",
   "/tarifs-serrurier-nice/": "2026-10-14T19:20:00+02:00",
-  "/urgence-serrurier-nice/": "2026-10-14T19:20:00+02:00",
+  "/urgence-serrurier-nice/": "2026-10-15T18:39:14+02:00",
   "/zones-intervention-nice/": "2026-10-14T20:23:05+02:00"
 };
