@@ -3,238 +3,321 @@ import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
 import BrandsSection from "@/components/BrandsSection";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { ShieldIcon, DoorIcon, WrenchIcon, CheckIcon, DoubleLockIcon } from "@/components/Icons";
-import { buildMetadata } from "@/lib/metadata";
+import QuoteBlock from "@/components/QuoteBlock";
+import ArticleTable from "@/components/ArticleTable";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
-
-const guideToc = [
-  { id: "differences", label: "Ce qui distingue une poignée blindée d'un simple cache-cylindre" },
-  { id: "comparatif", label: "Poignée blindée, cylindre A2P, serrure carénée : bien choisir" },
-  { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
-  { id: "entretien", label: "Entretien : ce qui prolonge la durée de vie" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Une poignée blindée protège-t-elle aussi contre le crochetage du cylindre lui-même ?",
-    answer:
-      "Elle rend le cylindre inaccessible et invisible de l'extérieur, ce qui empêche l'attaque directe (perçage, arrachement). Mais le cylindre reste le mécanisme qui subit une tentative de crochetage : pour une résistance complète sur ce point précis, je recommande de la combiner avec un cylindre certifié A2P.",
-  },
-  {
-    question: "Puis-je poser une poignée blindée en copropriété ?",
-    answer:
-      "Oui dans la grande majorité des cas, mais contrairement à un renfort intérieur comme la serrure carénée, la poignée blindée reste visible côté palier. Si le règlement de copropriété impose une apparence extérieure stricte, mieux vaut vérifier ce point auprès du syndic avant la pose.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille les critères concrets pour bien situer la poignée
-      blindée par rapport aux autres renforts déjà présentés plus haut, et
-      savoir dans quels cas elle n&apos;est pas la solution la plus adaptée.
-    </p>
-
-    <div>
-      <ArticleSectionHeading number={1} id="differences" level="h3" size="lg" numberStyle="plain">
-        Ce qui distingue une poignée blindée d&apos;un simple cache-cylindre
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Une poignée blindée n&apos;est pas qu&apos;un habillage esthétique :
-        c&apos;est un ensemble de sécurité construit en plusieurs couches. Une
-        plaque extérieure en aluminium massif, d&apos;environ 15 mm
-        d&apos;épaisseur, encaisse les tentatives d&apos;arrachement. Une
-        plaque intérieure en acier reprend l&apos;effort côté opposé, et un
-        protecteur de cylindre en inox chromé, doté d&apos;une pastille
-        anti-perçage intégrée, empêche d&apos;atteindre le cœur du mécanisme
-        à la perceuse ou au crochetage. C&apos;est cette combinaison de
-        matériaux qui fait la différence avec une simple rosace décorative.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="comparatif" level="h3" size="lg" numberStyle="plain">
-        Poignée blindée, cylindre A2P, serrure carénée : bien choisir
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Ces trois renforts n&apos;agissent pas au même niveau. Un{" "}
-        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-          cylindre certifié A2P
-        </Link>{" "}
-        renforce la résistance du mécanisme lui-même face au crochetage et à
-        la casse. La poignée blindée, elle, protège ce même cylindre en le
-        rendant inaccessible et invisible de l&apos;extérieur : les deux se
-        combinent bien, l&apos;un renforçant le mécanisme, l&apos;autre son
-        accès. La{" "}
-        <Link href="/serrure-carenee-nice/" className="text-steel underline">
-          serrure carénée
-        </Link>{" "}
-        va plus loin en intégrant sa propre protection de cylindre au
-        boîtier carénée et en répartissant la résistance sur 5 points
-        d&apos;ancrage : je ne pose jamais une poignée blindée par-dessus
-        une serrure carénée déjà installée, puisque le protecteur de
-        cylindre est déjà intégré à la carénée et qu&apos;empiler les deux
-        n&apos;apporte rien de plus sur ce même point.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
-        Quand ce n&apos;est pas la bonne solution
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        La poignée blindée est un renfort ciblé et rapide, pas une réponse
-        universelle. Trois cas où je vous oriente ailleurs :
-      </p>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
-        <li>
-          <strong className="text-navy">Porte ou bâti déjà fragilisés</strong> : si le dormant ou le
-          cadre sont eux-mêmes affaiblis, protéger le seul cylindre ne suffit pas. Je vous oriente
-          vers un{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            blindage complet ou un bloc-porte
-          </Link>
-          , qui reprend l&apos;ensemble de la porte plutôt qu&apos;un seul point.
-        </li>
-        <li>
-          <strong className="text-navy">Besoin de renforcer plusieurs points de fermeture</strong> :
-          si votre serrure n&apos;a qu&apos;un point d&apos;ancrage ou si vous cherchez une résistance
-          répartie sur toute la hauteur de la porte, une{" "}
-          <Link href="/serrure-carenee-nice/" className="text-steel underline">
-            serrure carénée 5 points
-          </Link>{" "}
-          est plus adaptée que le seul renfort du cylindre.
-        </li>
-        <li>
-          <strong className="text-navy">Serrure carénée déjà installée</strong> : le protecteur de
-          cylindre est déjà intégré au boîtier d&apos;une{" "}
-          <Link href="/serrure-carenee-nice/" className="text-steel underline">
-            serrure carénée
-          </Link>
-          . Ajouter une poignée blindée par-dessus n&apos;apporte aucune protection supplémentaire sur
-          ce même point.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="entretien" level="h3" size="lg" numberStyle="plain">
-        Entretien : ce qui prolonge la durée de vie
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un contrôle visuel des fixations et un léger lubrifiant sec sur le
-        barillet une à deux fois par an suffisent à préserver le
-        fonctionnement dans la durée. Si la clé commence à forcer, mieux
-        vaut intervenir tôt : voir ma page{" "}
-        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-          dépannage serrurier
-        </Link>
-        .
-      </p>
-    </div>
-  </>
-);
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/poignee-blindee-nice/",
-  title: "Poignée blindée à Nice – Protection du cylindre",
+  title: "Poignée blindée Nice : Héraclès Salomé posée 349 €",
   description:
-    "Installation d'une poignée blindée à Nice : protège et masque le cylindre exposé, garantie fabricant 10 ans (gamme Héraclès Salomé). Pose et réglage inclus.",
+    "Poignée blindée à Nice : Héraclès Salomé posée en une heure, 349 € TTC, cylindre caché et protégé, garantie fabricant 10 ans. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sections = [
   {
-    heading: "Qu'est-ce qu'une poignée blindée",
-    Icon: <ShieldIcon className="w-4 h-4" />,
+    heading: "Pourquoi le cylindre est le point faible",
     paragraphs: [
-      "Une poignée blindée, aussi appelée ensemble de sécurité, recouvre et protège le cylindre côté extérieur de la porte. Le cylindre n'est alors plus visible ni directement accessible, ce qui empêche un cambrioleur de l'attaquer au perçage ou au crochetage, deux techniques d'effraction courantes sur un cylindre exposé.",
+      "Un cylindre qui dépasse de la porte, même de quelques millimètres, offre une prise. On peut le casser, l'arracher ou le percer en peu de temps, sans toucher à la serrure ni à la porte. Un cylindre de bonne qualité résiste mieux au crochetage, mais pas à un outil qui le saisit de l'extérieur.",
+      "La poignée blindée supprime cette prise : le cylindre est enfermé dans un bloc métallique, il ne dépasse plus et n'est plus accessible. Seule l'entrée de la clé reste ouverte.",
     ],
   },
   {
-    heading: "Une construction en plusieurs couches",
-    Icon: <DoubleLockIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Plaque extérieure en aluminium massif d'environ 15 mm d'épaisseur, plaque intérieure en acier, et protecteur de cylindre en inox chromé avec pastille anti-perçage intégrée : c'est cette combinaison de matériaux, pas la seule apparence, qui fait la résistance réelle de l'ensemble.",
-    ],
-  },
-  {
-    heading: "Compatible avec la plupart des portes existantes",
-    Icon: <DoorIcon className="w-4 h-4" />,
-    paragraphs: [
-      "La pose s'adapte à différents entraxes de fixation selon votre porte. C'est le diagnostic sur place qui détermine la configuration exacte compatible avec votre installation actuelle, sans modification structurelle de la porte.",
-    ],
-  },
-  {
-    heading: "Un renfort ciblé, pas un blindage complet",
-    Icon: <WrenchIcon className="w-4 h-4" />,
-    paragraphs: [
-      "C'est la solution la plus rapide et la plus économique quand le point faible de votre porte est uniquement le cylindre exposé, sur une porte et un bâti par ailleurs sains.",
+    heading: "La poignée que je pose : Héraclès Salomé",
+    paragraphs: [],
+    extra: (
       <>
-        Si le bâti est fragilisé ou si vous cherchez une résistance répartie
-        sur plusieurs points d&apos;ancrage, le détail des cas où je vous
-        oriente vers une autre solution est dans mon{" "}
-        <Link href="#pas-la-solution" className="text-steel underline">
-          guide complet
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Une plaque extérieure en aluminium massif</strong> d&apos;environ 15 mm
+            d&apos;épaisseur, qui encaisse les tentatives d&apos;arrachement.
+          </li>
+          <li>
+            <strong className="text-navy">Une plaque intérieure en acier</strong>, qui reprend l&apos;effort de
+            l&apos;autre côté de la porte.
+          </li>
+          <li>
+            <strong className="text-navy">Un protecteur de cylindre en inox chromé</strong>, avec une pastille
+            anti-perçage.
+          </li>
+          <li>
+            <strong className="text-navy">Cinq finitions</strong> : argent, doré, inox, noir satiné ou champagne, à
+            choisir selon votre porte et votre palier. La finition ne change rien à la protection.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Elle s&apos;adapte à différents entraxes de fixation : je vérifie sur place la configuration de votre porte.
+          Le matériel est couvert par la garantie fabricant Héraclès de 10 ans.
+        </p>
+        <p className={pClass}>Je pose un seul modèle, à un seul prix : vous n&apos;avez pas de gamme à comparer.</p>
+      </>
+    ),
+  },
+  {
+    heading: "Le prix",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Prestation", "Ce qui est compris", "Prix TTC"]}
+          rows={[
+            ["Poignée blindée Héraclès Salomé", "Poignée, pose et réglage, cylindre existant conservé", "349 €"],
+            ["Poignée blindée + cornières anti-pince", "Les deux renforts, posés dans la même visite", "618 €"],
+            ["Cylindre à remplacer en plus", "Si le vôtre est usé ou si des clés ont été perdues", "Dès 249 €"],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Le prix est confirmé après avoir vu votre cylindre, avant que je commence. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Poignée, cylindre ou carénée : que choisir",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Ce que vous constatez", "Ce que je propose", "Prix TTC posé"]}
+          rows={[
+            ["Cylindre qui dépasse, porte et serrure saines", "Poignée blindée", "349 €"],
+            [
+              "Clés perdues, cylindre usé ou qui force",
+              <Link key="cylindre" href="/changement-serrure-nice/" className={linkClass}>
+                Cylindre neuf
+              </Link>,
+              "Dès 249 €",
+            ],
+            [
+              "Porte qui ne ferme que sur un point",
+              <Link key="carenee" href="/serrure-carenee-nice/" className={linkClass}>
+                Serrure carénée 5 points
+              </Link>,
+              "1 249 €",
+            ],
+            [
+              "Porte saine, mais vous voulez une vraie porte blindée",
+              <Link key="blindage" href="/blindage-porte-nice/" className={linkClass}>
+                Blindage de porte
+              </Link>,
+              "Dès 2 689 €",
+            ],
+            [
+              "Porte ou cadre abîmés, déformés ou pourris",
+              <Link key="bloc" href="/installation-porte-blindee-nice/" className={linkClass}>
+                Bloc-porte blindé neuf
+              </Link>,
+              "Dès 3 490 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          La poignée blindée et le cylindre se complètent : le cylindre résiste au crochetage, la poignée l&apos;empêche
+          d&apos;être saisi de l&apos;extérieur.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Le duo poignée blindée et cornières anti-pince",
+    paragraphs: [
+      "La poignée protège le cylindre, mais pas l'espace entre la porte et le cadre. Avec un pied-de-biche glissé côté serrure, on peut écarter la porte et faire sauter le pêne sans toucher au cylindre.",
+      "Les cornières anti-pince sont des profilés métalliques qui recouvrent cet espace. Avec la poignée blindée, elles couvrent les deux attaques les plus courantes sur une porte d'appartement : le cylindre et le levier. Les deux ensemble coûtent 618 € TTC posés, soit souvent la meilleure protection pour le prix sur une porte saine.",
+    ],
+  },
+  {
+    heading: "Ce que je vérifie avant la pose",
+    paragraphs: [],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Le cylindre</strong> : sa longueur, ce qui dépasse de chaque côté, et son
+          état. Un cylindre trop long ou usé se change en même temps.
+        </li>
+        <li>
+          <strong className="text-navy">La porte</strong> : son épaisseur et l&apos;espace disponible côté dormant
+          pour fixer la plaque.
+        </li>
+        <li>
+          <strong className="text-navy">La certification</strong> : si votre cylindre a une{" "}
+          <Link href="/blog/certification-a2p-serrure-nice/" className={linkClass}>
+            certification A2P
+          </Link>
+          , la poignée ne la remet pas en cause, puisqu&apos;elle ne touche pas au mécanisme. Je le vérifie sur votre
+          modèle.
+        </li>
+        <li>
+          <strong className="text-navy">L&apos;aspect côté palier</strong>, si votre copropriété impose une apparence
+          uniforme.
+        </li>
+      </ol>
+    ),
+  },
+  {
+    heading: "Ce que je refuse de faire",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Poser une poignée blindée sur une serrure carénée</strong> : le carénage
+          protège déjà le cylindre, la poignée n&apos;apporte rien de plus.
+        </li>
+        <li>
+          <strong className="text-navy">Poser une poignée sur un cylindre usé ou dont des clés ont été perdues</strong>{" "}
+          : je change d&apos;abord le cylindre, sinon la poignée protège un point déjà faible.
+        </li>
+        <li>
+          <strong className="text-navy">Présenter la poignée comme une solution à tout</strong> : sur une porte ou un
+          cadre fragiles, elle ne suffit pas, et je vous le dis.
+        </li>
+        <li>
+          <strong className="text-navy">Poser la poignée sans regarder le reste</strong>{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            après une effraction
+          </Link>{" "}
+          : je vérifie d&apos;abord le cadre, la gâche et la serrure, qui ont pu souffrir pendant la tentative.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Exemple type",
+    paragraphs: [
+      "Exemple type, une situation fréquente et non un client précis : une porte d'appartement en bon état dans une résidence des années 1980, serrure 3 points récente, cylindre qui dépasse de 5 mm côté palier. Le cylindre fonctionne bien et toutes les clés sont là. Ici, la poignée blindée suffit : le cylindre est conservé, la pose prend une heure, et la porte n'a plus de prise visible. Si la porte a du jeu côté serrure, j'ajoute les cornières anti-pince.",
+    ],
+  },
+  {
+    heading: "Copropriété et location",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Copropriété</strong> : contrairement à une serrure carénée posée à
+          l&apos;intérieur, la poignée blindée se voit depuis le palier. Dans la grande majorité des cas, elle est
+          acceptée ; si votre règlement impose un aspect strict, vérifiez auprès de votre{" "}
+          <Link href="/agences-syndics-nice/" className={linkClass}>
+            syndic
+          </Link>{" "}
+          avant la pose, et choisissez une finition proche de vos portes voisines.
+        </li>
+        <li>
+          <strong className="text-navy">Location</strong> : demandez l&apos;accord de votre propriétaire avant la
+          pose.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Garantie, devis et paiement",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">La garantie</strong> : ma pose est garantie 2 ans, et le matériel est couvert
+          par la garantie fabricant Héraclès de 10 ans.
+        </li>
+        <li>
+          <strong className="text-navy">Le devis</strong> : le prix est confirmé avant que je commence, et c&apos;est
+          celui que vous payez.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : par carte bancaire, en espèces ou par virement, avec
+          une facture détaillée.
+        </li>
+        <li>
+          <strong className="text-navy">La vidéo</strong> : si vous n&apos;êtes pas sur place, je vous envoie sur
+          demande une courte vidéo avant/après, par WhatsApp ou par e-mail.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Entretien",
+    paragraphs: [],
+    extra: (
+      <p className={pClass}>
+        Un coup d&apos;œil aux fixations et un lubrifiant sec dans le cylindre, une à deux fois par an, suffisent. Si
+        la clé commence à forcer, appelez-moi tôt. Pour le cylindre, voir mon article sur l&apos;
+        <Link href="/blog/entretien-serrure/" className={linkClass}>
+          entretien d&apos;une serrure
         </Link>
         .
-      </>,
-    ],
-  },
-  {
-    heading: "Finitions disponibles",
-    Icon: <CheckIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Argent, doré, inox, noir satiné ou champagne : la finition se choisit selon l'aspect de votre porte et de votre palier, sans impact sur le niveau de protection.",
-    ],
+      </p>
+    ),
   },
 ];
 
 const faq = [
   {
-    question: "Une poignée blindée est-elle compatible avec ma porte actuelle ?",
+    question: "Combien coûte une poignée blindée à Nice ?",
     answer:
-      "Dans la grande majorité des cas, oui. Elle s'adapte à différents entraxes de fixation selon la porte : le diagnostic sur place confirme la configuration exacte compatible avec votre installation.",
+      "349 € TTC, pose et réglage compris, avec votre cylindre conservé. Avec les cornières anti-pince, l'ensemble coûte 618 € TTC.",
   },
   {
-    question: "Combien de temps dure la pose d'une poignée blindée ?",
-    answer:
-      "Environ une heure, en une seule visite, sans modification structurelle de la porte.",
+    question: "Combien de temps dure la pose ?",
+    answer: "Environ une heure, en une seule visite, sans modifier la structure de la porte.",
   },
   {
-    question: "Quelle différence avec un simple changement de cylindre ?",
+    question: "Une poignée blindée est-elle compatible avec ma porte ?",
     answer:
-      "Le changement de cylindre renforce le mécanisme de verrouillage lui-même. La poignée blindée, elle, protège ce cylindre en le rendant invisible et inaccessible de l'extérieur. Les deux sont complémentaires et se combinent bien.",
+      "Dans la grande majorité des cas, oui : elle s'adapte à différents entraxes de fixation. Je confirme la configuration sur place.",
+  },
+  {
+    question: "Quelle différence avec un changement de cylindre ?",
+    answer:
+      "Le cylindre neuf résiste mieux au crochetage. La poignée blindée empêche de saisir le cylindre de l'extérieur. Les deux se complètent.",
+  },
+  {
+    question: "La poignée blindée fait-elle perdre la certification A2P de mon cylindre ?",
+    answer: "Non : elle recouvre le cylindre sans toucher à son mécanisme. Je le vérifie sur votre modèle.",
+  },
+  {
+    question: "Peut-on poser une poignée blindée sur une serrure carénée ?",
+    answer: "Non, c'est inutile : le carénage protège déjà le cylindre.",
   },
   {
     question: "Quelle garantie sur une poignée blindée ?",
     answer:
-      "Garantie fabricant de 10 ans sur le matériel, gamme Héraclès Salomé, confirmée par deux distributeurs professionnels indépendants (A2Pro et AFDB).",
-  },
-  {
-    question: "Quelles finitions sont disponibles ?",
-    answer:
-      "Argent, doré, inox, noir satiné et champagne comptent parmi les finitions couramment disponibles sur cette gamme.",
-  },
-  {
-    question: "Une poignée blindée remet-elle en cause la certification A2P de mon cylindre ?",
-    answer:
-      "Non. La poignée blindée recouvre le cylindre sans intervenir sur son mécanisme : si votre cylindre est déjà certifié A2P, sa certification n'est pas affectée par la pose. Le point exact est confirmé lors du diagnostic sur votre modèle.",
-  },
-  {
-    question: "Puis-je combiner la poignée blindée avec les cornières anti-pince ?",
-    answer:
-      "Oui, c'est un combo cohérent : la poignée blindée neutralise l'attaque directe sur le cylindre, les cornières anti-pince neutralisent l'arrachement au levier entre la porte et le dormant. Deux vecteurs d'effraction différents traités ensemble. Les cornières sont proposées en option à 269 € TTC, en complément des 349 € TTC de la poignée blindée.",
+      "Ma pose est garantie 2 ans, et le matériel est couvert par la garantie fabricant Héraclès de 10 ans.",
   },
 ];
 
-export default function PoigneeBlindeeNicePage() {
+export default async function PoigneeBlindeeNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <ServicePageTemplate
-      h1="Installation de poignée blindée à Nice"
-      lead="Un renfort rapide et économique quand le point faible de votre porte est le cylindre exposé : il est recouvert, protégé, et n'est plus visible ni accessible de l'extérieur."
+      h1="Poignée blindée à Nice : 349 € posée, cylindre protégé"
+      lead="Sur la plupart des portes, le cylindre dépasse côté palier : c'est le premier point qu'un cambrioleur attaque. La poignée blindée le recouvre entièrement, seule l'entrée de la clé reste visible. Je pose la Héraclès Salomé à 349 € TTC, pose et réglage compris, en une heure environ, sans modifier votre porte."
+      hideProcessSteps
       sections={sections}
       faq={faq}
       breadcrumbLabel="Installation poignée blindée"
@@ -243,77 +326,27 @@ export default function PoigneeBlindeeNicePage() {
         src: "/images/pool/poignee-serrure-moderne-porte-creme-nice.webp",
         alt: "Poignée blindée Nice",
       }}
-      sectionsVariant="cards"
-      sectionsHeading="Ce qu'il faut savoir sur la poignée blindée"
       headingScale="lg"
+      heroTrustNote={heroTrustNote}
       extra={
         <>
           <PriceReminder
             priceLabel="349 € TTC"
-            note="Un seul modèle, un tarif clair, pas de gamme à décoder. Pose et réglage inclus, devis confirmé après diagnostic du cylindre en place."
+            note="Un seul modèle, un tarif clair. Pose et réglage inclus, devis confirmé après diagnostic du cylindre en place."
             locale="fr"
           />
           <ServiceReviewsLive path="/poignee-blindee-nice/" />
-          <div className="mx-auto max-w-4xl px-4 mt-4">
-            <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-4">
-              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/15 text-steel shrink-0">
-                <ShieldIcon className="w-5 h-5" />
-              </span>
-              <div>
-                <p className="font-heading font-semibold text-navy mb-1">
-                  Option complémentaire : cornières anti-pince (269 € TTC)
-                </p>
-                <p className="text-sm text-slate leading-relaxed">
-                  Des profilés métalliques fixés côté serrure recouvrent
-                  l&apos;interstice entre la porte et le dormant, empêchant
-                  d&apos;y glisser un levier (pied-de-biche, tournevis long)
-                  pour écarter la porte et faire sauter le pêne. Combinées à
-                  la poignée blindée, elles couvrent un second vecteur
-                  d&apos;effraction : la poignée neutralise l&apos;attaque
-                  directe sur le cylindre, les cornières neutralisent
-                  l&apos;arrachement au levier entre porte et dormant.
-                  Comptez [DURÉE COMBINÉE À CONFIRMER AVEC BENOÎT] pour la
-                  pose des deux ensemble.
-                </p>
-              </div>
-            </div>
-          </div>
           <section className="mx-auto max-w-4xl px-4 py-10">
             <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
               Marques de serrures que je pose
             </h2>
             <BrandsSection locale="fr" />
           </section>
+          <div className="mx-auto max-w-4xl px-4 pb-10">
+            <QuoteBlock locale="fr" />
+          </div>
         </>
       }
-      processSteps={[
-        {
-          title: "Appel",
-          text: "Vous me décrivez votre porte et le cylindre actuellement exposé, je vous confirme dès le téléphone si la poignée blindée est adaptée à votre situation.",
-        },
-        {
-          title: "Rendez-vous",
-          text: "Je me déplace pour évaluer l'état de votre porte et la configuration du cylindre en place, avec un devis annoncé avant toute intervention.",
-        },
-        {
-          title: "Pose et réglage",
-          text: "Installation de l'ensemble de sécurité en environ une heure, sans modifier la structure de votre porte, réglage fin pour un fonctionnement fluide de la clé.",
-        },
-        {
-          title: "Garantie",
-          text: "Je vous remets une facture détaillée mentionnant la garantie fabricant de 10 ans, gamme Héraclès Salomé.",
-        },
-      ]}
-      relatedArticle={{
-        href: "/blog/que-faire-apres-cambriolage-nice/",
-        label: "Que faire après un cambriolage : les bons réflexes",
-      }}
-      guide={
-        <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
-          {guideContent}
-        </ServiceGuideSection>
-      }
-      guideFaqForSchema={guideFaq}
     />
   );
 }
