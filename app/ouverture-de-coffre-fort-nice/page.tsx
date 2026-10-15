@@ -2,208 +2,191 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { buildMetadata } from "@/lib/metadata";
+import QuoteBlock from "@/components/QuoteBlock";
+import ArticleTable from "@/components/ArticleTable";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
-
-const guideToc = [
-  { id: "mecanismes", label: "Trois familles de mécanismes, trois approches" },
-  { id: "destructif-ou-non", label: "Ce qui rend une ouverture non destructive possible" },
-  { id: "heritage", label: "Coffre hérité : la procédure pas à pas" },
-  { id: "apres", label: "Après l'ouverture : réparer, remplacer ou monter en gamme" },
-  { id: "certification", label: "Certification du coffre et de la serrure : ce qu'il faut savoir" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Une serrure électronique est-elle plus longue à ouvrir qu'une serrure à clé ?",
-    answer:
-      "Pas forcément plus longue, mais la méthode diffère complètement : sur l'électronique, je travaille surtout sur le boîtier de commande et l'alimentation, pas sur un mécanisme mécanique à manipuler.",
-  },
-  {
-    question: "Que se passe-t-il si le notaire n'a pas encore été désigné pour la succession ?",
-    answer:
-      "Appelez-moi avant de vous déplacer avec les documents disponibles (livret de famille, acte de décès) : selon la situation, je vous indique ce qui peut suffire à sécuriser l'intervention en attendant l'acte de notoriété définitif.",
-  },
-  {
-    question: "Le coffre est ouvert par perçage : peut-on le refermer normalement après ?",
-    answer:
-      "Cela dépend de l'ampleur du perçage. Sur certains modèles, un remplacement du bloc de serrure suffit à remettre le coffre en service ; sur d'autres, notamment après un perçage large, le remplacement complet devient plus cohérent.",
-  },
-  {
-    question: "Puis-je garder le même modèle de coffre après une ouverture destructive ?",
-    answer:
-      "Oui si le corps du coffre n'a pas été touché, seul le mécanisme de verrouillage. Je vous le confirme après diagnostic, avant de proposer une réparation ou un changement de gamme.",
-  },
-  {
-    question: "Si je fais remplacer la serrure de mon coffre, dois-je vérifier sa norme ?",
-    answer:
-      "Oui, systématiquement. La norme EN 1300 de la nouvelle serrure doit être compatible avec la classe du coffre (EN 14450 ou EN 1143-1) : une serrure non conforme annule la certification globale de l'ensemble en cas d'expertise après sinistre, même si le corps du coffre reste physiquement intact.",
-  },
-  {
-    question: "Quelle est la différence entre la norme du coffre et celle de la serrure ?",
-    answer:
-      "La norme du coffre (EN 14450 pour le résidentiel, EN 1143-1 pour la haute sécurité) évalue la résistance de l'ensemble du corps. L'EN 1300, elle, classe uniquement la serrure (catégorie A, B ou C), indépendamment du coffre dans lequel elle est montée.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille les aspects techniques du diagnostic selon le type de
-      mécanisme, en complément des situations déjà décrites plus haut sur
-      cette page.
-    </p>
-
-    <div>
-      <ArticleSectionHeading number={1} id="mecanismes" level="h3">
-        Trois familles de mécanismes, trois approches
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Une serrure à clé se travaille comme un cylindre classique, en plus
-        robuste. Une combinaison mécanique à disques demande une écoute fine
-        du mécanisme pour repérer les points d&apos;encoche. Une serrure
-        électronique à code implique de diagnostiquer d&apos;abord le boîtier
-        de commande et l&apos;alimentation (piles à plat, carte électronique
-        défaillante) avant même d&apos;envisager le mécanisme de verrouillage
-        lui-même : une bonne partie des blocages électroniques viennent
-        justement de là plutôt que d&apos;un vrai problème de serrure.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="destructif-ou-non" level="h3">
-        Ce qui rend une ouverture non destructive possible
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un mécanisme propre et bien entretenu se manipule presque toujours
-        sans dommage. Un mécanisme grippé par l&apos;âge, la rouille ou un
-        choc antérieur réduit fortement les chances d&apos;une ouverture fine
-        dans un temps raisonnable. C&apos;est cet état réel du mécanisme,
-        constaté sur place, qui oriente vers le perçage plutôt qu&apos;une
-        règle générale selon la marque ou le modèle.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="heritage" level="h3">
-        Coffre hérité : la procédure pas à pas
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un acte de notoriété (délivré par le notaire en charge de la
-        succession) reste le document le plus simple à présenter. À défaut,
-        les coordonnées de ce notaire permettent souvent de sécuriser
-        l&apos;intervention par un contact direct avant mon déplacement.
-        J&apos;évite ainsi de vous demander un déplacement pour rien si un
-        document manque.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="apres" level="h3">
-        Après l&apos;ouverture : réparer, remplacer ou monter en gamme
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Après une ouverture fine, le mécanisme reste en général utilisable
-        tel quel. Après une ouverture destructive, je vous indique si un
-        remplacement du bloc de serrure suffit ou si le corps du coffre est
-        également concerné. C&apos;est aussi le bon moment pour revoir le
-        niveau de protection si le coffre ouvert ne correspondait plus à vos
-        besoins : le détail des certifications et de la fixation est sur ma
-        page{" "}
-        <Link href="/installation-coffre-fort-nice/" className="text-steel underline">
-          installation de coffre-fort
-        </Link>
-        .
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={5} id="certification" level="h3">
-        Certification du coffre et de la serrure : ce qu&apos;il faut savoir
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Deux normes européennes encadrent la résistance du coffre lui-même.
-        La norme EN 14450 couvre les coffres à usage résidentiel courant,
-        avec deux niveaux : S1 (valeur assurable jusqu&apos;à 1 500 €) et S2
-        (jusqu&apos;à 3 000-5 000 € selon les assureurs, avec une
-        construction à double paroi). La norme EN 1143-1, elle, s&apos;adresse
-        aux coffres haute sécurité : elle classe de 0 à VI, pour des valeurs
-        assurables allant de 8 000 € à plus de 200 000 € selon la classe.
-        C&apos;est la référence pour les professionnels et les particuliers
-        avec des biens de valeur importante.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Une troisième norme, l&apos;EN 1300, classe spécifiquement la{" "}
-        <strong className="text-navy">serrure</strong> du coffre,
-        indépendamment du corps du coffre lui-même, en catégorie A, B ou C. Un
-        coffre de classe 1 (EN 1143-1) exige une serrure au minimum classe A ;
-        à partir de la classe 2, une serrure classe B est requise.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Le point souvent ignoré : une serrure non conforme au niveau de
-        certification du coffre annule la certification globale de
-        l&apos;ensemble en cas d&apos;expertise après sinistre, même si le
-        corps du coffre reste physiquement intact et solide. C&apos;est cette
-        certification, pas seulement la robustesse physique constatée, qui
-        conditionne le plafond d&apos;indemnisation accepté par votre
-        assurance : un coffre non certifié, même robuste, peut être ignoré
-        par l&apos;assureur en cas de sinistre.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        C&apos;est pour ça que je vérifie toujours cette compatibilité de
-        norme avant de proposer un remplacement de serrure après une
-        ouverture : remettre en service un mécanisme qui ne correspond pas à
-        la classe du coffre reviendrait à vous faire perdre une certification
-        sans que vous le sachiez. Si le niveau de protection doit évoluer, le
-        détail des certifications est sur ma page{" "}
-        <Link href="/installation-coffre-fort-nice/" className="text-steel underline">
-          installation de coffre-fort
-        </Link>
-        .
-      </p>
-    </div>
-  </>
-);
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/ouverture-de-coffre-fort-nice/",
-  title: "Ouverture de coffre-fort Nice – Serrurier",
-  description: "Coffre-fort bloqué, code oublié, clé perdue à Nice ? J'ouvre le coffre sans le détruire quand c'est possible. Devis annoncé avant intervention.",
+  title: "Ouverture de coffre-fort Nice : code oublié, clé perdue",
+  description:
+    "Coffre-fort bloqué à Nice, code oublié ou clé perdue : ouverture sans casse quand c'est possible, dès 299 € TTC, 24h/24. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sections = [
   {
-    heading: "Code oublié, clé perdue, coffre hérité",
+    heading: "Avant de m'appeler : deux vérifications",
+    paragraphs: [],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Coffre électronique</strong> : changez les piles. Une bonne partie des
+            coffres « bloqués » ont simplement des piles à plat ou un boîtier de commande en panne, pas une serrure
+            défaillante. Sur certains modèles, une clé de secours ou un contact pour pile extérieure permet d&apos;ouvrir
+            sans intervention.
+          </li>
+          <li>
+            <strong className="text-navy">Les papiers du coffre</strong> : cherchez la notice, la facture ou la carte
+            de propriété. Elles m&apos;indiquent la marque et le modèle, et chez certains fabricants elles permettent de
+            commander une clé ou une procédure de réinitialisation.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Si rien ne fonctionne, décrivez-moi le coffre au téléphone, ou envoyez-moi une photo par WhatsApp : je vous
+          dis tout de suite si une ouverture sans casse est probable.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Les situations que je traite",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Situation", "Ce que je regarde en premier", "Prix TTC"]}
+          rows={[
+            ["Code électronique oublié", "L'alimentation et le boîtier de commande", "Dès 299 €"],
+            ["Combinaison mécanique perdue", "Le modèle et l'état du mécanisme", "Dès 299 €"],
+            ["Clé perdue ou cassée", "Le type de serrure et la possibilité de l'ouvrir sans perçage", "Dès 299 €"],
+            [
+              "Coffre qui refuse de s'ouvrir avec le bon code ou la bonne clé",
+              "Le pêne, souvent bloqué par la charge ou un choc",
+              "Dès 299 €",
+            ],
+            [
+              "Coffre hérité, sans code ni clé",
+              "Les justificatifs de succession, puis le mécanisme",
+              "Dès 299 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Le prix exact dépend du modèle et du mécanisme. Je vous l&apos;annonce au téléphone et je le confirme sur
+          place avant d&apos;ouvrir : c&apos;est celui que vous payez, quelle que soit la méthode finalement nécessaire.
+          Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Trois mécanismes, trois méthodes",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Serrure à clé</strong> : elle se travaille comme un cylindre de porte, en plus
+          robuste. Une ouverture sans casse est souvent possible.
+        </li>
+        <li>
+          <strong className="text-navy">Combinaison mécanique à disques</strong> : elle demande une manipulation fine
+          du mécanisme, sans le démonter.
+        </li>
+        <li>
+          <strong className="text-navy">Serrure électronique</strong> : je diagnostique d&apos;abord l&apos;alimentation
+          et le boîtier de commande. Le blocage vient souvent de là, et non du verrou lui-même.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Ouvrir sans casser, et quand il faut percer",
     paragraphs: [
-      "Un code de coffre-fort oublié, une clé perdue, ou un coffre hérité dont personne ne connaît plus la combinaison : ce sont les situations les plus fréquentes. Je commence toujours par identifier le modèle et la marque du coffre avant de choisir la méthode d'ouverture la plus adaptée.",
+      "Je commence toujours par la méthode qui préserve le coffre. Un mécanisme propre et bien entretenu s'ouvre presque toujours sans dommage. Un mécanisme grippé par l'âge, la rouille ou un choc réduit les chances d'une ouverture fine dans un temps raisonnable.",
+      "Le perçage reste le dernier recours. Quand il est nécessaire, il est ciblé : sur beaucoup de modèles, on remplace ensuite le bloc de serrure et le coffre reprend du service. Je vous le dis avant de commencer, et le prix ne change pas.",
     ],
   },
   {
-    heading: "Ouvrir sans détruire, quand c'est possible",
+    heading: "Pièce d'identité et justificatif : toujours",
     paragraphs: [
-      "Selon le mécanisme (serrure à clé, à combinaison mécanique ou électronique), je privilégie toujours une méthode qui préserve le coffre et permet de le remettre en service ensuite. Le perçage ou la découpe restent une solution de dernier recours, quand le mécanisme est bloqué de façon irréversible.",
+      <>
+        Avant d&apos;ouvrir un coffre-fort, je demande une pièce d&apos;identité et un justificatif de votre lien avec
+        le logement : bail, titre de propriété ou facture à votre nom. C&apos;est la même règle que pour une{" "}
+        <Link href="/ouverture-de-porte-nice/" className={linkClass}>
+          ouverture de porte
+        </Link>
+        . C&apos;est une garantie, pour vous comme pour moi, que je n&apos;ouvre pas un coffre qui n&apos;est pas le
+        vôtre.
+      </>,
     ],
   },
   {
-    heading: "Une pièce d'identité systématiquement demandée",
+    heading: "Coffre hérité : ce qu'il faut préparer",
     paragraphs: [
-      "Avant toute ouverture de coffre-fort, je demande une pièce d'identité et un justificatif de votre lien avec le logement ou le bien concerné. C'est la même règle que pour l'ouverture d'une porte d'entrée verrouillée. Ce n'est pas une formalité superflue : c'est une garantie, pour vous comme pour moi, que je n'interviens pas sur un coffre qui ne vous appartient pas.",
+      "Ouvrir le coffre d'un proche décédé, sans code ni clé, est une demande fréquente. Le document le plus simple est l'acte de notoriété, délivré par le notaire chargé de la succession. À défaut, les coordonnées de ce notaire permettent souvent de régler la question par un contact direct.",
+      "Si le notaire n'est pas encore désigné, appelez-moi avec les documents que vous avez (livret de famille, acte de décès) : je vous dis ce qui peut suffire, avant de me déplacer. Vous évitez ainsi un déplacement pour rien.",
     ],
   },
   {
-    heading: "Coffre-fort hérité, une situation fréquente",
+    heading: "Après l'ouverture : réparer ou remplacer",
     paragraphs: [
-      "Ouvrir le coffre-fort d'un proche décédé, sans code ni clé retrouvés, est une demande que je reçois régulièrement. Un justificatif de qualité d'héritier (acte de notoriété, ou à défaut le contact du notaire en charge de la succession) permet de sécuriser l'intervention avant même mon déplacement.",
+      "Après une ouverture sans casse, le coffre reste en général utilisable tel quel : il suffit de programmer un nouveau code ou de refaire une clé. Après un perçage, je vous dis si un nouveau bloc de serrure suffit ou si le corps du coffre est touché.",
+      "Si vous remplacez la serrure, elle doit correspondre au niveau de certification du coffre. La norme EN 1300 classe la serrure seule ; les normes EN 14450 et EN 1143-1 classent le coffre. Une serrure de niveau inférieur peut faire perdre la certification de l'ensemble, et l'assureur peut en tenir compte après un sinistre. Je vérifie cette compatibilité avant de proposer une serrure.",
+      <>
+        Si le coffre ne correspond plus à vos besoins, le choix d&apos;un nouveau modèle et sa fixation sont détaillés
+        sur ma page{" "}
+        <Link href="/installation-coffre-fort-nice/" className={linkClass}>
+          installation de coffre-fort
+        </Link>
+        .
+      </>,
     ],
   },
   {
-    heading: "Après l'ouverture",
+    heading: "Ce que je refuse de faire",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Ouvrir sans pièce d&apos;identité ni justificatif</strong>, quelle que soit
+          l&apos;urgence.
+        </li>
+        <li>
+          <strong className="text-navy">Percer d&apos;emblée</strong> pour gagner du temps, quand une ouverture sans
+          casse est possible.
+        </li>
+        <li>
+          <strong className="text-navy">Remettre en service une serrure d&apos;un niveau inférieur à celui du coffre</strong>{" "}
+          sans vous prévenir.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Exemple type",
     paragraphs: [
-      "Une fois le coffre ouvert, je vous explique l'état du mécanisme et je vous conseille sur la suite : réparation de la serrure existante, remplacement, ou passage à un modèle plus fiable si le mécanisme est trop endommagé pour être restauré.",
+      "Exemple type, une situation fréquente et non un client précis : une famille vide l'appartement d'un parent décédé et trouve un coffre électronique scellé dans un placard. Personne ne connaît le code, l'écran ne s'allume plus. Avec l'acte de notoriété en main, je commence par l'alimentation : les piles sont à plat depuis des mois. Une fois le boîtier alimenté, l'ouverture se fait sans perçage, et le coffre peut être reprogrammé ou démonté pour être déplacé.",
     ],
+  },
+  {
+    heading: "Prix et paiement",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Le prix</strong> : à partir de 299 € TTC, annoncé au téléphone selon le modèle,
+          confirmé avant l&apos;ouverture.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : par carte bancaire, en espèces ou par virement, avec une
+          facture détaillée.
+        </li>
+      </ul>
+    ),
   },
 ];
 
@@ -211,45 +194,61 @@ const faq = [
   {
     question: "Pouvez-vous ouvrir un coffre-fort sans la clé ni le code ?",
     answer:
-      "Dans la majorité des cas, oui, selon le modèle et le mécanisme. Je diagnostique la serrure avant de proposer une méthode d'ouverture adaptée, en privilégiant toujours la solution la moins destructive.",
-  },
-  {
-    question: "L'ouverture d'un coffre-fort abîme-t-elle toujours la serrure ?",
-    answer:
-      "Non, pas systématiquement. Pour beaucoup de mécanismes, une ouverture fine est possible sans destruction. Le perçage n'intervient qu'en dernier recours, sur les mécanismes bloqués de façon irréversible.",
-  },
-  {
-    question: "Intervenez-vous sur tous types de coffres-forts ?",
-    answer:
-      "J'interviens sur la plupart des coffres résidentiels à clé, à combinaison mécanique ou électronique. Pour les modèles très spécifiques ou les coffres de très haute sécurité, je vous le confirme après diagnostic.",
+      "Dans la majorité des cas, oui, selon le modèle et le mécanisme. Je commence toujours par une méthode qui ne casse rien.",
   },
   {
     question: "Combien coûte l'ouverture d'un coffre-fort à Nice ?",
     answer:
-      "Le tarif dépend du modèle, du mécanisme et de la méthode nécessaire. Je vous annonce un prix avant intervention, une fois la situation décrite au téléphone.",
+      "À partir de 299 € TTC. Le prix exact dépend du modèle et du mécanisme ; il est annoncé au téléphone et confirmé avant l'ouverture, quelle que soit la méthode.",
   },
   {
-    question: "Intervenez-vous en urgence pour un coffre-fort bloqué ?",
+    question: "L'ouverture abîme-t-elle le coffre ?",
     answer:
-      "Oui, je suis disponible 24h/24 et 7j/7 pour ce type d'intervention comme pour le reste de mes services de serrurerie.",
+      "Pas forcément. Beaucoup de mécanismes s'ouvrent sans dommage. Le perçage n'intervient qu'en dernier recours, et souvent un nouveau bloc de serrure suffit ensuite.",
   },
   {
-    question: "Quels documents dois-je préparer pour l'ouverture de mon coffre-fort ?",
+    question: "Mon coffre électronique ne répond plus : que faire ?",
     answer:
-      "Une pièce d'identité et un justificatif de votre lien avec le logement (bail, titre de propriété, facture à votre nom). C'est une vérification systématique, quelle que soit la situation.",
+      "Changez d'abord les piles : c'est la cause la plus fréquente. Si l'écran reste éteint ou que le code est refusé, appelez-moi.",
+  },
+  {
+    question: "Intervenez-vous en urgence ?",
+    answer: "Oui, 24h/24 et 7j/7, en 30 minutes partout à Nice.",
+  },
+  {
+    question: "Quels documents dois-je préparer ?",
+    answer:
+      "Une pièce d'identité et un justificatif de votre lien avec le logement : bail, titre de propriété ou facture à votre nom.",
   },
   {
     question: "Comment ouvrir le coffre-fort d'un proche décédé ?",
     answer:
-      "Un acte de notoriété ou les coordonnées du notaire en charge de la succession permettent de sécuriser l'intervention. N'hésitez pas à m'en parler au téléphone avant le déplacement, je vous indiquerai précisément ce qu'il faut préparer.",
+      "Préparez l'acte de notoriété ou les coordonnées du notaire chargé de la succession. Appelez-moi avant le déplacement : je vous dis précisément ce qu'il faut.",
   },
 ];
 
-export default function OuvertureDeCoffreFortNicePage() {
+export default async function OuvertureDeCoffreFortNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <ServicePageTemplate
-      h1="Ouverture de coffre-fort à Nice"
-      lead="Code oublié, clé perdue, coffre bloqué ou hérité : je diagnostique le mécanisme et j'ouvre votre coffre-fort en privilégiant toujours la méthode la moins destructive."
+      h1="Ouverture de coffre-fort à Nice : code oublié, clé perdue"
+      lead="Code oublié, clé perdue, coffre qui ne s'ouvre plus ou coffre hérité sans combinaison : j'ouvre votre coffre-fort en choisissant toujours la méthode qui le laisse utilisable. En urgence, j'arrive en 30 minutes partout à Nice, 24h/24. À partir de 299 € TTC, prix annoncé au téléphone et confirmé avant l'ouverture."
+      hideProcessSteps
       sections={sections}
       faq={faq}
       breadcrumbLabel="Ouverture de coffre-fort"
@@ -258,44 +257,20 @@ export default function OuvertureDeCoffreFortNicePage() {
         src: "/images/serrurier-nice-coffre-fort.webp",
         alt: "Ouverture coffre-fort Nice",
       }}
+      heroTrustNote={heroTrustNote}
       extra={
         <>
           <PriceReminder
-          priceLabel="À partir de 299 € TTC"
-          note="Prix ajusté selon le modèle et la méthode nécessaire"
-          locale="fr"
-        />
+            priceLabel="À partir de 299 € TTC"
+            note="Prix annoncé au téléphone selon le modèle, confirmé avant l'ouverture, quelle que soit la méthode."
+            locale="fr"
+          />
           <ServiceReviewsLive path="/ouverture-de-coffre-fort-nice/" />
+          <div className="mx-auto max-w-4xl px-4 py-10">
+            <QuoteBlock locale="fr" />
+          </div>
         </>
       }
-      processSteps={[
-        {
-          title: "Appel",
-          text: "Vous me décrivez le modèle de coffre-fort si vous le connaissez, et la raison du blocage : code oublié, clé perdue, coffre hérité.",
-        },
-        {
-          title: "Délai d'arrivée",
-          text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
-        },
-        {
-          title: "Diagnostic du mécanisme",
-          text: "J'identifie le modèle et le type de mécanisme (à clé, combinaison mécanique ou électronique) pour choisir la méthode la moins destructive.",
-        },
-        {
-          title: "Règlement",
-          text: "Le prix confirmé avant l'ouverture est celui que vous payez, quelle que soit la méthode finalement nécessaire.",
-        },
-      ]}
-      relatedArticle={{
-        href: "/blog/certification-a2p-serrure-nice/",
-        label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
-      }}
-      guide={
-        <ServiceGuideSection readingMinutes={4} toc={guideToc} faq={guideFaq}>
-          {guideContent}
-        </ServiceGuideSection>
-      }
-      guideFaqForSchema={guideFaq}
     />
   );
 }
