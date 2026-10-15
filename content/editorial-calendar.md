@@ -46,7 +46,7 @@ rappel ; ce Markdown est la version pour consultation humaine.
 5. Secteur Nice Ouest (`/serrurier-nice-ouest/`)
 6. Tarifs (`/tarifs-serrurier-nice/`)
 7. Agences & syndics (`/agences-syndics-nice/`)
-8. Service : Dépannage serrurier (`/depannage-serrurier-nice/`)
+8. Service : Dépannage serrurier (`/urgence-serrurier-nice/`)
 9. Service : Ouverture de porte (`/ouverture-de-porte-nice/`)
 10. Service : Changement de serrure (`/changement-serrure-nice/`)
 11. Service : Installation porte blindée (`/installation-porte-blindee-nice/`)
