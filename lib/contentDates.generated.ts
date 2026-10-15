@@ -34,7 +34,7 @@ export const contentDates: Record<string, string> = {
   "/ouverture-de-coffre-fort-nice/": "2026-10-14T19:20:00+02:00",
   "/ouverture-de-porte-nice/": "2026-10-14T19:20:00+02:00",
   "/": "2026-10-14T20:23:05+02:00",
-  "/poignee-blindee-nice/": "2026-10-14T19:20:00+02:00",
+  "/poignee-blindee-nice/": "2026-10-15T20:19:07+02:00",
   "/politique-de-confidentialite/": "2026-10-09T08:52:52+02:00",
   "/serrure-carenee-nice/": "2026-10-15T20:07:15+02:00",
   "/serrurier-beaulieu-sur-mer/": "2026-10-15T18:01:24+02:00",
