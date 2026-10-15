@@ -188,6 +188,18 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
         "Garantie fabricant 10 ans (gamme Héraclès Salomé)",
       ],
     },
+    {
+      title: "Cornières anti-pince",
+      seoTitle: "Prix cornières anti-pince à Nice",
+      price: "269 €",
+      unit: "TTC",
+      priceValue: 269,
+      priceType: "fixed",
+      tarifsOnly: true,
+      features: [
+        "Posées",
+      ],
+    },
   ],
   en: [
     {

@@ -1,387 +1,308 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
-import InsuranceBanner from "@/components/InsuranceBanner";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { AlertLockIcon, WrenchIcon, ClockIcon, HandshakeIcon, BoltIcon, ShieldIcon } from "@/components/Icons";
+import QuoteBlock from "@/components/QuoteBlock";
+import ArticleTable from "@/components/ArticleTable";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
 import { buildMetadata } from "@/lib/metadata";
-
-const troisEtapes = [
-  {
-    Icon: <AlertLockIcon className="w-5 h-5" />,
-    title: "1. Mise en sécurité",
-    text: "L'urgence : rétablir une fermeture qui protège vraiment, le jour même. C'est ce qui doit se passer avant tout le reste.",
-  },
-  {
-    Icon: <WrenchIcon className="w-5 h-5" />,
-    title: "2. Réparation définitive",
-    text: "Une fois l'urgence passée, je remets l'installation dans un état durable, pas juste fonctionnel dans l'instant.",
-  },
-  {
-    Icon: <ShieldIcon className="w-5 h-5" />,
-    title: "3. Renforcement",
-    text: "Une montée en gamme volontaire (niveau A2P, points supplémentaires...), intégrée à la réparation définitive plutôt qu'une étape à part.",
-  },
-];
-
-const guideToc = [
-  { id: "diagnostic-technique", label: "Ce que j'inspecte précisément sur place" },
-  { id: "provisoire-ou-definitif", label: "Provisoire ou définitif : les critères qui tranchent" },
-  { id: "renforcer", label: "Renforcer plutôt que remplacer à l'identique" },
-  { id: "facture", label: "Ce que contient la facture pour votre assurance" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Le bâti est marqué mais tient encore : faut-il le changer ?",
-    answer:
-      "Pas systématiquement. Si le bois n'est pas fendu en profondeur et que le point d'ancrage retrouve sa tenue après réparation, un renforcement ciblé suffit souvent. Je ne remplace que ce qui a réellement perdu sa fonction de résistance.",
-  },
-  {
-    question: "Une gâche arrachée se répare-t-elle ou se remplace-t-elle toujours ?",
-    answer:
-      "Cela dépend des dégâts sur le bois ou le métal environnant. Une gâche renforcée bien fixée sur un support sain suffit dans une partie des cas ; un support trop abîmé impose un remplacement complet de la zone.",
-  },
-  {
-    question: "Dois-je attendre le passage de l'assurance avant de faire réparer ?",
-    answer:
-      "Non, la sécurisation ne doit pas attendre : c'est justement l'objet de mon intervention en urgence. La facture détaillée que je fournis sert ensuite de justificatif pour votre déclaration de sinistre.",
-  },
-  {
-    question: "Un simple remplacement de cylindre suffit-il après une tentative ratée ?",
-    answer:
-      "Souvent oui si la tentative n'a pas dépassé le cylindre : je vérifie l'état de la gâche et du bâti avant de confirmer que rien d'autre n'a été fragilisé.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille le volet technique de mon intervention : le diagnostic
-      précis et les critères de décision entre réparation et remplacement.
-      Pour les démarches administratives (plainte, assurance, syndic), voir
-      mon article{" "}
-      <Link href="/blog/que-faire-apres-cambriolage-nice/" className="text-steel underline">
-        que faire après un cambriolage
-      </Link>
-      .
-    </p>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-      <p className="font-heading font-bold text-navy mb-4">
-        Trois étapes bien distinctes, souvent confondues
-      </p>
-      <div className="grid gap-4 sm:grid-cols-3">
-        {troisEtapes.map(({ Icon, title, text }) => (
-          <div key={title} className="flex flex-col gap-2">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white text-steel shrink-0 shadow-sm">
-              {Icon}
-            </span>
-            <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-            <p className="text-sm text-slate leading-snug">{text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={1} id="diagnostic-technique" level="h3" size="lg" numberStyle="plain">
-        Ce que j&apos;inspecte précisément sur place
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Au-delà du cylindre, souvent le plus visiblement endommagé, je
-        contrôle l&apos;état du bâti autour de la gâche (bois fendu ou
-        simplement marqué), le jeu de la porte sur ses paumelles après le
-        choc, et la solidité des points d&apos;ancrage. Une tentative qui
-        échoue au niveau du cylindre laisse parfois des dégâts moins visibles
-        mais bien réels sur le bâti, qu&apos;il faut vérifier avant de
-        refermer le dossier.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Sur certains modèles haut de gamme, un mécanisme de sécurité interne
-        (parfois appelé « pare-attaque ») peut aussi s&apos;être enclenché
-        pendant la tentative : il bloque volontairement le pêne pour protéger
-        le cylindre d&apos;une attaque, y compris avec la bonne clé. Ce
-        blocage nécessite une intervention spécifique pour être réarmé
-        proprement, sans abîmer davantage le mécanisme.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="provisoire-ou-definitif" level="h3" size="lg" numberStyle="plain">
-        Provisoire ou définitif : les critères qui tranchent
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un blocage temporaire se justifie quand la porte reste fonctionnelle
-        mais que la solution durable demande réflexion (choix du niveau de
-        sécurité, disponibilité d&apos;un modèle précis). Une intervention
-        définitive immédiate s&apos;impose quand la porte ne ferme plus de
-        façon fiable : dans ce cas, rester en mode provisoire prolonge
-        inutilement le risque de récidive.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Une nuance importante selon ce qui a été touché : un remplacement de
-        cylindre suite à une simple perte ou un vol de clé, sans dégât
-        physique sur la porte, restaure immédiatement votre niveau de
-        sécurité d&apos;origine. En revanche, si le bâti, la gâche ou le
-        dormant ont été abîmés pendant la tentative, la porte peut refermer
-        normalement sans que sa résistance réelle soit retrouvée : c&apos;est
-        seulement une fois ces éléments réparés que la sécurité initiale est
-        pleinement rétablie, pas simplement quand la porte se referme.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="renforcer" level="h3" size="lg" numberStyle="plain">
-        Renforcer plutôt que remplacer à l&apos;identique
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Une effraction est souvent l&apos;occasion de monter en niveau plutôt
-        que de reproduire une installation qui vient de céder. Je vous
-        présente les options par ordre de pertinence habituelle, mais la
-        recommandation dépend toujours du diagnostic réel de votre porte, pas
-        d&apos;un ordre appliqué systématiquement :
-      </p>
-      <ol className="list-decimal pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
-        <li>
-          <strong className="text-navy">
-            <Link href="/poignee-blindee-nice/" className="text-steel underline">
-              Poignée blindée
-            </Link>{" "}
-            (349 € TTC)
-          </strong>{" "}
-          : masque et protège le cylindre, un premier effet dissuasif visible dès le palier.
-        </li>
-        <li>
-          <strong className="text-navy">Cornières anti-pince</strong> : profilés métalliques fixés
-          côté serrure qui recouvrent l&apos;interstice entre la porte et le dormant, empêchant
-          d&apos;y glisser un levier (pied-de-biche, tournevis long) pour écarter la porte et faire
-          sauter le pêne.
-        </li>
-        <li>
-          <strong className="text-navy">Cylindre certifié{" "}
-            <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-              A2P
-            </Link>
-          </strong>{" "}
-          : résistance mécanique renforcée face au perçage, au crochetage et à la casse.
-        </li>
-        <li>
-          <strong className="text-navy">Serrure au bon niveau de points</strong> selon votre porte
-          (le détail des critères est sur ma page{" "}
-          <Link href="/changement-serrure-nice/" className="text-steel underline">
-            changement de serrure
-          </Link>
-          ).
-        </li>
-        <li>
-          <strong className="text-navy">Bloc-porte complet</strong> si le bâti a été fragilisé au
-          point de justifier une solution plus complète (voir{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            bloc-porte blindé neuf
-          </Link>
-          ), ou un{" "}
-          <Link href="/blindage-porte-nice/" className="text-steel underline">
-            blindage de porte
-          </Link>{" "}
-          si la porte elle-même reste saine.
-        </li>
-      </ol>
-      <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 mt-4">
-        <p className="font-heading font-semibold text-navy text-sm mb-1.5">
-          Un duo souvent pertinent : poignée blindée + cornières anti-pince
-        </p>
-        <p className="text-slate text-sm leading-relaxed">
-          Ensemble, ces deux renforcements couvrent les deux vecteurs
-          d&apos;effraction les plus fréquents sur une porte standard :
-          l&apos;attaque directe du cylindre, et l&apos;arrachement au levier
-          entre porte et dormant. C&apos;est souvent le meilleur rapport
-          protection/investissement avant d&apos;envisager un{" "}
-          <Link href="/blindage-porte-nice/" className="text-steel underline">
-            blindage complet
-          </Link>
-          , mais encore une fois, à confirmer selon l&apos;état réel
-          de votre porte, pas de façon systématique.
-        </p>
-      </div>
-      <p className="text-slate leading-relaxed mt-4">
-        Une option complémentaire, moins structurelle mais utile au
-        quotidien : le{" "}
-        <a
-          href="https://www.heracles.fr/heracles-micro-viseur-hispy-2_SKUM83697.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          judas optique numérique
-        </a>{" "}
-        remplace l&apos;œilleton classique par un petit écran : vous voyez
-        qui sonne sans avoir à entrouvrir la porte, un vrai plus après une
-        effraction pour reprendre confiance, ou simplement pour les
-        personnes qui reçoivent des visites à des horaires atypiques. Je
-        peux l&apos;installer en complément de vos autres renforcements.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="facture" level="h3" size="lg" numberStyle="plain">
-        Ce que contient la facture pour votre assurance
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le circuit est toujours le même, dans cet ordre :
-      </p>
-      <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mt-2">
-        <li>Devis annoncé avant toute intervention, même en pleine urgence.</li>
-        <li>Intervention de mise en sécurité, puis réparation ou renforcement selon le diagnostic.</li>
-        <li>
-          Facture détaillée décrivant la nature des dégâts constatés (cylindre, gâche, bâti) et les
-          réparations effectuées, avec le niveau de certification posé si une nouvelle serrure ou
-          porte a été installée. Cette description factuelle aide votre assureur à qualifier la
-          cause du sinistre (effraction, tentative, vétusté...), une qualification qui conditionne
-          souvent la prise en charge.
-        </li>
-        <li>Je vous transmets cette facture, avec une vidéo de l&apos;intervention sur simple demande.</li>
-        <li>Vous la joignez à votre déclaration de sinistre auprès de votre assureur.</li>
-      </ol>
-      <p className="text-slate leading-relaxed mt-3">
-        Cette facture porte mon SIRET : j&apos;y engage ma responsabilité
-        professionnelle sur les faits constatés, sans me prononcer sur la
-        décision de prise en charge elle-même, qui reste celle de votre
-        assureur.
-      </p>
-      <p className="text-slate leading-relaxed mt-3">
-        Je ne vous annonce volontairement aucun plafond de remboursement ni
-        aucun montant de franchise : ces éléments dépendent entièrement de
-        votre contrat (niveau de garantie, franchise applicable), et
-        annoncer un chiffre générique serait trompeur, quelle que soit la
-        bonne intention derrière. La seule donnée réelle que je peux
-        confirmer : les assurances prennent généralement en charge le
-        déplacement et la main d&apos;œuvre, sous réserve des conditions de
-        votre contrat. Pour le reste, votre assureur reste le seul
-        interlocuteur fiable.
-      </p>
-    </div>
-  </>
-);
 
 export const metadata: Metadata = buildMetadata({
   path: "/mise-en-securite-apres-effraction-nice/",
-  title: "Mise en sécurité après effraction à Nice 24h/24",
-  description: "Cambriolage ou tentative d'effraction à Nice ? Je sécurise votre porte immédiatement, puis je propose une réparation définitive. Devis annoncé avant travaux.",
+  title: "Mise en sécurité après effraction Nice 24h/24",
+  description:
+    "Porte forcée ou cambriolage à Nice : mise en sécurité 24h/24 pour refermer chez vous, facture détaillée pour l'assurance. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sections = [
   {
-    heading: "Ma priorité : fermer, sécuriser, puis proposer une solution durable",
-    Icon: <AlertLockIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Découvrir sa porte forcée est toujours un choc, en plus d'être une vraie faille de sécurité tant qu'elle reste dans cet état. J'interviens 24h/24 après une intrusion, y compris la nuit, car chaque heure sans fermeture fiable est un risque de récidive. Je commence toujours par évaluer les dégâts réels (cylindre endommagé, serrure tordue, bâti marqué, gâche arrachée). Je propose ensuite un devis transparent, même en pleine urgence.",
-    ],
-  },
-  {
-    heading: "Ce que je vérifie systématiquement sur place",
-    Icon: <WrenchIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Le remplacement du cylindre, l'ajustement d'une porte voilée par le choc, et la vérification complète de la gâche font partie du diagnostic que je mène à chaque intervention. Je préfère régler le vrai problème : un bâti fragilisé, un point d'ancrage arraché. Une réparation rapide qui masque le symptôme ne tiendra pas à la prochaine tentative.",
-    ],
-  },
-  {
-    heading: "Mise en sécurité provisoire ou solution définitive",
-    Icon: <ClockIcon className="w-4 h-4" />,
-    paragraphs: [
+    heading: "Les bons réflexes dans la première heure",
+    paragraphs: [],
+    extra: (
       <>
-        Selon l&apos;ampleur des dégâts, une mise en sécurité provisoire (blocage temporaire,
-        remplacement partiel) peut suffire dans un premier temps. Cela laisse le temps de
-        planifier une solution durable dans de bonnes conditions, plutôt que dans la
-        précipitation. Cette solution durable peut prendre la forme d&apos;un remplacement de
-        serrure, d&apos;un renforcement des points d&apos;ancrage, d&apos;un{" "}
-        <Link href="/blindage-porte-nice/" className="text-steel underline">
-          blindage de porte
-        </Link>{" "}
-        si la porte reste saine, voire d&apos;un{" "}
-        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-          bloc-porte neuf
-        </Link>{" "}
-        si le bâti lui-même a été fragilisé.
-      </>,
-    ],
+        <ol className={olClass}>
+          <li>
+            <strong className="text-navy">Ne touchez à rien</strong> : ni la porte, ni la serrure, ni ce qui a été
+            déplacé à l&apos;intérieur. Prenez des photos de la porte, côté palier et côté intérieur, puis des pièces
+            visitées.
+          </li>
+          <li>
+            <strong className="text-navy">Appelez la police</strong> (17) si le cambrioleur peut encore être sur
+            place, puis déposez plainte au commissariat ou à la gendarmerie (une pré-plainte en ligne permet de
+            gagner du temps). Le récépissé de plainte vous sera demandé par l&apos;assureur.
+          </li>
+          <li>
+            <strong className="text-navy">Appelez-moi</strong> pour sécuriser la porte. Si la police doit faire des
+            relevés, je viens après son passage.
+          </li>
+          <li>
+            <strong className="text-navy">Déclarez le vol à votre assureur</strong> dans les{" "}
+            <a
+              href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035731302"
+              target="_blank"
+              rel="noopener"
+              className={linkClass}
+            >
+              2 jours ouvrés
+            </a>
+            , avec le récépissé de plainte, les photos et ma facture.
+          </li>
+        </ol>
+        <p className={pClass}>
+          Pour le détail des démarches (plainte, assurance, syndic, opposition sur les cartes et chéquiers), voir{" "}
+          <Link href="/blog/que-faire-apres-cambriolage-nice/" className={linkClass}>
+            mon guide complet sur les démarches
+          </Link>{" "}
+          après un cambriolage.
+        </p>
+      </>
+    ),
   },
   {
-    heading: "Pour les démarches avec votre assurance",
-    Icon: <HandshakeIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Après une effraction, votre assureur vous demandera généralement un justificatif d'intervention. Je vous fournis une facture détaillée mentionnant la nature des dégâts constatés et les réparations effectuées. Je ne vous annoncerai jamais de plafond de remboursement générique : cela dépend entièrement de votre contrat, et un chiffre standard serait trompeur. Ce que je peux confirmer : le déplacement et la main d'œuvre sont généralement pris en charge, sous réserve de vos conditions de contrat.",
+    heading: "Ce que je fais sur place",
+    paragraphs: [],
+    extra: (
       <>
-        Si un dépanneur vous annonce qu&apos;il est « agréé toutes assurances », vérifiez ce que cette formule
-        signifie réellement avant de signer : j&apos;ai détaillé le sujet dans{" "}
-        <Link href="/blog/serrurier-agree-assurances-nice/" className="text-steel underline">
-          « Agréé toutes assurances », ce que cette formule ne veut pas dire
-        </Link>
-        .
-      </>,
-    ],
+        <p className={pClass}>Je commence toujours par regarder les dégâts réels, pas seulement ce qui se voit :</p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">le cylindre</strong>, souvent arraché, cassé ou percé ;
+          </li>
+          <li>
+            <strong className="text-navy">la gâche et le cadre</strong> autour d&apos;elle : bois fendu ou seulement
+            marqué ;
+          </li>
+          <li>
+            <strong className="text-navy">le jeu de la porte</strong> sur ses paumelles après le choc ;
+          </li>
+          <li>
+            <strong className="text-navy">les points d&apos;ancrage</strong> de la serrure.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Une tentative qui a échoué sur le cylindre laisse parfois des dégâts moins visibles sur le cadre. La porte
+          peut alors se refermer normalement sans avoir retrouvé sa résistance : je le vérifie avant de partir.
+        </p>
+        <p className={pClass}>
+          Sur certaines serrures haut de gamme, un mécanisme de sécurité interne, parfois appelé « pare-attaque », se
+          déclenche pendant la tentative : il bloque le pêne, même avec la bonne clé. Il faut le réarmer avec une
+          méthode adaptée, sans abîmer davantage la serrure.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Mise en sécurité, réparation, renforcement : trois étapes",
+    paragraphs: [],
+    extra: (
+      <>
+        <ArticleTable
+          headers={["Étape", "Quand", "Ce que c'est"]}
+          rows={[
+            [
+              "1. Mise en sécurité",
+              "Le jour même",
+              "Rétablir une fermeture qui protège vraiment : remplacement du cylindre, blocage temporaire, remplacement partiel",
+            ],
+            [
+              "2. Réparation définitive",
+              "Une fois l'urgence passée",
+              "Remettre la porte, la gâche et le cadre dans un état durable",
+            ],
+            [
+              "3. Renforcement",
+              "Avec la réparation, si vous le souhaitez",
+              "Monter en niveau plutôt que reposer à l'identique ce qui vient de céder",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Une mise en sécurité provisoire suffit quand la porte ferme encore de façon fiable et que la solution
+          durable demande réflexion : choix du niveau de sécurité, délai pour un modèle précis. Quand la porte ne ferme
+          plus correctement, je fais la réparation tout de suite : rester en provisoire prolongerait le risque.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Renforcer votre porte après une effraction",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Une effraction est souvent l&apos;occasion de monter en niveau, plutôt que de reposer la même installation
+          qui vient de céder. Je vous conseille selon l&apos;état réel de votre porte, pas selon un ordre fixe :
+        </p>
+        <ArticleTable
+          headers={["Renfort", "Ce qu'il empêche", "Prix TTC posé"]}
+          rows={[
+            [
+              <Link key="poignee" href="/poignee-blindee-nice/" className={linkClass}>
+                Poignée blindée
+              </Link>,
+              "L'attaque directe du cylindre (arrachement, casse)",
+              "349 €",
+            ],
+            [
+              "Cornières anti-pince",
+              "Le levier glissé entre la porte et le cadre pour faire sauter le pêne",
+              "269 €",
+            ],
+            [
+              <Link key="cylindre" href="/changement-serrure-nice/" className={linkClass}>
+                Cylindre certifié A2P
+              </Link>,
+              "Le perçage, le crochetage et la casse du cylindre",
+              "Dès 249 € (cylindre standard), A2P sur devis",
+            ],
+            [
+              <Link key="carenee" href="/serrure-carenee-nice/" className={linkClass}>
+                Serrure carénée 5 points
+              </Link>,
+              "L'ouverture forcée d'une porte à un seul point de fermeture",
+              "1 249 €",
+            ],
+            [
+              <Link key="blindage" href="/blindage-porte-nice/" className={linkClass}>
+                Blindage de porte
+              </Link>,
+              "L'enfoncement d'une porte saine mais trop légère",
+              "Dès 2 689 €",
+            ],
+            [
+              <Link key="bloc" href="/installation-porte-blindee-nice/" className={linkClass}>
+                Bloc-porte blindé neuf
+              </Link>,
+              "Tout, quand la porte ou le cadre ont été trop abîmés",
+              "Dès 3 490 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          La poignée blindée et les cornières anti-pince forment souvent le meilleur duo prix-protection sur une
+          porte standard : elles couvrent les deux attaques les plus fréquentes, le cylindre et le levier.
+        </p>
+        <p className={pClass}>
+          En complément, un{" "}
+          <a
+            href="https://www.heracles.fr/heracles-micro-viseur-hispy-2_SKUM83697.html"
+            target="_blank"
+            rel="noopener"
+            className={linkClass}
+          >
+            judas numérique
+          </a>{" "}
+          remplace l&apos;œilleton par un petit écran : vous voyez qui sonne sans entrouvrir la porte. Utile pour
+          reprendre confiance après une effraction, je peux l&apos;installer avec les autres renforts.
+        </p>
+      </>
+    ),
   },
   {
     id: "cambriolages-nice",
-    heading: "Les cambriolages à Nice, une réalité à prendre au sérieux",
-    Icon: <BoltIcon className="w-4 h-4" />,
+    heading: "Les cambriolages à Nice",
     paragraphs: [
-      "Selon les chiffres du ministère de l'Intérieur publiés en mars 2026, le taux de cambriolages à Nice est remonté à 0,61% des logements en 2025, contre 0,54% l'année précédente. Ce niveau est désormais supérieur à la moyenne nationale (0,56%), et bien au-dessus de la moyenne du département des Alpes-Maritimes (0,43%). Une porte correctement équipée reste le moyen le plus direct de limiter ce risque. La plupart des tentatives d'effraction s'arrêtent devant une serrure qui résiste plus de quelques minutes.",
+      <>
+        D&apos;après les chiffres du{" "}
+        <a
+          href="https://statistiques.interieur.gouv.fr/ssmsi/infractions-et-sentiment-dinsecurite/cambriolages"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          ministère de l&apos;Intérieur
+        </a>{" "}
+        publiés en mars 2026, le taux de cambriolages à Nice est passé de 0,54 % des logements en 2024 à 0,61 % en
+        2025. C&apos;est plus que la moyenne nationale (0,56 %) et nettement plus que la moyenne des Alpes-Maritimes
+        (0,43 %). La plupart des tentatives s&apos;arrêtent devant une porte qui résiste plus de quelques minutes.
+      </>,
+    ],
+  },
+  {
+    heading: "Votre assurance",
+    paragraphs: [
+      "Votre assureur vous demandera un justificatif d'intervention. Ma facture décrit les dégâts constatés (cylindre, gâche, cadre), les réparations effectuées, et le niveau de certification posé s'il y a une nouvelle serrure ou une nouvelle porte. Cette description aide l'assureur à qualifier le sinistre : effraction, tentative ou usure. Elle porte mon SIRET.",
+      <>
+        Je ne vous annonce aucun plafond de remboursement ni aucune franchise : cela dépend entièrement de votre
+        contrat, et un chiffre général serait trompeur. Méfiez-vous aussi d&apos;un dépanneur qui se dit «{" "}
+        <Link href="/blog/serrurier-agree-assurances-nice/" className={linkClass}>
+          agréé toutes assurances
+        </Link>{" "}
+        » : cette formule ne garantit aucun remboursement, j&apos;explique pourquoi dans un article dédié.
+      </>,
+      "Si vous n'êtes pas sur place (propriétaire absent, syndic, gestionnaire), je vous envoie sur demande une courte vidéo avant/après de l'intervention, par WhatsApp ou par e-mail.",
     ],
   },
 ];
 
 const faq = [
   {
-    question: "Intervenez-vous en urgence après une effraction à Nice ?",
+    question: "Intervenez-vous la nuit après une effraction ?",
     answer:
-      "Oui, selon ma disponibilité, j'interviens 24h/24 et 7j/7 pour sécuriser votre porte le plus vite possible après une effraction, y compris la nuit et le week-end.",
+      "Oui, 24h/24 et 7j/7, en 30 minutes partout à Nice, y compris la nuit, le week-end et les jours fériés.",
   },
   {
-    question: "Quelle différence entre mise en sécurité, réparation définitive et renforcement ?",
+    question: "Faut-il attendre la police avant d'appeler un serrurier ?",
     answer:
-      "Trois choses distinctes, souvent confondues. La mise en sécurité, c'est l'urgence : rétablir une fermeture qui protège vraiment, le jour même. La réparation définitive remet l'installation dans un état durable, une fois l'urgence passée. Le renforcement est une montée en gamme volontaire (niveau A2P, points supplémentaires...), intégrée à la réparation définitive plutôt qu'une étape séparée.",
-  },
-  {
-    question: "Une mise en sécurité provisoire suffit-elle après un cambriolage ?",
-    answer:
-      "Parfois oui, en attendant de planifier une solution durable dans de bonnes conditions plutôt que dans l'urgence de l'instant. Je vous conseille selon l'état réel de votre porte.",
+      "Appelez-moi tout de suite, mais ne touchez à rien avant d'avoir pris des photos. Si la police doit faire des relevés, je viens après son passage.",
   },
   {
     question: "Faut-il toujours changer la serrure après une effraction ?",
     answer:
-      "Non, cela dépend de l'état réel du cylindre et du mécanisme. Je ne remplace que ce qui est nécessaire, après un diagnostic précis sur place.",
+      "Non. Je ne remplace que ce qui est abîmé, après un diagnostic sur place : souvent le cylindre, parfois la gâche, plus rarement la serrure entière.",
   },
   {
-    question: "Donnez-vous un devis avant d'intervenir après une effraction ?",
+    question: "Une mise en sécurité provisoire suffit-elle ?",
     answer:
-      "Oui, toujours. Le prix est annoncé puis validé avant que je commence les travaux, même en pleine urgence de nuit.",
+      "Parfois, si la porte ferme encore de façon fiable : elle laisse le temps de choisir une solution durable. Si la porte ne ferme plus correctement, je fais la réparation tout de suite.",
   },
   {
-    question: "Puis-je renforcer ma porte avec un blindage après une effraction ?",
+    question: "Donnez-vous un prix avant d'intervenir, même en urgence ?",
     answer:
-      "Oui, selon l'état de votre porte et de votre bâti. Une fois la mise en sécurité immédiate effectuée, je peux vous orienter vers un blindage de porte si la porte le permet, ou vers un bloc-porte neuf si le bâti a été fragilisé.",
+      "Oui, toujours. Le prix est annoncé et validé avant que je commence, même en pleine nuit.",
   },
   {
-    question: "Mon assurance habitation prend-elle en charge l'intervention ?",
+    question: "Mon assurance prend-elle en charge l'intervention ?",
     answer:
-      "Généralement oui pour le déplacement et la main d'œuvre, sous réserve du dépôt de plainte et des conditions de votre contrat. Je ne peux pas vous annoncer de plafond : cela dépend entièrement de votre contrat. Je vous fournis une facture détaillée pour appuyer votre déclaration de sinistre.",
+      "Souvent, sous réserve du dépôt de plainte et des conditions de votre contrat. Je vous remets une facture détaillée qui décrit les dégâts et les réparations, pour votre déclaration.",
   },
   {
-    question: "Je ne suis pas sur place (propriétaire absent, syndic, gestionnaire) : puis-je voir ce qui a été fait ?",
+    question: "Je ne suis pas sur place : puis-je voir ce qui a été fait ?",
     answer:
-      "Oui, sur simple demande je vous transmets une courte vidéo de l'intervention (avant/après) par WhatsApp ou email, utile si vous n'êtes pas présent au moment des travaux.",
+      "Oui. Sur demande, je vous envoie une courte vidéo avant/après par WhatsApp ou par e-mail.",
   },
 ];
 
-export default function MiseEnSecuriteApresEffractionNicePage() {
+export default async function MiseEnSecuriteApresEffractionNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <ServicePageTemplate
-      h1="Mise en sécurité après effraction à Nice"
-      lead="Après un cambriolage ou une tentative d'effraction, la priorité c'est de fermer et sécuriser immédiatement, puis remettre une réparation définitive. J'interviens 24h/24, devis annoncé avant chaque intervention."
+      h1="Mise en sécurité après effraction à Nice, 24h/24"
+      lead="Après un cambriolage ou une tentative d'effraction, la priorité est de pouvoir refermer chez vous le soir même. J'arrive en 30 minutes partout à Nice, de jour comme de nuit, je sécurise la porte, et je vous remets une facture détaillée pour votre assurance. Le prix vous est annoncé avant que je commence."
+      hideProcessSteps
       sections={sections}
       faq={faq}
       breadcrumbLabel="Mise en sécurité après effraction"
@@ -390,58 +311,16 @@ export default function MiseEnSecuriteApresEffractionNicePage() {
         src: "/images/serrurier-nice-securite-apres-effraction.webp",
         alt: "Mise en sécurité après effraction Nice",
       }}
-      sectionsVariant="cards"
-      sectionsHeading="Ce qu'il faut savoir après une effraction"
       headingScale="lg"
+      heroTrustNote={heroTrustNote}
       extra={
         <>
-          <section className="mx-auto max-w-4xl px-4 -mt-6">
-            <p className="text-xs text-slate">
-              Source :{" "}
-              <a
-                href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-steel"
-              >
-                Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
-              </a>
-            </p>
-          </section>
           <ServiceReviewsLive path="/mise-en-securite-apres-effraction-nice/" />
-          <section className="mx-auto max-w-4xl px-4 py-10">
-            <InsuranceBanner />
-          </section>
+          <div className="mx-auto max-w-4xl px-4 py-10">
+            <QuoteBlock locale="fr" />
+          </div>
         </>
       }
-      processSteps={[
-        {
-          title: "Appel",
-          text: "Vous me décrivez les dégâts constatés après l'effraction, et j'identifie l'urgence réelle de l'intervention dès le téléphone.",
-        },
-        {
-          title: "Délai d'arrivée",
-          text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
-        },
-        {
-          title: "Évaluation des dégâts",
-          text: "J'évalue l'ampleur des dégâts (cylindre arraché, bâti fissuré, gâche endommagée) pour proposer une mise en sécurité immédiate adaptée.",
-        },
-        {
-          title: "Règlement",
-          text: "Le prix confirmé sur place est celui que vous payez, facture détaillée utile pour votre déclaration de sinistre.",
-        },
-      ]}
-      relatedArticle={{
-        href: "/blog/que-faire-apres-cambriolage-nice/",
-        label: "Que faire après un cambriolage : les bons réflexes",
-      }}
-      guide={
-        <ServiceGuideSection readingMinutes={6} toc={guideToc} faq={guideFaq}>
-          {guideContent}
-        </ServiceGuideSection>
-      }
-      guideFaqForSchema={guideFaq}
     />
   );
 }
