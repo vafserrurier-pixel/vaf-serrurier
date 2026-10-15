@@ -8,7 +8,7 @@
 export const contentDates: Record<string, string> = {
   "/a-propos/": "2026-10-09T08:23:26+02:00",
   "/agences-syndics-nice/": "2026-10-09T08:23:26+02:00",
-  "/blindage-porte-nice/": "2026-10-14T19:20:00+02:00",
+  "/blindage-porte-nice/": "2026-10-15T19:37:45+02:00",
   "/blog/certification-a2p-serrure-nice/": "2026-09-12",
   "/blog/changer-serrure-separation-divorce/": "2026-09-18",
   "/blog/cle-cassee-serrure-que-faire-nice/": "2026-10-06",
