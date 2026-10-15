@@ -3,264 +3,265 @@ import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { AlertLockIcon, WrenchIcon, KeyIcon, BoltIcon } from "@/components/Icons";
+import ArticleTable from "@/components/ArticleTable";
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
 import { buildMetadata } from "@/lib/metadata";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
-const symptoms = [
-  {
-    Icon: AlertLockIcon,
-    title: "La clé force ou résiste",
-    cause: "Cylindre encrassé, gâche mal réglée ou porte qui a bougé.",
-    urgence: "Faible à modérée : à traiter avant blocage complet.",
-  },
-  {
-    Icon: WrenchIcon,
-    title: "Clé cassée dans le cylindre",
-    cause: "Usure du métal, souvent après un forçage léger et répété.",
-    urgence: "Élevée si aucun double n'est disponible.",
-  },
-  {
-    Icon: KeyIcon,
-    title: "La clé tourne dans le vide",
-    cause: "Pièce interne cassée ou cylindre complètement usé.",
-    urgence: "Élevée : le pêne ne bouge plus du tout.",
-  },
-  {
-    Icon: BoltIcon,
-    title: "Blocage soudain, porte déjà fermée",
-    cause: "Mécanisme grippé ou pièce rompue sans signe avant-coureur.",
-    urgence: "Immédiate si vous êtes bloqué dehors ou dedans.",
-  },
-];
-
-const guideToc = [
-  { id: "diagnostic", label: "Reconnaître le symptôme avant d'appeler" },
-  { id: "entretien", label: "Entretien préventif : le bon geste" },
-  { id: "devis", label: "Vos droits : un devis avant toute intervention" },
-  { id: "reparer-remplacer", label: "Réparer ou remplacer : comment je tranche" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Puis-je lubrifier moi-même une serrure qui résiste ?",
-    answer:
-      "Oui, en petite quantité et avec un produit adapté au mécanisme : du WD-40, que je recommande de pulvériser une fois le cylindre démonté et nettoyé, ou du graphite en poudre (lubrifiant sec). Évitez en revanche l'huile de cuisine, qui devient collante et encrasse la serrure.",
-  },
-  {
-    question: "Un devis est-il vraiment obligatoire avant une intervention ?",
-    answer:
-      "Oui, c'est une obligation réglementaire pour les prestations de dépannage à domicile, pas une option laissée à l'appréciation du professionnel. Je vous communique un prix avant de me déplacer et un devis détaillé avant toute intervention.",
-  },
-  {
-    question: "Combien de temps avant qu'une serrure qui résiste finisse par se bloquer ?",
-    answer:
-      "Impossible à garantir précisément : cela dépend de l'usage quotidien et de l'état du mécanisme. Un cylindre qui accroche déjà régulièrement peut se bloquer du jour au lendemain, d'où l'intérêt de ne pas attendre.",
-  },
-  {
-    question: "Dois-je essayer de forcer si la clé tourne dans le vide ?",
-    answer:
-      "Non : forcer n'a aucun effet quand une pièce interne est cassée, et risque d'endommager le cylindre au point de compliquer son remplacement. Mieux vaut couper l'usage de cette porte et faire intervenir un professionnel.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille le diagnostic, l&apos;entretien préventif et vos droits en
-      tant que client, en complément des symptômes déjà décrits plus haut sur
-      cette page.
-    </p>
-
-    <div className="bg-cream rounded-xl p-6 border border-navy/10">
-      <p className="font-heading font-bold text-navy mb-4">Symptôme, cause probable et urgence</p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {symptoms.map(({ Icon, title, cause, urgence }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-steel/10 text-steel shrink-0">
-              <Icon className="w-4 h-4" />
-            </span>
-            <div>
-              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-              <p className="text-sm text-slate leading-snug mt-0.5">{cause}</p>
-              <p className="text-xs text-steel font-semibold mt-1">{urgence}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3">
-        Reconnaître le symptôme avant d&apos;appeler
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le tableau ci-dessus donne un premier repère, mais un seul geste en dit
-        souvent plus long : essayez la clé lentement, sans forcer. Une
-        résistance progressive pointe vers un encrassement ou un léger
-        désalignement de la porte. Un blocage net et soudain, sans à-coups
-        avant-coureurs, évoque plutôt une pièce interne rompue. Cette
-        distinction m&apos;aide déjà à préparer le bon outillage avant de me
-        déplacer.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="entretien" level="h3">
-        Entretien préventif : le bon geste (et celui à éviter)
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un cylindre qui commence à résister peut souvent être soulagé avec un
-        peu de WD-40, que je recommande de pulvériser une fois le cylindre
-        démonté et nettoyé, ou avec du graphite en poudre (lubrifiant sec), à
-        appliquer en petite quantité. L&apos;huile de cuisine est en revanche à
-        proscrire : elle devient collante et encrasse le mécanisme. Sur les portes plus anciennes du centre de Nice,
-        l&apos;humidité fait aussi gonfler légèrement le bois : un simple
-        réglage de la gâche évite parfois un dépannage complet.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="devis" level="h3">
-        Vos droits : un devis avant toute intervention
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Les prestations de dépannage à domicile dans le bâtiment sont
-        encadrées par l&apos;
-        <a
-          href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          arrêté du 24 janvier 2017 relatif à la publicité des prix
-        </a>{" "}
-        : un prix doit vous être communiqué avant le déplacement, et un devis
-        détaillé avant le début des travaux. Ce n&apos;est pas une option
-        laissée à l&apos;appréciation du professionnel.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="reparer-remplacer" level="h3">
-        Réparer ou remplacer : comment je tranche
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un nettoyage, un réglage de gâche ou une extraction de clé cassée
-        suffisent souvent à régler le problème sans remplacer quoi que ce
-        soit. Le remplacement devient nécessaire quand une pièce interne est
-        rompue, quand le cylindre a été percé pour une ouverture, ou quand
-        c&apos;est l&apos;occasion de monter en niveau de sécurité : le détail
-        des critères de choix est sur ma page{" "}
-        <Link href="/changement-serrure-nice/" className="text-steel underline">
-          changement de serrure
-        </Link>
-        . Une fois le cylindre remplacé, une{" "}
-        <Link href="/poignee-blindee-nice/" className="text-steel underline">
-          poignée blindée
-        </Link>{" "}
-        reste une option simple pour le protéger d&apos;une nouvelle
-        tentative, sans attendre un renfort plus lourd.
-      </p>
-    </div>
-  </>
-);
-
 export const metadata: Metadata = buildMetadata({
   path: "/urgence-serrurier-nice/",
-  title: "Urgence serrurier Nice 24h/24 – Dépannage rapide",
-  description: "Serrurier en urgence à Nice : serrure bloquée, clé cassée, cylindre grippé. J'interviens jour et nuit, prix annoncé avant intervention.",
+  title: "Serrurier urgence Nice 24h/24 : sur place en 30 min",
+  description:
+    "Serrurier d'urgence à Nice 24h/24, 7j/7 : sur place en 30 min, porte claquée, clé cassée, effraction. Prix annoncé au téléphone. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sectionsFr = [
   {
-    heading: "Enfant ou animal enfermé : une urgence absolue",
-    paragraphs: [
-      "Un enfant ou un animal seul, enfermé à l'intérieur, est une urgence absolue que je traite en priorité sur toute autre intervention en cours. Dites-le-moi dès le début de l'appel : je réorganise mon planning immédiatement pour venir en premier.",
-      "En cas de danger immédiat (chaleur, détresse visible, risque vital), appelez aussi les pompiers au 18 en parallèle de votre appel : les deux démarches sont complémentaires, ne perdez pas de temps à choisir entre les deux.",
-    ],
-  },
-  {
-    heading: "Une serrure bloquée à Nice, d'où ça vient",
-    paragraphs: [
-      "Une serrure qui résiste vient rarement de nulle part. Le plus souvent, c'est le cylindre qui a pris la poussière et l'humidité au fil des saisons, ou un mécanisme interne fatigué. Autre cause fréquente : un défaut d'alignement de la porte qui force le pêne à chaque fermeture. Sur les immeubles anciens du centre de Nice, l'humidité et les variations de température jouent aussi beaucoup sur le bois et sur le jeu de la porte.",
-      "Avant de conclure quoi que ce soit, je vérifie l'ensemble : la porte, la gâche, le pêne et le cylindre. Une serrure qui grippe légèrement aujourd'hui peut se bloquer complètement demain. Résultat : une intervention préventive coûte presque toujours moins cher qu'un dépannage en pleine nuit, une fois le mécanisme totalement figé.",
-    ],
-  },
-  {
-    heading: "Clé cassée dans la serrure",
-    id: "cle-cassee",
-    paragraphs: [
+    heading: "Prix de jour et de nuit, situation par situation",
+    paragraphs: [],
+    extra: (
       <>
-        C&apos;est l&apos;un des dépannages les plus fréquents : une clé usée qui casse net dans le barillet, souvent au
-        pire moment. J&apos;extrais le morceau resté à l&apos;intérieur avec les outils adaptés, puis je vérifie
-        l&apos;état du cylindre avant de le remettre en service (voir{" "}
-        <Link href="/blog/cle-cassee-serrure-que-faire-nice/" className="text-steel underline">
-          que faire quand une clé casse dans la serrure
-        </Link>
-        ). Le perçage ne reste qu&apos;une solution de tout dernier recours, si aucune autre méthode n&apos;aboutit.
-      </>,
-      "Un réflexe à éviter absolument : pousser la clé cassée avec un objet pointu ou tenter de la coller. Ces deux gestes, très courants, compliquent presque toujours l'extraction et abîment le cylindre. Résultat : un dépannage simple se transforme en remplacement complet.",
+        <ArticleTable
+          headers={["Situation", "Ce que je fais", "En journée", "Après 19 h, week-end, jours fériés"]}
+          rows={[
+            [
+              <>
+                <Link href="/ouverture-de-porte-nice/" className={linkClass}>
+                  Porte claquée
+                </Link>
+                , clés à l&apos;intérieur
+              </>,
+              "Ouverture à la feuille Mika, sans dégât",
+              "149 €",
+              "189 €",
+            ],
+            [
+              "Porte fermée à clé, clés perdues ou volées",
+              "Perçage du cylindre, jamais de la porte, puis cylindre neuf",
+              "149 € + cylindre (dès 249 €)",
+              "209 € + cylindre",
+            ],
+            [
+              <Link key="cle" href="/blog/cle-cassee-serrure-que-faire-nice/" className={linkClass}>
+                Clé cassée dans la serrure
+              </Link>,
+              "Extraction du morceau, test du cylindre",
+              "149 €",
+              "189 €",
+            ],
+            [
+              <>
+                <Link href="/blog/serrure-bloquee-diagnostic-nice/" className={linkClass}>
+                  Serrure bloquée
+                </Link>
+                , clé qui ne tourne plus
+              </>,
+              "Dégrippage et réglage ; cylindre remplacé seulement s'il est hors d'usage",
+              "Prix annoncé au téléphone",
+              "Prix annoncé au téléphone",
+            ],
+            [
+              <Link key="effraction" href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+                Porte forcée, effraction
+              </Link>,
+              "Mise en sécurité pour que vous puissiez refermer le soir même",
+              "Prix annoncé au téléphone",
+              "Prix annoncé au téléphone",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Pour les serrures Fichet, Picard et Muel, le prix est toujours sur devis : ce sont des serrures chères, et
+          le prix varie d&apos;un modèle à l&apos;autre.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Enfant, personne âgée ou animal enfermé",
+    paragraphs: [
+      "Dites-le dès les premiers mots de l'appel : ces interventions passent avant toutes les autres, je réorganise ma tournée pour venir en premier.",
+      "En cas de danger immédiat (malaise, chaleur, fumée, personne qui ne répond plus), appelez aussi les pompiers au 18 ou le 112, en même temps que moi. Ne perdez pas de temps à choisir entre les deux : ils peuvent entrer plus vite que n'importe quel serrurier.",
     ],
   },
   {
-    heading: "Quand la clé tourne dans le vide",
-    paragraphs: [
-      "Si la clé tourne sans que rien ne se passe, le mécanisme ne transmet plus le mouvement au pêne. C'est souvent le signe d'une pièce interne cassée ou d'un cylindre complètement usé. Je contrôle l'ensemble porte, gâche, pêne et cylindre pour identifier précisément l'origine du problème. Ensuite, je corrige ce qui peut l'être, et je ne remplace que ce qui est réellement nécessaire.",
-    ],
+    heading: "Comment se passe un dépannage d'urgence",
+    paragraphs: [],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Au téléphone</strong>, je vous pose deux questions : la porte est-elle
+          simplement claquée, ou fermée à clé ? Et quelle marque est inscrite sur votre clé, si vous en avez une
+          d&apos;origine ? Une photo de la serrure par WhatsApp m&apos;aide à apporter le bon outil.
+        </li>
+        <li>
+          <strong className="text-navy">Je vous annonce le prix et l&apos;heure d&apos;arrivée</strong> avant de
+          partir. Si la situation change en route, je vous rappelle.
+        </li>
+        <li>
+          <strong className="text-navy">Sur place</strong>, je regarde la porte et la serrure, je vous confirme la
+          méthode, puis j&apos;interviens. Rien n&apos;est fait avant que vous ayez dit oui au prix.
+        </li>
+        <li>
+          <strong className="text-navy">Vous payez le prix annoncé</strong>, par carte, espèces ou virement, et je
+          vous remets une facture détaillée.
+        </li>
+      </ol>
+    ),
   },
   {
-    heading: "Cylindre grippé : agir avant la panne complète",
-    paragraphs: [
-      "Un cylindre qui accroche, une clé qui force un peu plus chaque semaine : ce sont des signaux d'alerte. Un peu de lubrifiant adapté peut parfois soulager temporairement. Mais si le problème revient, mieux vaut le traiter avant de se retrouver bloqué dehors un soir de week-end.",
-    ],
+    heading: "Ce qui peut attendre le lendemain",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Tout ne justifie pas un tarif de nuit. Si vous êtes chez vous et en sécurité, certaines pannes peuvent
+          attendre le lendemain matin, au tarif de journée :
+        </p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">la clé force mais tourne encore</strong> : ne forcez plus, évitez de fermer
+            à double tour, et appelez-moi le lendemain ;
+          </li>
+          <li>
+            <strong className="text-navy">la porte ferme mais frotte</strong> : c&apos;est souvent un simple réglage
+            de gâche ;
+          </li>
+          <li>
+            <strong className="text-navy">vous êtes à l&apos;intérieur et la porte ne se verrouille plus</strong>,
+            mais l&apos;immeuble est sûr : une mise en sécurité peut se faire le matin.
+          </li>
+        </ul>
+        <p className={pClass}>Au téléphone, je vous dis honnêtement si votre cas peut attendre.</p>
+      </>
+    ),
   },
   {
-    heading: "Comment je fixe le tarif d'un dépannage",
-    paragraphs: [
-      "Le coût dépend du problème rencontré, du temps nécessaire sur place et des pièces éventuellement à remplacer. Vous m'appelez, vous m'expliquez le souci en quelques mots, et je vous donne un prix avant de me déplacer, pas de mauvaise surprise à la fin.",
-    ],
+    heading: "En attendant que j'arrive",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Ne forcez pas</strong> sur une clé qui résiste, avec une pince ou un
+          tournevis : elle finit par casser dans la serrure.
+        </li>
+        <li>
+          <strong className="text-navy">Si une clé est cassée</strong>, laissez le morceau en place et
+          n&apos;introduisez rien dans le cylindre, ni autre clé, ni aiguille.
+        </li>
+        <li>
+          <strong className="text-navy">N&apos;essayez pas de lubrifier à l&apos;huile de cuisine</strong> : elle
+          colle et encrasse le mécanisme. Le bon geste, à froid et plus tard, c&apos;est le WD-40 ou le graphite sec.
+        </li>
+        <li>
+          <strong className="text-navy">Après une effraction</strong>, ne touchez à rien avant d&apos;avoir pris des
+          photos, et prévenez la police.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Combien coûte un dépannage en urgence",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Mes prix sont fixes et affichés : 149 € TTC en journée pour une ouverture, déplacement compris. Après 19 h,
+          le week-end et les jours fériés, c&apos;est 189 € pour une porte claquée et 209 € pour une porte fermée à
+          clé. Les pièces remplacées, comme un cylindre, s&apos;ajoutent, et leur prix vous est annoncé avant. Le
+          détail de tous mes{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            tarifs
+          </Link>{" "}
+          est sur ma page dédiée.
+        </p>
+        <p className={pClass}>
+          Pour un dépannage à domicile, la loi impose un document détaillé avant tous travaux, dès le premier euro,
+          puis une facture au-delà de 25 € TTC (
+          <a
+            href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
+            target="_blank"
+            rel="noopener"
+            className={linkClass}
+          >
+            arrêté du 24 janvier 2017
+          </a>
+          ). Un serrurier qui refuse de vous donner un prix avant d&apos;intervenir ne respecte pas la loi.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Après le dépannage",
+    paragraphs: [],
+    extra: (
+      <p className={pClass}>
+        Une fois la porte ouverte, je ne vous vends rien d&apos;inutile. Si le cylindre fonctionne, je le vérifie et
+        je le graisse. S&apos;il a été percé, ou si vos clés ont été perdues ou volées, il faut{" "}
+        <Link href="/changement-serrure-nice/" className={linkClass}>
+          changer le cylindre
+        </Link>{" "}
+        : quelqu&apos;un d&apos;autre peut avoir vos clés. Si la serrure a été attaquée, une{" "}
+        <Link href="/poignee-blindee-nice/" className={linkClass}>
+          poignée blindée
+        </Link>{" "}
+        protège ensuite le cylindre contre l&apos;arrachement, sans gros travaux.
+      </p>
+    ),
   },
 ];
 
 const faqFr = [
   {
-    question: "Comment se passe l'intervention d'un serrurier à Nice ?",
-    answer:
-      "J'écoute d'abord le problème au téléphone, je propose la solution la plus adaptée, j'annonce un devis détaillé, puis je réalise l'intervention sur place.",
+    question: "Combien de temps pour que vous arriviez ?",
+    answer: "En urgence, en 30 minutes partout à Nice, jour et nuit, week-end et jours fériés compris.",
   },
   {
-    question: "Qui prend en charge le remplacement d'une serrure à Nice ?",
+    question: "Combien coûte un serrurier la nuit à Nice ?",
     answer:
-      "En général, le propriétaire prend en charge les frais de serrurerie liés à l'usure normale. Les dégradations résultant d'un usage anormal restent à la charge de l'occupant.",
+      "189 € TTC pour une porte claquée et 209 € pour une porte fermée à clé, après 19 h, le week-end et les jours fériés. En journée, c'est 149 €. Les pièces éventuelles s'ajoutent, au prix annoncé avant.",
   },
   {
-    question: "Comment un serrurier ouvre-t-il une porte claquée sans clé ?",
+    question: "Un serrurier peut-il annoncer son prix seulement après l'intervention ?",
     answer:
-      "Selon le modèle de serrure, j'insère une fine feuille rigide entre le cadre et le pêne, puis je la fais glisser pour libérer le mécanisme, sans abîmer la porte.",
+      "Non. Pour un dépannage à domicile, un document détaillé avec le prix est obligatoire avant tous travaux, dès le premier euro.",
   },
   {
-    question: "Est-ce que l'assurance habitation rembourse un remplacement de serrure à Nice ?",
-    answer:
-      "Dans la majorité des cas, l'assurance habitation du locataire ou du propriétaire prend en charge le remplacement d'une serrure endommagée, notamment après effraction. Vérifiez les conditions de votre contrat.",
+    question: "Mon assurance habitation rembourse-t-elle un dépannage ?",
+    answer: (
+      <>
+        Souvent, surtout{" "}
+        <Link href="/blog/que-faire-apres-cambriolage-nice/" className={linkClass}>
+          après un cambriolage
+        </Link>{" "}
+        ou une tentative d&apos;effraction. Vérifiez les conditions de votre contrat ; je vous remets une facture
+        détaillée, le document qu&apos;elle demande.
+      </>
+    ),
+    schemaText:
+      "Souvent, surtout après un cambriolage ou une tentative d'effraction. Vérifiez les conditions de votre contrat ; je vous remets une facture détaillée, le document qu'elle demande.",
   },
   {
-    question: "Ma carte bancaire peut-elle couvrir un dépannage serrurier en urgence ?",
+    question: "Ma carte bancaire peut-elle couvrir un dépannage serrurier ?",
     answer:
-      "Certaines cartes haut de gamme (Visa Premier, Gold Mastercard ou équivalent) incluent une garantie d'assistance serrurerie, avec un plafond de remboursement qui varie selon la carte et le contrat souscrit. Si vous en avez le temps avant l'intervention, vérifiez ce plafond directement auprès de l'émetteur de votre carte. Dans tous les cas, je vous remets systématiquement une facture détaillée, le document nécessaire pour toute demande de remboursement a posteriori.",
+      "Certaines cartes haut de gamme (Visa Premier, Gold Mastercard ou équivalent) incluent une assistance serrurerie, avec un plafond qui varie selon la carte. Vérifiez-le auprès de votre banque ; la facture détaillée que je vous remets sert pour le remboursement.",
   },
   {
-    question: "Un serrurier a-t-il le droit d'annoncer son prix seulement après l'intervention ?",
+    question: "Qui paie le dépannage quand on est locataire ?",
     answer:
-      "Non. Le métier de serrurier est réglementé : je suis dans l'obligation de vous fournir un devis avant de commencer les travaux.",
+      "En général le locataire, si la panne vient d'une perte ou d'un oubli de clés. Si la serrure lâche par usure normale, c'est au propriétaire.",
   },
   {
-    question: "Y a-t-il un serrurier ouvert maintenant près de moi à Nice ?",
-    answer:
-      "Oui, j'interviens 24h/24 et 7j/7 sur Nice et ses environs, y compris la nuit, le week-end et les jours fériés.",
+    question: "Comment peut-on payer ?",
+    answer: "Par carte bancaire, en espèces ou par virement, avec une facture détaillée dans tous les cas.",
   },
 ];
 
@@ -345,12 +346,29 @@ const faqEn = [
   },
 ];
 
-export default function UrgenceSerrurierNicePage() {
+export default async function UrgenceSerrurierNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Urgence serrurier à Nice, dépannage 24h/24 et 7j/7",
-        lead: "Serrure bloquée, clé cassée, cylindre qui grippe : vous m'expliquez la situation, je vous donne un prix avant de me déplacer, et j'interviens proprement, de jour comme de nuit.",
+        h1: "Serrurier en urgence à Nice, 24h/24 et 7j/7",
+        lead: "En urgence, j'arrive en 30 minutes partout à Nice, de jour comme de nuit, le week-end et les jours fériés. Vous m'appelez, vous m'expliquez la situation, et je vous annonce le prix avant de partir. C'est moi qui décroche et moi qui viens : pas de standard, pas de sous-traitant.",
+        hideProcessSteps: true,
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Urgence serrurier",
@@ -359,11 +377,12 @@ export default function UrgenceSerrurierNicePage() {
           src: "/images/serrurier-nice-depannage-reparation.webp",
           alt: "Serrurier urgence Nice",
         },
+        heroTrustNote,
         extra: (
           <>
             <PriceReminder
               priceLabel="149 € à 209 € TTC"
-              note="149 € TTC en journée ; après 19h, le week-end et les jours fériés : 189 € TTC (porte claquée) ou 209 € TTC (porte verrouillée). Pièces remplacées facturées en supplément."
+              note="149 € en journée ; après 19 h, le week-end et les jours fériés : 189 € (porte claquée) ou 209 € (porte fermée à clé). Pièces remplacées en supplément."
               locale="fr"
             />
             <ServiceReviewsLive path="/urgence-serrurier-nice/" />
@@ -372,34 +391,6 @@ export default function UrgenceSerrurierNicePage() {
             </div>
           </>
         ),
-        processSteps: [
-          {
-            title: "Appel",
-            text: "Vous décrivez la panne (porte bloquée, cylindre grippé, clé cassée) et j'identifie la cause la plus probable dès le téléphone.",
-          },
-          {
-            title: "Délai d'arrivée",
-            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
-          },
-          {
-            title: "Diagnostic de la panne",
-            text: "J'examine le mécanisme pour confirmer s'il s'agit d'un blocage, d'une usure ou d'une casse, avant de choisir la méthode la moins invasive.",
-          },
-          {
-            title: "Règlement",
-            text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois la panne réglée.",
-          },
-        ],
-        relatedArticle: {
-          href: "/blog/que-faire-apres-cambriolage-nice/",
-          label: "Que faire après un cambriolage : les bons réflexes",
-        },
-        guide: (
-          <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
-            {guideContent}
-          </ServiceGuideSection>
-        ),
-        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Emergency locksmith in Nice, 24/7 callout service",
@@ -431,7 +422,7 @@ export default function UrgenceSerrurierNicePage() {
           },
           {
             title: "Time to arrival",
-            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+            text: "I quote a price and a realistic time frame based on your area and the time of day, and let you know if anything changes on the way.",
           },
           {
             title: "Diagnosing the fault",
