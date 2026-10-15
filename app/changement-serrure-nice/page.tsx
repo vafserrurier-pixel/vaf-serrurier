@@ -4,241 +4,408 @@ import LocalizedServicePage from "@/components/LocalizedServicePage";
 import BrandsSection from "@/components/BrandsSection";
 import PriceReminder from "@/components/PriceReminder";
 import QuoteBlock from "@/components/QuoteBlock";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
 import ArticleTable from "@/components/ArticleTable";
-import SituationSelector, { type Situation } from "@/components/SituationSelector";
-import { DoorIcon, AlertLockIcon, KeyIcon, WrenchIcon, ShieldIcon, HandshakeIcon, CheckIcon, StarIcon } from "@/components/Icons";
+import { StarIcon } from "@/components/Icons";
 import { business } from "@/lib/business";
 import { getGoogleReviews } from "@/lib/reviews";
 import { formatRating } from "@/lib/reviewFormat";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 import { buildMetadata } from "@/lib/metadata";
 
-const whyReasons: Situation[] = [
-  {
-    Icon: <DoorIcon className="w-4 h-4" />,
-    title: "Emménagement",
-    text: "Vous ne savez jamais combien de doubles de l'ancien locataire ou propriétaire circulent encore.",
-    anchorId: "quand",
-  },
-  {
-    Icon: <AlertLockIcon className="w-4 h-4" />,
-    title: "Tentative d'effraction",
-    text: "Une serrure forcée ou marquée doit être remplacée, même si l'accès n'a pas cédé.",
-    anchorId: "effraction",
-    priority: true,
-  },
-  {
-    Icon: <KeyIcon className="w-4 h-4" />,
-    title: "Clé perdue ou volée",
-    text: "Le remplacement du seul cylindre suffit dans la grande majorité des cas.",
-    anchorId: "niveau",
-  },
-  {
-    Icon: <WrenchIcon className="w-4 h-4" />,
-    title: "Mécanisme usé",
-    text: "Une clé qui force de plus en plus finit par lâcher, souvent au pire moment.",
-    anchorId: "diagnostic",
-  },
-  {
-    Icon: <ShieldIcon className="w-4 h-4" />,
-    title: "Renforcement volontaire",
-    text: "Passer à un niveau A2P supérieur ou à une serrure multipoints, par choix plutôt que par urgence.",
-    anchorId: "evolution",
-  },
-  {
-    Icon: <HandshakeIcon className="w-4 h-4" />,
-    title: "Exigence d'assurance",
-    text: "Certains contrats conditionnent une garantie vol à un niveau de serrure minimum.",
-    anchorId: "assurance",
-  },
-];
-
-const guideToc = [
-  { id: "diagnostic", label: "Diagnostiquer sa serrure avant d'appeler" },
-  { id: "niveau", label: "Cylindre, coffre complet ou porte entière : le bon niveau" },
-  { id: "tarifs", label: "Tarifs indicatifs selon le remplacement" },
-  { id: "deroule", label: "Le déroulé technique d'une intervention" },
-  { id: "assurance", label: "Assurance : qui paie, et sous quel délai" },
-  { id: "evolution", label: "Faire évoluer sa sécurité sans se suréquiper" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Puis-je réutiliser mes clés actuelles avec un nouveau cylindre ?",
-    answer:
-      "Non : un nouveau cylindre est toujours livré avec son propre jeu de clés neuves. Les anciennes clés ne fonctionnent plus une fois le cylindre remplacé.",
-  },
-  {
-    question: "Combien de clés sont fournies avec un nouveau cylindre ?",
-    answer:
-      "Généralement trois à cinq clés selon le modèle et la marque. Je peux vous confirmer le nombre exact avant la pose.",
-  },
-  {
-    question: "Un cylindre certifié A2P coûte-t-il plus cher qu'un cylindre standard ?",
-    answer:
-      "Oui : un cylindre certifié A2P est toujours sur devis, le montant dépendant de la taille et de la marque retenue. Je vous le confirme au téléphone selon le modèle exact choisi.",
-  },
-  {
-    question: "Que faire si ma porte est légèrement voilée ou mal alignée ?",
-    answer:
-      "Un léger désalignement se corrige souvent en réglant la gâche ou les paumelles, sans changer la serrure elle-même. Si le battant est vraiment voilé, une serrure neuve subira les mêmes contraintes que l'ancienne et s'usera aussi vite.",
-  },
-  {
-    question: "Ai-je besoin d'une autorisation de la copropriété pour changer la serrure de ma porte palière ?",
-    answer:
-      "Non : votre porte palière et sa serrure sont des parties privatives, vous pouvez la changer librement. Seule la serrure du hall d'immeuble, partie commune, nécessite une décision collective.",
-  },
-  {
-    question: "Dois-je être présent pendant toute l'intervention ?",
-    answer:
-      "Votre présence est nécessaire au moins au début et à la fin : je dois vérifier votre identité et votre droit d'occupation avant d'intervenir sur une porte verrouillée, et vous remettre les clés neuves en main propre.",
-  },
-];
-
 export const metadata: Metadata = buildMetadata({
   path: "/changement-serrure-nice/",
-  title: "Changement de serrure Nice – 24h/24, devis gratuit",
-  description: "Remplacement de cylindre, serrure complète ou multipoints à Nice. Devis annoncé avant travaux, clés neuves remises sur place. Appelez le 04 22 13 85 44.",
+  title: "Changement de serrure Nice : cylindre, multipoints",
+  description:
+    "Changement de serrure ou de cylindre à Nice : cylindre européen, serrure multipoints, clés neuves remises sur place. Prix annoncé avant. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sectionsFr = [
   {
-    heading: "Quand faut-il changer une serrure à Nice",
-    Icon: <KeyIcon className="w-4 h-4" />,
-    id: "quand",
-    paragraphs: [
-      <>
-        Un déménagement, une perte de clés, un vol ou une effraction sont les cas
-        les plus fréquents. Une clé qui force de plus en plus, un cylindre qui
-        accroche, ou une fermeture de moins en moins franche sont aussi des
-        signes d&apos;usure à ne pas ignorer. Mieux vaut changer une serrure
-        fatiguée avant qu&apos;elle ne lâche complètement, souvent au pire
-        moment. Avant d&apos;en arriver là, voici le geste d&apos;entretien que
-        je recommande :{" "}
-        <Link href="/blog/entretien-serrure/" prefetch={false} className="text-steel underline">
-          entretien d&apos;une serrure, le geste qui évite la panne
-        </Link>
-        . Une séparation ou un divorce amène aussi à se poser la
-        question :{" "}
-        <Link href="/blog/changer-serrure-separation-divorce/" prefetch={false} className="text-steel underline">
-          j&apos;explique ce que dit la loi dans ce cas
-        </Link>
-        .
-      </>,
-    ],
+    heading: "Quand changer sa serrure",
+    paragraphs: [],
+    extra: (
+      <ArticleTable
+        headers={["Situation", "Ce que je conseille"]}
+        rows={[
+          ["Vous emménagez", "Changer le cylindre : impossible de savoir qui a gardé une clé."],
+          ["Clés perdues ou volées", "Changer le cylindre ; la serrure peut rester."],
+          [
+            "Tentative d'effraction",
+            "Changer le cylindre abîmé, contrôler la serrure et la gâche, et refermer le jour même.",
+          ],
+          [
+            "La clé force de plus en plus",
+            <>
+              D&apos;abord un{" "}
+              <Link href="/blog/entretien-serrure/" className={linkClass}>
+                entretien
+              </Link>{" "}
+              ; si le cylindre est usé, le changer avant qu&apos;il ne casse la clé.
+            </>,
+          ],
+          [
+            <>
+              <Link href="/blog/changer-serrure-separation-divorce/" className={linkClass}>
+                Séparation
+              </Link>{" "}
+              ou départ d&apos;un colocataire
+            </>,
+            "Changer le cylindre, selon ce que permet votre situation.",
+          ],
+          ["Vous voulez plus de sécurité", "Monter en cylindre certifié A2P, ou passer à une serrure multipoints."],
+        ]}
+      />
+    ),
   },
   {
-    heading: "Cylindre ou serrure complète, quelle différence",
-    Icon: <WrenchIcon className="w-4 h-4" />,
+    heading: "Cylindre ou serrure complète : comment je fais la différence",
     paragraphs: [
-      "Le cylindre est la pièce qui reçoit la clé et actionne le mécanisme. Son remplacement suffit souvent, et coûte nettement moins cher qu'un remplacement complet. Une serrure complète devient nécessaire quand le mécanisme lui-même (le coffre encastré dans la porte) est endommagé ou instable, ou quand il s'agit d'un modèle trop ancien pour trouver un cylindre compatible.",
+      "Le cylindre (on dit aussi barillet) reçoit votre clé. La serrure regroupe tout le reste : le boîtier fixé à la porte, le ou les pênes, et la gâche côté cadre.",
     ],
     extra: (
       <>
-        <p className="font-heading font-semibold text-navy text-sm mt-1">Cylindre seul :</p>
-        <ul className="list-disc pl-5 mt-1 flex flex-col gap-1 text-slate text-sm leading-relaxed">
-          <li>Clé qui accroche, mécanisme qui réagit normalement.</li>
-          <li>Neutraliser d&apos;anciennes clés (emménagement, perte, vol).</li>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Si la clé accroche, tourne mal ou doit être changée</strong> (emménagement,
+            perte, vol), le cylindre suffit. C&apos;est ce que je fais le plus souvent, et c&apos;est aussi le moins
+            cher.
+          </li>
+          <li>
+            <strong className="text-navy">Si le mécanisme résiste même avec une clé neuve</strong>, si le pêne ne sort
+            plus franchement ou si la poignée est devenue molle, c&apos;est la serrure elle-même qui est en cause.
+          </li>
+          <li>
+            <strong className="text-navy">Si la serrure est trop ancienne</strong> pour qu&apos;on trouve un cylindre
+            compatible, je remplace l&apos;ensemble.
+          </li>
         </ul>
-        <p className="font-heading font-semibold text-navy text-sm mt-3">Serrure complète :</p>
-        <ul className="list-disc pl-5 mt-1 flex flex-col gap-1 text-slate text-sm leading-relaxed">
-          <li>Coffre encastré endommagé ou instable, même avec une clé neuve.</li>
-          <li>Modèle trop ancien pour un cylindre compatible.</li>
-        </ul>
+        <p className={pClass}>
+          Je regarde toujours la porte avant de proposer quoi que ce soit : une serrure neuve sur une porte mal alignée
+          forcera dès la première semaine.
+        </p>
       </>
     ),
   },
   {
-    heading: "Serrure multipoints, confort et fiabilité au quotidien",
-    Icon: <ShieldIcon className="w-4 h-4" />,
+    heading: "Mesurer son cylindre",
     paragraphs: [
       <>
-        Une serrure multipoints répartit la résistance sur plusieurs points
-        d&apos;ancrage (3, 5 voire 7 points selon les modèles), ce qui limite
-        les déformations de la porte dans le temps. Elle demande en revanche
-        un réglage précis : un mauvais alignement use la serrure
-        prématurément et peut la faire forcer à chaque fermeture. C&apos;est
-        pourquoi je fais toujours un contrôle fin après la pose. Voir mon
-        article sur{" "}
-        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
-          le choix entre 3, 5 ou 7 points
-        </Link>
-        .
+        La plupart des cylindres posés en France ont le même profil, dit « européen » (
+        <a
+          href="https://www.france-cadenas.fr/a/118-la-norme-europeenne-en-1303"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          norme EN 1303
+        </a>
+        ). On peut donc remplacer une marque par une autre, à condition de reprendre exactement les mêmes dimensions.
       </>,
+      "Pour le mesurer, on prend comme repère la vis qui tient le cylindre, visible sur le chant de la porte : une longueur vers l'extérieur, une vers l'intérieur. Dans les appartements niçois, je trouve surtout du 30 × 30 mm, puis du 30 × 40 et du 30 × 50 sur les portes plus épaisses. Je contrôle ces mesures sur place avant de poser quoi que ce soit : s'il est trop long et ressort de la porte, il offre une prise pour le casser.",
     ],
   },
   {
-    heading: "Certification A2P, utile ou pas",
-    Icon: <CheckIcon className="w-4 h-4" />,
+    heading: "Tailles particulières",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Demi-cylindre</strong> : une clé d&apos;un seul côté. On le trouve sur les
+          portes de garage, de cave ou de local technique.
+        </li>
+        <li>
+          <strong className="text-navy">Cylindre à bouton</strong> : une clé côté extérieur, un bouton côté intérieur.
+          Vous fermez et ouvrez de l&apos;intérieur sans chercher vos clés, pratique pour sortir vite.
+        </li>
+        <li>
+          <strong className="text-navy">Paliers de 2,5 mm</strong> : quelques gammes haut de gamme ne suivent pas les
+          tailles habituelles (32,5 mm au lieu de 30 ou 35). Je le vérifie avant de commander, pour ne pas poser un
+          cylindre qui dépasse.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Cylindres de marque : la solution adaptable",
     paragraphs: [
       <>
-        La certification A2P aide à comparer objectivement la résistance
-        d&apos;une serrure face à une tentative d&apos;effraction : le détail
-        des niveaux et de leur utilité réelle est dans mon article sur{" "}
-        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-          la certification A2P
+        Certaines serrures haut de gamme n&apos;utilisent pas le profil européen, mais un cylindre propre à leur
+        fabricant :{" "}
+        <a
+          href="https://www.fichet-pointfort.com/fr/fr/products/serrure-de-securite/cylindre-et-cle/787-z"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          Fichet
+        </a>{" "}
+        (787, F3D),{" "}
+        <a
+          href="https://www.picard-serrures.com/global/fr/cle-cylindre-haute-securite"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          Picard
+        </a>{" "}
+        (VAK),{" "}
+        <a href="https://bricard.com/professionnels/" target="_blank" rel="noopener" className={linkClass}>
+          Bricard
+        </a>{" "}
+        (Supersûreté), par exemple. Leurs clés ne se reproduisent que chez le fabricant ou un revendeur agréé, sur
+        présentation d&apos;une carte de propriété. Remplacer ce cylindre par un cylindre d&apos;origine coûte cher, et
+        le délai de commande peut être long.
+      </>,
+      <>
+        Il existe souvent une autre solution : un <strong className="text-navy">cylindre adaptable</strong>, fabriqué
+        pour entrer dans la serrure d&apos;origine à la place du cylindre de marque. Vous gardez votre serrure et votre
+        porte, pour un prix nettement plus bas qu&apos;un cylindre d&apos;origine. En contrepartie, vous ne bénéficiez
+        plus de la reproduction contrôlée du fabricant d&apos;origine.
+      </>,
+      "Envoyez-moi une photo du cylindre et la marque gravée sur la clé : je vous dis au téléphone si un adaptable existe pour votre modèle, et je vous annonce les deux prix, adaptable et d'origine, pour que vous choisissiez.",
+    ],
+  },
+  {
+    heading: "Les niveaux de sécurité A2P",
+    paragraphs: [
+      <>
+        Le CNPP, un laboratoire indépendant, attribue la{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className={linkClass}>
+          certification A2P
         </Link>
-        . Je pose des serrures et cylindres certifiés A2P 1, 2 ou 3 étoiles
-        selon le besoin réel de votre logement, sans viser systématiquement
-        le niveau maximum. Ce n&apos;est pas une obligation légale pour un
-        logement standard. Je préfère donc vous orienter vers une
-        sécurisation cohérente avec l&apos;état réel de votre porte, plutôt
-        que vers du suréquipement qui ne servira à rien si le bâti autour
-        reste fragile.
+        . Il classe cylindres et serrures selon le temps qu&apos;ils tiennent face à un cambrioleur :
       </>,
     ],
+    extra: (
+      <>
+        <div className="mb-4">
+          <ArticleTable
+            headers={["Niveau", "Résistance", "Pour qui"]}
+            rows={[
+              ["A2P 1 étoile", "5 minutes", "La plupart des appartements"],
+              ["A2P 2 étoiles", "10 minutes", "Rez-de-chaussée, porte peu visible, exigence de l'assureur"],
+              ["A2P 3 étoiles", "15 minutes", "Biens de valeur, exigence d'assurance élevée"],
+            ]}
+          />
+        </div>
+        <p className={pClass}>
+          Pour un logement ordinaire, la loi n&apos;exige aucun niveau A2P ; c&apos;est parfois votre assureur qui
+          l&apos;exige, vérifiez votre contrat. Je vous conseille le niveau utile pour votre porte, pas le plus cher :
+          un cylindre 3 étoiles ne sert à rien si la porte autour cède en premier.
+        </p>
+        <p className={pClass}>
+          Certaines gammes ont une <strong className="text-navy">clé à reproduction contrôlée</strong> : les doubles ne
+          se font que sur présentation d&apos;une carte de propriété. Vous savez exactement combien de clés existent ;
+          en contrepartie, le cylindre coûte plus cher.
+        </p>
+      </>
+    ),
   },
   {
-    heading: "Changement de serrure après une effraction",
-    Icon: <AlertLockIcon className="w-4 h-4" />,
-    id: "effraction",
-    accent: "urgent" as const,
+    heading: "Serrure à larder, en applique, multipoints",
+    paragraphs: [],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">
+              <Link href="/blog/remplacer-coffre-a-larder-nice/" className={linkClass}>
+                Serrure à larder
+              </Link>
+            </strong>{" "}
+            : logée à l&apos;intérieur de la porte, on ne voit
+            que le cylindre. On la trouve sur la plupart des vieilles portes d&apos;appartement à Nice, souvent avec un
+            seul point de fermeture.
+          </li>
+          <li>
+            <strong className="text-navy">Serrure en applique 3 points</strong> : vissée côté intérieur, elle
+            verrouille la porte en trois points répartis sur sa hauteur. Un vrai gain de sécurité sur une porte
+            ancienne.
+          </li>
+          <li>
+            <strong className="text-navy">
+              <Link href="/serrure-carenee-nice/" className={linkClass}>
+                Serrure carénée 5 points
+              </Link>
+            </strong>{" "}
+            : le même principe, avec cinq points et un capot d&apos;acier qui cache et protège tout le mécanisme.
+            C&apos;est le niveau au-dessus.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Une serrure multipoints tient la porte en plusieurs endroits, du haut jusqu&apos;en bas, ce qui l&apos;empêche
+          de se déformer avec les années. En contrepartie, elle doit être parfaitement réglée : mal alignée, elle force
+          à chaque fermeture et s&apos;use vite. Je fais toujours plusieurs essais de fermeture et un réglage fin après
+          la pose. Pour choisir entre{" "}
+          <Link href="/blog/serrure-multipoints-3-5-7-nice/" className={linkClass}>
+            3, 5 ou 7 points
+          </Link>
+          , voir mon article dédié.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Mes prix",
+    paragraphs: [],
+    extra: (
+      <>
+        <div className="mb-4">
+          <ArticleTable
+            headers={["Prestation", "Prix TTC", "Durée"]}
+            rows={[
+              ["Cylindre européen standard, fourni posé", "249 €", "Moins d'une heure"],
+              ["Cylindre certifié A2P 1, 2 ou 3 étoiles", "Sur devis, selon la taille et la marque", "Moins d'une heure"],
+              [
+                "Cylindre de marque (Fichet, Picard, Bricard) : d'origine ou adaptable",
+                "Sur devis, les deux prix annoncés",
+                "Moins d'une heure",
+              ],
+              [
+                "Serrure à larder (remplacement du boîtier)",
+                "89 € de main-d'œuvre, boîtier en plus selon le modèle",
+                "Un peu plus qu'un cylindre",
+              ],
+              ["Serrure en applique 3 points", "699 €, fournie posée", "3 heures environ"],
+              ["Serrure carénée 5 points (Héraclès Sésame)", "1 249 €, fournie posée", "Une demi-journée environ"],
+            ]}
+          />
+        </div>
+        <p className={pClass}>
+          Le déplacement à Nice est compris. Après 19 h, le week-end et les jours fériés, le tarif de nuit vous est
+          annoncé avant que je parte. Le détail complet est sur ma{" "}
+          <Link href="/tarifs-serrurier-nice/" prefetch={false} className={linkClass}>
+            page Tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Comment se passe l'intervention",
+    paragraphs: [],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Au téléphone</strong>, vous me décrivez la porte et la serrure ; une photo par
+          WhatsApp m&apos;aide à apporter la bonne pièce.
+        </li>
+        <li>
+          <strong className="text-navy">Sur place</strong>, j&apos;identifie le modèle, je mesure le cylindre et je
+          contrôle l&apos;alignement de la porte et du cadre.
+        </li>
+        <li>
+          <strong className="text-navy">Je vous annonce le prix</strong> de la solution que je propose, avant de
+          démonter quoi que ce soit.
+        </li>
+        <li>
+          <strong className="text-navy">Je pose</strong>, puis je teste la fermeture plusieurs fois et j&apos;ajuste la
+          gâche si besoin.
+        </li>
+        <li>
+          <strong className="text-navy">Je vous remets les clés neuves</strong> et une facture détaillée.
+        </li>
+      </ol>
+    ),
+  },
+  {
+    heading: "Après une effraction",
     paragraphs: [
-      "Après une tentative d'effraction, la priorité reste la fermeture immédiate de votre porte. Je remplace ensuite les éléments réellement endommagés (cylindre, gâche, parfois le coffre de serrure) et je stabilise l'ensemble pour éviter un nouveau risque. Je ne vous vends pas un remplacement complet si ce n'est pas nécessaire.",
+      <>
+        La priorité est de pouvoir refermer chez vous le soir même. Je remplace ce qui est réellement abîmé (le
+        cylindre, la gâche, parfois le boîtier de serrure) et je consolide la porte. Si elle est trop endommagée, je
+        fais une{" "}
+        <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+          mise en sécurité provisoire
+        </Link>{" "}
+        en attendant une réparation durable ou une{" "}
+        <Link href="/installation-porte-blindee-nice/" className={linkClass}>
+          porte blindée
+        </Link>
+        . Je ne vous vends pas une serrure complète si un cylindre suffit.
+      </>,
+      "Pour l'assurance, vous avez 2 jours ouvrés pour déclarer un vol à votre assureur (article L113-2 du Code des assurances). Gardez la facture et le dépôt de plainte.",
     ],
   },
   {
-    heading: "Ce que je fais concrètement chez vous",
-    Icon: <HandshakeIcon className="w-4 h-4" />,
+    heading: "Ce que dit la loi",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Copropriété</strong> : la porte de votre appartement et sa serrure sont
+          privatives ; vous pouvez changer la serrure sans autorisation du syndic.
+        </li>
+        <li>
+          <strong className="text-navy">Locataire</strong> : les frais d&apos;une perte de clés ou de l&apos;usage
+          normal sont en général pour le locataire ; une serrure hors d&apos;usage par vétusté est pour le propriétaire.
+          Le détail est dans mon article «{" "}
+          <Link href="/blog/qui-paie-changement-serrure-location-nice/" className={linkClass}>
+            qui paie
+          </Link>{" "}
+          ».
+        </li>
+        <li>
+          <strong className="text-navy">Propriétaire</strong> : il ne peut pas changer la serrure d&apos;un logement
+          loué sans l&apos;accord du locataire.
+        </li>
+        <li>
+          <strong className="text-navy">Litige</strong> : un commissaire de justice (ancien huissier) peut constater un
+          changement de serrure fait sans accord ou un refus d&apos;accès ; ce constat sert de preuve.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Les marques que je pose",
     paragraphs: [
-      "J'identifie d'abord le modèle de serrure en place, puis je vérifie l'alignement de la porte et du cadre. Ensuite, je propose la solution la plus cohérente avec votre budget et votre niveau d'exigence en sécurité. Je termine par plusieurs tests de fermeture et un ajustement fin, pour éviter qu'une serrure neuve ne force dès la première semaine.",
+      "Je travaille sur toutes les grandes marques, quel que soit le modèle déjà installé chez vous : Fichet, Picard, Héraclès, Vachette, Bricard, Cisa, Mottura, Kaba, Iseo. Je vous conseille le cylindre adapté à votre porte et à votre budget, sans préférence de marque.",
     ],
+    extra: (
+      <div id="marques" className="scroll-mt-24 mt-4">
+        <BrandsSection locale="fr" />
+      </div>
+    ),
   },
 ];
 
 const faqFr = [
   {
-    question: "Le propriétaire peut-il changer la serrure sans prévenir le locataire ?",
-    answer:
-      "Non, un changement de serrure doit rester justifié et communiqué. Le propriétaire peut demander un double des clés, que le locataire accepte ou non selon les termes du bail.",
-  },
-  {
-    question: "Le changement de serrure est-il à la charge du locataire ?",
-    answer:
-      "Les frais liés à l'usage normal ou à une perte de clés reviennent généralement au locataire, sauf si la serrure est défaillante pour cause de vétusté.",
-  },
-  {
-    question: "Comment faire constater un changement de serrure ?",
-    answer:
-      "Un huissier de justice (commissaire de justice) peut dresser un constat d'un refus d'accès ou d'un changement de serrure effectué sans accord, sur simple demande d'un particulier : c'est prévu par l'article 1 de l'ordonnance n°45-2592 du 2 novembre 1945. Ce constat a une valeur probante en cas de litige entre propriétaire et locataire.",
-  },
-  {
-    question: "Quand dois-je changer ma serrure à Nice ?",
-    answer:
-      "Après un déménagement, un vol de clés, un cambriolage, ou simplement quand la clé force et que le cylindre commence à rouiller ou à accrocher.",
-  },
-  {
     question: "Combien coûte un changement de serrure à Nice ?",
     answer:
-      "249 € TTC pour un remplacement de cylindre européen, déplacement et main d'œuvre inclus, et sur devis pour une serrure complète. Le prix exact est toujours annoncé avant intervention.",
+      "249 € TTC pour un cylindre européen standard, fourni posé, déplacement compris. Les cylindres certifiés A2P et la serrure complète sont sur devis ; une serrure en applique 3 points coûte 699 €.",
   },
   {
-    question: "Combien de temps dure un changement de serrure ?",
+    question: "Faut-il changer toute la serrure ou seulement le cylindre ?",
     answer:
-      "Un remplacement de cylindre prend généralement moins d'une heure. Une serrure complète, avec réglage fin de l'alignement, demande un peu plus de temps selon l'état de la porte.",
+      "Le plus souvent, le cylindre suffit : après un emménagement, une perte ou un vol de clés. La serrure complète ne se change que si le mécanisme lui-même est usé ou cassé.",
+  },
+  {
+    question: "Combien de temps dure un changement de cylindre ?",
+    answer: "Moins d'une heure, essais de fermeture compris.",
+  },
+  {
+    question: "Puis-je changer la serrure sans l'accord de la copropriété ?",
+    answer: "Oui. La porte de votre appartement et sa serrure sont des parties privatives.",
+  },
+  {
+    question: "Qui paie le changement de serrure dans une location ?",
+    answer: "En général le locataire en cas de perte de clés, et le propriétaire si la serrure est usée par vétusté.",
+  },
+  {
+    question: "J'ai une serrure Fichet ou Picard : faut-il tout changer ?",
+    answer:
+      "Non. Souvent, un cylindre adaptable se pose dans votre serrure d'origine, pour moins cher qu'un cylindre de marque. Je vous annonce les deux prix pour que vous choisissiez.",
+  },
+  {
+    question: "Quel délai pour déclarer un cambriolage à l'assurance ?",
+    answer: "2 jours ouvrés après la découverte du vol.",
   },
 ];
 
@@ -314,237 +481,6 @@ const faqEn = [
   },
 ];
 
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide complète les informations déjà présentes plus haut sur cette page,
-      avec les questions de fond que se posent le plus souvent mes clients avant
-      un changement de serrure à Nice.
-    </p>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-      <p className="font-heading font-bold text-navy mb-4">
-        Pourquoi changer de serrure à Nice : les cas les plus fréquents
-      </p>
-      <SituationSelector situations={whyReasons} />
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={1} id="diagnostic" level="h3" size="lg" numberStyle="plain">
-        Diagnostiquer sa serrure avant d&apos;appeler
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Avant même de prendre rendez-vous, quelques observations simples
-        m&apos;aident à préparer la bonne intervention. Une clé qui accroche
-        uniquement à l&apos;entrée ou à la sortie du cylindre, sans jamais
-        bloquer complètement, vient le plus souvent du seul cylindre. Une
-        poignée qui devient molle, un pêne qui ne sort plus franchement, ou un
-        mécanisme qui résiste même avec une clé neuve pointent plutôt vers le{" "}
-        <Link href="/blog/remplacer-coffre-a-larder-nice/" className="text-steel underline">
-          coffre de la serrure
-        </Link>{" "}
-        lui-même. Cette distinction change directement le prix et la durée de
-        l&apos;intervention.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="niveau" level="h3" size="lg" numberStyle="plain">
-        Cylindre, coffre complet ou porte entière : le bon niveau
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le remplacement d&apos;un simple cylindre reste la solution la plus
-        courante et la moins coûteuse : c&apos;est la pièce qui reçoit la clé.
-        Un coffre complet devient nécessaire quand le mécanisme lui-même est
-        endommagé, usé, ou trop ancien pour trouver un cylindre compatible. Un
-        niveau plus élevé encore, le{" "}
-        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-          bloc-porte blindé
-        </Link>
-        , se justifie seulement quand le bâti autour de la porte (cadre,
-        chambranle) est lui-même fragilisé : dans ce cas, une serrure neuve
-        seule ne suffit pas à retrouver une sécurité fiable, quel que soit son
-        niveau de certification.
-      </p>
-      <div className="mt-4">
-        <h4 className="font-heading font-semibold text-navy mb-1">
-          Le cylindre européen : un standard interchangeable
-        </h4>
-        <p className="text-slate leading-relaxed">
-          La quasi-totalité des cylindres résidentiels posés en France suivent
-          le profil dit européen, encadré par la{" "}
-          <a
-            href="https://www.france-cadenas.fr/a/118-la-norme-europeenne-en-1303"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-steel underline"
-          >
-            norme EN 1303
-          </a>{" "}
-          (qui teste notamment la résistance à l&apos;arrachement, au perçage et à la
-          casse). Ce profil commun rend les cylindres interchangeables d&apos;une
-          marque à l&apos;autre, à condition de reprendre les bonnes dimensions.
-          Elles s&apos;expriment en millimètres, mesurées depuis l&apos;axe
-          central : 30×30 mm est la taille la plus courante en appartement à
-          Nice, suivie de 30×40 et 30×50 pour des portes plus épaisses, par
-          paliers de 5 mm. Je vérifie toujours ces mesures avant de commander
-          quoi que ce soit.
-        </p>
-      </div>
-      <div className="mt-4">
-        <h4 className="font-heading font-semibold text-navy mb-1">
-          Gammes propriétaires : reproduction contrôlée
-        </h4>
-        <p className="text-slate leading-relaxed">
-          Certains fabricants proposent, en plus du standard européen, des
-          gammes à reproduction contrôlée : la clé n&apos;est recopiable que sur
-          présentation d&apos;une carte de propriété, chez le fabricant ou un
-          réseau agréé. C&apos;est le cas par exemple de la gamme{" "}
-          <a
-            href="https://bricard.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-steel underline"
-          >
-            Serial XPi de Bricard
-          </a>
-          , de la gamme{" "}
-          <a
-            href="https://www.fichet-pointfort.com/fr/fr/products/serrure-de-securite/cylindre-et-cle/787-z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-steel underline"
-          >
-            787 Z de Fichet
-          </a>
-          , ou encore de la{" "}
-          <a
-            href="https://www.picard-serrures.com/global/fr/cle-cylindre-haute-securite"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-steel underline"
-          >
-            clé VAK Unik de Picard
-          </a>
-          . L&apos;avantage : vous seul décidez du nombre de clés en circulation.
-          L&apos;inconvénient : un remplacement de cylindre coûte généralement
-          plus cher qu&apos;un profil européen standard.
-        </p>
-        <p className="text-slate leading-relaxed mt-3">
-          Quand le fabricant d&apos;origine ne peut ou ne veut plus fournir de
-          clé pour un cylindre propriétaire, je propose, lorsqu&apos;il en
-          existe un pour le modèle concerné, un cylindre adaptable compatible :
-          une solution généralement moins chère qu&apos;une pièce d&apos;origine,
-          sans reproduire les mêmes garanties de reproduction contrôlée.
-        </p>
-      </div>
-    </div>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-      <ArticleSectionHeading number={3} id="tarifs" level="h3" size="lg" numberStyle="plain">
-        Tarifs indicatifs selon le remplacement
-      </ArticleSectionHeading>
-      <ArticleTable
-        caption="Un tarif de nuit s'applique après 19h, le week-end et les jours fériés, annoncé avant que j'intervienne. Détail complet sur ma page tarifs."
-        headers={["Prestation", "Prix", "Durée indicative"]}
-        zebra="bold"
-        featuredRowIndex={0}
-        rows={[
-          ["Changement de cylindre standard", "à partir de 249 € TTC", "Moins d'une heure"],
-          ["Cylindre certifié A2P 1 étoile", "Sur devis (selon taille et marque)", "Moins d'une heure"],
-          ["Cylindre certifié A2P 2 ou 3 étoiles", "Sur devis", "Moins d'une heure"],
-          ["Serrure à larder (coffre, remplacement complet)", "89 € TTC de main d'œuvre (coffre facturé en supplément selon le modèle)", "Un peu plus qu'un cylindre, avec réglage fin"],
-          ["Serrure en applique 3 points", "699 € TTC pose et fourniture", "Environ 3h"],
-          ["Serrure en applique 5 points (carénée)", "1 490 € TTC", "Généralement une demi-journée"],
-        ]}
-      />
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="deroule" level="h3" size="lg" numberStyle="plain">
-        Le déroulé technique d&apos;une intervention
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Si vous êtes actuellement bloqué dehors sans clé, la priorité est
-        d&apos;abord l&apos;ouverture de la porte (voir ma page{" "}
-        <Link href="/ouverture-de-porte-nice/" className="text-steel underline">
-          ouverture de porte
-        </Link>
-        ) : le changement de cylindre intervient ensuite, une fois la porte
-        rouverte. Au-delà des étapes déjà décrites plus haut (appel, arrivée,
-        choix, règlement), voici ce qui se passe concrètement une fois sur
-        place :
-      </p>
-      <ol className="list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed">
-        <li>Dépose de l&apos;ancien cylindre ou du coffre complet.</li>
-        <li>Vérification des mesures exactes (axe, entraxe) avant la pose du nouveau mécanisme.</li>
-        <li>Pose du nouveau cylindre ou coffre, poignées remontées.</li>
-        <li>Réglage fin de la gâche et plusieurs tests de fermeture, porte ouverte puis fermée.</li>
-      </ol>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={5} id="assurance" level="h3" size="lg" numberStyle="plain">
-        Assurance : qui paie, et sous quel délai
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Si le changement fait suite à une effraction, l&apos;
-        <a
-          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          article L.113-2 du Code des assurances
-        </a>{" "}
-        impose un délai de 2 jours ouvrés pour déclarer le sinistre. En dehors
-        de ce cas, la question de savoir qui paie (propriétaire, locataire,
-        assurance) dépend surtout de la cause du changement : le détail complet
-        est expliqué dans mon article sur{" "}
-        <Link href="/blog/qui-paie-changement-serrure-location-nice/" className="text-steel underline">
-          qui paie le changement de serrure en location
-        </Link>
-        .
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={6} id="evolution" level="h3" size="lg" numberStyle="plain">
-        Faire évoluer sa sécurité sans se suréquiper
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un changement de serrure est aussi l&apos;occasion de revoir le niveau
-        de sécurité, par étapes plutôt que d&apos;un coup : passer à un cylindre
-        certifié{" "}
-        <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-          A2P
-        </Link>
-        , y ajouter si besoin une{" "}
-        <Link href="/poignee-blindee-nice/" className="text-steel underline">
-          poignée blindée
-        </Link>{" "}
-        pour protéger ce même cylindre à moindre coût quand la porte et le
-        bâti restent sains, puis à une{" "}
-        <Link href="/blog/serrure-multipoints-3-5-7-nice/" className="text-steel underline">
-          serrure multipoints
-        </Link>{" "}
-        si la porte s&apos;y prête, à un{" "}
-        <Link href="/blindage-porte-nice/" className="text-steel underline">
-          blindage de porte
-        </Link>{" "}
-        si vous voulez renforcer l&apos;ensemble du bâti sans remplacer la
-        porte, et seulement en dernier lieu vers un{" "}
-        <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-          bloc-porte blindé neuf
-        </Link>{" "}
-        si le bâti lui-même ne tient plus la route. Je vous oriente toujours
-        vers le niveau cohérent avec l&apos;état réel de votre porte, jamais
-        vers le plus cher par défaut.
-      </p>
-    </div>
-  </>
-);
-
 export default async function ChangementSerrureNicePage() {
   const experienceYears = new Date().getFullYear() - business.professionSinceYear;
   const { rating, count } = await getGoogleReviews();
@@ -565,8 +501,20 @@ export default async function ChangementSerrureNicePage() {
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Changement de serrure à Nice",
-        lead: "Remplacement de cylindre, de serrure complète ou multipoints : je vous propose une solution cohérente avec votre porte, sans suréquipement inutile, devis annoncé avant travaux.",
+        h1: "Changement de serrure à Nice : cylindre ou serrure complète",
+        lead: "Dans la majorité des cas, je remplace seulement le cylindre et votre serrure reste en place. Un cylindre européen standard coûte 249 € TTC posé, déplacement et main-d'œuvre compris, avec des clés neuves remises sur place. En urgence, j'arrive en 30 minutes partout à Nice ; sinon, on fixe un rendez-vous.",
+        leadContent: (
+          <>
+            Dans la majorité des cas, je remplace seulement le cylindre et votre serrure reste en place. Un cylindre
+            européen standard coûte 249 € TTC posé, déplacement et main-d&apos;œuvre compris, avec des clés neuves
+            remises sur place.{" "}
+            <Link href="/ouverture-de-porte-nice/" className={linkClass}>
+              En urgence
+            </Link>
+            , j&apos;arrive en 30 minutes partout à Nice ; sinon, on fixe un rendez-vous.
+          </>
+        ),
+        hideProcessSteps: true,
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Changement de serrure",
@@ -575,106 +523,23 @@ export default async function ChangementSerrureNicePage() {
           src: "/images/serrurier-nice-changement-de-serrure.webp",
           alt: "Changement de serrure Nice",
         },
-        sectionsVariant: "cards",
-        sectionsHeading: "Ce qu'il faut savoir avant de changer votre serrure",
         headingScale: "lg",
         heroTrustNote,
         extra: (
           <>
             <div className="py-10">
               <PriceReminder
-                priceLabel="À partir de 249 € TTC pour un cylindre standard (haute sécurité et serrure complète sur devis)"
+                priceLabel="à partir de 249 € TTC"
+                note="Cylindre européen standard fourni posé, déplacement compris. Cylindres A2P, cylindres de marque et serrure complète sur devis."
                 locale="fr"
               />
             </div>
             <ServiceReviewsLive path="/changement-serrure-nice/" />
-            <section className="mx-auto max-w-4xl px-4 pb-10">
-              <div className="bg-steel/10 border border-navy/10 rounded-2xl p-6">
-                <h2 className="font-heading text-xl font-bold text-navy mb-4">
-                  Ce que dit la loi sur le changement de serrure
-                </h2>
-                <ul className="flex flex-col gap-3 text-sm text-slate leading-relaxed">
-                  <li>
-                    <strong className="text-navy">Après une effraction :</strong> l&apos;
-                    <a
-                      href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006791998/1986-01-01"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-steel underline"
-                    >
-                      article L.113-2 du Code des assurances
-                    </a>{" "}
-                    impose un délai de 2 jours ouvrés pour déclarer le sinistre à votre assureur.
-                  </li>
-                  <li>
-                    <strong className="text-navy">Litige propriétaire/locataire :</strong> un huissier de justice
-                    (commissaire de justice) peut dresser un constat probant d&apos;un refus d&apos;accès ou d&apos;un
-                    changement de serrure effectué sans accord, sur simple demande, en vertu de l&apos;
-                    <a
-                      href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032626669"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-steel underline"
-                    >
-                      article 1 de l&apos;ordonnance n°45-2592 du 2 novembre 1945
-                    </a>
-                    .
-                  </li>
-                  <li>
-                    <strong className="text-navy">Niveau de sécurité :</strong> aucune obligation légale n&apos;impose
-                    un niveau de certification A2P minimum pour un logement standard. Voir le détail dans mon article
-                    sur{" "}
-                    <Link href="/blog/certification-a2p-serrure-nice/" className="text-steel underline">
-                      la certification A2P
-                    </Link>
-                    .
-                  </li>
-                  <li>
-                    <strong className="text-navy">Copropriété :</strong> votre porte palière et sa serrure sont des
-                    parties privatives, vous pouvez la changer librement sans autorisation de la copropriété.
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section id="marques" className="mx-auto max-w-4xl px-4 py-10 scroll-mt-24">
-              <h2 className="font-heading text-xl font-bold text-navy mb-4 text-center">
-                Marques de serrures que je pose
-              </h2>
-              <BrandsSection locale="fr" />
-            </section>
             <div className="mx-auto max-w-4xl px-4 pb-10">
               <QuoteBlock locale="fr" />
             </div>
           </>
         ),
-        processSteps: [
-          {
-            title: "Appel",
-            text: "Vous me décrivez votre porte et la serrure actuelle, et je vous oriente déjà vers les options les plus adaptées.",
-          },
-          {
-            title: "Délai d'arrivée",
-            text: "Je vous annonce un prix et un délai réaliste selon votre secteur et l'heure (généralement 15 à 30 minutes à Nice), et je vous préviens si la situation évolue en route.",
-          },
-          {
-            title: "Choix du cylindre ou de la serrure",
-            text: "Je vérifie le format exact de votre porte pour poser un cylindre ou une serrure complète parfaitement adapté, sans improviser une solution qui vieillira mal.",
-          },
-          {
-            title: "Règlement",
-            text: "Le prix confirmé avant la pose est celui que vous payez, clés neuves et facture détaillée à l'appui.",
-          },
-        ],
-        relatedArticle: {
-          href: "/blog/serrure-multipoints-3-5-7-nice/",
-          label: "Serrure 3, 5 ou 7 points : laquelle choisir ?",
-        },
-        guide: (
-          <ServiceGuideSection readingMinutes={9} toc={guideToc} faq={guideFaq}>
-            {guideContent}
-          </ServiceGuideSection>
-        ),
-        guideFaqForSchema: guideFaq,
       }}
       en={{
         h1: "Lock change in Nice",
@@ -713,7 +578,7 @@ export default async function ChangementSerrureNicePage() {
           },
           {
             title: "Time to arrival",
-            text: "I quote a price and a realistic time frame based on your area and the time of day (usually 15 to 30 minutes in Nice), and let you know if anything changes on the way.",
+            text: "I quote a price and a realistic time frame based on your area and the time of day and let you know if anything changes on the way.",
           },
           {
             title: "Choosing the cylinder or lock",

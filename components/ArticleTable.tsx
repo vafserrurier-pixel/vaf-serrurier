@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export default function ArticleTable({
   caption,
   headers,
@@ -8,7 +10,7 @@ export default function ArticleTable({
 }: {
   caption?: string;
   headers: string[];
-  rows: (string | number)[][];
+  rows: ReactNode[][];
   /** "bold" alterne bg-white/bg-steel/5 (plus visible qu'un fond cream/40, utile sur une zone deja teintee). "default" preserve le rendu historique. */
   zebra?: "default" | "bold";
   /** Index (0-based) de la ligne a mettre en avant visuellement (ex. le cas le plus frequent). */
