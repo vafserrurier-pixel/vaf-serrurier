@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { rating, count } = await getGoogleReviews();
+  const { rating, count, reviews, live } = await getGoogleReviews();
 
   return (
     <html
@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     >
       <body className="min-h-full flex flex-col bg-cream">
         <LocaleProvider>
-          <ReviewStatsProvider rating={rating} count={count}>
+          <ReviewStatsProvider rating={rating} count={count} reviews={reviews.slice(0, 6)} live={live}>
           <JsonLd data={localBusinessSchema()} />
           <a
             href="#main-content"

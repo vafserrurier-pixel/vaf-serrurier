@@ -312,7 +312,7 @@ export default function CertificationA2pPage() {
                 </a>
                 ,{" "}
                 <a href="https://www.heracles.fr/" target="_blank" rel="noopener noreferrer" className="text-steel underline">
-                  Heraclès
+                  Héraclès
                 </a>
                 ,{" "}
                 <a href="https://www.cisa.com/fr/" target="_blank" rel="noopener noreferrer" className="text-steel underline">

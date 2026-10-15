@@ -13,7 +13,7 @@ const brandsByLocale = {
       url: "https://www.picard-serrures.com/global/fr",
     },
     {
-      name: "Heraclès",
+      name: "Héraclès",
       text: "Cylindres et serrures reconnus pour leur robustesse, courants sur les portes d'entrée en France.",
       url: "https://www.heracles.fr/",
     },
@@ -35,7 +35,7 @@ const brandsByLocale = {
     {
       name: "Bricard",
       text: "Fabricant français reconnu pour ses serrures multipoints et ses cylindres haute sécurité, notamment en copropriété.",
-      url: "https://www.bricard.fr",
+      url: "https://bricard.com/professionnels/",
     },
     {
       name: "Mottura",
@@ -65,7 +65,7 @@ const brandsByLocale = {
       url: "https://www.picard-serrures.com/global/fr",
     },
     {
-      name: "Heraclès",
+      name: "Héraclès",
       text: "Cylinders and locks known for their sturdiness, common on front doors across France.",
       url: "https://www.heracles.fr/",
     },
@@ -87,7 +87,7 @@ const brandsByLocale = {
     {
       name: "Bricard",
       text: "A French manufacturer known for its multipoint locks and high-security cylinders, especially in apartment buildings.",
-      url: "https://www.bricard.fr",
+      url: "https://bricard.com/professionnels/",
     },
     {
       name: "Mottura",
@@ -112,13 +112,22 @@ const intro = {
   en: "I work with the major locksmithing brands on the market, whatever model is already installed at your place. I guide you toward the solution that best fits your door, without pushing one brand over another. Depending on the range, the key comes with a reproduction or ownership card, which limits unauthorised copying.",
 };
 
-export default function BrandsSection({ locale = "fr" }: { locale?: Locale }) {
+export default function BrandsSection({
+  locale = "fr",
+  showIntro = true,
+}: {
+  locale?: Locale;
+  /** false : n'affiche que les cartes, sans le paragraphe d'introduction (page qui a déjà son propre texte sur les marques). */
+  showIntro?: boolean;
+}) {
   const brands = brandsByLocale[locale];
   return (
     <div>
-      <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center mb-8">
-        {intro[locale]}
-      </p>
+      {showIntro && (
+        <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center mb-8">
+          {intro[locale]}
+        </p>
+      )}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {brands.map((brand) => (
           <a

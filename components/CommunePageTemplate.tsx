@@ -207,7 +207,7 @@ export default function CommunePageTemplate({
         </h2>
         <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center">
           Je travaille avec les grandes marques du marché, quel que soit le modèle déjà installé
-          chez vous : Fichet, Picard, Heraclès et d&apos;autres.{" "}
+          chez vous : Fichet, Picard, Héraclès et d&apos;autres.{" "}
           <Link href="/changement-serrure-nice/#marques" className="text-steel underline font-medium">
             Voir le détail des marques que je pose →
           </Link>

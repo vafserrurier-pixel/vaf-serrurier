@@ -330,7 +330,18 @@ const sectionsFr = [
         </Link>
         . Je ne vous vends pas une serrure complète si un cylindre suffit.
       </>,
-      "Pour l'assurance, vous avez 2 jours ouvrés pour déclarer un vol à votre assureur (article L113-2 du Code des assurances). Gardez la facture et le dépôt de plainte.",
+      <>
+        Pour l&apos;assurance, vous avez 2 jours ouvrés pour déclarer un vol à votre assureur (
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035731302"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          article L113-2 du Code des assurances
+        </a>
+        ). Gardez la facture et le dépôt de plainte.
+      </>,
     ],
   },
   {
@@ -356,8 +367,17 @@ const sectionsFr = [
           loué sans l&apos;accord du locataire.
         </li>
         <li>
-          <strong className="text-navy">Litige</strong> : un commissaire de justice (ancien huissier) peut constater un
-          changement de serrure fait sans accord ou un refus d&apos;accès ; ce constat sert de preuve.
+          <strong className="text-navy">Litige</strong> : un{" "}
+          <a
+            href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032626669"
+            target="_blank"
+            rel="noopener"
+            className={linkClass}
+          >
+            commissaire de justice
+          </a>{" "}
+          (ancien huissier) peut constater un changement de serrure fait sans accord ou un refus d&apos;accès ; ce
+          constat sert de preuve.
         </li>
       </ul>
     ),
@@ -369,7 +389,7 @@ const sectionsFr = [
     ],
     extra: (
       <div id="marques" className="scroll-mt-24 mt-4">
-        <BrandsSection locale="fr" />
+        <BrandsSection locale="fr" showIntro={false} />
       </div>
     ),
   },

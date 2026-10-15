@@ -99,6 +99,30 @@ export const cardsByLocale: Record<Locale, PricingCard[]> = {
       ],
     },
     {
+      title: "Serrure à larder (remplacement du boîtier)",
+      seoTitle: "Prix serrure à larder à Nice",
+      price: "89 €",
+      unit: "TTC de main-d'œuvre",
+      tarifsOnly: true,
+      features: [
+        "Remplacement du boîtier de serrure",
+        "Boîtier en plus selon le modèle",
+      ],
+    },
+    {
+      title: "Serrure en applique 3 points",
+      seoTitle: "Prix serrure en applique 3 points à Nice",
+      price: "699 €",
+      unit: "TTC",
+      priceValue: 699,
+      priceType: "fixed",
+      tarifsOnly: true,
+      features: [
+        "Fournie posée",
+        "Environ 3 heures",
+      ],
+    },
+    {
       title: "Serrure 5 points en applique carénée",
       seoTitle: "Prix serrure carénée 5 points à Nice",
       price: "1 249 €",

@@ -58,7 +58,7 @@ const faqItems = [
   {
     question: "Le tarif de nuit s'applique-t-il aussi sur le prix d'un cylindre ou d'une serrure remplacée ?",
     answer:
-      "Non, jamais. Un cylindre Heraclès ou Fichet coûte exactement le même prix un samedi soir qu'un mardi après-midi : seule la prestation d'ouverture est au tarif de nuit (189 € pour une porte claquée, 209 € pour une porte verrouillée).",
+      "Non, jamais. Un cylindre Héraclès ou Fichet coûte exactement le même prix un samedi soir qu'un mardi après-midi : seule la prestation d'ouverture est au tarif de nuit (189 € pour une porte claquée, 209 € pour une porte verrouillée).",
   },
   {
     question: "Pourquoi un tarif de nuit fixe, sans paliers horaires ?",
@@ -240,7 +240,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 Un point souvent mal compris, et qui mérite d&apos;être précisé clairement :
                 mon tarif de nuit (<strong>189 € pour une porte claquée, 209 € pour une
                 porte verrouillée</strong>) concerne la prestation, jamais le prix d&apos;une
-                pièce remplacée. Un cylindre Heraclès ne coûte pas plus cher un samedi soir
+                pièce remplacée. Un cylindre Héraclès ne coûte pas plus cher un samedi soir
                 qu&apos;un mardi après-midi : le matériel posé garde le même prix.
               </p>
               <p className="text-slate leading-relaxed mt-4">
