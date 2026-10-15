@@ -2,263 +2,274 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LocalizedServicePage from "@/components/LocalizedServicePage";
 import PriceReminder from "@/components/PriceReminder";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
+import QuoteBlock from "@/components/QuoteBlock";
 import ArticleTable from "@/components/ArticleTable";
-import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon } from "@/components/Icons";
+import { ShieldIcon, WrenchIcon, CheckIcon, HandshakeIcon, DoorIcon, DoubleLockIcon, StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
 import { buildMetadata } from "@/lib/metadata";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
 
-const criteresFr = [
-  {
-    Icon: ShieldIcon,
-    title: "Cornières anti-pince",
-    text: "Empêchent d'introduire un pied-de-biche entre le dormant et le battant.",
-  },
-  {
-    Icon: WrenchIcon,
-    title: "Paumelles anti-dégondage",
-    text: "Bloquent le retrait de la porte par les gonds, même une fois les paumelles visibles dégagées.",
-  },
-  {
-    Icon: CheckIcon,
-    title: "Épaisseur et nature de la tôle",
-    text: "Un chiffre à demander précisément : elle conditionne la résistance réelle, au-delà du seul niveau de serrure.",
-  },
-  {
-    Icon: HandshakeIcon,
-    title: "Facture détaillée",
-    text: "Mentionne le niveau de certification posé : le document à présenter à votre assureur.",
-  },
-];
-
-const guideTocFr = [
-  { id: "principe", label: "Le principe du blindage : conserver la porte, renforcer le bâti" },
-  { id: "modeles", label: "Trois modèles selon votre besoin" },
-  { id: "au-dela-du-prix", label: "Ce qu'il faut vérifier au-delà du prix" },
-  { id: "pas-la-solution", label: "Quand ce n'est pas la bonne solution" },
-  { id: "devis", label: "Prix, devis, acompte et paiement" },
-  { id: "entretien", label: "Entretien : ce qui prolonge la durée de vie" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaqFr = [
-  {
-    question: "Un devis moins cher avec le même niveau A2P est-il forcément équivalent ?",
-    answer:
-      "Pas nécessairement. Le niveau A2P encadre la résistance de l'ensemble serrure-cylindre-bâti testée, mais la qualité de pose (réglage du bâti, ajustement des paumelles) influence tout autant la résistance réelle. Un excellent produit mal posé perd une bonne partie de son intérêt.",
-  },
-  {
-    question: "Le blindage réduit-il l'isolation phonique ou thermique ?",
-    answer:
-      "Non, généralement l'inverse : le bâti en acier et la garniture ajoutée renforcent aussi l'isolation par rapport à une porte d'entrée standard, même si ce n'est pas leur fonction première. Le modèle Parisien Hermétic va plus loin avec un joint hermétique fil de verre dédié à ce renfort.",
-  },
-  {
-    question: "Faut-il graisser les paumelles d'une porte blindée ?",
-    answer:
-      "Un point de contrôle simple à faire soi-même une à deux fois par an, avec un lubrifiant adapté au métal, pour éviter le grincement et préserver le jeu de fermeture dans la durée.",
-  },
-];
-
-const guideContentFr = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille les critères concrets à vérifier au-delà du prix
-      affiché, et les cas où le blindage n&apos;est pas la réponse la plus
-      adaptée.
-    </p>
-
-    <div>
-      <ArticleSectionHeading number={1} id="principe" level="h3" size="lg" numberStyle="plain">
-        Le principe du blindage : conserver la porte, renforcer le bâti
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Contrairement à un bloc-porte neuf, le blindage conserve votre porte
-        en bois existante : un système de bâti en acier vient l&apos;habiller
-        et la renforcer, sans reprendre l&apos;ensemble de la menuiserie. Il
-        s&apos;adresse à une porte dont le bois reste globalement sain, mais
-        dont le niveau de sécurité doit être significativement relevé.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="modeles" level="h3" size="lg" numberStyle="plain">
-        Trois modèles selon votre besoin
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le <strong className="text-navy">Citadin</strong> reste la référence
-        de la gamme : bâti acier 20/10e (option 25/10e), serrure en applique
-        Royal Star (Little Star 3 points, Queen Star 5 points ou King Star 7
-        points selon le niveau visé), cylindre européen breveté à roue
-        dentée avec 4 clés à reproduction protégée, certifié BP1. Le{" "}
-        <strong className="text-navy">Parisien</strong> monte en gamme avec
-        des anti-pinces intégrés au bâti acier 25/10e, et peut être certifié
-        jusqu&apos;à BP3 en combinant bâti 25/10e, blindage 50/10e et serrure
-        7 points. Le{" "}
-        <strong className="text-navy">Parisien Hermétic</strong> est une
-        version économique livrée sans serrure (la vôtre est réutilisée),
-        avec un joint hermétique fil de verre qui renforce l&apos;étanchéité
-        acoustique et thermique.
-      </p>
-    </div>
-
-    <div className="bg-steel/10 border border-navy/10 rounded-xl p-6">
-      <p className="font-heading font-bold text-navy mb-4">À vérifier sur un devis, au-delà du prix</p>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {criteresFr.map(({ Icon, title, text }) => (
-          <div key={title} className="flex items-start gap-3">
-            <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white text-steel shrink-0">
-              <Icon className="w-4 h-4" />
-            </span>
-            <div>
-              <p className="font-heading font-semibold text-navy text-sm">{title}</p>
-              <p className="text-sm text-slate leading-snug mt-0.5">{text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="pas-la-solution" level="h3" size="lg" numberStyle="plain">
-        Quand ce n&apos;est pas la bonne solution
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Le blindage est toujours possible tant que votre porte est viable :
-        bois sain, bâti en état. Il ne change pas l&apos;aspect extérieur de la
-        porte, ce qui compte en copropriété. Ce n&apos;est pas une réponse
-        universelle pour autant. Deux cas où je vous oriente ailleurs :
-      </p>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-3">
-        <li>
-          <strong className="text-navy">Porte trop dégradée</strong> : le blindage renforce une porte
-          existante, il ne compense pas un bois pourri ou un bâti déformé. Dans ce cas, un{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            bloc-porte neuf
-          </Link>{" "}
-          reprend l&apos;ensemble de la menuiserie plutôt que de renforcer une base fragile.
-        </li>
-        <li>
-          <strong className="text-navy">Besoin de personnalisation esthétique poussée</strong> : le
-          blindage préserve l&apos;aspect de votre porte actuelle. Si vous cherchez un style neuf
-          (vitrage, finitions design), la gamme{" "}
-          <Link href="/installation-porte-blindee-nice/" className="text-steel underline">
-            bloc-porte
-          </Link>{" "}
-          offre un vrai choix de lignes et de matériaux.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="devis" level="h3" size="lg" numberStyle="plain">
-        Prix, devis, acompte et paiement
-      </ArticleSectionHeading>
-      <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed">
-        <li>
-          <strong className="text-navy">Le prix</strong> : le modèle Citadin démarre à 2 689 € TTC,
-          pose comprise. Le Parisien et le Parisien Hermétic sont chiffrés sur devis.
-        </li>
-        <li>
-          <strong className="text-navy">Le devis</strong> : la visite sur place et le devis sont
-          gratuits, et le devis vous est remis sous 24h.
-        </li>
-        <li>
-          <strong className="text-navy">La pose</strong> : elle dure environ 4 heures, sans travaux
-          de maçonnerie.
-        </li>
-        <li>
-          <strong className="text-navy">L&apos;acompte</strong> : 30 % à la validation du devis,
-          pour ce type de travaux.
-        </li>
-        <li>
-          <strong className="text-navy">Le paiement</strong> : carte bancaire, espèces ou virement,
-          avec une facture détaillée envoyée par e-mail.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={5} id="entretien" level="h3" size="lg" numberStyle="plain">
-        Entretien : ce qui prolonge la durée de vie
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un graissage léger des paumelles une à deux fois par an et un
-        contrôle visuel du jeu de fermeture suffisent la plupart du temps.
-        Si la porte commence à résister ou à mal refermer, mieux vaut agir
-        tôt : le détail des solutions selon le symptôme est sur ma page{" "}
-        <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-          dépannage serrurier
-        </Link>
-        .
-      </p>
-    </div>
-  </>
-);
-
 export const metadata: Metadata = buildMetadata({
   path: "/blindage-porte-nice/",
-  title: "Blindage de porte à Nice – Garantie fabricant 15 ans",
+  title: "Blindage de porte Nice : certifié BP1, porte conservée",
   description:
-    "Blindage de porte à Nice : renforcez votre porte existante sans la remplacer. Bâti acier, serrure en applique, certification A2P BP. Visite et devis gratuits sur place.",
+    "Blindage de porte à Nice : votre porte gardée, bâti acier et serrure multipoints, certifié BP1 dès 2 689 € TTC posé. Devis gratuit. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sectionsFr = [
   {
-    heading: "Qu'est-ce que le blindage de porte",
-    Icon: <ShieldIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Le blindage renforce votre porte existante sans la remplacer : un système de bâti en acier vient habiller le dormant et recevoir une serrure en applique haute résistance. La porte en bois d'origine est conservée, ce qui préserve l'aspect extérieur côté palier. Le résultat est une véritable porte blindée, sans changer de menuiserie ni de porte d'origine.",
-    ],
+    heading: "Blindage, bloc-porte ou simples renforts : ce qu'il vous faut vraiment",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Le blindage n&apos;est pas toujours la bonne réponse. Avant de vous faire un devis, je regarde votre porte et
+          ce que vous voulez protéger. Voici ce que je pose, de la solution la plus légère à la plus complète :
+        </p>
+        <ArticleTable
+          headers={["Solution", "Pour quelle porte", "Ce qu'elle apporte", "Prix TTC posé"]}
+          rows={[
+            [
+              <Link key="poignee" href="/poignee-blindee-nice/" className={linkClass}>
+                Poignée blindée
+              </Link>,
+              "Porte saine, serrure récente",
+              "Protège le cylindre contre l'arrachement et la casse",
+              "349 €",
+            ],
+            [
+              "Cornières anti-pince",
+              "Porte avec du jeu entre le battant et le cadre",
+              "Empêche de glisser un pied-de-biche côté serrure",
+              "269 €",
+            ],
+            [
+              <Link key="carenee" href="/serrure-carenee-nice/" className={linkClass}>
+                Serrure carénée 5 points
+              </Link>,
+              "Porte solide qui ne ferme que sur un point",
+              "Ferme la porte sur toute sa hauteur",
+              "1 249 €",
+            ],
+            [
+              "Blindage de porte",
+              "Porte en bois sain que vous voulez garder",
+              "Une vraie porte blindée certifiée, sans changer la menuiserie",
+              "Dès 2 689 €",
+            ],
+            [
+              <Link key="bloc" href="/installation-porte-blindee-nice/" className={linkClass}>
+                Bloc-porte blindé neuf
+              </Link>,
+              "Porte ou cadre trop abîmés, ou envie d'un nouveau style",
+              "Porte, cadre et serrure neufs",
+              "Dès 3 490 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Sur une porte d&apos;immeuble solide, une poignée blindée et des cornières anti-pince suffisent souvent,
+          soit 618 € pour les deux. Si c&apos;est votre cas, je vous le dis plutôt que de vous vendre un blindage.
+        </p>
+      </>
+    ),
   },
   {
-    heading: "Trois modèles selon votre besoin",
-    Icon: <CheckIcon className="w-4 h-4" />,
+    heading: "Ce que comprend un blindage",
+    paragraphs: [],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Le bâti acier</strong>, fixé sur le dormant existant : il reçoit les points
+            de fermeture et empêche d&apos;écarter la porte du cadre.
+          </li>
+          <li>
+            <strong className="text-navy">Le renfort du battant</strong>, qui fait d&apos;une porte en bois une porte
+            blindée, sans changer son aspect côté palier.
+          </li>
+          <li>
+            <strong className="text-navy">Une serrure en applique</strong>, côté intérieur, de 3 à 7 points selon le
+            niveau visé.
+          </li>
+          <li>
+            <strong className="text-navy">Un cylindre haute sécurité</strong>, avec des clés dont la copie est
+            protégée.
+          </li>
+        </ul>
+        <p className={pClass}>
+          La pose dure environ 4 heures, sans travaux de maçonnerie. Vous refermez chez vous le soir même avec vos
+          nouvelles clés.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Les trois modèles que je pose",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Je pose la gamme{" "}
+          <a href="https://www.valentesecurystar.com/" target="_blank" rel="noopener" className={linkClass}>
+            Valente Securystar
+          </a>
+          , un fabricant français installé à Thiais depuis 1995.
+        </p>
+        <ArticleTable
+          headers={["Modèle", "Ce qui le distingue", "Prix TTC posé"]}
+          rows={[
+            [
+              "Citadin",
+              "Le modèle de référence : bâti acier 20/10e (25/10e en option), serrure en applique Royal Star de 3, 5 ou 7 points (Little Star, Queen Star ou King Star), cylindre européen breveté à roue dentée livré avec 4 clés à reproduction protégée. Certifié BP1.",
+              "Dès 2 689 €",
+            ],
+            [
+              "Parisien",
+              "Le haut de gamme : bâti acier 25/10e avec anti-pinces intégrés. Certifiable jusqu'à BP3 en combinant bâti 25/10e, blindage 50/10e et serrure 7 points.",
+              "Sur devis",
+            ],
+            [
+              "Parisien Hermétic",
+              "La version économique : livrée sans serrure, elle réutilise la vôtre. Un joint hermétique en fil de verre renforce l'isolation phonique et thermique.",
+              "Sur devis",
+            ],
+          ]}
+        />
+      </>
+    ),
+  },
+  {
+    heading: "BP1, BP2, BP3 : ce que veulent dire ces niveaux",
     paragraphs: [
       <>
-        Le Citadin (référence, certifié BP1), le Parisien (haut de gamme,
-        certifiable jusqu&apos;à BP3) et le Parisien Hermétic (version
-        économique, isolation renforcée) : trois modèles de la gamme{" "}
-        <a
-          href="https://www.valentesecurystar.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          Valente Securystar
-        </a>
-        , fabricant français installé à Thiais depuis 1995. Le détail de
-        chaque modèle est dans mon guide complet. Le Citadin démarre à 2 689 €
-        TTC, pose comprise ; le Parisien et le Parisien Hermétic sont sur devis.
+        Les niveaux BP de la{" "}
+        <Link href="/blog/certification-a2p-serrure-nice/" className={linkClass}>
+          certification A2P
+        </Link>{" "}
+        mesurent combien de temps la porte entière résiste à une attaque testée en laboratoire : 5 minutes pour BP1,
+        10 minutes pour BP2, 15 minutes pour BP3. Le niveau porte sur l&apos;ensemble (porte, bâti, serrure), pas
+        seulement sur la serrure : une serrure 3 étoiles posée sur une porte légère ne fait pas une porte BP3.
       </>,
     ],
   },
   {
-    heading: "Pourquoi le blindage change la donne",
-    Icon: <WrenchIcon className="w-4 h-4" />,
+    heading: "Ce que je vérifie avant de proposer un blindage",
+    paragraphs: [],
+    extra: (
+      <>
+        <ol className={olClass}>
+          <li>
+            <strong className="text-navy">Le bois du battant</strong> : sain, sans pourriture ni fente, surtout en bas
+            de porte.
+          </li>
+          <li>
+            <strong className="text-navy">Le dormant</strong> : le bâti acier s&apos;y fixe, il doit être solidement
+            tenu dans le mur.
+          </li>
+          <li>
+            <strong className="text-navy">Le jeu de la porte</strong> : une porte qui frotte ou qui a bougé se règle
+            avant la pose.
+          </li>
+          <li>
+            <strong className="text-navy">La place côté intérieur</strong>, pour la serrure en applique.
+          </li>
+        </ol>
+        <p className={pClass}>
+          Si l&apos;un de ces points ne va pas, je vous propose un bloc-porte neuf plutôt qu&apos;un blindage posé sur
+          une base fragile.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Ce que je refuse de faire",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>Blinder une porte au bois pourri ou au cadre déformé : elle aurait l&apos;air blindée sans l&apos;être.</li>
+        <li>Vous vendre un blindage quand une poignée blindée et des cornières suffisent.</li>
+        <li>Vous promettre une baisse de votre prime d&apos;assurance : cela dépend de votre contrat.</li>
+        <li>
+          Poser un blindage dans l&apos;urgence{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            après une effraction
+          </Link>{" "}
+          : le soir même, je remets la porte en état de fermer ; le blindage se décide ensuite, au calme, sur devis.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Exemple type",
     paragraphs: [
-      "Un cambrioleur met en moyenne 90 secondes pour forcer une serrure classique. Une porte blindée bien posée peut résister près de 50 minutes, un écart qui décourage la grande majorité des tentatives.",
+      "Exemple type, une situation fréquente et non un client précis : un appartement dans un immeuble ancien du centre de Nice, avec la porte en bois massif d'origine et une serrure qui ne ferme que sur un point. Le bois est sain, et la copropriété tient à l'aspect des portes palières. Le blindage Citadin est alors cohérent : la porte garde son aspect côté palier, elle ferme sur 3 à 7 points, et l'ensemble est certifié BP1. Avec un budget plus serré, une serrure carénée 5 points et des cornières anti-pince sont une première étape.",
     ],
   },
   {
-    heading: "Votre assurance habitation",
-    Icon: <HandshakeIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Certains assureurs tiennent compte de la certification A2P d'une porte, d'autres non : cela dépend de votre contrat, et je ne m'engage sur aucune réduction de prime. Je vous remets une facture détaillée qui mentionne le niveau de certification posé, à présenter à votre assureur.",
-    ],
+    heading: "Copropriété, location et assurance",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Copropriété</strong> : tant que l&apos;aspect extérieur côté palier ne change
+          pas, le blindage ne demande aucune autorisation de l&apos;assemblée générale.
+        </li>
+        <li>
+          <strong className="text-navy">Location</strong> : si vous êtes locataire, demandez l&apos;accord écrit de
+          votre propriétaire avant la pose.
+        </li>
+        <li>
+          <strong className="text-navy">Assurance</strong> : certains assureurs tiennent compte de la certification de
+          la porte, d&apos;autres non. Ma facture détaillée mentionne le niveau de certification posé, à présenter à
+          votre assureur.
+        </li>
+      </ul>
+    ),
   },
   {
-    heading: "Isolation phonique et thermique, un vrai plus",
-    Icon: <DoubleLockIcon className="w-4 h-4" />,
-    paragraphs: [
-      "Ce n'est pas l'objectif premier du blindage, mais le bâti acier et la garniture intérieure améliorent presque toujours l'isolation par rapport à une porte d'entrée standard, un vrai plus sur les paliers exposés au bruit des cages d'escalier du centre de Nice.",
-    ],
+    heading: "Prix, devis et paiement",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Le prix</strong> : le Citadin démarre à 2 689 € TTC, pose comprise. Le
+          Parisien et le Parisien Hermétic sont sur devis. Le montant final dépend du modèle, du nombre de points de
+          fermeture et de l&apos;état de votre porte. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </li>
+        <li>
+          <strong className="text-navy">Le devis</strong> : la visite sur place et le devis sont gratuits, le devis
+          vous est remis sous 24h.
+        </li>
+        <li>
+          <strong className="text-navy">L&apos;acompte</strong> : 30 % à la validation du devis.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : par carte bancaire, en espèces ou par virement, avec
+          une facture détaillée envoyée par e-mail.
+        </li>
+        <li>
+          <strong className="text-navy">La garantie</strong> : le matériel est couvert par la garantie fabricant
+          Valente Securystar de 15 ans.
+        </li>
+      </ul>
+    ),
   },
   {
-    heading: "Aucune autorisation de copropriété nécessaire",
-    Icon: <DoorIcon className="w-4 h-4" />,
+    heading: "Entretien",
     paragraphs: [
-      "Tant que l'aspect extérieur côté palier reste inchangé, le blindage ne nécessite aucune autorisation de l'assemblée générale de copropriété.",
+      "Un graissage léger des paumelles une à deux fois par an, avec un lubrifiant pour métal, et un coup d'œil au jeu de fermeture suffisent. Si la porte commence à résister ou à mal refermer, appelez-moi tôt : un réglage coûte moins cher qu'une serrure forcée.",
     ],
   },
 ];
@@ -267,46 +278,35 @@ const faqFr = [
   {
     question: "Combien coûte un blindage de porte à Nice ?",
     answer:
-      "À partir de 2 689 € TTC avec le modèle Citadin, pose comprise. Le Parisien et le Parisien Hermétic sont chiffrés sur devis, et le montant final dépend du modèle choisi et de l'état de votre porte. La visite sur place et le devis sont gratuits, le devis vous est remis sous 24h, avant tout engagement.",
+      "À partir de 2 689 € TTC avec le modèle Citadin, pose comprise. Le Parisien et le Parisien Hermétic sont sur devis. La visite et le devis sont gratuits, le devis vous est remis sous 24h.",
   },
   {
-    question: "Quelle différence avec un bloc-porte neuf ?",
+    question: "Quelle différence entre un blindage et un bloc-porte neuf ?",
     answer:
-      "Le blindage conserve votre porte existante et renforce son bâti. Le bloc-porte remplace l'ensemble de la menuiserie. Si votre porte ou son bâti sont trop dégradés, voir ma page bloc-porte blindé.",
+      "Le blindage garde votre porte et la renforce. Le bloc-porte remplace la porte, le cadre et la serrure. Si votre porte ou son cadre sont trop abîmés, le bloc-porte est la bonne solution.",
   },
   {
-    question: "Faut-il une autorisation de copropriété pour faire blinder ma porte ?",
+    question: "Combien de temps dure la pose ?",
+    answer: "Environ 4 heures, sans travaux de maçonnerie. Vous refermez chez vous le soir même.",
+  },
+  {
+    question: "Faut-il l'accord de la copropriété pour blinder sa porte ?",
     answer:
-      "Non, dans la grande majorité des cas, tant que l'aspect extérieur côté palier reste inchangé.",
-  },
-  {
-    question: "Quelle garantie sur un blindage de porte ?",
-    answer:
-      "Le matériel posé est couvert par la garantie fabricant de 15 ans (gamme Valente Securystar, fabricant français).",
-  },
-  {
-    question: "Combien de temps dure la pose d'un blindage ?",
-    answer: "Environ 4 heures, sans travaux de maçonnerie.",
+      "Non, tant que l'aspect extérieur côté palier ne change pas. Si vous êtes locataire, demandez l'accord écrit de votre propriétaire.",
   },
   {
     question: "Peut-on blinder n'importe quelle porte ?",
     answer:
-      "Le blindage est toujours possible tant que la porte est viable, c'est-à-dire un bois sain et un bâti en état. Si le bois est pourri ou le bâti déformé, je vous oriente vers un bloc-porte neuf, qui reprend toute la menuiserie.",
+      "Non : il faut un bois sain et un dormant solide. Si ce n'est pas le cas, je vous propose un bloc-porte neuf.",
   },
   {
-    question: "Le blindage change-t-il l'aspect de ma porte ?",
-    answer:
-      "Non. Votre porte d'origine est conservée : l'aspect extérieur, côté palier, ne change pas.",
+    question: "Quelle garantie sur un blindage ?",
+    answer: "Le matériel est couvert par la garantie fabricant Valente Securystar de 15 ans.",
   },
   {
-    question: "Faut-il verser un acompte et comment payer ?",
+    question: "Faut-il verser un acompte ?",
     answer:
-      "Pour ce type de travaux, un acompte de 30 % est demandé à la validation du devis. Le paiement se fait par carte bancaire, espèces ou virement, et la facture détaillée vous est envoyée par e-mail.",
-  },
-  {
-    question: "Le blindage résiste-t-il vraiment aux cambrioleurs ?",
-    answer:
-      "Selon les données de Valente Securystar, le fabricant de la gamme que je pose, 95% des cambrioleurs abandonnent après 3 minutes de tentative infructueuse face à ce type de blindage. C'est une statistique du fabricant, pas une mesure indépendante, mais elle recoupe le constat général : un accès qui résiste plus de quelques minutes décourage la grande majorité des tentatives.",
+      "Oui, 30 % à la validation du devis. Le paiement se fait par carte bancaire, en espèces ou par virement, avec une facture détaillée envoyée par e-mail.",
   },
 ];
 
@@ -334,8 +334,7 @@ const sectionsEn = [
         >
           Valente Securystar
         </a>{" "}
-        range, a French manufacturer based in Thiais since 1995. Full
-        details for each model are in my complete guide. The Citadin starts at
+        range, a French manufacturer based in Thiais since 1995. The Citadin starts at
         €2,689 incl. VAT, fitted; the Parisien and the Parisien Hermétic are
         quoted individually.
       </>,
@@ -417,12 +416,29 @@ const faqEn = [
   },
 ];
 
-export default function BlindagePorteNicePage() {
+export default async function BlindagePorteNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <LocalizedServicePage
       fr={{
-        h1: "Blindage de porte à Nice : renforcer une porte blindée existante",
-        lead: "Transformer votre porte existante en porte blindée sans la remplacer : bâti acier, serrure en applique et cylindre haute sécurité. À partir de 2 689 € TTC pose comprise (modèle Citadin), devis gratuit confirmé avant intervention.",
+        h1: "Blindage de porte à Nice : votre porte gardée, renforcée à neuf",
+        lead: "Le blindage garde votre porte d'origine et en fait une porte blindée : bâti acier sur le dormant, renfort acier sur le battant, serrure en applique multipoints et cylindre haute sécurité. À partir de 2 689 € TTC pose comprise avec le modèle Citadin, certifié BP1. La visite et le devis sont gratuits, le devis vous est remis sous 24h, et la pose dure environ 4 heures, sans maçonnerie.",
+        hideProcessSteps: true,
         sections: sectionsFr,
         faq: faqFr,
         breadcrumbLabel: "Blindage de porte",
@@ -431,9 +447,8 @@ export default function BlindagePorteNicePage() {
           src: "/images/pool/porte-blindee-pose-serrurier-nice.webp",
           alt: "Blindage de porte Nice",
         },
-        sectionsVariant: "cards",
-        sectionsHeading: "Ce qu'il faut savoir sur le blindage de porte",
         headingScale: "lg",
+        heroTrustNote,
         extra: (
           <>
             <PriceReminder
@@ -442,46 +457,11 @@ export default function BlindagePorteNicePage() {
               locale="fr"
             />
             <ServiceReviewsLive path="/blindage-porte-nice/" />
-            <div className="mx-auto max-w-4xl px-4 mt-4">
-              <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
-                <p className="font-heading font-semibold text-navy mb-1">
-                  Garantie fabricant de 15 ans
-                </p>
-                <p className="text-sm text-slate leading-relaxed">
-                  Le matériel posé est couvert par la garantie fabricant Valente Securystar de 15 ans.
-                </p>
-              </div>
+            <div className="mx-auto max-w-4xl px-4 py-10">
+              <QuoteBlock locale="fr" />
             </div>
           </>
         ),
-        processSteps: [
-          {
-            title: "Appel",
-            text: "Vous me décrivez votre porte actuelle, je vous indique si le blindage est adapté ou si un bloc-porte neuf serait plus cohérent.",
-          },
-          {
-            title: "Rendez-vous",
-            text: "Je me déplace pour évaluer l'état de votre porte et de son bâti, à l'heure qui vous convient. La visite et le devis sont gratuits, le devis vous est remis sous 24h.",
-          },
-          {
-            title: "Choix du modèle et pose",
-            text: "Je vous oriente vers le modèle adapté (Citadin, Parisien, Parisien Hermétic) et je pose l'ensemble en 4 heures environ, sans maçonnerie. Un acompte de 30 % est demandé à la validation du devis.",
-          },
-          {
-            title: "Garantie",
-            text: "Facture détaillée envoyée par e-mail, avec la garantie fabricant de 15 ans sur le matériel.",
-          },
-        ],
-        relatedArticle: {
-          href: "/blog/certification-a2p-serrure-nice/",
-          label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
-        },
-        guide: (
-          <ServiceGuideSection readingMinutes={6} toc={guideTocFr} faq={guideFaqFr}>
-            {guideContentFr}
-          </ServiceGuideSection>
-        ),
-        guideFaqForSchema: guideFaqFr,
       }}
       en={{
         h1: "Door reinforcement in Nice: turning your door into an armored door",
