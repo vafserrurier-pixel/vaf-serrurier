@@ -41,13 +41,13 @@ export const contentDates: Record<string, string> = {
   "/serrurier-cagnes-sur-mer/": "2026-10-16T16:42:30+02:00",
   "/serrurier-eze/": "2026-10-16T16:42:30+02:00",
   "/serrurier-jean-medecin-nice/": "2026-10-16T00:00:00.000Z",
-  "/serrurier-nice-centre/": "2026-10-16T18:56:26+02:00",
-  "/serrurier-nice-est/": "2026-10-16T18:56:26+02:00",
-  "/serrurier-nice-nord/": "2026-10-16T18:56:26+02:00",
-  "/serrurier-nice-ouest/": "2026-10-16T18:56:26+02:00",
+  "/serrurier-nice-centre/": "2026-10-16T19:11:01+02:00",
+  "/serrurier-nice-est/": "2026-10-16T19:11:01+02:00",
+  "/serrurier-nice-nord/": "2026-10-16T19:11:01+02:00",
+  "/serrurier-nice-ouest/": "2026-10-16T19:11:01+02:00",
   "/serrurier-saint-laurent-du-var/": "2026-10-16T16:42:30+02:00",
   "/serrurier-villefranche-sur-mer/": "2026-10-16T16:42:30+02:00",
   "/tarifs-serrurier-nice/": "2026-10-16T16:42:30+02:00",
   "/urgence-serrurier-nice/": "2026-10-15T18:39:14+02:00",
-  "/zones-intervention-nice/": "2026-10-16T18:56:26+02:00"
+  "/zones-intervention-nice/": "2026-10-16T19:11:01+02:00"
 };
