@@ -43,14 +43,13 @@ const totalQuartiers = zones.centre.length + zones.est.length + zones.nord.lengt
 const builtCommunesCount = builtCommunes.length;
 const coverageSentence = `Ce sont ${totalQuartiers} quartiers de Nice, regroupés dans ces quatre pages secteur, plus ${builtCommunesCount} commune${builtCommunesCount > 1 ? "s" : ""} voisine${builtCommunesCount > 1 ? "s" : ""} déjà pourvue${builtCommunesCount > 1 ? "s" : ""} d'une page.`;
 
-// Schema.org ItemList : les pages locales qui existent (4 secteurs, Jean-Médecin, communes avec page ;
+// Schema.org ItemList : les pages locales qui existent (4 secteurs, communes avec page ;
 // sinon l'URL du hub). Les quartiers sans page ne sont pas listés : aucune URL en double ni inventée.
 const itemListEntries = [
   ...sectors.map((sector) => ({
     name: `Nice ${sector.label}`,
     url: `${business.domain}${sectorPages[sector.key].href}`,
   })),
-  { name: "Jean-Médecin", url: `${business.domain}${quartierHref("Jean-Médecin")}` },
   ...communes.map((commune) => ({
     name: commune,
     url: `${business.domain}${isCommuneBuilt(commune) ? communeHref(commune) : "/zones-intervention-nice/"}`,

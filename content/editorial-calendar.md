@@ -11,30 +11,30 @@ rappel ; ce Markdown est la version pour consultation humaine.
 - **Niveau 1** (priorite haute, 14 pages) : accueil, 4 secteurs,
   tarifs, agences-syndics, 7 pages service. 2 pages proposees a chaque cycle
   -> rotation complete tous les ~7 cycles (~2-3 semaines).
-- **Niveau 2** (priorite normale, 6 pages) : Jean-Medecin + 5
+- **Niveau 2** (priorite normale, 5 pages) : les 5
   communes voisines. 1 page proposee a chaque cycle -> rotation complete tous
   les ~50 cycles (~3-4 mois).
 - **Cycle** : chaque lundi/mercredi/vendredi (3 par semaine).
 - Calendrier genere sur 52 semaines (156 cycles) a partir du
-  2026-09-14.
+  2026-10-16.
 
 ## Echantillon des 30 premiers jours
 
 | Date | Niveau 1 | Niveau 1 | Niveau 2 |
 |---|---|---|---|
-| 2026-09-14 | Accueil | Secteur Nice Centre | Quartier : Jean-Médecin |
-| 2026-09-16 | Secteur Nice Est | Secteur Nice Nord |  |
-| 2026-09-18 | Secteur Nice Ouest | Tarifs |  |
-| 2026-09-21 | Agences & syndics | Service : Dépannage serrurier |  |
-| 2026-09-23 | Service : Ouverture de porte | Service : Changement de serrure |  |
-| 2026-09-25 | Service : Installation porte blindée | Service : Après effraction |  |
-| 2026-09-28 | Service : Ouverture de coffre-fort | Service : Installation de coffre-fort |  |
-| 2026-09-30 | Accueil | Secteur Nice Centre |  |
-| 2026-10-02 | Secteur Nice Est | Secteur Nice Nord |  |
-| 2026-10-05 | Secteur Nice Ouest | Tarifs |  |
-| 2026-10-07 | Agences & syndics | Service : Dépannage serrurier |  |
-| 2026-10-09 | Service : Ouverture de porte | Service : Changement de serrure |  |
-| 2026-10-12 | Service : Installation porte blindée | Service : Après effraction |  |
+| 2026-10-16 | Accueil | Secteur Nice Centre | Commune : Èze |
+| 2026-10-19 | Secteur Nice Est | Secteur Nice Nord | Commune : Villefranche-sur-Mer |
+| 2026-10-21 | Secteur Nice Ouest | Tarifs | Commune : Saint-Laurent-du-Var |
+| 2026-10-23 | Agences & syndics | Service : Dépannage serrurier | Commune : Cagnes-sur-Mer |
+| 2026-10-26 | Service : Ouverture de porte | Service : Changement de serrure | Commune : Beaulieu-sur-Mer |
+| 2026-10-28 | Service : Installation porte blindée | Service : Après effraction | Commune : Èze |
+| 2026-10-30 | Service : Ouverture de coffre-fort | Service : Installation de coffre-fort | Commune : Villefranche-sur-Mer |
+| 2026-11-02 | Accueil | Secteur Nice Centre | Commune : Saint-Laurent-du-Var |
+| 2026-11-04 | Secteur Nice Est | Secteur Nice Nord | Commune : Cagnes-sur-Mer |
+| 2026-11-06 | Secteur Nice Ouest | Tarifs | Commune : Beaulieu-sur-Mer |
+| 2026-11-09 | Agences & syndics | Service : Dépannage serrurier | Commune : Èze |
+| 2026-11-11 | Service : Ouverture de porte | Service : Changement de serrure | Commune : Villefranche-sur-Mer |
+| 2026-11-13 | Service : Installation porte blindée | Service : Après effraction | Commune : Saint-Laurent-du-Var |
 
 ## Listes completes
 
@@ -54,10 +54,9 @@ rappel ; ce Markdown est la version pour consultation humaine.
 13. Service : Ouverture de coffre-fort (`/ouverture-de-coffre-fort-nice/`)
 14. Service : Installation de coffre-fort (`/installation-coffre-fort-nice/`)
 
-### Niveau 2 (6 pages)
-1. Quartier : Jean-Médecin (`/serrurier-jean-medecin-nice/`)
-2. Commune : Èze (`/serrurier-eze/`)
-3. Commune : Villefranche-sur-Mer (`/serrurier-villefranche-sur-mer/`)
-4. Commune : Saint-Laurent-du-Var (`/serrurier-saint-laurent-du-var/`)
-5. Commune : Cagnes-sur-Mer (`/serrurier-cagnes-sur-mer/`)
-6. Commune : Beaulieu-sur-Mer (`/serrurier-beaulieu-sur-mer/`)
+### Niveau 2 (5 pages)
+1. Commune : Èze (`/serrurier-eze/`)
+2. Commune : Villefranche-sur-Mer (`/serrurier-villefranche-sur-mer/`)
+3. Commune : Saint-Laurent-du-Var (`/serrurier-saint-laurent-du-var/`)
+4. Commune : Cagnes-sur-Mer (`/serrurier-cagnes-sur-mer/`)
+5. Commune : Beaulieu-sur-Mer (`/serrurier-beaulieu-sur-mer/`)

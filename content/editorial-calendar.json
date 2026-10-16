@@ -1,220 +1,5 @@
 [
   {
-    "date": "2026-09-14",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-jean-medecin-nice/",
-        "label": "Quartier : Jean-Médecin",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "date": "2026-09-16",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-18",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-21",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-23",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-25",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-28",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-09-30",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-02",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-05",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-07",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-09",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-12",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2026-10-14",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
     "date": "2026-10-16",
     "items": [
       {
@@ -226,6 +11,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -241,6 +31,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -256,6 +51,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -271,6 +71,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -286,6 +91,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -301,6 +111,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -316,6 +131,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -331,6 +151,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -346,6 +171,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -361,6 +191,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -376,6 +211,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -391,6 +231,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -406,6 +251,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -421,6 +271,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -436,6 +291,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -451,6 +311,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -466,6 +331,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -481,6 +351,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -496,6 +371,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -511,6 +391,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -526,6 +411,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -541,6 +431,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -556,6 +451,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -571,6 +471,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -586,6 +491,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -601,6 +511,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -616,6 +531,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -631,6 +551,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -646,6 +571,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -661,6 +591,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -676,6 +611,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -693,8 +633,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-beaulieu-sur-mer/",
-        "label": "Commune : Beaulieu-sur-Mer",
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
         "level": 2
       }
     ]
@@ -713,8 +653,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-eze/",
-        "label": "Commune : Èze",
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
         "level": 2
       }
     ]
@@ -733,8 +673,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-villefranche-sur-mer/",
-        "label": "Commune : Villefranche-sur-Mer",
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
         "level": 2
       }
     ]
@@ -753,8 +693,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-saint-laurent-du-var/",
-        "label": "Commune : Saint-Laurent-du-Var",
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
         "level": 2
       }
     ]
@@ -773,8 +713,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-cagnes-sur-mer/",
-        "label": "Commune : Cagnes-sur-Mer",
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
         "level": 2
       }
     ]
@@ -793,8 +733,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-jean-medecin-nice/",
-        "label": "Quartier : Jean-Médecin",
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
         "level": 2
       }
     ]
@@ -811,6 +751,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -826,6 +771,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -841,6 +791,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -856,6 +811,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -871,6 +831,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -886,6 +851,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -901,6 +871,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -916,6 +891,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -931,6 +911,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -946,6 +931,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -961,6 +951,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -976,6 +971,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -991,6 +991,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1006,6 +1011,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1021,6 +1031,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1036,6 +1051,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1051,6 +1071,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1066,6 +1091,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1081,6 +1111,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1096,6 +1131,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1111,6 +1151,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1126,6 +1171,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1141,6 +1191,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1156,6 +1211,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1171,6 +1231,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1186,6 +1251,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1201,6 +1271,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1216,6 +1291,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1231,6 +1311,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1246,6 +1331,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1261,6 +1351,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1276,6 +1371,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1291,6 +1391,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1306,6 +1411,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1321,6 +1431,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1336,6 +1451,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1351,6 +1471,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1366,6 +1491,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1381,6 +1511,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1396,6 +1531,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1411,6 +1551,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1426,6 +1571,11 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1441,6 +1591,11 @@
         "path": "/tarifs-serrurier-nice/",
         "label": "Tarifs",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -1456,6 +1611,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -1473,8 +1633,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-beaulieu-sur-mer/",
-        "label": "Commune : Beaulieu-sur-Mer",
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
         "level": 2
       }
     ]
@@ -1493,8 +1653,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-eze/",
-        "label": "Commune : Èze",
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
         "level": 2
       }
     ]
@@ -1513,8 +1673,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-villefranche-sur-mer/",
-        "label": "Commune : Villefranche-sur-Mer",
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
         "level": 2
       }
     ]
@@ -1533,8 +1693,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-saint-laurent-du-var/",
-        "label": "Commune : Saint-Laurent-du-Var",
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
         "level": 2
       }
     ]
@@ -1553,8 +1713,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-cagnes-sur-mer/",
-        "label": "Commune : Cagnes-sur-Mer",
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
         "level": 2
       }
     ]
@@ -1573,8 +1733,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-jean-medecin-nice/",
-        "label": "Quartier : Jean-Médecin",
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
         "level": 2
       }
     ]
@@ -1591,6 +1751,11 @@
         "path": "/urgence-serrurier-nice/",
         "label": "Service : Dépannage serrurier",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -1606,641 +1771,16 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
   {
     "date": "2027-05-12",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-14",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-17",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-19",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-21",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-24",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-26",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-28",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-05-31",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-02",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-04",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-07",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-09",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-11",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-14",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-16",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-18",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-21",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-23",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-25",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-28",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-06-30",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-02",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-05",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-07",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-09",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-12",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-14",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-16",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-19",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-21",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-23",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-26",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-28",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-07-30",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-02",
-    "items": [
-      {
-        "path": "/installation-porte-blindee-nice/",
-        "label": "Service : Installation porte blindée",
-        "level": 1
-      },
-      {
-        "path": "/mise-en-securite-apres-effraction-nice/",
-        "label": "Service : Après effraction",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-04",
-    "items": [
-      {
-        "path": "/ouverture-de-coffre-fort-nice/",
-        "label": "Service : Ouverture de coffre-fort",
-        "level": 1
-      },
-      {
-        "path": "/installation-coffre-fort-nice/",
-        "label": "Service : Installation de coffre-fort",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-06",
-    "items": [
-      {
-        "path": "/",
-        "label": "Accueil",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-centre/",
-        "label": "Secteur Nice Centre",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-09",
-    "items": [
-      {
-        "path": "/serrurier-nice-est/",
-        "label": "Secteur Nice Est",
-        "level": 1
-      },
-      {
-        "path": "/serrurier-nice-nord/",
-        "label": "Secteur Nice Nord",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-11",
-    "items": [
-      {
-        "path": "/serrurier-nice-ouest/",
-        "label": "Secteur Nice Ouest",
-        "level": 1
-      },
-      {
-        "path": "/tarifs-serrurier-nice/",
-        "label": "Tarifs",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-13",
-    "items": [
-      {
-        "path": "/agences-syndics-nice/",
-        "label": "Agences & syndics",
-        "level": 1
-      },
-      {
-        "path": "/urgence-serrurier-nice/",
-        "label": "Service : Dépannage serrurier",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-16",
-    "items": [
-      {
-        "path": "/ouverture-de-porte-nice/",
-        "label": "Service : Ouverture de porte",
-        "level": 1
-      },
-      {
-        "path": "/changement-serrure-nice/",
-        "label": "Service : Changement de serrure",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "date": "2027-08-18",
     "items": [
       {
         "path": "/installation-porte-blindee-nice/",
@@ -2260,7 +1800,7 @@
     ]
   },
   {
-    "date": "2027-08-20",
+    "date": "2027-05-14",
     "items": [
       {
         "path": "/ouverture-de-coffre-fort-nice/",
@@ -2280,7 +1820,7 @@
     ]
   },
   {
-    "date": "2027-08-23",
+    "date": "2027-05-17",
     "items": [
       {
         "path": "/",
@@ -2300,7 +1840,7 @@
     ]
   },
   {
-    "date": "2027-08-25",
+    "date": "2027-05-19",
     "items": [
       {
         "path": "/serrurier-nice-est/",
@@ -2320,7 +1860,7 @@
     ]
   },
   {
-    "date": "2027-08-27",
+    "date": "2027-05-21",
     "items": [
       {
         "path": "/serrurier-nice-ouest/",
@@ -2340,6 +1880,846 @@
     ]
   },
   {
+    "date": "2027-05-24",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-26",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-28",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-05-31",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-02",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-04",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-07",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-09",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-11",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-14",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-16",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-18",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-21",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-25",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-28",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-06-30",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-02",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-05",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-07",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-09",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-12",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-14",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-16",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-19",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-21",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-23",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-26",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-28",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-07-30",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-02",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-04",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-06",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-09",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-11",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-13",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-16",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-18",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-20",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-23",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-25",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-08-27",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
     "date": "2027-08-30",
     "items": [
       {
@@ -2353,8 +2733,8 @@
         "level": 1
       },
       {
-        "path": "/serrurier-jean-medecin-nice/",
-        "label": "Quartier : Jean-Médecin",
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
         "level": 2
       }
     ]
@@ -2371,6 +2751,11 @@
         "path": "/changement-serrure-nice/",
         "label": "Service : Changement de serrure",
         "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
       }
     ]
   },
@@ -2386,6 +2771,11 @@
         "path": "/mise-en-securite-apres-effraction-nice/",
         "label": "Service : Après effraction",
         "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -2401,6 +2791,11 @@
         "path": "/installation-coffre-fort-nice/",
         "label": "Service : Installation de coffre-fort",
         "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
       }
     ]
   },
@@ -2416,6 +2811,11 @@
         "path": "/serrurier-nice-centre/",
         "label": "Secteur Nice Centre",
         "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   },
@@ -2431,6 +2831,291 @@
         "path": "/serrurier-nice-nord/",
         "label": "Secteur Nice Nord",
         "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-13",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-15",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-17",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-20",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-22",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-24",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-27",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-09-29",
+    "items": [
+      {
+        "path": "/serrurier-nice-ouest/",
+        "label": "Secteur Nice Ouest",
+        "level": 1
+      },
+      {
+        "path": "/tarifs-serrurier-nice/",
+        "label": "Tarifs",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-01",
+    "items": [
+      {
+        "path": "/agences-syndics-nice/",
+        "label": "Agences & syndics",
+        "level": 1
+      },
+      {
+        "path": "/urgence-serrurier-nice/",
+        "label": "Service : Dépannage serrurier",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-04",
+    "items": [
+      {
+        "path": "/ouverture-de-porte-nice/",
+        "label": "Service : Ouverture de porte",
+        "level": 1
+      },
+      {
+        "path": "/changement-serrure-nice/",
+        "label": "Service : Changement de serrure",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-villefranche-sur-mer/",
+        "label": "Commune : Villefranche-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-06",
+    "items": [
+      {
+        "path": "/installation-porte-blindee-nice/",
+        "label": "Service : Installation porte blindée",
+        "level": 1
+      },
+      {
+        "path": "/mise-en-securite-apres-effraction-nice/",
+        "label": "Service : Après effraction",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-saint-laurent-du-var/",
+        "label": "Commune : Saint-Laurent-du-Var",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-08",
+    "items": [
+      {
+        "path": "/ouverture-de-coffre-fort-nice/",
+        "label": "Service : Ouverture de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/installation-coffre-fort-nice/",
+        "label": "Service : Installation de coffre-fort",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-cagnes-sur-mer/",
+        "label": "Commune : Cagnes-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-11",
+    "items": [
+      {
+        "path": "/",
+        "label": "Accueil",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-centre/",
+        "label": "Secteur Nice Centre",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-beaulieu-sur-mer/",
+        "label": "Commune : Beaulieu-sur-Mer",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "date": "2027-10-13",
+    "items": [
+      {
+        "path": "/serrurier-nice-est/",
+        "label": "Secteur Nice Est",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-nice-nord/",
+        "label": "Secteur Nice Nord",
+        "level": 1
+      },
+      {
+        "path": "/serrurier-eze/",
+        "label": "Commune : Èze",
+        "level": 2
       }
     ]
   }

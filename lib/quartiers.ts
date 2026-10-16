@@ -1,5 +1,5 @@
 // Utilitaires de gabarit pour les pages locales de Nice.
-// Depuis le regroupement d'octobre 2026, seuls les 4 secteurs et Jean-Médecin ont une page : voir
+// Depuis le regroupement d'octobre 2026, seuls les 4 secteurs ont une page : voir
 // `lib/business.ts` (export `zones`) pour la répartition des 47 quartiers par secteur.
 
 const DIACRITICS_RE = /[̀-ͯ]/g;
@@ -48,10 +48,10 @@ export function quartierLocative(name: string): string {
   return quartierLocatives[name] ?? `à ${name}`;
 }
 
-// Seul Jean-Médecin garde une page de quartier. Les 46 autres n'ont plus de page : leurs anciennes
-// adresses redirigent en 301 vers leur secteur (next.config.ts) et leur nom est affiché en texte simple
-// sur la page du secteur et sur /zones-intervention-nice/.
-export const builtQuartiers = ["Jean-Médecin"] as const;
+// Aucun quartier n'a plus de page : les 47 anciennes adresses redirigent en 301 vers leur secteur
+// (next.config.ts) et leur nom est affiché en texte simple sur la page du secteur et sur
+// /zones-intervention-nice/.
+export const builtQuartiers: readonly string[] = [];
 
 export function isQuartierBuilt(name: string): boolean {
   return (builtQuartiers as readonly string[]).includes(name);
@@ -65,11 +65,10 @@ export const sectorPages = {
 } as const;
 
 // Pages locales de Nice mises en avant dans les blocs de maillage (accueil, pages de service, pages commune) :
-// les 4 secteurs et Jean-Médecin. Pas de bloc de liens vers de nombreuses pages très proches les unes des autres.
+// les 4 secteurs. Pas de bloc de liens vers de nombreuses pages très proches les unes des autres.
 export const featuredLocalPages: { href: string; label: string }[] = [
   { href: sectorPages.centre.href, label: sectorPages.centre.label },
   { href: sectorPages.est.href, label: sectorPages.est.label },
   { href: sectorPages.nord.href, label: sectorPages.nord.label },
   { href: sectorPages.ouest.href, label: sectorPages.ouest.label },
-  { href: quartierHref("Jean-Médecin"), label: "Jean-Médecin" },
 ];

@@ -1,4 +1,4 @@
-// Source unique de verite pour les 20 pages du calendrier editorial
+// Source unique de verite pour les 19 pages du calendrier editorial
 // (Niveau 1 + Niveau 2), partagee par generate-editorial-calendar.js et
 // content-freshness-report.js. Si une page est ajoutee/retiree du site,
 // mettre a jour ce fichier puis relancer les deux scripts.
@@ -29,9 +29,9 @@ const LEVEL1 = [
   { path: "/installation-coffre-fort-nice/", label: "Service : Installation de coffre-fort" },
 ];
 
-// Regroupement d'octobre 2026 : seul Jean-Medecin garde une page de quartier. Les autres quartiers n'ont
-// plus de page (redirection 301 vers leur secteur, voir next.config.ts) et ne sont plus dans le calendrier.
-const QUARTIERS = ["Jean-Médecin"];
+// Regroupement d'octobre 2026 : plus aucun quartier n'a de page (Jean-Medecin compris). Leurs anciennes
+// adresses redirigent en 301 vers leur secteur (voir next.config.ts) : aucun quartier dans le calendrier.
+const QUARTIERS = [];
 const COMMUNES = ["Èze", "Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"];
 
 const LEVEL2 = QUARTIERS.map((name) => ({ path: `/serrurier-${slugify(name)}-nice/`, label: `Quartier : ${name}` }));

@@ -54,13 +54,6 @@ const quartiersContent = (
       headers={["Quartier", "Repères"]}
       rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])}
     />
-    <p className="text-slate leading-relaxed mt-4">
-      Le quartier Jean-Médecin a aussi sa propre page : voir ma{" "}
-      <Link href="/serrurier-jean-medecin-nice/" className={linkClass}>
-        page dédiée au quartier Jean-Médecin
-      </Link>
-      .
-    </p>
   </>
 );
 

@@ -35,6 +35,7 @@ const securityHeaders = [
 // leur page secteur. statusCode 301 et non permanent: true, qui renverrait un 308.
 const quartierRedirectsBySector: Record<string, string[]> = {
   "/serrurier-nice-centre/": [
+    "jean-medecin",
     "carre-d-or",
     "quartier-wilson",
     "quartier-des-musiciens",

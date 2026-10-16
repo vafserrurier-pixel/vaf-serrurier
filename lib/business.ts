@@ -88,7 +88,7 @@ export const business = {
 // plutôt que comme pages dédiées. "Méridas" a été définitivement écarté (2026-08-09) :
 // aucune correspondance ne parle à Benoît sur le terrain : ne pas y revenir.
 //
-// Regroupement d'octobre 2026 : seules les 4 pages secteur et la page Jean-Médecin existent.
+// Regroupement d'octobre 2026 : seules les 4 pages secteur existent.
 // Les 46 autres quartiers sont listés en texte simple sur la page de leur secteur, et leurs
 // anciennes adresses redirigent en 301 vers ce secteur (voir next.config.ts).
 export const zones = {
