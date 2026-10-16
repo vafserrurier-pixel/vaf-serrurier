@@ -92,7 +92,7 @@ export default function SerrurierJeanMedecinNicePage() {
       sector="centre"
       intro={intro}
       blocks={blocks}
-      travelEstimate="10 à 20 minutes selon la circulation"
+      travelEstimate="30 minutes"
       faq={faq}
       path="/serrurier-jean-medecin-nice/"
     />

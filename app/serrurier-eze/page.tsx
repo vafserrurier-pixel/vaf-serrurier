@@ -58,7 +58,7 @@ const faq = [
   {
     question: "Quel est votre délai d'intervention à Èze ?",
     answer:
-      "Généralement 20 à 30 minutes depuis mon point de départ à Nice, selon la circulation sur la Moyenne Corniche ou le bord de mer. Je vous donne une estimation précise au téléphone.",
+      "Généralement 30 minutes depuis mon point de départ à Nice. Je vous donne une estimation précise au téléphone.",
   },
   {
     question: "Donnez-vous un devis avant de vous déplacer jusqu'à Èze ?",
@@ -73,7 +73,7 @@ export default function SerrurierEzePage() {
       commune="Èze"
       intro={intro}
       blocks={blocks}
-      travelEstimate="20-30 min"
+      travelEstimate="30 min"
       safetyParagraph={safetyParagraph}
       faq={faq}
       path="/serrurier-eze/"

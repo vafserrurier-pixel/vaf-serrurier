@@ -57,7 +57,7 @@ const faq = [
   {
     question: "Quel est votre délai d'intervention à Cagnes-sur-Mer ?",
     answer:
-      "Généralement 15 à 20 minutes depuis mon point de départ à Nice, selon la circulation. Je vous donne une estimation précise au téléphone.",
+      "Généralement 30 minutes depuis mon point de départ à Nice. Je vous donne une estimation précise au téléphone.",
   },
   {
     question: "Donnez-vous un devis avant de vous déplacer jusqu'à Cagnes-sur-Mer ?",
@@ -72,7 +72,7 @@ export default function SerrurierCagnesSurMerPage() {
       commune="Cagnes-sur-Mer"
       intro={intro}
       blocks={blocks}
-      travelEstimate="15-20 min"
+      travelEstimate="30 min"
       safetyParagraph={safetyParagraph}
       faq={faq}
       path="/serrurier-cagnes-sur-mer/"

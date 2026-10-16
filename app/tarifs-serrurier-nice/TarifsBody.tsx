@@ -498,13 +498,13 @@ export default function TarifsBody() {
         <ul className="list-disc pl-5 flex flex-col gap-2.5 text-slate leading-relaxed mt-4">
           {(locale === "fr"
             ? [
-                ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet, sur devis. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
+                ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, cylindre neuf en plus dès 249 €, avec une serrure Fichet, sur devis. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
                 ["L'horaire", "après 19h, le week-end et les jours fériés, un tarif de nuit s'applique : 189 € pour une porte claquée, 209 € pour une porte verrouillée. Il ne s'applique jamais à une pièce."],
                 ["La pièce à remplacer", "le cylindre n'est jamais compris dans le prix de l'ouverture : cylindre standard en plus, dès 249 € TTC ; pour une serrure complète, une gâche ou un cylindre haute sécurité, la pièce est annoncée et validée avec vous avant que je la pose."],
                 ["Ce qui ne varie pas", "le quartier et l'accessibilité du logement. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné ni pour l'accès."],
               ]
             : [
-                ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock, quoted individually. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
+                ["The type of lock", "a locked door with a European cylinder is €149, new cylinder extra from €249, with a Fichet lock, quoted individually. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
                 ["The time of day", "after 7pm, on weekends and public holidays, a night rate applies: €189 for a slammed door, €209 for a locked door. It never applies to a part."],
                 ["The part to replace", "a cylinder is never included in the opening price: standard cylinder extra, from €249 incl. VAT; for a full lock, a strike plate or a high-security cylinder, the part is quoted and agreed with you before I fit it."],
                 ["What does not vary", "the neighbourhood and how easy the home is to reach. Prices are the same everywhere in Nice, with no extra charge for a distant area or for access."],

@@ -411,7 +411,7 @@ const faqEn = [
   {
     question: "How much does opening a locked door cost in Nice?",
     answer:
-      "€149 incl. VAT for a standard situation (European cylinder). For a Fichet lock, the price is quoted individually. After 7pm, on weekends and public holidays: €189 incl. VAT for a slammed door, €209 incl. VAT for a locked door (European cylinder).",
+      "€149 incl. VAT for a standard situation (European cylinder), new cylinder extra, from €249. For a Fichet lock, the price is quoted individually. After 7pm, on weekends and public holidays: €189 incl. VAT for a slammed door, €209 incl. VAT for a locked door (European cylinder).",
   },
   {
     question: "Does opening a door leave marks?",

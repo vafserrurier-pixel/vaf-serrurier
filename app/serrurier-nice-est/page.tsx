@@ -51,7 +51,7 @@ const faq = [
   {
     question: "Intervenez-vous rapidement dans l'est de Nice ?",
     answer:
-      "Oui, avec un délai habituel de 15 à 25 minutes pour les quartiers du Port et de Riquier, et jusqu'à 30 minutes pour les hauteurs du Mont Boron et du Mont Alban, selon la circulation.",
+      "Oui, avec un délai habituel de 30 minutes.",
   },
   {
     question: "Intervenez-vous sur les immeubles anciens du port et de Riquier ?",

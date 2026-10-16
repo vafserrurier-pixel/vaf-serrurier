@@ -58,7 +58,7 @@ const faq = [
   {
     question: "Intervenez-vous rapidement dans le centre de Nice ?",
     answer:
-      "Oui, la position centrale de mon point de départ me permet généralement d'intervenir en 10 à 20 minutes dans la plupart des quartiers du centre, 24h/24 et 7j/7.",
+      "Oui, la position centrale de mon point de départ me permet d'intervenir en 30 minutes dans les quartiers du centre, 24h/24 et 7j/7.",
   },
   {
     question: "Savez-vous intervenir sur les immeubles anciens du Vieux-Nice ou du Carré d'Or ?",

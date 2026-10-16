@@ -7,12 +7,12 @@ export const metadata: Metadata = buildMetadata({
   path: "/serrurier-beaulieu-sur-mer/",
   title: "Serrurier Beaulieu-sur-Mer – Dépannage 24h/24",
   description:
-    "Serrurier à Beaulieu-sur-Mer : ouverture de porte, changement de serrure, dépannage 24h/24, 7j/7. Arrivée en 20 à 30 minutes, prix annoncé avant intervention.",
+    "Serrurier à Beaulieu-sur-Mer : ouverture de porte, changement de serrure, dépannage 24h/24, 7j/7. Arrivée en 30 minutes, prix annoncé avant intervention.",
 });
 
 const intro = [
   "J'interviens à Beaulieu-sur-Mer, la commune de la Côte d'Azur située entre Nice et Monaco, pour tout ce qui touche à la serrurerie : porte claquée, clé perdue ou cassée, cylindre à remplacer, serrure à renforcer. Que vous soyez près du port de plaisance, de la gare ou plus loin dans la commune, je me déplace chez vous.",
-  "Je pars de Nice, du 2 rue Antoine Gautier, et j'arrive en 20 à 30 minutes selon la circulation. Au téléphone, je vous annonce le prix avant de me déplacer, puis je le confirme sur place avant de commencer. Mes tarifs sont les mêmes qu'à Nice, sans supplément pour Beaulieu-sur-Mer.",
+  "Je pars de Nice, du 2 rue Antoine Gautier, et j'arrive en 30 minutes. Au téléphone, je vous annonce le prix avant de me déplacer, puis je le confirme sur place avant de commencer. Mes tarifs sont les mêmes qu'à Nice, sans supplément pour Beaulieu-sur-Mer.",
 ];
 
 const linkClass = "text-steel underline";
@@ -129,7 +129,7 @@ const faq = [
   {
     question: "Combien de temps pour venir à Beaulieu-sur-Mer ?",
     answer:
-      "20 à 30 minutes depuis le 2 rue Antoine Gautier, à Nice, selon la circulation. Je vous donne une estimation au téléphone.",
+      "30 minutes depuis le 2 rue Antoine Gautier, à Nice. Je vous donne une estimation au téléphone.",
   },
   {
     question: "Le devis est-il gratuit pour un dépannage à Beaulieu-sur-Mer ?",
@@ -160,7 +160,7 @@ const processSteps = [
   },
   {
     title: "Délai d'arrivée",
-    text: "Je pars de Nice et j'arrive à Beaulieu-sur-Mer en 20 à 30 minutes selon la circulation. Si quelque chose change en route, je vous préviens.",
+    text: "Je pars de Nice et j'arrive à Beaulieu-sur-Mer en 30 minutes. Si quelque chose change en route, je vous préviens.",
   },
   {
     title: "Diagnostic sur place",
@@ -183,7 +183,7 @@ export default function SerrurierBeaulieuSurMerPage() {
       commune="Beaulieu-sur-Mer"
       intro={intro}
       blocks={blocks}
-      travelEstimate="20-30 min"
+      travelEstimate="30 min"
       safetyParagraph={safetyParagraph}
       faq={faq}
       path="/serrurier-beaulieu-sur-mer/"

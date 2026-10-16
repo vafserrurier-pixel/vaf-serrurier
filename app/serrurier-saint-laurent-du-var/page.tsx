@@ -65,7 +65,7 @@ const faq = [
   {
     question: "Quel est votre délai d'intervention à Saint-Laurent-du-Var ?",
     answer:
-      "Généralement 15 à 20 minutes depuis mon point de départ à Nice, selon la circulation. Je vous donne une estimation précise au téléphone.",
+      "Généralement 30 minutes depuis mon point de départ à Nice. Je vous donne une estimation précise au téléphone.",
   },
   {
     question: "Donnez-vous un devis avant de vous déplacer jusqu'à Saint-Laurent-du-Var ?",
@@ -80,7 +80,7 @@ export default function SerrurierSaintLaurentDuVarPage() {
       commune="Saint-Laurent-du-Var"
       intro={intro}
       blocks={blocks}
-      travelEstimate="15-20 min"
+      travelEstimate="30 min"
       safetyParagraph={safetyParagraph}
       faq={faq}
       path="/serrurier-saint-laurent-du-var/"

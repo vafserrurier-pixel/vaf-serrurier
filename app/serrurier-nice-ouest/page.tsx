@@ -51,7 +51,7 @@ const faq = [
   {
     question: "Intervenez-vous rapidement dans l'ouest de Nice ?",
     answer:
-      "Oui, avec un délai habituel de 20 à 30 minutes pour la plupart des quartiers, et jusqu'à 45 minutes pour les secteurs les plus excentrés comme Lingostière ou Bellet, selon la circulation.",
+      "Oui, avec un délai habituel de 30 minutes.",
   },
   {
     question: "Intervenez-vous sur les villas de Fabron ou de Californie ?",
