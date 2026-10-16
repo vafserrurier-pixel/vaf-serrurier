@@ -124,6 +124,13 @@ export const zones = {
     "Bon Voyage",
   ],
   nord: [
+    "Saint-Maurice",
+    "Valrose",
+    "Borriglione",
+    "Gorbella",
+    "Saint-Barthélémy",
+    "Le Ray",
+    "Las Planas",
     "Brancolar",
     "Poètes",
     "Chambrun",
