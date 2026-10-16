@@ -89,7 +89,7 @@ const blocks = [
   {
     heading: "Les mêmes tarifs qu'à Nice, sans supplément pour Beaulieu-sur-Mer",
     paragraphs: [
-      "Mes tarifs ne changent pas selon la commune : ce que vous payez à Beaulieu-sur-Mer est ce que vous paieriez à Nice, déplacement inclus. Une ouverture de porte claquée, ou de porte verrouillée avec un cylindre européen, est à 149 € TTC. Un changement de cylindre standard démarre à 249 € TTC, déplacement et main-d'œuvre compris. Une serrure de type Fichet, un cylindre haute sécurité ou une serrure multipoints se chiffrent sur devis.",
+      "Mes tarifs ne changent pas selon la commune : ce que vous payez à Beaulieu-sur-Mer est ce que vous paieriez à Nice, déplacement inclus. Une ouverture de porte claquée, ou de porte verrouillée avec un cylindre européen, est à 149 € TTC, cylindre neuf en plus dès 249 €. Un changement de cylindre standard démarre à 249 € TTC, déplacement et main-d'œuvre compris. Une serrure de type Fichet, un cylindre haute sécurité ou une serrure multipoints se chiffrent sur devis.",
       <>
         Après 19h, le week-end et les jours fériés, le tarif de nuit est de 189 € TTC pour une porte
         claquée et de 209 € TTC pour une porte verrouillée, annoncé avant mon déplacement. La grille

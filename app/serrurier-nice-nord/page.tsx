@@ -51,7 +51,7 @@ const faq = [
   {
     question: "Intervenez-vous rapidement dans le nord de Nice ?",
     answer:
-      "Oui, avec un délai habituel de 15 à 30 minutes selon le quartier et la circulation, 24h/24 et 7j/7.",
+      "Oui, avec un délai habituel de 30 minutes, 24h/24 et 7j/7.",
   },
   {
     question: "Intervenez-vous sur les nouveaux programmes résidentiels du Brancolar ?",

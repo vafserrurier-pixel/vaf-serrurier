@@ -1,7 +1,7 @@
 import type { Locale } from "@/lib/locale";
 
 const stepsByLocale = {
-  fr: (place?: string, delayEstimate = "15 à 30 minutes") => [
+  fr: (place?: string, delayEstimate = "30 minutes") => [
     {
       title: "Appel",
       text: "Vous m'appelez, vous décrivez la situation en quelques mots, et j'identifie le problème le plus probable dès le téléphone.",
@@ -21,7 +21,7 @@ const stepsByLocale = {
       text: "Le prix confirmé sur place est celui que vous payez, facture détaillée à l'appui, sans supplément surprise une fois le travail fini.",
     },
   ],
-  en: (place?: string, delayEstimate = "15 to 30 minutes") => [
+  en: (place?: string, delayEstimate = "30 minutes") => [
     {
       title: "Call",
       text: "You call me, describe the situation in a few words, and I identify the most likely problem right there on the phone.",

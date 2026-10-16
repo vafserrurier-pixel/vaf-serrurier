@@ -298,7 +298,7 @@ const strings = {
     warningClosing: "Mes tarifs ci-dessus sont ceux que je facture réellement, pas un appât.",
     varyTitle: "Ce qui fait varier le prix",
     varyText:
-      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Après 19h, le week-end et les jours fériés, un tarif de nuit s'applique (189 € pour une porte claquée, 209 € pour une porte verrouillée) : il ne porte jamais sur le prix d'une pièce remplacée. Hors cylindre standard, compris dans le tarif de base, les pièces remplacées sont facturées à part et validées avec vous avant intervention.",
+      "Le tarif final dépend du problème rencontré (porte claquée ou verrouillée, type de cylindre), de la marque et du modèle de la serrure, de l'état de la porte, et de l'heure d'intervention. Après 19h, le week-end et les jours fériés, un tarif de nuit s'applique (189 € pour une porte claquée, 209 € pour une porte verrouillée) : il ne porte jamais sur le prix d'une pièce remplacée. Le cylindre n'est jamais compris dans le prix de l'ouverture : cylindre standard en plus, dès 249 € TTC. Les autres pièces remplacées sont facturées à part et validées avec vous avant intervention.",
     devisLegalTitle: "Ce que la loi exige sur un devis de dépannage",
     leviersTitle: "Comment réduire le coût de votre intervention",
     faqTitle: "Questions fréquentes sur les tarifs",
@@ -326,7 +326,7 @@ const strings = {
     warningClosing: "My prices above are what I actually charge, not bait.",
     varyTitle: "What makes the price vary",
     varyText:
-      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A night rate applies after 7pm, on weekends and public holidays (€189 for a slammed door, €209 for a locked door): it never applies to the price of a replaced part. Apart from a standard cylinder, included in the base price, replaced parts are billed separately and agreed with you before the work starts.",
+      "The final price depends on the problem (door slammed shut or locked, cylinder type), the lock's brand and model, the door's condition, and the time of the callout. A night rate applies after 7pm, on weekends and public holidays (€189 for a slammed door, €209 for a locked door): it never applies to the price of a replaced part. A cylinder is never included in the opening price: a standard cylinder is extra, from €249 incl. VAT. Other replaced parts are billed separately and agreed with you before the work starts.",
     devisLegalTitle: "What French law requires on a repair quote",
     leviersTitle: "How to reduce the cost of your callout",
     faqTitle: "Frequently asked questions about pricing",
@@ -500,13 +500,13 @@ export default function TarifsBody() {
             ? [
                 ["Le type de serrure", "une porte verrouillée avec un cylindre européen est à 149 €, avec une serrure Fichet, sur devis. Un cylindre haute sécurité ou une serrure multipoints se chiffre sur devis, après diagnostic."],
                 ["L'horaire", "après 19h, le week-end et les jours fériés, un tarif de nuit s'applique : 189 € pour une porte claquée, 209 € pour une porte verrouillée. Il ne s'applique jamais à une pièce."],
-                ["La pièce à remplacer", "le cylindre standard est compris dans le tarif de base ; pour une serrure complète, une gâche ou un cylindre haute sécurité, la pièce est annoncée et validée avec vous avant que je la pose."],
+                ["La pièce à remplacer", "le cylindre n'est jamais compris dans le prix de l'ouverture : cylindre standard en plus, dès 249 € TTC ; pour une serrure complète, une gâche ou un cylindre haute sécurité, la pièce est annoncée et validée avec vous avant que je la pose."],
                 ["Ce qui ne varie pas", "le quartier et l'accessibilité du logement. Les tarifs sont les mêmes partout à Nice, sans supplément pour un secteur éloigné ni pour l'accès."],
               ]
             : [
                 ["The type of lock", "a locked door with a European cylinder is €149, with a Fichet lock, quoted individually. A high-security cylinder or a multipoint lock is quoted individually, after diagnosis."],
                 ["The time of day", "after 7pm, on weekends and public holidays, a night rate applies: €189 for a slammed door, €209 for a locked door. It never applies to a part."],
-                ["The part to replace", "a standard cylinder is included in the base price; for a full lock, a strike plate or a high-security cylinder, the part is quoted and agreed with you before I fit it."],
+                ["The part to replace", "a cylinder is never included in the opening price: standard cylinder extra, from €249 incl. VAT; for a full lock, a strike plate or a high-security cylinder, the part is quoted and agreed with you before I fit it."],
                 ["What does not vary", "the neighbourhood and how easy the home is to reach. Prices are the same everywhere in Nice, with no extra charge for a distant area or for access."],
               ]
           ).map(([label, text]) => (

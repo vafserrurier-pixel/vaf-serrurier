@@ -30,18 +30,20 @@ const strings = {
 
 export default function StatBar({
   locale = "fr",
-  delay = "15-30 min",
+  delay = "30 min",
+  delayLabel,
   delayUnit,
 }: {
   locale?: Locale;
   delay?: string;
+  delayLabel?: string;
   delayUnit?: string;
 }) {
   const t = strings[locale];
   const { rating, count } = useReviewStats();
   const stats = [
     { value: "24h/24", label: t.availability, unit: t.availabilityUnit, icon: ClockIcon },
-    { value: delay, label: t.delay, unit: delayUnit ?? t.delayUnit, icon: BoltIcon },
+    { value: delay, label: delayLabel ?? t.delay, unit: delayUnit ?? t.delayUnit, icon: BoltIcon },
     {
       value: `${formatRating(rating, locale)}/5`,
       label: t.rating,
