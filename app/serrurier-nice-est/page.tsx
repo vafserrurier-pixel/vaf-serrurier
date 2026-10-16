@@ -1,43 +1,158 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
+import ArticleTable from "@/components/ArticleTable";
 import { zones } from "@/lib/business";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-est/",
-  title: "Serrurier Nice Est – Riquier, Mont Boron",
-  description: "Serrurier dans l'est de Nice : Riquier, le Port, Mont Boron, l'Ariane et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
+  title: "Serrurier Nice Est 06300 : Port, Riquier, Mont Boron",
+  description:
+    "Serrurier dans l'est de Nice 24h/24 : Port, Riquier, Saint-Roch, Pasteur, Ariane, Mont Boron. Sur place en 30 min, prix affichés. Tél. 04 22 13 85 44",
 });
 
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+
 const intro = [
-  "Dépannage serrurier dans l'est de Nice ? J'interviens 24h/24 sur ce secteur très contrasté, du port historique aux villas des hauteurs, avec généralement un cylindre Picard ou Cisa adapté à chaque configuration. L'est s'organise autour du port Lympia, construit à partir de 1749 pour développer le commerce méditerranéen. Ses anciens entrepôts abritent aujourd'hui restaurants et galeries d'art. Juste au nord, Riquier fut au XIXe siècle le cœur industriel de Nice. Saint-Roch, de son côté, conserve la mémoire de la caserne Auvare et de ses « Diables Bleus ».",
-  "Sur les hauteurs, le fort du Mont-Alban, édifié entre 1557 et 1560, domine un secteur résidentiel huppé qui s'étend jusqu'au Mont Boron et ses villas avec vue mer. Plus au nord, l'Ariane a connu sa métamorphose la plus spectaculaire durant les Trente Glorieuses, avec la construction de grands ensembles aujourd'hui engagés dans un programme de renouvellement urbain de grande ampleur.",
-  "C'est un secteur très contrasté, entre bâti historique du port, quartiers populaires denses et hauteurs résidentielles de standing. J'y interviens avec la même méthode qu'ailleurs à Nice : diagnostic par téléphone, prix annoncé avant intervention, et déplacement organisé selon l'urgence de la situation.",
+  "Clés oubliées en sortant d'un restaurant du port, cylindre forcé à Riquier, villa du Mont Boron à sécuriser avant de partir : l'est de Nice, c'est mon secteur. Ma boutique est au 2 rue Antoine Gautier, à Nice, dans le 06300. J'interviens 24h/24 et 7j/7, en 30 minutes en urgence, avec des prix affichés et annoncés avant de partir.",
 ];
+
+// Les 8 quartiers du tableau (même liste que zones.est dans lib/business.ts).
+const quartierRows: [string, string][] = [
+  ["Le Port", "Port Lympia, place de l'Île-de-Beauté, église Notre-Dame-du-Port, quai des Docks, rue Bonaparte"],
+  ["Riquier", "Gare de Riquier, avenue de la République"],
+  ["Saint-Roch", "Route de Turin, le 109 (anciens abattoirs)"],
+  ["Pasteur", "Hôpital Pasteur, abbaye de Saint-Pons, terminus du tramway"],
+  ["Bon Voyage", "Entre Saint-Roch et Pasteur"],
+  ["L'Ariane", "Au nord de Pasteur, le long du Paillon"],
+  ["Mont Boron", "Parc forestier du Mont Boron, boulevard du Mont-Boron, le Cap de Nice"],
+  ["Mont Alban", "Fort du Mont-Alban, au sommet de la colline"],
+];
+
+const quartiersContent = (
+  <>
+    <h2 className="font-heading text-2xl font-bold text-navy mb-3">Les quartiers de l&apos;est où j&apos;interviens</h2>
+    <ArticleTable headers={["Quartier", "Repères"]} rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])} />
+  </>
+);
 
 const blocks = [
   {
-    heading: "Réparation de serrures anciennes du port aux hauteurs fortifiées",
+    heading: "Ma boutique est dans ce secteur",
     paragraphs: [
-      "Entre les anciens entrepôts du port Lympia reconvertis en commerces, les immeubles industriels du XIXe siècle de Riquier et les villas du Mont Boron proches du fort du Mont-Alban, l'est de Nice présente une grande diversité de bâti. Je diagnostique chaque situation en tenant compte de l'époque et du style de la porte concernée.",
+      "Pour l'est de Nice, je pars de ma boutique du 2 rue Antoine Gautier, à deux pas du port et de la place Garibaldi. J'interviens partout dans Nice, mais l'est est le secteur le plus proche de ma boutique. En urgence, j'arrive en 30 minutes, du quai des Docks au sommet du Mont Boron.",
     ],
   },
   {
-    heading: "Des grands ensembles en pleine transformation",
+    heading: "Le port : appartements, meublés et locations de courte durée",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Autour du port Lympia et de la rue Bonaparte, beaucoup d&apos;appartements sont loués en meublé ou à la
+          semaine. Pour un propriétaire ou une conciergerie, deux situations reviennent :
+        </p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Le voyageur enfermé dehors</strong>, souvent tard le soir : j&apos;ouvre la
+            porte claquée sans dégât, au prix annoncé avant de partir.
+          </li>
+          <li>
+            <strong className="text-navy">Les clés qui ne reviennent pas</strong> : quand un jeu de clés est perdu ou
+            n&apos;est pas rendu,{" "}
+            <Link href="/changement-serrure-nice/" className={linkClass}>
+              changez le cylindre
+            </Link>{" "}
+            avant l&apos;arrivée suivante. Vous repartez avec des clés neuves dont vous savez où elles sont.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Pour une copropriété ou un propriétaire qui gère plusieurs logements, un{" "}
+          <Link href="/agences-syndics-nice/" className={linkClass}>
+            organigramme de clés
+          </Link>{" "}
+          permet d&apos;ouvrir plusieurs portes avec une seule clé, sans donner accès à tout le monde.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Mont Boron, Mont Alban, Cap de Nice : les villas des hauteurs",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Sur les hauteurs, beaucoup de villas et d&apos;appartements sont des résidences secondaires, fermés plusieurs
+          mois par an. Une porte qui reste longtemps sans personne doit résister plus longtemps. Selon l&apos;état de
+          la porte, je propose :
+        </p>
+        <ArticleTable
+          headers={["Situation", "Ce que je propose", "Prix TTC posé"]}
+          rows={[
+            [
+              "Porte saine, cylindre qui dépasse",
+              <>
+                <Link href="/poignee-blindee-nice/" className={linkClass}>
+                  Poignée blindée
+                </Link>
+                , avec cornières anti-pince si la porte a du jeu
+              </>,
+              "349 €, ou 618 € avec les cornières",
+            ],
+            [
+              "Porte saine qui ne ferme que sur un point",
+              <Link key="carenee" href="/serrure-carenee-nice/" className={linkClass}>
+                Serrure carénée 5 points
+              </Link>,
+              "1 249 €",
+            ],
+            [
+              "Porte en bois sain que vous voulez garder",
+              <Link key="blindage" href="/blindage-porte-nice/" className={linkClass}>
+                Blindage de porte
+              </Link>,
+              "Dès 2 689 €",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Après une tentative d&apos;effraction pendant votre absence, je fais d&apos;abord la{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            mise en sécurité
+          </Link>{" "}
+          pour que la villa ferme le soir même, puis on choisit le renfort au calme.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Riquier, Saint-Roch, Pasteur, Bon Voyage, l'Ariane : les immeubles d'habitation",
     paragraphs: [
-      "L'Ariane et le Brancolar voisin, construits durant les Trente Glorieuses, connaissent aujourd'hui d'importants programmes de renouvellement urbain. J'y interviens aussi bien sur les grands ensembles plus anciens que sur les nouveaux programmes résidentiels aux normes de sécurité récentes.",
+      "Ces quartiers sont surtout faits d'immeubles d'habitation, des immeubles anciens de Riquier aux grands ensembles de l'Ariane. Les portes palières sont le plus souvent standard, avec un cylindre européen. Les interventions les plus courantes : porte claquée, clés perdues, cylindre usé ou forcé.",
+      "Si vous êtes locataire, retenez une règle simple : quand vous avez perdu vos clés ou oublié de les prendre, l'intervention est en général à votre charge ; quand la serrure lâche par usure normale, c'est au propriétaire. Prévenez votre bailleur avant de faire changer le cylindre, et gardez la facture détaillée que je vous remets.",
     ],
   },
   {
-    heading: "Un secteur animé jour et nuit",
+    heading: "Exemple type",
     paragraphs: [
-      "L'activité commerçante et festive du quartier du Port, ainsi que la présence du pôle hospitalier Pasteur avec son ancienne abbaye de Saint-Pons, génèrent un passage important à toute heure. Je reste disponible pour des dépannages tardifs et des sécurisations après effraction, avec la majoration de nuit annoncée avant intervention.",
-    ],
-  },
-  {
-    heading: "Un relief qui influence le délai d'intervention",
-    paragraphs: [
-      "Les hauteurs du Mont Boron et du Mont Alban demandent un déplacement un peu plus long que les quartiers du port ou de Riquier. Je vous donne un délai réaliste dès l'appel, en tenant compte de la distance et du relief.",
+      <>
+        Exemple type, une situation fréquente et non un client précis : un mardi midi, un locataire de Riquier se rend
+        compte qu&apos;il a perdu ses clés. Sa porte est fermée à clé, et il ne peut pas savoir qui les a trouvées.
+        J&apos;ouvre la{" "}
+        <Link href="/ouverture-de-porte-nice/" className={linkClass}>
+          porte fermée à clé
+        </Link>{" "}
+        en perçant le cylindre, jamais la porte, puis je pose un cylindre neuf avec des clés neuves : 149 € pour
+        l&apos;ouverture et 249 € pour le cylindre standard, soit 398 € TTC en journée, annoncés au téléphone. Il garde
+        la facture pour son bailleur. Le détail de tous mes prix est sur{" "}
+        <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+          ma page tarifs
+        </Link>
+        .
+      </>,
     ],
   },
 ];
@@ -46,32 +161,37 @@ const faq = [
   {
     question: "Quels quartiers de l'est de Nice couvrez-vous ?",
     answer:
-      "L'ensemble du secteur : le Port, Riquier, Pasteur, Saint-Roch, l'Ariane, Mont Boron, Mont Alban et Bon Voyage. Le détail complet est listé sur cette page.",
+      "Tout l'est : le Port, Riquier, Saint-Roch, Pasteur, Bon Voyage, l'Ariane, le Mont Boron et le Mont Alban, jusqu'au Cap de Nice.",
   },
   {
-    question: "Intervenez-vous rapidement dans l'est de Nice ?",
+    question: "En combien de temps arrivez-vous dans l'est de Nice ?",
     answer:
-      "Oui, avec un délai habituel de 30 minutes.",
+      "En urgence, en 30 minutes, 24h/24 et 7j/7. Ma boutique est dans ce secteur, au 2 rue Antoine Gautier.",
   },
   {
-    question: "Intervenez-vous sur les immeubles anciens du port et de Riquier ?",
+    question: "Je loue un appartement au port : que faire si un voyageur ne rend pas les clés ?",
     answer:
-      "Oui, je privilégie la réparation et l'adaptation d'un cylindre compatible plutôt qu'un remplacement qui dénaturerait une porte ancienne, sauf si le mécanisme est trop endommagé.",
+      "Faites changer le cylindre avant l'arrivée suivante : vous repartez avec des clés neuves. Le changement de cylindre démarre à 249 € TTC.",
   },
   {
-    question: "Intervenez-vous sur les nouveaux programmes de l'Ariane et du Brancolar ?",
+    question: "Ma villa du Mont Boron reste fermée plusieurs mois : comment la protéger ?",
     answer:
-      "Oui, avec l'arrivée de nouveaux logements liés aux programmes de renouvellement urbain, j'interviens de plus en plus sur du matériel récent : personnalisation de cylindre, ajustements après emménagement, montée en sécurité.",
+      "Selon l'état de la porte : une poignée blindée avec des cornières anti-pince (618 €), une serrure carénée 5 points (1 249 €) ou un blindage de porte (dès 2 689 €). Je regarde la porte avant de vous conseiller.",
   },
   {
-    question: "Les tarifs sont-ils différents dans l'est par rapport au reste de Nice ?",
+    question: "Je suis locataire et j'ai perdu mes clés : qui paie ?",
     answer:
-      "Non, mes tarifs sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+      "En général le locataire, quand les clés ont été perdues ou oubliées. Si la serrure lâche par usure normale, c'est au propriétaire. Prévenez votre bailleur avant de changer le cylindre.",
   },
   {
-    question: "Proposez-vous un devis avant d'intervenir dans l'est de Nice ?",
+    question: "Vos prix sont-ils différents dans l'est ?",
     answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+      "Non, ce sont les mêmes dans tout Nice : 149 € en journée pour une ouverture, 189 € ou 209 € le soir, le week-end et les jours fériés, déplacement compris.",
+  },
+  {
+    question: "Travaillez-vous avec les conciergeries et les syndics du secteur ?",
+    answer:
+      "Oui, avec les mêmes prix affichés : ouvertures pour les voyageurs, changements de cylindre entre deux locations, portes de hall et organigrammes de clés.",
   },
 ];
 
@@ -79,11 +199,16 @@ export default function SerrurierNiceEstPage() {
   return (
     <SectorPageTemplate
       title="Serrurier à Nice Est"
+      h1="Serrurier à Nice Est : le Port, Riquier, Pasteur, Mont Boron"
       sectorKey="est"
       intro={intro}
       blocks={blocks}
       faq={faq}
       quartiers={zones.est}
+      quartiersContent={quartiersContent}
+      areaServedPlaces={quartierRows.map(([quartier]) => quartier)}
+      hideReinforcementNote
+      faqAfterReviews
       path="/serrurier-nice-est/"
     />
   );
