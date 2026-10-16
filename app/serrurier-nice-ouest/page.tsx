@@ -1,43 +1,186 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SectorPageTemplate from "@/components/SectorPageTemplate";
+import ArticleTable from "@/components/ArticleTable";
 import { zones } from "@/lib/business";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-nice-ouest/",
-  title: "Serrurier Nice Ouest – Fabron, Carras",
-  description: "Serrurier dans l'ouest de Nice : Fabron, Saint-Isidore, l'Arénas, Carras et au-delà. Ouverture de porte, dépannage, devis annoncé avant intervention, 24h/24.",
+  title: "Serrurier Nice Ouest 06200 : Fabron, Arénas, Caucade",
+  description:
+    "Serrurier dans l'ouest de Nice 24h/24 : Fabron, Carras, Californie, Caucade, Arénas, Saint-Isidore. Sur place en 30 min, prix affichés. Tél. 04 22 13 85 44",
 });
 
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+
 const intro = [
-  "Porte claquée, cylindre grippé dans l'ouest de Nice : j'interviens 24h/24 sur ce secteur le plus contrasté de la ville, avec généralement un cylindre Fichet ou Vak adapté selon la configuration. Fabron, prisé dès le XIXe siècle par les grandes familles niçoises fortunées, conserve le souvenir du château mauresque du duc de Saxe-Cobourg-Gotha dans son parc Carol-de-Roumanie. Juste en contrebas, Carras était encore au XVIIIe siècle un modeste village de pêcheurs. Californie, de son côté, doit son nom au tout premier meeting aérien de Nice, organisé en 1910.",
-  "Plus loin, l'Arénas, ancien lieu de corridas devenu premier centre d'affaires international des Alpes-Maritimes en 1989, côtoie le pôle hospitalier de L'Archet, inauguré en 1979. Les Moulins, de leur côté, construits entre 1965 et 1976, bénéficient depuis 2009 d'un programme de renouvellement urbain d'ampleur. Aux confins de la ville, Saint-Isidore garde la mémoire d'un ancien relais de diligences. Lingostière s'étend dans la vallée du Var. Le secteur de Bellet, enfin, cultive depuis l'Antiquité la seule appellation viticole urbaine de France.",
-  "Cette diversité se retrouve dans les besoins en serrurerie : portes de villas et de maisons individuelles, serrures multipoints de résidences plus récentes, mise en sécurité après effraction dans les zones plus isolées comme Lingostière ou Bellet. Je me déplace dans l'ensemble de ce secteur avec la même exigence de transparence que sur le reste de Nice. Diagnostic par téléphone, prix annoncé avant intervention, et disponibilité 24h/24 pour les urgences.",
+  "Porte claquée en rentrant de la plage à Carras, cylindre forcé dans un bureau de l'Arénas, maison de Bellet à sécuriser : j'interviens dans tout l'ouest de Nice, de la Promenade des Anglais jusqu'aux vignes de Bellet. 24h/24 et 7j/7, en 30 minutes en urgence, avec des prix affichés et annoncés avant de partir.",
 ];
+
+// Les 16 quartiers du tableau (même liste que zones.ouest dans lib/business.ts).
+const quartierRows: [string, string][] = [
+  ["Californie", "Avenue de la Californie, la Promenade côté ouest"],
+  ["Carras", "Le front de mer de Carras"],
+  ["Ferber", "Le bord de mer, à l'approche de l'aéroport"],
+  ["La Lanterne", "Avenue de la Lanterne"],
+  ["Fabron", "Musée international d'Art naïf, avenue de Fabron"],
+  ["Corniche Fleurie", "Les hauteurs au-dessus de Fabron"],
+  ["Caucade", "Cimetière de Caucade"],
+  ["Sainte-Marguerite", "Avenue Sainte-Marguerite"],
+  ["Saint-Augustin", "Gare de Nice-Saint-Augustin"],
+  ["Arénas", "Le quartier d'affaires face à l'aéroport Nice Côte d'Azur"],
+  ["Les Moulins", "Le quartier des Moulins, en renouvellement"],
+  ["L'Archet", "Hôpital de l'Archet"],
+  ["Saint-Antoine", "Route de Saint-Antoine-de-Ginestière"],
+  ["Saint-Isidore", "Le stade Allianz Riviera"],
+  ["Lingostière", "Le centre commercial de Lingostière, la vallée du Var"],
+  ["Bellet", "Les vignes de l'appellation Bellet, Saint-Roman-de-Bellet"],
+];
+
+const quartiersContent = (
+  <>
+    <h2 className="font-heading text-2xl font-bold text-navy mb-3">Les quartiers de l&apos;ouest où j&apos;interviens</h2>
+    <p className={pClass}>
+      L&apos;ouest de Nice va du front de mer, entre la Promenade et l&apos;aéroport, jusqu&apos;aux collines et à la
+      plaine du Var.
+    </p>
+    <ArticleTable headers={["Quartier", "Repères"]} rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])} />
+  </>
+);
 
 const blocks = [
   {
-    heading: "Sécurisation de villas, du château de Fabron au village de Carras",
+    heading: "Le bord de mer : les résidences des années 60 à 80",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          De la Californie à Ferber, en passant par Carras et la Lanterne, le bord de mer est bordé de grandes
+          résidences construites dans les années 1960 à 1980, souvent avec gardien et digicode. Beaucoup de portes
+          palières y sont d&apos;origine : des portes légères, parfois creuses, avec un simple cylindre européen.
+        </p>
+        <p className={pClass}>
+          Une porte creuse ne se renforce pas comme une porte en bois massif. Je regarde d&apos;abord la porte, puis je
+          propose :
+        </p>
+        <ArticleTable
+          headers={["État de la porte", "Ce que je propose", "Prix TTC posé"]}
+          rows={[
+            [
+              "Porte en bon état, seul le cylindre est exposé",
+              <>
+                <Link href="/poignee-blindee-nice/" className={linkClass}>
+                  Poignée blindée
+                </Link>
+                , avec cornières anti-pince si la porte a du jeu
+              </>,
+              "349 €, ou 618 € avec les cornières",
+            ],
+            [
+              "Clés perdues ou cylindre usé",
+              <>
+                <Link href="/changement-serrure-nice/" className={linkClass}>
+                  Cylindre neuf
+                </Link>
+                , clés remises sur place
+              </>,
+              "Dès 249 €",
+            ],
+            [
+              "Porte creuse, abîmée ou déformée",
+              <Link key="bloc" href="/installation-porte-blindee-nice/" className={linkClass}>
+                Bloc-porte blindé neuf
+              </Link>,
+              "Dès 3 490 €",
+            ],
+          ]}
+        />
+      </>
+    ),
+  },
+  {
+    heading: "L'Arénas et la plaine du Var : bureaux et locaux professionnels",
     paragraphs: [
-      "Les villas héritées des grandes propriétés du XIXe siècle à Fabron, les anciennes maisons de pêcheurs de Carras et le bâti né de l'essor aéronautique de Californie donnent à ce littoral ouest une grande variété de portes et de serrures à diagnostiquer. Je m'adapte à chaque configuration, de la villa de caractère à la résidence balnéaire plus récente.",
+      <>
+        L&apos;Arénas et la plaine du Var concentrent des bureaux, des agences et des locaux d&apos;activité. Pour une
+        entreprise, je change le cylindre d&apos;une porte d&apos;entrée de bureau ou de local, j&apos;ouvre une porte
+        bloquée le matin, et je fais la{" "}
+        <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+          mise en sécurité
+        </Link>{" "}
+        après une effraction pour que le local ferme le soir même. Je vous remets une facture détaillée au nom de
+        l&apos;entreprise.
+      </>,
     ],
   },
   {
-    heading: "Un pôle d'affaires et un pôle hospitalier",
+    heading: "Les collines et la plaine : Bellet, Lingostière, Saint-Isidore",
     paragraphs: [
-      "L'Arénas, premier quartier d'affaires de la Côte d'Azur depuis 1989, et le pôle hospitalier de L'Archet, ouvert en 1979, ont des besoins de serrurerie spécifiques : accès professionnels, portes de bureaux, résidences proches d'un établissement de santé. J'interviens avec le même professionnalisme sur ces locaux que sur un logement.",
+      <>
+        Plus on monte vers Bellet, Saint-Antoine ou Lingostière, plus les maisons sont isolées, parfois entourées de
+        vignes ou de jardins. Une maison isolée reste plus longtemps sans témoin : une porte qui ne ferme que sur un
+        point se renforce avec une{" "}
+        <Link href="/serrure-carenee-nice/" className={linkClass}>
+          serrure carénée
+        </Link>{" "}
+        5 points (1 249 €), et une porte en bois sain avec un{" "}
+        <Link href="/blindage-porte-nice/" className={linkClass}>
+          blindage de porte
+        </Link>{" "}
+        (dès 2 689 €). Même là-haut, j&apos;arrive en 30 minutes en urgence.
+      </>,
     ],
   },
   {
-    heading: "Des grands ensembles en renouvellement urbain",
-    paragraphs: [
-      "Le quartier des Moulins, construit dans les années 1960-1970, connaît depuis 2009 un programme de renouvellement urbain qui transforme progressivement son bâti. J'interviens aussi bien sur les immeubles plus anciens que sur les nouveaux programmes résidentiels.",
-    ],
+    heading: "Avant de partir en vacances depuis l'aéroport",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          L&apos;ouest de Nice est à deux pas de l&apos;aéroport. Avant de partir, trois vérifications évitent bien des
+          appels :
+        </p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Fermez à double tour</strong>, et vérifiez que la porte est bien verrouillée,
+            pas seulement claquée.
+          </li>
+          <li>
+            <strong className="text-navy">Ne laissez pas de clé</strong> sous le paillasson, dans un pot de fleurs ou
+            dans la boîte aux lettres : c&apos;est le premier endroit regardé.
+          </li>
+          <li>
+            <strong className="text-navy">Confiez un double</strong> à une personne de confiance, qui peut passer
+            relever le courrier.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Et si vous revenez d&apos;un voyage en découvrant une porte forcée, voici quoi faire{" "}
+          <Link href="/blog/que-faire-apres-cambriolage-nice/" className={linkClass}>
+            après un cambriolage
+          </Link>
+          , avant même de m&apos;appeler.
+        </p>
+      </>
+    ),
   },
   {
-    heading: "Des secteurs plus ruraux, un déplacement à anticiper",
+    heading: "Exemple type",
     paragraphs: [
-      "Saint-Isidore, Lingostière et le secteur viticole de Bellet sont les zones les plus excentrées et les plus rurales que je couvre. Je vous donne un délai d'intervention réaliste dès l'appel, en tenant compte de la distance réelle et de l'accès, plutôt qu'une estimation optimiste.",
+      <>
+        Exemple type, une situation fréquente et non un client précis : un lundi matin, le responsable d&apos;un bureau
+        de l&apos;Arénas trouve le cylindre de la porte d&apos;entrée forcé, sans que personne soit entré. Je remplace
+        le cylindre par un cylindre neuf, avec des clés neuves pour l&apos;équipe : à partir de 249 € TTC, prix annoncé
+        au téléphone avant de partir. Il garde la facture détaillée pour l&apos;assurance de l&apos;entreprise. Le
+        détail de tous mes prix est sur{" "}
+        <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+          ma page tarifs
+        </Link>
+        .
+      </>,
     ],
   },
 ];
@@ -46,32 +189,35 @@ const faq = [
   {
     question: "Quels quartiers de l'ouest de Nice couvrez-vous ?",
     answer:
-      "L'ensemble du secteur : L'Archet, Saint-Antoine, Fabron, Carras, Californie, Les Moulins, Corniche Fleurie, l'Arénas, Saint-Isidore, Lingostière et le secteur Bellet. Le détail complet est listé sur cette page.",
+      "Tout l'ouest : Californie, Carras, Ferber, la Lanterne, Fabron, la Corniche Fleurie, Sainte-Marguerite, Caucade, l'Arénas, Saint-Augustin, les Moulins, l'Archet, Saint-Antoine, Saint-Isidore, Lingostière et Bellet.",
   },
   {
-    question: "Intervenez-vous rapidement dans l'ouest de Nice ?",
-    answer:
-      "Oui, avec un délai habituel de 30 minutes.",
+    question: "En combien de temps arrivez-vous dans l'ouest de Nice ?",
+    answer: "En urgence, en 30 minutes, 24h/24 et 7j/7, du bord de mer jusqu'à Bellet.",
   },
   {
-    question: "Intervenez-vous sur les villas de Fabron ou de Californie ?",
+    question: "Ma porte palière date des années 70 : que faire pour la sécuriser ?",
     answer:
-      "Oui, je diagnostique la serrure en place avant de proposer réparation, remplacement de cylindre ou renforcement complet de la porte, avec une attention particulière pour le bâti de caractère.",
+      "Ça dépend de son état. Si elle est en bon état, une poignée blindée (349 €), avec des cornières anti-pince si elle a du jeu (618 € les deux). Si elle est creuse, abîmée ou déformée, un bloc-porte blindé neuf (dès 3 490 €).",
   },
   {
-    question: "Intervenez-vous sur des locaux professionnels à l'Arénas ?",
+    question: "Intervenez-vous pour les bureaux et les locaux de l'Arénas ?",
     answer:
-      "Oui, pour la partie serrurerie de ces locaux (porte d'entrée, cylindre, renforcement), selon le même principe de diagnostic et de devis annoncé.",
+      "Oui : changement de cylindre, ouverture de porte bloquée et mise en sécurité après effraction, avec une facture détaillée au nom de l'entreprise.",
   },
   {
-    question: "Les tarifs sont-ils différents dans l'ouest par rapport au reste de Nice ?",
+    question: "Je pars en vacances : comment éviter un cambriolage ?",
     answer:
-      "Non, mes tarifs de base sont identiques sur l'ensemble de la ville. Retrouvez le détail sur ma page tarifs.",
+      "Fermez à double tour, ne cachez pas de clé près de la porte, et confiez un double à une personne de confiance. Pour aller plus loin, une poignée blindée protège le cylindre.",
   },
   {
-    question: "Proposez-vous un devis avant d'intervenir dans l'ouest de Nice ?",
+    question: "Vos prix sont-ils différents dans l'ouest ?",
     answer:
-      "Systématiquement, par téléphone avant le déplacement, puis confirmé sur place avant de commencer les travaux.",
+      "Non, ce sont les mêmes dans tout Nice : 149 € en journée pour une ouverture, 189 € ou 209 € le soir, le week-end et les jours fériés, déplacement compris.",
+  },
+  {
+    question: "Venez-vous jusqu'à Bellet et Lingostière ?",
+    answer: "Oui, avec le même délai de 30 minutes en urgence et les mêmes prix que dans le reste de Nice.",
   },
 ];
 
@@ -79,11 +225,16 @@ export default function SerrurierNiceOuestPage() {
   return (
     <SectorPageTemplate
       title="Serrurier à Nice Ouest"
+      h1="Serrurier à Nice Ouest : Fabron, Carras, Californie, Arénas"
       sectorKey="ouest"
       intro={intro}
       blocks={blocks}
       faq={faq}
       quartiers={zones.ouest}
+      quartiersContent={quartiersContent}
+      areaServedPlaces={quartierRows.map(([quartier]) => quartier)}
+      hideReinforcementNote
+      faqAfterReviews
       path="/serrurier-nice-ouest/"
     />
   );

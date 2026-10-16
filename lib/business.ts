@@ -142,6 +142,11 @@ export const zones = {
     "Mantega",
   ],
   ouest: [
+    "Ferber",
+    "La Lanterne",
+    "Caucade",
+    "Sainte-Marguerite",
+    "Saint-Augustin",
     "L'Archet",
     "Saint-Antoine",
     "Fabron",
@@ -152,6 +157,6 @@ export const zones = {
     "Arénas",
     "Saint-Isidore",
     "Lingostière",
-    "Secteur Bellet",
+    "Bellet",
   ],
 } as const;
