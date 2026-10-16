@@ -2,202 +2,306 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import PriceReminder from "@/components/PriceReminder";
-import ServiceGuideSection from "@/components/ServiceGuideSection";
-import ArticleSectionHeading from "@/components/ArticleSectionHeading";
-import { buildMetadata } from "@/lib/metadata";
+import QuoteBlock from "@/components/QuoteBlock";
+import ArticleTable from "@/components/ArticleTable";
 import ServiceReviewsLive from "@/components/ServiceReviewsLive";
-
-const guideToc = [
-  { id: "usage", label: "Quel usage, quel niveau de protection" },
-  { id: "armes", label: "Cas particulier : la détention d'armes à feu" },
-  { id: "fixation-support", label: "La fixation selon votre type de support" },
-  { id: "emplacement", label: "Emplacement : au-delà de la seule discrétion" },
-  { id: "faq", label: "Questions complémentaires" },
-];
-
-const guideFaq = [
-  {
-    question: "Un coffre anti-effraction protège-t-il aussi mes documents contre l'incendie ?",
-    answer:
-      "Pas automatiquement : ce sont deux normes distinctes (A2P/EN 1143-1 pour l'effraction, EN 1047-1 pour le feu). Certains modèles cumulent les deux certifications, à vérifier précisément avant l'achat si les deux usages vous concernent.",
-  },
-  {
-    question: "Une armoire à fusils suffit-elle légalement pour des armes de catégorie B ?",
-    answer:
-      "Oui, à condition qu'elle soit certifiée (typiquement EN 14450 S1 ou S2) et adaptée au nombre d'armes détenues. Une simple armoire non certifiée ne répond pas à l'obligation réglementaire.",
-  },
-  {
-    question: "Puis-je fixer un coffre-fort moi-même sans serrurier ?",
-    answer:
-      "Techniquement oui pour un petit modèle léger, mais une fixation mal dimensionnée pour le poids du coffre et la nature du support (cheville inadaptée, béton mal préparé) réduit fortement sa résistance réelle à l'arrachement.",
-  },
-  {
-    question: "Un coffre-fort au sol est-il plus sûr qu'un coffre mural ?",
-    answer:
-      "Cela dépend surtout de la qualité du support et de la fixation, pas uniquement de l'emplacement. Un ancrage solide dans une dalle béton pleine offre en général plus de résistance qu'une fixation murale sur cloison légère.",
-  },
-];
-
-const guideContent = (
-  <>
-    <p className="text-slate leading-relaxed">
-      Ce guide détaille le choix du niveau de protection selon l&apos;usage,
-      et les contraintes de fixation propres à votre logement, en complément
-      des certifications déjà présentées plus haut.
-    </p>
-
-    <div>
-      <ArticleSectionHeading number={1} id="usage" level="h3">
-        Quel usage, quel niveau de protection
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Des documents papier importants relèvent d&apos;abord d&apos;une
-        protection incendie (norme EN 1047-1, label S60P ou S120P selon la
-        durée de résistance recherchée), alors que des bijoux ou des espèces
-        relèvent avant tout d&apos;une résistance à l&apos;effraction (A2P ou
-        EN 1143-1). Un support numérique (disque dur, clé USB) demande une
-        protection encore plus stricte contre la chaleur (classe DIS de l&apos;EN
-        1047-1, température maintenue sous 70°C). Beaucoup de foyers ont
-        besoin d&apos;un compromis entre ces objectifs plutôt que du niveau
-        maximal sur un seul critère.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={2} id="armes" level="h3">
-        Cas particulier : la détention d&apos;armes à feu
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Pour les armes de catégorie B détenues à domicile, l&apos;
-        <a
-          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034753901"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          article R314-3 du Code de la sécurité intérieure
-        </a>{" "}
-        impose un rangement dans un coffre ou une armoire forte adaptée,
-        matériel généralement certifié EN 14450 (niveau S1 ou S2) pour
-        répondre à cette exigence. Ce n&apos;est pas une simple recommandation :
-        le non-respect expose à une amende et à un retrait de
-        l&apos;autorisation préfectorale.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={3} id="fixation-support" level="h3">
-        La fixation selon votre type de support
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Une dalle béton pleine permet une fixation par cheville chimique ou
-        mécanique dimensionnée pour résister à un arrachement franc. Un
-        plancher bois ou une cloison légère demande une réflexion différente :
-        renforcement local du support, ou choix d&apos;un modèle suffisamment
-        lourd pour ne pas dépendre uniquement de la fixation. Je vous
-        conseille sur ce point avant l&apos;achat si vous ne l&apos;avez pas
-        encore choisi, pour éviter un modèle inadapté à votre logement.
-      </p>
-    </div>
-
-    <div>
-      <ArticleSectionHeading number={4} id="emplacement" level="h3">
-        Emplacement : au-delà de la seule discrétion
-      </ArticleSectionHeading>
-      <p className="text-slate leading-relaxed">
-        Un emplacement discret ne doit pas non plus devenir inaccessible en
-        cas d&apos;urgence, ni exposé à l&apos;humidité si le coffre contient de
-        l&apos;électronique ou des documents sensibles. J&apos;évalue ces
-        contraintes avec vous au moment du rendez-vous, en tenant compte de
-        la configuration réelle de votre logement.
-      </p>
-    </div>
-  </>
-);
+import { StarIcon } from "@/components/Icons";
+import { business } from "@/lib/business";
+import { getGoogleReviews } from "@/lib/reviews";
+import { formatRating } from "@/lib/reviewFormat";
+import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/installation-coffre-fort-nice/",
-  title: "Installation de coffre-fort Nice – Serrurier",
-  description: "Installation et fixation de coffre-fort à Nice : conseil sur le modèle, pose sécurisée au sol ou au mur. Devis annoncé avant intervention.",
+  title: "Installation de coffre-fort Nice : fourni, posé, fixé",
+  description:
+    "Coffre-fort à Nice fourni et posé, ou pose du vôtre : conseil sur le modèle, fixation au sol ou au mur. Pose dès 299 € TTC. Tél. 04 22 13 85 44",
 });
+
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+const olClass = "list-decimal pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
 
 const sections = [
   {
-    heading: "Choisir le bon coffre-fort avant de l'installer",
+    heading: "Ce que vous voulez protéger décide du coffre",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>Il n&apos;existe pas de coffre idéal pour tout. Le bon modèle dépend de ce que vous y rangez :</p>
+        <ArticleTable
+          headers={["Ce que vous rangez", "Ce qu'il faut", "La norme à regarder"]}
+          rows={[
+            [
+              "Documents papier (actes, titres, contrats)",
+              "Une protection contre le feu",
+              "EN 1047-1, classe S 60 P ou S 120 P",
+            ],
+            [
+              "Disques durs, clés USB",
+              "Une protection renforcée contre la chaleur",
+              "EN 1047-1, classe DIS",
+            ],
+            [
+              "Bijoux, espèces, objets de valeur",
+              "Une résistance à l'effraction",
+              "EN 14450 (S1 ou S2) ou EN 1143-1 (grade 0 à VI)",
+            ],
+            [
+              "Armes de catégories A et B",
+              "Un coffre-fort ou une armoire forte adaptés",
+              "Obligation légale, voir plus bas",
+            ],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Beaucoup de foyers ont besoin des deux : un coffre qui résiste à l&apos;effraction et au feu. Certains
+          modèles cumulent les deux certifications ; vérifiez-le précisément avant l&apos;achat.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Les normes en clair",
+    paragraphs: [],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">EN 14450</strong> : les coffres résidentiels courants, en deux niveaux, S1 et
+            S2.
+          </li>
+          <li>
+            <strong className="text-navy">EN 1143-1</strong> : les coffres haute sécurité, classés du grade 0 au grade
+            VI. C&apos;est la référence pour les biens de valeur importante.
+          </li>
+          <li>
+            <strong className="text-navy">EN 1047-1</strong> : la résistance au feu, pendant 60 ou 120 minutes.
+          </li>
+          <li>
+            <strong className="text-navy">EN 1300</strong> : la serrure seule, classée de A à D, indépendamment du
+            coffre.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Un conseil simple : avant d&apos;acheter, demandez à votre assureur quel niveau il exige pour couvrir ce que
+          vous voulez ranger. C&apos;est lui qui fixe le plafond d&apos;indemnisation, et le bon niveau évite d&apos;acheter
+          trop cher ou pas assez.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Votre assurance",
     paragraphs: [
-      "Un coffre-fort mal choisi ou mal fixé ne protège pas grand-chose. Avant l'installation, je vous aide à évaluer ce dont vous avez réellement besoin : niveau de résistance à l'effraction, protection incendie si nécessaire, et taille adaptée à ce que vous voulez y ranger.",
+      "Sans coffre déclaré, la plupart des contrats habitation plafonnent fortement la couverture des bijoux et des espèces. Un coffre certifié et déclaré permet en général de relever ce plafond. Les montants dépendent entièrement de votre contrat : vérifiez-les auprès de votre assureur, et déclarez le coffre et sa certification une fois posé.",
     ],
   },
   {
-    heading: "Une fixation qui fait toute la différence",
+    heading: "Détention d'armes : une obligation légale",
     paragraphs: [
-      "Un coffre-fort non fixé peut simplement être emporté lors d'un cambriolage, quel que soit son niveau de sécurité. Je scelle le coffre au sol ou au mur selon la configuration du logement, avec une fixation dimensionnée pour résister à un arrachement.",
+      <>
+        Pour les armes de catégories A et B détenues à domicile, l&apos;
+        <a
+          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034753901"
+          target="_blank"
+          rel="noopener"
+          className={linkClass}
+        >
+          article R314-3 du Code de la sécurité intérieure
+        </a>{" "}
+        impose de les conserver dans un coffre-fort ou une armoire forte adaptés au type et au nombre d&apos;armes, ou dans une pièce forte protégée. Une
+        armoire ordinaire ne suffit pas. Je vous conseille sur un modèle adapté et je le fixe solidement.
+      </>,
     ],
   },
   {
-    heading: "Emplacement et discrétion",
+    heading: "La fixation, selon votre support",
+    paragraphs: [],
+    extra: (
+      <>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Dalle béton pleine</strong> : la meilleure base. Le coffre est ancré par
+            chevilles chimiques ou mécaniques, dimensionnées pour résister à un arrachement.
+          </li>
+          <li>
+            <strong className="text-navy">Mur porteur en maçonnerie</strong> : une bonne alternative pour un coffre
+            mural ou un coffre posé contre le mur.
+          </li>
+          <li>
+            <strong className="text-navy">Plancher bois ou cloison légère</strong>, fréquents dans les immeubles
+            anciens : une fixation seule ne suffit pas. Il faut renforcer le support localement, ou choisir un modèle
+            assez lourd pour ne pas dépendre uniquement de la fixation.
+          </li>
+        </ul>
+        <p className={pClass}>
+          Si vous n&apos;avez pas encore de coffre, je regarde d&apos;abord le support avant de vous en proposer un :
+          vous évitez un modèle impossible à fixer correctement chez vous.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "L'emplacement",
     paragraphs: [
-      "L'emplacement compte autant que le modèle : un coffre visible dès l'entrée est une cible facile. Je vous conseille sur un emplacement discret et accessible, en tenant compte des contraintes de votre logement (placard, dressing, sous un escalier).",
+      "Un coffre visible dès l'entrée est une cible. Je vous conseille un emplacement discret mais accessible : placard, dressing, sous un escalier. Il doit aussi rester à l'abri de l'humidité, surtout s'il contient des documents ou de l'électronique.",
     ],
   },
   {
-    heading: "Comprendre les certifications A2P et EN 1143-1",
+    heading: "Ce que je vérifie avant la pose",
+    paragraphs: [],
+    extra: (
+      <ol className={olClass}>
+        <li>
+          <strong className="text-navy">Le poids du coffre et l&apos;accès</strong> : escaliers, ascenseur, largeur
+          des portes. Un coffre lourd se monte avec du matériel adapté.
+        </li>
+        <li>
+          <strong className="text-navy">Le support</strong> : béton, maçonnerie, bois ou cloison.
+        </li>
+        <li>
+          <strong className="text-navy">Les canalisations et les câbles</strong> dans le sol ou le mur, avant de
+          percer.
+        </li>
+        <li>
+          <strong className="text-navy">Les trous de fixation prévus par le fabricant</strong>, et les chevilles
+          adaptées au poids.
+        </li>
+      </ol>
+    ),
+  },
+  {
+    heading: "Ce que je refuse de faire",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Poser un coffre sans le fixer</strong> : il serait emporté entier.
+        </li>
+        <li>
+          <strong className="text-navy">Le fixer dans une simple cloison en plaque de plâtre</strong> : la fixation
+          céderait au premier levier.
+        </li>
+        <li>
+          <strong className="text-navy">Percer sans vérifier</strong> la présence de canalisations ou de câbles.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    heading: "Exemple type",
     paragraphs: [
-      "En France, la certification A2P est délivrée par le CNPP (Centre national de prévention et de protection). Elle classe les coffres selon 1, 2 ou 3 étoiles, correspondant à une durée moyenne de résistance à l'effraction de 5, 10 ou 15 minutes. La norme européenne EN 1143-1, utilisée pour les coffres à usage professionnel comme pour certains modèles résidentiels haut de gamme, définit 7 classes de résistance, de 0 à VI.",
-      "Ces classifications ne sont pas qu'un argument commercial : elles conditionnent directement les plafonds de garantie reconnus par les compagnies d'assurance. Je vous oriente vers le niveau de certification cohérent avec ce que vous souhaitez protéger, sans vous vendre plus cher que nécessaire.",
+      "Exemple type, une situation fréquente et non un client précis : un couple achète un coffre pour des bijoux de famille et des documents. Leur appartement, dans un immeuble ancien, a un plancher en bois. Leur assureur exige un coffre certifié pour couvrir les bijoux au-delà du plafond de base. Ils choisissent un modèle qui résiste à l'effraction et au feu, posé dans le dressing, contre le mur porteur : je le fixe au mur et au sol, avec un renfort sous le plancher.",
     ],
   },
   {
-    heading: "L'impact d'un coffre certifié sur votre assurance",
+    heading: "Après la pose",
     paragraphs: [
-      "Sans coffre-fort déclaré, la plupart des contrats multirisques habitation plafonnent la couverture des bijoux et espèces à une fraction du capital mobilier, avec un plafond unitaire souvent limité à quelques milliers d'euros. Un coffre certifié permet généralement de relever sensiblement ce plafond. Les montants exacts dépendent entièrement de votre contrat et doivent être vérifiés auprès de votre assureur, mais la différence est réelle. Déclarer le coffre et son niveau de certification à votre assurance conditionne directement l'indemnisation en cas de vol.",
+      <>
+        Je vérifie avec vous l&apos;ouverture et la fermeture, et vous rappelle de noter le code ou de ranger la clé de
+        secours ailleurs que dans le coffre. En cas de code oublié ou de clé perdue plus tard, voir ma page{" "}
+        <Link href="/ouverture-de-coffre-fort-nice/" className={linkClass}>
+          ouverture de coffre-fort
+        </Link>
+        .
+      </>,
     ],
+  },
+  {
+    heading: "Prix, devis et paiement",
+    paragraphs: [],
+    extra: (
+      <ul className={listClass}>
+        <li>
+          <strong className="text-navy">Le prix de la pose</strong> : à partir de 299 € TTC pour la pose et la
+          fixation. Il dépend du poids du coffre, du support et de l&apos;accès. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </li>
+        <li>
+          <strong className="text-navy">Le coffre fourni</strong> : je vous le chiffre sur devis, selon le modèle, la
+          certification et la taille, pose comprise.
+        </li>
+        <li>
+          <strong className="text-navy">Le devis</strong> : le prix est confirmé avant la pose, et c&apos;est celui que
+          vous payez.
+        </li>
+        <li>
+          <strong className="text-navy">La garantie</strong> : ma pose est garantie 2 ans.
+        </li>
+        <li>
+          <strong className="text-navy">Le paiement</strong> : par carte bancaire, en espèces ou par virement, avec
+          une facture détaillée, utile pour déclarer le coffre à votre assureur.
+        </li>
+      </ul>
+    ),
   },
 ];
 
 const faq = [
   {
-    question: "Faut-il vraiment fixer un coffre-fort au sol ou au mur ?",
+    question: "Faut-il vraiment fixer un coffre-fort ?",
     answer:
-      "Oui, systématiquement. Un coffre non fixé peut être emporté entier lors d'un cambriolage, ce qui annule tout l'intérêt de son niveau de sécurité.",
-  },
-  {
-    question: "Quel type de coffre-fort choisir pour un appartement ?",
-    answer:
-      "Cela dépend de ce que vous voulez protéger : documents, bijoux, espèces. Je vous conseille selon vos besoins réels plutôt que de vous orienter vers le modèle le plus cher.",
-  },
-  {
-    question: "Installez-vous des coffres-forts avec protection incendie ?",
-    answer:
-      "Oui, selon le modèle choisi. Je vous explique la différence entre un coffre anti-effraction et un coffre ignifuge, et je peux vous orienter vers un modèle combinant les deux si nécessaire.",
+      "Oui, toujours. Un coffre non fixé peut être emporté entier, ce qui annule tout l'intérêt de sa résistance.",
   },
   {
     question: "Combien coûte l'installation d'un coffre-fort à Nice ?",
     answer:
-      "Le tarif dépend du modèle, du poids du coffre et du type de fixation nécessaire. Je vous annonce un prix avant intervention, une fois la situation décrite.",
+      "À partir de 299 € TTC pour la pose et la fixation. Le prix dépend du poids du coffre, du support et de l'accès, et il est confirmé avant la pose.",
   },
   {
-    question: "Pouvez-vous installer un coffre-fort que j'ai déjà acheté ?",
+    question: "Vendez-vous des coffres-forts, ou posez-vous celui que j'ai acheté ?",
     answer:
-      "Oui, je peux intervenir uniquement pour la pose et la fixation d'un coffre-fort que vous avez déjà, sans que vous ayez besoin de l'acheter via moi.",
+      "Les deux. Je vous fournis un coffre adapté à ce que vous voulez protéger, sur devis, pose comprise. Je pose aussi un coffre que vous avez déjà acheté.",
   },
   {
-    question: "Que veut dire un coffre-fort A2P 3 étoiles ?",
+    question: "Quel coffre choisir pour des documents ?",
     answer:
-      "C'est le niveau de certification A2P le plus élevé délivré par le CNPP pour les coffres résidentiels, correspondant à une durée moyenne de résistance à l'effraction d'environ 15 minutes selon les tests normalisés.",
+      "Un coffre résistant au feu, certifié EN 1047-1. Pour des disques durs ou des clés USB, il faut la classe DIS, qui protège mieux de la chaleur.",
   },
   {
-    question: "Un coffre certifié change-t-il vraiment ma couverture d'assurance ?",
+    question: "Un coffre anti-effraction protège-t-il aussi du feu ?",
     answer:
-      "Dans la majorité des cas, oui, mais les montants exacts dépendent entièrement de votre contrat. Je vous conseille de vérifier les plafonds indiqués par votre assureur avant de choisir le niveau de certification de votre coffre.",
+      "Pas automatiquement : ce sont deux certifications différentes. Certains modèles cumulent les deux ; vérifiez-le avant l'achat.",
+  },
+  {
+    question: "Peut-on fixer un coffre dans un appartement ancien avec un plancher en bois ?",
+    answer:
+      "Oui, mais pas avec une simple fixation : il faut renforcer le support, ou fixer le coffre aussi au mur porteur.",
+  },
+  {
+    question: "Un coffre certifié change-t-il ma couverture d'assurance ?",
+    answer:
+      "En général oui, mais les montants dépendent entièrement de votre contrat. Demandez à votre assureur le niveau exigé avant d'acheter.",
   },
 ];
 
-export default function InstallationCoffreFortNicePage() {
+export default async function InstallationCoffreFortNicePage() {
+  const experienceYears = new Date().getFullYear() - business.professionSinceYear;
+  const { rating, count } = await getGoogleReviews();
+
+  const heroTrustNote = (
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-navy">
+      <span className="inline-flex items-center gap-1.5 font-semibold">
+        <StarIcon className="w-4 h-4 text-amber-400" />
+        {formatRating(rating, "fr")}/5 sur {count} avis Google
+      </span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>{experienceYears} ans d&apos;expérience à Nice</span>
+      <span className="text-navy/30" aria-hidden="true">·</span>
+      <span>RC Pro {business.insurance.provider} &amp; garantie décennale</span>
+    </div>
+  );
+
   return (
     <ServicePageTemplate
-      h1="Installation de coffre-fort à Nice"
-      lead="Choix du modèle, fixation sécurisée au sol ou au mur, emplacement discret : je vous accompagne pour que votre coffre-fort protège vraiment ce qu'il contient."
+      h1="Installation de coffre-fort à Nice : choix, fixation, emplacement"
+      lead="Un coffre-fort qui n'est pas fixé s'emporte entier pendant un cambriolage, quel que soit son niveau de sécurité. Je vous aide à choisir le bon modèle, je le fixe au sol ou au mur selon votre support, et je vous conseille sur l'emplacement. Je fournis le coffre, ou je pose celui que vous avez déjà acheté. La pose et la fixation démarrent à 299 € TTC, sur rendez-vous, avec un devis confirmé avant."
+      hideProcessSteps
       sections={sections}
       faq={faq}
       breadcrumbLabel="Installation de coffre-fort"
@@ -206,44 +310,20 @@ export default function InstallationCoffreFortNicePage() {
         src: "/images/serrurier-nice-coffre-fort.webp",
         alt: "Installation coffre-fort Nice",
       }}
+      heroTrustNote={heroTrustNote}
       extra={
         <>
           <PriceReminder
-          priceLabel="À partir de 299 € TTC"
-          note="Prix ajusté selon le modèle et la fixation nécessaire"
-          locale="fr"
-        />
+            priceLabel="À partir de 299 € TTC"
+            note="Pose et fixation, prix selon le poids du coffre et le support. Devis confirmé avant intervention."
+            locale="fr"
+          />
           <ServiceReviewsLive path="/installation-coffre-fort-nice/" />
+          <div className="mx-auto max-w-4xl px-4 py-10">
+            <QuoteBlock locale="fr" />
+          </div>
         </>
       }
-      processSteps={[
-        {
-          title: "Appel",
-          text: "Vous me décrivez l'usage prévu (documents, valeurs, armes) et l'emplacement envisagé, pour vous orienter vers le bon modèle.",
-        },
-        {
-          title: "Rendez-vous",
-          text: "Je fixe un rendez-vous pour évaluer l'emplacement et le support de fixation, à l'heure qui vous convient.",
-        },
-        {
-          title: "Choix de l'emplacement et fixation",
-          text: "Je vous conseille sur le modèle et l'emplacement, puis je prépare la fixation au sol ou au mur pour une résistance réelle à l'arrachement.",
-        },
-        {
-          title: "Règlement",
-          text: "Le devis détaillé est validé avant l'installation, sans supplément surprise une fois le coffre fixé.",
-        },
-      ]}
-      relatedArticle={{
-        href: "/blog/certification-a2p-serrure-nice/",
-        label: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
-      }}
-      guide={
-        <ServiceGuideSection readingMinutes={5} toc={guideToc} faq={guideFaq}>
-          {guideContent}
-        </ServiceGuideSection>
-      }
-      guideFaqForSchema={guideFaq}
     />
   );
 }
