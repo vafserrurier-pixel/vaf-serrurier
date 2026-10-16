@@ -91,6 +91,8 @@ export function serviceSchema(opts: {
   description: string;
   url: string;
   areaServed?: { type: "City" | "Place"; name: string };
+  /** Si fourni, areaServed liste ces lieux (un objet Place par nom) au lieu d'un seul. */
+  areaServedPlaces?: string[];
   /** Date ISO de derniere modification reelle du contenu (voir lib/contentDates.generated.ts). */
   dateModified?: string;
 }) {
@@ -107,10 +109,12 @@ export function serviceSchema(opts: {
       name: business.brandName,
       telephone: business.phone.href.replace("tel:", ""),
     },
-    areaServed: {
-      "@type": opts.areaServed?.type ?? "City",
-      name: opts.areaServed?.name ?? "Nice",
-    },
+    areaServed: opts.areaServedPlaces?.length
+      ? opts.areaServedPlaces.map((name) => ({ "@type": "Place", name }))
+      : {
+          "@type": opts.areaServed?.type ?? "City",
+          name: opts.areaServed?.name ?? "Nice",
+        },
   };
 }
 

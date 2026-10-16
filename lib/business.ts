@@ -102,7 +102,7 @@ export const zones = {
     "Libération",
     "Gambetta",
     "Cimiez",
-    "Desambrois",
+    "Désambrois",
     "Carabacel",
     "Garibaldi",
     "Parc Impérial",
