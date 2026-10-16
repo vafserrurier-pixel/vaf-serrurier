@@ -119,6 +119,12 @@ const EXTRA_CONTENT_FILES = {
   "/": ["app/HomeBody.tsx"],
   "/blog/": ["lib/blogPosts.ts"],
   "/tarifs-serrurier-nice/": ["lib/pricingCards.ts"],
+  // La liste des quartiers (zones) vient de lib/business.ts : pages Zones et secteurs.
+  "/zones-intervention-nice/": ["lib/business.ts"],
+  "/serrurier-nice-centre/": ["lib/business.ts"],
+  "/serrurier-nice-est/": ["lib/business.ts"],
+  "/serrurier-nice-nord/": ["lib/business.ts"],
+  "/serrurier-nice-ouest/": ["lib/business.ts"],
 };
 const NOT_CONTENT = /^(page|route|layout|loading|error|not-found|sitemap|robots|manifest|opengraph-image|twitter-image|icon)\.(tsx?|jsx?)$/;
 
