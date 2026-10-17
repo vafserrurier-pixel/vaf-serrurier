@@ -13,116 +13,7 @@ import { business } from "@/lib/business";
 import { formatRating } from "@/lib/reviewFormat";
 import { useReviewStats } from "@/components/ReviewStatsProvider";
 import { useLocale } from "@/lib/locale";
-
-const faqFr: FaqItem[] = [
-  {
-    question: "Combien coûte un serrurier en urgence à Nice ?",
-    answer:
-      "Le tarif de base dépend du service (ouverture, dépannage, remplacement). Après 19h, le week-end et les jours fériés, une porte claquée est à 189 € et une porte verrouillée (cylindre européen) à 209 € : le prix d'une pièce remplacée ne change jamais selon l'heure. Le montant exact est toujours annoncé avant que j'intervienne.",
-  },
-  {
-    question: "Le devis est-il vraiment gratuit ?",
-    answer:
-      "Oui. Je vous annonce un prix par téléphone selon votre description, et je le confirme sur place avant de commencer les travaux, c'est une obligation légale pour un serrurier. Pour les gros travaux (blindage de porte, installation de porte blindée), la visite sur place et le devis sont gratuits, et le devis vous est remis sous 24h.",
-  },
-  {
-    question: "Les pièces remplacées sont-elles comprises dans le prix affiché ?",
-    answer:
-      "Le cylindre standard est compris dans le tarif « à partir de 249 € ». Les autres pièces remplacées (serrure complète, gâche, cylindre haute sécurité...) sont facturées en supplément et toujours annoncées avant votre accord.",
-  },
-  {
-    question: "Pourquoi les prix varient-ils d'une intervention à l'autre ?",
-    answer:
-      "Le type de serrure, la marque, l'état de la porte et l'heure d'intervention font varier le tarif final. Les prix affichés couvrent les situations standards.",
-  },
-  {
-    question: "Le tarif change-t-il selon le quartier de Nice ?",
-    answer:
-      "Non. Mes tarifs sont les mêmes dans tous les quartiers de Nice, sans supplément pour un secteur éloigné. Ce qui fait varier le prix, c'est l'horaire (un tarif majoré après 19h, le week-end et les jours fériés), le type de serrure et la pièce à remplacer, pas le quartier.",
-  },
-  {
-    question: "Quel taux de TVA appliquez-vous ?",
-    answer:
-      "10 % pour les particuliers (logement de plus de 2 ans) et 20 % pour les professionnels. Les prix affichés sur cette page sont des prix TTC au taux de 10 %.",
-  },
-  {
-    question: "Quels moyens de paiement acceptez-vous ?",
-    answer:
-      "Carte bancaire, espèces ou virement. La facture détaillée vous est envoyée par e-mail.",
-  },
-  {
-    question: "Demandez-vous un acompte ?",
-    answer:
-      "Pour les gros travaux (blindage de porte, installation de porte blindée), un acompte de 30 % est demandé à la validation du devis.",
-  },
-  {
-    question: "Intervenez-vous sur une porte de cave, de garage ou une boîte aux lettres ?",
-    answer:
-      "Oui. Le prix vous est annoncé par téléphone avant que je me déplace, comme pour toute autre intervention.",
-  },
-  {
-    question: "Comment éviter une arnaque de serrurier ?",
-    answer:
-      "Méfiez-vous d'abord des prix d'appel affichés très bas (30 ou 40 € par exemple) : c'est presque toujours le signe que la facture va gonfler une fois le technicien sur place, avec des frais ajoutés sur le pas de la porte. Une intervention sérieuse, déplacement compris, descend rarement sous les 100 € tout compris. Exigez un prix ferme par téléphone avant tout déplacement, demandez toujours une facture détaillée, et vérifiez que l'entreprise a une adresse et un SIRET vérifiables, pas seulement un numéro de mobile. C'est exactement pour lutter contre ces pratiques que je me suis installé à mon compte : mes tarifs sont annoncés à l'avance et ne bougent pas une fois sur place, sauf pièce supplémentaire clairement identifiée et validée par vous.",
-  },
-  {
-    question: "Puis-je me rétracter après avoir signé un devis à mon domicile ?",
-    answer: (
-      <>
-        En principe oui : un contrat conclu à votre domicile (« hors
-        établissement ») ouvre un droit de rétractation de 14 jours (
-        <a
-          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032226842/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          article L.221-18 du Code de la consommation
-        </a>
-        , voir aussi la{" "}
-        <a
-          href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/vente-hors-etablissement-soyez-vigilant"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          fiche pratique de la DGCCRF
-        </a>
-        ). Mais ce délai ne s&apos;applique pas quand vous demandez
-        expressément une exécution immédiate de la prestation et renoncez
-        explicitement à ce droit, le cas typique d&apos;un dépannage
-        d&apos;urgence réalisé sur-le-champ (
-        <a
-          href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044563170"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          article L.221-28 du Code de la consommation
-        </a>
-        ).
-      </>
-    ),
-  },
-  {
-    question: "Que faire en cas de litige avec un professionnel du dépannage ?",
-    answer: (
-      <>
-        Vous pouvez signaler tout litige avec un professionnel sur{" "}
-        <a
-          href="https://signal.conso.gouv.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-steel underline"
-        >
-          SignalConso
-        </a>
-        , le service de signalement gratuit de la DGCCRF : le professionnel
-        concerné est notifié et dispose d&apos;un délai pour vous répondre.
-      </>
-    ),
-  },
-];
+import { faqFr } from "./faqFr";
 
 const faqEn: FaqItem[] = [
   {
@@ -269,7 +160,6 @@ const warningSignalsEn = [
 
 const leviersItemsFr = [
   "Garantie d'assistance de votre assurance habitation : certains sinistres (une effraction, par exemple) sont pris en charge sur présentation d'une facture détaillée.",
-  "Garantie d'assistance de certaines cartes bancaires haut de gamme (Visa Premier, Gold Mastercard ou équivalent), avec un plafond qui varie selon la carte et le contrat : à vérifier auprès de votre émetteur.",
   "Programmer une intervention plutôt que d'attendre l'urgence complète : un rendez-vous en journée évite la majoration de nuit, de week-end ou de jour férié.",
   "Toujours demander un devis écrit, même pour une petite intervention : c'est le document qui facilite un remboursement d'assurance a posteriori.",
 ];
@@ -285,8 +175,8 @@ const strings = {
   fr: {
     breadcrumb: "Tarifs",
     badge: "Disponible maintenant : devis gratuit par téléphone",
-    h1: "Tarifs serrurier à Nice",
-    lead: "Ce qui compte, c'est la transparence, pas les promesses. Voici mes tarifs pour les situations standards : un devis précis est toujours annoncé avant que je commence l'intervention.",
+    h1: "Prix serrurier à Nice : mes tarifs fixes, déplacement compris",
+    lead: "Tous mes prix sont ici, affichés et fixes. Ce sont les mêmes dans tout Nice et dans les communes voisines, déplacement compris. En urgence, j'arrive en 30 minutes, 24h/24 et 7j/7, et je vous annonce le prix au téléphone avant de partir.",
     call: "Appeler",
     trustSiret: (siret: string) => `SIRET vérifiable : ${siret}`,
     trustInsurance: "Assurance RC Pro et garantie décennale",
@@ -426,6 +316,72 @@ export default function TarifsBody() {
           }
         />
       </section>
+
+      {locale === "fr" && (
+        <>
+          <section className="mx-auto max-w-4xl px-4 pb-10">
+            <h2 className="font-heading text-xl font-bold text-navy mb-2">Le tarif de nuit, en clair</h2>
+            <p className="text-slate leading-relaxed mb-4">
+              Après 19 h, le week-end et les jours fériés, je n&apos;applique pas de pourcentage : le tarif de nuit
+              est un prix fixe, annoncé avant de partir.
+            </p>
+            <ArticleTable
+              headers={["Intervention", "En journée", "Après 19 h, week-end, jours fériés", "Différence"]}
+              rows={[
+                ["Porte claquée", "149 €", "189 €", "+ 40 €"],
+                ["Porte fermée à clé", "149 €", "209 €", "+ 60 €"],
+                ["Clé cassée dans la serrure", "149 €", "189 €", "+ 40 €"],
+              ]}
+            />
+            <p className="text-slate leading-relaxed mt-4">
+              Le prix d&apos;une pièce ne change jamais avec l&apos;heure : un cylindre coûte le même prix la nuit
+              qu&apos;en journée. Et le déplacement reste compris, de jour comme de nuit.
+            </p>
+          </section>
+
+          <section className="mx-auto max-w-4xl px-4 pb-10">
+            <h2 className="font-heading text-xl font-bold text-navy mb-2">Mêmes prix dans les communes voisines</h2>
+            <p className="text-slate leading-relaxed">
+              J&apos;applique exactement les mêmes prix, déplacement compris, à{" "}
+              <Link href="/serrurier-cagnes-sur-mer/" className="text-steel underline">
+                Cagnes-sur-Mer
+              </Link>
+              ,{" "}
+              <Link href="/serrurier-saint-laurent-du-var/" className="text-steel underline">
+                Saint-Laurent-du-Var
+              </Link>
+              ,{" "}
+              <Link href="/serrurier-villefranche-sur-mer/" className="text-steel underline">
+                Villefranche-sur-Mer
+              </Link>
+              ,{" "}
+              <Link href="/serrurier-beaulieu-sur-mer/" className="text-steel underline">
+                Beaulieu-sur-Mer
+              </Link>{" "}
+              et{" "}
+              <Link href="/serrurier-eze/" className="text-steel underline">
+                Èze
+              </Link>
+              . Aucun supplément selon la commune ou le quartier.
+            </p>
+          </section>
+
+          <section className="mx-auto max-w-4xl px-4 pb-10">
+            <h2 className="font-heading text-xl font-bold text-navy mb-2">
+              Professionnels : syndics, agences, conciergeries
+            </h2>
+            <p className="text-slate leading-relaxed">
+              Les dépannages sont aux mêmes prix que pour les particuliers. L&apos;audit, l&apos;entretien et les
+              travaux sur devis sont à 60 € HT de l&apos;heure de main-d&apos;œuvre, déplacement compris. Le détail
+              est sur{" "}
+              <Link href="/agences-syndics-nice/" className="text-steel underline">
+                ma page syndics, agences et conciergeries
+              </Link>
+              .
+            </p>
+          </section>
+        </>
+      )}
 
       <section className="mx-auto max-w-4xl px-4">
         <div className="bg-steel/10 border border-navy/10 rounded-xl p-5 sm:p-6">
@@ -609,25 +565,15 @@ export default function TarifsBody() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="text-sm text-slate mt-3">
-            {locale === "fr" ? (
-              <>
-                Le détail de ces garanties d&apos;assistance est expliqué sur ma page{" "}
-                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-                  urgence serrurier
-                </Link>
-                .
-              </>
-            ) : (
-              <>
-                More on these assistance covers on my{" "}
-                <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-                  emergency callout
-                </Link>{" "}
-                page.
-              </>
-            )}
-          </p>
+          {locale === "en" && (
+            <p className="text-sm text-slate mt-3">
+              More on these assistance covers on my{" "}
+              <Link href="/urgence-serrurier-nice/" className="text-steel underline">
+                emergency callout
+              </Link>{" "}
+              page.
+            </p>
+          )}
         </div>
       </section>
 
