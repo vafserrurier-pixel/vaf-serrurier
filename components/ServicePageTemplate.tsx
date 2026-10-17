@@ -100,6 +100,7 @@ export default function ServicePageTemplate({
   lead,
   leadContent,
   hideProcessSteps = false,
+  reviewsBeforeFaq = false,
   sections,
   faq,
   breadcrumbLabel,
@@ -124,6 +125,8 @@ export default function ServicePageTemplate({
   leadContent?: ReactNode;
   /** Masque le bloc "Comment se deroule mon intervention" (et ses delais) quand le texte de la page le remplace. */
   hideProcessSteps?: boolean;
+  /** Place le bloc d'avis Google avant la FAQ au lieu d'après (désactivé par défaut). */
+  reviewsBeforeFaq?: boolean;
   sections: ServiceSection[];
   faq: FaqItem[];
   breadcrumbLabel: string;
@@ -171,6 +174,14 @@ export default function ServicePageTemplate({
   const url = `${business.domain}${path}`;
   const t = strings[locale];
   const h2Size = headingScale === "lg" ? "text-2xl sm:text-3xl" : "text-2xl";
+
+  const reviewsSection = (
+    <section className="bg-white border-y border-navy/10">
+      <div className="mx-auto max-w-4xl px-4 py-12">
+        <ReviewsSection locale={locale} />
+      </div>
+    </section>
+  );
 
   return (
     <>
@@ -347,6 +358,8 @@ export default function ServicePageTemplate({
 
       {extra}
 
+      {reviewsBeforeFaq && reviewsSection}
+
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.faqTitle}</h2>
         <FaqAccordion items={faq} />
@@ -363,11 +376,7 @@ export default function ServicePageTemplate({
         </section>
       )}
 
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12">
-          <ReviewsSection locale={locale} />
-        </div>
-      </section>
+      {!reviewsBeforeFaq && reviewsSection}
 
       {guide}
 
