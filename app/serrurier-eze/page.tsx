@@ -1,69 +1,199 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import ArticleTable from "@/components/ArticleTable";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-eze/",
-  title: "Serrurier à Èze – Village perché & bord de mer",
-  description: "Serrurier à Èze (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+  title: "Serrurier Èze : village perché, bord de mer, col d'Èze",
+  description:
+    "Serrurier à Èze 24h/24 : village perché, Èze-bord-de-mer, col d'Èze, Saint-Laurent-d'Èze. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });
 
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+
 const intro = [
-  "J'interviens à Èze aussi bien dans le village perché que sur le littoral d'Èze-bord-de-mer, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'une résidence secondaire.",
-  "Comme partout ailleurs, la méthode reste la même : je diagnostique la situation au téléphone, j'annonce un prix avant de me déplacer, et je m'adapte au bâti réel une fois sur place, qu'il s'agisse d'une porte ancienne dans les ruelles du village ou d'une villa récente sur les hauteurs.",
+  "Une porte claquée dans une maison du village perché, une villa du col d'Èze à protéger avant de partir, une serrure qui bloque à Èze-bord-de-mer : j'interviens dans toute la commune, 24h/24 et 7j/7, en 30 minutes en urgence. Mes prix sont les mêmes qu'à Nice, déplacement compris, et je vous les annonce au téléphone avant de partir.",
+];
+
+const quartierRows: [string, string][] = [
+  ["Le village perché", "Les ruelles du vieux village, le Jardin exotique au sommet"],
+  ["Èze-bord-de-mer", "La gare, la plage et les villas du littoral"],
+  ["Le col d'Èze", "Les villas des hauteurs, le long de la Grande Corniche"],
+  ["Saint-Laurent-d'Èze", "Le hameau des hauteurs, au-dessus du village"],
 ];
 
 const blocks = [
   {
-    heading: "Un village entre hauteurs médiévales et bord de mer",
+    heading: "Les quartiers d'Èze où j'interviens",
+    paragraphs: [],
+    extra: (
+      <ArticleTable headers={["Quartier", "Repères"]} rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])} />
+    ),
+  },
+  {
+    heading: "Mêmes prix qu'à Nice, déplacement compris",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Èze est juste après{" "}
+          <Link href="/serrurier-beaulieu-sur-mer/" className={linkClass}>
+            Beaulieu-sur-Mer
+          </Link>
+          , entre Nice et Monaco : je n&apos;y compte aucun supplément de déplacement, que vous soyez au bord de la mer
+          ou en haut du col.
+        </p>
+        <ArticleTable
+          headers={["Intervention", "En journée", "Après 19 h, week-end, jours fériés"]}
+          rows={[
+            [
+              <Link key="claquee" href="/ouverture-de-porte-nice/" className={linkClass}>
+                Porte claquée
+              </Link>,
+              "149 €",
+              "189 €",
+            ],
+            ["Porte fermée à clé", "149 € + cylindre (dès 249 €)", "209 € + cylindre"],
+            ["Changement de cylindre", "Dès 249 €", "Prix annoncé au téléphone"],
+            ["Poignée blindée posée", "349 €", "Sur rendez-vous"],
+            ["Serrure carénée 5 points posée", "1 249 €", "Sur rendez-vous"],
+            ["Blindage de porte", "Dès 2 689 €", "Sur rendez-vous"],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Prix TTC, déplacement compris. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Le village perché : à pied depuis l'entrée du village",
     paragraphs: [
-      "Èze se distingue par sa double géographie : le village perché, à 429 mètres d'altitude, avec ses ruelles pavées étroites et ses bâtisses médiévales, et Èze-bord-de-mer, sur le littoral, plus résidentiel. Les deux secteurs n'ont pas les mêmes besoins en serrurerie.",
-      "Dans le village historique, je retrouve souvent des portes anciennes, parfois classées ou protégées, avec des mécanismes qu'il faut savoir diagnostiquer sans les abîmer. Sur le bord de mer et les hauteurs environnantes, ce sont plutôt des constructions plus récentes, avec des serrures multipoints ou des portes blindées à entretenir.",
+      "Dans le village perché, les voitures restent à l'entrée : on monte ensuite à pied, par des ruelles étroites et des escaliers. Je viens avec mon matériel et je finis à pied jusqu'à votre porte. Au téléphone, dites-moi par où arriver, ou attendez-moi à l'entrée du village si c'est plus simple.",
+      <>
+        Beaucoup de portes y sont anciennes, en bois massif. Je cherche d&apos;abord à les ouvrir sans les abîmer. Quand
+        la serrure d&apos;origine fonctionne encore, il suffit souvent de{" "}
+        <Link href="/changement-serrure-nice/" className={linkClass}>
+          changer le cylindre
+        </Link>{" "}
+        pour garder la porte telle qu&apos;elle est.
+      </>,
     ],
   },
   {
-    heading: "Villas et résidences secondaires : une vigilance particulière",
-    paragraphs: [
-      "Èze compte une proportion importante de villas et de résidences secondaires, occupées de façon intermittente selon les saisons. Cette situation appelle une vigilance particulière : une serrure certifiée A2P, une porte en bon état et parfois un renforcement des points d'accès réduisent nettement le risque pendant les périodes d'absence prolongée.",
-      "J'interviens aussi bien pour un dépannage ponctuel (porte claquée à l'arrivée après plusieurs semaines d'absence) que pour un projet plus large de sécurisation avant une longue période d'inoccupation.",
-    ],
+    heading: "Villas des hauteurs : comment je trouve votre maison",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Au col d&apos;Èze, à Saint-Laurent-d&apos;Èze ou au-dessus du bord de mer, beaucoup de villas sont au bout
+          d&apos;un chemin ou derrière un portail, sans numéro visible depuis la route. Pour que j&apos;arrive en 30
+          minutes, donnez-moi au téléphone :
+        </p>
+        <ul className={listClass}>
+          <li>l&apos;adresse et un repère visible depuis la route ;</li>
+          <li>le code ou la sonnette du portail, si je dois le franchir ;</li>
+          <li>si vous pouvez, votre position par WhatsApp.</li>
+        </ul>
+      </>
+    ),
   },
   {
-    heading: "Un accès qui demande de l'organisation",
+    heading: "Avant une longue absence : protéger la porte d'entrée",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Une villa fermée plusieurs mois doit tenir seule. Selon l&apos;état de la porte d&apos;entrée, je propose :
+        </p>
+        <ul className={listClass}>
+          <li>
+            une{" "}
+            <strong className="text-navy">
+              <Link href="/poignee-blindee-nice/" className={linkClass}>
+                poignée blindée
+              </Link>
+            </strong>{" "}
+            pour protéger un cylindre qui dépasse (349 €) ;
+          </li>
+          <li>
+            une{" "}
+            <strong className="text-navy">
+              <Link href="/serrure-carenee-nice/" className={linkClass}>
+                serrure carénée 5 points
+              </Link>
+            </strong>{" "}
+            pour une porte qui ne ferme que sur un point (1 249 €) ;
+          </li>
+          <li>
+            un{" "}
+            <strong className="text-navy">
+              <Link href="/blindage-porte-nice/" className={linkClass}>
+                blindage de porte
+              </Link>
+            </strong>{" "}
+            pour une porte en bois sain que vous voulez garder (dès 2 689 €).
+          </li>
+        </ul>
+        <p className={pClass}>
+          Si vous découvrez une tentative d&apos;effraction à votre retour, je fais d&apos;abord la{" "}
+          <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+            mise en sécurité
+          </Link>{" "}
+          pour que la maison ferme le soir même, puis on choisit le renfort au calme.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Exemple type",
     paragraphs: [
-      "La route entre Nice et Èze passe par la Moyenne Corniche ou le bord de mer, avec des virages et une circulation qui peut ralentir aux heures de pointe estivales. J'en tiens compte dans mon estimation de délai, annoncée avant le déplacement plutôt qu'un chiffre optimiste non tenu.",
+      "Exemple type, une situation fréquente et non un client précis : un jeudi, sur rendez-vous, les propriétaires d'une villa du col d'Èze veulent protéger leur porte d'entrée avant de partir trois mois. Le cylindre dépasse de la porte, ce qui le rend facile à attaquer. Je pose une poignée blindée qui le recouvre : 349 € TTC posée, déplacement compris, prix annoncé au téléphone.",
     ],
   },
 ];
 
-const safetyParagraph =
-  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune d'Èze. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur (un repère régional plutôt qu'une donnée précise pour Èze). Les résidences secondaires et villas isolées, plus nombreuses ici que dans le centre de Nice, restent statistiquement des cibles recherchées lors des périodes d'absence prolongée. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
-
 const faq = [
   {
-    question: "Intervenez-vous aussi bien dans le village perché qu'à Èze-bord-de-mer ?",
-    answer:
-      "Oui, je me déplace sur l'ensemble de la commune, que ce soit dans les ruelles du village historique ou sur le littoral d'Èze-bord-de-mer.",
+    question: "Quels quartiers d'Èze couvrez-vous ?",
+    answer: "Toute la commune : le village perché, Èze-bord-de-mer, le col d'Èze et Saint-Laurent-d'Èze.",
   },
   {
-    question: "Pouvez-vous intervenir sur une porte ancienne dans le village médiéval ?",
-    answer:
-      "Oui, je diagnostique le mécanisme avant d'intervenir, pour préserver autant que possible une porte ancienne plutôt que de la remplacer systématiquement.",
+    question: "En combien de temps arrivez-vous à Èze ?",
+    answer: "En urgence, en 30 minutes, 24h/24 et 7j/7, en bas comme en haut de la commune.",
   },
   {
-    question: "Proposez-vous une sécurisation pour une résidence secondaire inoccupée une partie de l'année ?",
+    question: "Le déplacement jusqu'à Èze est-il facturé en plus ?",
     answer:
-      "Oui, je peux évaluer les points d'accès et proposer un renforcement adapté (serrure A2P, porte blindée) avant une période d'absence prolongée.",
+      "Non. Les prix sont les mêmes qu'à Nice, déplacement compris : 149 € en journée pour une porte claquée, 189 € le soir, le week-end et les jours fériés.",
   },
   {
-    question: "Quel est votre délai d'intervention à Èze ?",
+    question: "J'habite dans le village perché : pouvez-vous venir jusqu'à ma porte ?",
     answer:
-      "Généralement 30 minutes depuis mon point de départ à Nice. Je vous donne une estimation précise au téléphone.",
+      "Oui. Je laisse mon véhicule à l'entrée du village et je finis à pied avec mon matériel. Dites-moi par où arriver, ou attendez-moi à l'entrée.",
   },
   {
-    question: "Donnez-vous un devis avant de vous déplacer jusqu'à Èze ?",
+    question: "Ma villa est au bout d'un chemin : comment me trouvez-vous ?",
     answer:
-      "Oui, toujours. Le prix est annoncé au téléphone avant le déplacement, quelle que soit la commune.",
+      "Donnez-moi au téléphone l'adresse, un repère visible depuis la route et le code du portail, ou envoyez votre position par WhatsApp.",
+  },
+  {
+    question: "Je pars plusieurs mois : comment protéger ma porte ?",
+    answer:
+      "Selon l'état de la porte : une poignée blindée (349 €), une serrure carénée 5 points (1 249 €) ou un blindage de porte (dès 2 689 €). Je regarde la porte avant de vous conseiller.",
+  },
+  {
+    question: "Intervenez-vous aussi à Cap-d'Ail et à La Turbie ?",
+    answer:
+      "Oui, comme dans toutes les autres communes autour de Nice, avec un prix annoncé au téléphone avant de partir.",
   },
 ];
 
@@ -71,12 +201,14 @@ export default function SerrurierEzePage() {
   return (
     <CommunePageTemplate
       commune="Èze"
+      h1="Serrurier à Èze : village perché, Èze-bord-de-mer, col d'Èze"
       intro={intro}
+      heroDelayLine="Sur place en 30 minutes en urgence, depuis ma boutique du 2 rue Antoine Gautier, 06300 Nice."
       blocks={blocks}
       travelEstimate="30 min"
-      safetyParagraph={safetyParagraph}
       faq={faq}
-      path="/serrurier-eze/"
+      rewrite
+      path="/serrurier-eze/"
     />
   );
 }
