@@ -1,69 +1,210 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import ArticleTable from "@/components/ArticleTable";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-villefranche-sur-mer/",
-  title: "Serrurier Villefranche-sur-Mer – Vieille ville & rade",
-  description: "Serrurier à Villefranche-sur-Mer (06) : dépannage, ouverture de porte, changement de serrure. Devis annoncé avant intervention, 24h/24.",
+  title: "Serrurier Villefranche-sur-Mer : 149 €, déplacement compris",
+  description:
+    "Serrurier à Villefranche-sur-Mer 24h/24 : vieille ville, port de la Santé, villas des hauteurs. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });
 
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+const listClass = "list-disc pl-5 flex flex-col gap-1.5 text-slate leading-relaxed mb-2";
+
 const intro = [
-  "J'interviens à Villefranche-sur-Mer aussi bien dans la vieille ville, sur ses ruelles voûtées, que sur les hauteurs et le front de mer, pour tout type de serrurerie : porte claquée, cylindre à changer, ou sécurisation d'une résidence secondaire.",
-  "Comme partout ailleurs, la méthode reste la même : je diagnostique la situation au téléphone, j'annonce un prix avant de me déplacer, et je m'adapte au bâti réel une fois sur place, qu'il s'agisse d'une porte ancienne dans la vieille ville ou d'une villa récente sur les hauteurs.",
+  "Une porte claquée dans un appartement de la vieille ville, une villa des hauteurs qui ne s'ouvre plus au retour de l'hiver, un meublé à sécuriser entre deux locations : j'interviens dans tout Villefranche-sur-Mer, 24h/24 et 7j/7, en 30 minutes en urgence. Mes prix sont les mêmes qu'à Nice, déplacement compris, et je vous les annonce au téléphone avant de partir.",
+];
+
+const quartierRows: [string, string][] = [
+  ["Vieille ville", "La rue Obscure, les ruelles en escalier, la chapelle Saint-Pierre"],
+  ["Port de la Santé", "Le petit port au pied de la vieille ville"],
+  ["Citadelle et Darse", "La citadelle Saint-Elme et le port de la Darse"],
+  ["Les Marinières", "La plage des Marinières et la gare"],
+  ["Les hauteurs", "Les villas au-dessus de la rade, jusqu'au col de Villefranche"],
 ];
 
 const blocks = [
   {
-    heading: "Une ville entre rade profonde et vieille ville médiévale",
+    heading: "Les quartiers de Villefranche-sur-Mer où j'interviens",
+    paragraphs: [],
+    extra: (
+      <ArticleTable headers={["Quartier", "Repères"]} rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])} />
+    ),
+  },
+  {
+    heading: "Mêmes prix qu'à Nice, déplacement compris",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Villefranche-sur-Mer est juste après le Mont Boron, en sortant de Nice par l&apos;est : je n&apos;y compte
+          aucun supplément de déplacement.
+        </p>
+        <ArticleTable
+          headers={["Intervention", "En journée", "Après 19 h, week-end, jours fériés"]}
+          rows={[
+            [
+              <Link key="claquee" href="/ouverture-de-porte-nice/" className={linkClass}>
+                Porte claquée
+              </Link>,
+              "149 €",
+              "189 €",
+            ],
+            ["Porte fermée à clé", "149 € + cylindre (dès 249 €)", "209 € + cylindre"],
+            ["Changement de cylindre", "Dès 249 €", "Prix annoncé au téléphone"],
+            ["Poignée blindée posée", "349 €", "Sur rendez-vous"],
+            ["Serrure carénée 5 points posée", "1 249 €", "Sur rendez-vous"],
+            ["Blindage de porte", "Dès 2 689 €", "Sur rendez-vous"],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Prix TTC, déplacement compris. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Vieille ville : ruelles en escalier et portes anciennes",
     paragraphs: [
-      "Villefranche-sur-Mer se distingue par sa rade, l'une des plus profondes de Méditerranée, et sa vieille ville aux ruelles étroites, dont la célèbre rue Obscure, un passage voûté du XIIIe siècle classé monument historique. La citadelle Saint-Elme, construite en 1557 sous l'impulsion du duc de Savoie Emmanuel-Philibert pour défendre la rade, abrite aujourd'hui plusieurs musées et la mairie.",
-      "Dans la vieille ville, je retrouve souvent des portes anciennes aux mécanismes qu'il faut savoir diagnostiquer sans les abîmer. Sur les hauteurs et le front de mer, ce sont plutôt des constructions plus récentes, avec des serrures multipoints ou des portes blindées à entretenir.",
+      "Dans la vieille ville, entre le port de la Santé et la rue Obscure, on ne circule qu'à pied, par des ruelles en pente et des escaliers. Au téléphone, dites-moi par quelle rue arriver et où je peux laisser mon véhicule au plus près : vous gagnez du temps.",
+      <>
+        Beaucoup de portes y sont anciennes, en bois épais. Je cherche d&apos;abord à les ouvrir sans les abîmer. Quand
+        la serrure d&apos;origine fonctionne encore, il suffit souvent de{" "}
+        <Link href="/changement-serrure-nice/" className={linkClass}>
+          changer le cylindre
+        </Link>
+        , sans toucher au reste de la porte.
+      </>,
     ],
   },
   {
-    heading: "Villas des hauteurs et copropriétés du front de mer",
-    paragraphs: [
-      "Comme dans beaucoup de communes du littoral, Villefranche-sur-Mer compte une part de résidences secondaires et de villas occupées de façon intermittente selon les saisons. Une serrure certifiée A2P, une porte en bon état et parfois un renforcement des points d'accès réduisent nettement le risque pendant les périodes d'absence prolongée.",
-      "J'interviens aussi bien pour un dépannage ponctuel que pour un projet de sécurisation avant une longue période d'inoccupation, sur une villa des hauteurs comme sur un appartement du front de mer.",
-    ],
+    heading: "Résidences secondaires et locations : avant de fermer pour la saison",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          À Villefranche-sur-Mer, beaucoup d&apos;appartements et de villas ne sont occupés qu&apos;une partie de
+          l&apos;année, ou loués à la semaine. Trois précautions évitent la plupart des mauvaises surprises :
+        </p>
+        <ul className={listClass}>
+          <li>
+            <strong className="text-navy">Savoir combien de clés existent.</strong> Si un jeu a été prêté, perdu ou
+            n&apos;est pas revenu après une location, changez le cylindre avant de partir.
+          </li>
+          <li>
+            <strong className="text-navy">Faire jouer la serrure avant de fermer.</strong> Près de la mer, un cylindre
+            qui ne sert pas pendant des mois peut se gripper. Si la clé force déjà, faites-le changer tant que vous êtes
+            là.
+          </li>
+          <li>
+            <strong className="text-navy">Laisser un double à une personne de confiance</strong>, plutôt que sous un
+            pot de fleurs.
+          </li>
+        </ul>
+      </>
+    ),
   },
   {
-    heading: "Un accès direct par la Corniche",
+    heading: "Villas des hauteurs : renforcer la porte d'entrée",
+    paragraphs: [],
+    extra: (
+      <>
+        <p className={pClass}>
+          Sur les hauteurs, au-dessus de la rade, les villas isolées restent souvent fermées plusieurs semaines. Selon
+          l&apos;état de la porte d&apos;entrée, je propose :
+        </p>
+        <ul className={listClass}>
+          <li>
+            une{" "}
+            <strong className="text-navy">
+              <Link href="/poignee-blindee-nice/" className={linkClass}>
+                poignée blindée
+              </Link>
+            </strong>{" "}
+            pour protéger un cylindre qui dépasse (349 €) ;
+          </li>
+          <li>
+            une{" "}
+            <strong className="text-navy">
+              <Link href="/serrure-carenee-nice/" className={linkClass}>
+                serrure carénée 5 points
+              </Link>
+            </strong>{" "}
+            pour une porte qui ne ferme que sur un point (1 249 €) ;
+          </li>
+          <li>
+            un{" "}
+            <strong className="text-navy">
+              <Link href="/blindage-porte-nice/" className={linkClass}>
+                blindage de porte
+              </Link>
+            </strong>{" "}
+            pour une porte en bois sain que vous voulez garder (dès 2 689 €).
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    heading: "Exemple type",
     paragraphs: [
-      "Villefranche-sur-Mer est la commune la plus proche de Nice sur la Corniche, à environ 8 kilomètres par la Corniche André-de-Joly ou le boulevard de la Corne-d'Or. J'en tiens compte dans mon estimation de délai, annoncée avant le déplacement plutôt qu'un chiffre optimiste non tenu.",
+      "Exemple type, une situation fréquente et non un client précis : un mardi à 11 heures, les propriétaires d'une villa des hauteurs arrivent pour le printemps. La clé ne tourne plus dans le cylindre, resté fermé tout l'hiver. J'ouvre la porte fermée à clé en perçant le cylindre, jamais la porte, puis je pose un cylindre neuf avec des clés neuves : 149 € pour l'ouverture et 249 € pour le cylindre standard, soit 398 € TTC en journée, déplacement compris, annoncés au téléphone.",
     ],
   },
 ];
 
-const safetyParagraph =
-  "Je n'ai pas trouvé de statistique officielle de cambriolages spécifique à la commune de Villefranche-sur-Mer. Elle fait partie du département des Alpes-Maritimes, où le taux moyen de cambriolages était de 0,43 % des logements en 2025 selon les chiffres du ministère de l'Intérieur (un repère régional plutôt qu'une donnée précise pour Villefranche-sur-Mer). Les résidences secondaires et villas isolées, plus nombreuses ici que dans le centre de Nice, restent statistiquement des cibles recherchées lors des périodes d'absence prolongée. Une serrure certifiée A2P et une porte en bon état réduisent nettement le risque, quelle que soit la commune.";
-
 const faq = [
   {
-    question: "Intervenez-vous aussi bien dans la vieille ville que sur les hauteurs de Villefranche-sur-Mer ?",
+    question: "Quels quartiers de Villefranche-sur-Mer couvrez-vous ?",
     answer:
-      "Oui, je me déplace sur l'ensemble de la commune, que ce soit dans les ruelles de la vieille ville ou sur les hauteurs et le front de mer.",
+      "Toute la commune : la vieille ville, le port de la Santé, la citadelle et la Darse, les Marinières et les hauteurs jusqu'au col de Villefranche.",
   },
   {
-    question: "Pouvez-vous intervenir sur une porte ancienne dans la vieille ville ?",
-    answer:
-      "Oui, je diagnostique le mécanisme avant d'intervenir, pour préserver autant que possible une porte ancienne plutôt que de la remplacer systématiquement.",
+    question: "En combien de temps arrivez-vous à Villefranche-sur-Mer ?",
+    answer: "En urgence, en 30 minutes, 24h/24 et 7j/7.",
   },
   {
-    question: "Proposez-vous une sécurisation pour une résidence secondaire inoccupée une partie de l'année ?",
+    question: "Le déplacement jusqu'à Villefranche-sur-Mer est-il facturé en plus ?",
     answer:
-      "Oui, je peux évaluer les points d'accès et proposer un renforcement adapté (serrure A2P, porte blindée) avant une période d'absence prolongée.",
+      "Non. Les prix sont les mêmes qu'à Nice, déplacement compris : 149 € en journée pour une porte claquée, 189 € le soir, le week-end et les jours fériés.",
   },
   {
-    question: "Quel est votre délai d'intervention à Villefranche-sur-Mer ?",
+    question: "J'habite dans la vieille ville, où les voitures ne passent pas : comment me trouvez-vous ?",
     answer:
-      "Généralement 30 minutes depuis mon point de départ à Nice par la Corniche. Je vous donne une estimation précise au téléphone.",
+      "Indiquez-moi au téléphone la rue par laquelle arriver et l'endroit le plus proche où me garer. Je finis à pied avec mon matériel.",
   },
   {
-    question: "Donnez-vous un devis avant de vous déplacer jusqu'à Villefranche-sur-Mer ?",
+    question: "Ma résidence secondaire reste fermée l'hiver : que faire avant de partir ?",
     answer:
-      "Oui, toujours. Le prix est annoncé au téléphone avant le déplacement, quelle que soit la commune.",
+      "Vérifiez combien de clés existent, faites jouer la serrure, et changez le cylindre si la clé force ou si un jeu manque. Pour une villa isolée, une poignée blindée ou une serrure carénée renforce la porte.",
+  },
+  {
+    question: "La clé ne tourne plus après plusieurs mois d'absence : que se passe-t-il ?",
+    answer:
+      "Le cylindre s'est sans doute grippé. J'ouvre la porte en perçant le cylindre, jamais la porte, puis je pose un cylindre neuf : 398 € TTC en journée, ouverture et cylindre compris.",
+  },
+  {
+    question: "Intervenez-vous aussi dans les communes voisines ?",
+    answer: (
+      <>
+        Oui.{" "}
+        <Link href="/serrurier-beaulieu-sur-mer/" className={linkClass}>
+          Beaulieu-sur-Mer
+        </Link>{" "}
+        a sa page, et j&apos;interviens aussi à Saint-Jean-Cap-Ferrat et dans toutes les autres communes autour de
+        Nice.
+      </>
+    ),
+    schemaText:
+      "Oui. Beaulieu-sur-Mer a sa page, et j'interviens aussi à Saint-Jean-Cap-Ferrat et dans toutes les autres communes autour de Nice.",
   },
 ];
 
@@ -71,12 +212,14 @@ export default function SerrurierVillefrancheSurMerPage() {
   return (
     <CommunePageTemplate
       commune="Villefranche-sur-Mer"
+      h1="Serrurier à Villefranche-sur-Mer : vieille ville, port de la Santé, villas des hauteurs"
       intro={intro}
+      heroDelayLine="Sur place en 30 minutes en urgence, depuis ma boutique du 2 rue Antoine Gautier, 06300 Nice."
       blocks={blocks}
       travelEstimate="30 min"
-      safetyParagraph={safetyParagraph}
       faq={faq}
-      path="/serrurier-villefranche-sur-mer/"
+      rewrite
+      path="/serrurier-villefranche-sur-mer/"
     />
   );
 }
