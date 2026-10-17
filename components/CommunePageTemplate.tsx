@@ -24,7 +24,7 @@ import { mainServicesByLocale } from "@/lib/relatedServicesDefault";
 import { pickPortrait } from "@/lib/photos";
 import { contentDates } from "@/lib/contentDates.generated";
 
-export type ContentBlock = { heading: string; paragraphs: ReactNode[] };
+export type ContentBlock = { heading: string; paragraphs: ReactNode[]; extra?: ReactNode };
 
 export default function CommunePageTemplate({
   commune,
@@ -40,12 +40,15 @@ export default function CommunePageTemplate({
   mapQuery,
   mapTitle,
   photoAlt,
+  h1,
+  heroDelayLine,
+  rewrite = false,
 }: {
   commune: string;
   intro: string[];
   blocks: ContentBlock[];
   travelEstimate: string;
-  safetyParagraph: string;
+  safetyParagraph?: string;
   faq: FaqItem[];
   path: string;
   /** Par défaut (non fourni), affiche la liste canonique des 10 services (voir RelatedServicesGrid / lib/relatedServicesDefault.ts). */
@@ -59,11 +62,41 @@ export default function CommunePageTemplate({
   mapTitle?: string;
   /** Texte alternatif de la photo d'en-tête quand la valeur par défaut ne convient pas. */
   photoAlt?: string;
+  /** Titre H1 quand il diffère de « Serrurier à {commune} ». */
+  h1?: string;
+  /** Remplace la ligne « Délai habituel depuis… » sous les boutons. */
+  heroDelayLine?: string;
+  /**
+   * Mise en page des communes dont le texte a été réécrit (désactivée par défaut) : les sections de
+   * contenu passent avant « Services disponibles » ; le bloc d'étapes, la grille de tarifs, les marques
+   * et le paragraphe cambriolages ne sont pas affichés (le texte de la page les remplace).
+   */
+  rewrite?: boolean;
 }) {
   const url = `${business.domain}${path}`;
   const nearbyCommunes = relatedCommunes(commune);
   const photo = pickPortrait(commune);
   const services = relatedServices ?? mainServicesByLocale.fr;
+
+  const blocksSection = (
+    <section className="bg-white border-y border-navy/10">
+      <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
+        {blocks.map((block) => (
+          <div key={block.heading}>
+            <h2 className="font-heading text-2xl font-bold text-navy mb-3">
+              {block.heading}
+            </h2>
+            {block.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-slate leading-relaxed mb-2">
+                {paragraph}
+              </p>
+            ))}
+            {block.extra}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 
   return (
     <>
@@ -97,7 +130,7 @@ export default function CommunePageTemplate({
             />
             <AvailabilityBadge />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">
-              Serrurier à {commune}
+              {h1 ?? `Serrurier à ${commune}`}
             </h1>
             {intro.map((paragraph, index) => (
               <p key={index} className="mt-4 text-slate leading-relaxed max-w-2xl">
@@ -129,8 +162,12 @@ export default function CommunePageTemplate({
               </Link>
             </div>
             <p className="mt-3 text-xs text-slate">
-              Délai habituel depuis le {business.address.full} : {travelEstimate} selon
-              circulation
+              {heroDelayLine ?? (
+                <>
+                  Délai habituel depuis le {business.address.full} : {travelEstimate} selon
+                  circulation
+                </>
+              )}
             </p>
           </div>
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
@@ -155,24 +192,30 @@ export default function CommunePageTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-3 text-center">
-          Comment se déroule mon intervention à {commune}
-        </h2>
-        <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
-          De votre appel au règlement : un déroulement simple, sans zone d&apos;ombre.
-        </p>
-        <ProcessSteps place={commune} delayEstimate={travelEstimate} steps={processSteps} />
-      </section>
-
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
-            Mes tarifs à {commune}
+      {!rewrite && (
+        <section className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-3 text-center">
+            Comment se déroule mon intervention à {commune}
           </h2>
-          <PricingTable travelLabel="jusqu'à 30 min de route" />
-        </div>
-      </section>
+          <p className="text-slate text-sm mb-6 text-center max-w-xl mx-auto">
+            De votre appel au règlement : un déroulement simple, sans zone d&apos;ombre.
+          </p>
+          <ProcessSteps place={commune} delayEstimate={travelEstimate} steps={processSteps} />
+        </section>
+      )}
+
+      {!rewrite && (
+        <section className="bg-white border-y border-navy/10">
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
+              Mes tarifs à {commune}
+            </h2>
+            <PricingTable travelLabel="jusqu'à 30 min de route" />
+          </div>
+        </section>
+      )}
+
+      {rewrite && blocksSection}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">
@@ -184,55 +227,44 @@ export default function CommunePageTemplate({
         <RelatedServicesGrid items={services} lieu={commune} />
       </section>
 
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
-          {blocks.map((block) => (
-            <div key={block.heading}>
-              <h2 className="font-heading text-2xl font-bold text-navy mb-3">
-                {block.heading}
-              </h2>
-              {block.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-slate leading-relaxed mb-2">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
+      {!rewrite && blocksSection}
 
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
-          Marques de serrures que je pose
-        </h2>
-        <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center">
-          Je travaille avec les grandes marques du marché, quel que soit le modèle déjà installé
-          chez vous : Fichet, Picard, Héraclès et d&apos;autres.{" "}
-          <Link href="/changement-serrure-nice/#marques" className="text-steel underline font-medium">
-            Voir le détail des marques que je pose →
-          </Link>
-        </p>
-      </section>
-
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-3">
-            Sécurité et cambriolages : la réalité du secteur
+      {!rewrite && (
+        <section className="mx-auto max-w-4xl px-4 py-12">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
+            Marques de serrures que je pose
           </h2>
-          <p className="text-slate leading-relaxed">{safetyParagraph}</p>
-          <p className="text-xs text-slate mt-2">
-            Source :{" "}
-            <a
-              href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-steel"
-            >
-              Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
-            </a>
+          <p className="text-slate leading-relaxed max-w-2xl mx-auto text-center">
+            Je travaille avec les grandes marques du marché, quel que soit le modèle déjà installé
+            chez vous : Fichet, Picard, Héraclès et d&apos;autres.{" "}
+            <Link href="/changement-serrure-nice/#marques" className="text-steel underline font-medium">
+              Voir le détail des marques que je pose →
+            </Link>
           </p>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {!rewrite && (
+        <section className="bg-white border-y border-navy/10">
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h2 className="font-heading text-2xl font-bold text-navy mb-3">
+              Sécurité et cambriolages : la réalité du secteur
+            </h2>
+            <p className="text-slate leading-relaxed">{safetyParagraph}</p>
+            <p className="text-xs text-slate mt-2">
+              Source :{" "}
+              <a
+                href="https://www.interieur.gouv.fr/Interstats/Infractions-et-sentiment-d-insecurite/Cambriolages"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-steel"
+              >
+                Ministère de l&apos;Intérieur : statistiques officielles des cambriolages
+              </a>
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">
