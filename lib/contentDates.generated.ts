@@ -7,7 +7,7 @@
 // <lastmod>, schema.org dateModified). Une page absente de cette table n'a pas de date fiable.
 export const contentDates: Record<string, string> = {
   "/a-propos/": "2026-10-09T08:23:26+02:00",
-  "/agences-syndics-nice/": "2026-10-09T08:23:26+02:00",
+  "/agences-syndics-nice/": "2026-10-17T11:13:49+02:00",
   "/blindage-porte-nice/": "2026-10-15T19:37:45+02:00",
   "/blog/certification-a2p-serrure-nice/": "2026-09-12",
   "/blog/changer-serrure-separation-divorce/": "2026-09-18",
