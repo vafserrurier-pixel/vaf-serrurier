@@ -46,7 +46,7 @@ export const serviceCardsByLocale: Record<Locale, Record<string, ServiceCard>> =
       Icon: WrenchIcon,
       image: {
         src: "/images/serrurier-nice-depannage-reparation.webp",
-        alt: "Dépannage serrurier Nice",
+        alt: "Urgence serrurier Nice",
       },
     },
     "/ouverture-de-porte-nice/": {

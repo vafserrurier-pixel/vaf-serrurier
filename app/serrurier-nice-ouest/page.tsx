@@ -48,6 +48,17 @@ const quartiersContent = (
       plaine du Var.
     </p>
     <ArticleTable headers={["Quartier", "Repères"]} rows={quartierRows.map(([quartier, reperes]) => [quartier, reperes])} />
+    <p className="text-slate leading-relaxed mt-4">
+      Juste de l&apos;autre côté du Var, j&apos;interviens aussi à{" "}
+      <Link href="/serrurier-saint-laurent-du-var/" className={linkClass}>
+        Saint-Laurent-du-Var
+      </Link>{" "}
+      et à{" "}
+      <Link href="/serrurier-cagnes-sur-mer/" className={linkClass}>
+        Cagnes-sur-Mer
+      </Link>
+      , aux mêmes prix qu&apos;à Nice, déplacement compris.
+    </p>
   </>
 );
 

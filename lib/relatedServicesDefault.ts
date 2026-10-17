@@ -9,7 +9,7 @@ import type { Locale } from "./locale";
 
 export const mainServicesByLocale: Record<Locale, { href: string; label: string }[]> = {
   fr: [
-    { href: "/urgence-serrurier-nice/", label: "Dépannage" },
+    { href: "/urgence-serrurier-nice/", label: "Urgence serrurier" },
     { href: "/ouverture-de-porte-nice/", label: "Ouverture de porte" },
     { href: "/changement-serrure-nice/", label: "Changement de serrure" },
     { href: "/serrure-carenee-nice/", label: "Serrure carénée 5 points" },

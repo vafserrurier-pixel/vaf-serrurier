@@ -193,7 +193,7 @@ const strings = {
     faqTitle: "Questions fréquentes sur les tarifs",
     needSomething: "Besoin d'un service en particulier ?",
     links: [
-      { href: "/urgence-serrurier-nice/", label: "Dépannage" },
+      { href: "/urgence-serrurier-nice/", label: "Urgence serrurier" },
       { href: "/ouverture-de-porte-nice/", label: "ouverture de porte" },
       { href: "/changement-serrure-nice/", label: "changement de serrure" },
       { href: "/blindage-porte-nice/", label: "blindage de porte" },
