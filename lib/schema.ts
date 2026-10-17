@@ -222,10 +222,18 @@ export function personSchema() {
       "Blindage de porte",
       "Coffre-fort",
     ],
-    areaServed: {
-      "@type": "City",
-      name: "Nice",
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      name: "CAP Serrurier Métallier",
     },
+    areaServed: [
+      "Nice",
+      "Cagnes-sur-Mer",
+      "Saint-Laurent-du-Var",
+      "Villefranche-sur-Mer",
+      "Beaulieu-sur-Mer",
+      "Èze",
+    ].map((name) => ({ "@type": "City", name })),
   };
 }
 

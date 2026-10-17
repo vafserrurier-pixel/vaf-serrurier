@@ -8,7 +8,7 @@ import { useLocale } from "@/lib/locale";
 
 const strings = {
   fr: {
-    who: "Qui suis-je",
+    who: "À propos",
     contact: "Contact",
     whatsapp: "Écrire sur WhatsApp",
     email: "Écrire par email",
