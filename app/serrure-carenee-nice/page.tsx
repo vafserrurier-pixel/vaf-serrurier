@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrure-carenee-nice/",
-  title: "Serrure carénée 5 points Nice : Héraclès, 1 249 € posée",
+  title: "Serrure carénée 5 points Nice : Héraclès Sésame A2P",
   description:
     "Serrure carénée 5 points à Nice : Héraclès Sésame A2P 1 étoile à 1 249 € TTC posée, pose garantie 2 ans, fabricant 10 ans. Tél. 04 22 13 85 44",
 });

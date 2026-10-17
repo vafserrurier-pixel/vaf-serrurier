@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/poignee-blindee-nice/",
-  title: "Poignée blindée Nice : Héraclès Salomé posée 349 €",
+  title: "Poignée blindée Nice : Héraclès Salomé, cylindre protégé",
   description:
     "Poignée blindée à Nice : Héraclès Salomé posée en une heure, 349 € TTC, cylindre caché et protégé, garantie fabricant 10 ans. Tél. 04 22 13 85 44",
 });
