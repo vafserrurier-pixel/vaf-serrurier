@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-beaulieu-sur-mer/",
-  title: "Serrurier Beaulieu-sur-Mer : 149 €, déplacement compris",
+  title: "Serrurier Beaulieu-sur-Mer : porte claquée, dépannage 24h/24",
   description:
     "Serrurier à Beaulieu-sur-Mer 24h/24 : port, baie des Fourmis, Petite Afrique, gare. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });

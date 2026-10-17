@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-villefranche-sur-mer/",
-  title: "Serrurier Villefranche-sur-Mer : 149 €, déplacement compris",
+  title: "Serrurier Villefranche-sur-Mer : dépannage 24h/24, villas",
   description:
     "Serrurier à Villefranche-sur-Mer 24h/24 : vieille ville, port de la Santé, villas des hauteurs. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });

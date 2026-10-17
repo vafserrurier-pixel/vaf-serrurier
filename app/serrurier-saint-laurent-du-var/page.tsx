@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-saint-laurent-du-var/",
-  title: "Serrurier Saint-Laurent-du-Var : 149 €, déplacement compris",
+  title: "Serrurier Saint-Laurent-du-Var : ouverture de porte 24h/24",
   description:
     "Serrurier à Saint-Laurent-du-Var 24h/24 : Vieux-Village, Cap 3000, les Pugets, Montaleigne. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });

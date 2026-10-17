@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-eze/",
-  title: "Serrurier Èze : village perché, bord de mer, col d'Èze",
+  title: "Serrurier Èze 24h/24 : village perché et villas, en 30 min",
   description:
     "Serrurier à Èze 24h/24 : village perché, Èze-bord-de-mer, col d'Èze, Saint-Laurent-d'Èze. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });

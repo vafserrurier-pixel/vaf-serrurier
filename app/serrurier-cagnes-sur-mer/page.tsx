@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-cagnes-sur-mer/",
-  title: "Serrurier Cagnes-sur-Mer 24h/24 : 149 €, déplacement compris",
+  title: "Serrurier Cagnes-sur-Mer : urgence 24h/24, arrivée en 30 min",
   description:
     "Serrurier à Cagnes-sur-Mer 24h/24 : Cros-de-Cagnes, Haut-de-Cagnes, hippodrome, Val Fleuri. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });
