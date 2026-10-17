@@ -48,5 +48,5 @@ export const contentDates: Record<string, string> = {
   "/serrurier-villefranche-sur-mer/": "2026-10-16T16:42:30+02:00",
   "/tarifs-serrurier-nice/": "2026-10-16T16:42:30+02:00",
   "/urgence-serrurier-nice/": "2026-10-15T18:39:14+02:00",
-  "/zones-intervention-nice/": "2026-10-16T19:28:49+02:00"
+  "/zones-intervention-nice/": "2026-10-17T09:08:49+02:00"
 };
