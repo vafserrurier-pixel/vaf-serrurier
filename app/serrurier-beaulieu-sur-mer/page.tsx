@@ -1,55 +1,91 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CommunePageTemplate from "@/components/CommunePageTemplate";
+import ArticleTable from "@/components/ArticleTable";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
   path: "/serrurier-beaulieu-sur-mer/",
-  title: "Serrurier Beaulieu-sur-Mer – Dépannage 24h/24",
+  title: "Serrurier Beaulieu-sur-Mer : 149 €, déplacement compris",
   description:
-    "Serrurier à Beaulieu-sur-Mer : ouverture de porte, changement de serrure, dépannage 24h/24, 7j/7. Arrivée en 30 minutes, prix annoncé avant intervention.",
+    "Serrurier à Beaulieu-sur-Mer 24h/24 : port, baie des Fourmis, Petite Afrique, gare. Sur place en 30 min, mêmes prix qu'à Nice. Tél. 04 22 13 85 44",
 });
 
+const linkClass = "text-steel underline";
+const pClass = "text-slate leading-relaxed mb-2";
+
 const intro = [
-  "J'interviens à Beaulieu-sur-Mer, la commune de la Côte d'Azur située entre Nice et Monaco, pour tout ce qui touche à la serrurerie : porte claquée, clé perdue ou cassée, cylindre à remplacer, serrure à renforcer. Que vous soyez près du port de plaisance, de la gare ou plus loin dans la commune, je me déplace chez vous.",
-  "Je pars de Nice, du 2 rue Antoine Gautier, et j'arrive en 30 minutes. Au téléphone, je vous annonce le prix avant de me déplacer, puis je le confirme sur place avant de commencer. Mes tarifs sont les mêmes qu'à Nice, sans supplément pour Beaulieu-sur-Mer.",
+  "Une porte claquée dans un appartement près du port, un cylindre qui force dans une location saisonnière, une clé cassée en rentrant de la plage : j'interviens dans tout Beaulieu-sur-Mer, 24h/24 et 7j/7, en 30 minutes en urgence. Mes prix sont les mêmes qu'à Nice, déplacement compris, et je vous les annonce au téléphone avant de partir.",
 ];
 
-const linkClass = "text-steel underline";
+const reperesRows: [string, string][] = [
+  ["Le port de plaisance", "Les résidences et les appartements du bord de mer"],
+  ["La baie des Fourmis", "La promenade et la Villa Kérylos"],
+  ["La Petite Afrique", "La plage au pied de la falaise, côté Monaco"],
+  ["Le centre", "La gare, la Rotonde, le casino et les commerces"],
+];
 
 const blocks = [
   {
-    heading: "Entre le port de plaisance, la gare et la Villa Kérylos",
-    paragraphs: [
-      "Beaulieu-sur-Mer s'étend sur le littoral, entre Nice et Monaco, et touche Villefranche-sur-Mer et Saint-Jean-Cap-Ferrat. On y repère facilement le port de plaisance, la gare desservie par les trains TER et la Villa Kérylos, construite entre 1902 et 1908 par Théodore Reinach dans le style d'une villa grecque antique, au bord de la baie des Fourmis.",
-      "Ces repères me servent d'abord à une chose : situer votre adresse quand vous m'appelez. Dites-moi dans quelle rue vous êtes, je vous donne un délai réaliste, et je viens avec le matériel adapté à votre porte.",
+    heading: "Les repères de Beaulieu-sur-Mer",
+    paragraphs: [],
+    extra: (
       <>
-        Beaulieu-sur-Mer se trouve à l&apos;est de Nice. Pour les quartiers de l&apos;est de la ville, voyez ma page
-        {" "}
-        <Link href="/serrurier-nice-est/" className={linkClass}>
-          serrurier Nice Est
-        </Link>
-        .
-      </>,
-    ],
+        <ArticleTable headers={["Repère", "Ce qu'on y trouve"]} rows={reperesRows.map(([repere, contenu]) => [repere, contenu])} />
+        <p className="text-slate leading-relaxed mt-4">
+          Au téléphone, dites-moi votre rue et un repère proche : je sais tout de suite où aller.
+        </p>
+      </>
+    ),
   },
   {
-    heading: "Location saisonnière : une serrure fiable pour accueillir vos voyageurs",
-    paragraphs: [
-      "Si vous louez un appartement à la semaine ou au week-end, la serrure est la première chose que vos voyageurs touchent en arrivant. Un cylindre qui force, une clé qui ne tourne plus ou un double perdu transforment vite une arrivée en urgence, parfois en soirée ou pendant un week-end.",
+    heading: "Mêmes prix qu'à Nice, déplacement compris",
+    paragraphs: [],
+    extra: (
       <>
-        Je peux remplacer le cylindre sur rendez-vous, avec des clés neuves remises sur place, ou
-        intervenir en dépannage quand un voyageur reste bloqué dehors. Dans les deux cas, le prix
-        est annoncé par téléphone, puis confirmé sur place avant de commencer. Le détail de cette
-        prestation est sur ma page{" "}
+        <p className={pClass}>
+          Beaulieu-sur-Mer est juste après{" "}
+          <Link href="/serrurier-villefranche-sur-mer/" className={linkClass}>
+            Villefranche-sur-Mer
+          </Link>
+          , sur la route de Monaco : je n&apos;y compte aucun supplément de déplacement.
+        </p>
+        <ArticleTable
+          headers={["Intervention", "En journée", "Après 19 h, week-end, jours fériés"]}
+          rows={[
+            ["Porte claquée", "149 €", "189 €"],
+            ["Porte fermée à clé", "149 € + cylindre (dès 249 €)", "209 € + cylindre"],
+            ["Changement de cylindre", "Dès 249 €", "Prix annoncé au téléphone"],
+            ["Poignée blindée posée", "349 €", "Sur rendez-vous"],
+            ["Serrure carénée 5 points posée", "1 249 €", "Sur rendez-vous"],
+            ["Blindage de porte", "Dès 2 689 €", "Sur rendez-vous"],
+          ]}
+        />
+        <p className="text-slate leading-relaxed mt-4">
+          Prix TTC, déplacement compris. Une serrure Fichet, un cylindre haute sécurité ou une serrure multipoints se
+          chiffrent sur devis. Le détail de tous mes prix est sur{" "}
+          <Link href="/tarifs-serrurier-nice/" className={linkClass}>
+            ma page tarifs
+          </Link>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Location saisonnière : une serrure fiable pour vos voyageurs",
+    paragraphs: [
+      "Si vous louez un appartement à la semaine ou au week-end, la serrure est la première chose que vos voyageurs touchent en arrivant. Un cylindre qui force, une clé qui ne tourne plus ou un double perdu transforment vite une arrivée en urgence, souvent le soir ou le week-end.",
+      <>
+        Je peux{" "}
         <Link href="/changement-serrure-nice/" className={linkClass}>
-          changement de serrure
-        </Link>
-        .
+          changer le cylindre
+        </Link>{" "}
+        sur rendez-vous, avec des clés neuves remises sur place, ou intervenir en dépannage quand un voyageur reste
+        bloqué dehors. Dans les deux cas, le prix est annoncé au téléphone, puis confirmé sur place avant de commencer.
       </>,
       <>
-        Entre propriétaire et locataire, la question de qui paie le remplacement se pose souvent :
-        j&apos;y réponds dans mon article{" "}
+        Entre propriétaire et locataire, la question de qui paie revient souvent : j&apos;y réponds dans mon article{" "}
         <Link href="/blog/qui-paie-changement-serrure-location-nice/" className={linkClass}>
           qui paie le changement de serrure en location
         </Link>
@@ -58,117 +94,84 @@ const blocks = [
     ],
   },
   {
-    heading: "Comment j'ouvre une porte à Beaulieu-sur-Mer",
+    heading: "Comment j'ouvre une porte",
     paragraphs: [
-      "Une porte claquée est fermée par le simple mouvement du battant, sans tour de clé. Je l'ouvre avec la méthode radio, aussi appelée feuille Mika : une fine plaque rigide, glissée entre le cadre et le pêne, libère le mécanisme sans l'abîmer. 99 % des portes claquées sont ouvertes sans dégât.",
-      "Quand la porte est verrouillée à clé ou que la clé est perdue, le diagnostic décide de la méthode. Si une clé s'est cassée dans le cylindre, je commence par l'extraire. Le perçage reste le dernier recours : je ne perce que si aucune autre méthode n'est possible.",
       <>
-        Chaque situation, avec ses prix, est détaillée sur ma page{" "}
+        Une porte claquée est fermée par le simple mouvement du battant, sans tour de clé. Je l&apos;ouvre avec la{" "}
         <Link href="/ouverture-de-porte-nice/" className={linkClass}>
-          ouverture de porte
-        </Link>
-        .
+          méthode radio
+        </Link>{" "}
+        : une fine plaque rigide, glissée entre le cadre et le pêne, libère le mécanisme sans l&apos;abîmer. 99 % des
+        portes claquées sont ouvertes sans dégât.
       </>,
-    ],
-  },
-  {
-    heading: "Serrures certifiées A2P et marques que je pose",
-    paragraphs: [
-      "Pour remplacer ou renforcer une serrure, je pose des cylindres et des serrures certifiés A2P 1, 2 ou 3 étoiles selon le besoin. Le niveau se choisit selon la porte et ce que vous voulez protéger : plus il y a d'étoiles, plus la résistance à l'effraction est élevée.",
-      "Côté marques, je travaille avec dix références. Fichet est la référence française de la haute sécurité, Picard un fabricant français historique, et Vak une marque de cylindres haute sécurité développée par Picard. Vachette, très répandue sur les portes d'immeuble à Nice, et Bricard, connue pour ses serrures multipoints, sont elles aussi françaises. Héraclès propose des cylindres et des serrures robustes, courants sur les portes d'entrée. Du côté italien, Cisa fabrique des serrures mécaniques et électroniques, Mottura des cylindres européens au bon rapport qualité-prix, et Iseo des cylindres haute sécurité avec des solutions de gestion d'accès. Kaba, d'origine suisse, est souvent choisie en copropriété pour sa gestion fine des clés autorisées.",
-      <>
-        Selon la gamme, la clé est fournie avec une carte de reproduction ou de propriété, qui
-        limite la copie non autorisée. Le détail de chaque marque est sur ma page{" "}
-        <Link href="/changement-serrure-nice/#marques" className={linkClass}>
-          changement de serrure
-        </Link>
-        .
-      </>,
-    ],
-  },
-  {
-    heading: "Les mêmes tarifs qu'à Nice, sans supplément pour Beaulieu-sur-Mer",
-    paragraphs: [
-      "Mes tarifs ne changent pas selon la commune : ce que vous payez à Beaulieu-sur-Mer est ce que vous paieriez à Nice, déplacement inclus. Une ouverture de porte claquée, ou de porte verrouillée avec un cylindre européen, est à 149 € TTC, cylindre neuf en plus dès 249 €. Un changement de cylindre standard démarre à 249 € TTC, déplacement et main-d'œuvre compris. Une serrure de type Fichet, un cylindre haute sécurité ou une serrure multipoints se chiffrent sur devis.",
-      <>
-        Après 19h, le week-end et les jours fériés, le tarif de nuit est de 189 € TTC pour une porte
-        claquée et de 209 € TTC pour une porte verrouillée, annoncé avant mon déplacement. La grille
-        complète est plus haut sur cette page, et sur ma page{" "}
-        <Link href="/tarifs-serrurier-nice/" className={linkClass}>
-          tarifs
-        </Link>
-        .
-      </>,
+      "Quand la porte est fermée à clé ou que la clé est perdue, le diagnostic décide de la méthode. Si une clé s'est cassée dans le cylindre, je commence par l'extraire. Si le cylindre doit être percé, je perce le cylindre, jamais la porte, et je pose un cylindre neuf avec des clés neuves.",
     ],
   },
   {
     heading: "Après une tentative d'effraction",
     paragraphs: [
       <>
-        Si une porte a été forcée, je sécurise d&apos;abord l&apos;accès, 24h/24, puis je choisis avec vous la
-        solution durable une fois le diagnostic fait. La facture détaillée est prévue pour votre
-        assurance. Tout est expliqué sur ma page{" "}
+        Si une porte a été forcée, je fais d&apos;abord la{" "}
         <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
-          mise en sécurité après une effraction
+          mise en sécurité
         </Link>
-        .
+        , 24h/24, pour que le logement ferme le soir même. On choisit ensuite au calme la solution durable : cylindre
+        neuf, poignée blindée ou serrure carénée selon l&apos;état de la porte. Je vous remets une facture détaillée
+        pour votre assurance.
       </>,
     ],
   },
+  {
+    heading: "Exemple type",
+    paragraphs: [
+      "Exemple type, une situation fréquente et non un client précis : un mercredi midi, un voyageur loge dans un appartement près du port. Il descend chercher du pain, la porte se referme derrière lui, les clés sont restées à l'intérieur. La porte est claquée, pas fermée à clé : je l'ouvre avec la méthode radio, sans dégât. Coût : 149 € TTC en journée, déplacement compris, annoncé au téléphone avant de partir.",
+    ],
+  },
 ];
-
-const safetyParagraph =
-  "Je n'ai pas de chiffre de cambriolages propre à Beaulieu-sur-Mer que je puisse vous citer avec certitude, et je préfère ne pas en inventer. À titre de repère départemental, le taux de cambriolages dans les Alpes-Maritimes était de 0,43 % des logements en 2025 selon le ministère de l'Intérieur : ce n'est pas une donnée communale. Quel que soit le lieu, une serrure en bon état et un cylindre certifié A2P restent le moyen le plus direct de limiter le risque.";
 
 const faq = [
   {
     question: "Intervenez-vous la nuit ou le week-end à Beaulieu-sur-Mer ?",
     answer:
-      "Oui, 24h/24 et 7j/7, jours fériés compris. Après 19h, le week-end et les jours fériés, le tarif de nuit est de 189 € TTC pour une porte claquée et de 209 € TTC pour une porte verrouillée avec un cylindre européen, annoncé avant que je me déplace.",
+      "Oui, 24h/24 et 7j/7, jours fériés compris. Après 19 h, le week-end et les jours fériés : 189 € TTC pour une porte claquée, 209 € TTC pour une porte fermée à clé, annoncés avant de partir.",
   },
   {
-    question: "Combien de temps pour venir à Beaulieu-sur-Mer ?",
-    answer:
-      "30 minutes depuis le 2 rue Antoine Gautier, à Nice. Je vous donne une estimation au téléphone.",
+    question: "En combien de temps arrivez-vous à Beaulieu-sur-Mer ?",
+    answer: "En urgence, en 30 minutes, depuis ma boutique du 2 rue Antoine Gautier, à Nice.",
   },
   {
-    question: "Le devis est-il gratuit pour un dépannage à Beaulieu-sur-Mer ?",
-    answer:
-      "Oui. Je vous annonce un prix par téléphone avant de me déplacer, et je le confirme sur place avant de commencer. Les tarifs sont les mêmes qu'à Nice, sans supplément pour Beaulieu-sur-Mer.",
+    question: "Le déplacement jusqu'à Beaulieu-sur-Mer est-il facturé en plus ?",
+    answer: "Non. Les prix sont les mêmes qu'à Nice, déplacement compris, et le devis par téléphone est gratuit.",
   },
   {
-    question: "Je loue mon appartement à Beaulieu-sur-Mer à des voyageurs : pouvez-vous changer le cylindre ?",
+    question: "Je loue mon appartement à des voyageurs : pouvez-vous changer le cylindre ?",
     answer:
-      "Oui, sur rendez-vous ou en dépannage. Je pose un cylindre adapté à votre porte, je remets des clés neuves sur place et je confirme le prix avant de commencer. Le changement de cylindre standard démarre à 249 € TTC, déplacement et main-d'œuvre compris.",
+      "Oui, sur rendez-vous ou en dépannage. Je pose un cylindre adapté à votre porte et je remets des clés neuves sur place. Le changement de cylindre démarre à 249 € TTC, déplacement compris.",
   },
   {
-    question: "Ma porte s'est claquée à Beaulieu-sur-Mer : faut-il forcer la serrure ?",
+    question: "Ma porte s'est claquée : faut-il forcer la serrure ?",
     answer:
-      "Non. Je l'ouvre avec la méthode radio, dite de la feuille Mika, sans abîmer le mécanisme : 99 % des portes claquées sont ouvertes sans dégât. Le prix est de 149 € TTC en journée.",
+      "Non, surtout pas. Je l'ouvre avec la méthode radio, sans abîmer le mécanisme : 99 % des portes claquées sont ouvertes sans dégât. Le prix est de 149 € TTC en journée.",
   },
   {
     question: "Mon assurance peut-elle me rembourser l'intervention ?",
     answer:
-      "Cela dépend de votre contrat, je ne peux donc rien promettre. Je vous remets une facture détaillée à présenter à votre assureur, mais je ne m'engage sur aucun montant de remboursement.",
-  },
-];
-
-const processSteps = [
-  {
-    title: "Appel",
-    text: "Vous m'appelez depuis Beaulieu-sur-Mer et me décrivez la situation : porte claquée, clé perdue, cylindre qui force. Je cerne le problème dès le téléphone et je vous annonce un prix.",
+      "Cela dépend de votre contrat, je ne peux donc rien promettre. Je vous remets une facture détaillée à présenter à votre assureur.",
   },
   {
-    title: "Délai d'arrivée",
-    text: "Je pars de Nice et j'arrive à Beaulieu-sur-Mer en 30 minutes. Si quelque chose change en route, je vous préviens.",
-  },
-  {
-    title: "Diagnostic sur place",
-    text: "Sur place, j'examine la porte, la serrure et le cadre avant de choisir la méthode. Je ne force rien tant que je ne suis pas sûr de mon geste.",
-  },
-  {
-    title: "Règlement",
-    text: "Le prix confirmé sur place est celui que vous payez : carte bancaire, espèces ou virement, avec une facture détaillée envoyée par e-mail.",
+    question: "Intervenez-vous aussi dans les communes voisines ?",
+    answer: (
+      <>
+        Oui.{" "}
+        <Link href="/serrurier-eze/" className={linkClass}>
+          Èze
+        </Link>{" "}
+        a sa page, et j&apos;interviens aussi à Saint-Jean-Cap-Ferrat, à Cap-d&apos;Ail et dans toutes les autres
+        communes autour de Nice.
+      </>
+    ),
+    schemaText:
+      "Oui. Èze a sa page, et j'interviens aussi à Saint-Jean-Cap-Ferrat, à Cap-d'Ail et dans toutes les autres communes autour de Nice.",
   },
 ];
 
@@ -181,14 +184,15 @@ export default function SerrurierBeaulieuSurMerPage() {
   return (
     <CommunePageTemplate
       commune="Beaulieu-sur-Mer"
+      h1="Serrurier à Beaulieu-sur-Mer : port, baie des Fourmis, Petite Afrique"
       intro={intro}
+      heroDelayLine="Sur place en 30 minutes en urgence, depuis ma boutique du 2 rue Antoine Gautier, 06300 Nice."
       blocks={blocks}
       travelEstimate="30 min"
-      safetyParagraph={safetyParagraph}
       faq={faq}
+      rewrite
       path="/serrurier-beaulieu-sur-mer/"
       testimonial={testimonial}
-      processSteps={processSteps}
       mapQuery="Beaulieu-sur-Mer, 06310"
       mapTitle="Zone d'intervention à Beaulieu-sur-Mer"
     />
