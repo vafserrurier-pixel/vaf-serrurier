@@ -121,7 +121,7 @@ const sectionsFr = [
           <a href="https://www.valentesecurystar.com/" target="_blank" rel="noopener" className={linkClass}>
             Valente Securystar
           </a>
-          , un fabricant français installé à Thiais depuis 1995.
+          , un fabricant français.
         </p>
         <ArticleTable
           headers={["Modèle", "Ce qui le distingue", "Prix TTC posé"]}
@@ -334,7 +334,7 @@ const sectionsEn = [
         >
           Valente Securystar
         </a>{" "}
-        range, a French manufacturer based in Thiais since 1995. The Citadin starts at
+        range, a French manufacturer. The Citadin starts at
         €2,689 incl. VAT, fitted; the Parisien and the Parisien Hermétic are
         quoted individually.
       </>,

@@ -117,7 +117,7 @@ const sectionsFr = [
         >
           Valente Securystar
         </a>
-        , un fabricant français installé à Thiais depuis 1995. Cinq lignes, toutes en 1 ou 2 vantaux, en dimensions
+        , un fabricant français. Cinq lignes, toutes en 1 ou 2 vantaux, en dimensions
         standard :
       </>,
     ],
@@ -339,7 +339,7 @@ const sectionsEn = [
         >
           Valente Securystar
         </a>{" "}
-        range, a French manufacturer based in Thiais since 1995. Full
+        range, a French manufacturer. Full
         details for each line are in my complete guide. 1 or 2 leaves,
         standard dimensions.
       </>,

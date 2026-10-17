@@ -26,7 +26,7 @@ const HREF = "/blog/que-faire-apres-cambriolage-nice/";
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Que faire après un cambriolage à Nice : les étapes",
-  description: "Cambriolage à Nice : les démarches à suivre dans l'ordre, ce qu'il ne faut jamais faire seul, et comment sécuriser votre porte en urgence avant de reconstituer le dossier.",
+  description: "Cambriolage à Nice : les démarches dans l'ordre, ce qu'il ne faut pas faire seul, et comment sécuriser votre porte le soir même.",
   article: { author: business.firstName, readingTime: "8 min" },
   image: blogPostByHref(HREF)?.image,
 });
@@ -177,7 +177,7 @@ export default function QueFaireApresUnCambriolagePage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-avant-intervention-nice.webp"
-                alt="Diagnostic d'une porte"
+                alt="Benoît, serrurier, devant une porte avec sa perceuse-visseuse"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

@@ -74,7 +74,7 @@ export default function CleCasseeSerrurePage() {
           description: DESCRIPTION,
           url: `${business.domain}${HREF}`,
           datePublished: "2026-10-06",
-          dateModified: "2026-10-06",
+          dateModified: "2026-10-17",
           image: post.image,
         })}
       />
@@ -175,9 +175,9 @@ export default function CleCasseeSerrurePage() {
                 ]}
               />
               <p className="text-slate leading-relaxed mt-4">
-                Pour le morceau qui dépasse, c&apos;est aussi ce que conseillent HomeServe et Futura
-                Sciences : une pince plate ou une pince à épiler. Pour un morceau à l&apos;intérieur, ces
-                sources décrivent des solutions de bricolage (kit d&apos;extraction, aimant, colle), avec
+                Pour le morceau qui dépasse, c&apos;est aussi ce que conseille Futura
+                Sciences : une pince plate ou une pince à épiler. Pour un morceau à l&apos;intérieur, cette
+                source décrit des solutions de bricolage (kit d&apos;extraction, aimant, colle), avec
                 des mises en garde sur le risque d&apos;abîmer la serrure. Mon conseil reste de ne pas
                 insister.
               </p>
@@ -199,9 +199,8 @@ export default function CleCasseeSerrurePage() {
                 </li>
                 <li>
                   <strong className="text-navy">Mettre de la colle.</strong> Certains conseils en ligne le
-                  proposent. HomeServe prévient que trop de colle peut rendre la serrure inutilisable,
-                  grippée pour de bon, et Futura Sciences demande déjà d&apos;éviter que la colle ne coule
-                  dans le mécanisme.
+                  proposent. Futura Sciences demande d&apos;éviter que la colle ne coule dans le
+                  mécanisme.
                 </li>
               </ul>
             </div>
@@ -260,16 +259,7 @@ export default function CleCasseeSerrurePage() {
             </div>
 
             <p className="text-xs text-slate leading-relaxed">
-              <strong>Sources :</strong>{" "}
-              <a
-                href="https://www.homeserve.fr/conseils-actualites/serrurerie/cle-cassee-serrure"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-steel"
-              >
-                HomeServe, clé cassée dans la serrure
-              </a>{" "}
-              ;{" "}
+              <strong>Source :</strong>{" "}
               <a
                 href="https://www.futura-sciences.com/maison/questions-reponses/bricolage-cle-cassee-serrure-faire-4238/"
                 target="_blank"

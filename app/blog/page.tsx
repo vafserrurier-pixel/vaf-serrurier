@@ -32,7 +32,7 @@ export default function BlogPage() {
               <div className="relative aspect-[16/9]">
                 <Image
                   src={post.image}
-                  alt=""
+                  alt={post.imageAlt}
                   fill
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover"

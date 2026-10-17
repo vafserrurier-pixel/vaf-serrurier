@@ -26,7 +26,7 @@ const HREF = "/blog/certification-a2p-serrure-nice/";
 export const metadata: Metadata = buildMetadata({
   path: HREF,
   title: "Certification A2P : 1, 2 ou 3 étoiles, le guide",
-  description: "A2P 1, 2 ou 3 étoiles : ce que signifie cette certification sur une serrure, un cylindre ou un blindage, comment la repérer et pourquoi elle compte pour votre assurance.",
+  description: "A2P 1, 2 ou 3 étoiles : ce que veut dire cette certification sur une serrure ou un cylindre, comment la repérer et pourquoi elle compte pour l'assurance.",
   article: { author: business.firstName, readingTime: "8 min" },
   image: blogPostByHref(HREF)?.image,
 });
@@ -271,7 +271,7 @@ export default function CertificationA2pPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/cylindre-fichet-main-serrurier-nice.webp"
-                alt="Cylindre Fichet en main"
+                alt="Boîtier de serrure à encastrer fixé sur le chant d'une porte, pêne sorti"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

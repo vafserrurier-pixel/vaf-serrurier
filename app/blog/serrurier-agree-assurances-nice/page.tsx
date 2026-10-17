@@ -280,7 +280,7 @@ export default function AgreeAssurancesPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-porte-ancienne-nice.webp"
-                alt="Intervention sur porte ancienne"
+                alt="Petit coffre-fort noir à code, percé sur le dessus, avec des outils posés à côté"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

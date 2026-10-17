@@ -207,26 +207,6 @@ const sections = [
     ),
   },
   {
-    id: "cambriolages-nice",
-    heading: "Les cambriolages à Nice",
-    paragraphs: [
-      <>
-        D&apos;après les chiffres du{" "}
-        <a
-          href="https://statistiques.interieur.gouv.fr/ssmsi/infractions-et-sentiment-dinsecurite/cambriolages"
-          target="_blank"
-          rel="noopener"
-          className={linkClass}
-        >
-          ministère de l&apos;Intérieur
-        </a>{" "}
-        publiés en mars 2026, le taux de cambriolages à Nice est passé de 0,54 % des logements en 2024 à 0,61 % en
-        2025. C&apos;est plus que la moyenne nationale (0,56 %) et nettement plus que la moyenne des Alpes-Maritimes
-        (0,43 %). La plupart des tentatives s&apos;arrêtent devant une porte qui résiste plus de quelques minutes.
-      </>,
-    ],
-  },
-  {
     heading: "Votre assurance",
     paragraphs: [
       "Votre assureur vous demandera un justificatif d'intervention. Ma facture décrit les dégâts constatés (cylindre, gâche, cadre), les réparations effectuées, et le niveau de certification posé s'il y a une nouvelle serrure ou une nouvelle porte. Cette description aide l'assureur à qualifier le sinistre : effraction, tentative ou usure. Elle porte mon SIRET.",

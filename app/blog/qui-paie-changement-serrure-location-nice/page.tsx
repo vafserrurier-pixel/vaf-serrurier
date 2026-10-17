@@ -175,7 +175,7 @@ export default function QuiPaieChangementSerrureLocationPage() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/benoit-serrurier-trousseau-cles-nice.webp"
-                alt="Trousseau de clés"
+                alt="Boîtier de serrure Fichet avec son cylindre en laiton, vu de près"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"

@@ -15,6 +15,8 @@ export type BlogPost = {
   readingMinutes: number;
   /** Photo reelle utilisee en tete de l'article (voir public/images). */
   image: string;
+  /** Texte alternatif de cette image dans les vignettes (index du blog, articles lies). */
+  imageAlt: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -30,6 +32,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-10-10",
     readingMinutes: 8,
     image: "/images/blog/serrure-bloquee-diagnostic-nice.webp",
+    imageAlt: "Test d'une clé dans le cylindre d'une vieille porte d'entrée blanche, porte entrouverte",
   },
   {
     href: "/blog/cle-cassee-serrure-que-faire-nice/",
@@ -40,9 +43,10 @@ export const blogPosts: BlogPost[] = [
     accent: "border-t-steel",
     tagClass: "bg-steel/10 text-steel",
     datePublished: "2026-10-06",
-    dateModified: "2026-10-06",
+    dateModified: "2026-10-17",
     readingMinutes: 3,
     image: "/images/blog/cle-cassee-serrure-nice.webp",
+    imageAlt: "Illustration d'une clé cassée à côté d'une serrure",
   },
   {
     href: "/blog/entretien-serrure/",
@@ -56,6 +60,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-10-02",
     readingMinutes: 4,
     image: "/images/blog/entretien-serrure-cylindre-ancien-nice.webp",
+    imageAlt: "Cylindre ancien d'une porte grise avec une clé engagée de travers, verrou en applique en dessous",
   },
   {
     href: "/blog/prix-serrurier-nice-guide/",
@@ -66,9 +71,10 @@ export const blogPosts: BlogPost[] = [
     accent: "border-t-navy",
     tagClass: "bg-navy/10 text-navy",
     datePublished: "2026-09-25",
-    dateModified: "2026-09-25",
+    dateModified: "2026-10-17",
     readingMinutes: 9,
-    image: "/images/blog/serrurier-tarifs-2026-header.jpg",
+    image: "/images/pool/benoit-artisan-serrurier-nice.webp",
+    imageAlt: "Portrait de Benoît, artisan serrurier à Nice",
   },
   {
     href: "/blog/que-faire-apres-cambriolage-nice/",
@@ -82,6 +88,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 8,
     image: "/images/pool/benoit-serrurier-avant-intervention-nice.webp",
+    imageAlt: "Benoît, serrurier, devant une porte avec sa perceuse-visseuse",
   },
   {
     href: "/blog/serrure-multipoints-3-5-7-nice/",
@@ -95,6 +102,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 7,
     image: "/images/serrurier-nice-porte-blindee-multipoints.webp",
+    imageAlt: "Benoît montre la gâche d'une serrure multipoints sur le chambranle d'une porte en bois",
   },
   {
     href: "/blog/remplacer-coffre-a-larder-nice/",
@@ -108,6 +116,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 7,
     image: "/images/pool/reparation-mecanisme-serrure-nice.webp",
+    imageAlt: "Boîtier de serrure encastrée retiré de la porte, tenu à la main",
   },
   {
     href: "/blog/certification-a2p-serrure-nice/",
@@ -121,6 +130,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 8,
     image: "/images/pool/cylindre-fichet-demonte-serrurier-nice.webp",
+    imageAlt: "Serrure Fichet démontée avec son cylindre, tenue à la main gantée",
   },
   {
     href: "/blog/serrurier-agree-assurances-nice/",
@@ -134,6 +144,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 6,
     image: "/images/pool/benoit-artisan-serrurier-nice.webp",
+    imageAlt: "Portrait de Benoît, artisan serrurier à Nice",
   },
   {
     href: "/blog/porte-qui-claque-serrurier-nice/",
@@ -147,6 +158,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 7,
     image: "/images/serrurier-nice-ouverture-de-porte.webp",
+    imageAlt: "Porte d'entrée blanche avec une serrure en applique à barres verticales et une clé dans le cylindre",
   },
   {
     href: "/blog/qui-paie-changement-serrure-location-nice/",
@@ -160,6 +172,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 9,
     image: "/images/serrurier-nice-changement-de-serrure.webp",
+    imageAlt: "Pack de cylindres Heracles pour serrure carénée et plaque de poignée posés sur un parquet",
   },
   {
     href: "/blog/digicode-cles-hall-copropriete-nice/",
@@ -173,6 +186,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-12",
     readingMinutes: 7,
     image: "/images/pool/porte-immeuble-interphone-securisee-nice.webp",
+    imageAlt: "Porte d'immeuble blanche à deux vantaux avec cache de serrure et combiné d'interphone",
   },
   {
     href: "/blog/changer-serrure-separation-divorce/",
@@ -186,6 +200,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-09-18",
     readingMinutes: 7,
     image: "/images/pool/benoit-serrurier-serrure-posee-nice.webp",
+    imageAlt: "Benoît devant une porte blanche équipée d'une serrure neuve, poignée et cylindre chromés",
   },
 ];
 

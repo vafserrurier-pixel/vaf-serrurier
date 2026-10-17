@@ -88,7 +88,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             "Déplacement, main d'œuvre, pièce, tarif de nuit : ce qui compose vraiment un prix de serrurier à Nice, comparé à ce qu'affichent d'autres artisans du secteur.",
           url: `${business.domain}${HREF}`,
           datePublished: "2026-09-25",
-          dateModified: "2026-09-25",
+          dateModified: "2026-10-17",
           image: post.image,
         })}
       />
@@ -126,7 +126,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
-              alt="Tarifs serrurier Nice 2026"
+              alt={post.imageAlt}
               fill
               sizes="(min-width: 1024px) 760px, 100vw"
               className="object-cover"
@@ -294,15 +294,6 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 </li>
               </ul>
               <p className="text-slate leading-relaxed mt-4">
-                À l&apos;échelle nationale, une étude récente du secteur situe le prix moyen
-                d&apos;une ouverture de porte classique autour de 135 € TTC en France, avec
-                une fourchette de 80 à 200 € en journée et des écarts régionaux marqués : une
-                ouverture de porte revient par exemple environ 30 à 40% plus cher à Paris que
-                dans des villes moyennes comme Lille. Les majorations de nuit ou de week-end
-                observées à l&apos;échelle du pays vont, elles, de +20% à +100% selon les
-                professionnels, avec une moyenne autour de +30%.
-              </p>
-              <p className="text-slate leading-relaxed mt-4">
                 Certains sites, plus rares, affichent encore des prix d&apos;appel très bas
                 (30 à 40 €) qui n&apos;ont pas vocation à être le prix réellement facturé :
                 c&apos;est le signal d&apos;alerte classique détaillé sur ma page{" "}
@@ -377,15 +368,12 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                 Je ne dispose pas d&apos;une moyenne officielle vérifiée spécifique à Nice à
                 vous communiquer, seulement des exemples concrets déjà cités plus haut. Mais
                 plusieurs facteurs réels et propres à la ville expliquent pourquoi le niveau
-                de prix y est rarement dans le bas de la fourchette nationale évoquée plus
-                haut (autour de 135 € TTC pour une ouverture simple) :
+                de prix y est rarement dans le bas de la fourchette nationale :
               </p>
               <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed mt-3">
                 <li>
                   <strong>Le coût de la vie sur la Côte d&apos;Azur</strong> : loyer d&apos;un
-                  local professionnel, carburant, assurances, matériel. C&apos;est le même
-                  mécanisme, à une autre échelle, que l&apos;écart déjà cité entre Paris et
-                  une ville moyenne comme Lille.
+                  local professionnel, carburant, assurances, matériel.
                 </li>
                 <li>
                   <strong>Une part importante de bâti ancien</strong> : Vieux-Nice, Cimiez,
@@ -412,7 +400,7 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/pool/cylindre-fichet-boitier-demonte-etabli-nice.webp"
-                alt="Cylindre Fichet démonté sur établi"
+                alt="Boîtier de serrure Fichet démonté, tenu à la main gantée"
                 fill
                 sizes="(min-width: 1024px) 760px, 100vw"
                 className="object-cover"
@@ -502,12 +490,6 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
                   mais nettement plus élevé en cas d&apos;effraction avérée, avec une
                   franchise à vérifier selon votre contrat. Une facture détaillée reste le
                   document indispensable pour toute déclaration.
-                </li>
-                <li>
-                  <strong>Garantie assistance de certaines cartes bancaires haut de gamme</strong>{" "}
-                  (Visa Premier, Gold Mastercard ou équivalent) : le plafond varie fortement
-                  selon la carte et l&apos;émetteur, à vérifier directement auprès de votre
-                  banque avant d&apos;en avoir besoin.
                 </li>
                 <li>
                   <strong>Programmer une intervention plutôt que d&apos;attendre l&apos;urgence complète</strong>{" "}

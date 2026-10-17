@@ -166,7 +166,6 @@ const leviersItemsFr = [
 
 const leviersItemsEn = [
   "Home insurance assistance cover: some incidents (a break-in, for example) are reimbursed on presentation of a detailed invoice.",
-  "Assistance cover on some premium bank cards (Visa Premier, Gold Mastercard or equivalent), with a cap that varies by card and contract: check with your card issuer.",
   "Scheduling a visit ahead of time rather than waiting for a full emergency: a daytime appointment avoids the night, weekend or public holiday surcharge.",
   "Always ask for a written quote, even for a small job: it's the document that makes an insurance reimbursement easier afterwards.",
 ];
@@ -565,15 +564,6 @@ export default function TarifsBody() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          {locale === "en" && (
-            <p className="text-sm text-slate mt-3">
-              More on these assistance covers on my{" "}
-              <Link href="/urgence-serrurier-nice/" className="text-steel underline">
-                emergency callout
-              </Link>{" "}
-              page.
-            </p>
-          )}
         </div>
       </section>
 

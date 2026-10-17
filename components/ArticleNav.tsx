@@ -55,7 +55,7 @@ export default function ArticleNav({ currentHref }: { currentHref: string }) {
               <div className="relative aspect-[16/10]">
                 <Image
                   src={post.image}
-                  alt=""
+                  alt={post.imageAlt}
                   fill
                   sizes="(min-width: 640px) 33vw, 100vw"
                   className="object-cover"

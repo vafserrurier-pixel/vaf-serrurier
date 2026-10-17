@@ -250,11 +250,6 @@ const faqFr = [
       "Souvent, surtout après un cambriolage ou une tentative d'effraction. Vérifiez les conditions de votre contrat ; je vous remets une facture détaillée, le document qu'elle demande.",
   },
   {
-    question: "Ma carte bancaire peut-elle couvrir un dépannage serrurier ?",
-    answer:
-      "Certaines cartes haut de gamme (Visa Premier, Gold Mastercard ou équivalent) incluent une assistance serrurerie, avec un plafond qui varie selon la carte. Vérifiez-le auprès de votre banque ; la facture détaillée que je vous remets sert pour le remboursement.",
-  },
-  {
     question: "Qui paie le dépannage quand on est locataire ?",
     answer:
       "En général le locataire, si la panne vient d'une perte ou d'un oubli de clés. Si la serrure lâche par usure normale, c'est au propriétaire.",
@@ -328,11 +323,6 @@ const faqEn = [
     question: "Does home insurance cover a lock replacement in Nice?",
     answer:
       "In most cases, the tenant's or owner's home insurance covers replacing a damaged lock, particularly after a break-in. Check the terms of your own contract.",
-  },
-  {
-    question: "Can my bank card cover an emergency locksmith callout?",
-    answer:
-      "Some premium cards (Visa Premier, Gold Mastercard or equivalent) include locksmith assistance cover, with a reimbursement cap that varies by card and contract. If you have time before the callout, check that cap directly with your card issuer. Either way, I always provide a detailed invoice, the document you'll need for any reimbursement claim afterwards.",
   },
   {
     question: "Is a locksmith allowed to quote a price only after the work is done?",
