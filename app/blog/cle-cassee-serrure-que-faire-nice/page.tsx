@@ -102,9 +102,6 @@ export default function CleCasseeSerrurePage() {
 
           <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{TITLE}</h1>
           <ArticleByline readingMinutes={post.readingMinutes} updatedLabel="Publié le 6 octobre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -278,6 +275,9 @@ export default function CleCasseeSerrurePage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Une clé cassée dans la serrure ?" />
         </div>
       </section>

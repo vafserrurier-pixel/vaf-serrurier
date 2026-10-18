@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import HeroCtas from "@/components/HeroCtas";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ArticleTable from "@/components/ArticleTable";
@@ -58,7 +59,7 @@ export default function AProposPage() {
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-10 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-4xl px-4 py-10 grid gap-8 lg:grid-cols-2 items-center">
           <div>
             <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "À propos", href: "/a-propos/" }]} />
             <AvailabilityBadge />
@@ -70,28 +71,14 @@ export default function AProposPage() {
               Nice, avec ma boutique au 2 rue Antoine Gautier, dans le 06300. Quand vous appelez, c&apos;est moi qui
               décroche. Quand quelqu&apos;un vient chez vous, c&apos;est moi. Pas de standard, pas de sous-traitant.
             </p>
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <a
-                href={business.phone.href}
-                className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-              >
-                Appeler <span className="font-phone font-bold">{business.phone.display}</span>
-              </a>
-              <Link
-                href="/tarifs-serrurier-nice/"
-                prefetch={false}
-                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
-              >
-                Voir les tarifs
-              </Link>
-            </div>
+            <HeroCtas callLabel="Appeler" whatsappLabel="Écrire sur WhatsApp" pricingLabel="Voir les tarifs" showWhatsapp={false} />
           </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+          <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
             <Image
               src="/images/serrurier-nice-a-propos.webp"
               alt="Benoît, serrurier à Nice"
               fill
-              sizes="(min-width: 640px) 40vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
               priority
               fetchPriority="high"

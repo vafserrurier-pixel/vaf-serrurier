@@ -117,9 +117,6 @@ export default function AgreeAssurancesPage() {
             « Agréé toutes assurances » : ce que cette formule ne veut pas dire
           </h1>
           <ArticleByline readingMinutes={6} updatedLabel="Mis à jour le 12 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -334,6 +331,9 @@ export default function AgreeAssurancesPage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Une question avant de faire intervenir un serrurier ?" />
         </div>
       </section>

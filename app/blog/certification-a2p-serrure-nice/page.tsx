@@ -118,9 +118,6 @@ export default function CertificationA2pPage() {
             Certification A2P : ce que ce sigle change vraiment pour votre serrure
           </h1>
           <ArticleByline readingMinutes={8} updatedLabel="Mis à jour le 12 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -364,6 +361,9 @@ export default function CertificationA2pPage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Une question sur le niveau de certification adapté à votre porte ?" />
         </div>
       </section>

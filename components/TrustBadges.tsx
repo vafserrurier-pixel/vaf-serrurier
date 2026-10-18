@@ -28,12 +28,12 @@ const strings = {
 export default function TrustBadges({
   locale = "fr",
   hideReviews = false,
-  gridOnMobile = false,
+  gridOnMobile = true,
 }: {
   locale?: Locale;
   /** Retire la pastille de la note Google (page d'accueil : la note est déjà dans la barre du haut et le bandeau de chiffres). */
   hideReviews?: boolean;
-  /** Sous le palier sm : grille de 2 colonnes au lieu d'une pastille par ligne. */
+  /** Sous le palier sm : grille de 2 colonnes (par défaut) au lieu d'une pastille par ligne. */
   gridOnMobile?: boolean;
 }) {
   const t = strings[locale];

@@ -117,9 +117,6 @@ export default function SerrureMultipointsPage() {
             Serrure 3, 5 ou 7 points : laquelle choisir ?
           </h1>
           <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -366,6 +363,9 @@ export default function SerrureMultipointsPage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Une question sur le choix de votre serrure ?" />
         </div>
       </section>

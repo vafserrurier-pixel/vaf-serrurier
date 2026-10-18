@@ -112,9 +112,6 @@ export default function ChangerSerrureSeparationDivorcePage() {
             Séparation, divorce : qui a le droit de faire changer la serrure ?
           </h1>
           <ArticleByline readingMinutes={7} updatedLabel="Rédigé le 18 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -351,6 +348,9 @@ export default function ChangerSerrureSeparationDivorcePage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Besoin d'un changement de serrure à Nice ?" />
         </div>
       </section>

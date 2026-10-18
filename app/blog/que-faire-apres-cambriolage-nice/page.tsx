@@ -124,9 +124,6 @@ export default function QueFaireApresUnCambriolagePage() {
             Que faire après un cambriolage : les bons réflexes
           </h1>
           <ArticleByline readingMinutes={8} updatedLabel="Mis à jour le 12 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -419,6 +416,9 @@ export default function QueFaireApresUnCambriolagePage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Besoin d'une sécurisation en urgence après une effraction ?" />
         </div>
       </section>

@@ -9,6 +9,7 @@ import LazyMap from "@/components/LazyMap";
 import CtaBlock from "@/components/CtaBlock";
 import ServiceGrid from "@/components/ServiceGrid";
 import JsonLd from "@/components/JsonLd";
+import HeroCtas from "@/components/HeroCtas";
 import { business, zones } from "@/lib/business";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
 import { communes, communeHref, isCommuneBuilt, builtCommunes } from "@/lib/communes";
@@ -83,7 +84,7 @@ export default function ZonesInterventionNicePage() {
       <JsonLd data={itemListSchema(itemListEntries)} />
       <JsonLd data={faqSchema(faq)} />
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 lg:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
               items={[
@@ -111,19 +112,14 @@ export default function ZonesInterventionNicePage() {
               </p>
             </div>
 
-            <a
-              href={business.phone.href}
-              className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-            >
-              Appeler <span className="font-phone font-bold">{business.phone.display}</span>
-            </a>
+            <HeroCtas callLabel="Appeler" whatsappLabel="Écrire sur WhatsApp" pricingLabel="Voir les tarifs" showWhatsapp={false} showPricing={false} />
           </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+          <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
             <Image
               src="/images/pool/nice-vue-aerienne-baie-des-anges-unsplash.webp"
               alt="Baie des Anges Nice"
               fill
-              sizes="(min-width: 640px) 40vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
               priority
               fetchPriority="high"

@@ -12,6 +12,9 @@ const strings = {
   en: { call: "Call", whatsapp: "WhatsApp", callLabel: "Call now", whatsappLabel: "Message on WhatsApp" },
 };
 
+// Pages sans bouton d'appel dans leur en-tête : la barre y est visible dès le chargement.
+const pagesWithoutHero = ["/blog/", "/contact/", "/mentions-legales/", "/conditions-generales", "/politique-de-confidentialite/"];
+
 // Barre fixe en bas de l'écran sous le palier lg : conteneur blanc (fine bordure et ombre vers le haut,
 // tracées en box-shadow pour que la hauteur reste exactement 4 rem),
 // deux boutons arrondis de 48 px comme ceux du hero, 8 px de marge et d'écart. La zone de sécurité de
@@ -19,21 +22,21 @@ const strings = {
 // (layout.tsx réserve la même hauteur sous le pied de page, et globals.css place le bandeau de cookies
 // juste au-dessus quand la barre est visible, via l'attribut data-call-bar).
 //
-// Accueil : la barre reste masquée tant qu'un bouton du hero (data-hero-cta) est visible à l'écran, et
-// apparaît en fondu dès qu'ils sortent. Elle reste visible tant que le bandeau de cookies est affiché,
-// car celui-ci peut recouvrir les boutons du hero. Autres pages : visible dès le chargement.
+// Accueil et pages à hero (service, secteur, commune, zones, à propos) : la barre reste masquée tant qu'un
+// bouton du hero (data-hero-cta) est visible à l'écran, et apparaît en fondu dès qu'ils sortent. Elle reste
+// visible tant que le bandeau de cookies est affiché, car celui-ci peut recouvrir les boutons du hero.
+// Pages sans hero (blog, contact, pages légales) : visible dès le chargement.
 export default function StickyCallButton() {
   const { locale } = useLocale();
   const t = strings[locale];
-  const isHome = usePathname() === "/";
+  const pathname = usePathname();
+  // État initial (rendu serveur) : pages qui ont des boutons de hero, donc barre masquée au chargement.
+  // L'effet ci-dessous corrige si la page n'a finalement aucun repère data-hero-cta.
+  const hasHero = !pagesWithoutHero.some((prefix) => pathname.startsWith(prefix));
   const cookiePending = useCookieChoicePending();
-  const [heroVisible, setHeroVisible] = useState(isHome);
+  const [heroVisible, setHeroVisible] = useState(hasHero);
 
   useEffect(() => {
-    if (!isHome) {
-      setHeroVisible(false);
-      return;
-    }
     const targets = Array.from(document.querySelectorAll("[data-hero-cta]"));
     if (targets.length === 0) {
       setHeroVisible(false);
@@ -50,9 +53,9 @@ export default function StickyCallButton() {
     );
     targets.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [isHome]);
+  }, [pathname]);
 
-  const visible = !isHome || cookiePending || !heroVisible;
+  const visible = cookiePending || !heroVisible;
 
   return (
     <div

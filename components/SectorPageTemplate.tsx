@@ -10,7 +10,7 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import CtaBlock from "./CtaBlock";
 import LazyMap from "./LazyMap";
 import BlogPreview from "./BlogPreview";
-import { WhatsAppIcon } from "./Icons";
+import HeroCtas from "./HeroCtas";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { isQuartierBuilt, quartierHref, sectorPages } from "@/lib/quartiers";
@@ -116,6 +116,14 @@ export default function SectorPageTemplate({
   );
   const photo = pickPortrait(sectorKey);
 
+  const reviewsBlock = (
+    <section className="bg-white border-y border-navy/10">
+      <div className="mx-auto max-w-4xl px-4 py-12">
+        <ReviewsSection />
+      </div>
+    </section>
+  );
+
   const faqSection = (
     <section className="mx-auto max-w-4xl px-4 py-12">
       <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">Questions fréquentes</h2>
@@ -145,7 +153,7 @@ export default function SectorPageTemplate({
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 lg:grid-cols-2 items-center">
         <div>
           <Breadcrumbs
             items={[
@@ -161,37 +169,14 @@ export default function SectorPageTemplate({
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <div className="flex flex-wrap items-center gap-3 mt-6">
-            <a
-              href={business.phone.href}
-              className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-            >
-              Appeler <span className="font-phone font-bold">{business.phone.display}</span>
-            </a>
-            <a
-              href={business.whatsapp.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Écrire sur WhatsApp"
-              className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-            </a>
-            <Link
-              href="/tarifs-serrurier-nice/"
-              prefetch={false}
-              className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
-            >
-              Voir les tarifs
-            </Link>
-          </div>
+          <HeroCtas callLabel="Appeler" whatsappLabel="Écrire sur WhatsApp" pricingLabel="Voir les tarifs" />
         </div>
-        <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+        <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
           <Image
             src={photo.src}
             alt={`Serrurier ${sectorPages[sectorKey].label}`}
             fill
-            sizes="(min-width: 640px) 40vw, 100vw"
+            sizes="(min-width: 1024px) 40vw, 100vw"
             className="object-cover"
             priority
             fetchPriority="high"
@@ -208,6 +193,7 @@ export default function SectorPageTemplate({
           </div>
         </section>
       )}
+      {quartiersContent && reviewsBlock}
 
       {!quartiersContent && (
       <section className="mx-auto max-w-4xl px-4 pb-10">
@@ -241,6 +227,7 @@ export default function SectorPageTemplate({
         </ul>
       </section>
       )}
+      {!quartiersContent && reviewsBlock}
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
@@ -270,12 +257,6 @@ export default function SectorPageTemplate({
             Un seul numéro pour tout ce qui touche vos serrures et vos portes à Nice.
           </p>
           <ServiceGrid lieu={title.replace("Serrurier à ", "")} />
-        </div>
-      </section>
-
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-4xl px-4 py-12">
-          <ReviewsSection />
         </div>
       </section>
 

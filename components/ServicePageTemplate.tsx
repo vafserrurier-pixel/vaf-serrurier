@@ -8,7 +8,7 @@ import FaqAccordion, { FaqItem } from "./FaqAccordion";
 import LazyMap from "./LazyMap";
 import CtaBlock from "./CtaBlock";
 import RelatedServicesGrid from "./RelatedServicesGrid";
-import { WhatsAppIcon } from "./Icons";
+import HeroCtas from "./HeroCtas";
 import Link from "next/link";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
@@ -125,7 +125,7 @@ export default function ServicePageTemplate({
   leadContent?: ReactNode;
   /** Masque le bloc "Comment se deroule mon intervention" (et ses delais) quand le texte de la page le remplace. */
   hideProcessSteps?: boolean;
-  /** Place le bloc d'avis Google avant la FAQ au lieu d'après (désactivé par défaut). */
+  /** Sans effet depuis que le bloc d'avis suit la première section de contenu sur toutes les pages. */
   reviewsBeforeFaq?: boolean;
   sections: ServiceSection[];
   faq: FaqItem[];
@@ -173,6 +173,24 @@ export default function ServicePageTemplate({
 }) {
   const url = `${business.domain}${path}`;
   const t = strings[locale];
+  const listSections = (list: typeof sections) => (
+    <div className="flex flex-col gap-8">
+      {list.map((section) => (
+        <div key={section.heading} id={section.id} className={section.id ? "scroll-mt-24" : undefined}>
+          <h2 className={`font-heading ${h2Size} font-bold text-navy mb-3`}>
+            {section.headingNode ?? section.heading}
+          </h2>
+          {section.paragraphs.map((paragraph, index) => (
+            <p key={index} className="text-slate leading-relaxed mb-2">
+              {paragraph}
+            </p>
+          ))}
+          {section.extra}
+        </div>
+      ))}
+    </div>
+  );
+
   const h2Size = headingScale === "lg" ? "text-2xl sm:text-3xl" : "text-2xl";
 
   const reviewsSection = (
@@ -212,7 +230,7 @@ export default function ServicePageTemplate({
       )}
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 lg:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
               locale={locale}
@@ -225,29 +243,7 @@ export default function ServicePageTemplate({
             <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-navy">{h1}</h1>
             <p className="mt-4 text-slate leading-relaxed max-w-2xl">{leadContent ?? lead}</p>
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <a
-                href={business.phone.href}
-                className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-              >
-                {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
-              </a>
-              <a
-                href={business.whatsapp.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={t.whatsapp}
-                className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
-              >
-                <WhatsAppIcon className="w-5 h-5" />
-              </a>
-              <Link
-                href="/tarifs-serrurier-nice/"
-                prefetch={false}
-                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
-              >
-                {t.seePricing}
-              </Link>
+            <HeroCtas callLabel={t.call} whatsappLabel={t.whatsapp} pricingLabel={t.seePricing}>
               {guide && (
                 <a
                   href="#guide"
@@ -265,16 +261,16 @@ export default function ServicePageTemplate({
                   </svg>
                 </a>
               )}
-            </div>
+            </HeroCtas>
             {heroTrustNote && <div className="mt-4">{heroTrustNote}</div>}
           </div>
           {image && (
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+            <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(min-width: 640px) 40vw, 100vw"
+                sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
                 priority
                 fetchPriority="high"
@@ -337,28 +333,24 @@ export default function ServicePageTemplate({
               </div>
             </div>
           ) : (
-            <div className="flex flex-col gap-8">
-              {sections.map((section) => (
-                <div key={section.heading} id={section.id} className={section.id ? "scroll-mt-24" : undefined}>
-                  <h2 className={`font-heading ${h2Size} font-bold text-navy mb-3`}>
-                    {section.headingNode ?? section.heading}
-                  </h2>
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-slate leading-relaxed mb-2">
-                      {paragraph}
-                    </p>
-                  ))}
-                  {section.extra}
-                </div>
-              ))}
-            </div>
+            listSections(sections.slice(0, 1))
           )}
         </div>
       </section>
 
-      {extra}
+      {sections.length === 0 && reviewsSection}
+      {sectionsVariant === "cards" && sections.length > 0 && reviewsSection}
+      {sectionsVariant !== "cards" && sections.length > 1 && (
+        <>
+          {reviewsSection}
+          <section className="bg-white border-y border-navy/10">
+            <div className="mx-auto max-w-4xl px-4 py-12">{listSections(sections.slice(1))}</div>
+          </section>
+        </>
+      )}
+      {sectionsVariant !== "cards" && sections.length === 1 && reviewsSection}
 
-      {reviewsBeforeFaq && reviewsSection}
+      {extra}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className={`font-heading ${h2Size} font-bold text-navy mb-6 text-center`}>{t.faqTitle}</h2>
@@ -375,8 +367,6 @@ export default function ServicePageTemplate({
           </p>
         </section>
       )}
-
-      {!reviewsBeforeFaq && reviewsSection}
 
       {guide}
 

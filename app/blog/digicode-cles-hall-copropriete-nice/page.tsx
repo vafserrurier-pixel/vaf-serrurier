@@ -117,9 +117,6 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
             Clés de hall, digicode, organigramme : qui décide en copropriété ?
           </h1>
           <ArticleByline readingMinutes={7} updatedLabel="Mis à jour le 12 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="mt-8">
             <ArticleSummary
               points={[
@@ -362,6 +359,9 @@ export default function ClesHallDigicodeOrganigrammeCoproprietePage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Besoin d'intervenir sur les accès de votre copropriété ?" />
         </div>
       </section>

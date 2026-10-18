@@ -14,7 +14,7 @@ import TrustBadges from "./TrustBadges";
 import StatBar from "./StatBar";
 import RelatedServicesGrid from "./RelatedServicesGrid";
 import ContactForm from "./ContactForm";
-import { WhatsAppIcon } from "./Icons";
+import HeroCtas from "./HeroCtas";
 import { business } from "@/lib/business";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { communeHref, relatedCommunes } from "@/lib/communes";
@@ -78,10 +78,10 @@ export default function CommunePageTemplate({
   const photo = pickPortrait(commune);
   const services = relatedServices ?? mainServicesByLocale.fr;
 
-  const blocksSection = (
+  const blocksOf = (list: typeof blocks) => (
     <section className="bg-white border-y border-navy/10">
       <div className="mx-auto max-w-4xl px-4 py-12 flex flex-col gap-8">
-        {blocks.map((block) => (
+        {list.map((block) => (
           <div key={block.heading}>
             <h2 className="font-heading text-2xl font-bold text-navy mb-3">
               {block.heading}
@@ -97,6 +97,16 @@ export default function CommunePageTemplate({
       </div>
     </section>
   );
+  const blocksSection = blocksOf(blocks);
+  const reviewsBlock = (
+    <section className="bg-white border-y border-navy/10">
+      <div className="mx-auto max-w-4xl px-4 py-12">
+        <ReviewsSection />
+      </div>
+    </section>
+  );
+  // Pages réécrites avec carrousel : le bloc d'avis suit le premier bloc (le tableau des quartiers).
+  const reviewsAfterFirstBlock = rewrite && !testimonial;
 
   return (
     <>
@@ -119,7 +129,7 @@ export default function CommunePageTemplate({
       />
 
       <section className="bg-white border-b border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 sm:grid-cols-2 items-center">
+        <div className="mx-auto max-w-5xl px-4 py-12 grid gap-8 lg:grid-cols-2 items-center">
           <div>
             <Breadcrumbs
               items={[
@@ -137,30 +147,7 @@ export default function CommunePageTemplate({
                 {paragraph}
               </p>
             ))}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <a
-                href={business.phone.href}
-                className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
-              >
-                Appeler <span className="font-phone font-bold">{business.phone.display}</span>
-              </a>
-              <a
-                href={business.whatsapp.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Écrire sur WhatsApp"
-                className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
-              >
-                <WhatsAppIcon className="w-5 h-5" />
-              </a>
-              <Link
-                href="/tarifs-serrurier-nice/"
-                prefetch={false}
-                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-6 py-3 rounded-full hover:bg-white transition-colors"
-              >
-                Voir les tarifs
-              </Link>
-            </div>
+            <HeroCtas callLabel="Appeler" whatsappLabel="Écrire sur WhatsApp" pricingLabel="Voir les tarifs" />
             <p className="mt-3 text-xs text-slate">
               {heroDelayLine ?? (
                 <>
@@ -170,12 +157,12 @@ export default function CommunePageTemplate({
               )}
             </p>
           </div>
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">
+          <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
             <Image
               src={photo.src}
               alt={photoAlt ?? `Serrurier ${commune}`}
               fill
-              sizes="(min-width: 640px) 40vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
               priority
               fetchPriority="high"
@@ -215,7 +202,15 @@ export default function CommunePageTemplate({
         </section>
       )}
 
-      {rewrite && blocksSection}
+      {reviewsAfterFirstBlock ? (
+        <>
+          {blocksOf(blocks.slice(0, 1))}
+          {reviewsBlock}
+          {blocks.length > 1 && blocksOf(blocks.slice(1))}
+        </>
+      ) : (
+        rewrite && blocksSection
+      )}
 
       <section className="mx-auto max-w-4xl px-4 py-12">
         <h2 className="font-heading text-2xl font-bold text-navy mb-2 text-center">
@@ -294,11 +289,7 @@ export default function CommunePageTemplate({
           </div>
         </section>
       ) : (
-        <section className="bg-white border-y border-navy/10">
-          <div className="mx-auto max-w-4xl px-4 py-12">
-            <ReviewsSection />
-          </div>
-        </section>
+        !reviewsAfterFirstBlock && reviewsBlock
       )}
 
       <section className="mx-auto max-w-4xl px-4 py-12">

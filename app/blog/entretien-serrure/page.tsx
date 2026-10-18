@@ -100,9 +100,6 @@ export default function EntretienSerrurePage() {
             Entretien d&apos;une serrure : le geste simple qui évite la panne
           </h1>
           <ArticleByline readingMinutes={post.readingMinutes} updatedLabel="Publié le 2 octobre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
@@ -302,6 +299,9 @@ export default function EntretienSerrurePage() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Une serrure qui force ?" />
         </div>
       </section>

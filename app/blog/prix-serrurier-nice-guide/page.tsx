@@ -120,9 +120,6 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
             Combien coûte un serrurier à Nice ? Tarifs 2026
           </h1>
           <ArticleByline readingMinutes={12} updatedLabel="Publié le 25 septembre 2026" />
-          <div className="mt-6">
-            <TrustBadges />
-          </div>
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden mt-8">
             <Image
               src={post.image}
@@ -566,6 +563,9 @@ export default function CombienCouteSerrurierNiceTarifs2026Page() {
 
       <section className="bg-white border-y border-navy/10">
         <div className="mx-auto max-w-3xl px-4 py-10">
+          <div className="mb-6">
+            <TrustBadges />
+          </div>
           <CtaBlock title="Besoin d'un devis clair, annoncé avant l'intervention ?" />
         </div>
       </section>
