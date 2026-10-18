@@ -18,7 +18,19 @@ import ArticleTable from "@/components/ArticleTable";
 import { homeFaqFr } from "./homeFaq";
 import BlogPreview from "@/components/BlogPreview";
 import InsuranceBanner from "@/components/InsuranceBanner";
-import { PriceTagIcon, HandshakeIcon, StarIcon, WhatsAppIcon } from "@/components/Icons";
+import {
+  PriceTagIcon,
+  HandshakeIcon,
+  StarIcon,
+  WhatsAppIcon,
+  DoorIcon,
+  AlertLockIcon,
+  WrenchIcon,
+  GearIcon,
+  CheckIcon,
+  VideoIcon,
+  ShieldIcon,
+} from "@/components/Icons";
 import { business } from "@/lib/business";
 import { sectorPages, featuredLocalPages } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
@@ -210,8 +222,8 @@ function HomeBodyEn() {
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-navy/5 blur-3xl"
         />
-        <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 items-center">
-          <div className="text-center sm:text-left">
+        <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-12 items-center">
+          <div className="text-center sm:text-left lg:col-span-7">
             <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy">
               {t.h1a} <span className="text-steel">Nice</span>
@@ -245,7 +257,7 @@ function HomeBodyEn() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="lg:col-span-5">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src="/images/pool/benoit-serrurier-mecanisme-porte-nice.webp"
@@ -518,8 +530,8 @@ function HomeBodyFr() {
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-navy/5 blur-3xl"
         />
-        <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 items-center">
-          <div className="text-center sm:text-left">
+        <div className="relative mx-auto max-w-5xl px-4 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-12 items-center">
+          <div className="text-center sm:text-left lg:col-span-7">
             <AvailabilityBadge locale={locale} />
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-navy">
               {t.h1a} <span className="text-steel">Nice</span>
@@ -554,7 +566,7 @@ function HomeBodyFr() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="lg:col-span-5">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src="/images/pool/benoit-serrurier-mecanisme-porte-nice.webp"
@@ -581,6 +593,40 @@ function HomeBodyFr() {
         <div className="mx-auto max-w-5xl px-4 py-14">
           <ReviewsSection locale={locale} />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6 text-center">Comment ça se passe, en 4 étapes</h2>
+        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel text-cream font-heading font-bold mb-3">
+              1
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">Vous m&apos;appelez</h3>
+            <p className="text-sm text-slate leading-relaxed">{"Vous m'expliquez la situation, ou vous m'envoyez une photo de la serrure par WhatsApp."}</p>
+          </li>
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel text-cream font-heading font-bold mb-3">
+              2
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">Je vous annonce le prix</h3>
+            <p className="text-sm text-slate leading-relaxed">{"Au téléphone, avant de partir. Je vous le confirme sur place avant de commencer."}</p>
+          </li>
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel text-cream font-heading font-bold mb-3">
+              3
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">J&apos;arrive en 30 minutes</h3>
+            <p className="text-sm text-slate leading-relaxed">{"En urgence, partout à Nice, de jour comme de nuit."}</p>
+          </li>
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-steel text-cream font-heading font-bold mb-3">
+              4
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">Vous recevez une facture détaillée</h3>
+            <p className="text-sm text-slate leading-relaxed">{"Utile pour votre assurance ou votre bailleur, avec une vidéo avant/après si vous la demandez."}</p>
+          </li>
+        </ol>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
@@ -713,66 +759,111 @@ function HomeBodyFr() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-14">
-        <h2 className="font-heading text-2xl font-bold text-navy mb-4">Pourquoi on m&apos;appelle à Nice</h2>
-        <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed">
-          <li>
-            <strong className="text-navy">La porte claquée</strong>, de loin le cas le plus fréquent : la porte se
-            referme, les clés sont restées à l&apos;intérieur. Elle s&apos;ouvre presque toujours sans dégât, sans
-            percer ni forcer la serrure.
+      <section className="mx-auto max-w-5xl px-4 py-14">
+        <h2 className="font-heading text-2xl font-bold text-navy mb-6">Pourquoi on m&apos;appelle à Nice</h2>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <DoorIcon className="w-5 h-5" />
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">La porte claquée</h3>
+            <p className="text-sm text-slate leading-relaxed">
+              De loin le cas le plus fréquent : la porte se referme, les clés sont restées à l&apos;intérieur. Elle
+              s&apos;ouvre presque toujours sans dégât, sans percer ni forcer la serrure.
+            </p>
           </li>
-          <li>
-            <strong className="text-navy">L&apos;effraction ou la tentative</strong> : cylindre arraché, porte forcée,
-            cadre abîmé. La priorité est de{" "}
-            <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
-              sécuriser le logement le soir même
-            </Link>
-            , puis de choisir à tête reposée un renfort qui évite que ça recommence.
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <AlertLockIcon className="w-5 h-5" />
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">L&apos;effraction ou la tentative</h3>
+            <p className="text-sm text-slate leading-relaxed">
+              Cylindre arraché, porte forcée, cadre abîmé. La priorité est de{" "}
+              <Link href="/mise-en-securite-apres-effraction-nice/" className={linkClass}>
+                sécuriser le logement le soir même
+              </Link>
+              , puis de choisir à tête reposée un renfort qui évite que ça recommence.
+            </p>
           </li>
-          <li>
-            <strong className="text-navy">L&apos;air marin</strong> : à Nice, le sel accélère la corrosion des
-            serrures, surtout sur les portes exposées à l&apos;extérieur, les garages et les portails. Une clé qui
-            force ou un cylindre qui tourne mal sont souvent les premiers signes, bien avant la panne.
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <WrenchIcon className="w-5 h-5" />
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">L&apos;air marin</h3>
+            <p className="text-sm text-slate leading-relaxed">
+              À Nice, le sel accélère la corrosion des serrures, surtout sur les portes exposées à l&apos;extérieur, les
+              garages et les portails. Une clé qui force ou un cylindre qui tourne mal sont souvent les premiers
+              signes, bien avant la panne.
+            </p>
           </li>
-          <li>
-            <strong className="text-navy">L&apos;usure</strong> : jeu dans le mécanisme, verrouillage qui accroche.
-            Changer une serrure avant la panne coûte toujours moins cher qu&apos;un dépannage en urgence.
+          <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+            <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+              <GearIcon className="w-5 h-5" />
+            </span>
+            <h3 className="font-heading font-bold text-navy mb-1.5">L&apos;usure</h3>
+            <p className="text-sm text-slate leading-relaxed">
+              Jeu dans le mécanisme, verrouillage qui accroche. Changer une serrure avant la panne coûte toujours
+              moins cher qu&apos;un dépannage en urgence.
+            </p>
           </li>
         </ul>
       </section>
 
       <section className="bg-white py-14">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-4">Ce que je vous garantis</h2>
-          <ul className="list-disc pl-5 flex flex-col gap-2 text-slate leading-relaxed">
-            <li>
-              <strong className="text-navy">Le prix avant l&apos;intervention, toujours.</strong> Pour un dépannage à
-              domicile, la loi impose un document détaillé avant tous travaux, dès le premier euro, puis une facture
-              au-delà de 25 € TTC (
-              <a
-                href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
-                target="_blank"
-                rel="noopener"
-                className={linkClass}
-              >
-                arrêté du 24 janvier 2017
-              </a>
-              ). Je le respecte, même en pleine nuit.
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-6">Ce que je vous garantis</h2>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <PriceTagIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy mb-1.5">Le prix avant l&apos;intervention, toujours.</h3>
+              <p className="text-sm text-slate leading-relaxed">
+                Pour un dépannage à domicile, la loi impose un document détaillé avant tous travaux, dès le premier
+                euro, puis une facture au-delà de 25 € TTC (
+                <a
+                  href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
+                  target="_blank"
+                  rel="noopener"
+                  className={linkClass}
+                >
+                  arrêté du 24 janvier 2017
+                </a>
+                ). Je le respecte, même en pleine nuit.
+              </p>
             </li>
-            <li>
-              <strong className="text-navy">Une facture détaillée</strong>, qui décrit les dégâts et les réparations :
-              c&apos;est le document que demandent les assurances.
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <CheckIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy mb-1.5">Une facture détaillée</h3>
+              <p className="text-sm text-slate leading-relaxed">
+                Qui décrit les dégâts et les réparations : c&apos;est le document que demandent les assurances.
+              </p>
             </li>
-            <li>
-              <strong className="text-navy">Une vidéo avant/après sur demande</strong>, par WhatsApp ou par e-mail, si
-              vous n&apos;êtes pas sur place.
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <VideoIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy mb-1.5">Une vidéo avant/après sur demande</h3>
+              <p className="text-sm text-slate leading-relaxed">
+                Par WhatsApp ou par e-mail, si vous n&apos;êtes pas sur place.
+              </p>
             </li>
-            <li>
-              <strong className="text-navy">Une pose garantie 2 ans</strong> sur les renforts que j&apos;installe, en
-              plus de la garantie du fabricant.
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <ShieldIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy mb-1.5">Une pose garantie 2 ans</h3>
+              <p className="text-sm text-slate leading-relaxed">
+                Sur les renforts que j&apos;installe, en plus de la garantie du fabricant.
+              </p>
             </li>
-            <li>
-              <strong className="text-navy">Une assurance RC Pro et décennale</strong> chez APRIL.
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <HandshakeIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy">Une assurance RC Pro et décennale chez APRIL</h3>
             </li>
           </ul>
         </div>

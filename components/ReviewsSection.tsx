@@ -27,7 +27,7 @@ export default function ReviewsSection({ locale = "fr" }: { locale?: Locale }) {
   const t = strings[locale];
   const { rating, count } = useReviewStats();
   return (
-    <section aria-label={t.ariaLabel} className="max-w-xl mx-auto">
+    <section aria-label={t.ariaLabel} className="max-w-xl lg:max-w-none mx-auto">
       <div className="flex items-center justify-center gap-4 mb-6">
         <GoogleLogoIcon className="w-9 h-9 shrink-0" />
         <div className="w-px h-9 bg-navy/10" aria-hidden="true" />

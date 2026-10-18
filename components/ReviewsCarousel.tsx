@@ -64,13 +64,21 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
       onMouseLeave={() => setPaused(false)}
       className="relative"
     >
-      <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6 sm:p-8 min-h-[10rem]">
-        {/* Tous les avis sont dans le HTML initial ; un seul est visible à la fois. */}
+      {/* Sous lg : une carte, un seul avis visible à la fois (carrousel). Dès lg : les 3 premiers avis côte à côte,
+          en cartes de même hauteur, sans points. Tous les avis sont dans le HTML initial. */}
+      <div className="bg-white rounded-xl border border-navy/10 shadow-sm p-6 sm:p-8 min-h-[10rem] lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0 lg:min-h-0 lg:grid lg:grid-cols-3 lg:gap-5">
         {reviews.map((review, i) => (
-          <figure key={review.author + i} hidden={i !== index}>
+          <figure
+            key={review.author + i}
+            className={`${i !== index ? "hidden" : ""} ${
+              i < 3
+                ? "lg:flex lg:flex-col lg:bg-white lg:rounded-xl lg:border lg:border-navy/10 lg:shadow-sm lg:p-6"
+                : "lg:hidden"
+            }`}
+          >
             <Stars rating={review.rating} />
-            <blockquote className="mt-3 text-navy leading-relaxed">&ldquo;{review.text}&rdquo;</blockquote>
-            <figcaption className="mt-4 text-xs text-slate">
+            <blockquote className="mt-3 text-navy leading-relaxed lg:text-sm">&ldquo;{review.text}&rdquo;</blockquote>
+            <figcaption className="mt-4 text-xs text-slate lg:mt-auto lg:pt-4">
               {review.author}
               {live ? ` · ${t.googleReview}` : ""}
               {review.relativeTime ? ` · ${review.relativeTime}` : ""}
@@ -80,7 +88,7 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
       </div>
 
       {reviews.length > 1 && (
-        <div className="flex items-center justify-center gap-2 mt-4">
+        <div className="flex items-center justify-center gap-2 mt-4 lg:hidden">
           {reviews.map((review, i) => (
             <button
               key={review.author + i}
@@ -101,7 +109,7 @@ export default function ReviewsCarousel({ locale = "fr" }: { locale?: Locale }) 
         </div>
       )}
 
-      <p className="text-center mt-3">
+      <p className="text-center mt-3 lg:mt-6">
         <a
           href={business.googleMaps.shareLink}
           target="_blank"
