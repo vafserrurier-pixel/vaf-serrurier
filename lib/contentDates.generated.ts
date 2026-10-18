@@ -6,7 +6,7 @@
 // fichier et de ses fichiers de contenu), utilisee comme signal de fraicheur (sitemap
 // <lastmod>, schema.org dateModified). Une page absente de cette table n'a pas de date fiable.
 export const contentDates: Record<string, string> = {
-  "/a-propos/": "2026-10-18T13:17:28+02:00",
+  "/a-propos/": "2026-10-18T14:07:35+02:00",
   "/agences-syndics-nice/": "2026-10-17T11:13:49+02:00",
   "/blindage-porte-nice/": "2026-10-17T19:58:26+02:00",
   "/blog/certification-a2p-serrure-nice/": "2026-09-12",
@@ -48,5 +48,5 @@ export const contentDates: Record<string, string> = {
   "/serrurier-villefranche-sur-mer/": "2026-10-17T11:02:52+02:00",
   "/tarifs-serrurier-nice/": "2026-10-18T13:17:28+02:00",
   "/urgence-serrurier-nice/": "2026-10-17T19:58:26+02:00",
-  "/zones-intervention-nice/": "2026-10-18T13:17:28+02:00"
+  "/zones-intervention-nice/": "2026-10-18T14:07:35+02:00"
 };
