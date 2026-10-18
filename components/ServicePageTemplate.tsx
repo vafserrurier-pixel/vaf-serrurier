@@ -230,7 +230,7 @@ export default function ServicePageTemplate({
                 href={business.phone.href}
                 className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
               >
-                {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+                {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
               </a>
               <a
                 href={business.whatsapp.href}

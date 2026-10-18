@@ -256,7 +256,7 @@ export default function TarifsBody() {
             href={business.phone.href}
             className="inline-block mt-5 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
           >
-            {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+            {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
           </a>
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5 text-xs text-slate">
             <span className="inline-flex items-center gap-1.5">

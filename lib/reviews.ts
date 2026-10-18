@@ -53,6 +53,14 @@ type PlacesReview = {
   authorAttribution?: { displayName?: string; uri?: string };
 };
 
+// Certains auteurs collent leur avis depuis un texte au format Markdown : Google le renvoie tel quel,
+// avec une barre oblique inverse devant la ponctuation (« satisfait\. »), aussi bien dans `text` que
+// dans `originalText`. On retire ces barres à l'import, une seule fois pour tout le site (layout, pages
+// de service, /api/reviews) ; les mots de l'avis ne changent pas.
+export function stripMarkdownEscapes(text: string): string {
+  return text.replace(/\\([!-/:-@[-`{-~])/g, "$1");
+}
+
 // Un seul appel à l'API Google Places pour toute la note, le nombre d'avis et les avis.
 // Résultat mis en cache une journée (revalidate 86400), partagé par le layout, les pages
 // de service et la route /api/reviews. Repli sur lib/business.ts et fallbackReviews si la
@@ -93,7 +101,7 @@ export async function getGoogleReviews(): Promise<GoogleReviews> {
       .map((r) => ({
         author: r.authorAttribution?.displayName ?? "Client Google",
         rating: r.rating as number,
-        text: r.text?.text ?? "",
+        text: stripMarkdownEscapes(r.text?.text ?? ""),
         relativeTime: r.relativePublishTimeDescription,
         publishTime: r.publishTime,
         authorUri: r.authorAttribution?.uri,

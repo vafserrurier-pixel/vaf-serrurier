@@ -166,7 +166,7 @@ export default function SectorPageTemplate({
               href={business.phone.href}
               className="inline-block bg-urgent text-white font-semibold px-6 py-3 rounded-full"
             >
-              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+              Appeler <span className="font-phone font-bold">{business.phone.display}</span>
             </a>
             <a
               href={business.whatsapp.href}

@@ -34,7 +34,7 @@ export default function CtaBlock({
       <div className="shrink-0 flex items-center gap-2">
         <a
           href={business.phone.href}
-          className="bg-urgent text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 font-tabular-nums"
+          className="bg-urgent text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 font-phone font-bold"
         >
           {business.phone.display}
         </a>

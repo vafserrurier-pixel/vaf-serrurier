@@ -56,12 +56,12 @@ export default function ContactBody() {
           <h2 className="font-heading text-xl font-bold text-navy mb-4">{t.details}</h2>
           <ul className="text-sm text-navy flex flex-col gap-2">
             <li>
-              <a href={business.phone.href} className="font-tabular-nums hover:underline">
+              <a href={business.phone.href} className="font-phone hover:underline">
                 {business.phone.display}
               </a>
             </li>
             <li className="text-slate text-xs">
-              <a href={business.phoneSecondary.href} className="font-tabular-nums hover:underline">
+              <a href={business.phoneSecondary.href} className="font-phone hover:underline">
                 {business.phoneSecondary.display}
               </a>{" "}
               {t.secondary}

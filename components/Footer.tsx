@@ -83,12 +83,12 @@ export default function Footer() {
         </div>
         <div>
           <p className="font-heading font-semibold mb-2">{t.contact}</p>
-          <a href={business.phone.href} className="block py-3.5 font-tabular-nums text-sm hover:underline">
+          <a href={business.phone.href} className="block py-3.5 font-phone text-sm hover:underline">
             {business.phone.display}
           </a>
           <a
             href={business.phoneSecondary.href}
-            className="block py-3.5 font-tabular-nums text-sm hover:underline"
+            className="block py-3.5 font-phone text-sm hover:underline"
           >
             {business.phoneSecondary.display}
           </a>

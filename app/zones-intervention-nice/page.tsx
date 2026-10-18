@@ -115,7 +115,7 @@ export default function ZonesInterventionNicePage() {
               href={business.phone.href}
               className="inline-block mt-6 bg-urgent text-white font-semibold px-6 py-3 rounded-full"
             >
-              Appeler <span className="font-tabular-nums">{business.phone.display}</span>
+              Appeler <span className="font-phone font-bold">{business.phone.display}</span>
             </a>
           </div>
           <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-first sm:order-last">

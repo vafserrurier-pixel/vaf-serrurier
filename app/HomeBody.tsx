@@ -223,7 +223,7 @@ function HomeBodyEn() {
                 href={business.phone.href}
                 className="inline-block whitespace-nowrap bg-urgent text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
-                {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+                {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
               </a>
               <a
                 href={business.whatsapp.href}
@@ -483,7 +483,7 @@ const frStrings = {
   badge: "Disponible maintenant : devis gratuit par téléphone",
   h1a: "Serrurier à",
   h1b: ", 24h/24 : un artisan, sur place en 30 minutes",
-  lead: "Une porte claquée, une clé cassée, une serrure bloquée ou une effraction : vous m'expliquez la situation, je vous annonce le prix avant de partir, et j'arrive en 30 minutes partout à Nice en urgence, de jour comme de nuit. Pour les travaux qui se préparent, comme un changement de serrure ou une porte blindée, je viens sur rendez-vous, avec un devis gratuit.",
+  lead: "Porte claquée, clé cassée, serrure bloquée ou effraction : je vous annonce le prix au téléphone, et j'arrive en 30 minutes partout à Nice, de jour comme de nuit.",
   call: "Appeler",
   whatsapp: "Écrire sur WhatsApp",
   seePricing: "Voir les tarifs",
@@ -524,26 +524,27 @@ function HomeBodyFr() {
               {t.h1b}
             </h1>
             <p className="mt-4 text-slate leading-relaxed max-w-xl mx-auto sm:mx-0">{t.lead}</p>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-6">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 mt-6">
               <a
                 href={business.phone.href}
-                className="inline-block whitespace-nowrap bg-urgent text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
+                className="inline-block whitespace-nowrap text-center bg-urgent text-white font-semibold px-5 py-3.5 sm:py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
-                {t.call} <span className="font-tabular-nums">{business.phone.display}</span>
+                {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
               </a>
               <a
                 href={business.whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t.whatsapp}
-                className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold px-5 py-3.5 sm:p-3 rounded-full hover:opacity-90"
               >
                 <WhatsAppIcon className="w-5 h-5" />
+                <span className="sm:hidden">{t.whatsapp}</span>
               </a>
               <Link
                 href="/tarifs-serrurier-nice/"
                 prefetch={false}
-                className="inline-block whitespace-nowrap border border-navy/20 text-navy font-semibold px-5 py-3 rounded-full hover:bg-white transition-colors"
+                className="text-center text-steel underline underline-offset-4 font-semibold py-2 sm:inline-block sm:whitespace-nowrap sm:no-underline sm:border sm:border-navy/20 sm:text-navy sm:px-5 sm:py-3 sm:rounded-full sm:hover:bg-white transition-colors"
               >
                 {t.seePricing}
               </Link>
@@ -568,8 +569,14 @@ function HomeBodyFr() {
 
       <StatBar locale={locale} delay="30 min" delayLabel="En urgence" delayUnit="à Nice" />
 
-      <section className="mx-auto max-w-5xl px-4 pt-8 pb-2">
-        <TrustBadges locale={locale} />
+      <section className="mx-auto max-w-5xl px-4 pt-8 pb-8">
+        <TrustBadges locale={locale} hideReviews gridOnMobile />
+      </section>
+
+      <section className="bg-white border-y border-navy/10">
+        <div className="mx-auto max-w-5xl px-4 py-14">
+          <ReviewsSection locale={locale} />
+        </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-14">
@@ -694,10 +701,6 @@ function HomeBodyFr() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 pb-14">
-        <QuoteBlock locale={locale} />
-      </section>
-
       <section className="bg-navy py-14">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="font-heading text-2xl font-bold text-cream mb-2 text-center">{t.servicesTitle}</h2>
@@ -768,12 +771,6 @@ function HomeBodyFr() {
               <strong className="text-navy">Une assurance RC Pro et décennale</strong> chez APRIL.
             </li>
           </ul>
-        </div>
-      </section>
-
-      <section className="bg-white border-y border-navy/10">
-        <div className="mx-auto max-w-5xl px-4 py-14">
-          <ReviewsSection locale={locale} />
         </div>
       </section>
 

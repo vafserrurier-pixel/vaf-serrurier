@@ -41,7 +41,7 @@ export default function NotFound() {
         className="inline-block mt-8 text-urgent font-semibold"
       >
         Ou appelez directement le{" "}
-        <span className="font-tabular-nums">{business.phone.display}</span>
+        <span className="font-phone font-bold">{business.phone.display}</span>
       </a>
     </section>
   );

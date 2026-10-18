@@ -58,6 +58,12 @@ h4 {
   font-variant-numeric: tabular-nums;
 }
 
+/* Numéros de téléphone : police du texte (Public Sans), pas la police mono des chiffres-clés. */
+.font-phone {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

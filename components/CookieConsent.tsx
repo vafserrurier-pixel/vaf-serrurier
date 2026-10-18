@@ -75,7 +75,7 @@ export default function CookieConsent() {
     <div
       role="dialog"
       aria-label={t.ariaLabel}
-      className="fixed bottom-0 inset-x-0 z-[60] bg-navy text-cream px-4 py-4 shadow-lg"
+      className="fixed inset-x-0 bottom-[calc(3.5rem+env(safe-area-inset-bottom))] lg:bottom-0 z-[60] bg-navy text-cream px-4 py-4 shadow-lg"
     >
       <div className="mx-auto max-w-4xl flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
         <p className="text-sm">{t.text}</p>
