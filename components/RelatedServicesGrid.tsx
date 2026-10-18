@@ -71,19 +71,21 @@ export default function RelatedServicesGrid({
           return (
             <div
               key={item.href}
-              className="group relative block h-60 sm:h-64 overflow-hidden rounded-2xl border border-navy/10 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              className="group relative block h-60 sm:h-64 max-sm:h-auto max-sm:flex max-sm:items-center max-sm:gap-4 max-sm:p-3 max-sm:bg-navy overflow-hidden rounded-2xl border border-navy/10 hover:shadow-md hover:-translate-y-1 transition-all duration-200"
             >
               {card?.image ? (
                 <>
-                  <Image
-                    src={card.image.src}
-                    alt={card.image.alt}
-                    fill
-                    sizes="(min-width: 640px) 33vw, 100vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-navy/55" aria-hidden="true" />
-                  <div className="relative h-full flex flex-col justify-end p-6">
+                  <div className="absolute inset-0 max-sm:relative max-sm:inset-auto max-sm:size-24 max-sm:shrink-0 max-sm:overflow-hidden max-sm:rounded-xl">
+                    <Image
+                      src={card.image.src}
+                      alt={card.image.alt}
+                      fill
+                      sizes="(min-width: 640px) 33vw, 96px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-navy/55 max-sm:hidden" aria-hidden="true" />
+                  <div className="relative h-full flex flex-col justify-end p-6 max-sm:static max-sm:h-auto max-sm:flex-1 max-sm:min-w-0 max-sm:justify-center max-sm:p-0">
                     <h3 className="font-heading font-bold text-white text-xl leading-snug mb-1">
                       <Link href={item.href} prefetch={false} className={stretchedLink}>
                         {item.label}
@@ -123,13 +125,13 @@ export default function RelatedServicesGrid({
       </div>
 
       {rest.length > 0 && (
-        <div className="mt-8 pt-6 border-t border-navy/10 flex flex-wrap gap-2.5">
+        <div className="mt-8 pt-6 border-t border-navy/10 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap">
           {rest.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               prefetch={false}
-              className="text-sm font-medium text-navy/85 bg-cream hover:bg-white hover:text-steel border border-navy/10 hover:border-steel/40 hover:shadow-sm hover:-translate-y-0.5 rounded-full px-4 py-2 transition-all duration-200"
+              className="text-sm font-medium text-navy/85 bg-cream hover:bg-white hover:text-steel border border-navy/10 hover:border-steel/40 hover:shadow-sm hover:-translate-y-0.5 rounded-full px-4 py-2 transition-all duration-200 max-sm:rounded-2xl max-sm:text-center max-sm:flex max-sm:items-center max-sm:justify-center max-sm:[&:last-child:nth-child(odd)]:col-span-2"
             >
               {item.label}
               <span className="sr-only">{anchorSuffix[locale]}</span>

@@ -58,6 +58,71 @@ h4 {
   font-variant-numeric: tabular-nums;
 }
 
+/*
+ * Tableaux de 3 colonnes ou plus (ArticleTable, classe .table-stack) : sous 640 px, chaque ligne devient
+ * une carte empilée, sans défilement horizontal. La première cellule sert de titre, les autres
+ * affichent « en-tête : valeur » (l'en-tête vient de l'attribut data-label de la cellule). Le HTML reste
+ * un <table> avec <thead> : l'en-tête est masqué à l'écran mais lu par les lecteurs d'écran.
+ * Même fond, bordure, arrondi et ombre que les cartes du site (bg-white, border-navy/10, rounded-xl, shadow-sm).
+ */
+@media (max-width: 639.98px) {
+  .table-stack {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+  }
+  .table-stack table,
+  .table-stack tbody {
+    display: block;
+    width: 100%;
+  }
+  .table-stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+  .table-stack tbody tr {
+    display: block;
+    margin-bottom: 0.625rem;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid rgb(11 36 71 / 0.1);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  .table-stack tbody tr.table-stack-featured {
+    background: rgb(27 58 107 / 0.1);
+  }
+  .table-stack tbody tr:last-child {
+    margin-bottom: 0;
+  }
+  .table-stack td {
+    display: block;
+    padding: 0.0625rem 0;
+    overflow-wrap: anywhere;
+  }
+  .table-stack td:first-child {
+    margin-bottom: 0.25rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-navy);
+  }
+  .table-stack td[data-label]::before {
+    content: attr(data-label) " : ";
+    font-weight: 600;
+    color: var(--color-navy);
+  }
+  .table-stack caption {
+    display: block;
+    padding: 0.5rem 0 0;
+    background: transparent;
+  }
+}
+
 /* Numéros de téléphone : police du texte (Public Sans), pas la police mono des chiffres-clés. */
 .font-phone {
   font-family: var(--font-body);
