@@ -58,7 +58,16 @@ const blocks = [
   {
     heading: "Ma boutique est dans ce secteur",
     paragraphs: [
-      "Pour l'est de Nice, je pars de ma boutique du 2 rue Antoine Gautier, à deux pas du port et de la place Garibaldi. J'interviens partout dans Nice, mais l'est est le secteur le plus proche de ma boutique. En urgence, j'arrive en 30 minutes, du quai des Docks au sommet du Mont Boron.",
+      "Pour l'est de Nice, je pars de ma boutique du 2 rue Antoine Gautier, à deux pas du port. En urgence, j'arrive en 30 minutes, du quai des Docks au sommet du Mont Boron, de jour comme de nuit.",
+      <>
+        La nuit, le week-end et les jours fériés, le tarif est un prix fixe, pas un pourcentage : 189 € pour une porte
+        claquée, 209 € pour une porte fermée à clé, annoncés au téléphone avant de partir. Le prix d&apos;une pièce,
+        comme un cylindre, ne change pas avec l&apos;heure. Tout le détail est sur{" "}
+        <Link href="/urgence-serrurier-nice/" className={linkClass}>
+          ma page urgence serrurier
+        </Link>
+        .
+      </>,
     ],
   },
   {
@@ -151,6 +160,21 @@ const blocks = [
     ],
   },
   {
+    heading: "Immeubles anciens du Port et de Riquier : garder la serrure d'origine",
+    paragraphs: [
+      "Autour du port Lympia et dans le bas de Riquier, beaucoup d'immeubles sont anciens, avec des portes palières en bois épais et une serrure encastrée dans la porte, qu'on appelle une serrure à larder. Quand la clé force ou que les clés sont perdues, il n'est pas toujours nécessaire de tout changer : je peux souvent poser un cylindre adaptable dans la serrure d'origine, et la porte garde son aspect.",
+      <>
+        Si le boîtier de la serrure est lui-même usé, je le remplace par un modèle de même taille, sans retailler la
+        porte. La main-d&apos;œuvre est de 89 €, le boîtier en plus selon le modèle, annoncé avant. J&apos;explique
+        comment ça se passe dans{" "}
+        <Link href="/blog/remplacer-coffre-a-larder-nice/" className={linkClass}>
+          mon article sur le remplacement d&apos;un coffre à larder
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     heading: "Exemple type",
     paragraphs: [
       <>
@@ -207,6 +231,16 @@ const faq = [
     question: "Travaillez-vous avec les conciergeries et les syndics du secteur ?",
     answer:
       "Oui, avec les mêmes prix affichés : ouvertures pour les voyageurs, changements de cylindre entre deux locations, portes de hall et organigrammes de clés.",
+  },
+  {
+    question: "J'habite un immeuble ancien du port : faut-il changer toute ma serrure ?",
+    answer:
+      "Pas forcément. Je peux souvent poser un cylindre adaptable dans la serrure d'origine. Si le boîtier est usé, je le remplace par un modèle de même taille : 89 € de main-d'œuvre, boîtier en plus, annoncé avant.",
+  },
+  {
+    question: "Combien coûte un serrurier la nuit dans l'est de Nice ?",
+    answer:
+      "189 € pour une porte claquée et 209 € pour une porte fermée à clé, après 19 h, le week-end et les jours fériés. Ce sont des prix fixes, annoncés avant de partir, et j'arrive en 30 minutes.",
   },
 ];
 
