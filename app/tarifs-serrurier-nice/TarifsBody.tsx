@@ -276,6 +276,9 @@ export default function TarifsBody() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="font-heading text-xl font-bold text-navy mb-4">
+          {locale === "fr" ? "Mes prix, intervention par intervention" : "My prices, job by job"}
+        </h2>
         <PricingTable locale={locale} useSeoTitles />
       </section>
 

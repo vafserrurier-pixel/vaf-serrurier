@@ -47,7 +47,7 @@ export default function HeroCtas({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={whatsappLabel}
-          className="inline-flex items-center justify-center bg-emerald-600 text-white p-3 rounded-full hover:opacity-90 max-sm:gap-2 max-sm:font-semibold max-sm:px-5 max-sm:py-3.5"
+          className="inline-flex items-center justify-center bg-emerald-600 max-sm:bg-emerald-700 text-white p-3 rounded-full hover:opacity-90 max-sm:gap-2 max-sm:font-semibold max-sm:px-5 max-sm:py-3.5"
         >
           <WhatsAppIcon className="w-5 h-5" />
           <span className="sm:hidden">{whatsappLabel}</span>

@@ -131,7 +131,7 @@ export default function Header() {
             <button
               type="button"
               onClick={toggleLocale}
-              aria-label={locale === "fr" ? "Switch to English" : "Passer en français"}
+              aria-label={locale === "fr" ? "EN – English version" : "FR – version française"}
               className="font-semibold border border-cream/40 rounded px-1.5 py-0.5 text-xs hover:bg-cream/10"
             >
               {t.langSwitchLabel}
@@ -147,7 +147,7 @@ export default function Header() {
       </div>
       <header className="bg-white border-b border-navy/10">
         <div className="mx-auto max-w-6xl flex items-center justify-between px-4 py-3 gap-4">
-          <Link href="/" prefetch={false} aria-label={t.home}>
+          <Link href="/" prefetch={false} aria-label={`${business.brandName} – ${t.home}`}>
             <Logo />
           </Link>
           <nav

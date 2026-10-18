@@ -552,7 +552,7 @@ function HomeBodyFr() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t.whatsapp}
-                className="inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold px-5 py-3.5 sm:p-3 rounded-full hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-600 max-sm:bg-emerald-700 text-white font-semibold px-5 py-3.5 sm:p-3 rounded-full hover:opacity-90"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 <span className="sm:hidden">{t.whatsapp}</span>

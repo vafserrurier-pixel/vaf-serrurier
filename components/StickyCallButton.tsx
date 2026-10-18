@@ -78,7 +78,7 @@ export default function StickyCallButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t.whatsappLabel}
-        className="flex-1 min-w-0 h-12 inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold rounded-full"
+        className="flex-1 min-w-0 h-12 inline-flex items-center justify-center gap-2 bg-emerald-700 text-white font-bold rounded-full"
       >
         <WhatsAppIcon className="w-5 h-5" />
         {t.whatsapp}
