@@ -113,6 +113,27 @@ const blocks = [
     ),
   },
   {
+    heading: "Résidences avec gardien et digicode : les clés des parties communes",
+    paragraphs: [
+      "Dans les grandes résidences du bord de mer, la porte de hall, le local poubelles, les caves et le parking ont souvent chacun leur cylindre. Au fil des années, les clés circulent : anciens habitants, entreprises de ménage, prestataires. Personne ne sait plus vraiment qui peut entrer.",
+      <>
+        Pour la porte de hall, ce n&apos;est pas à un habitant seul de faire changer le cylindre : ce sont des parties
+        communes, et la décision revient à la copropriété. Je l&apos;explique dans mon article{" "}
+        <Link href="/blog/digicode-cles-hall-copropriete-nice/" className={linkClass}>
+          qui décide en copropriété
+        </Link>
+        .
+      </>,
+      <>
+        Quand le syndic me le demande, je change les cylindres des accès communs et je peux mettre en place un{" "}
+        <Link href="/agences-syndics-nice/" className={linkClass}>
+          organigramme de clés
+        </Link>{" "}
+        : chacun garde une seule clé, qui n&apos;ouvre que ce qui le concerne.
+      </>,
+    ],
+  },
+  {
     heading: "L'Arénas et la plaine du Var : bureaux et locaux professionnels",
     paragraphs: [
       <>
@@ -179,6 +200,20 @@ const blocks = [
     ),
   },
   {
+    heading: "Le soir et le week-end : un prix fixe, annoncé avant",
+    paragraphs: [
+      "Une porte claquée en rentrant tard d'un vol à Saint-Augustin, une clé cassée un dimanche à Fabron : après 19 h, le week-end et les jours fériés, je n'applique pas de pourcentage. Le tarif de nuit est un prix fixe : 189 € pour une porte claquée ou une clé cassée, 209 € pour une porte fermée à clé, annoncé au téléphone avant de partir.",
+      <>
+        Le prix d&apos;une pièce, comme un cylindre, ne change pas avec l&apos;heure, et le déplacement reste compris,
+        du bord de mer jusqu&apos;à Bellet. Tout le détail est sur{" "}
+        <Link href="/urgence-serrurier-nice/" className={linkClass}>
+          ma page urgence serrurier
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     heading: "Exemple type",
     paragraphs: [
       <>
@@ -229,6 +264,16 @@ const faq = [
   {
     question: "Venez-vous jusqu'à Bellet et Lingostière ?",
     answer: "Oui, avec le même délai de 30 minutes en urgence et les mêmes prix que dans le reste de Nice.",
+  },
+  {
+    question: "Qui peut faire changer le cylindre de la porte de hall de ma résidence ?",
+    answer:
+      "La copropriété, par l'intermédiaire du syndic, puisque la porte de hall fait partie des parties communes. J'interviens à sa demande pour le cylindre du hall, les accès des locaux communs et l'organigramme de clés.",
+  },
+  {
+    question: "Je rentre de voyage tard et j'ai claqué ma porte : combien ça coûte ?",
+    answer:
+      "Après 19 h, le week-end et les jours fériés, 189 € pour une porte claquée, 209 € si elle est fermée à clé, déplacement compris. J'arrive en 30 minutes et le prix est annoncé au téléphone avant de partir.",
   },
 ];
 
