@@ -34,6 +34,26 @@ import {
 import { business } from "@/lib/business";
 import { sectorPages, featuredLocalPages } from "@/lib/quartiers";
 import { builtCommunes, communeHref } from "@/lib/communes";
+
+// Quartiers mis en avant dans la zone d'intervention de l'accueil français. Chacun renvoie à la page de son
+// secteur, tel que rangé dans `zones` (lib/business.ts).
+const homeQuartiers: { name: string; sector: keyof typeof sectorPages }[] = [
+  { name: "Vieux-Nice", sector: "centre" },
+  { name: "Carré d'Or", sector: "centre" },
+  { name: "Jean-Médecin", sector: "centre" },
+  { name: "Libération", sector: "centre" },
+  { name: "Cimiez", sector: "centre" },
+  { name: "Le Port", sector: "est" },
+  { name: "Riquier", sector: "est" },
+  { name: "Mont Boron", sector: "est" },
+  { name: "Saint-Barthélémy", sector: "nord" },
+  { name: "Gairaut", sector: "nord" },
+  { name: "Rimiez", sector: "nord" },
+  { name: "Fabron", sector: "ouest" },
+  { name: "Californie", sector: "ouest" },
+  { name: "Arénas", sector: "ouest" },
+  { name: "Saint-Isidore", sector: "ouest" },
+];
 import { useLocale } from "@/lib/locale";
 import { formatRating } from "@/lib/reviewFormat";
 import { useReviewStats } from "@/components/ReviewStatsProvider";
@@ -507,7 +527,7 @@ const frStrings = {
   servicesTitle: "Mes services de serrurerie à Nice",
   servicesSubtitle: "De l'urgence à la sécurisation complète, un seul artisan pour tout, sans sous-traitance.",
   areaTitle: "Zone d'intervention à Nice",
-  quartiersSubtitle: "Les secteurs où j'interviens",
+  quartiersSubtitle: "Les quartiers où j'interviens le plus souvent",
   seeAllQuartiers: "Voir tous les secteurs →",
   contactTitle: "Un devis ou une intervention ?",
   contactText: "Décrivez votre situation, je vous réponds vite. Pour une urgence, l'appel reste le moyen le plus rapide.",
@@ -895,14 +915,14 @@ function HomeBodyFr() {
         <div className="mt-8">
           <h3 className="text-center font-heading font-semibold text-navy text-sm mb-3">{t.quartiersSubtitle}</h3>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {featuredLocalPages.map((page) => (
+            {homeQuartiers.map(({ name, sector }) => (
               <Link
-                key={page.href}
-                href={page.href}
+                key={name}
+                href={sectorPages[sector].href}
                 prefetch={false}
                 className="inline-block bg-white border border-navy/10 text-navy text-sm px-3.5 py-1.5 rounded-full hover:border-steel hover:text-steel transition-colors"
               >
-                {page.label}
+                {name}
               </Link>
             ))}
           </div>
