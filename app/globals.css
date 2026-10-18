@@ -123,6 +123,19 @@ h4 {
   }
 }
 
+/*
+ * Bandeau de cookies sous lg : quand la barre d'appel est visible (attribut data-call-bar posé par
+ * StickyCallButton), son bas est le haut de la barre (4 rem + zone de sécurité de l'iPhone).
+ */
+@media (max-width: 1023.98px) {
+  .cookie-banner {
+    transition: bottom 0.3s ease-out;
+  }
+  body:has([data-call-bar="visible"]) .cookie-banner {
+    bottom: calc(4rem + env(safe-area-inset-bottom));
+  }
+}
+
 /* Numéros de téléphone : police du texte (Public Sans), pas la police mono des chiffres-clés. */
 .font-phone {
   font-family: var(--font-body);

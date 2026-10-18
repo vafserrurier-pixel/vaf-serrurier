@@ -221,12 +221,14 @@ function HomeBodyEn() {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mt-6">
               <a
                 href={business.phone.href}
+                data-hero-cta
                 className="inline-block whitespace-nowrap bg-urgent text-white font-semibold px-5 py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
                 {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
               </a>
               <a
                 href={business.whatsapp.href}
+                data-hero-cta
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t.whatsapp}
@@ -527,12 +529,14 @@ function HomeBodyFr() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 mt-6">
               <a
                 href={business.phone.href}
+                data-hero-cta
                 className="inline-block whitespace-nowrap text-center bg-urgent text-white font-semibold px-5 py-3.5 sm:py-3 rounded-full shadow-lg shadow-urgent/20 hover:opacity-90 transition-opacity"
               >
                 {t.call} <span className="font-phone font-bold">{business.phone.display}</span>
               </a>
               <a
                 href={business.whatsapp.href}
+                data-hero-cta
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t.whatsapp}

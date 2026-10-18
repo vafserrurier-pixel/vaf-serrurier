@@ -91,7 +91,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {children}
           </main>
           <Footer />
-          <div aria-hidden="true" className="lg:hidden bg-navy h-[calc(3.5rem+env(safe-area-inset-bottom))]" />
+          <div aria-hidden="true" className="lg:hidden bg-navy h-[calc(4rem+env(safe-area-inset-bottom))]" />
           <StickyCallButton />
           <CookieConsent />
           </ReviewStatsProvider>

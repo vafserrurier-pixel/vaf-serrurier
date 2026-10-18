@@ -64,6 +64,15 @@ function choose(consent: Consent) {
   window.dispatchEvent(new Event(CHANGE_EVENT));
 }
 
+/** true tant que le visiteur n'a pas choisi (le bandeau est alors affiché). Utilisé par la barre d'appel. */
+export function useCookieChoicePending() {
+  return useSyncExternalStore(
+    subscribe,
+    () => getSnapshot() === null,
+    () => false
+  );
+}
+
 export default function CookieConsent() {
   const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const { locale } = useLocale();
@@ -75,7 +84,7 @@ export default function CookieConsent() {
     <div
       role="dialog"
       aria-label={t.ariaLabel}
-      className="fixed inset-x-0 bottom-[calc(3.5rem+env(safe-area-inset-bottom))] lg:bottom-0 z-[60] bg-navy text-cream px-4 py-4 shadow-lg"
+      className="cookie-banner fixed inset-x-0 bottom-0 z-[60] bg-navy text-cream px-4 py-4 shadow-lg"
     >
       <div className="mx-auto max-w-4xl flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
         <p className="text-sm">{t.text}</p>
