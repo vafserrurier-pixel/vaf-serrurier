@@ -6,7 +6,7 @@
 // fichier et de ses fichiers de contenu), utilisee comme signal de fraicheur (sitemap
 // <lastmod>, schema.org dateModified). Une page absente de cette table n'a pas de date fiable.
 export const contentDates: Record<string, string> = {
-  "/a-propos/": "2026-10-17T11:40:54+02:00",
+  "/a-propos/": "2026-10-18T13:17:28+02:00",
   "/agences-syndics-nice/": "2026-10-17T11:13:49+02:00",
   "/blindage-porte-nice/": "2026-10-17T19:58:26+02:00",
   "/blog/certification-a2p-serrure-nice/": "2026-09-12",
@@ -26,14 +26,14 @@ export const contentDates: Record<string, string> = {
   "/changement-serrure-nice/": "2026-10-15T18:01:24+02:00",
   "/conditions-generales-de-vente/": "2026-10-09T08:52:52+02:00",
   "/conditions-generales-dutilisation/": "2026-10-09T08:52:52+02:00",
-  "/contact/": "2026-10-09T08:23:26+02:00",
+  "/contact/": "2026-10-18T13:17:28+02:00",
   "/installation-coffre-fort-nice/": "2026-10-16T16:05:28+02:00",
   "/installation-porte-blindee-nice/": "2026-10-17T19:58:26+02:00",
   "/mentions-legales/": "2026-10-09T08:52:52+02:00",
   "/mise-en-securite-apres-effraction-nice/": "2026-10-17T19:58:26+02:00",
   "/ouverture-de-coffre-fort-nice/": "2026-10-15T20:24:37+02:00",
   "/ouverture-de-porte-nice/": "2026-10-16T16:42:30+02:00",
-  "/": "2026-10-16T16:31:57+02:00",
+  "/": "2026-10-18T13:17:28+02:00",
   "/poignee-blindee-nice/": "2026-10-17T11:06:15+02:00",
   "/politique-de-confidentialite/": "2026-10-09T08:52:52+02:00",
   "/serrure-carenee-nice/": "2026-10-17T11:06:15+02:00",
@@ -46,7 +46,7 @@ export const contentDates: Record<string, string> = {
   "/serrurier-nice-ouest/": "2026-10-18T12:05:50+02:00",
   "/serrurier-saint-laurent-du-var/": "2026-10-17T11:02:52+02:00",
   "/serrurier-villefranche-sur-mer/": "2026-10-17T11:02:52+02:00",
-  "/tarifs-serrurier-nice/": "2026-10-17T20:09:30+02:00",
+  "/tarifs-serrurier-nice/": "2026-10-18T13:17:28+02:00",
   "/urgence-serrurier-nice/": "2026-10-17T19:58:26+02:00",
-  "/zones-intervention-nice/": "2026-10-17T09:08:49+02:00"
+  "/zones-intervention-nice/": "2026-10-18T13:17:28+02:00"
 };
