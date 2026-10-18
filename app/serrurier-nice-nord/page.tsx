@@ -79,6 +79,20 @@ const blocks = [
     ),
   },
   {
+    heading: "Colocations et studios : quand les clés circulent",
+    paragraphs: [
+      "Dans une colocation près du campus de Valrose ou le long du tramway, chaque colocataire a son jeu de clés, et les départs se succèdent en cours d'année. Quand quelqu'un part sans rendre ses clés, ou quand personne ne sait combien de doubles ont été faits, le logement n'est plus vraiment fermé.",
+      "La solution est simple : je change le cylindre, sans toucher à la porte, et je remets les clés neuves à la personne que vous m'indiquez, propriétaire, agence ou colocataire. Le changement de cylindre démarre à 249 € TTC posé, déplacement compris.",
+      <>
+        Reste la question de qui paie, le propriétaire ou le locataire : je l&apos;explique dans mon article{" "}
+        <Link href="/blog/qui-paie-changement-serrure-location-nice/" className={linkClass}>
+          qui paie le changement de serrure en location
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     heading: "Les collines : maisons, villas et plusieurs portes à protéger",
     paragraphs: [],
     extra: (
@@ -153,6 +167,20 @@ const blocks = [
     ],
   },
   {
+    heading: "Le soir et le week-end : un prix fixe, annoncé avant",
+    paragraphs: [
+      "Une porte claquée en rentrant tard à Gorbella, une clé cassée un dimanche à Gairaut : après 19 h, le week-end et les jours fériés, je n'applique pas de pourcentage. Le tarif de nuit est un prix fixe : 189 € pour une porte claquée ou une clé cassée, 209 € pour une porte fermée à clé, annoncé au téléphone avant de partir.",
+      <>
+        Le prix d&apos;une pièce, comme un cylindre, ne change pas avec l&apos;heure, et le déplacement reste compris, en
+        bas comme sur les collines. Tout le détail est sur{" "}
+        <Link href="/urgence-serrurier-nice/" className={linkClass}>
+          ma page urgence serrurier
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     heading: "Exemple type",
     paragraphs: [
       <>
@@ -206,6 +234,16 @@ const faq = [
   {
     question: "Intervenez-vous à Cimiez ?",
     answer: "Oui, Cimiez fait partie de mon secteur Centre, avec les mêmes prix et le même délai de 30 minutes.",
+  },
+  {
+    question: "Je suis étudiant près de Valrose et j'ai claqué ma porte : combien ça coûte ?",
+    answer:
+      "149 € en journée, 189 € après 19 h, le week-end et les jours fériés, déplacement compris. J'arrive en 30 minutes et le prix est annoncé au téléphone avant de partir.",
+  },
+  {
+    question: "Un colocataire est parti sans rendre ses clés : que faire ?",
+    answer:
+      "Le plus sûr est de changer le cylindre : la porte reste en place, seules les clés changent. Le changement de cylindre démarre à 249 € TTC posé, déplacement compris, et je remets les clés neuves à la personne que vous m'indiquez.",
   },
 ];
 
