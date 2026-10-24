@@ -12,6 +12,7 @@ export const contentDates: Record<string, string> = {
   "/blog/certification-a2p-serrure-nice/": "2026-09-12",
   "/blog/changer-serrure-separation-divorce/": "2026-09-18",
   "/blog/cle-cassee-serrure-que-faire-nice/": "2026-10-17",
+  "/blog/cles-perdues-que-faire-nice/": "2026-10-24",
   "/blog/digicode-cles-hall-copropriete-nice/": "2026-09-12",
   "/blog/entretien-serrure/": "2026-10-02",
   "/blog/": "2026-10-17T19:58:26+02:00",

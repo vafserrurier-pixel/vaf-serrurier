@@ -21,6 +21,20 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/cles-perdues-que-faire-nice/",
+    title: "Clés perdues à Nice : que faire, et faut-il changer la serrure ?",
+    excerpt:
+      "Avant d'appeler qui que ce soit, posez-vous deux questions. Quelqu'un a-t-il un double ? Et la personne qui trouvera vos clés peut-elle savoir où vous habitez ?",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-10-24",
+    dateModified: "2026-10-24",
+    readingMinutes: 6,
+    image: "/images/blog/cles-perdues-nice.webp",
+    imageAlt: "Cylindre de serrure sur une porte d'entrée en bois à Nice",
+  },
+  {
     href: "/blog/serrure-bloquee-diagnostic-nice/",
     title: "Serrure bloquée à Nice : comment identifier la panne avant d'appeler un serrurier ?",
     excerpt:
