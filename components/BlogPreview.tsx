@@ -10,11 +10,11 @@ const featuredPosts = [
     category: "Sécurité",
   },
   {
-    href: "/blog/certification-a2p-serrure-nice/",
-    title: "Certification A2P : ce que ce sigle change vraiment pour votre serrure",
+    href: "/blog/cles-perdues-que-faire-nice/",
+    title: "Clés perdues à Nice : que faire, et faut-il changer la serrure ?",
     excerpt:
-      "Une, deux ou trois étoiles : ce que signifie réellement cette certification, et comment vérifier qu'elle est authentique avant de payer.",
-    category: "Comprendre",
+      "Avant d'appeler qui que ce soit, posez-vous deux questions. Quelqu'un a-t-il un double ? Et la personne qui trouvera vos clés peut-elle savoir où vous habitez ?",
+    category: "Conseil pratique",
   },
   {
     href: "/blog/porte-qui-claque-serrurier-nice/",
