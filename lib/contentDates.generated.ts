@@ -15,7 +15,7 @@ export const contentDates: Record<string, string> = {
   "/blog/cles-perdues-que-faire-nice/": "2026-10-24",
   "/blog/digicode-cles-hall-copropriete-nice/": "2026-09-12",
   "/blog/entretien-serrure/": "2026-10-02",
-  "/blog/": "2026-10-17T19:58:26+02:00",
+  "/blog/": "2026-10-24T10:57:18+02:00",
   "/blog/porte-qui-claque-serrurier-nice/": "2026-09-12",
   "/blog/prix-serrurier-nice-guide/": "2026-10-17",
   "/blog/que-faire-apres-cambriolage-nice/": "2026-09-12",
