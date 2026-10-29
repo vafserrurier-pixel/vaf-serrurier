@@ -17,10 +17,10 @@ const featuredPosts = [
     category: "Conseil pratique",
   },
   {
-    href: "/blog/porte-qui-claque-serrurier-nice/",
-    title: "Porte qui claque : les bons réflexes avant d'appeler un serrurier",
+    href: "/blog/arnaque-serrurier-nice-comment-eviter/",
+    title: "Arnaque au serrurier à Nice : comment l'éviter ?",
     excerpt:
-      "Vérifications à faire avant d'appeler, ce qu'il ne faut surtout pas tenter seul, et comment reconnaître une annonce à prix d'appel trop bas.",
+      "Autocollants, prix flous, facture à 1 300 € : comment repérer un serrurier qui profite de l'urgence, le prix normal à Nice, et que faire après.",
     category: "Conseil pratique",
   },
 ];

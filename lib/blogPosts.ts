@@ -21,6 +21,20 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/arnaque-serrurier-nice-comment-eviter/",
+    title: "Arnaque au serrurier à Nice : comment l'éviter ?",
+    excerpt:
+      "Pour éviter une facture abusive, demandez le prix total au téléphone avant que le serrurier se déplace, exigez un document écrit et détaillé avant qu'il commence, et méfiez-vous des autocollants collés dans les halls d'immeubles.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-10-29",
+    dateModified: "2026-10-29",
+    readingMinutes: 5,
+    image: "/images/blog/arnaque-serrurier-nice.webp",
+    imageAlt: "Serrurier vérifiant une ancienne serrure 3 points en applique sur une porte à Nice",
+  },
+  {
     href: "/blog/cles-perdues-que-faire-nice/",
     title: "Clés perdues à Nice : que faire, et faut-il changer la serrure ?",
     excerpt:
