@@ -3,11 +3,11 @@ import type { Locale } from "@/lib/locale";
 
 const featuredPosts = [
   {
-    href: "/blog/que-faire-apres-cambriolage-nice/",
-    title: "Que faire après un cambriolage : les bons réflexes",
+    href: "/blog/verrou-bloque-changer-prix-nice/",
+    title: "Verrou bloqué ou à changer : que faire et quel prix à Nice ?",
     excerpt:
-      "Ne rien toucher, faire opposition, porter plainte sous 48h, prévenir l'assurance : l'ordre des démarches recommandé après une effraction.",
-    category: "Sécurité",
+      "Verrou qui coince, clé cassée, verrou forcé : les bons gestes, réparer ou changer, double entrée ou bouton, et le prix d'un verrou posé à Nice.",
+    category: "Conseil pratique",
   },
   {
     href: "/blog/cles-perdues-que-faire-nice/",

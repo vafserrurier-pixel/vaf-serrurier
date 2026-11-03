@@ -21,6 +21,20 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/verrou-bloque-changer-prix-nice/",
+    title: "Verrou bloqué ou à changer : que faire et quel prix à Nice ?",
+    excerpt:
+      "Un verrou qui coince ne se répare pas en forçant. Si la clé ne tourne plus, arrêtez-vous avant de la tordre ou de la casser : dans la plupart des cas, le verrou se débloque ou se remplace en une seule intervention.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-11-03",
+    dateModified: "2026-11-03",
+    readingMinutes: 5,
+    image: "/images/blog/verrou-heracles-nice.webp",
+    imageAlt: "Verrou Héraclès à bouton posé sur une porte d'entrée à Nice",
+  },
+  {
     href: "/blog/arnaque-serrurier-nice-comment-eviter/",
     title: "Arnaque au serrurier à Nice : comment l'éviter ?",
     excerpt:
