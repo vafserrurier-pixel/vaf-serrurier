@@ -655,8 +655,8 @@ function HomeBodyFr() {
             <h2 className="font-heading text-2xl font-bold text-navy mb-4">Un serrurier artisan, pas une plateforme</h2>
             <div className="text-slate leading-relaxed flex flex-col gap-3">
               <p>
-                Je m&apos;appelle Benoît, serrurier depuis 2011. J&apos;ai créé mon entreprise en 2023, au 2 rue
-                Antoine Gautier, à Nice. Quand vous appelez, c&apos;est moi qui décroche, moi qui vous conseille au
+                Je m&apos;appelle Benoît, serrurier depuis 2011. J&apos;ai créé mon entreprise en 2023 et ouvert Serrurier
+                Nice - Votre Artisan Français au 2 rue Antoine Gautier, à Nice. Quand vous appelez, c&apos;est moi qui décroche, moi qui vous conseille au
                 téléphone, et moi qui viens. Pas de standard, pas de sous-traitant envoyé à votre place.
               </p>
               <p>
@@ -700,7 +700,7 @@ function HomeBodyFr() {
             [
               <>
                 <Link href="/ouverture-de-porte-nice/" className={linkClass}>
-                  Porte claquée
+                  Ouverture de porte à Nice
                 </Link>
                 , ouverture sans dégât
               </>,
@@ -711,7 +711,7 @@ function HomeBodyFr() {
             [
               <>
                 <Link href="/changement-serrure-nice/" className={linkClass}>
-                  Cylindre neuf
+                  Changement de cylindre à Nice
                 </Link>
                 , clés remises sur place
               </>,
@@ -831,16 +831,21 @@ function HomeBodyFr() {
 
       <section className="bg-white py-14">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-6">Ce que je vous garantis</h2>
+          <h2 className="font-heading text-2xl font-bold text-navy mb-2">Ce que je vous garantis</h2>
+          <p className="text-slate leading-relaxed mb-6">
+            Chez Serrurier Nice - Votre Artisan Français, voici ce à quoi je m&apos;engage à chaque intervention.
+          </p>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
               <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
                 <PriceTagIcon className="w-5 h-5" />
               </span>
-              <h3 className="font-heading font-bold text-navy mb-1.5">Le prix avant l&apos;intervention, toujours.</h3>
+              <h3 className="font-heading font-bold text-navy mb-1.5">Le prix annoncé au téléphone est le prix facturé</h3>
               <p className="text-sm text-slate leading-relaxed">
-                Pour un dépannage à domicile, la loi impose un document détaillé avant tous travaux, dès le premier
-                euro, puis une facture au-delà de 25 € TTC (
+                Avec la photo de votre serrure envoyée par WhatsApp ou SMS, je vous annonce un prix complet TTC,
+                cylindre compris s&apos;il doit être changé. C&apos;est ce prix-là que vous payez. Pour un dépannage à
+                domicile, la loi impose un document détaillé avant tous travaux, dès le premier euro, puis une facture
+                au-delà de 25 € TTC (
                 <a
                   href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033935513"
                   target="_blank"
@@ -850,6 +855,16 @@ function HomeBodyFr() {
                   arrêté du 24 janvier 2017
                 </a>
                 ). Je le respecte, même en pleine nuit.
+              </p>
+            </li>
+            <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">
+              <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-steel/10 text-steel mb-3">
+                <DoorIcon className="w-5 h-5" />
+              </span>
+              <h3 className="font-heading font-bold text-navy mb-1.5">99 % des portes claquées ouvertes sans dégât</h3>
+              <p className="text-sm text-slate leading-relaxed">
+                Une porte simplement claquée, sans tour de clé, s&apos;ouvre presque toujours sans abîmer ni la porte ni
+                la serrure.
               </p>
             </li>
             <li className="rounded-xl border border-navy/10 bg-white p-5 shadow-sm">

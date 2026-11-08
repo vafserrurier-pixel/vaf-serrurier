@@ -1,6 +1,7 @@
 import { isValidElement, type ReactNode } from "react";
 import { business } from "./business";
 import { builtCommunes } from "./communes";
+import { mainServicesByLocale } from "./relatedServicesDefault";
 
 type FaqItem = { question: string; answer: ReactNode; schemaText?: string };
 type BreadcrumbItem = { name: string; url: string };
@@ -260,5 +261,44 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       name: item.name,
       item: item.url,
     })),
+  };
+}
+
+// Complement du Locksmith global (app/layout.tsx), reserve a la home : meme @id
+// (business.domain), donc les moteurs fusionnent les deux blocs en une seule
+// entite. N'ajoute que des faits deja affiches sur le site : fondateur, annee de
+// creation, liste des services de la section « Mes services de serrurerie a
+// Nice ». Aucun prix, aucun aggregateRating ni review.
+export function homeEntitySchema() {
+  const founderId = `${business.domain}/#benoit`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Locksmith",
+        "@id": business.domain,
+        foundingDate: "2023",
+        founder: { "@id": founderId },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Mes services de serrurerie à Nice",
+          itemListElement: mainServicesByLocale.fr.map((service) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: `${service.label} à Nice`,
+              url: `${business.domain}${service.href}`,
+            },
+          })),
+        },
+      },
+      {
+        "@type": "Person",
+        "@id": founderId,
+        name: business.firstName,
+        jobTitle: "Serrurier",
+        worksFor: { "@id": business.domain },
+      },
+    ],
   };
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import { faqSchema, websiteSchema } from "@/lib/schema";
+import { faqSchema, homeEntitySchema, websiteSchema } from "@/lib/schema";
 import HomeBody from "./HomeBody";
 import { homeFaqFr } from "./homeFaq";
 import { buildMetadata } from "@/lib/metadata";
@@ -20,6 +20,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={websiteSchema()} />
+      <JsonLd data={homeEntitySchema()} />
       <JsonLd data={faqSchema(homeFaqFr)} />
       <HomeBody />
     </>
