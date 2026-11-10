@@ -3,17 +3,17 @@ import type { Locale } from "@/lib/locale";
 
 const featuredPosts = [
   {
+    href: "/blog/serrurier-nuit-dimanche-prix-nice/",
+    title: "Serrurier la nuit ou le dimanche à Nice : prix et délai",
+    excerpt:
+      "Bloqué dehors la nuit, le dimanche ou un jour férié à Nice : le prix d'un serrurier, le délai d'arrivée, et comment éviter les mauvaises surprises.",
+    category: "Conseil pratique",
+  },
+  {
     href: "/blog/verrou-bloque-changer-prix-nice/",
     title: "Verrou bloqué ou à changer : que faire et quel prix à Nice ?",
     excerpt:
       "Verrou qui coince, clé cassée, verrou forcé : les bons gestes, réparer ou changer, double entrée ou bouton, et le prix d'un verrou posé à Nice.",
-    category: "Conseil pratique",
-  },
-  {
-    href: "/blog/cles-perdues-que-faire-nice/",
-    title: "Clés perdues à Nice : que faire, et faut-il changer la serrure ?",
-    excerpt:
-      "Avant d'appeler qui que ce soit, posez-vous deux questions. Quelqu'un a-t-il un double ? Et la personne qui trouvera vos clés peut-elle savoir où vous habitez ?",
     category: "Conseil pratique",
   },
   {

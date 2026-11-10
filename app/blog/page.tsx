@@ -36,6 +36,7 @@ export default function BlogPage() {
                   fill
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover"
+                  style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}
                 />
               </div>
               <div className={`p-5 border-t-4 ${post.accent}`}>

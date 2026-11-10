@@ -17,9 +17,26 @@ export type BlogPost = {
   image: string;
   /** Texte alternatif de cette image dans les vignettes (index du blog, articles lies). */
   imageAlt: string;
+  /** Cadrage (object-position) des vignettes 16/9 quand l'image source est en portrait. Centre par defaut. */
+  imagePosition?: string;
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    href: "/blog/serrurier-nuit-dimanche-prix-nice/",
+    title: "Serrurier la nuit ou le dimanche à Nice : prix et délai",
+    excerpt:
+      "La porte se referme derrière vous à 23 h, un dimanche soir ou un jour férié, et les clés sont restées à l'intérieur. C'est souvent à ce moment-là qu'on cherche un serrurier en urgence, sans avoir le temps de comparer.",
+    category: "Conseil pratique",
+    accent: "border-t-steel",
+    tagClass: "bg-steel/10 text-steel",
+    datePublished: "2026-11-10",
+    dateModified: "2026-11-10",
+    readingMinutes: 3,
+    image: "/images/blog/serrurier-nice-benoit-vehicule-votre-artisan-francais.webp",
+    imageAlt: "Benoît, serrurier à Nice, devant son utilitaire floqué Votre Artisan Français",
+    imagePosition: "50% 55%",
+  },
   {
     href: "/blog/verrou-bloque-changer-prix-nice/",
     title: "Verrou bloqué ou à changer : que faire et quel prix à Nice ?",

@@ -59,6 +59,7 @@ export default function ArticleNav({ currentHref }: { currentHref: string }) {
                   fill
                   sizes="(min-width: 640px) 33vw, 100vw"
                   className="object-cover"
+                  style={post.imagePosition ? { objectPosition: post.imagePosition } : undefined}
                 />
                 <span
                   className={`absolute top-2 left-2 inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${post.tagClass} bg-white/95`}
