@@ -23,6 +23,20 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: "/blog/cylindre-standard-ou-haute-securite-nice/",
+    title: "Cylindre standard ou haute sécurité : que choisir à Nice ?",
+    excerpt:
+      "Le cylindre est la partie de la serrure dans laquelle entre la clé. C'est aussi la première pièce qu'un cambrioleur attaque.",
+    category: "Matériel et comparatif",
+    accent: "border-t-navy",
+    tagClass: "bg-navy/10 text-navy",
+    datePublished: "2026-11-16",
+    dateModified: "2026-11-16",
+    readingMinutes: 3,
+    image: "/images/blog/cylindre-vachette-radial-r-haute-securite-nice.webp",
+    imageAlt: "Boîte d'un cylindre haute sécurité Vachette Radial-R, tenue par Benoît, serrurier à Nice",
+  },
+  {
     href: "/blog/serrurier-nuit-dimanche-prix-nice/",
     title: "Serrurier la nuit ou le dimanche à Nice : prix et délai",
     excerpt:

@@ -3,6 +3,13 @@ import type { Locale } from "@/lib/locale";
 
 const featuredPosts = [
   {
+    href: "/blog/cylindre-standard-ou-haute-securite-nice/",
+    title: "Cylindre standard ou haute sécurité : que choisir à Nice ?",
+    excerpt:
+      "Cylindre standard dès 249 € ou haute sécurité dès 349 € posé à Nice : les vraies différences, les modèles Héraclès et Vachette, et lequel choisir.",
+    category: "Matériel et comparatif",
+  },
+  {
     href: "/blog/serrurier-nuit-dimanche-prix-nice/",
     title: "Serrurier la nuit ou le dimanche à Nice : prix et délai",
     excerpt:
@@ -14,13 +21,6 @@ const featuredPosts = [
     title: "Verrou bloqué ou à changer : que faire et quel prix à Nice ?",
     excerpt:
       "Verrou qui coince, clé cassée, verrou forcé : les bons gestes, réparer ou changer, double entrée ou bouton, et le prix d'un verrou posé à Nice.",
-    category: "Conseil pratique",
-  },
-  {
-    href: "/blog/arnaque-serrurier-nice-comment-eviter/",
-    title: "Arnaque au serrurier à Nice : comment l'éviter ?",
-    excerpt:
-      "Autocollants, prix flous, facture à 1 300 € : comment repérer un serrurier qui profite de l'urgence, le prix normal à Nice, et que faire après.",
     category: "Conseil pratique",
   },
 ];
